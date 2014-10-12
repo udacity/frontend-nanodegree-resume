@@ -57,21 +57,24 @@ var work = {
             "employer": "The Network",
             "title": "CMO",
             "location": "Gainesville, Florida",
-            "dates": "2009-2011"
+            "dates": "2009-2011",
+            "desc_1": "An online and offline social network"
         },
         {
             "job": "Publishing",
             "employer": "Bonnier Corporation",
             "title": "Web Editor",
             "location": "Winter Park, Florida",
-            "dates": "2012-2013"
+            "dates": "2012-2013",
+            "desc_1": "One of the largest media companies in the world."
         },
         {
             "job": "Developer Marketing",
             "employer": "Samsung",
             "title": "Sr. Digital Marketing Manager",
             "location": "Winter Park, Florida",
-            "dates": "2013-Present"
+            "dates": "2013-Present",
+            "desc_1": "Rebranding Samsung as a developer friendly company."
         }
     ]
 }
@@ -84,13 +87,13 @@ var projects =
             "title": "Samsung Developer Conference i",
             "location": "San Francisco, California",
             "dates": "2013",
-            "descritption": "Samsung's first international developer conference"
+            "desc": "Samsungs first international developer conference"
         },
         {
             "title": "Samsung Developer Conference ii",
             "location": "San Francisco, California",
             "dates": "2013",
-            "descritption": "Samsung's second international developer conference"
+            "desc": "Samsungs second international developer conference"
         }
     ]
 }
@@ -125,8 +128,12 @@ for(job in work.jobs) {
 
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	var formattedDesc = HTMLprojectDescription.replace("%data%", work.jobs[job].desc_1);
+
+	var formattedEmployerTitle = formattedEmployer + formattedTitle + formattedDates + formattedDesc;
 
 	$(".work-entry:last").append(formattedEmployerTitle);
 }
+
 
