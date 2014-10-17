@@ -163,7 +163,7 @@ function displayBio() {
         var formattedName = HTMLheaderName.replace("%data%", inName(biography.bio[item].name));
         $("#header").prepend(formattedName);
 
-        var bioPic = HTMLbioPic.replace("%data%", "images/glenn.jpg");
+        var bioPic = HTMLbioPic.replace("%data%", biography.bio[item].picture_url);
         $("#header").append(bioPic);
 
         var formattedWelcome = HTMLWelcomeMsg.replace("%data%", biography.bio[item].welcome_message);
