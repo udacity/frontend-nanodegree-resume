@@ -5,7 +5,7 @@ var biography =
         {
             "name": "Glenn Cameron",
             "role": "Tinkerer",
-            "picture_url": "http://fillmurray.com/g/200/300",
+            "picture_url": "http://fillmurray.com/g/200/200",
             "welcome_message": "Welcome to my website!",
             "skills": [
                 "Internet marketing",
