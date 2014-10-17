@@ -1,27 +1,23 @@
 *{
     padding:0;
     margin:0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
-
-
 
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-
 h1 {
-
   font-size: 40px;
-  color: #F5A623;
+  color: #FFFFFF;
   line-height: 48px;
   display: inline;
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -33,21 +29,22 @@ h3 {
   font-size: 20px;
   color: #000000;
   line-height: 22px;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
+h2, h4, h5 {
   padding:10px;
   padding-left: 5%;
   padding-right: 5%;
 }
-
 
 .date-text {
   font-style: italic;
@@ -63,7 +60,6 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -99,6 +95,14 @@ a {
   background-color: #F5AE23;
 }
 
+.dark-blue {
+  background-color: #294860;
+}
+
+.flat-blue {
+  background-color: #3498db;
+}
+
 .orange-text {
   color: #F5AE23;
 }
@@ -106,6 +110,10 @@ a {
 .white-text {
   font-weight: bold;
   color: #FFFFFF;
+}
+
+.gray-text {
+  color: #666666;
 }
 
 .gray {
@@ -118,9 +126,18 @@ a {
   background-color: #4A4A4A;
 }
 
+#header img {
+  width: 190px;
+  height: 190px;
+  border-radius: 150px;
+  padding: 5px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  }
+
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3498db;
 }
 
 .flex-box {
@@ -133,13 +150,12 @@ a {
 }
 
 .center-content {
-  padding: 5%;
+  padding: 2%;
 }
 
 ul {
   list-style-type: none;
 }
-
 
 .biopic {
   float: left;
@@ -152,8 +168,7 @@ img {
   padding: 10px;
 }
 
-
-/* Bar chart stuff */
+/* Bar chart*/
 .chart div {
   font: 10px sans-serif;
   background-color: #4A4A4A;
@@ -200,14 +215,12 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 100%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
