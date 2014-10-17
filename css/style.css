@@ -88,11 +88,6 @@ a {
 
 #skillsH3 {
   color: #F5AE23;
-  display: none;
-}
-
-#skills {
-  display: none;
 }
 
 .orange {
@@ -145,7 +140,6 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
 }
 
 img {
@@ -212,7 +206,6 @@ span {
 
 @media only screen and (min-width: 750px) {
   #skillsH3,
-  #skills,
   .biopic {
     display: block;
   }
