@@ -124,7 +124,7 @@ a {
 }
 
 .flex-box {
-  display: -webkit-flex;
+/*  display: -webkit-flex; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
