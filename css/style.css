@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -36,7 +36,7 @@ h3 {
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 17px;
