@@ -5,14 +5,13 @@
     font-weight: 300;
 }
 
-.education-entry, .work-entry, .project-entry {
+[class$="-entry"] {
   padding-left: 5%;
   padding-right: 5%;
 }
 
 
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -47,7 +46,6 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -62,7 +60,6 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -139,7 +136,6 @@ ul {
   list-style-type: none;
 }
 
-
 .biopic {
   float: left;
   padding: 10px;
@@ -149,6 +145,21 @@ ul {
 
 img {
   padding: 10px;
+}
+
+.project-entry img {
+	position:relative;
+	max-width:23%;
+	display:inline-block;
+	margin:10px 10px 0 0;
+	border:1px solid #e0e0e0;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
 }
 
 #header img {
@@ -192,8 +203,16 @@ span {
   text-align: center;
 }
 
+#letsConnect h2 {
+	color:white;
+}
+
 #main > div {
 	padding-top:50px;
+}
+
+#main > div:last-child {
+	padding-top:0;
 }
 
 [class$="-entry"] {

@@ -44,81 +44,67 @@ var p2 = {
 	work = {
 		jobs:  [
 			{
-				'employer': 'Illumina',
-				'title': 'Front-End Developer',
-				'location': 'San Diego, CA',
-				'dates worked': '07/14 ~ Current',
-				'description': 'Design and develop corporate websites for global marketing.'
+				'employer': 'Google',
+				'title': 'Researcher',
+				'location': 'Mountain View, CA',
+				'dates worked': '01/14 ~ Current',
+				'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 			},
 			{
-				'employer': 'Humana',
-				'title': 'Front-End Developer',
-				'location': 'San Diego, CA',
-				'dates worked': '06/13 ~ 07/14',
-				'description': 'Design and develop web portals and web applications for healthcare providers.'
+				'employer': 'Apple',
+				'title': 'Researcher',
+				'location': 'Cupertino, CA',
+				'dates worked': '01/13 ~ 12/13',
+				'description': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 			},
 			{
-				'employer': 'Mellmo, Inc',
-				'title': 'Front-End Developer',
-				'location': 'San Diego, CA',
-				'dates worked': '02/13 ~ 06/13',
-				'description': 'Design and develop Wordpress website for global marketing.'
-			},
-			{
-				'employer': 'Anonymizer, Inc',
-				'title': 'Front-End Developer',
-				'location': 'San Diego, CA',
-				'dates worked': '12/09 ~ 02/13',
-				'description': 'Design and develop corporate websites and web applications for government agencies.'
-			},
-			{
-				'employer': 'University of California, San Diego',
-				'title': 'Front-End Developer',
-				'location': 'San Diego, CA',
-				'dates worked': '06/09 ~ 12/09',
-				'description': 'Design and develop websites and web applications for UCSD.'
+				'employer': 'Microsoft',
+				'title': 'Researcher',
+				'location': 'Redmond, WA',
+				'dates worked': '01/12 ~ 12/12',
+				'description': 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
 			}
 	]},
 	projects = {
 		project:  [
 			{
-				'title': 'Alpha',
+				'title': 'nliven',
 				'dates worked':  '1/13 - current',
 				'description': 'A custom CSS framework using SASS/Compass',
 				'images': [
-					'http://peterchondesign.com/alpha/img/alpha.png', 
-					'http://peterchondesign.com/alpha/img/alpha.png', 
-					'http://peterchondesign.com/alpha/img/alpha.png'
+					'https://m1.behance.net/rendition/modules/83868489/disp/af52a4f8d6f715a84c01eaf0ce0d5b60.jpg', 
+					'https://m1.behance.net/rendition/modules/83868491/disp/7e88e5fd6be4b14fc4f795ba08829e55.jpg', 
+					'https://m1.behance.net/rendition/modules/83868493/disp/251a30875956084fc947507979b6960f.jpg'
 				]
 			},
 			{
-				'title': 'Beta',
+				'title': 'Logos',
 				'dates worked':  '1/12 - 12/12',
 				'description': 'A custom CSS framework using SASS/Compass',
 				'images': [
-					'http://peterchondesign.com/alpha/img/alpha.png', 
-					'http://peterchondesign.com/alpha/img/alpha.png', 
-					'http://peterchondesign.com/alpha/img/alpha.png'
+					'https://m1.behance.net/rendition/modules/117699543/disp/c6aa64d7c4b32674ad55b6ed3a6f0431.jpg', 
+					'https://m1.behance.net/rendition/modules/117699539/disp/a168bf7a3124583211759a19d6c13117.jpg', 
+					'https://m1.behance.net/rendition/modules/117699537/disp/82687ca6cc1e8e5a4b1ec458dcfa48f4.jpg'
 				]
 			}
 	]},
 	education = {
 		schools: [
 			{
-				'name': 'University of California, San Diego | Digital Art Center',
-				'degree': 'Certificate of completion',
-				'dates attended': '9/07 - 6/08',
-				'location': 'San Diego, CA',
-				'majors': 'Graphic & Web Design',
-				//'url': 'http://dac.ucsd.edu'
+				'name': 'Massachusetts Institute of Technology',
+				'degree': 'MS',
+				'dates attended': '09/12 ~ 06/14',
+				'location': 'Cambridge, MA',
+				'majors': 'Computer Science',
+				//'url': 'http://web.mit.edu'
 			},
 			{
-				'name': 'University of California, San Diego | Digital Art Center',
-				'degree': 'Certificate of completion',
-				'dates attended': '9/08 - 6/09',
-				'location': 'San Diego, CA',
-				'majors': 'Multimedia Production',
-				//'url': 'http://dac.ucsd.edu'
+				'name': 'California Institute of Technology',
+				'degree': 'BS',
+				'dates attended': '09/10 ~ 06/12',
+				'location': 'Pasadena, CA',
+				'majors': 'Computer Science',
+				//'url': 'http://caltech.edu'
 			},
 		],
 		onlineCourses: [
@@ -141,7 +127,7 @@ var p2 = {
 			github:"peterchon",
 			location:"San Diego, CA"
 		},
-		skills: ["HTML/CSS", "JavaScript", "Adobe CS", "3D Animation", "Photography"],
+		skills: ["HTML/CSS", "JavaScript", "PHP", "Python", "Ruby", "Animation"],
 		replaceArrayData: function(key){
 			var skills = "";
 			for(i=0, max=key.length; i<max; i++){
