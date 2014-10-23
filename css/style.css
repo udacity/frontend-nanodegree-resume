@@ -2,18 +2,16 @@
     padding:0;
     margin:0;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
-
-
-.education-entry, .work-entry, .project-entry {
+[class$="-entry"] {
   padding-left: 5%;
   padding-right: 5%;
 }
 
 
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -48,7 +46,6 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -63,7 +60,6 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -104,7 +100,7 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
+  font-weight: 400;
   color: #FFFFFF;
 }
 
@@ -140,7 +136,6 @@ ul {
   list-style-type: none;
 }
 
-
 .biopic {
   float: left;
   padding: 10px;
@@ -152,6 +147,41 @@ img {
   padding: 10px;
 }
 
+.project-entry img {
+	position:relative;
+	max-width:23%;
+	display:inline-block;
+	margin:10px 10px 0 0;
+	border:1px solid #e0e0e0;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+#header img {
+	border:1px dashed #9f9f9f;
+	display:inline-block;
+	margin-right:20px;
+	-webkit-border-radius:100%;
+	-moz-border-radius:100%;
+	-o-border-radius:100%;
+	border-radius:100%;
+}
+
+#topContacts {
+	margin-bottom:20px;
+}
+
+hr {
+	border:0;
+	margin:10px 0 5px;
+	border-top:1px solid #0f0f0f;
+	border-bottom:1px solid #6f6f6f;
+}
 
 /* Bar chart stuff */
 .chart div {
@@ -171,6 +201,43 @@ span {
 
 #letsConnect {
   text-align: center;
+}
+
+#letsConnect h2 {
+	color:white;
+}
+
+#main > div {
+	padding-top:50px;
+}
+
+#main > div:last-child {
+	padding-top:0;
+}
+
+[class$="-entry"] {
+	padding:0;
+	margin:0 5% 20px;
+}
+
+#main > div:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+button {
+	float:right;
+	display:inline-block;
+	padding:5px 10px;
+	margin-top:15px;
+	border:0;
+	background-color:#fff;
+	cursor:pointer;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
 }
 
 @media only screen and (max-width: 1024px) {
