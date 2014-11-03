@@ -229,7 +229,8 @@ span {
           font: 10px sans-serif;
         }
         
-        .axis .x-title {
+        .axis .x-title,
+        .axis .y-title {
           font: 15px sans-serif;
           text-anchor: middle;
         }
