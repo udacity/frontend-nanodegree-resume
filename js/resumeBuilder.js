@@ -17,34 +17,40 @@ var bio = {
 var skills = {
     "skills": [
         {
+            id: "design",
             name: "Design",
             value: 3,
             info: "I have experience with the entire adobe suite with a focus on Photoshop, Fireworks, Lightroom and Primere. I've created numerous user interfaces but prefer to focus on the UX side while allowing the artistic and creative side to come from someone a lot more artistic!"
         },
         {
-            name: "Front-end",    
+            id: "frontend",
+            name: "Front-end dev",    
             value: 5,
-            info: "Front end expertise"
+            info: "I have deveoped the front end on a number of government and non goverment websites and intranets. Including deewr.gov.au, swa.gov.au and questacon.edu.au. I have experience technologies including HTML5, CSS, Javascript and jquery as well as with standards such as WCAG accessibility standards and user experience testing. I've also created two mobile apps one for Safe Work Australia and the other for Questacon."
         },
         {
-            name: "Back-end",    
+            id: "backend",
+            name: "Back-end dev",    
             value: 5,
-            info: "Back end experience"
+            info: "I assistaed in the development of a goverment-aimed Content Management System written in a custom PHP framework. I also have basic experience with Python."
         },
         {
-            name: "Database",   
+            id: "database",
+            name: "Database dev",   
             value: 6,
-            info: "Database experience"
+            info: "I have worked on create a number of small databases to be used for webapp backends using mysql and Postgres. I also have extensive experience with data mining and reconiliation for some of Australia's largest databases including Centrelink's database. Australian's largest government database."
         },
         {
+            id: "training",
             name: "Training", 
             value: 7,
-            info: "Trainig experience"
+            info: "I've have trained people using a variety of methods including classrooms, one on one and video training. The training focused on how to develop basic portals using our Content Managamenet Systems, how to write for the web and creating accessible documents"
         },
         {
+            id: "comms",
             name: "Communication",     
             value: 8,
-            info: "Communication experience"
+            info: "I have experience both in official communication channels as well as general community skills with management and staff."
         }
     ],
     "chart" : {
@@ -222,11 +228,11 @@ education.display = function() {
 }
 
 skills.display = function () {
-    
+    //  *** Create the chart ***
+    $('#skillsChart').append('<p class="skillsIntro">How are my abilities in each level of expertise?<br> Click each bar for more information.</p>');
     $('#skillsChart').append('<div class="skills-entry"></div>');
-    $('.skills-entry').append('<p>How are my abilities in each level of expertise? See below and hover for more information.</p>');
 
-    $('.skills-entry').append('<svg class="chart"></svg>');
+    $('.skills-entry').append('<svg class="chart"></svg></div>');
 
     // Create x-scale domain and ranage for graph
     var x = d3.scale.linear().domain([skills.chart.domain.min, skills.chart.domain.max]).range([0, skills.chart.width]);
@@ -246,11 +252,11 @@ skills.display = function () {
     var xAxis = d3.svg.axis().scale(x).orient("bottom");
     
     // Create the visible <rect> that is the visible bar
-    bar.append("rect").attr("width", function(d) { return x(d.value); }).attr("height", skills.chart.barHeight - 1 );
+    bar.append("rect").attr("width", function(d) { return x(d.value); }).attr("height", skills.chart.barHeight - 1 ).attr("id", function(d) { return d.id + '-bar'; }).attr("class", "skill-bar");
     
     // Add the text label for each bar
     bar.append("text").attr("x", 4).attr("y", skills.chart.barHeight / 2).attr("dy", ".35em").attr("class", "bar-text").text(function(d) { return d.name; });
-
+    
     // Create x-axis --> Magic
     chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + (skills.chart.barHeight * skills.skills.length) + ")").call(xAxis);
     
@@ -259,6 +265,34 @@ skills.display = function () {
     
     // create y-axis title. Using magic number -5 for positioning. 
     chart.append("g").append("text").attr("transform", "rotate(-90)").attr("y", -5).attr("x", chartHeight / -2).attr("class", "y-title").text("Skills");
+    
+    // *** Create the text info ***
+    
+    $('#skillsChart').append('<div class="skills-info"></div>');
+    
+    for (var i in skills.skills) {
+        $('.skills-info').append('<div id="' + skills.skills[i].id + '-info" class="skillInfo"><h3>' + skills.skills[i].name + '</h3><p>' + skills.skills[i].info + '</p>');
+    }
+    
+    $('.skillInfo').hide();
+    $('.skillInfo').first().show();
+    
+    // jquery to make visible skills info
+    $('.skill-bar').click(function () {
+        var skill = $(this).attr('id').replace('-bar', '');
+        $('.skillInfo').hide();
+        $('#' + skill + '-info').show();
+    });
+    
+    /* 
+    // Original code to show skills info. Don't know why this didn't work. 
+    for (var i in skills.skills) {
+        $('#' + skills.skills[i].id + '-bar').click(function () {
+            $('#' + skills.skills[i].id + '-info').fadeIn(300);
+        });   
+    }*/
+
+    
 };
 
 // Execture functions

@@ -6,7 +6,7 @@
 
 
 
-.education-entry, .work-entry, .project-entry, .skills-entry {
+.education-entry, .work-entry, .project-entry, .skills-entry, .skillsIntro {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -202,7 +202,17 @@ span {
 
 /* SkillsChart */
     .skills-entry {
-        max-width: 550px;  
+        max-width: 500px;  
+        float: left;
+    }
+
+    .skills-info {
+        max-width: 500px;
+        float: left;
+    }
+
+    .skillInfo h3 {
+        padding: 0px 10px 10px 0;
     }
 
 /* Bar chart stuff */  
