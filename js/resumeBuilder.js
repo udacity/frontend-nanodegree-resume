@@ -33,24 +33,25 @@ var skills = {
         },
         {
             name: "Database",   
-            value: 7,
+            value: 6,
             info: "Database experience"
         },
         {
             name: "Training", 
-            value: 8,
+            value: 7,
             info: "Trainig experience"
         },
         {
             name: "Communication",     
-            value: 10,
+            value: 8,
             info: "Communication experience"
         }
     ],
     "chart" : {
         "width": 420,
         "barHeight": 30,
-        "margin": {top: 20, right: 30, bottom: 60, left: 5}
+        "margin": {top: 20, right: 30, bottom: 30, left: 20},
+        "domain": {min: 0, max: 10}
     }
 }; 
 
@@ -227,11 +228,12 @@ skills.display = function () {
 
     $('.skills-entry').append('<svg class="chart"></svg>');
 
-    // Create x-scale using maximum range of values for skills.[skill].value
-    var x = d3.scale.linear().domain([0, d3.max(skills.skills, function(d) {return d.value})]).range([0, skills.chart.width]);
+    // Create x-scale domain and ranage for graph
+    var x = d3.scale.linear().domain([skills.chart.domain.min, skills.chart.domain.max]).range([0, skills.chart.width]);
 
     // Create chart size including margin.
-    var chartContainerHeight = skills.chart.barHeight * skills.skills.length + skills.chart.margin.top + skills.chart.margin.bottom;
+    var chartHeight = skills.chart.barHeight * skills.skills.length;
+    var chartContainerHeight = chartHeight + skills.chart.margin.top + skills.chart.margin.bottom;
     var chartContainerWidth = skills.chart.width + skills.chart.margin.left + skills.chart.margin.right;
     
     // Create the chart
@@ -249,8 +251,11 @@ skills.display = function () {
     // Add the text label for each bar
     bar.append("text").attr("x", 4).attr("y", skills.chart.barHeight / 2).attr("dy", ".35em").attr("class", "bar-text").text(function(d) { return d.name; });
 
-    // Add text to x-axis (??). Currently using magic number to ensure x-title is below the chart numbers
-    chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + (skills.chart.barHeight * skills.skills.length) + ")").call(xAxis).append("text").attr("y", 30).attr("x", skills.chart.width/2).attr("class", "x-title").text("Awesomness level");
+    // Add title text to x axis
+    chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + (skills.chart.barHeight * skills.skills.length) + ")").call(xAxis).append("text").attr("y", skills.chart.margin.bottom).attr("x", skills.chart.width/2).attr("class", "x-title").text("Awesomness level");
+    
+    // Add title text to y axis
+    chart.append("g").attr("class", "y axis").append("text").attr("transform", "rotate(-90)").attr("y", skills.chart.margin.left / -4).attr("x", chartHeight / -2).attr("class", "y-title").text("Skills");
 };
 
 // Execture functions
@@ -260,7 +265,9 @@ work.display();
 education.display();
 skills.display();
 
+
 // Maps
+
 var locationizer = function(work_obj) {
 	var locations = [];
 	for (var i in work_obj.jobs){
