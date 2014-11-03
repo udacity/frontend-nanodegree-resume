@@ -136,8 +136,9 @@ var education = {
 // Displaying functions
 
 projects.display = function () {
+    $("#projects").append('<div class="project-entries">');
 	for (var i in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
+		$(".project-entries").append(HTMLprojectStart);
 		var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
 		var projectDesc = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 		var projectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
@@ -232,7 +233,7 @@ skills.display = function () {
     $('#skillsChart').append('<p class="skillsIntro">How are my abilities in each level of expertise?<br> Click each bar for more information.</p>');
     $('#skillsChart').append('<div class="skills-entry"></div>');
 
-    $('.skills-entry').append('<svg class="chart"></svg></div>');
+    $('.skills-entry').append('<div class="skillChartContainer"><svg class="chart"></svg></div>');
 
     // Create x-scale domain and ranage for graph
     var x = d3.scale.linear().domain([skills.chart.domain.min, skills.chart.domain.max]).range([0, skills.chart.width]);
@@ -268,7 +269,7 @@ skills.display = function () {
     
     // *** Create the text info ***
     
-    $('#skillsChart').append('<div class="skills-info"></div>');
+    $('.skills-entry').append('<div class="skills-info"></div>');
     
     for (var i in skills.skills) {
         $('.skills-info').append('<div id="' + skills.skills[i].id + '-info" class="skillInfo"><h3>' + skills.skills[i].name + '</h3><p>' + skills.skills[i].info + '</p>');
