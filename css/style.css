@@ -6,7 +6,7 @@
 
 
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .skills-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -146,19 +146,6 @@ img {
   padding: 10px;
 }
 
-
-/* Bar chart stuff */
-.chart div {
-  font: 10px sans-serif;
-  background-color: #4A4A4A;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline-block;
-}
-
 span {
   padding: 5px;
 }
@@ -210,3 +197,48 @@ span {
     display: block;
   }
 }
+
+/******** RO EDITS ***************/
+
+/* SkillsChart */
+    .skills-entry {
+        max-width: 550px;  
+    }
+
+/* Bar chart stuff */  
+
+        .chart rect {
+          fill: steelblue;
+        }
+        
+        .chart rect:hover {
+          fill: green;
+        }
+
+        .chart text {
+          fill: black;
+          font: 13px sans-serif;
+          text-anchor: start;
+        }
+        
+        .chart .bar-text {
+          fill: white;   
+        }
+        
+        .axis text {
+          font: 10px sans-serif;
+        }
+        
+        .axis .x-title {
+          font: 15px sans-serif;
+          text-anchor: middle;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+/*** End bar chart **/
