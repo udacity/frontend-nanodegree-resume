@@ -216,9 +216,7 @@ span {
         }
 
         .chart text {
-          fill: black;
           font: 13px sans-serif;
-          text-anchor: start;
         }
         
         .chart .bar-text {
@@ -229,8 +227,8 @@ span {
           font: 10px sans-serif;
         }
         
-        .axis .x-title,
-        .axis .y-title {
+        .x-title,
+        .y-title {
           font: 15px sans-serif;
           text-anchor: middle;
         }

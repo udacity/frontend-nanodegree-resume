@@ -251,11 +251,14 @@ skills.display = function () {
     // Add the text label for each bar
     bar.append("text").attr("x", 4).attr("y", skills.chart.barHeight / 2).attr("dy", ".35em").attr("class", "bar-text").text(function(d) { return d.name; });
 
-    // Add title text to x axis
-    chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + (skills.chart.barHeight * skills.skills.length) + ")").call(xAxis).append("text").attr("y", skills.chart.margin.bottom).attr("x", skills.chart.width/2).attr("class", "x-title").text("Awesomness level");
+    // Create x-axis --> Magic
+    chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + (skills.chart.barHeight * skills.skills.length) + ")").call(xAxis);
     
-    // Add title text to y axis
-    chart.append("g").attr("class", "y axis").append("text").attr("transform", "rotate(-90)").attr("y", skills.chart.margin.left / -4).attr("x", chartHeight / -2).attr("class", "y-title").text("Skills");
+    // Create x-axis title. Using magic number 30 because I don't know how to move from the bottom of chart nor how to find the size of the X axis labelling
+    chart.append("g").append("text").attr("y", chartHeight + 30).attr("x", skills.chart.width/2).attr("class", "x-title").text("Awesomness level");
+    
+    // create y-axis title. Using magic number -5 for positioning. 
+    chart.append("g").append("text").attr("transform", "rotate(-90)").attr("y", -5).attr("x", chartHeight / -2).attr("class", "y-title").text("Skills");
 };
 
 // Execture functions
