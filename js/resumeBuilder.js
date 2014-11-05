@@ -304,7 +304,7 @@ skills.display = function () {
 
 };
 
-// *** Execture functions ((
+// *** Execture functions ***
 bio.display();
 projects.display();
 work.display();
@@ -323,5 +323,10 @@ var locationizer = function(work_obj) {
 
 $("#mapDiv").append(googleMap);
 
-// *** Mouse click console log ***
-
+// *** Click logging ***
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+    
+    logClicks(x,y);
+});
