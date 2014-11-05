@@ -1,4 +1,4 @@
-// Creating objects - bio, work, projects, education
+// *** Creating objects *** - bio, work, projects, education
 var bio = {
 	"name": "Rowan Savage",
 	"role": "Front-end Developer",
@@ -134,20 +134,7 @@ var education = {
 };
 
 
-// Displaying functions
-
-projects.display = function () {
-    $("#projects").append('<div class="project-entries">');
-	for (var i in projects.projects) {
-		$(".project-entries").append(HTMLprojectStart);
-		var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
-		var projectDesc = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
-		var projectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
-		var projectImg = HTMLprojectImage.replace("%data%", projects.projects[i].images);
-		$(".project-entry:last").append(projectTitle, projectDesc, projectDates, projectImg);
-	}
-}
-
+// *** Displaying functions ***
 
 bio.display = function () {
     
@@ -167,8 +154,7 @@ bio.display = function () {
     // Append HTML
     $("#header").prepend(bioName); 
     $("#header").prepend(bioPic);
-    //$("#header").prepend(bioRole);
-    
+    //$("#header").prepend(bioRole); // Removed
     
     $("#header").append(bioWelcome);
 
@@ -190,7 +176,8 @@ bio.display = function () {
 }
 
 work.display = function () {
-
+    
+    // Cycle through job objects and display each job
 	for (var i in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var jobTitle = (HTMLworkEmployer.replace("%data%", work.jobs[i].employer) + HTMLworkTitle.replace("%data%", work.jobs[i]["title"]));
@@ -233,6 +220,21 @@ education.display = function() {
         var onlineDesc = "<br><p>" + education.onlineCourses[course].desc + "</p>";
         $(".education-entry:last").append(onlineTitleSchool, onlineDate, onlineDesc);
     }
+}
+
+projects.display = function () {
+    
+    $("#projects").append('<div class="project-entries">');
+    
+    // Cycle through each project and display
+	for (var i in projects.projects) {
+		$(".project-entries").append(HTMLprojectStart);
+		var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+		var projectDesc = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+		var projectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+		var projectImg = HTMLprojectImage.replace("%data%", projects.projects[i].images);
+		$(".project-entry:last").append(projectTitle, projectDesc, projectDates, projectImg);
+	}
 }
 
 skills.display = function () {
@@ -300,14 +302,9 @@ skills.display = function () {
         });   
     }*/
 
-    
-    $(window).resize(function() {
-        console.log($(window).width());
-    });
-    
 };
 
-// Execture functions
+// *** Execture functions ((
 bio.display();
 projects.display();
 work.display();
@@ -315,8 +312,7 @@ education.display();
 skills.display();
 
 
-// Maps
-
+// *** Map ***
 var locationizer = function(work_obj) {
 	var locations = [];
 	for (var i in work_obj.jobs){
@@ -326,3 +322,6 @@ var locationizer = function(work_obj) {
 }
 
 $("#mapDiv").append(googleMap);
+
+// *** Mouse click console log ***
+
