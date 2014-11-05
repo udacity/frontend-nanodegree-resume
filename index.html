@@ -52,8 +52,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     backgroundColor by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content">
-      <ul id="topContacts" class='flex-box'></ul>
+    <div id="header">
+      <ul id="topContacts"></ul>
     </div>
     <div style='clear: both;'></div>
     <div id="workExperience" class='gray'>
@@ -66,15 +66,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Education</h2>
     </div>
     <div id="skillsChart">
-      <h2>Skills Chart</h2>
+      <h2>Skills<span id="charth2Text"> Chart</span></h2>
     </div>
     <div id="mapDiv" class='gray'>
       <h2>Where I've Lived and Worked</h2>
     </div>
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
-      <ul id="footerContacts" class="flex-box">
-      </ul>
+    <div id="letsConnect">
+        <div></div>
     </div>
   </div>
 
@@ -108,30 +106,5 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       an opening and closing set of slash asterisks for block comments.
   */
 
-
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("topContacts").style.backgroundColor = "black";
-  }
-  if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("work-entry").length === 0) {
-    document.getElementById("workExperience").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("project-entry").length === 0) {
-    document.getElementById("projects").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("education-entry").length === 0) {
-    document.getElementById("education").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("skills-entry").length === 0) {
-    document.getElementById("skillsChart").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("letsConnect").style.backgroundColor = "black";
-  }
-  if(document.getElementById("map") == undefined) {
-    document.getElementById("mapDiv").style.backgroundColor = "black";
-  }
   </script>
 </body>

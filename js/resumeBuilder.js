@@ -7,6 +7,7 @@ var bio = {
 		"mobile": "044619933",
 		"twitter": "@RMS",
 		"github": "github.com",
+        "linkedin": "linkedin.com",
 		"location": "Auckland, New Zealand"
     },
 	"imgURL": "images/fry.jpg",
@@ -56,7 +57,7 @@ var skills = {
     "chart" : {
         "width": 420,
         "barHeight": 30,
-        "margin": {top: 20, right: 30, bottom: 30, left: 20},
+        "margin": {top: 0, right: 30, bottom: 30, left: 20},
         "domain": {min: 0, max: 10}
     }
 }; 
@@ -156,14 +157,16 @@ bio.display = function () {
     var bioEmail = HTMLemail.replace("%data%", bio["contacts"].email);
     var bioMobile = HTMLmobile.replace("%data%", bio["contacts"].mobile);
     var bioTwitter = HTMLtwitter.replace("%data%", bio["contacts"].twitter);
-    var bioGithub = HTMLgithub.replace("%data%", bio["contacts"].github)
+    var bioGithub = HTMLgithub.replace("%data%", bio["contacts"].github);
+    var bioLinkedin = HTMLlinkedin.replace("%data%", bio["contacts"].linkedin);
     var bioLocation = HTMLlocation.replace("%data%", bio["contacts"].location);
     var bioPic = HTMLbioPic.replace("%data%", bio["imgURL"]);
     var bioWelcome = HTMLWelcomeMsg.replace("%data%", bio["welcome"]);
+    var clearFix = "<div style='clear: both;'></div>";
 
     // Append HTML
     $("#header").prepend(bioPic);
-    $("#header").prepend(bioRole);
+    //$("#header").prepend(bioRole);
     $("#header").prepend(bioName); 
     
     $("#header").append(bioWelcome);
@@ -172,6 +175,7 @@ bio.display = function () {
     $("#topContacts").append(bioMobile);
     $("#topContacts").append(bioTwitter);
     $("#topContacts").append(bioGithub);
+    $("#topContacts").append(bioLinkedin);
     $("#topContacts").append(bioLocation);
 
     $("#header").append(HTMLskillsStart); 
@@ -180,6 +184,8 @@ bio.display = function () {
     for (var i in skills.skills) {
         $("#skills").append(HTMLskills.replace("%data%", skills.skills[i].name)); 
     }
+    
+    $("#header").append(clearFix); 
 }
 
 work.display = function () {
@@ -268,21 +274,21 @@ skills.display = function () {
     chart.append("g").append("text").attr("transform", "rotate(-90)").attr("y", -5).attr("x", chartHeight / -2).attr("class", "y-title").text("Skills");
     
     // *** Create the text info ***
-    
     $('.skills-entry').append('<div class="skills-info"></div>');
     
     for (var i in skills.skills) {
         $('.skills-info').append('<div id="' + skills.skills[i].id + '-info" class="skillInfo"><h3>' + skills.skills[i].name + '</h3><p>' + skills.skills[i].info + '</p>');
     }
     
-    $('.skillInfo').hide();
-    $('.skillInfo').first().show();
+    // Hide all but the first skills info
+    $('.skillInfo').addClass('hide');
+    $('.skillInfo').first().removeClass('hide');
     
-    // jquery to make visible skills info
+    // Hide and show text entries based on clicking of graph
     $('.skill-bar').click(function () {
         var skill = $(this).attr('id').replace('-bar', '');
-        $('.skillInfo').hide();
-        $('#' + skill + '-info').show();
+        $('.skillInfo').addClass('hide');
+        $('#' + skill + '-info').removeClass('hide');
     });
     
     /* 
@@ -293,6 +299,10 @@ skills.display = function () {
         });   
     }*/
 
+    
+    $(window).resize(function() {
+        console.log($(window).width());
+    });
     
 };
 

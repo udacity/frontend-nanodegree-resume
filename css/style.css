@@ -6,19 +6,21 @@
 }
 
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
-  display: inline;
+  text-align: right;
 }
 
 h2 {
   font-style: bold;
-  font-size: 24px;
-  color: #999999;
+  font-size: 28px;
+  color: black;
   line-height: 29px;
   padding: 10px;
+  background: rgb(95, 95, 95);
+  box-shadow: inset 0 0 5px black;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 h3 {
@@ -70,7 +72,7 @@ ul {
 
 /* Specific styles */
 
-.education-entry, .work-entry, .project-entry, .skills-entry, .skillsIntro {
+#header, .education-entry, .work-entry, .project-entry, .skills-entry, .skillsIntro {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -108,10 +110,24 @@ ul {
   padding: 10px;
 }
 
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: right;
+
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Bio Styles */
 
 #header {
-  background-color: #484848;
+  background-color: black;
 }
 
 .date-text {
@@ -122,20 +138,13 @@ ul {
   float: left;
 }
 
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999999;
-  line-height: 16px;
-  float: right;
-
-}
-
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+  display: inline-block;
+  width: 290px;
 }
 
 #skillsH3 {
@@ -150,6 +159,19 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
+}
+
+#topContacts {
+    float: right;
+}
+
+#skills {
+    float: right;
+    margin: 0 15px 0 0;
+}
+
+.hide {
+    display: none;
 }
 
 /* Work Exp styles */
@@ -174,12 +196,26 @@ ul {
 
 /* Skills Chart styles */
 
+#charth2Text {
+    padding: 0;
+    margin: 0;
+}
+
 .skills-entry {
     display: flex;
 }
 
+.skills-entry {
+    padding: 10px 5%;
+}
+
+.skillsIntro {
+    margin: 10px 0 0 0;
+}
+
 .skillChartContainer {
     min-width: 500px;
+    margin: 0 0 0 -20px;
 }
 
 .skills-info {
@@ -240,7 +276,13 @@ ul {
 /* Lets Connect styles */
 
 #letsConnect {
-  text-align: center;
+    background: black;
+    height: 30px;
+}
+
+#letsConnect div {
+    height: 10px;
+    background: #F5AE23;
 }
 
 /* Media Queries */
@@ -257,6 +299,10 @@ ul {
   #letsConnect {
     margin-top: 5%;
   }
+  
+  #skills {
+      display: none;
+  }
 }
 
 @media only screen and (max-width:900px) {
@@ -268,6 +314,10 @@ ul {
         display: flex;
         flex-wrap: wrap;
     }
+    
+    .welcome-message {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -277,10 +327,24 @@ ul {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
-    display: none;
-  }
+}
+
+@media only screen and (max-width: 500px) {
+    #topContacts {
+        float: left;
+    }
     
+    .skillInfo.hide {
+        display: block;
+    }
+    
+    .skillInfo h3 {
+        padding: 10px 10px 0 0;
+    }
+    
+    #charth2Text, .skillChartContainer, .skillsIntro {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 750px) {
