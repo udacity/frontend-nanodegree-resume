@@ -3,6 +3,7 @@ http://css-tricks.com/snippets/css/a-guide-to-flexbox/
 http://www.css3.info/preview/box-shadow/
 https://stackoverflow.com/questions/5796654/css-rule-to-apply-only-if-element-has-both-classes
 http://css-tricks.com/almanac/properties/t/text-shadow/
+http://webaim.org/blog/web-accessibility-and-seo/
 
 jquert refs:
 https://api.jquery.com/

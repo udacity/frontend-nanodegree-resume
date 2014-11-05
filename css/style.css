@@ -171,7 +171,9 @@ ul {
 }
 
 .hide {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
 /* Work Exp styles */
@@ -335,7 +337,9 @@ ul {
     }
     
     .skillInfo.hide {
-        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
     }
     
     .skillInfo h3 {
