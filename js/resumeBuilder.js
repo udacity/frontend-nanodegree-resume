@@ -10,8 +10,8 @@ var bio = {
         "linkedin": "linkedin.com",
 		"location": "Auckland, New Zealand"
     },
-	"imgURL": "images/fry.jpg",
-	"welcome": "Welcome to my Udacity sponsored resume!",
+	"imgURL": "images/me.jpg",
+	"welcome": "<strong>Welcome to my Udacity sponsored resume!</strong> All the information you see here is stored in JSON objects and which javascript building the page on the file. It's here to show that I can use some basic javascript front end techniques. The source can be found on <a href='//github.com/ro-savage/udacity-resume'>github project page</a>.",
 	"skills": ["Frontend Web", "Backend Web", "Pretty big data", "Training" ]
 };
 
@@ -165,9 +165,10 @@ bio.display = function () {
     var clearFix = "<div style='clear: both;'></div>";
 
     // Append HTML
+    $("#header").prepend(bioName); 
     $("#header").prepend(bioPic);
     //$("#header").prepend(bioRole);
-    $("#header").prepend(bioName); 
+    
     
     $("#header").append(bioWelcome);
 

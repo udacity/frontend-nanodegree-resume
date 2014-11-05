@@ -9,7 +9,7 @@ h1 {
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
-  text-align: right;
+  text-align: left;
 }
 
 h2 {
@@ -145,6 +145,11 @@ ul {
   line-height: 28px;
   display: inline-block;
   width: 290px;
+}
+
+.welcome-message a { 
+    display: inline;
+    margin: 0;
 }
 
 #skillsH3 {
@@ -295,6 +300,9 @@ ul {
     margin: auto;
     border: 1px black solid;
  } 
+    .welcome-message {
+        width: 450px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -308,10 +316,6 @@ ul {
 }
 
 @media only screen and (max-width:900px) {
-    .biopic {
-        width: 175px;
-    }
-
     .skills-entry {
         display: flex;
         flex-wrap: wrap;
@@ -320,14 +324,15 @@ ul {
     .welcome-message {
         display: none;
     }
+    
+    #topContacts {
+        float: none;
+    }
 }
 
 @media only screen and (max-width: 750px) {
   #letsConnect {
     margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
   }
 }
 
@@ -348,6 +353,10 @@ ul {
     
     #charth2Text, .skillChartContainer, .skillsIntro {
         display: none;
+    }
+    
+    .biopic {
+        float: none;
     }
 }
 
