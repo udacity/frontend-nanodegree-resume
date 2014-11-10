@@ -1,31 +1,26 @@
+/* General Styles */
 *{
     padding:0;
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-.education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
-  display: inline;
+  text-align: left;
 }
 
 h2 {
   font-style: bold;
-  font-size: 24px;
-  color: #999999;
+  font-size: 28px;
+  color: black;
   line-height: 29px;
   padding: 10px;
+  background: rgb(95, 95, 95);
+  box-shadow: inset 0 0 5px black;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 h3 {
@@ -48,24 +43,6 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999999;
-  line-height: 16px;
-  float: right;
-
-}
-
 p {
   font-size: 14px;
   color: #333333;
@@ -79,20 +56,25 @@ a {
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #F3F3F3;
-  line-height: 28px;
+img {
+  padding: 10px;
 }
 
-#skillsH3 {
-  color: #F5AE23;
-  display: none;
+span {
+  padding: 5px;
 }
 
-#skills {
-  display: none;
+ul {
+  list-style-type: none;
+}
+
+/* Layout Styles */
+
+/* Specific styles */
+
+#header, .education-entry, .work-entry, .project-entry, .skills-entry, .skillsIntro {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .orange {
@@ -102,6 +84,7 @@ a {
 .orange-text {
   color: #F5AE23;
 }
+
 
 .white-text {
   font-weight: bold;
@@ -118,11 +101,6 @@ a {
   background-color: #4A4A4A;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -132,71 +110,163 @@ a {
   padding: 10px;
 }
 
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: right;
+
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bio Styles */
+
+#header {
+  background-color: black;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #F3F3F3;
+  line-height: 28px;
+  display: inline-block;
+  width: 290px;
+}
+
+.welcome-message a { 
+    display: inline;
+    margin: 0;
+}
+
+#skillsH3 {
+  color: #F5AE23;
+}
+
 .center-content {
   padding: 5%;
 }
-
-ul {
-  list-style-type: none;
-}
-
 
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
 }
 
-img {
-  padding: 10px;
+#topContacts {
+    float: right;
 }
 
-
-/* Bar chart stuff */
-.chart div {
-  font: 10px sans-serif;
-  background-color: #4A4A4A;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline-block;
+#skills {
+    float: right;
+    margin: 0 15px 0 0;
 }
 
-span {
-  padding: 5px;
+.hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
-#letsConnect {
-  text-align: center;
+/* Work Exp styles */
+
+/* Projects styles */
+    
+#projects {
+
 }
 
-@media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
-  }
+.project-entries {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+.project-entry {
+    
 }
 
-@media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+/* Education styles */
+
+/* Skills Chart styles */
+
+#charth2Text {
+    padding: 0;
+    margin: 0;
 }
 
+.skills-entry {
+    display: flex;
+}
+
+.skills-entry {
+    padding: 10px 5%;
+}
+
+.skillsIntro {
+    margin: 10px 0 0 0;
+}
+
+.skillChartContainer {
+    min-width: 500px;
+    margin: 0 0 0 -20px;
+}
+
+.skills-info {
+    min-width: 250px;
+}
+
+.skillInfo h3 {
+    padding: 0px 10px 10px 0;
+}
+
+.chart rect {
+    fill: steelblue;
+}
+        
+.chart rect:hover {
+    fill: green;
+}
+
+.chart text {
+    font: 13px sans-serif;
+}
+        
+.chart .bar-text {
+    fill: white;   
+}
+        
+.axis text {
+    font: 10px sans-serif;
+}
+        
+.x-title,
+.y-title {
+    font: 15px sans-serif;
+    text-anchor: middle;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+/* Map styles */
 #map {
   display: block;
   height: 100%;
@@ -210,9 +280,88 @@ span {
   padding-bottom: 5%;
 }
 
+/* Lets Connect styles */
+
+#letsConnect {
+    background: black;
+    height: 30px;
+}
+
+#letsConnect div {
+    height: 10px;
+    background: #F5AE23;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1200px) {
+ #main {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px black solid;
+ } 
+    .welcome-message {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+  #letsConnect {
+    margin-top: 5%;
+  }
+  
+  #skills {
+      display: none;
+  }
+}
+
+@media only screen and (max-width:900px) {
+    .skills-entry {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .welcome-message {
+        display: none;
+    }
+    
+    #topContacts {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+  #letsConnect {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+    #topContacts {
+        float: left;
+    }
+    
+    .skillInfo.hide {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .skillInfo h3 {
+        padding: 10px 10px 0 0;
+    }
+    
+    #charth2Text, .skillChartContainer, .skillsIntro {
+        display: none;
+    }
+    
+    .biopic {
+        float: none;
+    }
+}
+
 @media only screen and (min-width: 750px) {
   #skillsH3,
-  #skills,
   .biopic {
     display: block;
   }

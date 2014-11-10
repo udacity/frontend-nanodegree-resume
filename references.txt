@@ -1,0 +1,16 @@
+CSS Refs:
+http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+http://www.css3.info/preview/box-shadow/
+https://stackoverflow.com/questions/5796654/css-rule-to-apply-only-if-element-has-both-classes
+http://css-tricks.com/almanac/properties/t/text-shadow/
+http://webaim.org/blog/web-accessibility-and-seo/
+
+jquert refs:
+https://api.jquery.com/
+
+d3js refs:
+http://bost.ocks.org/mike/bar/
+http://www.recursion.org/d3-for-mere-mortals/
+http://www.d3noob.org/2014/02/d3js-elements.html
+https://github.com/mbostock/d3/wiki/API-Reference
+http://d3js.org/
