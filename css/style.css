@@ -1,19 +1,15 @@
-*{
-    padding:0;
-    margin:0;
-    font-family: 'Roboto', sans-serif;
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
 }
-
-
 
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -21,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -36,7 +32,7 @@ h3 {
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 17px;
@@ -140,7 +136,6 @@ ul {
   list-style-type: none;
 }
 
-
 .biopic {
   float: left;
   padding: 10px;
@@ -151,7 +146,6 @@ ul {
 img {
   padding: 10px;
 }
-
 
 /* Bar chart stuff */
 .chart div {
