@@ -39,7 +39,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -115,18 +115,21 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   }
   if(document.getElementsByTagName("h1").length === 0) {
     document.getElementById("header").style.display = "none";
+    document.getElementById("header").style.display = "inline";
   }
   if(document.getElementsByClassName("work-entry").length === 0) {
     document.getElementById("workExperience").style.display = "none";
   }
   if(document.getElementsByClassName("project-entry").length === 0) {
     document.getElementById("projects").style.display = "none";
+    // document.getElementById("projects").style.background = "black";
   }
   if(document.getElementsByClassName("education-entry").length === 0) {
     document.getElementById("education").style.display = "none";
   }
   if(document.getElementsByClassName("skills-entry").length === 0) {
     document.getElementById("skillsChart").style.display = "none";
+   // document.getElementById("skillsChart").style.background = "black"; 
   }
   if(document.getElementsByClassName("flex-item").length === 0) {
     document.getElementById("letsConnect").style.display = "none";
@@ -134,5 +137,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   if(document.getElementById("map") == undefined) {
     document.getElementById("mapDiv").style.display = "none";
   }
+
+  // if (document.)
   </script>
 </body>

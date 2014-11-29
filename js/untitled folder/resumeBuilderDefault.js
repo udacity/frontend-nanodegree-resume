@@ -14,7 +14,6 @@ var bio ={
 
 
 
-
 // Contact --------------------
 var formattedName=HTMLheaderName.replace("%data%",bio.name);
 var	formattedRole=HTMLheaderRole.replace("%data%",bio.role);
@@ -31,6 +30,7 @@ $("#header").prepend(formattedName,formattedRole);
 $("#header").append(formattedEmail,formattedMobile,formattedGithub,formattedLocation);
 $("#header").append(formattedPicture);
 $("#header").append(formattedWelcomeMsg);
+if (bio.length!=0){$("#header").append(HTMLskillsStart);};
 $("#header").append(formattedSkills);
 
 
@@ -42,10 +42,13 @@ work.yearsWorked="1";
 work.started="2012";
 work.city="Amsterdam";
 
-var formattedEmployer=HTMLworkEmployer.replace("%data%",work.employer);
+// var formattedEmployer=HTMLworkEmployer.replace("%data%",work.employer);
 // var formattedWorkStart=HTMLworkStart.replace("",work.started);
 // var formattedSchoolName=;
-
+// for (workObj in work){
+// 	var formattedEmployer=HTMLworkEmployer.replace("%data%",work.employer[workObj]);
+// 	var	formattedworkTitle=HTMLworkTitle.replace("%data%",work.jobPosition[workObj];
+// };
 
 $("#workExperience").append(formattedEmployer);
 
