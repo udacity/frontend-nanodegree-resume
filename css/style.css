@@ -4,13 +4,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
+.clearfix {
+  overflow: auto;
+}
 
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
-
 
 h1 {
 
@@ -91,10 +92,6 @@ a {
   display: none;
 }
 
-#skills {
-  display: none;
-}
-
 .orange {
   background-color: #F5AE23;
 }
@@ -133,7 +130,10 @@ a {
 }
 
 .center-content {
-  padding: 5%;
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2.5%
 }
 
 ul {
@@ -212,7 +212,6 @@ span {
 
 @media only screen and (min-width: 750px) {
   #skillsH3,
-  #skills,
   .biopic {
     display: block;
   }
