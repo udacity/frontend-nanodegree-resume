@@ -127,14 +127,17 @@ function initializeMap() {
     
     // initializes an empty array
     var locations = [];
+    // var locationContent = []; Trying to append Content dependent on location
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
+    // locationContent.push("Home"); Trying to append Content dependent on location
     
     // iterates through school locations and appends each location to
     // the locations array
     for (var school in education.schools) {
       locations.push(education.schools[school].location);
+      // locationContent.push(educationMap[school]);
     }
 
     // iterates through work locations and appends each location to
@@ -165,7 +168,7 @@ function initializeMap() {
       position: placeData.geometry.location,
       title: name
     });
-    
+
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
@@ -173,9 +176,14 @@ function initializeMap() {
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
+    // Closes the window if clicked somewhere else on the map
+    google.maps.event.addListener(map, 'click', function(){
+      infoWindow.close();
+    });
+    // hmmmm, I wonder what this is about...  
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.
