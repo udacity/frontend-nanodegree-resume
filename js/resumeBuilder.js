@@ -3,21 +3,21 @@ var work={
 	{
 	"employer":"Tomtom Taxi",
 	"title":"Online Content Intern",
-	"location":"Amsterdam",
+	"location":"Amsterdam, Netherlands",
 	"dates":"2012-2013",
 	"description":"Tomtom taxi was a mobile app startup, which allowed consumers to book a taxi with a click of a button. The product was launched for IOS and Android. I was mainly part of the online team where we launched and managed the website in Dutch and English."
 	},
 	{
 	"employer":"Fatale Entertainment",
 	"title":"Co-founder",
-	"location":"Rotterdam",
+	"location":"Rotterdam, Netherlands",
 	"dates":"2012-2013",
 	"description":"Fatale Entertainment is an organizer of international events for university students. It has partnership with one of the largest international student organization, ESN, and have organized events for up to 500 people. As a cofounder, I was responsible from Fatale brand by managing a coherent identity in online and offline mediums. I was also responsible for sponsors and venues."
 	},	
 	{
 	"employer":"Cross Capto",
 	"title":"Online Marketing Intern",
-	"location":"Rotterdam",
+	"location":"Rotterdam, Netherlands",
 	"dates":"2011-2012",
 	"description":"Cross Capto is an online marketing company which provides clients with web design, SEO, SEM and marketing solutions."
 	}
@@ -30,15 +30,15 @@ var projects={
 	{
 	"title":"Udacity Portfolio Page",
 	"dates":"2014",
-	"description":"Placeholder Project 1 - Portfolio Project",
+	"description":"Portfolio Project",
 	"image":"images/project1-full.jpg",
 	"url":"http://frank3stein.github.io/index.html"
 	},
 	{
 	"title":"Udacity Interactive Resume",
 	"dates":"2014",
-	"description":"Placeholder Project 2 - Interactive Resume",
-	"image":"images/project1-full.jpg",
+	"description":"Project within a project - Interactive Resume",
+	"image":"images/project2-full.jpg",
 	"url":"http://frank3stein.github.io/index.html"
 	}
 	]
@@ -56,7 +56,7 @@ var bio={
 		"email":"martinov.emil@gmail.com",
 		"github":"frank3stein",
 		"twitter":"emilmartinov",
-		"location":"Rotterdam"
+		"location":"Rotterdam, Netherlands"
 	},
 
 	"skills":[
@@ -77,7 +77,7 @@ var education={
 "schools":[
 	{
 		"name":"Rotterdam School of Management",
-		"location":"Rotterdam",
+		"location":"Rotterdam, Netherlands",
 		"degree":"Masters",
 		"majors":"Marketing Management",
 		"dates":"2009-2014",
@@ -85,7 +85,7 @@ var education={
 		},
 	{
 		"name":"Rotterdam School of Management",
-		"location":"Rotterdam",
+		"location":"Rotterdam, Netherlands",
 		"degree":"Masters",
 		"majors":"General Management",
 		"dates":"2008-2009",
@@ -93,7 +93,7 @@ var education={
 		},
 	{
 		"name":"Rotterdam School of Management",
-		"location":"Rotterdam",
+		"location":"Rotterdam, Netherlands",
 		"degree":"Masters",
 		"majors":"Management of Innovation",
 		"dates":"2010-",
@@ -110,6 +110,7 @@ var education={
 ]
 }
 
+// To be included once completed
 var onlinecourses={
 	"onlinecourse":[
 	{
@@ -121,6 +122,8 @@ var onlinecourses={
 	]
 }
 
+
+// Since personal information is unique no function written. Here Information is written to html from bio object.
 var formattedName=HTMLheaderName.replace("%data%",bio.name);
 var	formattedRole=HTMLheaderRole.replace("%data%",bio.role);
 var formattedEmail=HTMLemail.replace("%data%",bio.contacts.email);
@@ -130,7 +133,12 @@ var formattedLocation=HTMLlocation.replace("%data%",bio.contacts.location);
 var formattedPicture=HTMLbioPic.replace("%data%",bio.picture);
 var formattedWelcomeMsg=HTMLWelcomeMsg.replace("%data%",bio.welcomeMessage);
 var formattedSkills=HTMLskills.replace("%data%",bio.skills);
-	
+
+$("#footerContacts").append(formattedEmail,formattedMobile,formattedGithub,formattedLocation);
+
+// WorkMap is an array created in order to use to manipulate name in map. 
+	// var workMap=[];
+// Display work function takes objects from the work array and appends them to the page. Function was written in order to add new information to the page automatically.	
 	function displayWork(){
 	for (var workObj=0; workObj<work.jobs.length; workObj++){
 	$("#workExperience").append(HTMLworkStart);
@@ -140,6 +148,8 @@ var formattedSkills=HTMLskills.replace("%data%",bio.skills);
 	var formattedworkDates=HTMLworkDates.replace("%data%",work.jobs[workObj].dates);
 	var formattedworkLocation=HTMLworkLocation.replace("%data%",work.jobs[workObj].location);
 	var formattedworkDecription=HTMLworkDescription.replace("%data%",work.jobs[workObj].description);
+	// THis is not implemented. The goal of the following code was to record earch work object code so I can use it on the google maps marker info. 
+	// workMap.push(HTMLworkStart+"\n"+formattedEmployer+"\n"+formattedworkTitle+"\n"+formattedEmployerTitle+"\n"+formattedworkDates+"\n"+formattedworkDecription);
 
 		$(".work-entry:last").append(formattedEmployerTitle);
 		$(".work-entry:last").append(formattedworkDates);
@@ -148,12 +158,14 @@ var formattedSkills=HTMLskills.replace("%data%",bio.skills);
 		}
 	}
 	displayWork();
+
+// The Here is the header information appended to the html document
 $("#header").prepend(formattedName,formattedRole);
+
 $("#header").append(formattedEmail,formattedMobile,formattedGithub,formattedLocation);
 $("#header").append(formattedPicture);
 $("#header").append(formattedWelcomeMsg);
-// if (bio.length!=0){$("#header").append(HTMLskillsStart);};
-// $("#header").append(formattedSkills);
+
 
 
 // Internationilizing the Name if you get emil martinov === Emil MARTINOV
@@ -166,7 +178,9 @@ $("#header").append(formattedWelcomeMsg);
 	lastName=lastName.toUpperCase();
 	return firstName+" "+lastName;
 }
+// Appending to main
 $("#main").append(internationalizeButton);
+
 // Checking if there are any skills in bio, if there are publish the start and the skills
 
 if (bio.skills.length=!0){
@@ -189,6 +203,8 @@ for (var project=0; project<projects.project.length; project++){
 	}
 }
 projects.display();
+
+// Here education is also saved in an array so that it may be used in the map content data in the marker.
 var educationMap=[];
 
 
@@ -206,18 +222,3 @@ for ( var degree =0; degree<education.schools.length; degree++){
 	}
 }
 education.display();
-// Inside the project function
-// var formattedprojectTitle		=	HTMLprojectTitle.replace("%data%",projects[0].title); 
-// var formattedprojectDates		=	HTMLprojectDates.replace("%data%",projects[0].dates); 
-// var formattedprojectDescription	=	HTMLprojectDescription.replace("%data%", projects[0].description);
-// var formattedprojectImage		= 	HTMLprojectImage.replace("%data%",projects[0].image);
-// $("#projects").append(HTMLprojectStart);
-// $("#projects").append(formattedprojectTitle, formattedprojectDates, formattedprojectDescription, formattedprojectImage);
-
-
-// // Recording the x,y location when left mouse button is clicked.
-// $(document).click(function(loc){
-// 	var x = loc.pageX;
-// 	var y = loc.pageY;
-// 	logClicks(x,y);
-// });
