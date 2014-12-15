@@ -5,14 +5,14 @@ var work = {
     "title":"designer",
     "location":"Dallas, TX",
     "dates":"2006-now",
-    "description":"U-verse designer"
+    "description":"U-verse designer. Build U-verse client software and interactive applications."
   },
   {
     "employer":"Guideworks",
     "title":"designer",
     "location":"Tulsa, OK",
     "dates":"2004-2006",
-    "description":"Comcast designer"
+    "description":"Comcast designer. Develop new ideas for TV navigation and build interactive prototypes for industry events."
   }
   ]
 };
@@ -36,10 +36,10 @@ var bio = {
     "mobile":"210-542-8258",
     "email":"robert@icoldwell.com",
     "github":"rcoldwell",
-    "twitter":"",
+    "twitter":"@rcoldwell",
     "location":"Dallas, TX"
   },
-  "bioPic":"images/me.jpg",
+  "bioPic":"images/fry.jpg",
   "skills":["designer","coder"]
 };
 
@@ -64,6 +64,31 @@ var education = {
   ]
 };
 
+//add name
+  var role = HTMLheaderRole.replace("%data%",bio.role);
+  $("#header").prepend(role);
+  var name = HTMLheaderName.replace("%data%",bio.name);
+  $("#header").prepend(name);
+  
+//add contacts
+var mobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+ $("#topContacts").append(mobile);
+var email = HTMLemail.replace("%data%",bio.contacts.email);
+ $("#topContacts").append(email);
+var github = HTMLgithub.replace("%data%",bio.contacts.github);
+ $("#topContacts").append(github);
+var twitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
+ $("#topContacts").append(twitter);
+
+//add bio pic
+var biopic = HTMLbioPic.replace("%data%",bio.bioPic);
+ $("#header").append(biopic);
+
+//add welcome message
+var message = HTMLWelcomeMsg.replace("%data%",bio.welcomeMessage);
+ $("#header").append(message);
+
+//add skills
 if(bio.skills.length > 0){
   $("#header").append(HTMLskillsStart);
   var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
@@ -72,6 +97,7 @@ if(bio.skills.length > 0){
   $("#skills").append(formattedSkill);
 }
 
+//display work
 function displayWork(){
   for(job in work.jobs){
     $("#workExperience").append(HTMLworkStart);
