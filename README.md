@@ -29,7 +29,7 @@ Each string has a title that describes how it should be used. For instance, `HTM
 ### Your process:
 The resume has four distinct sections: work, education, projects and a header with biographical information. You’ll need to:
 
-1. Build four JSONs, each one representing a different resume section, The objects that you create need to follow the names within the schema exactly: 
+1. Build four JSONs, each one representing a different resume section. The objects that you create need to follow the names within the schema below exactly. Make sure your JSONs are formatted correctly using <a href="http://jsonlint.com/" target="_blank">JSONlint.com</a>.
 
 * `bio` contains:
         
