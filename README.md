@@ -44,7 +44,7 @@ The resume has four distinct sections: work, education, projects and a header wi
             welcomeMessage: string 
             skills: array of strings
             biopic: url
-            display: function
+            display: function taking no parameters
 
 * `education` contains:
       
@@ -60,7 +60,7 @@ The resume has four distinct sections: work, education, projects and a header wi
                  school: string
                  date: integer (date finished)
                  url: string
-            display: function
+            display: function taking no parameters
 
 * `work` contains
           
@@ -70,7 +70,7 @@ The resume has four distinct sections: work, education, projects and a header wi
                  location: string 
                  dates: string (works with a hyphen between them)
                  description: string 
-            display: function
+            display: function taking no parameters
 
 * `projects` contains:
 
@@ -79,7 +79,7 @@ The resume has four distinct sections: work, education, projects and a header wi
                   dates: string (works with a hyphen between them)
                   description: string
                   images: array with string urls
-            display: function
+            display: function taking no parameters
 
 2. Iterate through each JSON and append its information to index.html in the correct section.
  * First off, you’ll be using jQuery’s `selector.append()` and `selector.prepend()` functions to modify index.html. `selector.append()` makes an element appear at the end of a selected section. `selector.prepend()` makes an element appear at the beginning of a selected section.
