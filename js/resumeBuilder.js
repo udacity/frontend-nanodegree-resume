@@ -1,26 +1,33 @@
-var firstName = "Phonofidelic";
+// var firstName = "Phonofidelic";
 
-var name = "Phonofidelic";
+//var name = "Phonofidelic";
 
-var role = "Design & Printing";
+// var role = "Design & Printing";
 
-var age = 29;
+// var age = 29;
 
-console.log(firstName);
+// console.log(firstName);
 
-var awsomeThoughts = "I am Phonofidelic and I am AWESOME!";
+// var awsomeThoughts = "I am Phonofidelic and I am AWESOME!";
 
-console.log(awsomeThoughts);
+// console.log(awsomeThoughts);
 
-var funThoughts =
-	awsomeThoughts.replace("AWESOME", "FUN");
+// var funThoughts =
+	// awsomeThoughts.replace("AWESOME", "FUN");
 
-$("#main").append(funThoughts);
+// $("#main").append(funThoughts);
 
-var formattedName = HTMLheaderName.replace("%data%", name);
+// var formattedName = HTMLheaderName.replace("%data%", name);
 
-$("#header").append(formattedName);
+// $("#header").append(formattedName);
 
-var formattedRole = HTMLheaderRole.replace("%data%", role);
+// var formattedRole = HTMLheaderRole.replace("%data%", role);
 
-$("#header").append(formattedRole);
+// $("#header").append(formattedRole);
+
+var skills =
+["design", "printing", "art"];
+
+// $("#main").append(skills);
+
+$("#main").append(skills[0]);
