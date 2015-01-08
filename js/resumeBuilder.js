@@ -69,8 +69,6 @@ if (bio.skills.length > 0) {
 
 };
 
-
-
 var education = {
   "schools": [
   {
@@ -90,12 +88,14 @@ var education = {
     "url": "http://www.academyart.edu"
   }
   ],
-  "online" : {
+  "online" : [
+  {
     "title" : "Front End Developer Certification",
     "school" : "Udacity",
     "dates" : 2014,
     "url" : "http://www.udacity.com"
   }
+  ]
 };
 
 // show the schools section
@@ -110,7 +110,7 @@ showSchools = function() {
 
   // combines the School and Degree
   var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
-  $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
+  $(".education-entry:last").append(formattedSchoolTitle);
 
   var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
   $(".education-entry:last").append(formattedSchoolLocation);
@@ -128,18 +128,27 @@ showSchools = function() {
     // online classes section
 
  $("#education").append(HTMLonlineClasses);
+ $("#education").append(HTMLschoolStart);
 
-    // var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online.title);
-    // $(".education-entry:last").next().append(formattedOnlineTitle);
+    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[online].title);
+    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[online].school);
 
-    // var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online.school);
-    // $("#education").children().next().append(formattedOnlineSchool);
+  // combines the School and Degree
+    var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
+    $(".education-entry:last").append(formattedOnlineHeading);
 
-    // var formattedOnlineDate = HTMLonlineDates.replace("%data%", education.online.dates);
-    // $("#education").children().next().append(formattedOnlineDate);
+  var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[online].dates);
+  $(".education-entry:last").append(formattedOnlineDates);
+
+  var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
+  $(".education-entry:last").append(formattedOnlineURL);
+
+
 
   }
 };
+
+
 
 showSchools();
 
@@ -191,12 +200,12 @@ var projects = {
     "title" : "Swagger Editor",
     "dates" : "September 2013 - Present",
     "description" : "Swagger editor is a YAML to swagger API authoring tool. Define your API structure in YAML, see a human readable output in Swagger in the righthand pane.",
-    "images" : ["images/swagger-1.png", "images/swagger-1.png"]
+    "images" : ["images/swagger-1.png"]
   },
   {
-    "title" : "Pixies",
-    "dates" : "Hellacool 2014 - now",
-    "description" : "Twixxies is an app platform that offers app themes and hosting to businesses.",
+    "title" : "Http Trace",
+    "dates" : "January 2013 - June 2013",
+    "description" : "A tool to trace .",
     "images" : ["./images/Twix.png", "./images/hosting.png", "./images/indie-app.png"]
   }
   ]
