@@ -35,7 +35,7 @@ The resume has four distinct sections: work, education, projects and a header wi
         
             name : string
             role : string
-            contacts : array of objects with
+            contacts : an object with
                   mobile: string
                   email: string 
                   github: string
