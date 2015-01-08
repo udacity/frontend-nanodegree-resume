@@ -5,9 +5,8 @@ $(document).click(function(loc) {
   logClicks(x,y);
 });
 
-// map section
+// map and internationalize button
 $("#mapDiv").append(googleMap);
-
 $("#main").append(internationalizeButton);
 
 
@@ -17,41 +16,40 @@ var bio = {
   "contacts": {
     "location": "San Francisco, CA",
     "email": "michaeljmoss@gmail.com",
-    "github": "mmux",
+    "github": "MMux",
     "mobile": 415 + "-" + 400 + "-" + 5000,
   },
   "welcomeMessage": "Thanks for stopping by. Bear with me as I build some chops in front end development.",
   "skills": [
   "UX Design", "Visual Design", "Front End Development", "Prototyping"
   ],
-  "bioPic": "images/fry.jpg",
-
+  "bioPic": "images/mikeM.jpeg",
 };
 
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
+displayBio = function() {
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(formattedName);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  $("#header").prepend(formattedRole);
 
-var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedWelcomeMsg);
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  $("#header").prepend(formattedName);
 
-var profilePic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(profilePic);
+  var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+  $("#header").append(formattedWelcomeMsg);
 
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+  var profilePic = HTMLbioPic.replace("%data%", bio.bioPic);
+  $("#header").append(profilePic);
+
+  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
 // contacts for header and footer
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
 $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
 
 // skills section
-
-
 if (bio.skills.length > 0) {
   $("#header").append(HTMLskillsStart);
 
@@ -67,7 +65,11 @@ if (bio.skills.length > 0) {
   var formattedSkills = HTMLskills.replace("%data%", bio.skills[3]);
   $("#skills").append(formattedSkills);
 
+}
+
 };
+
+displayBio();
 
 var education = {
   "schools": [
@@ -99,7 +101,7 @@ var education = {
 };
 
 // show the schools section
-showSchools = function() {
+displaySchools = function() {
 
   for(school in education.schools) {
 
@@ -121,21 +123,20 @@ showSchools = function() {
   var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
   $(".education-entry:last").append(formattedSchoolMajor);
 
+}
 
-  }
-
-  for(online in education.online) {
+for(online in education.online) {
     // online classes section
 
- $("#education").append(HTMLonlineClasses);
- $("#education").append(HTMLschoolStart);
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append(HTMLschoolStart);
 
     var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[online].title);
     var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[online].school);
 
   // combines the School and Degree
-    var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
-    $(".education-entry:last").append(formattedOnlineHeading);
+  var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
+  $(".education-entry:last").append(formattedOnlineHeading);
 
   var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[online].dates);
   $(".education-entry:last").append(formattedOnlineDates);
@@ -143,14 +144,10 @@ showSchools = function() {
   var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
   $(".education-entry:last").append(formattedOnlineURL);
 
-
-
   }
 };
 
-
-
-showSchools();
+displaySchools();
 
 var work = {
   "jobs": [
@@ -159,14 +156,14 @@ var work = {
     "title": "UX Designer",
     "location": "San Jose, CA",
     "dates": "07 Jul, 2012 - Present",
-    "description": "Responsible for UI for API Management tools. Prototyping, visual design and nomenclature."
+    "description": "Responsible for UI for API Management tools for the enterprise. Prototyping, visual design and nomenclature across multiple products."
   },
   {
     "employer": "Manmade",
     "title": "Designer",
     "location": "San Francisco, CA",
     "dates": "15 Aug, 2011" + " - " + "June 10, 2012",
-    "description": "Design for branding, UX for weather maps."
+    "description": "Responsible for visual design, branding and identity development. Worked on a range of projects from b2b websites, to weather map UI."
   }
   ]
 };
@@ -199,38 +196,38 @@ var projects = {
   {
     "title" : "Swagger Editor",
     "dates" : "September 2013 - Present",
-    "description" : "Swagger editor is a YAML to swagger API authoring tool. Define your API structure in YAML, see a human readable output in Swagger in the righthand pane.",
-    "images" : ["images/swagger-1.png"]
-  },
-  {
-    "title" : "Http Trace",
-    "dates" : "January 2013 - June 2013",
-    "description" : "A tool to trace .",
-    "images" : ["./images/Twix.png", "./images/hosting.png", "./images/indie-app.png"]
+    "description" : "Swagger editor is a YAML to swagger API authoring tool. Define your API structure in YAML, see a human readable documentation in Swagger in the righthand pane. I was responsible for the visual design and UX, and used Less and Bootstrap, while doing commits in pair with a front end developer",
+    "images" : ["images/swagger-1.png", "images/swagger-2.png"]
   }
   ]
 };
 
-showProjects = function() {
+displayProjects = function() {
 
-for(project in projects.projects) {
- $("#projects").append(HTMLprojectStart);
+  for(project in projects.projects) {
 
-  var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-  $(".project-entry:last").append(formattedProjectTitle);
+    $("#projects").append(HTMLprojectStart);
 
-  var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-  $(".project-entry:last").append(formattedProjectDates);
+    var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+    $(".project-entry:last").append(formattedProjectTitle);
 
-  var formattedProjectDesc = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-  $(".project-entry:last").append(formattedProjectDesc);
+    var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+    $(".project-entry:last").append(formattedProjectDates);
 
-  var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
-  $(".project-entry:last").append(formattedProjectImage);
+    var formattedProjectDesc = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+    $(".project-entry:last").append(formattedProjectDesc);
 
-}
+    if(projects.projects[project].images.length > 0) {
+      for(images in projects.projects[project].images) {
+
+        var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[images]);
+        $(".project-entry:last").append(formattedProjectImage);
+      }
+    }
+  }
 };
-showProjects();
+
+displayProjects();
 
 
 
