@@ -11,21 +11,24 @@ $("#main").append(internationalizeButton);
 
 
 var bio = {
-  "name": "Mike Moss",
-  "role": "UX Designer",
-  "contacts": {
-    "location": "San Francisco, CA",
-    "email": "michaeljmoss@gmail.com",
-    "github": "MMux",
-    "mobile": 415 + "-" + 400 + "-" + 5000,
-  },
-  "welcomeMessage": "Thanks for stopping by. Bear with me as I build some chops in front end development.",
-  "skills": [
-  "UX Design", "Visual Design", "Front End Development", "Prototyping"
-  ],
-  "bioPic": "images/mikeM.jpeg",
-  "display": "displayBio"
-};
+    "name": "Mike Moss",
+    "role": "UX Designer",
+    "contacts": {
+        "location": "San Francisco, CA",
+        "email": "michaeljmoss@gmail.com",
+        "github": "MMux",
+        "mobile": "415 - 400 - 5000"
+    },
+    "welcomeMessage": "Thanks for stopping by. Bear with me as I build some chops in front end development.",
+    "skills": [
+        "UX Design",
+        "Visual Design",
+        "Front End Development",
+        "Prototyping"
+    ],
+    "bioPic": "images/mikeM.jpeg",
+    "display": "displayBio"
+}
 
 displayBio = function() {
 
@@ -62,35 +65,63 @@ if (bio.skills.length > 0) {
 
 displayBio();
 
-// var education = {
-//   "schools": [
-//   {
-//     "name": "School of Visual Arts",
-//     "location": "New York, NY",
-//     "degree": "BFA",
-//     "major": "Illustration",
-//     "dates": 1997,
-//     "url": "http://www.sva.edu/"
-//   },
-//   {
-//     "name": "Academy of Art",
-//     "location": "San Francisco, CA",
-//     "degree": "MFA",
-//     "major": "Graphic Design",
-//     "dates": 2011,
-//     "url": "http://www.academyart.edu"
-//   }
-//   ],
-//   "online" : [
-//   {
-//     "title" : "Front End Developer Certification",
-//     "school" : "Udacity",
-//     "dates" : 2014,
-//     "url" : "http://www.udacity.com"
-//   }
-//   ],
-//   "display": "showSchools"
-// };
+var education = {
+  "schools": [
+  {
+    "name": "School of Visual Arts",
+    "location": "New York, NY",
+    "degree": "BFA",
+    "major": "Illustration",
+    "dates": 1997,
+    "url": "http://www.sva.edu/"
+  },
+  {
+    "name": "Academy of Art",
+    "location": "San Francisco, CA",
+    "degree": "MFA",
+    "major": "Graphic Design",
+    "dates": 2011,
+    "url": "http://www.academyart.edu"
+  }
+  ],
+  "online" : [
+  {
+    "title" : "Front End Developer Certification",
+    "school" : "Udacity",
+    "dates" : 2014,
+    "url" : "http://www.udacity.com"
+  }
+  ],
+  "display": "showSchools"
+}{
+  "schools": [
+  {
+    "name": "School of Visual Arts",
+    "location": "New York, NY",
+    "degree": "BFA",
+    "major": "Illustration",
+    "dates": 1997,
+    "url": "http://www.sva.edu/"
+  },
+  {
+    "name": "Academy of Art",
+    "location": "San Francisco, CA",
+    "degree": "MFA",
+    "major": "Graphic Design",
+    "dates": 2011,
+    "url": "http://www.academyart.edu"
+  }
+  ],
+  "online" : [
+  {
+    "title" : "Front End Developer Certification",
+    "school" : "Udacity",
+    "dates" : 2014,
+    "url" : "http://www.udacity.com"
+  }
+  ],
+  "display": "showSchools"
+}
 
 // // show the schools section
 // display.showSchools = function() {
@@ -149,16 +180,16 @@ var work = {
     "location": "San Jose, CA",
     "dates": "07 Jul, 2012 - Present",
     "description": "Responsible for UI for API Management tools for the enterprise. Prototyping, visual design and nomenclature across multiple products."
-  },
-  {
-    "employer": "Manmade",
-    "title": "Designer",
-    "location": "San Francisco, CA",
-    "dates": "15 Aug, 2011" + " - " + "June 10, 2012",
-    "description": "Responsible for visual design, branding and identity development. Worked on a range of projects from b2b websites, to weather map UI."
+    },
+    {
+      "employer": "Manmade",
+      "title": "Designer",
+      "location": "San Francisco, CA",
+      "dates": "15 Aug, 2011 - June 10, 2012",
+      "description": "Responsible for visual design, branding and identity development. Worked on a range of projects from b2b websites, to weather map UI."
+    }
+    ]
   }
-  ]
-};
 
 function displayWork () {
 
@@ -192,7 +223,7 @@ var projects = {
     "images" : ["images/swagger-1.png", "images/swagger-2.png"]
   }
   ]
-};
+}
 
 displayProjects = function() {
 
