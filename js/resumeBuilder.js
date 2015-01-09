@@ -24,6 +24,7 @@ var bio = {
   "UX Design", "Visual Design", "Front End Development", "Prototyping"
   ],
   "bioPic": "images/mikeM.jpeg",
+  "display": "displayBio"
 };
 
 displayBio = function() {
@@ -53,101 +54,92 @@ $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, fo
 if (bio.skills.length > 0) {
   $("#header").append(HTMLskillsStart);
 
-  var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
-  $("#skills").append(formattedSkills);
-
-  var formattedSkills = HTMLskills.replace("%data%", bio.skills[1]);
-  $("#skills").append(formattedSkills);
-
-  var formattedSkills = HTMLskills.replace("%data%", bio.skills[2]);
-  $("#skills").append(formattedSkills);
-
-  var formattedSkills = HTMLskills.replace("%data%", bio.skills[3]);
-  $("#skills").append(formattedSkills);
-
-}
-
+  for(skills in bio.skills) {
+    var formattedSkills = HTMLskills.replace("%data%", bio.skills[skills]);
+    $("#skills").append(formattedSkills);
+  }
 };
 
 displayBio();
 
-var education = {
-  "schools": [
-  {
-    "name": "School of Visual Arts",
-    "location": "New York, NY",
-    "degree": "BFA",
-    "major": "Illustration",
-    "dates": 1997,
-    "url": "http://www.sva.edu/"
-  },
-  {
-    "name": "Academy of Art",
-    "location": "San Francisco, CA",
-    "degree": "MFA",
-    "major": "Graphic Design",
-    "dates": 2011,
-    "url": "http://www.academyart.edu"
-  }
-  ],
-  "online" : [
-  {
-    "title" : "Front End Developer Certification",
-    "school" : "Udacity",
-    "dates" : 2014,
-    "url" : "http://www.udacity.com"
-  }
-  ]
-};
+// var education = {
+//   "schools": [
+//   {
+//     "name": "School of Visual Arts",
+//     "location": "New York, NY",
+//     "degree": "BFA",
+//     "major": "Illustration",
+//     "dates": 1997,
+//     "url": "http://www.sva.edu/"
+//   },
+//   {
+//     "name": "Academy of Art",
+//     "location": "San Francisco, CA",
+//     "degree": "MFA",
+//     "major": "Graphic Design",
+//     "dates": 2011,
+//     "url": "http://www.academyart.edu"
+//   }
+//   ],
+//   "online" : [
+//   {
+//     "title" : "Front End Developer Certification",
+//     "school" : "Udacity",
+//     "dates" : 2014,
+//     "url" : "http://www.udacity.com"
+//   }
+//   ],
+//   "display": "showSchools"
+// };
 
-// show the schools section
-displaySchools = function() {
+// // show the schools section
+// display.showSchools = function() {
 
-  for(school in education.schools) {
+//   for(school in education.schools) {
 
-    $("#education").append(HTMLschoolStart);
+//     $("#education").append(HTMLschoolStart);
 
-    var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-    var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+//     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+//     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 
-  // combines the School and Degree
-  var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
-  $(".education-entry:last").append(formattedSchoolTitle);
+//   // combines the School and Degree
+//   var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
+//   $(".education-entry:last").append(formattedSchoolTitle);
 
-  var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-  $(".education-entry:last").append(formattedSchoolLocation);
+//   var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+//   $(".education-entry:last").append(formattedSchoolLocation);
 
-  var formattedSchoolDate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-  $(".education-entry:last").append(formattedSchoolDate);
+//   var formattedSchoolDate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+//   $(".education-entry:last").append(formattedSchoolDate);
 
-  var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-  $(".education-entry:last").append(formattedSchoolMajor);
+//   var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+//   $(".education-entry:last").append(formattedSchoolMajor);
 
-}
+// }
 
-for(online in education.online) {
-    // online classes section
+// for(online in education.online) {
+//     // online classes section
 
-    $("#education").append(HTMLonlineClasses);
-    $("#education").append(HTMLschoolStart);
+//     $("#education").append(HTMLonlineClasses);
+//     $("#education").append(HTMLschoolStart);
 
-    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[online].title);
-    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[online].school);
+//     var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[online].title);
+//     var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[online].school);
 
-  // combines the School and Degree
-  var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
-  $(".education-entry:last").append(formattedOnlineHeading);
+//   // combines the School and Degree
+//   var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
+//   $(".education-entry:last").append(formattedOnlineHeading);
 
-  var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[online].dates);
-  $(".education-entry:last").append(formattedOnlineDates);
+//   var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[online].dates);
+//   $(".education-entry:last").append(formattedOnlineDates);
 
-  var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
-  $(".education-entry:last").append(formattedOnlineURL);
+//   var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
+//   $(".education-entry:last").append(formattedOnlineURL);
 
-  }
-};
+//   }
+// };
 
-displaySchools();
+// showSchools();
 
 var work = {
   "jobs": [
