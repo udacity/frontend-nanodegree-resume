@@ -11,43 +11,40 @@ $("#main").append(internationalizeButton);
 
 
 var bio = {
-    "name": "Mike Moss",
-    "role": "UX Designer",
-    "contacts": {
-        "location": "San Francisco, CA",
-        "email": "michaeljmoss@gmail.com",
-        "github": "MMux",
-        "mobile": "415 - 400 - 5000"
-    },
-    "welcomeMessage": "Thanks for stopping by. Bear with me as I build some chops in front end development.",
-    "skills": [
-        "UX Design",
-        "Visual Design",
-        "Front End Development",
-        "Prototyping"
-    ],
-    "bioPic": "images/mikeM.jpeg",
-    "display": "displayBio"
-}
+  "name": "Mike Moss",
+  "role": "UX Designer",
+  "contacts": {
+    "location": "San Francisco, CA",
+    "email": "michaeljmoss@gmail.com",
+    "github": "MMux",
+    "mobile": "415 - 400 - 5000"
+  },
+  "welcomeMessage": "Thanks for stopping by. Bear with me as I build some chops in front end development.",
+  "skills": [
+  "UX Design",
+  "Visual Design",
+  "Front End Development",
+  "Prototyping"
+  ],
+  "bioPic": "images/mikeM.jpeg",
+  "display":  function() {
 
-displayBio = function() {
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    $("#header").prepend(formattedRole);
 
-  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-  $("#header").prepend(formattedRole);
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    $("#header").prepend(formattedName);
 
-  var formattedName = HTMLheaderName.replace("%data%", bio.name);
-  $("#header").prepend(formattedName);
+    var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedWelcomeMsg);
 
-  var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-  $("#header").append(formattedWelcomeMsg);
+    var profilePic = HTMLbioPic.replace("%data%", bio.bioPic);
+    $("#header").append(profilePic);
 
-  var profilePic = HTMLbioPic.replace("%data%", bio.bioPic);
-  $("#header").append(profilePic);
-
-  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
 // contacts for header and footer
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
@@ -61,9 +58,12 @@ if (bio.skills.length > 0) {
     var formattedSkills = HTMLskills.replace("%data%", bio.skills[skills]);
     $("#skills").append(formattedSkills);
   }
-};
+} // end of if statement
+} // of function
+}
 
-displayBio();
+
+bio.display();
 
 var education = {
   "schools": [
@@ -92,85 +92,53 @@ var education = {
     "url" : "http://www.udacity.com"
   }
   ],
-  "display": "showSchools"
-}{
-  "schools": [
-  {
-    "name": "School of Visual Arts",
-    "location": "New York, NY",
-    "degree": "BFA",
-    "major": "Illustration",
-    "dates": 1997,
-    "url": "http://www.sva.edu/"
-  },
-  {
-    "name": "Academy of Art",
-    "location": "San Francisco, CA",
-    "degree": "MFA",
-    "major": "Graphic Design",
-    "dates": 2011,
-    "url": "http://www.academyart.edu"
-  }
-  ],
-  "online" : [
-  {
-    "title" : "Front End Developer Certification",
-    "school" : "Udacity",
-    "dates" : 2014,
-    "url" : "http://www.udacity.com"
-  }
-  ],
-  "display": "showSchools"
+  "display": function() {
+
+  for(school in education.schools) {
+
+    $("#education").append(HTMLschoolStart);
+
+    var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+    var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+
+  // combines the School and Degree
+  var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
+  $(".education-entry:last").append(formattedSchoolTitle);
+
+  var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+  $(".education-entry:last").append(formattedSchoolLocation);
+
+  var formattedSchoolDate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+  $(".education-entry:last").append(formattedSchoolDate);
+
+  var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+  $(".education-entry:last").append(formattedSchoolMajor);
+
 }
 
-// // show the schools section
-// display.showSchools = function() {
+for(online in education.online) {
+    // online classes section
 
-//   for(school in education.schools) {
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append(HTMLschoolStart);
 
-//     $("#education").append(HTMLschoolStart);
+    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[online].title);
+    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[online].school);
 
-//     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-//     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+  // combines the School and Degree
+  var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
+  $(".education-entry:last").append(formattedOnlineHeading);
 
-//   // combines the School and Degree
-//   var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
-//   $(".education-entry:last").append(formattedSchoolTitle);
+  var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[online].dates);
+  $(".education-entry:last").append(formattedOnlineDates);
 
-//   var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-//   $(".education-entry:last").append(formattedSchoolLocation);
+  var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
+  $(".education-entry:last").append(formattedOnlineURL);
+  }
+  }
+}
 
-//   var formattedSchoolDate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-//   $(".education-entry:last").append(formattedSchoolDate);
-
-//   var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-//   $(".education-entry:last").append(formattedSchoolMajor);
-
-// }
-
-// for(online in education.online) {
-//     // online classes section
-
-//     $("#education").append(HTMLonlineClasses);
-//     $("#education").append(HTMLschoolStart);
-
-//     var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[online].title);
-//     var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[online].school);
-
-//   // combines the School and Degree
-//   var formattedOnlineHeading =  formattedOnlineTitle + formattedOnlineSchool;
-//   $(".education-entry:last").append(formattedOnlineHeading);
-
-//   var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[online].dates);
-//   $(".education-entry:last").append(formattedOnlineDates);
-
-//   var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
-//   $(".education-entry:last").append(formattedOnlineURL);
-
-//   }
-// };
-
-// showSchools();
+education.display();
 
 var work = {
   "jobs": [
@@ -188,10 +156,8 @@ var work = {
       "dates": "15 Aug, 2011 - June 10, 2012",
       "description": "Responsible for visual design, branding and identity development. Worked on a range of projects from b2b websites, to weather map UI."
     }
-    ]
-  }
-
-function displayWork () {
+    ],
+    "display": function() {
 
   for(job in work.jobs) {
     // create div for work
@@ -210,9 +176,10 @@ function displayWork () {
     var formattedWorkDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
     $(".work-entry:last").append(formattedWorkDesc);
   }
+   }
 }
 
-displayWork();
+work.display();
 
 var projects = {
   "projects": [
@@ -222,10 +189,8 @@ var projects = {
     "description" : "Swagger editor is a YAML to swagger API authoring tool. Define your API structure in YAML, see a human readable documentation in Swagger in the righthand pane. I was responsible for the visual design and UX, and used Less and Bootstrap, while doing commits in pair with a front end developer",
     "images" : ["images/swagger-1.png", "images/swagger-2.png"]
   }
-  ]
-}
-
-displayProjects = function() {
+  ],
+  "display": function() {
 
   for(project in projects.projects) {
 
@@ -241,6 +206,7 @@ displayProjects = function() {
     $(".project-entry:last").append(formattedProjectDesc);
 
     if(projects.projects[project].images.length > 0) {
+
       for(images in projects.projects[project].images) {
 
         var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[images]);
@@ -248,9 +214,13 @@ displayProjects = function() {
       }
     }
   }
-};
+}
+}
 
-displayProjects();
+
+
+
+projects.display();
 
 
 
