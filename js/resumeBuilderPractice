@@ -1,0 +1,57 @@
+var awsTh = "Hi, I am David and I am awesome"
+var newawsTh = awsTh.replace("awesome", "fun");
+
+console.log(awsTh);
+console.log(newawsTh);
+
+var role = "Developer"
+var name = "Tera David"
+
+var formattedName = HTMLheaderName.replace("%data%", name)
+var formattedRole = HTMLheaderRole.replace("%data%", role)
+var skills = [" marketing", " development", " digital media"]
+var bio = {
+	"name" : "Terinho",
+	"rolee" : "developer",
+	"contactinfo" : "teradav@gmail.com",
+	"picture" : "picture",
+	"welcome" : "Hi I am David",
+	"skills" : skills
+};
+
+bio.education = "course developer";
+
+bio["city"] = "Budapest";
+bio["sex"] = "I Like!";
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$('#main').append(skills);
+$('#main').append(bio.name);
+$('#main').append(bio.welcome);
+$('#main').append(bio.city);
+$('#main').append(bio["sex"]);
+$('#main').append(bio.education);
+
+
+var newarray = ["one", "two", "three"];
+
+console.log(newarray.length);
+
+var JsonEducation = {
+	"schools": [
+	{
+		"name" : "University of Glasgow",
+		"city" : "Glasgow, Scotland",
+		"degree" : "MA with Honours",
+		"major" : " Social Sciences "
+	},
+	{
+		"name" : "University of Miami",
+		"city" : "Miami, FL, US",
+		"degree" : "Exchange Year",
+		"major" : " Business School "
+
+	}
+]
+};
