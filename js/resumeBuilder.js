@@ -5,18 +5,8 @@ $(document).click(function (loc) {
   logClicks(x,y);
 });
 
-// map and internationalize button
 $("#mapDiv").append(googleMap);
 // $("#header").prepend(internationalizeButton);
-
-// for internationalize button
-function inName(name) {
-  var name = name.trim().split(" ");
-  name[1] = name[1].toUpperCase();
-  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-  return name[0] + " " + name[1];
-}
-
 
 var bio = {
   "name": "Mike Moss",
@@ -66,9 +56,9 @@ if (bio.skills.length > 0) {
     var formattedSkills = HTMLskills.replace("%data%", bio.skills[skills]);
     $("#skills").append(formattedSkills);
   }
-} // end of if statement
-} // of function
-}
+  } // end of if statement
+ } // of function
+};
 
 
 bio.display();
@@ -145,8 +135,8 @@ for(online in education.online) {
   var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.online[online].url);
   $(".education-entry:last").append(formattedOnlineURL);
   }
-  }
-}
+ }
+};
 
 education.display();
 
@@ -185,9 +175,9 @@ var work = {
 
     var formattedWorkDesc = HTMLworkDescription.replace("%data%", work.jobs[job].description);
     $(".work-entry:last").append(formattedWorkDesc);
-  }
+    }
    }
-}
+};
 
 work.display();
 
@@ -225,10 +215,19 @@ var projects = {
     }
   }
 }
-}
+};
 
 projects.display();
 
+// for internationalize button
+function inName(name) {
+  name = name.trim().split(" ");
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+  return name[0] + " " + name[1];
+}
+
+// appending the button to the header section
 $("h1").next().append(internationalizeButton);
 
 
