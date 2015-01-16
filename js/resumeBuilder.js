@@ -1,4 +1,4 @@
-$(document).click(function(loc) {
+$(document).click(function (loc) {
   var x = loc.pageX;
   var y = loc.pageY;
 
@@ -7,7 +7,15 @@ $(document).click(function(loc) {
 
 // map and internationalize button
 $("#mapDiv").append(googleMap);
-$("#main").append(internationalizeButton);
+// $("#header").prepend(internationalizeButton);
+
+// for internationalize button
+function inName(name) {
+  var name = name.trim().split(" ");
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+  return name[0] + " " + name[1];
+}
 
 
 var bio = {
@@ -17,7 +25,7 @@ var bio = {
     "location": "San Francisco, CA",
     "email": "michaeljmoss@gmail.com",
     "github": "MMux",
-    "mobile": "415 - 400 - 5000"
+    "mobile": "415-400-5000"
   },
   "welcomeMessage": "Thanks for stopping by. Bear with me as I build some chops in front end development.",
   "skills": [
@@ -54,7 +62,7 @@ $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub, fo
 if (bio.skills.length > 0) {
   $("#header").append(HTMLskillsStart);
 
-  for(skills in bio.skills) {
+  for (skills in bio.skills) {
     var formattedSkills = HTMLskills.replace("%data%", bio.skills[skills]);
     $("#skills").append(formattedSkills);
   }
@@ -64,6 +72,8 @@ if (bio.skills.length > 0) {
 
 
 bio.display();
+
+
 
 var education = {
   "schools": [
@@ -217,10 +227,9 @@ var projects = {
 }
 }
 
-
-
-
 projects.display();
+
+$("h1").next().append(internationalizeButton);
 
 
 

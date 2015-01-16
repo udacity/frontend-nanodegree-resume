@@ -210,6 +210,22 @@ span {
   padding-bottom: 5%;
 }
 
+.international {
+  background-color: #F5A623;
+  color: #333;
+  padding: 4px 7px;
+  border-radius: 3px;
+  margin-top: 5px;
+  float: right;
+  border: none;
+  width: 120px;
+  outline: none;
+}
+
+.international:hover {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 750px) {
   #skillsH3,
   #skills,
