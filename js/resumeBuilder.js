@@ -61,7 +61,7 @@ var education = {
 	"schools": [
 	{
 		"name" : "University of Glasgow",
-		"city" : "Glasgow, Scotland",
+		"location" : "Glasgow, Scotland",
 		"degree" : "MA with Honours",
 		"major" : " Social Sciences",
 		"date" : "2008-2012",
@@ -69,7 +69,7 @@ var education = {
 	},
 	{
 		"name" : "University of Miami",
-		"city" : "Miami, FL, USA",
+		"location" : "Miami, FL, USA",
 		"degree" : "Exchange Year",
 		"major" : " Business School",
 		"date" : "2010-2011",
@@ -146,7 +146,7 @@ $('#skills').append(formattedSkill);
 
 };
 
-//contacts
+//topContacts
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#topContacts").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -157,11 +157,27 @@ var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 $("#topContacts").append(formattedTwitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
+
+//footerContacts - this would be nice to combine with topContacts
+var formattedMobileFooter = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#footerContacts").append(formattedMobileFooter);
+var formattedEmailFooter = HTMLemail.replace("%data%", bio.contacts.email);
+$("#footerContacts").append(formattedEmailFooter);
+var formattedGithubFooter = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#footerContacts").append(formattedGithubFooter);
+var formattedTwitterFooter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+$("#footerContacts").append(formattedTwitterFooter);
+var formattedLocationFooter = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#footerContacts").append(formattedLocationFooter);
 };
 
 bio.display();
 
 
+
+
+
+//Work
 work.display = function () {
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
@@ -182,6 +198,7 @@ for (job in work.jobs) {
 work.display();
 
 
+//Projects
 projects.display = function(){
 for (pro in projects.Projects) {
 		$("#projects").append(HTMLprojectStart);
@@ -200,41 +217,47 @@ for (pro in projects.Projects) {
 projects.display();
 
 
+
+//Education
 education.display = function(){
 for (edu in education.schools) {
 	$("#education").append(HTMLschoolStart);   
-		var formattedSchoolname = HTMLschoolName.replace("%data%", education.schools[edu].name);
-		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[edu].city);
-		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
 		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
 		var formattedDate = HTMLschoolDates.replace("%data%", education.schools[edu].date);
-	
+		var formattedSchoolDegree = HTMLschoolName.replace("%data%", education.schools[edu].name) + HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
  
-	$(".education-entry:last").append(formattedSchoolname);
-    $(".education-entry:last").append(formattedDegree);
+	$(".education-entry:last").append(formattedSchoolDegree);
+    $(".education-entry:last").append(formattedSchoolLocation);
     $(".education-entry:last").append(formattedDate);
     $(".education-entry:last").append(formattedMajor);
-    $(".education-entry:last").append(formattedSchoolLocation);
 	}
 
 for (onl in education.onlinecourses) {	
 $("#education").append(HTMLonlineClasses); 
 $("#education").append(HTMLschoolStart); 
-		var formattedOnlineSchoolname = HTMLonlineSchool.replace("%data%", education.onlinecourses[onl].school);
-		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlinecourses[onl].title);
 		var formattedonlineDate = HTMLonlineDates.replace("%data%", education.onlinecourses[onl].dates);
 		var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlinecourses[onl].url);
-
-	$(".education-entry:last").prepend(formattedOnlineSchoolname);
-	$(".education-entry:last").prepend(formattedonlineTitle);
-    $(".education-entry:last").append(formattedonlineDate);
+		var formattedOnlineTitleSchool = HTMLonlineTitle.replace("%data%", education.onlinecourses[onl].title) + HTMLonlineSchool.replace("%data%", education.onlinecourses[onl].school);
+		
+	$(".education-entry:last").append(formattedOnlineTitleSchool);
+	$(".education-entry:last").append(formattedonlineDate);
     $(".education-entry:last").append(formattedonlineURL);
+
 };};
 education.display();
 
 
+
+
+//Map Div
 $('#mapDiv').append(googleMap);
 
+
+
+
+
+//Click Pixel
 
 
 $(document).click(function(loc){
@@ -245,25 +268,140 @@ logClicks(x,y);
 });
 
 
+
+
 //internationalizer
 
 
-function inName(name) {
-    var finalName = name;
-    // Your code goes here!
-    var splits = name.split(' ', 2);
-    var first = splits[0].toLowerCase();
-    var last = splits [1];
+//function inName(name) {
+//    var finalName = name;
+//    var splits = name.split(' ', 2);
+//    var first = splits[0].toLowerCase();
+//    var last = splits [1];
     
-    var firstNameFL = first[0].toUpperCase() + first.slice(1);
+//    var firstNameFL = first[0].toUpperCase() + first.slice(1);
 
-    finalName = firstNameFL +" "+ last.toUpperCase();
+//    finalName = firstNameFL +" "+ last.toUpperCase();
     // Don't delete this line!
-    return finalName;
-};
+//    return finalName;
+//};
 
-$('#main').append(internatonalizeButton)
+//$('#main').append(internatonalizeButton)
 
+
+
+//MEnu
+
+(function($) {
+
+  $.fn.menumaker = function(options) {
+      
+      var cssmenu = $(this), settings = $.extend({
+        title: "Menu",
+        format: "dropdown",
+        sticky: false
+      }, options);
+
+      return this.each(function() {
+        cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
+        $(this).find("#menu-button").on('click', function(){
+          $(this).toggleClass('menu-opened');
+          var mainmenu = $(this).next('ul');
+          if (mainmenu.hasClass('open')) { 
+            mainmenu.hide().removeClass('open');
+          }
+          else {
+            mainmenu.show().addClass('open');
+            if (settings.format === "dropdown") {
+              mainmenu.find('ul').show();
+            }
+          }
+        });
+
+        cssmenu.find('li ul').parent().addClass('has-sub');
+
+        multiTg = function() {
+          cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+          cssmenu.find('.submenu-button').on('click', function() {
+            $(this).toggleClass('submenu-opened');
+            if ($(this).siblings('ul').hasClass('open')) {
+              $(this).siblings('ul').removeClass('open').hide();
+            }
+            else {
+              $(this).siblings('ul').addClass('open').show();
+            }
+          });
+        };
+
+        if (settings.format === 'multitoggle') multiTg();
+        else cssmenu.addClass('dropdown');
+
+        if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+        resizeFix = function() {
+          if ($( window ).width() > 768) {
+            cssmenu.find('ul').show();
+          }
+
+          if ($(window).width() <= 768) {
+            cssmenu.find('ul').hide().removeClass('open');
+          }
+        };
+        resizeFix();
+        return $(window).on('resize', resizeFix);
+
+      });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+
+$(document).ready(function() {
+  $("#cssmenu").menumaker({
+    title: "Menu",
+    format: "multitoggle"
+  });
+
+  $("#cssmenu").prepend("<div id='menu-line'></div>");
+
+var foundActive = false, activeElement, linePosition = 0, menuLine = $("#cssmenu #menu-line"), lineWidth, defaultPosition, defaultWidth;
+
+$("#cssmenu > ul > li").each(function() {
+  if ($(this).hasClass('active')) {
+    activeElement = $(this);
+    foundActive = true;
+  }
+});
+
+if (foundActive === false) {
+  activeElement = $("#cssmenu > ul > li").first();
+}
+
+defaultWidth = lineWidth = activeElement.width();
+
+defaultPosition = linePosition = activeElement.position().left;
+
+menuLine.css("width", lineWidth);
+menuLine.css("left", linePosition);
+
+$("#cssmenu > ul > li").hover(function() {
+  activeElement = $(this);
+  lineWidth = activeElement.width();
+  linePosition = activeElement.position().left;
+  menuLine.css("width", lineWidth);
+  menuLine.css("left", linePosition);
+}, 
+function() {
+  menuLine.css("left", defaultPosition);
+  menuLine.css("width", defaultWidth);
+});
+
+});
+
+
+});
+})(jQuery);
 
 
 

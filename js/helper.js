@@ -44,7 +44,7 @@ var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDegree = ' - %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
@@ -170,7 +170,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map,marker) // TERA ADDED
     });
 
     // this is where the pin actually gets added to the map.
@@ -182,6 +182,9 @@ function initializeMap() {
     map.setCenter(bounds.getCenter());
   }
 
+
+
+
   /*
   callback(results, status) makes sure the search returned results for a location.
   If so, it creates a new map marker for that location.
@@ -191,6 +194,10 @@ function initializeMap() {
       createMapMarker(results[0]);
     }
   }
+
+
+
+
 
   /*
   pinPoster(locations) takes in the array of locations created by locationFinder()
@@ -228,6 +235,9 @@ function initializeMap() {
 
 }
 
+
+
+
 /*
 Uncomment the code below when you're ready to implement a Google Map!
 */
@@ -240,4 +250,6 @@ window.addEventListener('load', initializeMap);
 window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
  map.fitBounds(mapBounds);
+
+
 });
