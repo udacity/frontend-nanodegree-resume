@@ -23,7 +23,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
-
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -66,7 +66,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
    <li class='last'><a href='#map'><span>Locations</span></a></li>
 </ul>
 </div>
-
+<!-- END OF CSS MENU -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -78,8 +78,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <ul id="topContacts" class='flex-box'></ul>
     </div>
 
-
     <div style='clear: both;'></div>
+
+    <div id="skillsExp">
+      <h2>Skills</h2>
+    </div>
+    
     <div id="workExperience" class='gray'>
       <h2>Work Experience</h2>
     </div>
@@ -99,6 +103,33 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
   </div>
 
+<div class="row">
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+</div>
+<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-6">.col-md-6</div>
+  <div class="col-md-6">.col-md-6</div>
+</div>
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
@@ -136,9 +167,19 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.display = 'none';
     }
+    
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
+
+
+
+// TERA ADDED
+    if(document.getElementsByClassName('skill-entry').length === 0) {
+      document.getElementById('skillsExp').style.display = 'none';
     }
+
+
+
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }

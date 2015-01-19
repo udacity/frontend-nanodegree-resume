@@ -7,6 +7,14 @@
 
 
 
+#square {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+  
+
+
 .clearfix {
   overflow: auto;
 }
@@ -21,6 +29,8 @@ h1 {
   color: #F5A623;
   line-height: 48px;
   display: inline;
+  padding-right: 5%; 
+  padding-bottom: 1%;
 }
 
 h2 {
@@ -160,6 +170,8 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  border-radius:150px;
+  border-color:#F5A623;
 }
 
 img {
@@ -220,7 +232,7 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 8%;
 }
 
 @media only screen and (min-width: 750px) {
@@ -307,7 +319,7 @@ span {
 }
 #cssmenu > ul > li > a {
   padding: 20px;
-  font-size: 12px;
+  font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;

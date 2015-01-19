@@ -42,7 +42,7 @@ var projects = {
 var bio = {
 	"pic" : "https://placekitten.com/g/350/320",
 	"name" : "David Tera",
-	"role" : "Front End Web Dev",
+	"role" : "Digital Marketing, Business Strategy & Analytics Consultant + learning to web develop",
 	"welcomeMessage" : "Hi I am David, learning to program.",
 	"skills" : ["marketing", "digital", "development", "majom"],
 	"contacts" : 
@@ -134,7 +134,7 @@ $("#header").prepend(formattedName);
 
 //skills
 if (bio.skills.length > 0) {
-	$('#header').append(HTMLskillsStart);
+	$('#skillsExp').append(HTMLskillsStart);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
 	$('#skills').append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
@@ -143,7 +143,6 @@ formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 $('#skills').append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 $('#skills').append(formattedSkill);
-
 };
 
 //topContacts
