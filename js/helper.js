@@ -13,7 +13,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -26,8 +26,8 @@ var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</sp
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills"></ul>'; /* class="flex-box"></ul>';*/
+var HTMLskills = '<li class="skills flex-item"> <span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -57,6 +57,8 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
+
+var googleMarkerTitle = '<div class="google-marker-title">%data%</div>' //TERA ADDED
 
 
 /*
@@ -151,8 +153,11 @@ function initializeMap() {
     // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat();  // latitude from the place service
     var lon = placeData.geometry.location.lng();  // longitude from the place service
-    var name = placeData.formatted_address;   // name of the place from the place service
+    var name = 
+    googleMarkerTitle.replace("%data%", placeData.formatted_address);
+    //placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
+    var testText = "<br> I lived here!"
 
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
@@ -165,7 +170,7 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: name + testText
     });
 
     // hmmmm, I wonder what this is about...

@@ -36,7 +36,6 @@ h3 {
   font-size: 20px;
   color: #000000;
   line-height: 22px;
-  padding-top: 25px;
 }
 
 h4 {
@@ -47,7 +46,7 @@ h4 {
 }
 
 h2, h3, h4, h5 {
-  padding:10px;
+  padding:20px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -93,6 +92,7 @@ a {
 #skillsH3 {
   color: #F5AE23;
   display: none;
+  padding-left: 40%;
 }
 
 .orange {
@@ -110,7 +110,8 @@ a {
 
 .gray {
   background-color: #F3F3F3;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  padding-top:20px;
   clear:both;
 }
 
@@ -142,6 +143,16 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.skills{
+  font-size: 12px;
+  padding-left: 40%;
+}
+
+.google-marker-title{
+  font-size: 22px;
+  color: #F5A623;
 }
 
 .biopic {

@@ -23,15 +23,15 @@ var work = {
 var projects = {
 	"Projects": [
 	{
-		"title" : "Project 1",
+		"title" : "Udacity Project 1: Mockup to Website (HTML & CSS)",
 		"date" : "2015 January",
-		"description" : "The first project was really fun.",
+		"description" : "The first project was really fun. We learned how to create a website using HTML and CSS from a PDF mockup.",
 		"images" : "http://placekitten.com/g/560/320"
 	},
 	{
-		"title" : "Project 2",
-		"date" : "2015 February",
-		"description" : "The 2nd project was really fun.",
+		"title" : "Udacity Project 2: Javascript and jQuery",
+		"date" : "2015 January",
+		"description" : "The 2nd project was creating and customizing this website using Javascript and jQuery.",
 		"images" : "https://placekitten.com/g/560/320"
 	}
 	]
@@ -123,8 +123,8 @@ console.log(cameron.job);
 bio.display = function () {
 
 //Name, Role, Pic, Welcome
-var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedWelcome);
+//var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+//$("#header").append(formattedWelcome);
 var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 $('#header').append(formattedPic);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -147,10 +147,10 @@ $('#skills').append(formattedSkill);
 };
 
 //topContacts
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").append(formattedMobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedEmail);
+//var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+//$("#topContacts").append(formattedMobile);
+//var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+//$("#topContacts").append(formattedEmail);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 $("#topContacts").append(formattedGithub);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -159,10 +159,10 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 
 //footerContacts - this would be nice to combine with topContacts
-var formattedMobileFooter = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#footerContacts").append(formattedMobileFooter);
-var formattedEmailFooter = HTMLemail.replace("%data%", bio.contacts.email);
-$("#footerContacts").append(formattedEmailFooter);
+//var formattedMobileFooter = HTMLmobile.replace("%data%", bio.contacts.mobile);
+//$("#footerContacts").append(formattedMobileFooter);
+//var formattedEmailFooter = HTMLemail.replace("%data%", bio.contacts.email);
+//$("#footerContacts").append(formattedEmailFooter);
 var formattedGithubFooter = HTMLgithub.replace("%data%", bio.contacts.github);
 $("#footerContacts").append(formattedGithubFooter);
 var formattedTwitterFooter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
