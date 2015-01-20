@@ -175,7 +175,7 @@ var projects = {
 		{
 			"title": "Avengers NYC Project",
 			"dates": "2012",
-			"description": "Hulk with some help of sidekicks successfully repels invasion of New York City by demi-god Loki and some extraterrestrial aliens.",
+			"description": "Hulk with some help of sidekicks successfully repelled invasion of New York City by demi-god Loki and some extraterrestrial aliens.",
 			"images": ["images/project-pics/avengers_01.jpg", "images/project-pics/avengers_02.jpg", "images/project-pics/avengers_03.jpg"]
 		},
 		{
