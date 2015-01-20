@@ -229,22 +229,17 @@ window.addEventListener('load', function() {
 // Vanilla JS way to listen for resizing of the window and adjust map bounds
 // Again, using setTimeout to improve page performance.
 window.addEventListener('resize', function(e) {
-
 	var eventArray = [];
 	var delayer;
 	eventArray.push(e);
 
-
 	if (eventArray.length > 0) {
-
 		window.setTimeout(function(eObj) {
 			var eObj = eventArray.pop(e);
 			eventArray = [];
 
 			// Make sure the map bounds get updated on page resize
 			map.fitBounds(mapBounds);
-			count++;
-
 		}, 2000);
 	}
 });
