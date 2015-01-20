@@ -26,13 +26,13 @@ var projects = {
 		"title" : "Udacity Project 1: Mockup to Website (HTML & CSS)",
 		"date" : "2015 January",
 		"description" : "The first project was really fun. We learned how to create a website using HTML and CSS from a PDF mockup.",
-		"images" : "http://placekitten.com/g/560/320"
+		"images" : "images/page-mock.png"
 	},
 	{
 		"title" : "Udacity Project 2: Javascript and jQuery",
 		"date" : "2015 January",
-		"description" : "The 2nd project was creating and customizing this website using Javascript and jQuery.",
-		"images" : "https://placekitten.com/g/560/320"
+		"description" : "The 2nd project was creating and customizing this online resume using Javascript and jQuery.",
+		"images" : "images/resume.png"
 	}
 	]
 };
@@ -42,9 +42,9 @@ var projects = {
 var bio = {
 	"pic" : "https://placekitten.com/g/350/320",
 	"name" : "David Tera",
-	"role" : "Digital Marketing, Business Strategy & Analytics Consultant + learning to web develop",
-	"welcomeMessage" : "Hi I am David, learning to program.",
-	"skills" : ["marketing", "digital", "development", "majom"],
+	"role" : "Digital Marketing, Business Strategy & Analytics Consultant",
+	"welcomeMessage" : "Currently learning Front-End Web Dev!",
+	"skills" : ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
 	"contacts" : 
 	{
 		"mobile": "06202510931",
@@ -123,8 +123,8 @@ console.log(cameron.job);
 bio.display = function () {
 
 //Name, Role, Pic, Welcome
-//var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-//$("#header").append(formattedWelcome);
+var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedWelcome);
 var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 $('#header').append(formattedPic);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -134,7 +134,7 @@ $("#header").prepend(formattedName);
 
 //skills
 if (bio.skills.length > 0) {
-	$('#skillsExp').append(HTMLskillsStart);
+	$('#header').append(HTMLskillsStart);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
 	$('#skills').append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);

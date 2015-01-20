@@ -4,17 +4,7 @@
   margin:0;
   font-family: 'Open Sans', sans-serif;
 }
-
-
-
-#square {
-  width: 100px;
-  height: 100px;
-  background: red;
-}
   
-
-
 .clearfix {
   overflow: auto;
 }
@@ -59,6 +49,15 @@ h2, h3, h4, h5 {
   padding:20px;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.online-class-header{
+  padding-top: 40px;
+}
+
+.projectimage{
+  width:300px;
+  border:1px;
 }
 
 
@@ -160,8 +159,8 @@ ul {
   padding-left: 40%;
 }
 
-.google-marker-title{
-  font-size: 22px;
+.google-map-marker-title{
+  font-size: 16px;
   color: #F5A623;
 }
 
