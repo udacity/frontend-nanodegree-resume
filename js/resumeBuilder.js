@@ -216,7 +216,6 @@ $("nav i, nav li").click(function() {
 	if ($("nav").css("width") === "50px") {
 		$("nav").animate({
 			width: "200px"
-
 		});
 		$("nav ul").css({
 			"display": "block",
@@ -230,11 +229,9 @@ $("nav i, nav li").click(function() {
 
 	} else {
 		$("nav").animate({
-			width: "50px",
-
+			width: "50px"
 		});
 		$("nav ul").css("display", "none");
-
 	}
 });
 
