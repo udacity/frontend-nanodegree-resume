@@ -285,6 +285,7 @@ span#role {
 		background-image: url("../images/hulk_mobile.png");
 		background-repeat: no-repeat;
 		background-size: cover;
+		overflow: hidden;
 	}
 
 	#skills {
