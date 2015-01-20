@@ -258,7 +258,7 @@ span#role {
 	}
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 639px) {
 	#name {
 		font-size: 55px;
 	}
@@ -309,8 +309,14 @@ span#role {
 	}
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 640px) {
 	.biopic {
 		display: block;
+	}
+}
+
+@media only screen and (min-width:475px) {
+	#skills {
+		font-size: 24px
 	}
 }
