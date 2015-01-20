@@ -262,7 +262,7 @@ span#role {
 	}
 }
 
-@media only screen and (max-width: 639px) {
+@media only screen and (max-width: 669px) {
 	#name {
 		font-size: 55px;
 	}
@@ -313,7 +313,7 @@ span#role {
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 670px) {
 	.biopic {
 		display: block;
 	}
