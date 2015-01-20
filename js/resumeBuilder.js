@@ -247,10 +247,3 @@ education.display();
 
 // Displays Google Map
 $("#mapDiv").append(googleMap);
-
-
-
-
-
-
-
