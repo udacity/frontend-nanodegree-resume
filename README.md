@@ -1,6 +1,6 @@
 ## Completed Project Link
 
-Access Hulk's resume [here](http://googledrive.com/host/0B9fvKmX-nM0UV0JrbXh2QkQ0MUE).
+Access the finished resume [here](http://googledrive.com/host/0B9fvKmX-nM0UV0JrbXh2QkQ0MUE).
 
 ## How do I complete this project?
 
