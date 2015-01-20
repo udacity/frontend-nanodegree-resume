@@ -181,7 +181,7 @@ var projects = {
 		{
 			"title": "Hulk Action Series",
 			"dates": "1978-82",
-			"description": "Hulk played eponymous hero in quest of finding cure of dreaded Bruce Banner disease.",
+			"description": "Hulk played eponymous hero in quest of finding cure for dreaded Bruce Banner disease.",
 			"images": ["images/project-pics/hulk_tv_01.jpg", "images/project-pics/hulk_tv_02.jpg", "images/project-pics/hulk_tv_03.jpg"]
 		}
 	],
