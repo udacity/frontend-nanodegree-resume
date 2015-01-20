@@ -108,9 +108,10 @@ var education = {
 			for (var course in eCourses) {
 				$("#education").append(HTMLschoolStart);
 
-				var titleAndSchool = HTMLonlineTitle.replace("%data%", eCourses[course].title);
+				var titleAndSchool = HTMLonlineTitle.replace("%data%", eCourses[course].title)
+													.replace("%url%", eCourses[course].url);
 				titleAndSchool += HTMLonlineSchool.replace("%data%", eCourses[course].school)
-												  .replace("%url%", eCourses[course].url);
+
 				var fmtDate = HTMLonlineDates.replace("%data%", eCourses[course].date);
 
 				// TO INSTRUCTOR: I'm not sure why this is needed, so I put the url
