@@ -193,6 +193,10 @@ span#role {
 	padding-bottom: 1px;
 }
 
+#workExperience {
+	margin-top: 35px;
+}
+
 .work-entry, .project-entry, .education-entry {
 	margin: auto 10px 25px 10px;
 }
