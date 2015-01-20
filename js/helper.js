@@ -159,7 +159,7 @@ function initializeMap() {
     googleMarkerTitle.replace("%data%", placeData.formatted_address);
     //placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
-    var testText = "<br> I lived here!"
+    var testText = "<br> I have lived here!"
 
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({

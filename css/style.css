@@ -101,7 +101,6 @@ a {
 #skillsH3 {
   color: #F5AE23;
   display: none;
-  padding-left: 40%;
 }
 
 .orange {
@@ -156,11 +155,10 @@ ul {
 
 .skills{
   font-size: 12px;
-  padding-left: 40%;
 }
 
 .google-map-marker-title{
-  font-size: 16px;
+  font-size: 14px;
   color: #F5A623;
 }
 

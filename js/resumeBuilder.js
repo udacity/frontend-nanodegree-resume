@@ -7,14 +7,14 @@ var work = {
 		"titles" : "Consultant",
 		"location" : "Bangkok, Thailand",
 		"dates" : "2013-2015",
-		"description" : "Marketing, business strategy and analytics"
+		"description" : "I work with small businesses and give advice on marketing and business strategy"
 	},
 	{
 		"employer" : "Gotham Direct Inc.",
 		"titles" : "Strategist/Analyst",
 		"location" : "New York, NY, USA",
 		"dates" : "2012-2014",
-		"description" : "Advertising, Analytics, etc"
+		"description" : "Media Strategy and Planning, Advertising, Business Analytics"
 	}
 	]
 };
@@ -44,7 +44,7 @@ var bio = {
 	"name" : "David Tera",
 	"role" : "Digital Marketing, Business Strategy & Analytics Consultant",
 	"welcomeMessage" : "Currently learning Front-End Web Dev!",
-	"skills" : ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
+	"skills" : ["Digital Marketing", "Business Strategy", "Analytics", "Advertising", "MySQL"],
 	"contacts" : 
 	{
 		"mobile": "06202510931",
@@ -86,35 +86,6 @@ var education = {
 	}
 ]
 };
-
-
-
-
-
-
-
-
-var countries = ["germany", "argentina", "brazil", "netherlands"];
-for (cc in countries) {console.log(countries[cc])};
-
-
-
-//loop if 
-var cameron ={};
-cameron.job = "course dev";
-
-var makeCourse = function () {
-	console.log("Made a course");
-}
-var courses = 0;
-while(cameron.job === "course dev") {
-	makeCourse();
-	courses = courses + 1;
-	if(courses === 10) {
-		cameron.job = "learning specialist";
-	}
-}
-console.log(cameron.job);
 
 
 
@@ -257,8 +228,6 @@ $('#mapDiv').append(googleMap);
 
 
 //Click Pixel
-
-
 $(document).click(function(loc){
 	var x = loc.pageX;
 	var y = loc.pageY;
@@ -289,7 +258,7 @@ logClicks(x,y);
 
 
 
-//MEnu
+//Menu
 
 (function($) {
 
