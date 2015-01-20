@@ -253,6 +253,10 @@ span#role {
 		background-color: #ffffff;
 	}
 
+	.welcome-message {
+		font-size: 28px;
+	}
+
 	#letsConnect {
 		margin-top: 55px;
 	}
@@ -293,7 +297,7 @@ span#role {
 		margin: 5px auto 5px auto;
 		padding: 45px 0 45px 0;
     	font-family: "Comic Sans MS", "Trebuchet MS", Helvetica, Arial, sans-serif;
-		font-size: 22px;
+		font-size: 26px;
 		font-style: italic;
 		font-weight: bold;
 	}
@@ -315,8 +319,9 @@ span#role {
 	}
 }
 
-@media only screen and (min-width:475px) {
+
+@media only screen and (max-width: 470px) {
 	#skills {
-		font-size: 24px
+		font-size: 22px;
 	}
 }
