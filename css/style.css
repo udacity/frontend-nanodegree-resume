@@ -9,7 +9,7 @@ body {
 }
 
 #main {
-	padding: 30px 25px 0 25px;
+	padding: 30px 70px 0 70px;
 	border-top: 5px solid rgb(55,160,60);
 	border-bottom: 5px solid rgb(55,160,60);
 }
@@ -229,8 +229,7 @@ span#role {
 }
 
 #letsConnect {
-	margin-top: 50px;
-	text-align: center;
+    text-align: center;
 }
 
 #footerContacts {
@@ -243,7 +242,7 @@ span#role {
 /* Adjustments for different screen sizes. */
 @media only screen and (max-width: 1024px) {
 	#letsConnect {
-		margin-top: 5%;
+		margin-top: 60px;
 	}
 }
 
@@ -256,13 +255,15 @@ span#role {
 	.welcome-message {
 		font-size: 28px;
 	}
-
-	#letsConnect {
-		margin-top: 55px;
-	}
 }
 
-@media only screen and (max-width: 669px) {
+@media only screen and (max-width: 750px) {
+	#main {
+		padding: 30px 25px 0 25px;
+		border-top: 5px solid rgb(55,160,60);
+		border-bottom: 5px solid rgb(55,160,60);
+	}
+
 	#name {
 		font-size: 55px;
 	}
@@ -302,10 +303,6 @@ span#role {
 		font-weight: bold;
 	}
 
-	#letsConnect {
-		margin-top: 60px;
-	}
-
 	#footerContacts {
 		margin: 0 0px 0 0px;
 		line-height: 25px;
@@ -313,7 +310,7 @@ span#role {
 	}
 }
 
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 750px) {
 	.biopic {
 		display: block;
 	}
@@ -322,6 +319,19 @@ span#role {
 
 @media only screen and (max-width: 470px) {
 	#skills {
-		font-size: 22px;
+		font-size: 20px;
+	}
+
+	#mapDiv {
+		width: 100%;
+		height: 300px;
+		padding-bottom: 5%;
+	}
+}
+
+
+@media only screen and (max-width: 399px) {
+	#letsConnect {
+		margin-top: 100px;
 	}
 }
