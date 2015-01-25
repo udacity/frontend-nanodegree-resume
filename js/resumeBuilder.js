@@ -75,7 +75,7 @@ var education = {
 			"name" : "Udacity",
 			"title" : "Front-end web development",
 			"dates" : "2014-2015",
-			"URL" : "https://www.udacity.com"
+			"URL" : '<a href="https://www.udacity.com", target="blank">Website</a>'
 		}
 	]
 };
@@ -216,18 +216,19 @@ education.display = function() {
 	}
 	for (course in education.onlineCourses) {
 		$("#education").append(HTMLonlineClasses);
+		$("#education").append(HTMLonlineStart);
 
 		var formattedOnlineName = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-		$(".education-entry:last").append(formattedOnlineName);
+		$(".online-entry").append(formattedOnlineName);
 
 		var formattedOnlineName = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].name);
-		$(".education-entry:last").append(formattedOnlineName);
+		$(".online-entry").append(formattedOnlineName);
 
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-		$(".education-entry:last").append(formattedOnlineDates);
+		$(".online-entry").append(formattedOnlineDates);
 
 		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].URL);
-		$(".education-entry:last").append(formattedOnlineURL);
+		$(".online-entry").append(formattedOnlineURL);
 	}
 }
 
@@ -236,4 +237,4 @@ $("#education").append(education.display);
 /*
 map start
 */
-//$("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
