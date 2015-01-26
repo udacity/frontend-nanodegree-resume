@@ -1,48 +1,8 @@
-var work = {
-	"jobs": [
-	{
-		"employer": "Udacity",
-		"title": "Code Reviewer",
-		"location": "Buenos Aires, ARG",
-		"dates": "2014 - Present",
-		"description": "Evaluate and review code for Programming Foundations with Python"
-	},
-	{
-		"employer": "Avaya",
-		"title": "Backbone Engineer",
-		"location": "Buenos Aires, ARG",
-		"dates": "2010 - 2013",
-		"description": "Break and fix support for Avaya Call Manager"
-	},
-	{
-		"employer": "IBM",
-		"title": "Master Trainer",
-		"location": "Buenos Aires, ARG",
-		"dates": "2006 - 2010",
-		"description": "Teach and train program fundamentals for new hires and existing staff"
-	}
-	]
-} // Valid JSON!
-
-
-var = projects = {
-	"projects": [
-	{
-		"title": "Running Plan Generator",
-		"dates": "Novemeber 2014",
-		"description": "Running plan generator for 10, 21 and 42 K with three levels of difficulty"
-	},
-	{
-		"title": "Static Resume Webpage",
-		"dates": "December 2014",
-		"description": "Personal resume designed using a mockup"
-	}]
-} // Valid JSON!
-
 var bio = {
 	"name": "Juan Martin Marco",
 	"role": "Front-End Web Developer",
 	"contacts": {
+		"mobile": "650-555-5555",
 		"email": "jmmarco@gmail.com",
 		"github": "jmmarco",
 		"twitter": "@jmmarco",
@@ -50,8 +10,56 @@ var bio = {
 	},
 	"welcomeMessage": "Welcome to my online resume",
 	"skills": ["GitHub", "Git", "Python", "HTML/CSS"],
-	"image": "images/fry.jpg"
-} // Valid JSON!
+	"biopic": "images/fry.jpg"
+}; // Valid JSON!
+
+// Display welcome message!
+var welcomeMessage = bio.welcomeMessage;
+var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", welcomeMessage);
+$("#header").append(formattedWelcomeMessage);
+
+// Display bio
+function displayBio() {
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
+	$("#header").append(formattedName);
+	$("#header").append(formattedRole);
+}
+displayBio();
+
+
+// Display skills
+/*
+if (bio.skills.length > 0) {
+	$("#header").append("HTMLskillsStart");
+	for (var skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+	}
+
+
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
+}
+*/
+
+/*
+function inName(name) {
+	name = name.trim().split(" ");
+	console.log(name);
+	name[1] = name[1].toUpperCase();
+	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+
+	return name[0] +" "+name[1];
+}
+
+$("#main").append(internationizeButton);
+*/
 
 var education = {
 	"schools": [
@@ -60,7 +68,7 @@ var education = {
 			"city": "Austin, TX, US",
 			"degree": "BA",
 			"majors": ["CS"],
-			"dates": 2003,
+			"date": 2003,
 			"url": "www.example.com"
 		},
 		{
@@ -68,7 +76,7 @@ var education = {
 			"city": "Stanford, CA, US",
 			"degree": "Masters",
 			"majors": ["Data Analysis"],
-			"dates": 2010,
+			"date": 2010,
 			"url": "www.example.com"
 		}
 	],
@@ -76,23 +84,139 @@ var education = {
 		{
 			"title": "Computer Science 101",
 			"school": "Stanford University",
-			"dates": 2014,
+			"date": 2014,
 			"url": "class.stanford.edu"
 		},
 		{
 			"title": "Programming Foundations with Python",
 			"school": "Udacity",
-			"dates": 2014,
+			"date": 2014,
 			"url": "udacity.com"
 		}
 	]
-} // Valid JSON!
+}; // Valid JSON!
+
+// function for education
+
+function displayEducation() {
+	for (var school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].date);
+		var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+		var formattedSchool = formattedschoolName + formattedschoolDegree + formattedschoolDates + formattedschoolLocation + formattedschoolMajor;
+		$(".education-entry:last").append(formattedSchool);
+	}
+}
+displayEducation();
+
+var work = {
+	"jobs": [
+	{
+		"employer": "Udacity",
+		"title": "Code Reviewer",
+		"location": "Buenos Aires, ARG",
+		"date": "2014 - Present",
+		"description": "Evaluate and review code for Programming Foundations with Python"
+	},
+	{
+		"employer": "Avaya",
+		"title": "Backbone Engineer",
+		"location": "Buenos Aires, ARG",
+		"date": "2010 - 2013",
+		"description": "Break and fix support for Avaya Call Manager"
+	},
+	{
+		"employer": "IBM",
+		"title": "Master Trainer",
+		"location": "Buenos Aires, ARG",
+		"date": "2006 - 2010",
+		"description": "Teach and train program fundamentals for new hires and existing staff"
+	}
+	]
+}; // Valid JSON!
+
+
+var projects = {
+	"projects": [
+	{
+		"title": "Running Plan Generator",
+		"date": "Novemeber 2014",
+		"description": "Running plan generator for 10, 21 and 42 K with three levels of difficulty"
+	},
+	{
+		"title": "Static Resume Webpage",
+		"date": "December 2014",
+		"description": "Personal resume designed using a mockup"
+	}]
+}; // Valid JSON!
+
+function displayWork() {
+	for(var job in work.jobs) {
+	// create a new div for work experience
+	$("#workExperience").append(HTMLworkStart);
+	// concat employer and title
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	var formattedEmployerTitle  = formattedEmployer + formattedTitle;
+	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].date);
+	$(".work-entry:last").append(formattedDates);
+
+	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+	$(".work-entry:last").append(formattedDescription);
+	}
+}
+displayWork();
+
+function clicker() {
+	$(document).click(function(loc) {
+		var x = loc.pageX;
+		var y = loc.pageY;
+
+		logClicks(x,y);
+	});
+
+
+}
+clicker();
+
+
+function locationizer(work_obj) {
+	var locationArray = [];
+	for (var job in work_obj.jobs) {
+		var newLocation = work_obj.jobs[job].location;
+		locationArray.push(newLocation);
+	}
+	return locationArray;
+}
 
 
 
+//var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+//$(".work-entry:last").append(formattedLocation);
+/*
+var cameron = {};
+cameron.job = "course dev";
 
+var makeCourse =  function() {
+	// make a course
+	console.log("Made a course")
+}
+var courses = 0;
+while(cameron.job === "course dev") {
+	makeCourse();
+	courses = courses +1;
+	if(courses === 10) {
+		cameron.job = "learning specialist";
+	}
+}
 
-$("#main").append(work["position"]);
-$("#main").append(education.name);
+console.log(cameron.job)
+*/
+
 
 
