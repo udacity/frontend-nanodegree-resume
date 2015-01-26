@@ -16,7 +16,7 @@ var bio = {
 // Display welcome message!
 var welcomeMessage = bio.welcomeMessage;
 var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", welcomeMessage);
-$("#header").append(formattedWelcomeMessage);
+$("#header").prepend(formattedWelcomeMessage);
 
 // Display bio
 function displayBio() {
@@ -25,6 +25,7 @@ function displayBio() {
 	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
 	$("#header").append(formattedName);
 	$("#header").append(formattedRole);
+	$("#header").append(formattedPicture);
 }
 displayBio();
 
