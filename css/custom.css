@@ -1,0 +1,21 @@
+/*sections style*/
+#main {
+  	max-width:1200px;
+  	margin: 0 auto;
+  	-webkit-box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+}
+
+.projectImage{
+
+	width: 50%;
+	
+}
+
+.courseUrl:not(:first-child) {
+	margin-top: 20px;
+}
+
+
+
