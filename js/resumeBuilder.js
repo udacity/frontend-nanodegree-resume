@@ -214,6 +214,22 @@ education.display = function(){
 		$(".education-entry:last").append(formattedschoolLocation);
 		$(".education-entry:last").append(formattedschoolMajor);
 	}
+
+		$("#education").append(HTMLonlineClasses);
+
+	for (course in education.onlineclasses){
+
+		$("#education").append(HTMLschoolStart);
+
+		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineclasses[course].title);
+		var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineclasses[course].school);
+		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineclasses[course].date);
+		var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineclasses[course].url);
+
+		$(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool);
+		$(".education-entry:last").append(formattedonlineDates);
+		$(".education-entry:last").append(formattedonlineURL);
+	}
 }
 
 var work = {
