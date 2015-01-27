@@ -223,21 +223,21 @@ var work = {
 		"title" : "Sole Proprietor / Independent Yarn Dyer",
 		"location" : "Campbell, CA",
 		"dates" : "2012 - present",
-		"description" : "Dolcelatte emmental cheese triangles. Cottage cheese lancashire cheesy grin roquefort fromage pepper jack cheese slices fromage."
+		"description" : "Nam pellentesque suscipit porttitor. Nunc sed bibendum erat, ac condimentum urna. Praesent vitae sapien velit."
 	},
 	{	
 		"employer" : "National Instruments",
 		"title" : "Technical Writer / Course Developer",
 		"location" : "Austin, TX",
 		"dates" : "2007-2009",
-		"description" : "Dolcelatte emmental cheese triangles. Cottage cheese lancashire cheesy grin roquefort fromage pepper jack cheese slices fromage."
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat convallis lorem non viverra. Nulla facilisi. Praesent non eros nisi. Ut ac nunc egestas, varius nisi quis, interdum augue."
 	}, 
 	{	
 		"employer" : "Enspire Learning",
 		"title" : "Content Developer",
 		"location" : "Austin, TX",
 		"dates" : "2005-2006",
-		"description" : "Dolcelatte emmental cheese triangles. Cottage cheese lancashire cheesy grin roquefort fromage pepper jack cheese slices fromage."
+		"description" : "Phasellus nec nisl id nibh rhoncus tristique sed in velit. Phasellus ut feugiat mi. Aliquam iaculis, lacus eget porta posuere, orci enim efficitur neque, sit amet tincidunt est elit in tellus."
 	}
 	]
 };
@@ -265,17 +265,17 @@ var projects = {
 	{
 	"title" : "Sample Project 1",
 	"dates" : "2014",
-	"description" : "I love cheese, especially port-salut macaroni cheese. Cheesecake everyone loves red leicester gouda jarlsberg gouda the big cheese. Fondue halloumi bocconcini babybel bocconcini the big cheese cheeseburger.",
+	"description" : "Vestibulum molestie metus felis, nec hendrerit velit tempor in. Vivamus elementum consectetur magna vel pulvinar. Praesent ullamcorper congue tristique. Proin ut luctus enim. Suspendisse tristique sapien felis, vitae ornare nisl venenatis vitae.",
 	"images" : [
-		"http://www.fillmurray.com/200/300", "http://www.fillmurray.com/200/300"
+		"http://placehold.it/200x200", "http://placehold.it/200x200"
 	]
 	},
 	{
 	"title" : "Sample Project 2",
 	"dates" : "2015",
-	"description" : "I love cheese, especially port-salut macaroni cheese. Cheesecake everyone loves red leicester gouda jarlsberg gouda the big cheese. Fondue halloumi bocconcini babybel bocconcini the big cheese cheeseburger.",
+	"description" : "Maecenas condimentum mauris vitae condimentum tincidunt. Phasellus viverra iaculis ornare. Maecenas convallis imperdiet eros a sagittis. Donec non sem in mauris imperdiet tempor. Integer tempor suscipit diam ut bibendum. Vivamus varius tincidunt erat nec tincidunt.",
 	"images" : [
-		"http://www.fillmurray.com/250/250", "http://www.fillmurray.com/250/250", "http://www.fillmurray.com/250/250"
+		"http://placehold.it/200x150", "http://placehold.it/200x150", "http://placehold.it/200x150"
 	]
 	}
 	]
