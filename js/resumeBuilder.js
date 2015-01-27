@@ -150,13 +150,17 @@ var projectList = {
 	"projectTitle" : "Sample Project 1",
 	"projectDates" : "2014",
 	"projectDesc" : "I love cheese, especially port-salut macaroni cheese. Cheesecake everyone loves red leicester gouda jarlsberg gouda the big cheese. Fondue halloumi bocconcini babybel bocconcini the big cheese cheeseburger.",
-	"projectImage" : "images/something.jpg"
+	"projectImages" : [
+		"http://www.fillmurray.com/200/300", "http://www.fillmurray.com/200/300"
+	]
 	},
 	{
 	"projectTitle" : "Sample Project 2",
 	"projectDates" : "2015",
 	"projectDesc" : "I love cheese, especially port-salut macaroni cheese. Cheesecake everyone loves red leicester gouda jarlsberg gouda the big cheese. Fondue halloumi bocconcini babybel bocconcini the big cheese cheeseburger.",
-	"projectImage" : "images/something2.jpg"
+	"projectImages" : [
+		"http://www.fillmurray.com/250/250", "http://www.fillmurray.com/250/250", "http://www.fillmurray.com/250/250"
+	]
 	}
 	]
 };
@@ -217,3 +221,54 @@ $(document).click(function(loc){
 	logClicks(x,y);
 
 });
+
+/* internationalize button code
+function inName(name){
+	console.log("here");
+	name = name.trim().split(" ");
+	console.log(name);
+	name[1] = name[1].toUpperCase();
+	name[2] = name[0].slice(0,1).toUpperCase()+name[0].slice(1).toLowerCase();
+	return name[0] + " " + name[1];
+}
+
+$("#main").append(internationalizeButton);
+*/
+console.log("here");
+
+		console.log(projectList.projects[1].projectTitle);
+
+
+projects.display = function(){
+	for (project in projectList.projects) {
+
+		console.log("here2");
+
+		console.log(projectList.projects[1].projectTitle);
+		$("#projects").append(HTMLprojectStart);
+
+		console.log(projectList.projects[project].projectTitle);
+
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projectList.projects[project].projectTitle);
+		$(".project-entry:last").append(formattedTitle);
+
+		var formattedDates = HTMLprojectDates.replace("%data%", projectList.projects[project].projectDates);
+		$(".project-entry:last").append(formattedDates);
+
+		var formattedDescription = HTMLprojectDescription.replace("%data%", projectList.projects[project].projectDesc);
+		$(".project-entry:last").append(formattedDescription);
+
+		if (projectList.projects[project].projectImages.length > 0){
+			for (image in projectList.projects[project].projectImages) {
+				var formattedImage = HTMLprojectImage.replace("%data%", projectList.projects[project].projectImages[image]);
+				$(".project-entry:last").append(formattedImage);
+			}
+		}
+	}
+}
+
+projects.display();
+
+$("#mapDiv").append(googleMap);
+
+
