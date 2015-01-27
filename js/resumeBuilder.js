@@ -162,7 +162,7 @@ var education = {
 		"location": "Austin, TX",
 		"degree" : "M.A.",
 		"majors" : [
-			"English with Computers and Literature concentration", "other major"
+			"English with Computers and Literature concentration"
 			],
 		"dates" : "2000",
 		"url" : "http://www.utexas.edu/"
@@ -172,7 +172,7 @@ var education = {
 		"location" : "Columbus, OH",
 		"degree" : "B.A.",
 		"majors" : [
-			"English", "minor in Computer Science"
+			"English"
 			],
 		"dates" : "1998",
 		"url" : "http://www.osu.edu/"
@@ -202,7 +202,10 @@ education.display = function(){
 		var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-		var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+		
+		for (major in education.schools[school].majors){
+			var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+		}
 
 		$("#education").append(HTMLschoolStart);
 
@@ -301,8 +304,6 @@ projects.display = function(){
 	}
 }
 
-
-
 bio.display();
 
 work.display();
@@ -320,7 +321,6 @@ $(document).click(function(loc){
 
 });
 
-console.log("map stuff");
 $("#mapDiv").append(googleMap);
 
 
