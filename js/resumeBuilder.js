@@ -128,22 +128,27 @@ bio.display = function(){
 	var mobile = bio.contacts.mobile;
 	var formattedMobile = HTMLmobile.replace("%data%", mobile);
 	$("#topContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedMobile);
 
 	var twitter = bio.contacts.twitter;
 	var formattedTwitter = HTMLtwitter.replace("%data%", twitter);
 	$("#topContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedTwitter);
 
 	var email = bio.contacts.email;
 	var formattedEmail = HTMLemail.replace("%data%", email);
 	$("#topContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedEmail);
 
 	var github = bio.contacts.github;
 	var formattedGithub = HTMLgithub.replace("%data%", github);
 	$("#topContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedGithub);
 
 	var location = bio.contacts.location;
 	var formattedLocation = HTMLlocation.replace("%data%", location);
 	$("#topContacts").append(formattedLocation);
+	$("#footerContacts").append(formattedLocation);
 
 	$("#header").append(HTMLskillsStart);
 
