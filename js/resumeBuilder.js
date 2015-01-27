@@ -162,4 +162,58 @@ var projectList = {
 };
 
 
+var name = bio.name;
+var formattedName = HTMLheaderName.replace("%data%", name);
 
+var role = bio.role;
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
+var formattedPic = HTMLbioPic.replace("%data%", bio.picURL);
+$("#header").append(formattedPic);
+
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+}
+
+
+
+function displayWork(){
+	for (job in workList.jobs){
+		var formattedjobTitle = HTMLworkTitle.replace("%data%", workList.jobs[job].position);
+		var formattedjobEmployer = HTMLworkEmployer.replace("%data%", workList.jobs[job].employer);
+
+		var formattedDates = HTMLworkDates.replace("%data%", workList.jobs[job].dates);
+		var formattedLocation = HTMLworkLocation.replace("%data%", workList.jobs[job].location);
+		var formattedDesc = HTMLworkDescription.replace("%data%", workList.jobs[job].description);
+
+		$("#workExperience").append(HTMLworkStart);
+		$(".work-entry:last").append(formattedjobEmployer + formattedjobTitle);		
+		$(".work-entry:last").append(formattedDates);
+		$(".work-entry:last").append(formattedLocation);
+		$(".work-entry:last").append(formattedDesc);
+
+	}
+}
+
+displayWork();
+
+$(document).click(function(loc){
+
+	var x = loc.pageX;
+	var y = loc.pageY;
+
+	logClicks(x,y);
+
+});
