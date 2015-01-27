@@ -170,14 +170,13 @@ $(document).click(function(loc) {
 });
 
 /*
-international name changer (!NOT WORKING!)
+international name changer
 */
 function inName(name) {
-	var name = $("#header").html();
 	name = name.trim().split(" ");
 	console.log(name);
 	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowercase();
+	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
 
 	return name[0] + " " + name[1];
 }
