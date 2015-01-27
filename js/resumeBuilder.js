@@ -1,56 +1,18 @@
 /*
-work object
-*/
-var work = [
-		{
-			"employer" : "Phonofidelic",
-			"title" : "Graphic designer",
-			"location" : "Stockholm, Sweden & Ft Lauderdale, FL",
-			"dates" : "2006-2015",
-			"description" : "describe"
-		},
-		{
-			"employer" : "Imperial Recordings",
-			"title" : "Graphic artist, printer",
-			"location" : "Stockholm, Sweden",
-			"dates" : "2012",
-			"description" : "describe"
-		}
-];
-
-/*
-projects object
-*/
-var projects = {
-	"projects" : [
-		{
-			"title" : "This Works For Now",
-			"dates" : 2012,
-			"description" : "Graphic prints and instalation shown att Grafiska Sälskapet.",
-			"images" : ["images/197x148.gif", "images/197x148.gif"]
-		},
-		{
-			"title" : "Something",
-			"dates" : 2012,
-			"description" : "Graphic prints for live event.",
-			"images" : ["images/197x148.gif", "images/197x148.gif", "images/197x148.gif"]
-		}
-	]
-};
-
-/*
 bio object
 */
 var bio = {
 	"name" : "Chris Clemons",
 	"role" : "Visual Designer and Web Developer",
-	"contact" : {
+	"contacts" : {
 		"email" : "info@phonofidelic.com",
-		"mobile" : "555-555-5555"
+		"mobile" : "555-555-5555",
+		"location" : "Ft. Lauderdale"
 	},
 	"welcomeMessage" : "Hello bla bla bla",
-	"skills" : ["design", "printing", "art"]
-};
+	"skills" : ["design", "printing", "art"],
+	"bioPic" : "images/me.jpg"
+}
 
 /*
 education object
@@ -78,7 +40,50 @@ var education = {
 			"URL" : '<a href="https://www.udacity.com", target="blank">Website</a>'
 		}
 	]
-};
+}
+
+/*
+work object
+*/
+var work = {
+	"jobs" : [
+		{
+			"employer" : "Phonofidelic",
+			"title" : "Graphic designer",
+			"location" : "Stockholm, Sweden & Ft Lauderdale, FL",
+			"dates" : "2006-2015",
+			"description" : "describe"
+		},
+		{
+			"employer" : "Imperial Recordings",
+			"title" : "Graphic artist, printer",
+			"location" : "Stockholm, Sweden",
+			"dates" : "2012",
+			"description" : "describe"
+		}
+	]
+}
+
+/*
+projects object
+*/
+var projects = {
+	"projects" : [
+		{
+			"title" : "This Works For Now",
+			"dates" : 2012,
+			"description" : "Graphic prints and instalation shown att Grafiska Sälskapet.",
+			"images" : ["images/197x148.gif", "images/197x148.gif"]
+		},
+		{
+			"title" : "Something",
+			"dates" : 2012,
+			"description" : "Graphic prints for live event.",
+			"images" : ["images/197x148.gif", "images/197x148.gif", "images/197x148.gif"]
+		}
+	]
+}
+
 
 /*
 name start
@@ -99,14 +104,23 @@ var formattedBioPic = HTMLbioPic.replace("%data%", "images/me.jpg");
 $("#header").append(formattedBioPic);
 
 /*
+welcomeMsg start
+*/
+var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedWelcomeMsg);
+
+/*
 contact start
 */
-var formattedContact = HTMLemail.replace("%data%", bio.contact.email);
+var formattedContact = HTMLemail.replace("%data%", bio.contacts.email);
 $("#header").append(formattedContact);
 
-var formattedContact = HTMLmobile.replace("%data%", bio.contact.mobile);
+var formattedContact = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#header").append(formattedContact);
 
+/*
+skills start
+*/
 if (bio.skills.length > 0) {
 
 	$("#header").append(HTMLskillsStart);
@@ -125,16 +139,16 @@ if (bio.skills.length > 0) {
 work experience start
 */
 function displayWork() {
-	for (job in work) {
+	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work[job].title);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
-		var formattedWorkDates = HTMLworkDates.replace("%data%", work[job].dates);
-		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work[job].location);
-		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work[job].description);
+		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
 		$(".work-entry:last").append(formattedEmployerTitle);
 		$(".work-entry:last").append(formattedWorkDates);
@@ -148,25 +162,27 @@ displayWork();
 /*
 click tracker
 */
-// $(document).click(function(loc) {
-// 	var x = loc.pageX;
-// 	var y = loc.pageY;
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
 
-// 	logClicks(x,y);
-// });
+	logClicks(x,y);
+});
 
 /*
 international name changer (!NOT WORKING!)
 */
-// function inName(name) {
-// 	name = name.trim().split(" ");
-// 	console.log(name);
-// 	name[1] = name[1].toUpperCase();
-// 	name[0] = name[0].slice(0,1).toUpperCase(); + name[0].slice(1).toLowercase();
+function inName(name) {
+	var name = $("#header").html();
+	name = name.trim().split(" ");
+	console.log(name);
+	name[1] = name[1].toUpperCase();
+	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowercase();
 
-// 	return name[0] + " " + name[1];
-// }
-// $("#main").append(internationalizeButton);
+	return name[0] + " " + name[1];
+}
+
+$("#main").append(internationalizeButton);
 
 /* 
 projects start 
@@ -193,7 +209,7 @@ projects.display = function() {
 	}
 }
 
-$("#projects").append(projects.display);
+projects.display();
 
 /*
 education start
@@ -232,7 +248,7 @@ education.display = function() {
 	}
 }
 
-$("#education").append(education.display);
+education.display();
 
 /*
 map start
