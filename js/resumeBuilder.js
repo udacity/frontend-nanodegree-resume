@@ -159,7 +159,6 @@ bio.display = function(){
 	}
 }
 
-
 var education = {
 	"schools" : [
 	{
