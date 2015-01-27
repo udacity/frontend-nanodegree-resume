@@ -104,7 +104,7 @@ var bio = {
 	"skills" : [
 		"Javascript" , "jQuery", "HTML", "CSS"
 	],
-	"biopic" : "images/userpic1.jpg",
+	"biopic" : "images/fry.jpg",
 };
 
 bio.display = function(){
