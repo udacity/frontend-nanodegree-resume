@@ -96,7 +96,7 @@ var education = {
 				var fmtMajors = HTMLschoolMajor.replace("%data%", schools[school].majors.join(", "));
 				var fmtLocation = HTMLschoolLocation.replace("%data%",  schools[school].location);
 
-				$(".education-entry:last").append(schoolAndDegree, fmtDates, fmtMajors, fmtLocation);
+				$(".education-entry:last").append(schoolAndDegree, fmtDates, fmtLocation, fmtMajors);
 			}
 		}
 
