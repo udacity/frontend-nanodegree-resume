@@ -1,95 +1,3 @@
-// first exercise
-//$("#main").append("Sarah Paetsch");
-
-//var awesomeThoughts = "My name is foo and I'm awesome.";
-//console.log(awesomeThoughts);
-
-//var funThoughts = awesomeThoughts.replace ("awesome", "fun");
-
-//$("#main").append(funThoughts);
-
-//var name = "Sarah Paetsch"
-
-//--------------------
-
-// Lesson 1
-
-/* 
-
-var name = bio.name;
-var formattedName = HTMLheaderName.replace("%data%", name);
-
-var role = bio.role;
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
-var formattedPic = HTMLbioPic.replace("%data%", bio.picURL);
-$("#header").prepend(formattedPic);
-
-var mobile = bio.contacts.mobile;
-var formattedMobile = HTMLmobile.replace("%data%", mobile);
-$("#topContacts").append(formattedMobile);
-
-var twitter = bio.contacts.twitter;
-var formattedTwitter = HTMLtwitter.replace("%data%", twitter);
-$("#topContacts").append(formattedTwitter);
-
-var email = bio.contacts.email;
-var formattedEmail = HTMLemail.replace("%data%", email);
-$("#topContacts").append(formattedEmail);
-
-var github = bio.contacts.github;
-var formattedGithub = HTMLgithub.replace("%data%", github);
-$("#topContacts").append(formattedGithub);
-
-var _location = bio.contacts.location;
-var formattedLocation = HTMLlocation.replace("%data%", _location);
-$("#topContacts").append(formattedLocation);
-
-var welcomeMsg = bio.welcomeMsg;
-var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", welcomeMsg);
-$("#header").append(formattedWelcomeMsg);
-
-var skills = bio.skills;
-var formattedSkills = HTMLskills.replace("%data%", skills);
-$("#header").append(HTMLskillsStart);
-$("#skills").append(formattedSkills);
-
-var jobTitle = work["position"]; 
-var formattedjobTitle = HTMLworkTitle.replace("%data%", jobTitle);
-$("#header").append(HTMLworkStart);
-$("#workExperience").append(formattedjobTitle);
-
-var schoolName = education.name;
-var formattedschoolName = HTMLschoolName.replace("%data%", schoolName);
-$("#header").append(HTMLschoolStart);
-$("#education").append(formattedschoolName);
-
-
-*/
-
-/* internationalize button code
-function inName(name){
-	console.log("here");
-	name = name.trim().split(" ");
-	console.log(name);
-	name[1] = name[1].toUpperCase();
-	name[2] = name[0].slice(0,1).toUpperCase()+name[0].slice(1).toLowerCase();
-	return name[0] + " " + name[1];
-}
-
-$("#main").append(internationalizeButton);
-*/
-//console.log("here");
-
-		//console.log(projectList.projects[1].projectTitle);
-
-
-//--------------------
-
-
 var bio = {
 	"name" : "Sarah Paetsch",
 	"role" : "Web Developer",
@@ -276,26 +184,25 @@ work.display = function(){
 		$(".work-entry:last").append(formattedDates);
 		$(".work-entry:last").append(formattedLocation);
 		$(".work-entry:last").append(formattedDesc);
-
 	}
 }
 
 var projects = {
 	"projects" : [
 	{
-	"title" : "Sample Project 1",
-	"dates" : "2014",
-	"description" : "Vestibulum molestie metus felis, nec hendrerit velit tempor in. Vivamus elementum consectetur magna vel pulvinar. Praesent ullamcorper congue tristique. Proin ut luctus enim. Suspendisse tristique sapien felis, vitae ornare nisl venenatis vitae.",
-	"images" : [
-		"http://placehold.it/200x200", "http://placehold.it/200x200"
+		"title" : "Sample Project 1",
+		"dates" : "2014",
+		"description" : "Vestibulum molestie metus felis, nec hendrerit velit tempor in. Vivamus elementum consectetur magna vel pulvinar. Praesent ullamcorper congue tristique. Proin ut luctus enim. Suspendisse tristique sapien felis, vitae ornare nisl venenatis vitae.",
+		"images" : [
+			"http://placehold.it/200x200", "http://placehold.it/200x200"
 	]
 	},
 	{
-	"title" : "Sample Project 2",
-	"dates" : "2015",
-	"description" : "Maecenas condimentum mauris vitae condimentum tincidunt. Phasellus viverra iaculis ornare. Maecenas convallis imperdiet eros a sagittis. Donec non sem in mauris imperdiet tempor. Integer tempor suscipit diam ut bibendum. Vivamus varius tincidunt erat nec tincidunt.",
-	"images" : [
-		"http://placehold.it/200x150", "http://placehold.it/200x150", "http://placehold.it/200x150"
+		"title" : "Sample Project 2",
+		"dates" : "2015",
+		"description" : "Maecenas condimentum mauris vitae condimentum tincidunt. Phasellus viverra iaculis ornare. Maecenas convallis imperdiet eros a sagittis. Donec non sem in mauris imperdiet tempor. Integer tempor suscipit diam ut bibendum. Vivamus varius tincidunt erat nec tincidunt.",
+		"images" : [
+			"http://placehold.it/200x150", "http://placehold.it/200x150", "http://placehold.it/200x150"
 	]
 	}
 	]
