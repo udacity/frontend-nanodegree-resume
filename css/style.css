@@ -79,6 +79,10 @@ a {
   display: block;
 }
 
+li {
+  list-style: none;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
