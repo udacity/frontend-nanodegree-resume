@@ -1,25 +1,51 @@
 var bio = {
 	"name": "Juan Martin Marco",
 	"role": "Front-End Web Developer",
-	"contacts": {
-		"mobile": "650-555-5555",
-		"email": "jmmarco@gmail.com",
-		"github": "jmmarco",
-		"twitter": "@jmmarco",
-		"location": "Buenos Aires, ARG"
-	},
+	"contacts": [
+		{
+			"mobile": "650-555-5555",
+			"email": "jmmarco@gmail.com",
+			"github": "jmmarco",
+			"twitter": "@jmmarco",
+			"location": "Buenos Aires, ARG"
+		}
+	],
 	"welcomeMessage": "Welcome to my online resume",
 	"skills": ["GitHub", "Git", "Python", "HTML/CSS"],
 	"biopic": "images/fry.jpg"
 }; // Valid JSON!
 
 // Display welcome message!
-var welcomeMessage = bio.welcomeMessage;
-var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", welcomeMessage);
+var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").prepend(formattedWelcomeMessage);
 
 // Display bio
 function displayBio() {
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
+	$("#header").append(formattedName);
+	$("#header").append(formattedRole);
+	$("#header").append(formattedPicture);
+	for (var item in bio.contacts) {
+		$("#topContacts").append(HTMLcontactGeneric);
+		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[item].mobile);
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts[item].email);
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts[item].github);
+		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts[item].twitter);
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts[item].location);
+		var formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedTwitter + formattedLocation;
+		$(".flex-item:last").append(formattedContacts);
+	}
+}
+displayBio();
+
+
+
+
+
+
+/*
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
@@ -44,7 +70,7 @@ function displayBio() {
 
 }
 displayBio();
-
+*/
 
 // Display skills
 /*
