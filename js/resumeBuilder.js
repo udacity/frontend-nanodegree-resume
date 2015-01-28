@@ -7,9 +7,12 @@ var bio = {
 	"contacts" : {
 		"email" : "info@phonofidelic.com",
 		"mobile" : "555-555-5555",
-		"location" : "Ft. Lauderdale"
+		"location" : "Ft. Lauderdale",
+		"twiter" : "https://twitter.com/Phonofidelic",
+		"github" : "https://github.com/phonofidelic",
+		"blog" : "http://phonofidelic.tumblr.com"
 	},
-	"welcomeMessage" : "Hello bla bla bla",
+	"welcomeMessage" : "Hello bla bla bla bla bla bla bla bla bla bla bla bla",
 	"skills" : ["design", "printing", "art"],
 	"bioPic" : "images/me.jpg"
 }
@@ -113,27 +116,30 @@ $("#header").append(formattedWelcomeMsg);
 contact start
 */
 var formattedContact = HTMLemail.replace("%data%", bio.contacts.email);
-$("#header").append(formattedContact);
+$("#topContacts, #footerContacts").append(formattedContact);
 
 var formattedContact = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#header").append(formattedContact);
+$("#topContacts, #footerContacts").append(formattedContact);
 
 /*
 skills start
 */
-if (bio.skills.length > 0) {
+bio.skills.display = function() {
+	if (bio.skills.length > 0) {
 
-	$("#header").append(HTMLskillsStart);
+		$("#header").append(HTMLskillsStart);
 
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skillsH3").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+		$("#header").append(formattedSkill);
 
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skillsH3").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+		$("#header").append(formattedSkill);
 
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skillsH3").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+		$("#header").append(formattedSkill);
+	}
 }
+bio.skills.display();
 
 /*
 work experience start
