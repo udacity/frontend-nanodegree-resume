@@ -1,15 +1,13 @@
 var bio = {
 	"name": "Juan Martin Marco",
 	"role": "Front-End Web Developer",
-	"contacts": [
-		{
-			"mobile": "650-555-5555",
-			"email": "jmmarco@gmail.com",
-			"github": "jmmarco",
-			"twitter": "@jmmarco",
-			"location": "Buenos Aires, ARG"
-		}
-	],
+	"contacts": {
+		"mobile": "650-555-5555",
+		"email": "jmmarco@gmail.com",
+		"github": "jmmarco",
+		"twitter": "@jmmarco",
+		"location": "Buenos Aires, ARG"
+	},
 	"welcomeMessage": "Welcome to my online resume",
 	"skills": ["GitHub", "Git", "Python", "HTML/CSS"],
 	"biopic": "images/fry.jpg"
@@ -24,19 +22,24 @@ function displayBio() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#header").append(formattedName);
 	$("#header").append(formattedRole);
 	$("#header").append(formattedPicture);
-	for (var item in bio.contacts) {
-		$("#topContacts").append(HTMLcontactGeneric);
-		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[item].mobile);
-		var formattedEmail = HTMLemail.replace("%data%", bio.contacts[item].email);
-		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts[item].github);
-		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts[item].twitter);
-		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts[item].location);
-		var formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedTwitter + formattedLocation;
-		$(".flex-item:last").append(formattedContacts);
-	}
+	$("#topContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedMobile);
+	$("#topContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedEmail);
+	$("#topContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedGithub);
+	$("#topContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedTwitter);
+	$("#topContacts").append(formattedLocation);
+	$("#footerContacts").append(formattedLocation);
 }
 displayBio();
 
