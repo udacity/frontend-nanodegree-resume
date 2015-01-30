@@ -112,11 +112,67 @@
 
          		 	{
 
-         				"title": "Introduction to javascript",
+         				"title": "JavaScript Basics",
          				"school": "Udacity",
          				"date": 2015,
          				"url": "https://www.udacity.com/"
-         		 	}
+         		 	},
+
+                    {
+
+                        "title": "Intro to JQuery",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    },
+
+                    {
+
+                        "title": "How to Use Git and GitHub",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    },
+
+                     {
+
+                        "title": "Object Oriented JavaScripts",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    },
+
+                     {
+
+                        "title": "HTML5 Canvas",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    },
+
+                     {
+
+                        "title": "WebSite Performance Optimization",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    },
+
+                     {
+
+                        "title": "Intro to AJAX",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    },
+
+                     {
+
+                        "title": "JavaScript Design Patterns",
+                        "school": "Udacity",
+                        "date": 2015,
+                        "url": "https://www.udacity.com/"
+                    }
          		]
      		 
      		};
@@ -285,14 +341,27 @@
      			$("#education").append(HTMLonlineClasses);
      			$("#education").append(HTMLschoolStart);
 
+                var counter = 0;               
      			for(course in education.onlineCourses)
 				{
+                    
+                    
+
 					var formattedOnlineClassTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
                     var formattedOnlineClassSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-				    $(".education-entry:last").append(formattedOnlineClassTitle.replace("%courseUrl%", education.onlineCourses[course].url) + formattedOnlineClassSchool );
-					
-					var formattedOnlineClassDate = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
-					$(".education-entry:last").append(formattedOnlineClassDate);
+
+				    var formattedOnlineClassDate = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
+                   
+                   $("a[href!='#']").attr("class","courseUrl");//courseUrl is attributed only to anchor with a real address url.
+                   $(".education-entry:last-of-type").addClass("onlineClass");
+                   
+                    var formattedUrl =  HTMLonlineURL.replace("%data%", education.onlineCourses[course].url ).replace("#", education.onlineCourses[course].url);;
+                    
+                    $(".education-entry:last").append((formattedOnlineClassTitle + formattedOnlineClassSchool));
+
+                    $(".education-entry:last").append(formattedOnlineClassDate);
+                   
+                    $(".education-entry:last").append(formattedUrl.slice(4, formattedUrl.length));
 					
 				}
 			

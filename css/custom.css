@@ -10,12 +10,39 @@
 .projectImage{
 
 	width: 50%;
+	background-size: cover;
 	
 }
+.courseUrl{
+	margin-bottom: 10px;
+	margin-top: 1px;
+}
+.onlineClass{
+	display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  margin-left: 50px;
+  height: 380px;
 
-.courseUrl:not(:first-child) {
-	margin-top: 20px;
 }
 
+h3{
+	color: #999999;
+}
+.gray {
+  padding-bottom: 20px;
+}
 
+#skills {
+  
+  display: inline-block;
+  
+}
 
+.clearfix{
+	background:  url(../images/pointer-clicking-inbox-lrg.jpg )  ;
+	background-size: cover;
+}
