@@ -26,13 +26,15 @@ var education = {
 			"name" : "Stockholms Universitet",
 			"location" : "Stockholm, Sweden",
 			"area" : "Philosophy and linguistics",
-			"years" : "2011-2013"
+			"years" : "2011-2013",
+			"url" : ""
 		},
 		{
 			"name" : "Grafikskolan",
 			"location" : "Stockholm, Sweden",
 			"area" : "Print making",
-			"years" : "2009-2011"
+			"years" : "2009-2011",
+			"url" : ""
 		}
 	],
 	"onlineCourses" : [
@@ -40,7 +42,7 @@ var education = {
 			"name" : "Udacity",
 			"title" : "Front-end web development",
 			"dates" : "2014-2015",
-			"URL" : '<a href="https://www.udacity.com", target="blank">Website</a>'
+			"url" : '<a href="https://www.udacity.com", target="blank">Website</a>'
 		}
 	]
 }
@@ -254,7 +256,7 @@ education.display = function() {
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
 		$(".online-entry").append(formattedOnlineDates);
 
-		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].URL);
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 		$(".online-entry").append(formattedOnlineURL);
 	}
 }
