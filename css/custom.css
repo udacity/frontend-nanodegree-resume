@@ -1,0 +1,48 @@
+/*sections style*/
+#main {
+  	max-width:1200px;
+  	margin: 0 auto;
+  	-webkit-box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+}
+
+.projectImage{
+
+	width: 50%;
+	background-size: cover;
+	
+}
+.courseUrl{
+	margin-bottom: 10px;
+	margin-top: 1px;
+}
+.onlineClass{
+	display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  margin-left: 50px;
+  height: 380px;
+
+}
+
+h3{
+	color: #999999;
+}
+.gray {
+  padding-bottom: 20px;
+}
+
+#skills {
+  
+  display: inline-block;
+  
+}
+
+.clearfix{
+	background:  url(../images/pointer-clicking-inbox-lrg.jpg )  ;
+	background-size: cover;
+}
