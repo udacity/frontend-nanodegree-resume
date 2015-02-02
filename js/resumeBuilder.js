@@ -13,7 +13,7 @@ var bio = {
 		"blog" : "phonofidelic.tumblr.com"
 	},
 	"welcomeMessage" : "Hello bla bla bla bla bla bla bla bla bla bla bla bla",
-	"skills" : ["design", "printing", "art"],
+	"skills" : ["design", "printing", "art", "web development"],
 	"bioPic" : "images/me.jpg"
 }
 
@@ -143,7 +143,10 @@ bio.skills.display = function() {
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
 		$("#header").append(formattedSkill);
 
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+		//formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+		//$("#header").append(formattedSkill);
+
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 		$("#header").append(formattedSkill);
 	}
 }
