@@ -23,14 +23,14 @@ education object
 var education = {
 	"schools" : [
 		{
-			"name" : "Stockholms Universitet",
+			"name" : '<a href="http://www.philosophy.su.se/english", target="blank">Stockholm University</a>',
 			"location" : "Stockholm, Sweden",
 			"area" : "Philosophy and linguistics",
 			"years" : "2011-2013",
 			"url" : ""
 		},
 		{
-			"name" : "Grafikskolan",
+			"name" : '<a href="http://www.grafikskolan.se/article.asp?kat=13&id=48", target="blank">College of Printmaking Arts</a>',
 			"location" : "Stockholm, Sweden",
 			"area" : "Print making",
 			"years" : "2009-2011",

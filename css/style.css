@@ -14,10 +14,12 @@
 }
 
 h1 {
+  font-weight: 400;
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
   display: inline;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -67,12 +69,14 @@ h2, h3, h4, h5 {
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #333333;
   line-height: 21px;
 }
 
 a {
+  font-family: 'Roboto', sans-serif;
   color: #1199C3;
   text-decoration: none;
   margin-top: 10px;
@@ -100,10 +104,12 @@ li {
 }
 
 .orange-text {
+  font-family: 'Roboto', sans-serif;
   color: #F5AE23;
 }
 
 .white-text {
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: #FFFFFF;
 }
