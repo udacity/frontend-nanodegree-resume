@@ -78,7 +78,7 @@ var projects = {
 			"title" : "This Works For Now",
 			"dates" : 2012,
 			"description" : "Graphic prints and instalation shown att Grafiska Sälskapet.",
-			"images" : ["images/197x148.gif", "images/197x148.gif"]
+			"images" : ["images/proj1_1.jpg", "images/proj1_2.jpg"]
 		},
 		{
 			"title" : "Something",
