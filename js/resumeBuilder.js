@@ -10,7 +10,7 @@ var bio = {
 		"location" : "Ft. Lauderdale",
 		"twitter" : "@ phonofidelic",
 		"github" : "github.com/phonofidelic",
-		"blog" : "phonofidelic.tumblr.com"
+		"blog" : '<a href="http://www.phonofidelic.tumblr.com", target="blank">phonofidelic.tumblr</a>'
 	},
 	"welcomeMessage" : "Hello bla bla bla bla bla bla bla bla bla bla bla bla",
 	"skills" : ["design", "printing", "art", "web development"],
