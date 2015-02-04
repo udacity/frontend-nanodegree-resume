@@ -14,16 +14,16 @@
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 40px;
-  color: #F5A623;
+  color: #000000;
   line-height: 48px;
   display: inline;
   font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: 300;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -31,8 +31,9 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
+  font-style: normal;
   font-size: 20px;
+  font-weight: 300;
   color: #000000;
   line-height: 22px;
 }
@@ -79,8 +80,13 @@ a {
   font-family: 'Roboto', sans-serif;
   color: #1199C3;
   text-decoration: none;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   display: block;
+}
+
+a:hover { 
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 li {
@@ -95,7 +101,7 @@ li {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #A4A99D;
   display: none;
 }
 
@@ -103,15 +109,19 @@ li {
   background-color: #F5AE23;
 }
 
-.orange-text {
+.black-text {
   font-family: 'Roboto', sans-serif;
-  color: #F5AE23;
+  color: #000000;
 }
 
-.white-text {
+.contactLink-text {
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  color: #FFFFFF;
+  font-weight: 300;
+  color: #BE917D;
+}
+
+.contactLink-text:hover {
+  background-color: #000000;
 }
 
 .gray {
@@ -222,4 +232,12 @@ span {
   .biopic {
     display: block;
   }
+}
+
+#header {
+  background-color: #FFFFFF;
+}
+
+hr {
+  color: #000000;
 }
