@@ -120,10 +120,12 @@ li {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: 300;
   /*color: #F3F3F3;*/
-  color: #000000;
+  color: #A4A99D;
   line-height: 28px;
+  padding-top: 20px;
 }
 
 #skillsH3 {

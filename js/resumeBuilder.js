@@ -12,7 +12,7 @@ var bio = {
 		"github" : '<a href="http://github.com/phonofidelic", target="blank">github/phonofidelic</a>',
 		"blog" : '<a href="http://www.phonofidelic.tumblr.com", target="blank">phonofidelic.tumblr</a>'
 	},
-	"welcomeMessage" : "Hello bla bla bla bla bla bla bla bla bla bla bla bla",
+	"welcomeMessage" : "I was drawn to slow processes; taking time to create something worth the wait. Old techniques of printmaking are becoming forgotten. They don't hold the same function they once did. Industried progress and technologies evolve. It is a natural process. But what strange and wonderful things we can create when we pick up these old discarded machines, rusted tools and almost-forgotten techniques. They become re-appropriated, used in new spontaneous ways - we get results we did not expect/ could not forsee. We are exploring an old world through new eyes.",
 	"skills" : ["design", "printing", "art", "web development"],
 	"bioPic" : "images/me.jpg"
 }
@@ -57,14 +57,14 @@ var work = {
 			"title" : "Graphic designer",
 			"location" : "Stockholm, Sweden & Ft Lauderdale, FL",
 			"dates" : "2006-2015",
-			"description" : "describe"
+			"description" : " 	Phonofidelic is a design project started by Chris Clemons and is dedicated to making quality design for bands, booking agencies and clubs. The main focus is on screen-printed concert posters and flyers, album art, illustrations etc."
 		},
 		{
 			"employer" : "Imperial Recordings",
 			"title" : "Graphic artist, printer",
 			"location" : "Stockholm, Sweden",
 			"dates" : "2012",
-			"description" : "describe"
+			"description" : "Swedish record label founded in the fall of 2002. The first release on the label was the Crosses EP with José González. Since then albums has been released with José González, Promise and the Monster, Melpo Mene, Eskju Divine, Martin McFaul, Samuraj Cities, Gustaf Spetz, TLS, Paper and Zeigeist. Imperial Recordings is based in Stockholm, Sweden."
 		}
 	]
 }
@@ -231,6 +231,7 @@ projects.display();
 education start
 */
 education.display = function() {
+	$("#education").append(HTMLschools);
 	for (school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
@@ -246,8 +247,8 @@ education.display = function() {
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].years);
 		$(".education-entry:last").append(formattedSchoolDates);
 	}
+	$("#education").append(HTMLonlineClasses);
 	for (course in education.onlineCourses) {
-		$("#education").append(HTMLonlineClasses);
 		$("#education").append(HTMLonlineStart);
 
 		var formattedOnlineName = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
