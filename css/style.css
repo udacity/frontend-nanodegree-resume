@@ -11,6 +11,8 @@
 .education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 10px;
+  font-weight: 300;
 }
 
 h1 {
@@ -78,7 +80,7 @@ p {
 
 a {
   font-family: 'Roboto', sans-serif;
-  color: #1199C3;
+  color: #BE917D;
   text-decoration: none;
   /*margin-top: 10px;*/
   display: block;
@@ -89,6 +91,29 @@ a:hover {
   color: #FFFFFF;
 }
 
+#topContacts a {
+  font-family: 'Roboto', sans-serif;
+  color: #BE917D;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+#footerContacts a {
+  font-family: 'Roboto', sans-serif;
+  color: #BE917D;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+#topContacts a:hover, #footerContacts a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#footerContacts {
+  background-color: #FFFFFF;
+}
+
 li {
   list-style: none;
 }
@@ -96,7 +121,8 @@ li {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  /*color: #F3F3F3;*/
+  color: #000000;
   line-height: 28px;
 }
 
@@ -106,7 +132,7 @@ li {
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #000000;
 }
 
 .black-text {
@@ -120,9 +146,15 @@ li {
   color: #BE917D;
 }
 
-.contactLink-text:hover {
-  background-color: #000000;
+.footerContactLink-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
 }
+
+/*.contactLink-text:hover {
+  background-color: #000000;
+}*/
 
 .gray {
   background-color: #F3F3F3;
@@ -136,7 +168,7 @@ li {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #FFFFFF;
 }
 
 .flex-box {
@@ -234,10 +266,7 @@ span {
   }
 }
 
-#header {
-  background-color: #FFFFFF;
-}
-
 hr {
-  color: #000000;
+  border-top: 2px;
+  border-color: #000000;
 }
