@@ -53,18 +53,20 @@ work object
 var work = {
 	"jobs" : [
 		{
-			"employer" : '<a href="http://www.phonofidelic.com", target="blank">Phonofidelic</a>',
+			"employer" : "Phonofidelic",
 			"title" : "Graphic designer",
 			"location" : "Stockholm, Sweden & Ft Lauderdale, FL",
 			"dates" : "2006-2015",
-			"description" : " 	Phonofidelic is a design project started by Chris Clemons and is dedicated to making quality design for bands, booking agencies and clubs. The main focus is on screen-printed concert posters and flyers, album art, illustrations etc."
+			"description" : " 	Phonofidelic is a design project started by Chris Clemons and is dedicated to making quality design for bands, booking agencies and clubs. The main focus is on screen-printed concert posters and flyers, album art, illustrations etc.",
+			"url" : "http://www.phonofidelic.com"
 		},
 		{
 			"employer" : "Imperial Recordings",
 			"title" : "Graphic artist, printer",
 			"location" : "Stockholm, Sweden",
 			"dates" : "2012",
-			"description" : "Swedish record label founded in the fall of 2002. The first release on the label was the Crosses EP with José González. Since then albums has been released with José González, Promise and the Monster, Melpo Mene, Eskju Divine, Martin McFaul, Samuraj Cities, Gustaf Spetz, TLS, Paper and Zeigeist. Imperial Recordings is based in Stockholm, Sweden."
+			"description" : "Swedish record label founded in the fall of 2002. The first release on the label was the Crosses EP with José González. Since then albums has been released with José González, Promise and the Monster, Melpo Mene, Eskju Divine, Martin McFaul, Samuraj Cities, Gustaf Spetz, TLS, Paper and Zeigeist. Imperial Recordings is based in Stockholm, Sweden.",
+			"url" : "http://imperialrecordings.se/"
 		}
 	]
 }
@@ -159,7 +161,7 @@ function displayWork() {
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace("%link%", work.jobs[job].url);
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
