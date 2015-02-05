@@ -12,7 +12,7 @@ var bio = {
 		"github" : '<a href="http://github.com/phonofidelic", target="blank">github/phonofidelic</a>',
 		"blog" : '<a href="http://www.phonofidelic.tumblr.com", target="blank">phonofidelic.tumblr</a>'
 	},
-	"welcomeMessage" : "I was drawn to slow processes; taking time to create something worth the wait. Old techniques of printmaking are becoming forgotten. They don't hold the same function they once did. Industried progress and technologies evolve. It is a natural process. But what strange and wonderful things we can create when we pick up these old discarded machines, rusted tools and almost-forgotten techniques. They become re-appropriated, used in new spontaneous ways - we get results we did not expect/ could not forsee. We are exploring an old world through new eyes.",
+	"welcomeMessage" : "Welcome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis tristique magna. Sed et iaculis est. Morbi at lectus blandit, elementum sapien a, volutpat ante. Aliquam porta elementum nulla ac facilisis. Phasellus volutpat sed enim nec tincidunt. Aenean molestie interdum urna ut pellentesque. Phasellus suscipit est ut tellus varius varius. Donec sed orci et neque semper elementum.",
 	"skills" : ["design", "printing", "art", "web development"],
 	"bioPic" : "images/me.jpg"
 }
@@ -23,17 +23,19 @@ education object
 var education = {
 	"schools" : [
 		{
-			"name" : '<a href="http://www.philosophy.su.se/english", target="blank">Stockholm University</a>',
+			"name" : "Stockholm University",
 			"location" : "Stockholm, Sweden",
 			"area" : "Philosophy and linguistics",
 			"years" : "2011-2013",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum libero ipsum, at blandit ante tempus eu. Maecenas tempor bibendum odio. Praesent maximus luctus auctor. Praesent lorem massa, lobortis sed aliquet at, mollis at metus. Suspendisse ut purus vel odio vulputate venenatis vitae in ante. Curabitur faucibus in nulla ut aliquet. Curabitur vitae tortor at massa varius suscipit. Morbi sem augue, laoreet at efficitur in, molestie non enim. Nullam risus velit, consectetur semper purus eu, pharetra vestibulum velit. Vestibulum nec condimentum mauris. Nunc eleifend accumsan condimentum. Maecenas ullamcorper lectus non nulla tempus, eu mattis lacus sollicitudin. Vivamus ultrices sed purus posuere scelerisque. Aliquam eget facilisis leo, vitae sollicitudin ipsum. Nulla eleifend nulla sit amet tincidunt dapibus. Fusce bibendum efficitur libero, at pretium est.",
 			"url" : "http://www.philosophy.su.se/english"
 		},
 		{
-			"name" : '<a href="http://www.grafikskolan.se/article.asp?kat=13&id=48", target="blank">College of Printmaking Arts</a>',
+			"name" : "College of Printmaking Arts",
 			"location" : "Stockholm, Sweden",
 			"area" : "Print making",
 			"years" : "2009-2011",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat laoreet purus et laoreet. Donec at ultrices nibh, non pellentesque mauris. Nam pharetra, urna nec feugiat tristique, diam tortor porttitor urna, a mollis odio dolor quis nulla. Sed interdum tellus ac lectus eleifend mattis. In congue, urna ut ultricies scelerisque, risus tortor malesuada velit, sed dictum leo quam ut nisi. Nunc ut posuere velit. Donec eleifend risus eget semper egestas. Morbi lacinia tortor eget enim varius placerat. Nulla facilisi. Phasellus cursus turpis sit amet eros aliquam, sed sodales urna volutpat. Nulla facilisi. Quisque mattis maximus sapien id malesuada. Praesent quis elit ut eros feugiat iaculis. Maecenas massa arcu, hendrerit a porttitor id, mollis in dolor.",
 			"url" : "http://www.grafikskolan.se/article.asp?kat=13&id=48"
 		}
 	],
@@ -237,17 +239,18 @@ education.display = function() {
 	for (school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
-		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-		$(".education-entry:last").append(formattedSchoolName);
-
-		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-		$(".education-entry:last").append(formattedSchoolLocation);
-
+		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name).replace("%link%", education.schools[school].url);
 		var formattedSchoolArea = HTMLschoolDegree.replace("%data%", education.schools[school].area);
-		$(".education-entry:last").append(formattedSchoolArea);
+		var formattedSchoolNameArea = formattedSchoolName + formattedSchoolArea;
 
+		var formattedSchoolDescription = HTMLschoolDescription.replace("%data%", education.schools[school].description);
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].years);
+
+		$(".education-entry:last").append(formattedSchoolNameArea);
 		$(".education-entry:last").append(formattedSchoolDates);
+		$(".education-entry:last").append(formattedSchoolLocation);
+		$(".education-entry:last").append(formattedSchoolDescription);
 	}
 	$("#education").append(HTMLonlineClasses);
 	for (course in education.onlineCourses) {
