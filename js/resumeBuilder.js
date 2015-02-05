@@ -6,7 +6,7 @@ var bio = {
 		"email": "fry@planetexpress.com",
 		"github": "fry",
 		"twitter": "@fry",
-		"location": "NYC, NY"
+		"location": "New York, NY"
 	},
 	"welcomeMessage": "Shut up and take my money..",
 	"skills": ["awesomeness", "delivering things", "cryogenic sleep", "saving the universe"],
@@ -46,17 +46,17 @@ var education = {
 	"schools": [
 		{
 			"name": "Austin Community College",
-			"city": "Austin, TX, US",
+			"location": "Austin, TX",
 			"degree": "BA",
-			"majors": ["CS"],
+			"majors": ["Computer Science", "Business Administration"],
 			"dates": 2003,
 			"url": "www.example.com"
 		},
 		{
 			"name": "Stanford University",
-			"city": "Stanford, CA, US",
+			"location": "Stanford, CA",
 			"degree": "Masters",
-			"majors": ["Data Analysis"],
+			"majors": ["Data Analysis", "Rocket Shuttles"],
 			"dates": 2010,
 			"url": "www.example.com"
 		}
@@ -72,7 +72,7 @@ var education = {
 			"title": "Programming Foundations with Python",
 			"school": "Udacity",
 			"date": 2014,
-			"url": "udacity.com"
+			"url": "udacity.com/ud036"
 		}
 	]
 }; // Valid JSON! Verfied @ jsonlint.com
@@ -110,21 +110,21 @@ var work = {
 	{
 		"employer": "Udacity",
 		"title": "Rocket Scientist",
-		"location": "Mountain View, CA, USA",
+		"location": "Mountain View, CA",
 		"dates": "2014 - Present",
 		"description": "Evaluate and review code for new Udacious rocket"
 	},
 	{
 		"employer": "PayPal",
 		"title": "Software Architect",
-		"location": "Palo Alto, CA, USA",
+		"location": "Palo Alto, CA",
 		"dates": "2010 - 2013",
 		"description": "Design high tech payment software"
 	},
 	{
 		"employer": "Ritual Coffee Roast",
 		"title": "Master Barista",
-		"location": "San Francisco, CA, USA",
+		"location": "San Francisco, CA",
 		"dates": "2006 - 2010",
 		"description": "Brew exquisite coffee"
 	}
