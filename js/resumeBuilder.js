@@ -5,11 +5,11 @@ var bio = {
 	"name" : "Chris Clemons",
 	"role" : "Visual Designer and Web Developer",
 	"contacts" : {
-		"email" : "info@phonofidelic.com",
+		"email" : '<a href="mailto:info@phonofidelic.com">@phonofidelic.com</a>',
 		"mobile" : "555-555-5555",
 		"location" : "Ft. Lauderdale",
-		"twitter" : "@ phonofidelic",
-		"github" : "github.com/phonofidelic",
+		"twitter" : '<a href="http://twitter.com/Phonofidelic", target="blank">@ phonofidelic</a>',
+		"github" : '<a href="http://github.com/phonofidelic", target="blank">github/phonofidelic</a>',
 		"blog" : '<a href="http://www.phonofidelic.tumblr.com", target="blank">phonofidelic.tumblr</a>'
 	},
 	"welcomeMessage" : "Hello bla bla bla bla bla bla bla bla bla bla bla bla",
@@ -27,14 +27,14 @@ var education = {
 			"location" : "Stockholm, Sweden",
 			"area" : "Philosophy and linguistics",
 			"years" : "2011-2013",
-			"url" : ""
+			"url" : "http://www.philosophy.su.se/english"
 		},
 		{
 			"name" : '<a href="http://www.grafikskolan.se/article.asp?kat=13&id=48", target="blank">College of Printmaking Arts</a>',
 			"location" : "Stockholm, Sweden",
 			"area" : "Print making",
 			"years" : "2009-2011",
-			"url" : ""
+			"url" : "http://www.grafikskolan.se/article.asp?kat=13&id=48"
 		}
 	],
 	"onlineCourses" : [
@@ -53,7 +53,7 @@ work object
 var work = {
 	"jobs" : [
 		{
-			"employer" : "Phonofidelic",
+			"employer" : '<a href="http://www.phonofidelic.com", target="blank">Phonofidelic</a>',
 			"title" : "Graphic designer",
 			"location" : "Stockholm, Sweden & Ft Lauderdale, FL",
 			"dates" : "2006-2015",
@@ -81,7 +81,7 @@ var projects = {
 			"images" : ["images/proj1_1s.jpg", "images/proj1_2s.jpg"]
 		},
 		{
-			"title" : "Something",
+			"title" : "Container Club",
 			"dates" : 2012,
 			"description" : "Graphic prints for live event.",
 			"images" : ["images/proj2_1s.jpg", "images/proj2_2s.jpg", "images/proj2_3s.jpg"]
@@ -138,16 +138,16 @@ bio.skills.display = function() {
 		$("#header").append(HTMLskillsStart);
 
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-		$("#header").append(formattedSkill);
+		$("#skills").append(formattedSkill);
 
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-		$("#header").append(formattedSkill);
+		$("#skills").append(formattedSkill);
 
 		//formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-		//$("#header").append(formattedSkill);
+		//$("#skills").append(formattedSkill);
 
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-		$("#header").append(formattedSkill);
+		$("#skills").append(formattedSkill);
 	}
 }
 bio.skills.display();
