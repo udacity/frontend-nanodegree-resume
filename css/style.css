@@ -133,8 +133,22 @@ li {
   display: none;
 }
 
-.orange {
-  background-color: #000000;
+.skills-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #BE917D;
+}
+
+.skills-text:hover {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  background-color: #cc0019;
+}
+
+.red {
+  color: #cc0019;
+  background-color:#F3F3F3;
 }
 
 .black-text {
