@@ -27,7 +27,7 @@ var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="contactLink-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item"><span class="skills-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="%link%", target="blank">%data%';
@@ -53,10 +53,11 @@ var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineStart = '<div class="online-entry"></div>';
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineTitle = '<a href="%link%", target="blank">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineDescription = '<p><br>%data%</p>';
+var HTMLonlineURL = '<br><a href="%link%", target="blank">Website</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

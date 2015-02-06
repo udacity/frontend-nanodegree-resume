@@ -13,7 +13,7 @@ var bio = {
 		"blog" : '<a href="http://www.phonofidelic.tumblr.com", target="blank">phonofidelic.tumblr</a>'
 	},
 	"welcomeMessage" : "Welcome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis tristique magna. Sed et iaculis est. Morbi at lectus blandit, elementum sapien a, volutpat ante. Aliquam porta elementum nulla ac facilisis. Phasellus volutpat sed enim nec tincidunt. Aenean molestie interdum urna ut pellentesque. Phasellus suscipit est ut tellus varius varius. Donec sed orci et neque semper elementum.",
-	"skills" : ["design", "printing", "art", "web development"],
+	"skills" : ["design", "printing", "art", "web-development"],
 	"bioPic" : "images/me.jpg"
 }
 
@@ -44,7 +44,8 @@ var education = {
 			"name" : "Udacity",
 			"title" : "Front-end web development",
 			"dates" : "2014-2015",
-			"url" : '<a href="https://www.udacity.com", target="blank">Website</a>'
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum lectus at lorem sagittis, at euismod orci ornare. Nam porta, neque et ullamcorper vestibulum, ex felis luctus nisl, et aliquam erat tortor ut orci. Quisque sed erat et odio sodales lobortis sed quis leo. Proin blandit metus id malesuada hendrerit. Nulla luctus mauris eget rhoncus placerat. Quisque eleifend massa et porta pulvinar. In hac habitasse platea dictumst. Vestibulum vulputate est in tristique ornare.",
+			"url" : "http://www.udacity.com"
 		}
 	]
 }
@@ -147,8 +148,8 @@ bio.skills.display = function() {
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
 		$("#skills").append(formattedSkill);
 
-		//formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-		//$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+		$("#skills").append(formattedSkill);
 
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 		$("#skills").append(formattedSkill);
@@ -256,16 +257,17 @@ education.display = function() {
 	for (course in education.onlineCourses) {
 		$("#education").append(HTMLonlineStart);
 
-		var formattedOnlineName = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-		$(".online-entry").append(formattedOnlineName);
-
 		var formattedOnlineName = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].name);
-		$(".online-entry").append(formattedOnlineName);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace("%link%", education.onlineCourses[course].url);
+		var formattedOnlineNameTitle = formattedOnlineTitle + formattedOnlineName;
 
+		var formattedOnlineDescrition = HTMLonlineDescription.replace("%data%", education.onlineCourses[course].description);
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-		$(".online-entry").append(formattedOnlineDates);
+		var formattedOnlineURL = HTMLonlineURL.replace("%link%", education.onlineCourses[course].url);
 
-		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+		$(".online-entry").append(formattedOnlineNameTitle);
+		$(".online-entry").append(formattedOnlineDates);
+		$(".online-entry").append(formattedOnlineDescrition);	
 		$(".online-entry").append(formattedOnlineURL);
 	}
 }
