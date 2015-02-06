@@ -13,7 +13,7 @@ var bio = {
 		"blog" : '<a href="http://www.phonofidelic.tumblr.com", target="blank">phonofidelic.tumblr</a>'
 	},
 	"welcomeMessage" : "Welcome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis tristique magna. Sed et iaculis est. Morbi at lectus blandit, elementum sapien a, volutpat ante. Aliquam porta elementum nulla ac facilisis. Phasellus volutpat sed enim nec tincidunt. Aenean molestie interdum urna ut pellentesque. Phasellus suscipit est ut tellus varius varius. Donec sed orci et neque semper elementum.",
-	"skills" : ["design", "printing", "art", "web-development"],
+	"skills" : ["design", "printing", "art", "web development"],
 	"bioPic" : "images/me.jpg"
 }
 
@@ -83,13 +83,15 @@ var projects = {
 			"title" : "This Works For Now",
 			"dates" : 2012,
 			"description" : "Graphic prints and instalation shown att Grafiska Sälskapet.",
-			"images" : ["images/proj1_1s.jpg", "images/proj1_2s.jpg"]
+			"images" : ["images/proj1_1s.jpg", "images/proj1_2s.jpg"],
+			"modals" : ["#proj1_1", "#proj1_2"]
 		},
 		{
 			"title" : "Container Club",
 			"dates" : 2012,
 			"description" : "Graphic prints for live event.",
-			"images" : ["images/proj2_1s.jpg", "images/proj2_2s.jpg", "images/proj2_3s.jpg"]
+			"images" : ["images/proj2_1s.jpg", "images/proj2_2s.jpg", "images/proj2_3s.jpg"],
+			"modals" : ["#proj2_1", "#proj2_2", "#proj2_3"]
 		}
 	]
 }
@@ -213,18 +215,17 @@ projects.display = function() {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(formattedTitle);
-
-		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(formattedDates);
-
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+
+		$(".project-entry:last").append(formattedTitle);
+		$(".project-entry:last").append(formattedDates);
 		$(".project-entry:last").append(formattedDescription);
 
 		if (projects.projects[project].images.length > 0) {
 			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-			$(".project-entry:last").append(formattedImage);
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]).replace("%modalId%", projects.projects[project].modals[image]);
+				$(".project-entry:last").append(formattedImage);
 			}
 		}
 	}
@@ -278,3 +279,9 @@ education.display();
 map start
 */
 $("#mapDiv").append(googleMap);
+
+// $('#myModal').modal('toggle');
+
+// $('#myModal').on('shown.bs.modal', function () {
+//     $('#myInput').focus()
+  // });
