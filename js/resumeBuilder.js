@@ -202,16 +202,6 @@ function inName(name) {
 // Append the "internationalize" button to the footer
 $("#footerContacts").append(internationalizeButton);
 
-/*
-function inName(name){
-    var finalName = name.trim().split(' ');
-    first = finalName[0].toLowerCase();
-    last = finalName[1].toUpperCase();
-    finalName = first[0].toUpperCase()+first.slice(1)+" "+last;
-    console.log(finalName);
-    return finalName;
-}
-*/
 
 // Make Google maps appear!
 $("#mapDiv").append(googleMap);
