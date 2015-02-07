@@ -1,0 +1,55 @@
+{
+	"projects" : [
+		{
+			"title" : "This Works For Now",
+			"dates" : 2012,
+			"description" : "Graphic prints and instalation shown att Grafiska Sälskapet.",
+			"images" : ["images/proj1_1s.jpg", "images/proj1_2s.jpg"],
+			"modals" : [ 
+				{
+					"id" : "proj1_1",
+					"title" : "Project 1, image 1",
+					"header" : "-describe-",
+					"image" : "images/proj1_1.jpg",
+					"footer" : ""
+				},
+				{
+					"id" : "proj1_2",
+					"title" : "Project 1, image 2",
+					"header" : "-describe-",
+					"image" : "images/proj1_2.jpg",
+					"footer" : ""
+				}
+			]
+		},
+		{
+			"title" : "Container Club",
+			"dates" : 2012,
+			"description" : "Graphic prints for live event.",
+			"images" : ["images/proj2_1s.jpg", "images/proj2_2s.jpg", "images/proj2_3s.jpg"],
+			"modals" : [
+				{
+					"id" : "proj2_1",
+					"title" : "Project 2, image1",
+					"header" : "-describe-",
+					"image" : "images/proj2_1.jpg",
+					"footer" : ""
+				},
+				{
+					"id" : "proj2_2",
+					"title" : "Project 2, image 2",
+					"header" : "-describe-",
+					"image" : "images/proj2_2.jpg",
+					"footer" : ""
+				}, 
+				{
+					"id" : "proj2_3",
+					"title" : "Project 2, image 3",
+					"header" : "-describe-",
+					"image" : "images/proj2_3.jpg",
+					"footer" : ""
+				}
+			]
+		}
+	]
+}
