@@ -84,14 +84,51 @@ var projects = {
 			"dates" : 2012,
 			"description" : "Graphic prints and instalation shown att Grafiska Sälskapet.",
 			"images" : ["images/proj1_1s.jpg", "images/proj1_2s.jpg"],
-			"modals" : ["#proj1_1", "#proj1_2"]
+			"modals" : [ 
+				{
+					"id" : "proj1_1",
+					"title" : "Project 1, image 1",
+					"header" : "-describe-",
+					"image" : "images/proj1_1.jpg",
+					"footer" : ""
+				},
+				{
+					"id" : "proj1_2",
+					"title" : "Project 1, image 2",
+					"header" : "-describe-",
+					"image" : "images/proj1_2.jpg",
+					"footer" : ""
+				}
+			]
 		},
 		{
 			"title" : "Container Club",
 			"dates" : 2012,
 			"description" : "Graphic prints for live event.",
 			"images" : ["images/proj2_1s.jpg", "images/proj2_2s.jpg", "images/proj2_3s.jpg"],
-			"modals" : ["#proj2_1", "#proj2_2", "#proj2_3"]
+			"modals" : [
+				{
+					"id" : "proj2_1",
+					"title" : "Project 2, image1",
+					"header" : "-describe-",
+					"image" : "images/proj2_1.jpg",
+					"footer" : ""
+				},
+				{
+					"id" : "proj2_2",
+					"title" : "Project 2, image 2",
+					"header" : "-describe-",
+					"image" : "images/proj2_2.jpg",
+					"footer" : ""
+				}, 
+				{
+					"id" : "proj2_3",
+					"title" : "Project 2, image 3",
+					"header" : "-describe-",
+					"image" : "images/proj2_3.jpg",
+					"footer" : ""
+				}
+			]
 		}
 	]
 }
@@ -224,7 +261,7 @@ projects.display = function() {
 
 		if (projects.projects[project].images.length > 0) {
 			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]).replace("%modalId%", projects.projects[project].modals[image]);
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]).replace("%modalId%", projects.projects[project].modals[image].id);
 				$(".project-entry:last").append(formattedImage);
 			}
 		}
@@ -232,6 +269,26 @@ projects.display = function() {
 }
 
 projects.display();
+
+/*
+modals start
+*/
+modals.append = function() {
+	if (projects.projects[project].images.length > 0) {
+		$("#modals").append(HTMLmodalStart);
+
+		for (modal in projects.projects[project].modals) {
+			var formattedModal = HTMLmodal
+			.replace("%modalId%", projects.projects[project].modals[modal].id)
+			.replace("%modalTitle%", projects.projects[project].modals[modal].title)
+			.replace("%modalDescribe%", projects.projects[project].modals[modal].header)
+			.replace("%modalImage%", projects.projects[project].modals[modal].image);
+			$(".modal-entry").append(formattedModal);
+		}
+	}
+}
+
+modals.append();
 
 /*
 education start
@@ -279,9 +336,3 @@ education.display();
 map start
 */
 $("#mapDiv").append(googleMap);
-
-// $('#myModal').modal('toggle');
-
-// $('#myModal').on('shown.bs.modal', function () {
-//     $('#myInput').focus()
-  // });
