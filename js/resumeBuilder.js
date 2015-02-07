@@ -110,21 +110,21 @@ var projects = {
 				{
 					"id" : "proj2_1",
 					"title" : "Project 2, image1",
-					"header" : "-describe-",
+					"header" : "Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis velit ac diam eleifend faucibus. Nullam non nibh non velit vestibulum ullamcorper. Sed in euismod quam. Sed auctor vestibulum metus id porta. Vivamus auctor in sem ut porttitor. Nulla facilisi. Integer sagittis, mi quis luctus luctus, est sapien cursus enim, volutpat iaculis eros nulla lacinia tortor. Curabitur molestie nisi non augue pellentesque, pharetra consectetur enim malesuada. Integer pulvinar libero id ornare suscipit. Morbi ac tincidunt libero, ac dapibus ex. Nam rhoncus risus vitae sapien iaculis, a vulputate lectus tincidunt. Phasellus consequat tortor a fermentum laoreet.",
 					"image" : "images/proj2_1.jpg",
 					"footer" : ""
 				},
 				{
 					"id" : "proj2_2",
 					"title" : "Project 2, image 2",
-					"header" : "-describe-",
+					"header" : "Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis faucibus aliquam. Duis eu elementum odio, ut facilisis lacus. Ut ac nunc sit amet lacus elementum venenatis eu sit amet odio. Sed ac lectus eu nisl dictum blandit. Curabitur eros massa, molestie vel convallis eget, hendrerit eu ligula. Ut pulvinar, ante quis aliquet laoreet, tellus leo condimentum nisl, sit amet mollis dolor erat ac dolor. Fusce vitae ullamcorper lorem. Suspendisse aliquam diam eu suscipit vehicula. Nulla viverra augue non odio faucibus egestas ut non leo. Pellentesque sed iaculis ligula. Aenean dolor erat, consequat sed faucibus eget, euismod eu quam.",
 					"image" : "images/proj2_2.jpg",
 					"footer" : ""
 				}, 
 				{
 					"id" : "proj2_3",
 					"title" : "Project 2, image 3",
-					"header" : "-describe-",
+					"header" : "Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida lorem eget mauris varius, sed lacinia nibh suscipit. Aliquam quis venenatis quam. Donec pretium felis at facilisis laoreet. Mauris sagittis aliquet velit non ultrices. Suspendisse vitae pharetra nulla. Ut turpis enim, accumsan ac sollicitudin vitae, cursus id arcu. Morbi finibus nulla elit, suscipit lobortis leo dictum et. Suspendisse non lectus varius, tincidunt nisi a, condimentum urna. Praesent ut tempor justo, quis porta mi. Sed malesuada, massa quis molestie feugiat, ex elit lacinia nunc, id vulputate augue ligula et elit. Integer non tellus fringilla, faucibus arcu non, dictum mi. Nulla facilisi.",
 					"image" : "images/proj2_3.jpg",
 					"footer" : ""
 				}
@@ -261,7 +261,8 @@ projects.display = function() {
 
 		if (projects.projects[project].images.length > 0) {
 			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]).replace("%modalId%", projects.projects[project].modals[image].id);
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image])
+				.replace("%modalId%", projects.projects[project].modals[image].id);
 				$(".project-entry:last").append(formattedImage);
 			}
 		}
@@ -274,16 +275,19 @@ projects.display();
 modals start
 */
 modals.append = function() {
-	if (projects.projects[project].images.length > 0) {
-		$("#modals").append(HTMLmodalStart);
+	if (projects.projects[project].modals.length > 0) {
 
 		for (modal in projects.projects[project].modals) {
+			$("#modals").append(HTMLmodalStart);
+
 			var formattedModal = HTMLmodal
 			.replace("%modalId%", projects.projects[project].modals[modal].id)
 			.replace("%modalTitle%", projects.projects[project].modals[modal].title)
 			.replace("%modalDescribe%", projects.projects[project].modals[modal].header)
 			.replace("%modalImage%", projects.projects[project].modals[modal].image);
-			$(".modal-entry").append(formattedModal);
+
+			$(".modal-entry:last").append(formattedModal);
+			console.log(projects.projects[project].modals[0]);
 		}
 	}
 }
@@ -329,7 +333,6 @@ education.display = function() {
 		$(".online-entry").append(formattedOnlineURL);
 	}
 }
-
 education.display();
 
 /*

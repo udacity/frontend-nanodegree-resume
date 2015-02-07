@@ -90,8 +90,9 @@ a {
 }
 
 a:hover { 
-  background-color: #000000;
+  background-color: #cc0019;
   color: #FFFFFF;
+  text-decoration: none;
 }
 
 #topContacts a {
@@ -110,7 +111,7 @@ a:hover {
 
 #topContacts a:hover, 
 #footerContacts a:hover {
-  background-color: #000000;
+  background-color: #cc0019;
   color: #FFFFFF;
 }
 
@@ -196,9 +197,18 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
 }
+
+/*.flex-item {
+  
+}
+
+.flex-item:hover {
+  background-padding: 100%; 
+  background-color: #cc0019;
+}*/
 
 .center-content {
   padding-top: 2.5%;
@@ -264,6 +274,12 @@ span {
   .welcome-message {
     display: none;
   }
+  .modal img {
+    width: 300px;
+    margin: 20px auto;
+    align-content: center;
+  }
+
 }
 
 #map {
@@ -286,7 +302,17 @@ span {
   }
 }
 
+@media (min-width: 768px) {
+  .modal img {
+    width: 550px;
+    margin: 20px auto;
+    align-content: center;
+  }
+}
+
+
 hr {
-  border-top: 2px;
+  border-bottom: 1px;
+  border-style: dashed;
   border-color: #000000;
 }

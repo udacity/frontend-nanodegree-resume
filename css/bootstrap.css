@@ -97,12 +97,12 @@ svg:not(:root) {
 figure {
   margin: 1em 40px;
 }
-hr {
+/*hr {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   height: 0;
-}
+}*/
 pre {
   overflow: auto;
 }
@@ -266,11 +266,11 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-hr {
+/*hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;*/
 }
 .sr-only {
   position: absolute;
@@ -333,8 +333,8 @@ hr {
 .modal-content {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px none #000000;
+  border: 2px none;
   border-radius: 0px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -347,14 +347,14 @@ hr {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 .modal-backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 .modal-backdrop.in {
-  opacity: 0.5;
+  opacity: 0.9;
   filter: alpha(opacity=50);
 }
 .modal-header {
