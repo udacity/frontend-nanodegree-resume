@@ -86,6 +86,11 @@ a {
   line-height: 28px;
 }
 
+#skills {
+  display: flex;
+  flex-direction: column;
+}
+
 #skillsH3 {
   color: #F5AE23;
   display: none;
