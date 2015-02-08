@@ -1,7 +1,7 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
 
 .clearfix {
@@ -111,12 +111,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: gray;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: gray;
 }
 
 .flex-box {
