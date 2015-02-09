@@ -86,6 +86,10 @@ a {
   line-height: 28px;
 }
 
+#skills {
+  flex-direction: column;
+}
+
 #skillsH3 {
   color: #F5AE23;
   display: none;
@@ -111,12 +115,16 @@ a {
 }
 
 .dark-gray {
-  background-color: gray;
+  background-color: #404040;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: gray;
+  background-color: #404040;
+}
+
+.flex-item {
+  line-height: 1.5em;
 }
 
 .flex-box {
@@ -168,6 +176,7 @@ span {
 
 #letsConnect {
   text-align: center;
+  background-color: #404040;
 }
 
 @media only screen and (max-width: 1024px) {
