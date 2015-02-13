@@ -1,6 +1,6 @@
 ## Completed Project Link
 
-You can access the finished resume <a href="www.googledrive.com/host/0B9fvKmX-nM0UbVZiaGc0cGE5U28" target="_blank">here</a>.
+You can access the finished resume <a href="https://www.googledrive.com/host/0B9fvKmX-nM0UbVZiaGc0cGE5U28" target="_blank">here</a>.
 
 ## How do I complete this project?
 
