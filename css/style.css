@@ -1,21 +1,23 @@
 *{
     padding:0;
     margin:0;
-    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
-
-
 
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
 
+#projects {
+  padding-top: 40px;
+}
 
 h1 {
 
   font-size: 40px;
-  color: #F5A623;
+  color: #fff;
   line-height: 48px;
   display: inline;
 }
@@ -31,7 +33,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #444;
   line-height: 22px;
 }
 
@@ -48,6 +50,21 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+
+a {
+  color: rgba(70,181,161,.6);
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+a:hover {
+  color: rgba(70,181,161,1);
+}
+
+a:visited {
+  color: rgba(70,181,161,.8);
+}
 
 .date-text {
   font-style: italic;
@@ -72,55 +89,48 @@ p {
   line-height: 21px;
 }
 
-a {
-  color: #1199C3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
-  color: #F3F3F3;
+  font-size: 25px;
+  color: #fff;
   line-height: 28px;
+  padding-left: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
-  display: none;
-}
-
-#skills {
-  display: none;
+  color: #444;
+  padding-left: 300px;
 }
 
 .orange {
   background-color: #F5AE23;
 }
 
-.orange-text {
-  color: #F5AE23;
+.grey-text {
+  color: #444;
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
+  padding-top: 40px;
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.teal {
+  background-color: rgba(70,181,161,1);
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: rgba(70,181,161,1);
+  min-height: 260px;
 }
 
 .flex-box {
@@ -129,7 +139,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 30px;
 }
 
 .center-content {
@@ -140,18 +150,17 @@ ul {
   list-style-type: none;
 }
 
-
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  background: #fff;
+  border-radius: 100%;
 }
 
 img {
   padding: 10px;
 }
-
 
 /* Bar chart stuff */
 .chart div {
@@ -210,10 +219,10 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (max-width: 750px) {
   #skillsH3,
   #skills,
   .biopic {
-    display: block;
+    display: none;
   }
 }
