@@ -49,7 +49,7 @@ var bio = {
 	"role" : "Writer, Front End Developer",
 	"welcomeMessage" : "I am a creative person looking for a job which will allow me to exercise my creativity in as many ways as possible.",
 	"contacts": {"email" : "bdill12@gmail.com",
-		"mobile": "(806) 470-3013",
+		"mobile": "##########",
 		"github": "bdill12",
 		"twitter": "@bdill12",
 		"location": "Greater Los Angeles Area"
