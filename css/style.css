@@ -1,8 +1,10 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Raleway', sans-serif;
+  color: #012B5B; /* Seattle blue*/
+  /* color: #2C587D; /* Seattle slate blue*/ 
+ }
 
 .clearfix {
   overflow: auto;
@@ -15,15 +17,16 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: whitesmoke;
   line-height: 48px;
   display: inline;
+  font-family: 'Uncial Antiqua', cursive;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #012B5B; /* Seattle blue*/
   line-height: 29px;
   padding: 10px;
 }
@@ -31,7 +34,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color:#77BC47;  /* Seahawks green */
   line-height: 22px;
 }
 
@@ -73,7 +76,8 @@ p {
 }
 
 a {
-  color: #1199C3;
+  /*color: #0363d1;*/
+  color: #2C587D;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -87,16 +91,17 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color:#77BC47;  /* Seahawks green */
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #77BC47;  /* Seahawks green */
+  color: whitesmoke;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #77BC47;  /* Seahawks green */
 }
 
 .white-text {
@@ -110,14 +115,14 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.deep-blue {
+  background-color:#012B5B; /*a lovely deep blue*/
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
-}
+  background-color: #012B5B; /*a lovely deep blue*/
+ }
 
 .flex-box {
   display: -webkit-flex;
@@ -168,7 +173,7 @@ span {
 
 #letsConnect {
   text-align: center;
-}
+  }
 
 @media only screen and (max-width: 1024px) {
   #letsConnect {
