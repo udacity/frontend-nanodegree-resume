@@ -24,6 +24,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Uncial Antiqua', cursive;
   font-weight: bold;
   font-size: 24px;
   color: #012B5B; /* Seattle blue*/
@@ -32,7 +33,7 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
+  font-family: 'Uncial Antiqua', cursive;
   font-size: 20px;
   color:#77BC47;  /* Seahawks green */
   line-height: 22px;
@@ -51,6 +52,11 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+.role-text {
+    color:lightslategray;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 20px;
+}
 
 .date-text {
   font-style: italic;
@@ -66,7 +72,6 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -76,7 +81,6 @@ p {
 }
 
 a {
-  /*color: #0363d1;*/
   color: #2C587D;
   text-decoration: none;
   margin-top: 10px;
@@ -111,7 +115,7 @@ a {
 
 .gray {
   background-color: #F3F3F3;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   clear:both;
 }
 
@@ -133,6 +137,14 @@ a {
   padding: 10px;
 }
 
+.flex-box-col {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
 .center-content {
   padding-top: 2.5%;
   padding-left: 5%;
@@ -149,6 +161,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  padding-top:40px;
 }
 
 img {
