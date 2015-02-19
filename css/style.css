@@ -20,11 +20,13 @@ h1 {
   color: whitesmoke;
   line-height: 48px;
   display: inline;
-  font-family: 'Uncial Antiqua', cursive;
+  /*font-family: 'Uncial Antiqua', cursive;*/
+  font-family: 'Rock Salt', cursive;
 }
 
 h2 {
-  font-family: 'Uncial Antiqua', cursive;
+  /*font-family: 'Uncial Antiqua', cursive;*/
+  font-family: 'Rock Salt', cursive;
   font-weight: bold;
   font-size: 24px;
   color: #012B5B; /* Seattle blue*/
@@ -33,7 +35,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Uncial Antiqua', cursive;
+ /* font-family: 'Uncial Antiqua', cursive;*/
+  font-family: 'Rock Salt', cursive;
   font-size: 20px;
   color:#77BC47;  /* Seahawks green */
   line-height: 22px;
@@ -54,7 +57,8 @@ h2, h3, h4, h5 {
 
 .role-text {
     color:lightslategray;
-    font-family: 'Uncial Antiqua', cursive;
+    /*font-family: 'Uncial Antiqua', cursive;*/
+    font-family: 'Rock Salt', cursive;
     font-size: 20px;
 }
 
@@ -81,6 +85,7 @@ p {
 }
 
 a {
+  font-size: 18px;
   color: #2C587D;
   text-decoration: none;
   margin-top: 10px;

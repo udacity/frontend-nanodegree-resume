@@ -46,7 +46,7 @@ var work = {
             "employer": "Microsoft, Outlook Shipping Excellence",
             "dates": "July 2014 - Nov 2014",
             "location": "Redmond, WA",
-            "description": "data analysis - automation monitoring - SQL querying - Excel reporting"
+            "description": "Data analysis - automation monitoring - SQL querying - Excel reporting"
         },
         {
             "position": "Senior SDET",
