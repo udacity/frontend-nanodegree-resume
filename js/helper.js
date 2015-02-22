@@ -15,16 +15,16 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="role-text">%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="green-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="green-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="green-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="green-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="green-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="green-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="green-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<img src="%data%" class="biopic" alt="picture of me">';
+var HTMLWelcomeMsg = '<span class="welcome-message" id="welcome">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box-col"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
@@ -40,7 +40,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img src="%data%" alt="picture related to project">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -49,8 +49,8 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>~ Online Classes ~</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineClasses = '<h3 class=online>~ Online Classes ~</h3>';
+var HTMLonlineTitle = '<a href="#" class="online-entry">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
@@ -58,10 +58,7 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
+// "Internationalizes" the name on the resume into the form: "John DOE"
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName() || function(){};
@@ -69,9 +66,7 @@ $(document).ready(function() {
   });
 });
 
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
+// Collects locations of clicks on the page
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -165,13 +160,16 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+        content: name
     });
 
-    // hmmmm, I wonder what this is about...
-    google.maps.event.addListener(marker, 'click', function() {
-        infoWindow.open(map, marker);
-    });
+     // Open the window when the marker is clicked on
+     google.maps.event.addListener(marker, 'click', function () {
+         infoWindow.open(map, marker);
+
+         // Close the popup after 5 seconds
+         setTimeout(function () { infoWindow.close(); }, 5000);
+     });
 
     // this is where the pin actually gets added to the map.
     // bounds.extend() takes in a map location object
@@ -227,10 +225,6 @@ function initializeMap() {
   pinPoster(locations);
 
 }
-
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
 
  //Calls the initializeMap() function when the page loads
 window.addEventListener('load', initializeMap);

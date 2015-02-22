@@ -8,25 +8,28 @@
     <title>Renee Cooper's Resume</title>
 
     <!-- Load the page styles. -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- page fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet'>
+
     <script src="js/jQuery.js"></script>
 
     <!-- More on helper.js in the class -->
     <script src="js/helper.js"></script>
+
+    <!-- gradients -->
+    <script src="js/rainbow.min.js"></script>
 
     <!-- Google map of work & home locations -->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
     <meta name="viewport" content="width=device-width">
 </head>
-<body unresolved>
+<body>
     <div id="main">
-        <div id="header" class="center-content clearfix">
+        <div id="header" class="center-content clearfix gradient-background">
             <ul id="topContacts" class='flex-box'></ul>
         </div>
         <div style='clear: both;'></div>
@@ -48,37 +51,12 @@
         </div>
     </div>
 
-    <!--
-    The next line tells the browser where to download the JavaScript file you'll be
-    writing. In resumeBuilder.js, you'll be writing code that builds the resume
-    dynamically when this website, index.html, is opened.
-    -->
+    <!-- content and content population functions -->
     <script src="js/resumeBuilder.js"></script>
 
 
-    <!--
-    These scripts are written in JavaScript. You'll be breaking them down as part of
-    a quiz. Essentially, the next few lines are checking to see if you have not
-    changed each section of the resume. If you have not made any changes to a section
-    of the resume, then that part of the resume does not show up. More on this in the
-    course.
-    -->
-
+    <!-- debug helpers to show black when a section is not populated -->
     <script type="text/javascript">
-        // Notice how all of a sudden there's JavaScript inside this HTML
-        // document? You can write JavaScript between <script> tags. At the end of your
-        // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-        // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-        //   two slashes for all following characters on a single line, or
-
-        /*
-            an opening and closing set of slash asterisks for block comments.
-        */
-
-
         if (document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('topContacts').style.backgroundColor = "black";
         }
@@ -102,4 +80,5 @@
         }
     </script>
 </body>
+
 </html>

@@ -2,9 +2,8 @@
   padding:0;
   margin:0;
   font-family: 'Raleway', sans-serif;
-  color: #012B5B; /* Seattle blue*/
-  /* color: #2C587D; /* Seattle slate blue*/ 
- }
+  color: #012b5b; /* Seattle blue*/
+}
 
 .clearfix {
   overflow: auto;
@@ -13,6 +12,7 @@
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 10px;
 }
 
 h1 {
@@ -20,32 +20,29 @@ h1 {
   color: whitesmoke;
   line-height: 48px;
   display: inline;
-  /*font-family: 'Uncial Antiqua', cursive;*/
   font-family: 'Rock Salt', cursive;
 }
 
 h2 {
-  /*font-family: 'Uncial Antiqua', cursive;*/
   font-family: 'Rock Salt', cursive;
   font-weight: bold;
   font-size: 24px;
-  color: #012B5B; /* Seattle blue*/
+  color: #012b5b; /* Seattle blue*/
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
- /* font-family: 'Uncial Antiqua', cursive;*/
   font-family: 'Rock Salt', cursive;
   font-size: 20px;
-  color:#77BC47;  /* Seahawks green */
+  color:#77bc47;  /* Seahawks green */
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #4a4a4a;
   line-height: 17px;
 }
 
@@ -55,9 +52,11 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+.online {
+    padding-top: 30px;
+}
 .role-text {
     color:lightslategray;
-    /*font-family: 'Uncial Antiqua', cursive;*/
     font-family: 'Rock Salt', cursive;
     font-size: 20px;
 }
@@ -65,7 +64,7 @@ h2, h3, h4, h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #7f7f7f;
   line-height: 16px;
   float: left;
 }
@@ -86,7 +85,7 @@ p {
 
 a {
   font-size: 18px;
-  color: #2C587D;
+  color: #2c587d;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -95,42 +94,37 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #f3f3f3;
   line-height: 28px;
 }
 
-#skillsH3 {
-  color:#77BC47;  /* Seahawks green */
-  display: none;
-}
-
-.orange {
-  background-color: #77BC47;  /* Seahawks green */
+.green {
+  background-color: #77bc47;  /* Seahawks green */
   color: whitesmoke;
 }
 
-.orange-text {
-  color: #77BC47;  /* Seahawks green */
+.green-text {
+  color: #77bc47;  /* Seahawks green */
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: lightgray;
   padding-bottom: 20px;
   clear:both;
 }
 
 .deep-blue {
-  background-color:#012B5B; /*a lovely deep blue*/
+  background-color:#012b5b; /* Seattle blue */
 }
+ 
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #012B5B; /*a lovely deep blue*/
+  background-color: #012b5b; /* Seattle blue for non-webkit browsers */
  }
 
 .flex-box {
@@ -151,10 +145,7 @@ a {
   padding: 10px;
 }
 .center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
+  padding: 2.5% 5% 2.5% 5%;
 }
 
 ul {
@@ -165,9 +156,9 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: inline-block;
   padding-top:40px;
-}
+ }
 
 img {
   padding: 10px;
@@ -176,7 +167,7 @@ img {
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
-  background-color: #4A4A4A;
+  background-color: #4a4a4a;
   text-align: right;
   padding: 3px;
   margin: 1px;
