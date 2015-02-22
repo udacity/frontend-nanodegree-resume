@@ -14,7 +14,7 @@ var bio = {
         "email": "reneemillercooper@gmail.com",
         "mobile": "425-890-8698",
         "github": "hotdiggitydogz",
-        "location": "Seattle, WA",
+        "location": "Seattle, WA"
     },
     "picture": "images/me.jpg",
     "welcome" : "Come bask in my awesomeness...",
@@ -90,17 +90,14 @@ var work = {
             "employer": "Microsoft, User Experience and Outlook Calendar",
             "dates": "Sept 2003 - July 2014",
             "location": "Redmond, WA",
-            "description": "Test automation writing and refactoring in C#, monitoring, reporting, "
-                + "in depth feature testing, automation infrastructure and tools, globalization, "
-                + "coordination with teams overseas, cross-team collaboration"
+            "description": "Test automation writing and refactoring in C#, monitoring, reporting, in depth feature testing, automation infrastructure and tools, globalization, coordination with teams overseas, cross-team collaboration"
         },
         {
             "position": "Test Lead / Test Manager",
             "employer": "Microsoft, Office Complex Scripts",
             "dates": "October 1997 - August 2003",
             "location": "Redmond, WA",
-            "description": "Led/managed teams in globalization and localization testing of Office applications.  Drove international sufficiency testing across Office teams."
-                + " collaborated with international teams and vendors overseas"
+            "description": "Led/managed teams in globalization and localization testing of Office applications.  Drove international sufficiency testing across Office teams. collaborated with international teams and vendors overseas"
         }
     ],
     display: function () {
@@ -204,8 +201,7 @@ var education = {
             "host": "Coursera",
             "date": 2015,
             "url": "https://class.coursera.org/elearning-002"
-        },
-
+        }
     ],
     display: function () {
         for (school in education.schools) {
