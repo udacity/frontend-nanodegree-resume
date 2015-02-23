@@ -15,7 +15,7 @@ var bio = {
 
 
 // displayBio function
-function displayBio() {
+bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
@@ -37,8 +37,8 @@ function displayBio() {
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkills);
 	}
-}
-displayBio(); // Call the displayBio function
+};
+bio.display(); // Call the displayBio function
 
 
 
