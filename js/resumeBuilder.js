@@ -78,7 +78,7 @@ var education = {
 }; // Valid JSON! Verfied @ jsonlint.com
 
 // displayEducation function
-function displayEducation() {
+education.display = function() {
 	for (var school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -102,8 +102,8 @@ function displayEducation() {
 		}
 
 	}
-}
-displayEducation(); // Call the displayEducation function
+};
+education.display(); // Call the displayEducation function
 
 var work = {
 	"jobs": [
@@ -132,7 +132,7 @@ var work = {
 }; // Valid JSON! Verfied @ jsonlint.com
 
 // displayWork function
-function displayWork() {
+work.display = function() {
 	for(var job in work.jobs) {
 	// create a new div for work experience
 	$("#workExperience").append(HTMLworkStart);
@@ -148,8 +148,8 @@ function displayWork() {
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedDescription);
 	}
-}
-displayWork(); // Call the displayWork function
+};
+work.display(); // Call the displayWork function
 
 var projects = {
 	"projects": [
@@ -168,7 +168,7 @@ var projects = {
 }; // Valid JSON! Verfied @ jsonlint.com
 
 // displayProjects function
-function displayProjects() {
+projects.display = function() {
 	for (var item in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[item].title);
@@ -185,9 +185,8 @@ function displayProjects() {
 			}
 		}
 	}
-}
-displayProjects(); // Call the displayProjects function
-
+};
+projects.display(); // Call the displayProjects function
 
 
 function inName(name) {
