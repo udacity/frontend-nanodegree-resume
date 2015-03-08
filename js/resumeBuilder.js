@@ -1,106 +1,102 @@
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedPicture = HTMLbioPic.replace("%data%", bio.picUrl);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#topContacts").append(formattedPicture);
-
-var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedemail);
-
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(formattedGithub);
-
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#topContacts").append(formattedTwitter);
-
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.location);
-$("#topContacts").append(formattedLocation);
-
-if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillsStart);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    $("#skills").append(formattedSkill);
-}
 
 var bio = {
   "name": "Daniel Stuart",
   "role": "Co-Founder & Chief Product Officer",
   "contacts": {
-    "email": "dancstuart@gmail.com",
+    "email": "dan@bidvine.com",
     "github": "danstuart",
     "twitter": "@danstuart",
     "location": "Guelph, Ontario, Canada"
   },
-  "welcomeMessage": "welcome to my resume",
-  "skills": [
-    "management", "design", "HTML", "CSS", "Javascript", "Ruby on Rails", "Slim"
-  ],
-  "picUrl": "images/me.jpg"
+  "welcomeMessage": "This is a little bit about me. I am always learning and this is part of building up skills in parallel to my design and product planning background. My goal here is to go a bit deeper into the stack.",
+  "skills": ["management", "design", "HTML", "CSS", "Javascript", "Ruby on Rails", "Slim", "Sketch", "SASS"],
+  "biopic": "images/mypic.jpg",
+
+	"displayHeader": function() {
+		var formattedName = HTMLheaderName.replace("%data%", bio.name);
+		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+		var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+		var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+		$('#header').prepend(formattedPic);
+		$('#header').prepend(formattedRole);
+		$('#header').prepend(formattedName);
+		$('#header').append(formattedMessage);
+		$('#header').append(HTMLskillsStart);
+
+		for(i in bio.skills) {
+			var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+			$('#header').append(formattedSkills);
+		}
+		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts["twitter"]);
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts["email"]);
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts["github"]);
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts["location"]);
+
+		$('#topContacts').append(formattedTwitter);
+		$('#topContacts').append(formattedEmail);
+		$('#topContacts').append(formattedGithub);
+		$('#topContacts').append(formattedLocation);
+	}
 };
 
-function displayWork() {
-	for (job in work.jobs) {
-		// create new div for work experience
-	  $("#workExperience").append(HTMLworkStart);
-	  //concat employer and title
-	  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	  var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
-	  $(".work-entry:last").append(formattedEmployerTitle);
-
-	  var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-	  $(".work-entry:last").append(formattedDates);
-
-	  var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-	  $(".work-entry:last").append(formattedDescription);
-
-	  var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-	  $(".work-entry:last").append(formattedLocation);
-	}
-}
-
-displayWork();
 
 var work = {
   "jobs": [
     {
       "employer": "Bidvine",
-      "title": "Chief Product Officer",
-      "location": "London, Waterloo",
-      "dates": "2014-2015",
+      "title": "Co-Founder & Chief Product Officer",
+      "location": "London, United Kingdom; Waterloo, Ontario, Canada",
+      "datesworked": "2014-2015",
       "description": "Co-founder and CPO of Bidvine - a Techstars London 2014 company. Bidvine is the fast, free way to get competing quotes from local service professionals."
     },
     {
       "employer": "AdGear",
       "title": "VP Business Development",
-      "location": "Toronto",
-      "dates": "2013-2014",
+      "location": "Toronto, Ontario",
+      "datesworked": "2013-2014",
       "description": "Ran sales from strategy through to selling."
     },
     {
       "employer": "LivingSocial",
       "title": "Senior Director Canada",
-      "location": "Toronot",
-      "dates": "2012-2013",
+      "location": "Toronto, Ontario",
+      "datesworked": "2012-2013",
       "description": "Local sales management and country-level strategy."
+    },
+    {
+      "employer": "GoNabit",
+      "title": "Co-Founder & CEO",
+      "location": "Dubai, UAE",
+      "datesworked": "2010-2012",
+      "description": "Founder, marketing, FP&A, product, HR, legal and strategy."
+    },
+    {
+      "employer": "Bayt.com",
+      "title": "Chief Possibility Officer",
+      "location": "Dubai, UAE",
+      "datesworked": "2006-2010",
+      "description": "Senior BD, product, corporate VC and strategy."
     }
-  ]
+  ],
+
+  "displayWork": function() {
+		for(i in work.jobs) {
+			var formattedworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+			var formattedworkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
+			var EmpTitle = formattedworkEmployer + formattedworkTitle;
+			var formattedworkDates = HTMLworkDates.replace("%data%", work.jobs[i].datesworked);
+			var formattedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+			var formattedworkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
+			$('#workExperience').append(HTMLworkStart);
+			$('.work-entry:last').append(EmpTitle);
+			$('.work-entry:last').append(formattedworkDates);
+			$('.work-entry:last').append(formattedworkLocation);
+			$('.work-entry:last').append(formattedworkDescription);
+		}
+	}
 };
 
-for (project in projects) {
-  $("#projects").append(HTMLprojectStart);
-
-  var formatTitle = HTMLprojectTitle.replace("%data%", projects.project[0].title);
-  $("#projects").append(formatTitle);
-}
 
 var projects = {
   "projects": [
@@ -108,60 +104,53 @@ var projects = {
       "title": "Bidvine site plan",
       "dates": "2014",
       "description": "Mapped out the needs, goals, flows, etc etc for the site blah blah before we told anyone that it might be something or some such.",
-      "images": "https://www.bidvine.com/assets/professional-b3bd36320f42ca74f2b9ce2b9ce26a2b.jpg"
+      "images": ["images/bidvine_logo.png", "images/Mobile_nav.png"]
     }
-  ]
+  ],
+
+	"displayProjects": function() {
+		for(var i in projects.projects) {
+			var formattedProjTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+			var formattedProjDates = HTMLprojectDates.replace("%data%", projects.projects[i].datesworked);
+			var formattedProjDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+
+		$('#projects').append(HTMLprojectStart);
+		$('.project-entry:last').append(formattedProjTitle);
+		$('.project-entry:last').append(formattedProjDates);
+		$('.project-entry:last').append(formattedProjDescription);
+			for(j in projects.projects[i].images) {
+				var formattedProjImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
+				$('.project-entry:last').append(formattedProjImage);
+			}
+		}
+	}
 };
 
-for (school in education.schools) {
-
-  var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-  var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-  var formattedNameDegree = formattedSchoolName + formattedSchoolDegree;
-  $(".education-entry:last").append(formattedNameDegree);
-
-
-  var formattedSchoolDates = HTMLschoolDegree.replace("%data%", education.schools[school].dates);
-  $(".education-entry:last").append(formattedSchoolDates);
-
-  var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-  $(".education-entry:last").append(formattedSchoolLocation);
-
-  var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-  $(".education-entry:last").append(formattedSchoolMajor);
-}
-$(".education-entry:last").append(HTMLonlineClasses);
-for (online in education.onlineCourses) {
-  var formattedOnlineTittle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
-  var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
-  var formattedOnlineTitleSchool = formattedOnlineTittle + formattedOnlineSchool;
-  $(".education-entry:last").append(formattedOnlineTitleSchool);
-}
 
 var education = {
   "schools": [
     {
       "name": "Wilfrid Laurier University",
-      "location": "Waterloo, ON, CA",
-      "degree": "Hons. BA",
+      "location": "Waterloo, Ontario, Canada",
+      "degree": "Honours Bachelor of Arts",
       "majors": ["English Literature", "History"],
-      "dates": "1992-1996",
+      "datesattended": "1992-1996",
       "url": "http://wlu.ca/"
     },
     {
       "name": "D'Youville College",
-      "location": "Buffalo, NY, USA",
+      "location": "Buffalo, New York, USA",
       "degree": "Master's Degree",
       "majors": ["Adolescence Education"],
-      "dates": "2001-2002",
+      "datesattended": "2001-2002",
       "url": "http://www.dyc.edu/"
     },
     {
       "name": "University of Toronto",
-      "location": "Toronto, ON, CA",
+      "location": "Toronto, Ontario, Canada",
       "degree": "Master's Degree",
       "majors": ["Education: Curriculum, Teaching and Learning"],
-      "dates": "2005-2006",
+      "datesattended": "2005-2006",
       "url": "http://www.utoronto.ca/"
     }
   ],
@@ -169,21 +158,65 @@ var education = {
     {
       "title": "Lean Six Sigma",
       "school": "Villinova University",
-      "dates": "2009",
+      "datesattended": "2009",
       "url": "http://www.villanovau.com/resources/six-sigma/lean-six-sigma-certification/"
     },
     {
       "title": "Frontend Web Developer Nanodegree",
       "school": "Udemy",
-      "dates": "2015",
+      "datesattended": "2015",
       "url": "https://www.udacity.com/course/nd001"
     }
-  ]
+  ],
+	"displayEdu": function() {
+		for(i in education.schools) {
+			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
+			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+			var nameDeg = formattedSchoolName + formattedSchoolDegree;
+			var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].datesattended);
+			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+
+			$('#education').append(HTMLschoolStart);
+			$('.education-entry:last').append(nameDeg);
+			$('.education-entry:last').append(formattedSchoolDates);
+			$('.education-entry:last').append(formattedSchoolLocation);
+				for(j in education.schools[i].majors) {
+					var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]);
+					$('.education-entry:last').append(formattedSchoolMajors);
+				}
+		}
+		$('#education').append(HTMLonlineClasses);
+			for(i in education.onlineCourses) {
+				var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
+				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+				var titleSchool = formattedOnlineTitle + formattedOnlineSchool;
+				var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].datesattended);
+				var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
+
+				$('#education').append(HTMLschoolStart);
+				$('.education-entry:last').append(titleSchool);
+				$('.education-entry:last').append(formattedOnlineDates);
+				$('.education-entry:last').append(formattedOnlineURL);
+			}
+	}
 };
 
-$(document).click(function(loc)) {
-	var x = loc.pageX;
-	var y = loc.pageY;
+function displayFooter() {
+	var formattedMobile = HTMLtwitter.replace("%data%", bio.contacts["twitter"]);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts["email"]);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts["github"]);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts["location"]);
 
-	logClicks(x,y);
-});
+	$('#footerContacts').append(formattedMobile);
+	$('#footerContacts').append(formattedEmail);
+	$('#footerContacts').append(formattedGithub);
+	$('#footerContacts').append(formattedLocation);
+}
+
+$('#mapDiv').append(googleMap);
+
+bio.displayHeader();
+work.displayWork();
+projects.displayProjects();
+education.displayEdu();
+displayFooter();
