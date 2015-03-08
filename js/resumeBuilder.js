@@ -9,7 +9,7 @@ var bio = {
     "location": "Guelph, Ontario, Canada"
   },
   "welcomeMessage": "This is a little bit about me. I am always learning and this is part of building up skills in parallel to my design and product planning background. My goal here is to go a bit deeper into the stack.",
-  "skills": ["management", "design", "HTML", "CSS", "Javascript", "Ruby on Rails", "Slim", "Sketch", "SASS"],
+  "skills": ["design", "HTML", "Sketch", "SASS"],
   "biopic": "images/mypic.jpg",
 
 	"displayHeader": function() {
@@ -77,7 +77,7 @@ var work = {
       "location": "Dubai, UAE",
       "datesworked": "2006-2010",
       "description": "Senior BD, product, corporate VC and strategy."
-    }
+    },
     {
       "employer": "American International School Kuwait",
       "title": "English Department Head",
