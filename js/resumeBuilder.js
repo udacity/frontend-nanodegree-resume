@@ -78,6 +78,13 @@ var work = {
       "datesworked": "2006-2010",
       "description": "Senior BD, product, corporate VC and strategy."
     }
+    {
+      "employer": "American International School Kuwait",
+      "title": "English Department Head",
+      "location": "Salmiya, Kuwait",
+      "datesworked": "2004-2006",
+      "description": "Teaching IB English and managing 17 English teachers."
+    }
   ],
 
   "displayWork": function() {
