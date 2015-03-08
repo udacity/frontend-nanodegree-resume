@@ -9,7 +9,7 @@ var bio = {
     "location": "Guelph, Ontario, Canada"
   },
   "welcomeMessage": "This is a little bit about me. I am always learning and this is part of building up skills in parallel to my design and product planning background. My goal here is to go a bit deeper into the stack.",
-  "skills": ["design", "HTML", "Sketch", "SASS"],
+  "skills": ["Design", "HTML", "Sketch", "SASS"],
   "biopic": "images/mypic.jpg",
 
 	"displayHeader": function() {
