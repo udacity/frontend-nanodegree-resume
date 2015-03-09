@@ -1,3 +1,5 @@
+
+
 * {
   padding:0;
   margin:0;
@@ -15,7 +17,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #4caf50;
   line-height: 48px;
   display: inline;
 }
@@ -25,7 +27,7 @@ h2 {
   font-size: 24px;
   color: #999999;
   line-height: 29px;
-  padding: 10px;
+  padding: 20px;
 }
 
 h3 {
@@ -75,7 +77,7 @@ p {
 a {
   color: #1199C3;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 20px;
   display: block;
 }
 
@@ -87,12 +89,20 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #4caf50;
   display: none;
 }
 
 .orange {
   background-color: #F5AE23;
+}
+
+.purple {
+  background-color: #573ab7;
+}
+
+.dark-purple {
+  background-color: #512da8;
 }
 
 .orange-text {
@@ -104,9 +114,13 @@ a {
   color: #FFFFFF;
 }
 
+.green-text {
+  color: #4caf50;
+}
+
 .gray {
   background-color: #F3F3F3;
-  padding-bottom: 10px;
+  padding: 20px 0;
   clear:both;
 }
 
@@ -116,7 +130,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #573ab7;
 }
 
 .flex-box {
@@ -132,7 +146,7 @@ a {
   padding-top: 2.5%;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 2.5%
+  padding-bottom: 5%
 }
 
 ul {
