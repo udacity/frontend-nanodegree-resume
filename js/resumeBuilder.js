@@ -9,7 +9,7 @@ var bio = {
     "location": "Guelph, Ontario, Canada"
   },
   "welcomeMessage": "This is a little bit about me. I am always learning and this is part of building up skills in parallel to my design and product planning background. My goal here is to go a bit deeper into the stack.",
-  "skills": ["Design", "HTML", "Sketch", "SASS"],
+  "skills": ["Design", "HTML", "Sketch", "SASS", "Photoshop"],
   "biopic": "images/mypic.jpg",
 
 	"displayHeader": function() {
@@ -24,10 +24,10 @@ var bio = {
 		$('#header').append(formattedMessage);
 		$('#header').append(HTMLskillsStart);
 
-		for(i in bio.skills) {
-			var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
-			$('#header').append(formattedSkills);
-		}
+			for(i in bio.skills) {
+				$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+			}
+
 		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts["twitter"]);
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts["email"]);
 		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts["github"]);
@@ -227,3 +227,13 @@ work.displayWork();
 projects.displayProjects();
 education.displayEdu();
 displayFooter();
+
+function inName(name) {
+	name = name.trim().split(" ");
+	console.log(name);
+	name[1] = name[1].toUpperCase();
+	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+	return name[0] + " "+name[1];
+}
+
+$('#main').append(internationalizeButton);
