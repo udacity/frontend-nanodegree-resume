@@ -1,4 +1,4 @@
-* {
+body {
   padding:0;
   margin:0;
   font-family: 'Roboto', sans-serif;
@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #edfced;
   line-height: 48px;
   display: inline;
 }
@@ -23,7 +23,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #666666;
   line-height: 29px;
   padding: 10px;
 }
@@ -31,14 +31,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #4a4a4a;
   line-height: 17px;
 }
 
@@ -47,7 +47,6 @@ h2, h3, h4, h5 {
   padding-left: 5%;
   padding-right: 5%;
 }
-
 
 .date-text {
   font-style: italic;
@@ -63,7 +62,6 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -73,66 +71,83 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #006666;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
+/*change the colors to reflect my website (goodgreenvibes.org)*/
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #000033;
   line-height: 28px;
+  margin: 20px auto 0 auto;
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #edfced;
   display: none;
 }
 
-.orange {
-  background-color: #F5AE23;
+.turquoise {
+  background-color: #006666;
 }
 
-.orange-text {
-  color: #F5AE23;
+.blue-text {
+  color: #000033;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #FFFFFF;
+.turquoise-text {
+  color: #006666;
 }
 
-.gray {
-  background-color: #F3F3F3;
+.mintGreen-text {
+  /*font-weight: bold;*/
+  color: #edfced;
+}
+
+.mintGreen {
+  background-color: #edfced;
   padding-bottom: 10px;
   clear:both;
+  margin: -20px;
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #000033;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #006666;
+  padding: 0 5% 0 5%;
 }
 
 .flex-box {
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
 }
+
+#topContacts{
+  flex-direction: row;
+}
+
+#footerContacts-
 
 .center-content {
   padding-top: 2.5%;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 2.5%
+}
+
+.center-text{
+  color: #edfced;
 }
 
 ul {
@@ -143,17 +158,22 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  /*display: none; take off so that picture displays on an iphone*/
 }
 
 img {
   padding: 10px;
+  width: 50%;
+}
+
+imgTicTacToe {
+  width: 25%;
 }
 
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
-  background-color: #4A4A4A;
+  background-color: #4a4a4a;
   text-align: right;
   padding: 3px;
   margin: 1px;
@@ -164,6 +184,10 @@ img {
 
 span {
   padding: 5px;
+}
+
+.onlineClasses {
+  color: #006666;
 }
 
 #letsConnect {
@@ -187,10 +211,11 @@ span {
     margin-top: 10%;
   }
   .biopic {
-    width: 150px;
+    width: 50%;
   }
   .welcome-message {
-    display: none;
+    /*display: none;*/
+    /*padding: 20px;*/
   }
 }
 
