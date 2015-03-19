@@ -23,6 +23,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+  <!-- bxSlider CSS file -->  
+  <link href="js/jquery/jquery.bxslider.css" rel="stylesheet" /> 
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -49,6 +52,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
+
+<!--These links create the slider -->
+  <!-- jQuery library (served from Google) -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <!-- bxSlider Javascript file -->
+  <script src="js/jquery/jquery.bxslider.min.js"></script>
+  
 </head>
 <body unresolved>
   <div id="main">
@@ -63,18 +73,35 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <ul id="topContacts" class='flex-box'></ul>
     </div>
     <div style='clear: both;'></div>
-    <div id="workExperience"class= 'mintGreen'>
-      <h2>Work Experience</h2>
+  <!-- add acordion so that titles collapse and expand -->
+  <div id= 'accordion'>
+      <div id="workExperience" class= 'mintGreen'>
+        <h2 class= 'accordion-toggle'>Work Experience</h2>
+      </div>
+      <div id="projects" class='whiteBack'>
+        <h2 class= 'accordion-toggle'>Projects</h2>
+      </div>
+      <div id="education" class= 'mintGreen'>
+        <h2 class= 'accordion-toggle'>Education</h2>
+      </div>
+      <div id="mapDiv" class='whiteBack'>
+        <h2 class= 'accordion-toggle'>Where I've Lived and Worked</h2>
+      </div>
+      
+    <div class= 'mintGreen'>
+      <h2>When I'm not developing websites, I like to... </h2>
+    <div class= "slider">
+        <ul class="bxslider">
+          <li><img src="images/run.jpg" /></li>
+          <li><img src="images/read.jpg" /></li>
+          <li><img src="images/cook.jpg" /></li>
+          <li><img src="images/volunteer.jpg" /></li>
+          <li><img src="images/adventures.jpg" /></li>
+        </ul>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
     </div>
-    <div id="education" class= 'mintGreen'>
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
+</div><!-- end of accordion -->
+  
     <div id="letsConnect" class='dark-gray'>
       <h2 class='turquoise center-text'>Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">

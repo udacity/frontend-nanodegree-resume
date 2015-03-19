@@ -11,7 +11,7 @@ var bio = {
         "mobile": "(845) 549-6038",
         "location": "Hopewell Junction, NY",
         "github": "KelseySteele",
-        "twitter": "@GoodGreenVibes"  
+        "twitter": "@GoodGreenVibes"
                 },
     "welcomeMessage": "I am an enthusiastic front-end web developer who can help you.",
     "skills": [
@@ -19,42 +19,41 @@ var bio = {
                ],
     "bioPic": "images/ProfilePicture.jpg"
     };
-    
+
 bio.display = function(){
-    
+
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
-    
+
     var formattedImage = HTMLbioPic.replace("%data%", bio.bioPic);
-    $("#header").append(formattedImage);  
-    
+    $("#header").append(formattedImage);
+
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     $("#topContacts").append(formattedMobile);
-    
+
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts").append(formattedEmail);
-    
+
     var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedlocation);
-    
+
     var formattedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedgithub);
-    
+
     var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
     $("#topContacts").append(formattedtwitter);
-    
+
     var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#topContacts").append(formattedWelcome);
-    
+
 }
 
+bio.display();
 
-
-bio.display();    
     $("#main").append(internationalizeButton);
-    
+
    var inName = function(oldName) {
     var finalName = oldName;
     // Your code goes here!
@@ -63,7 +62,7 @@ bio.display();
     finalName = finalName.trim().split(space);
     var firstName = finalName[0];
     var lastName = finalName [1];
- 
+
     lastName = lastName.toUpperCase();
     firstName = firstName.toLowerCase();
     firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
@@ -72,13 +71,13 @@ bio.display();
     // Don't delete this line!
     return finalName;
 };
- 
- var oldName = bio.name;
+
+var oldName = bio.name;
    inName(oldName);
-   
+
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
-    
+
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
     $("#skills").append(formattedSkill);
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
@@ -90,31 +89,32 @@ if (bio.skills.length > 0) {
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
     $("#skills").append(formattedSkill);
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
-    $("#skills").append(formattedSkill); 
+    $("#skills").append(formattedSkill);
     }
     //code
-//formats the footer    
+//formats the footer
 bio.displayftr = function(){
-    
+
     var formattedMobileftr = HTMLmobileftr.replace("%data%", bio.contacts.mobile);
     $("#footerContacts").append(formattedMobileftr);
-    
+
     var formattedEmailftr = HTMLemailftr.replace("%data%", bio.contacts.email);
     $("#footerContacts").append(formattedEmailftr);
-    
+
     var formattedlocationftr = HTMLlocationftr.replace("%data%", bio.contacts.location);
     $("#footerContacts").append(formattedlocationftr);
-    
+
     var formattedgithubftr = HTMLgithubftr.replace("%data%", bio.contacts.github);
     $("#footerContacts").append(formattedgithubftr);
     
     var formattedtwitterftr = HTMLtwitterftr.replace("%data%", bio.contacts.twitter);
     $("#footerContacts").append(formattedtwitterftr);
-    
+
 }
 
 bio.displayftr();
-    
+
+//work experience section
 var work = {
         "jobs":
             [
@@ -124,7 +124,7 @@ var work = {
                     "location" :"White Plains, NY",
                     "years" : "2014-present",
                     "description": "Create and update WordPress pages for KenCast. Inc, a technology company."
-                    
+
                 },
                 {
                     "position": "Library Clerk",
@@ -139,44 +139,57 @@ var work = {
                     "location" :"Poughquag, NY ",
                     "years" : "2013-present",
                     "description": "Manage the social media pages of Safe Haven Farm Sanctuary and have increased their social media following by more than 60%."
-                    
-                }    
+
+                }
             ]
         }
-        
-    
+
+
  function displayWork(){
-        for (job in work.jobs){
+
+//Comment out HTMLworkStart, so that accordion-content wraps around work-entry.  
+    var accHeading, accContent;
+    accHeading = $('#workExperience');
+    accContent = $('<div class= "accordion-content"><div class= "work-entry"></div></div>');
+    accHeading.append(accContent);
     
-                $("#workExperience").append(HTMLworkStart);
+        for (job in work.jobs){
+
+                //$("#workExperience").append(HTMLworkStart);
+                
                 var formattedEmployer = HTMLworkEmployer.replace
                 ("%data%", work.jobs[job].employer);
                 var formattedTitle = HTMLworkTitle.replace
                 ("%data%", work.jobs[job].position );
                 var formattedEmployerTitle = formattedEmployer + formattedTitle;
-                
+
                 $(".work-entry:last").append(formattedEmployerTitle);
+                
+                var formattedLocation = HTMLworkLocation.replace
+                ("%data%", work.jobs[job].location);
+                $(".work-entry:last").append(formattedLocation);
                 
                 var formattedYears = HTMLworkDates.replace
                 ("%data%", work.jobs[job].years);
                 $(".work-entry:last").append(formattedYears);
-                
+
                 var formattedDescription = HTMLworkDescription.replace
                 ("%data%", work.jobs[job].description);
-                $(".work-entry:last").append(formattedDescription);           
+                $(".work-entry:last").append(formattedDescription);
+                        
                             }
  }
- 
+
   displayWork();
- 
-        
+
+//projects section
 var projects = {
     "projects" :
             [
                 {
                     "name": "Mockup to Website",
                     "description": "As part of my Udacity coursework, I demonstrated my ability to create HTML and CSS files that mimicked a predesigned PDF version of a webpage. The webpage is about an orange Udacity mug.",
-                    "image": "images/WebsiteMockup.jpg" 
+                    "image": "images/WebsiteMockup.jpg"
                 },
                 {
                     "name": "Good Green Vibes Website",
@@ -187,28 +200,38 @@ var projects = {
                     "name": "Tic Tac Toe Game",
                     "description": "I used JavaScript, HTML, and CSS to create a Tic Tac Toe game. I experimented with different features, so you will find three different versions on my GitHub link. The first one is the simplest tic tac toe game; it uses buttons to create the tic tac toe board. In the second version, I used game objects to make the code more readable. In the third version, I created a counter which keeps track of the number of X and O wins.",
                     "image": "images/TicTacToeGame.jpg"
-                } 
-            ]
-            
+                }
+          ]
+
         }
- 
+
 projects.display = function () {
+    
+    //Comment out HTMLprojectStart, so that accordion-content wraps around project-entry.  
+    var accHeading, accContent;
+    accHeading = $('#projects');
+    accContent = $('<div class= "accordion-content"><div class= "project-entry"></div></div>');
+    accHeading.append(accContent);
+    
     for (project in projects.projects){
-        $("#projects").append(HTMLprojectStart);
+        //$("#projects").append(HTMLprojectStart);
         var formattedProjectsName = HTMLprojectTitle.replace("%data%", projects.projects[project].name);
         $(".project-entry:last").append(formattedProjectsName);
-                
+
         var formattedProjectsDescription = HTMLprojectDescription.replace
                ("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedProjectsDescription);
-        
+
         var formattedProjectsImage = HTMLprojectImage.replace
             ("%data%", projects.projects[project].image);
-        $(".project-entry:last").append(formattedProjectsImage);   
+        $(".project-entry:last").append(formattedProjectsImage);
+        
    }
 }
 
 projects.display();
+
+//education section
     var education = {
     "schools": [
         {
@@ -216,18 +239,18 @@ projects.display();
             "location": "Burlington, VT",
             "dates": "2009-2013",
             "degree": "Bachelor of Arts",
-            "major": ["Environmental Studies"]    
+            "majors": ["Environmental Studies"]
         },
-        
+
         {
             "name": "John Jay High School",
             "location": "Hopewell Junction, NY",
             "dates": "2005-2009",
             "degree": "High School degree",
-            "major" : ["Math & Science"]
+            "majors" : ["Math", " Science"]
         }
                  ],
-    
+
     "onlineClasses":[
         {
             "name": "Udacity",
@@ -239,44 +262,51 @@ projects.display();
             "name": "Codecademy",
             "degree": "Front-End Web Developer",
             "dates": "2014-2015",
-            "courses": ["Make a Website", "Make an Interactive Website", "HTML & CSS", "JavaScript", "jQuery"]  
+            "courses": ["Make a Website", "Make an Interactive Website", "HTML & CSS", "JavaScript", "jQuery"]
         },
         {
             "name": "Adobe",
             "degree": "Training Videos",
             "dates": "2014-2015",
-            "courses": ["Photoshop", "Dreamweaver"]  
+            "courses": ["Photoshop", "Dreamweaver"]
         }
                 ]
-    
+
     }
 
 education.display = function () {
+    
+    //Comment out HTMLworkStart, so that accordion-content wraps around work-entry.  
+    var accHeading, accContent;
+    accHeading = $('#education');
+    accContent = $('<div class= "accordion-content"><div class= "education-entry"></div></div>');
+    accHeading.append(accContent);
+    
     for (school in education.schools){
-        $("#education").append(HTMLschoolStart);
+        //$("#education").append(HTMLschoolStart);
         var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+        $(".education-entry:last").append(formattedName);
         
-         $("#education").append(HTMLschoolStart);
-        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-        
-        $("#education").append(HTMLschoolStart);
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        $(".education-entry:last").append(formattedDegree);
         
-         $("#education").append(HTMLschoolStart);
-        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-         
-         $("#education").append(HTMLschoolStart);
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        $(".education-entry:last").append(formattedDates);
+        
         var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+        $(".education-entry:last").append(formattedLocation);
         
-        var formattedSchools = formattedName + formattedDegree + formattedDates + formattedMajor + formattedLocation; 
-        $(".education-entry:last").append(formattedSchools);
-             
+        for (major in education.schools[school].majors){
+            var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+            $(".education-entry:last").append(formattedMajor);
+        }      
+
    }
-   
-   $("#education").append(HTMLonlineClasses)
-   
+
+   $(".education-entry:last").append(HTMLonlineClasses);
+
    for (onlineCourse in education.onlineClasses) {
-        $("#education").append(HTMLschoolStart);
+        //$("#education").append(HTMLschoolStart);
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[onlineCourse].name);
         var formattedDegree = HTMLonlineSchool.replace("%data%", education.onlineClasses[onlineCourse].degree);
         var formattedDates = HTMLonlineDates.replace("%data%", education.onlineClasses[onlineCourse].dates);
@@ -285,21 +315,44 @@ education.display = function () {
         for (course in education.onlineClasses[onlineCourse].courses){
             var formattedCourses = HTMLonlineCourses.replace("%data%", education.onlineClasses[onlineCourse].courses[course]);
             $(".education-entry:last").append(formattedCourses);
-        }   
+        }
    }
 }
 
 
-education.display(); 
+education.display();
 
-     
-    
     $(document).click(function(loc){
         var x = loc.pageX;
         var y = loc.pageY;
           logClicks(x,y); //code
         });
-  
-  
+
+//where I've lived and worked section
   $("#mapDiv").append(googleMap);
   initializeMap();
+  
+//boxslider
+
+$(document).ready(function(){
+    
+  $('.bxslider').bxSlider();
+});
+  
+$('.bxslider').bxSlider({
+  auto: true,
+  autoControls: true
+});
+
+//create accordion based on union design
+  $(document).ready(function($) {
+    $('#accordion').find('.accordion-toggle').click(function(){
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+      //Hide the other panels
+      $(".accordion-content").not($(this).next()).slideUp('fast');
+
+    });
+  });

@@ -115,6 +115,14 @@ a {
   margin: -20px;
 }
 
+.whiteBack {
+  padding-bottom: 10px;
+  clear:both;
+  margin: -20px;
+}
+
+
+
 .dark-gray {
   background-color: #000033;
 }
@@ -166,9 +174,6 @@ img {
   width: 50%;
 }
 
-imgTicTacToe {
-  width: 25%;
-}
 
 /* Bar chart stuff */
 .chart div {
@@ -188,6 +193,17 @@ span {
 
 .onlineClasses {
   color: #006666;
+  margin-left: -50px;
+} 
+
+.bxslider {
+  /*display: block*/
+ margin: -2px 20% -2px 20%;
+}
+
+.slider {
+  margin: 0 8% 0 8%;
+  height: 100%;
 }
 
 #letsConnect {
@@ -229,7 +245,7 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 20%;
 }
 
 @media only screen and (min-width: 750px) {
@@ -238,3 +254,12 @@ span {
     display: block;
   }
 }
+
+/*use for accordion*/
+.accordion-toggle {
+  cursor: pointer;
+  }
+  .accordion-content {
+    display: none;
+    }
+    

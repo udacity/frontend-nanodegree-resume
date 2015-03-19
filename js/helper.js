@@ -50,8 +50,6 @@ var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%"> <alt = "project image">';
-//add last var to resize the tic tac toe image which is smaler than the previouse images
-var HTMLprojectImageTTT = '<img src="%data%"> <alt = "project image">';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -257,3 +255,4 @@ window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
  map.fitBounds(mapBounds);
 });
+
