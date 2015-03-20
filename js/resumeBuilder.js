@@ -145,7 +145,7 @@ var work = {
         }
 
 
- function displayWork(){
+ work.display = function(){
 
 //Comment out HTMLworkStart, so that accordion-content wraps around work-entry.  
     var accHeading, accContent;
@@ -180,7 +180,7 @@ var work = {
                             }
  }
 
-  displayWork();
+  work.display();
 
 //projects section
 var projects = {
@@ -219,11 +219,11 @@ projects.display = function () {
         $(".project-entry:last").append(formattedProjectsName);
 
         var formattedProjectsDescription = HTMLprojectDescription.replace
-               ("%data%", projects.projects[project].description);
+        ("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedProjectsDescription);
 
         var formattedProjectsImage = HTMLprojectImage.replace
-            ("%data%", projects.projects[project].image);
+        ("%data%", projects.projects[project].image);
         $(".project-entry:last").append(formattedProjectsImage);
         
    }
@@ -336,16 +336,7 @@ education.display();
 
 $(document).ready(function(){
     
-  $('.bxslider').bxSlider();
-});
-  
-$('.bxslider').bxSlider({
-  auto: true,
-  autoControls: true
-});
-
-//create accordion based on union design
-  $(document).ready(function($) {
+    //create accordion based on union design
     $('#accordion').find('.accordion-toggle').click(function(){
 
       //Expand or collapse this panel
@@ -355,4 +346,24 @@ $('.bxslider').bxSlider({
       $(".accordion-content").not($(this).next()).slideUp('fast');
 
     });
-  });
+    //code for the slideshow 
+  $('.bxslider').bxSlider();
+});
+  
+$('.bxslider').bxSlider({
+  auto: true,
+  autoControls: true
+});
+
+//create accordion based on union design
+  //$(document).ready(function($) {
+    //$('#accordion').find('.accordion-toggle').click(function(){
+
+      //Expand or collapse this panel
+      //$(this).next().slideToggle('fast');
+
+      //Hide the other panels
+      //$(".accordion-content").not($(this).next()).slideUp('fast');
+
+    //});
+  //});
