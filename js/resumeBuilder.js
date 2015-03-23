@@ -48,7 +48,7 @@ bio.display = function(){
     var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#topContacts").append(formattedWelcome);
 
-}
+};
 
 bio.display();
 
@@ -77,21 +77,12 @@ var oldName = bio.name;
 
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
-
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(formattedSkill);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    $("#skills").append(formattedSkill);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-    $("#skills").append(formattedSkill);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
-    $("#skills").append(formattedSkill);
+    for (var skill in bio.skills){
+        var formattedSkills= HTMLskills.replace("%data%", bio.skills[skill]);
+        $("#skills").append(formattedSkills);    
     }
-    //code
+    };
+
 //formats the footer
 bio.displayftr = function(){
 
@@ -147,16 +138,15 @@ var work = {
 
  work.display = function(){
 
-//Comment out HTMLworkStart, so that accordion-content wraps around work-entry.  
+//accordion-content wraps around each work-entry.  
     var accHeading, accContent;
     accHeading = $('#workExperience');
-    accContent = $('<div class= "accordion-content"><div class= "work-entry"></div></div>');
+    accContent = $('<div class= "accordion-content"></div>');
     accHeading.append(accContent);
     
-        for (job in work.jobs){
+        for (var job in work.jobs){
 
-                //$("#workExperience").append(HTMLworkStart);
-                
+                $(accContent).append(HTMLworkStart); 
                 var formattedEmployer = HTMLworkEmployer.replace
                 ("%data%", work.jobs[job].employer);
                 var formattedTitle = HTMLworkTitle.replace
@@ -178,7 +168,7 @@ var work = {
                 $(".work-entry:last").append(formattedDescription);
                         
                             }
- }
+ };
 
   work.display();
 
@@ -203,7 +193,7 @@ var projects = {
                 }
           ]
 
-        }
+        };
 
 projects.display = function () {
     
@@ -227,7 +217,7 @@ projects.display = function () {
         $(".project-entry:last").append(formattedProjectsImage);
         
    }
-}
+};
 
 projects.display();
 
@@ -272,7 +262,7 @@ projects.display();
         }
                 ]
 
-    }
+    };
 
 education.display = function () {
     
@@ -282,7 +272,7 @@ education.display = function () {
     accContent = $('<div class= "accordion-content"><div class= "education-entry"></div></div>');
     accHeading.append(accContent);
     
-    for (school in education.schools){
+    for (var school in education.schools){
         //$("#education").append(HTMLschoolStart);
         var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
         $(".education-entry:last").append(formattedName);
@@ -301,18 +291,18 @@ education.display = function () {
             $(".education-entry:last").append(formattedMajor);
         }      
 
-   }
+   };
 
    $(".education-entry:last").append(HTMLonlineClasses);
 
-   for (onlineCourse in education.onlineClasses) {
+   for (var onlineCourse in education.onlineClasses) {
         //$("#education").append(HTMLschoolStart);
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[onlineCourse].name);
         var formattedDegree = HTMLonlineSchool.replace("%data%", education.onlineClasses[onlineCourse].degree);
         var formattedDates = HTMLonlineDates.replace("%data%", education.onlineClasses[onlineCourse].dates);
         var formattedOnline = formattedTitle + formattedDegree + formattedDates
         $(".education-entry:last").append(formattedOnline);
-        for (course in education.onlineClasses[onlineCourse].courses){
+        for (var course in education.onlineClasses[onlineCourse].courses){
             var formattedCourses = HTMLonlineCourses.replace("%data%", education.onlineClasses[onlineCourse].courses[course]);
             $(".education-entry:last").append(formattedCourses);
         }
