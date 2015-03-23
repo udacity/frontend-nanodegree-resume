@@ -1,3 +1,11 @@
-$("#main").append(["Jason Goldfarb"]);
+// $("#main").append("Jason Goldfarb");
 
-var awesomeThoughts =  "I am Jason and I am AWESOME!";
+// [string].replace([old],[new]);
+
+var awesomeThoughts =
+    "I am Jason and I am AWESOME!";
+
+var funThoughts =
+    awesomeThoughts.replace ("AWESOME", "FUN");
+
+$("#main").append(funThoughts);
