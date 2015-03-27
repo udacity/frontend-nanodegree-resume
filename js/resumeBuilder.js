@@ -40,6 +40,8 @@ var bio = {
         $("#header").append(formattedWelcomeMessage);
 
     $("#header").append(HTMLskillsStart);
-    var formattedSkills =
-        HTMLskills.replace("%data%", bio.skills);
-        $("#skillsH3").append(formattedSkills);
+
+    for (var i = 0; i < bio.skills.length; i++) {
+    var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+          $("#skills").append(formattedSkills);
+    }
