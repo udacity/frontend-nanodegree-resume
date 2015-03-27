@@ -1,20 +1,3 @@
-//var name = "Jason Goldfarb";
-//var formattedName =
-  //  HTMLheaderName.replace("%data%", name);
-
-//var role = "Web Developer";
-//var formattedRole =
-//    HTMLheaderRole.replace("%data%", role);
-
-//$("#header").prepend(formattedRole);
-//$("#header").prepend(formattedName);
-
-
-//var skills =
-//  ["awesomeness", "programming", "teaching", "JS" ];
-
-//$("#main").append(skills.length);
-
 var bio = {
   "name": "Jason Goldfarb",
   "role": "Web Developer",
