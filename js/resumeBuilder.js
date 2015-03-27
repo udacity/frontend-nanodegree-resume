@@ -56,6 +56,7 @@ var bio = {
         HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
         $("#header").append(formattedWelcomeMessage);
 
+    $("#header").append(HTMLskillsStart);
     var formattedSkills =
         HTMLskills.replace("%data%", bio.skills);
-        $("#header").append(formattedSkills);
+        $("#skillsH3").append(formattedSkills);
