@@ -5,6 +5,8 @@ var bio = {
      "mobile": "(917) 207-1982",
      "email": "jason.r.goldfarb@gmail.com",
      "github": "jgoldfarb",
+     "twitter": "jasonrgoldfarb",
+     "location": "New York Metro",
    },
   "welcomeMessage": "This is my Front-End Web Development resume",
   "skills": ["awesomeness", "programming", "teaching", "JS"],
@@ -30,6 +32,14 @@ var bio = {
     var formattedGithub =
         HTMLgithub.replace("%data%", bio.contacts.github);
         $("#topContacts").append(formattedGithub);
+
+    var formattedTwitter =
+        HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        $("#topContacts").append(formattedTwitter);
+
+    var formattedLocation =
+        HTMLlocation.replace("%data%", bio.contacts.location);
+        $("#topContacts").append(formattedLocation);        
 
     var formattedPic =
         HTMLbioPic.replace("%data%", bio.bioPic);
