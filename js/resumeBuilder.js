@@ -99,21 +99,67 @@ var bio = {
     var education = {
       "schools": [
     	   {
-    		  "name": "Brooklyn Law School",
-    	    "location": "Brooklyn, New York",
-    	    "degree" : "Juris Doctor",
-    	    "majors": ["Law"],
-    	    "dates": 1994,
-    	    "url": "http://www.brooklaw.edu/",
-    	   }
+    		  "name": "Hofstra University",
+    	    "location": "Hempstead, New York",
+    	    "degree" : "Continuing Education",
+    	    "majors": ["Digital & Social Media Marketing"],
+    	    "dates": 2011,
+    	    "url": "http://www.hofstra.edu/"
+        },
+        {
+          "name": "Brooklyn Law School",
+          "location": "Brooklyn, New York",
+          "degree" : "Juris Doctor",
+          "majors": ["Law"],
+          "dates": 1994,
+          "url": "http://www.brooklaw.edu/"
+        },
+        {
+          "name": "Yeshiva Univeristy - Sy Syms School of Business",
+          "location": "New York, New York",
+          "degree" : "Bachelor of Science",
+          "majors": ["Finance"],
+          "dates": 1992,
+          "url": "https://yu.edu/syms/"
+        }
           ],
 
       "onlineCourses": [
     	   {
-    		"title": "Front End Web Developer",
+    		"title": "Front End Web Developer Nanodegree",
     		"school": "Udacity",
     		"date": 2015,
     		"url": "http://www.udacity.com"
-    	   }
-       ],
+      },
+      {
+        "title": "Become a Certified Web Developer",
+        "school": "Learn to Program",
+        "date": 2015,
+        "url": "http://www.learntoprogram.tv"
+      },
+      {
+        "title": "The Complete Web Devleoper Course",
+        "school": "Udemy",
+        "date": 2015,
+        "url": "http://www.udemy.com"
+      },
+      {
+        "title": "Getting Started with Wordpress",
+        "school": "Udemy",
+        "date": 2014,
+        "url": "http://www.udemy.com"
+      },
+      {
+        "title": "Complete Wordpress Mastery Course",
+        "school": "udemy",
+        "date": 2014,
+        "url": "http://www.udemy.com"
+      },
+      {
+        "title": "Wordpress eCommerce",
+        "school": "Udemy",
+        "date": 2014,
+        "url": "http://www.udacity.com"
+      }
+       ]
     };
