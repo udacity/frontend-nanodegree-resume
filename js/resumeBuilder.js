@@ -177,3 +177,32 @@ var bio = {
       }
        ]
     };
+
+    education.display = function () {
+      for (var school in education.schools) {
+          $("#education").append(HTMLschoolStart);
+
+          var formattedSchoolName =
+          HTMLschoolName.replace("%data%", education.schools[school].name);
+
+          var formattedDegree =
+          HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+
+          var formattedSchoolNameDegree = formattedSchoolName + formattedDegree;
+          $(".education-entry:last").append(formattedSchoolNameDegree);
+
+        /*  var formattedDates =
+          HTMLworkDates.replace("%data%", work.jobs[job].dates);
+          $(".work-entry:last").append(formattedDates);
+
+          var formattedLocation =
+          HTMLworkLocation.replace("%data%", work.jobs[job].location);
+          $(".work-entry:last").append(formattedLocation);
+
+          var formattedDescription =
+          HTMLworkDescription.replace("%data%", work.jobs[job].description);
+          $(".work-entry:last").append(formattedDescription);
+        */
+    }
+    };
+    education.display();
