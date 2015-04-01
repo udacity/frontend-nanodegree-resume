@@ -1,12 +1,12 @@
 var bio = {
-  "name": "Jason Goldfarb, Esq.",
+  "name": "Jason Goldfarb",
   "role": "Web Developer",
   "contacts": {
      "mobile": "(917) 207-1982",
      "email": "jason.r.goldfarb@gmail.com",
      "github": "jgoldfarb",
      "twitter": "jasonrgoldfarb",
-     "location": "New York Metro",
+     "location": "New York City Metropolitan Area",
    },
   "welcomeMessage": "This is my Front-End Web Development resume",
   "skills": ["Web Development", "Six Sigma Green Belt", "Project Management", "Digital & Social Media", "Online Technology"],
@@ -78,6 +78,20 @@ var bio = {
         "location": "Great River, New York",
         "dates": "2008 - October 2011",
         "description": "Managed a portfolio of thousands of real estate lease agreements and assets, representing every cell site location across the New York City and Long Island markets. Served as the central subject matter resource on all contract details for cross-functional internal teams, providing in-depth knowledge of lease terms and legalities to ensure seamless and continuous delivery of cellular service. Negotiated with and managed relationships with property owners to promote the most advantageous business position for the portfolio.Turned around the portfolio’s financial position, building a system lauded as a company-wide model for portfolio management, by conducting a complete portfolio risk assessment and structural overhaul. Delivered more than $1.7 million in direct operating expense savings, a figure which was projected to translate into more than $13 million in long-term dollar savings, by identifying and resolving a wide variety of discrepancies and overpayments, recommending the elimination of unnecessary or duplicate sites, and negotiating more favorable contract terms.Launched a successful effort to eliminate an entire category of “at risk” contract documents, establishing a clear process for document retention, and training junior staffers on identifying and correcting a tremendous backlog of document issues. Played a leadership role in increasing the number of fully executed new agreements by 500% as project manager of the end-to-end leasing process with an external site acquisition firm.Consistently recognized by senior executive leadership as a top performer within the property management team, setting the precedent and establishing benchmarks for property management excellence for the nationwide operation.",
+      },
+      {
+        "employer": "Independent Contractor",
+        "title": "Wireless Leasing & Real Estate Consultant ",
+        "location": "Woodmere, New York",
+        "dates": "2007- 2008",
+        "description": "Provided specialized expertise in wireless lease acquisitions and sales, as well as advisory services for the real estate industry. Conducted in-depth research and due diligence to advise clients with cost-benefit and risk analyses and to recommend optimal deal structures.Served as the legal consultant for a real estate investor client, ensuring proper vetting and preparation of all potential deals.Orchestrated an auction for more than 100 properties, coordinating the efforts of multiple owners to compile and present detailed property information, schedule open houses, and advertise for the event.	Created strong legal protections for a client’s business interests by re-drafting the base contract document.",
+      },
+      {
+        "employer": "Unison Site Management",
+        "title": "Vice President of Origination",
+        "location": "New York, New York",
+        "dates": "2005 - 2007",
+        "description": "Directed a 15-member sales and legal team in the oversight of the complete site acquisition process, from initiation through closure. Concurrently managed up to 80 active deals at all stages of the approval process, navigating and problem solving diverse and complex issues to drive a high percentage of deals to the closing table. Served as the company’s central subject matter expert and go-to business leader for communicating issues between the sales and legal departments, ensuring full understanding of the intricacies of all sides of the deal process.	Played a critical leadership role within the organization, leveraging a deep background both as an attorney and in sales to build the firm’s cross-functional and often competing departments into a cohesive, high-performance operation. Dramatically increased the rate of deal closings while delivering 10% cost savings and slashing origination times by re-engineering the complete acquisition processes to ensure that the highest quality deals entered the origination cycle.Boosted team morale and productivity with this new system that more directly linked performance to compensation.Built this team into the company’s top performing entity representing one-third of all closed business and more than $40 million in paid proceeds. Recognized for outstanding results and origination leadership with selection to train the entire company in the newly designed origination process.",
       }
           ],
       };
@@ -152,7 +166,7 @@ var bio = {
         "url": "http://www.learntoprogram.tv"
       },
       {
-        "title": "The Complete Web Devleoper Course",
+        "title": "The Complete Web Devloper Course",
         "school": "Udemy",
         "date": 2015,
         "url": "http://www.udemy.com"
@@ -177,19 +191,33 @@ var bio = {
       }
        ]
     };
-
+// School information
     education.display = function () {
       for (var school in education.schools) {
           $("#education").append(HTMLschoolStart);
 
-          var formattedSchoolName =
+          var formattedschoolName =
           HTMLschoolName.replace("%data%", education.schools[school].name);
 
           var formattedDegree =
           HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 
-          var formattedSchoolNameDegree = formattedSchoolName + formattedDegree;
-          $(".education-entry:last").append(formattedSchoolNameDegree);
+          var formattedschoolNameDegree = formattedschoolName + formattedDegree;
+          $(".education-entry:last").append(formattedschoolNameDegree);
+
+          var formattedschoolDates =
+          HTMLschoolDates.replace("%data%", education.schools[school].dates);
+          $(".education-entry:last").append(formattedschoolDates);
+
+          var formattedschoolLocation =
+          HTMLschoolLocation.replace("%data%", education.schools[school].location);
+          $(".education-entry:last").append(formattedschoolLocation);
+
+          var formattedSchoolMajor =
+          HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+          $(".education-entry:last").append(formattedSchoolMajor);
+
+// Online course information
 
         /*  var formattedDates =
           HTMLworkDates.replace("%data%", work.jobs[job].dates);
