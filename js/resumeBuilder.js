@@ -245,3 +245,41 @@ var bio = {
         }
     };
     education.onlineCourses.display();
+
+/*projects
+    var projects = {
+      degreeProjects: [
+              {
+            "title": "Portfolio Site",
+            "dates": 2015,
+            "description": "Replicate a design mockup from a PDF-file using HTML and CSS. Code with Bootstrap to develop a responsive website that will display images, descriptions and links to each of the portfolio projects responsively on different devices. Prepared for this project with: Intro to HTML and CSS, Responsive Web Design Fundamentals, and Responsive Images.",
+            "images": "images/portfoliosite.jpg",
+      },
+      {
+        "title": "Interactive Resume",
+        "dates": 2015,
+        "description": "Develop an interactive resume application that reads resume content from a JSON file and dynamically displays that content within a provided template. The resume application uses objects, functions, conditionals, and control structures to compose the content that will display on the resume. Prepared for this project with: JavaScript Basics and Intro to jQuery.",
+        "images": "images/interactive resume.jpg",
+      },
+      {
+        "title": "Classic Arcade Game",
+        "dates": 2015,
+        "description": "Given a set of visual assets and a game loop engine, used a variety of tools to add player characters and enemies to recreate the classic arcade game Frogger. Prepared for this project with: Object-Oriented JavaScript and HTML5 Canvas.",
+        "images": "images/classicarcadegame.jpg",
+      },
+      {
+        "title": "Neighborhood Map",
+        "dates": 2015,
+        "description": "Devloped a single-page application featuring a neighborhood map. Added additional functionality to the application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. Research and implement third-party APIs that provide additional information about each of the locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc). Prepared for this project with: Intro to AJAX and JavaScript Design Patterns",
+        "images": "images/neighborhoodmap.jpg",
+    }
+  ]
+};
+
+/*display projects
+      projects.degreeProjects.display  = function () {
+        for (var project in projects.degreeProjects) {
+          $("#projects").append(HTMLprojectStart);
+
+      projects.degreeProjects.display ();
+/*
