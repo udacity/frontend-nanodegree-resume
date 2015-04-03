@@ -217,31 +217,24 @@ var bio = {
           HTMLschoolMajor.replace("%data%", education.schools[school].majors);
           $(".education-entry:last").append(formattedSchoolMajor);
         }
-    };
-    education.display();
-
-// online courses
-    $("#education").append(HTMLonlineClasses);
-      education.onlineCourses.display = function () {
+        $("#education").append(HTMLonlineClasses);
           for (var course in education.onlineCourses) {
-          $("#education").append(HTMLschoolStart);
+                  var formattedonlineTitle =
+                  HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 
-          var formattedonlineTitle =
-          HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+                  var formattedonlineSchool =
+                  HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 
-          var formattedonlineSchool =
-          HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+                  var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
+                  $(".education-entry:last").append(formattedonlineTitle);
 
-          var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
-          $(".education-entry:last").append(formattedonlineTitle);
+                  var formattedonlineDate =
+                  HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
+                  $(".education-entry:last").append(formattedonlineDate);
 
-          var formattedonlineDate =
-          HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
-          $(".education-entry:last").append(formattedonlineDate);
-
-          var formattedURL =
-          HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-          $(".education-entry:last").append(formattedURL);
-        }
+                  var formattedURL =
+                  HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+                  $(".education-entry:last").append(formattedURL);
+                }
     };
-    education.onlineCourses.display();
+education.display();
