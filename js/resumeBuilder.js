@@ -217,6 +217,7 @@ var bio = {
           HTMLschoolMajor.replace("%data%", education.schools[school].majors);
           $(".education-entry:last").append(formattedSchoolMajor);
         }
+//online course information        
         $("#education").append(HTMLonlineClasses);
           for (var course in education.onlineCourses) {
             $("#education").append(HTMLschoolStart);
