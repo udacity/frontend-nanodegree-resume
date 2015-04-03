@@ -219,6 +219,7 @@ var bio = {
         }
         $("#education").append(HTMLonlineClasses);
           for (var course in education.onlineCourses) {
+            $("#education").append(HTMLschoolStart);
                   var formattedonlineTitle =
                   HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 
