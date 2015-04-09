@@ -139,15 +139,17 @@ ul {
   list-style-type: none;
 }
 
+img {
+  padding: 10px;
+  width: 200px;
+  height: 150px;
+}
+
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
   display: none;
-}
-
-img {
-  padding: 10px;
 }
 
 /* Bar chart stuff */
