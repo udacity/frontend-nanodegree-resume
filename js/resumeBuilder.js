@@ -1,5 +1,101 @@
+var bio = {
+    "name": "Jan Dahl-Madsen",
+    "role": "Web Developer",
+    "contacts": {"mobile": "+977 9813018651", "email": "161076@gmail.com", "github": "jsdm", "twitter": "@janmadsen", "location": "Kathmandu"},
+    "welcomeMessage": "Welcome to my story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, illum!",
+    "skills": ["HTML5", "Javascript", "CSS", "Design"],
+    "biopic": "images/fry.jpg"
+  };
+function displayBio(){
+  formattedSkills = bio.skills;
+  formattedName = HTMLheaderName.replace("%data%", bio.name);
+  formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+  formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+  formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+  formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+  formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  formattedWlcmMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+  $("#header").prepend(formattedRole);
+  $("#header").prepend(formattedName);
+  $("#topContacts").append(formattedMobile, formattedEmail, formattedTwitter, formattedGithub, formattedLocation);
+  $("#footerContacts").append(formattedMobile, formattedEmail, formattedTwitter, formattedGithub, formattedLocation);
+
+  $("#header").append(formattedBioPic, formattedWlcmMsg, HTMLskillsStart);
+  for(var skl in bio.skills){
+    formattedSkills = HTMLskills.replace("%data%", bio.skills[skl]);
+    $("#header").append(formattedSkills);
+  }
+}
+displayBio();
+
+  var education = {
+  "schools": [
+  {
+    "name": "Bygge Teknisk Hojskole",
+    "location": "Copenhagen N",
+    "degree": "Building Technician",
+    "major": "Buildings",
+    "year": "2000",
+  },
+  {
+    "name": "TEC copenhagen",
+    "location": "Frederiksberg",
+    "degree": "IT Engineer",
+    "major": "IT",
+    "year": "2008"
+  }
+  ],
+    "onlineCourse": [
+    {
+      "title": "HTML & CSS",
+      "school": "codecademy",
+      "year": "2014",
+      "url": "www.codecademy.com"
+    },
+    {
+      "title": "Front-end Web Development nano degree",
+      "school": "Udacity",
+      "year": "2015",
+      "url": "www.udacity.com"
+    }]
+};
+function displayEducation(){
+  for (var edu in education.schools) {
+    $("#education").append(HTMLschoolStart);
+    var formattedName = HTMLschoolName.replace("%data%", education.schools[edu].name);
+    var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
+    var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
+    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
+    var formattedYear = HTMLschoolDates.replace("%data%", education.schools[edu].year);
+    $(".education-entry:last").append(formattedName + formattedDegree);
+    $(".education-entry:last").append(formattedCity);
+    $(".education-entry:last").append(formattedYear);
+    $(".education-entry:last").append(formattedMajor);
+  }
+  $(".education-entry:last").append(HTMLonlineClasses);
+  for (var onl in education.onlineCourse) {
+    var onlTitle = HTMLonlineTitle.replace("%data%", education.onlineCourse[onl].title);
+    var onlSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[onl].school);
+    var onlYear = HTMLonlineDates.replace("%data%", education.onlineCourse[onl].year);
+    var onlUrl = HTMLonlineURL.replace("%data%", education.onlineCourse[onl].url);
+    $(".education-entry:last").append(onlTitle + onlSchool);
+    $(".education-entry:last").append(onlYear);
+    $(".education-entry:last").append(onlUrl);
+  }
+}
+displayEducation();
+
 var work = {
   "jobs": [
+  {
+    "employer": "M&T",
+    "title": "Electrician",
+    "location": "Gibraltar",
+    "year": "2006",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero nisi, culpa illum a dolorum iste quaerat atque aspernatur rem, sapiente. Vitae fuga ipsa sunt cumque adipisci quibusdam et, impedit!"
+  },
   {
     "employer": "Visma",
     "title": "Technician",
@@ -23,69 +119,6 @@ var work = {
   }
   ]
 };
-var projects = {
-  "projects": [
-  {
-    "title": "High rise building in Gibraltar",
-    "year": "2006",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero! orem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero!",
-    "images":["http://placehold.it/150x100", "http://placehold.it/150x100", "http://placehold.it/150x100"]
-  },
-  {
-    "title": "TestProject",
-    "year": "2008",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero! orem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero!",
-    "images":["http://placehold.it/150x100", "http://placehold.it/150x100", "http://placehold.it/150x100"]
-  }]
-};
-var bio = {
-    "name": "Jan Dahl-Madsen",
-    "role": "Web Developer",
-    "welcomeMessage": "Welcome to my story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, illum!",
-    "contacts": {"mobile": "+977 9813018651", "email": "161076@gmail.com", "github": "jsdm", "twitter": "@janmadsen", "location": "Kathmandu"},
-    "skills": ["HTML5", "Javascript", "CSS", "Design"],
-    "biopic": "images/fry.jpg"
-  };
-var education = {
-  "schools": [
-  {
-  "name": "Bygge Teknisk Hojskole",
-  "location": "Copenhagen N",
-  "degree": "Building Technician",
-  "year": "2000",
-  "major": "Buildings"
-  },
-  {
-    "name": "TEC copenhagen",
-    "location": "Frederiksberg",
-    "degree": "IT Engineer",
-    "year": "2008",
-    "major": "IT"
-  }
-  ],
-    "onlineCourse": [
-    {
-      "title": "HTML & CSS",
-      "school": "codecademy",
-      "year": "2014",
-      "url": "www.codecademy.com"
-    },
-    {
-      "title": "Front-end Web Development nano degree",
-      "school": "Udacity",
-      "year": "2015",
-      "url": "www.udacity.com"
-    }]
-};
-var workArray = [];
-function locationizer(work) {
-    for (var loc in work.jobs){
-        var locadd = work.jobs[loc].location;
-        workArray.push(locadd);
-    }
-    return workArray;
-}
-
 function displayWork(){
 for(var job in work.jobs) {
 $("#workExperience").append(HTMLworkStart);
@@ -103,33 +136,21 @@ $(".work-entry:last").append(formattedDescriptipn);
 }
 displayWork();
 
-function displayEducation(){
-  for (var edu in education.schools) {
-    $("#education").append(HTMLschoolStart);
-    var formattedName = HTMLschoolName.replace("%data%", education.schools[edu].name);
-    var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
-    var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
-    var formattedYear = HTMLschoolDates.replace("%data%", education.schools[edu].year);
-    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
-    $(".education-entry:last").append(formattedName + formattedDegree);
-    $(".education-entry:last").append(formattedCity);
-    $(".education-entry:last").append(formattedYear);
-    $(".education-entry:last").append(formattedMajor);
-
-  }
-  $(".education-entry:last").append(HTMLonlineClasses);
-  for (var onl in education.onlineCourse) {
-    var onlTitle = HTMLonlineTitle.replace("%data%", education.onlineCourse[onl].title);
-    var onlSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[onl].school);
-    var onlYear = HTMLonlineDates.replace("%data%", education.onlineCourse[onl].year);
-    var onlUrl = HTMLonlineURL.replace("%data%", education.onlineCourse[onl].url);
-    $(".education-entry:last").append(onlTitle + onlSchool);
-    $(".education-entry:last").append(onlYear);
-    $(".education-entry:last").append(onlUrl);
-  }
-}
-displayEducation();
-
+var projects = {
+  "projects": [
+  {
+    "title": "High rise building in Gibraltar",
+    "year": "2006",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero! orem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero!",
+    "images":["http://placehold.it/150x100", "http://placehold.it/150x100", "http://placehold.it/150x100"]
+  },
+  {
+    "title": "TestProject",
+    "year": "2008",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero! orem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem optio doloribus blanditiis ea asperiores voluptatum repellat labore placeat, aliquid libero!",
+    "images":["http://placehold.it/150x100", "http://placehold.it/150x100", "http://placehold.it/150x100"]
+  }]
+};
 projects.display = function() {
   for(var project in projects.projects) {
     $("#projects").append(HTMLprojectStart);
@@ -153,42 +174,24 @@ projects.display = function() {
 };
 projects.display();
 
+var workArray = [];
+function locationizer(work) {
+    for (var loc in work.jobs){
+        var locadd = work.jobs[loc].location;
+        workArray.push(locadd);
+    }
+    return workArray;
+}
 $("#mapDiv").append(googleMap);
 
-formattedSkills = bio.skills;
-formattedName = HTMLheaderName.replace("%data%", bio.name);
-formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-formattedWlcmMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#topContacts").append(formattedMobile);
-$("#topContacts").append(formattedEmail);
-$("#topContacts").append(formattedTwitter);
-$("#topContacts").append(formattedGithub);
-$("#topContacts").append(formattedLocation);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWlcmMsg);
-$("#header").append(HTMLskillsStart);
-for(var skl in bio.skills){
-  formattedSkills = HTMLskills.replace("%data%", bio.skills[skl]);
-  $("#header").append(formattedSkills);
-}
-
-var interName = bio.name;
-function inName(interName){
-  var nname = interName;
-  var n = nname.lastIndexOf(" ");
-  var firstReturn = nname.slice(0,n);
-  var lastReturn = nname.slice(n+1);
-  firstReturn = firstReturn.toLowerCase();
+var intname = bio.name;
+function inName(intname){
+  var n = intname.lastIndexOf(" ");
+  var firstReturn = intname.slice(0,n);
+  var lastReturn = intname.slice(n+1);
+  firstReturn = firstReturn.slice(0,1).toUpperCase()+firstReturn.slice(1).toLowerCase();
   lastReturn = lastReturn.toUpperCase();
   var finalName = firstReturn + " " + lastReturn;
   return finalName;
-}
+  }
 $("#main").append(internationalizeButton);
