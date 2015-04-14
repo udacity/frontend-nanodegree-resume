@@ -1,2 +1,3 @@
-var testMessage = "Console test message!";
-console.log(testMessage);
+var firstName = "Sanora";
+var age = 32;
+console.log(firstName);
