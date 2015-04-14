@@ -1,3 +1,2 @@
-var firstName = "sanora";
-var age = 32;
-console.log(firstName);
+var awesomeThoughts = "I am sanora and I am AWESOME";
+console.log(awesomeThoughts);
