@@ -1,2 +1,5 @@
 $("#main").append("sanora griffin");
-(((299792458)*(100))/1000000000);
+var firstName = "Sanora";
+var age = 32;
+console.log(firstName);
+
