@@ -1,1 +1,2 @@
-$("#main").append("sanora griffin");
+var testMessage = "Console test message!";
+console.log(testMessage);
