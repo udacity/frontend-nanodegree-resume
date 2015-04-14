@@ -1,1 +1,1 @@
-$("#main").append(sanora griffin);
+$("#main").append("sanora griffin");
