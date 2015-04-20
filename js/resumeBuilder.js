@@ -172,7 +172,7 @@ $("#main").append(internationalizeButton);
 function inName(name){
 	var changed = name.split(" ");
 	
-	var first = changed[0].slice(0,1).toUpperCase()+changed[0].slice(1,changed[0].length).toLowerCase()+" "+changed[1].toUpperCase();
+	//var first = changed[0].slice(0,1).toUpperCase()+changed[0].slice(1,changed[0].length).toLowerCase()+" "+changed[1].toUpperCase();
 	console.log(first);
 }
 
