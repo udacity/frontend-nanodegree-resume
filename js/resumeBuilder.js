@@ -187,13 +187,4 @@ $("#mapDiv").append(googleMap);
 
 
 
-function formattingVars(varName,varSub,appending)
-{
-	formattedVar = varName.replace("%data%",varSub);
-	$(appending).append(formattedVar);
-
-}
-
-formattingVars(HTMLheaderName,"Sebastian Farago","#header");
-formattingVars(HTMLheaderRole,"Front End Web Developer","#header");
 
