@@ -1,4 +1,5 @@
 var bio = {
+	
 	"name":"Sebastian Farago",
 	"role":"Front End Web Developer",
 	"contacts":{
@@ -9,25 +10,42 @@ var bio = {
 					"location":"Subotica"
 				},
 	"welcomeMessage":"Welcome to my portfolio",
-	"skills":[
-	"HTML","CSS","Javascriot","Github","Wordpress"
+	"skills":
+	[
+	"HTML","CSS","Javascript","Github","Wordpress"
 	],
-	"bioPic":"images/fry.jpg",
+	"bioPic":"images/sebo.jpg",
 	"display":function()
-	{
+	{	
 		var formattedHeaderName = HTMLheaderName.replace("%data%",bio.name);
 		var formattedHeaderRole = HTMLheaderRole.replace("%data%",bio.role);
 		var formattedBioPic = HTMLbioPic.replace("%data%",bio.bioPic);
+		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
 		
-		$("#header").append(formattedHeaderName).append(formattedHeaderRole).append(formattedBioPic);
+		$("#header").prepend(formattedHeaderRole);
+		$("#header").prepend(formattedHeaderName);
+		$("#header").append(formattedWelcomeMsg);
+		$("#header").append(formattedBioPic);
 		
 		var formattedHTMLMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 		var formattedHTMLEmail = HTMLemail.replace("%data%",bio.contacts.email);
 		var formattedHTMLTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
 		var formattedHTMLLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 
-		$("#header").append(formattedHTMLMobile).append(formattedHTMLEmail).append(formattedHTMLTwitter).append(formattedHTMLLocation);	
+		$("#topContacts").prepend(formattedHTMLMobile).prepend(formattedHTMLEmail).prepend(formattedHTMLTwitter).prepend(formattedHTMLLocation);	
 
+		$("#header").append(HTMLskillsStart);
+
+		if (bio.skills.length > 0)
+		{
+	
+		for (item in bio.skills)
+		{
+		var formattedSkill = HTMLskills.replace("%data%",bio.skills[item]);
+		$("#skills").append(formattedSkill);
+		
+		}	
+		}
 	}
 }
 
@@ -151,22 +169,7 @@ var work =
 	"display":function()
 	{
 
-		if (bio.skills.length > 0)
-		{
-	
-		$("#header").append(HTMLskillsStart);
-
-		var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%",bio.skills[4]);
-		$("#skills").append(formattedSkill);
-		}
+		
 
 		for (jobs in work.jobs)
 		{	
@@ -194,26 +197,34 @@ var projects =
 		"title":"Portfolio Project",
 		"dates":"2015",
 		"description":"Created a project for my future portfolio",
-		"images":["",""]
+		"images":["images/project.jpg","images/project.jpg"]
 		}
 	],
 	"display":function()
 	{
-		$("#projects").append(HTMLprojectStart);
+		
 
 		for(item in projects.projects)
 		{
 
+			$("#projects").append(HTMLprojectStart);
+
 		var formatedTitle = HTMLprojectTitle.replace("%data%",projects.projects[item].title);
-		var formatedDates = HTMLprojectDates.replace("%data%",projects.projects[item].dates);
-		var formatedDescription = HTMLprojectDescription.replace("%data%",projects.projects[item].description);
-		var formatedImage = HTMLprojectImage.replace("%data%",projects.projects[item].image);
-		
 		$(".project-entry").append(formatedTitle);
+		var formatedDates = HTMLprojectDates.replace("%data%",projects.projects[item].dates);
 		$(".project-entry").append(formatedDates);
+		var formatedDescription = HTMLprojectDescription.replace("%data%",projects.projects[item].description);
 		$(".project-entry").append(formatedDescription);
-		$(".project-entry").append(formatedImage);
+
+		if(projects.projects[item].images.length > 0)
+		{
+			for(image in projects.projects[item].images)
+			{
+				var formatedImage = HTMLprojectImage.replace("%data%",projects.projects[item].images[image]);
+				$(".project-entry").append(formatedImage);
+			}
 		
+		}
 
 		}
 
@@ -224,24 +235,30 @@ var projects =
 
 projects.display();
 
-
-
-
-
 $("#main").append(internationalizeButton);
 
 function inName(name){
+	name = $("#name").text();
 	var changed = name.split(" ");
+	var firstName = changed[0].slice(0,1).toUpperCase()+changed[0].slice(1,changed[0].length).toLowerCase();
+	var lastName = changed[1].toUpperCase();
+	return(firstName + " " + lastName);
 	
-	//var first = changed[0].slice(0,1).toUpperCase()+changed[0].slice(1,changed[0].length).toLowerCase()+" "+changed[1].toUpperCase();
-	console.log(first);
 }
-
-//inName("Jovan Farago");
-
-//function display()
 	
 $("#mapDiv").append(googleMap);
+
+
+		
+		
+		
+
+
+
+
+
+
+	
 
 			
 			
