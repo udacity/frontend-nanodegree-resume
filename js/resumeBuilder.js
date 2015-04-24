@@ -14,7 +14,7 @@ var bio = {
 	[
 	"HTML","CSS","Javascript","Github","Wordpress"
 	],
-	"bioPic":"images/sebo.jpg",
+	"bioPic":"images/fry.jpg",
 	"display":function()
 	{	
 		var formattedHeaderName = HTMLheaderName.replace("%data%",bio.name);
@@ -198,7 +198,7 @@ var projects =
 		"title":"Portfolio Project",
 		"dates":"2015",
 		"description":"Created a project for my future portfolio",
-		"images":["images/project.jpg","images/project.jpg"]
+		"images":["197x148.gif","197x148.gif"]
 		}
 	],
 	"display":function()
