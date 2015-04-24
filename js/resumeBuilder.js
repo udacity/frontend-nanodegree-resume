@@ -198,7 +198,7 @@ var projects =
 		"title":"Portfolio Project",
 		"dates":"2015",
 		"description":"Created a project for my future portfolio",
-		"images":["197x148.gif","197x148.gif"]
+		"images":["images/197x148.gif","images/197x148.gif"]
 		}
 	],
 	"display":function()
