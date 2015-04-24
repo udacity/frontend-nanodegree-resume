@@ -277,4 +277,3 @@ $("#mapDiv").append(googleMap);
 
 
 
->>>>>>> style-exploration
