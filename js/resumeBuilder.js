@@ -32,7 +32,8 @@ var bio = {
 		var formattedHTMLTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
 		var formattedHTMLLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 
-		$("#topContacts").prepend(formattedHTMLMobile).prepend(formattedHTMLEmail).prepend(formattedHTMLTwitter).prepend(formattedHTMLLocation);	
+		$("#topContacts").prepend(formattedHTMLMobile).prepend(formattedHTMLEmail).prepend(formattedHTMLTwitter).prepend(formattedHTMLLocation);
+		$("#footerContacts").prepend(formattedHTMLMobile).prepend(formattedHTMLEmail).prepend(formattedHTMLTwitter).prepend(formattedHTMLLocation);	
 
 		$("#header").append(HTMLskillsStart);
 
