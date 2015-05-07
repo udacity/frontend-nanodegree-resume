@@ -8,9 +8,21 @@
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 20px;
+  overflow: hidden;
+}
+.section-hr {
+  margin: 20px;
+}
+
+.project-img {
+  width: 360;
+  height: 250;
 }
 
 h1 {
@@ -22,7 +34,7 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
   color: #999999;
   line-height: 29px;
   padding: 10px;
@@ -31,7 +43,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #F5A623;
   line-height: 22px;
 }
 
@@ -51,15 +63,17 @@ h2, h3, h4, h5 {
 
 .date-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 20px;
   color: #999999;
   line-height: 16px;
   float: left;
+  margin: 10px;
+  padding-left: 10px;
 }
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 20px;
   color: #999999;
   line-height: 16px;
   float: right;
@@ -67,15 +81,17 @@ h2, h3, h4, h5 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 20px;
   color: #333333;
   line-height: 21px;
+  padding-bottom: 5px;
 }
 
 a {
   color: #1199C3;
   text-decoration: none;
   margin-top: 10px;
+  margin-bottom: 10px;
   display: block;
 }
 
@@ -148,6 +164,8 @@ ul {
 
 img {
   padding: 10px;
+  max-width: 360px;
+  max-height: 250px;
 }
 
 /* Bar chart stuff */
@@ -174,12 +192,19 @@ span {
   #letsConnect {
     margin-top: 5%;
   }
+  * {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
+  * {
+    width: 100%;
+  }
+}
 }
 
 @media only screen and (max-width: 750px) {
@@ -192,6 +217,13 @@ span {
   .welcome-message {
     display: none;
   }
+  .project-img {
+    padding-left: 0;
+  }
+  body {
+    width: 360px;
+  }
+}
 }
 
 #map {
@@ -206,6 +238,7 @@ span {
   width: 100%;
   padding-bottom: 5%;
 }
+
 
 @media only screen and (min-width: 750px) {
   #skillsH3,

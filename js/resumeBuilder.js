@@ -1,15 +1,14 @@
 var bio = {
     "name": "Tim Mulqueen",
-    "role": "Web Developer",
+    "role": "Front End Developer",
     "pic_url": "images/fry.jpg",
     "welcome_msg": "Welcome to my website!",
     "contacts": {
         "email": "tim.mulqueen@gmail.com",
-        "mobile": "450 550 9123",
         "github": "https://github.com/Multimo",
-        "location": "Montreal",
+        "location": "Montreal"
     },
-    "skills": ["HTML and CSS", "Javascript", "Go-getter", "Kicking-ass", "Chewing-gum"],
+    "skills": ["HTML and CSS", "Javascript and JQuery", "Python", "Angular and React", "Wordpress"]
 };
 
 var work = {
@@ -23,12 +22,18 @@ var work = {
         "employer": "Whistler Blackcomb",
         "title": "Lead Head Lift Operator",
         "dates": "June 2012 - April 2013",
-        "location": "Whistler, Brittish Columbia",
+        "location": "Whistler, Brittish Columbia Canada",
         "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
-    }]
+    },    {
+        "employer": "Te Kura",
+        "title": "Enrolment Officer",
+        "dates": "November 2013 - April 2014",
+        "location": "Wellington, New Zealand",
+        "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
+    } ],
 };
 
-function displayWork() {
+work.displayWork = function() {
     for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -41,13 +46,13 @@ function displayWork() {
     }
 };
 
-displayWork();
+
 
 var education = {
     "schools": [{
         "name": "Victoria University",
         "degree": "Bachaelor of Arts",
-        "dates": "2012",
+        "dates": "2009 - 2012",
         "location": "Wellington, New Zealand",
         "major": ["Cultural Anthropology"],
         "url": "www.victoria.ac.nz"
@@ -63,7 +68,49 @@ var education = {
         "school": "Udacity",
         "dates": "March - 2015",
         "url": "https://www.udacity.com/course/ud775"
-    }, ]
+    }, 
+    {
+        "title": "Object Oriented Javascript",
+        "school": "Udacity",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },
+     {
+        "title": "Programming Foundations with Python",
+        "school": "Udacity",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },
+     {
+        "title": "Intro to JQuery",
+        "school": "Udacity",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },
+    {
+        "title": "Shaping up with Angular.js",
+        "school": "Codeschool",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },
+    {
+        "title": "Try JQuery",
+        "school": "Codeschool",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },
+    {
+        "title": "Intro to Html and CSS",
+        "school": "Udacity",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },
+    {
+        "title": "HTML5 Canvas",
+        "school": "Udacity",
+        "dates": "March - 2015",
+        "url": "https://www.udacity.com/course/ud804",
+    },]
    
 };
  education.displayedu= function() {
@@ -72,25 +119,35 @@ var education = {
 
             var formatted_schName = HTMLschoolName.replace("%data%", education.schools[place].name);
             var formatted_schjDegree = HTMLschoolDegree.replace("%data%", education.schools[place].degree);
-            var formatted_schjMajor = HTMLschoolMajor.replace("%data%", education.schools[place].major);
+            var formatted_schjMajor = HTMLschoolMajor.replace("%data%", education.schools[place].major[0]);
             var formatted_schjDates = HTMLschoolDates.replace("%data%", education.schools[place].dates);
             var formatted_schjCity = HTMLschoolLocation.replace("%data%", education.schools[place].location);
-            var formatted_schurl = HTMLprojectImage.replace("%data%", education.schools[place].url);
-            var formattedschool = formatted_schName + formatted_schjDegree + formatted_schjDates + formatted_schjMajor + formatted_schjCity + formatted_schurl;
+            var formattedschool = formatted_schjMajor + formatted_schName + formatted_schjDegree + formatted_schjCity + formatted_schjDates;
             $(".education-entry:last").append(formattedschool);
         }
+};
+education.displayonline = function(){
+    for (index in education.onlineCourses){
+     $("#online-course").append(HTMLonlineClasses);   
+
+        var formatted_onTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[index].title);
+        var formatted_onSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[index].school);
+        var formatted_onUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[index].url);
+        var formatted_online = formatted_onUrl + formatted_onTitle + formatted_onSchool +  HTMLline;
+        $(".online-entry:last").append(formatted_online);
     }
+};
 
 var project = {
     "projects": [{
-        "title": "project_1",
-        "dates": "2014",
-        "desciption": "Ko te moemoea a Maui kia haere ngatahi ai ",
-        "images": "images/fry.jpg",
+        "title": "Portfolio WebSite",
+        "dates": "2015",
+        "desciption": "A hand-coded and designed Portfolio website to showcase my projects. Website is designed to with a mobile first approach for viewing on all platforms",
+        "images": "images/profile.jpg",
     }, {
-        "title": "project_2",
+        "title": "Resume",
         "dates": "2014",
-        "desciption": "Ko te moemoea a Maui kia haere ngatahi ai ",
+        "desciption": "My version of the final project for Udacity's Intro to Javascript course. The entire website is populated by JSON and JQuery ",
         "images": "images/fry.jpg",
     }, ]
     
@@ -103,7 +160,7 @@ project.display = function() {
             var formatted_projDates = HTMLprojectDates.replace("%data%", project.projects[prjo].dates)
             var formatted_projDescription = HTMLprojectDescription.replace("%data%", project.projects[prjo].desciption)
             var formatted_proj_img = HTMLprojectImage.replace("%data%", project.projects[prjo].images);
-            var formattedproject = formatted_projTitle + formatted_projDates + formatted_projDescription + formatted_proj_img;
+            var formattedproject = formatted_projTitle + formatted_projDates + formatted_projDescription + formatted_proj_img + HTMLline;
             $(".project-entry:last").append(formattedproject);
         }
     }
@@ -115,12 +172,12 @@ var formatted_role = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formatted_role).prepend(formatted_name);
 
 //contact info 
-var formatted_mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+// var formatted_mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formatted_email = HTMLemail.replace("%data%", bio.contacts.email);
 var formatted_github = HTMLgithub.replace("%data%", bio.contacts.github);
 var formatted_location = HTMLlocation.replace("%data%", bio.contacts.location);
 
-$("#topContacts").append(formatted_mobile).append(formatted_email).append(formatted_github).append(formatted_location);
+$("#topContacts").append(formatted_email).append(formatted_github).append(formatted_location);
 
 //pic and welcome message
 var formatted_pic_url = HTMLbioPic.replace("%data%", bio.pic_url);
@@ -142,5 +199,8 @@ $("#mapDiv").append(googleMap);
 
 initializeMap();
 project.display();
- education.displayedu();
+work.displayWork();
+education.displayedu();
+education.displayonline();
+
 
