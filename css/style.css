@@ -16,6 +16,10 @@
   font-size: 20px;
   overflow: hidden;
 }
+.online-entry {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .section-hr {
   margin: 20px;
 }
@@ -85,6 +89,7 @@ p {
   color: #333333;
   line-height: 21px;
   padding-bottom: 5px;
+  padding: inherit;
 }
 
 a {
@@ -100,11 +105,12 @@ a {
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+  text-align: center;
 }
 
 #skillsH3 {
   color: #F5AE23;
-  display: none;
+  text-align: center;
 }
 
 .orange {
@@ -159,16 +165,18 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: block;
+
 }
 
 img {
   padding: 10px;
   max-width: 360px;
   max-height: 250px;
+  border-radius: 25px;
 }
 
-/* Bar chart stuff */
+/* Bar chart stuff 
 .chart div {
   font: 10px sans-serif;
   background-color: #4A4A4A;
@@ -178,7 +186,7 @@ img {
   height: 12px;
   color: white;
   display: inline-block;
-}
+}*/
 
 span {
   padding: 5px;
@@ -192,22 +200,19 @@ span {
   #letsConnect {
     margin-top: 5%;
   }
-  * {
-    width: 100%;
-  }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
-  * {
-    width: 100%;
-  }
-}
+  
 }
 
 @media only screen and (max-width: 750px) {
+  .biopic {
+    display: none;
+  }
   #letsConnect {
     margin-top: 10%;
   }
@@ -218,13 +223,18 @@ span {
     display: none;
   }
   .project-img {
-    padding-left: 0;
+    width: 100%;
   }
-  body {
-    width: 360px;
+  .gray {
+    width: 100%;
+    overflow: hidden;
   }
+  .project-img {
+    padding-left: 0px;
+  }
+  
 }
-}
+
 
 #map {
   display: block;
@@ -240,9 +250,3 @@ span {
 }
 
 
-@media only screen and (min-width: 750px) {
-  #skillsH3,
-  .biopic {
-    display: block;
-  }
-}

@@ -2,33 +2,27 @@ var bio = {
     "name": "Tim Mulqueen",
     "role": "Front End Developer",
     "pic_url": "images/fry.jpg",
-    "welcome_msg": "Welcome to my website!",
+    "welcome_msg": "I am a self-taught Web developer who is adicted to making websites look good and loves coding!",
     "contacts": {
         "email": "tim.mulqueen@gmail.com",
         "github": "https://github.com/Multimo",
-        "location": "Montreal"
+        "location": "Montreal, CA"
     },
     "skills": ["HTML and CSS", "Javascript and JQuery", "Python", "Angular and React", "Wordpress"]
 };
 
 var work = {
     "jobs": [{
-        "employer": "Te Kura",
+        "employer": "Te Kura (The Correspondence School)",
         "title": "Enrolment Officer",
         "dates": "November 2013 - April 2014",
         "location": "Wellington, New Zealand",
         "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
     }, {
         "employer": "Whistler Blackcomb",
-        "title": "Lead Head Lift Operator",
+        "title": "Lead Hand Lift Operator",
         "dates": "June 2012 - April 2013",
-        "location": "Whistler, Brittish Columbia Canada",
-        "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
-    },    {
-        "employer": "Te Kura",
-        "title": "Enrolment Officer",
-        "dates": "November 2013 - April 2014",
-        "location": "Wellington, New Zealand",
+        "location": "Whistler, Brittish Columbia, Canada",
         "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
     } ],
 };
@@ -73,43 +67,43 @@ var education = {
         "title": "Object Oriented Javascript",
         "school": "Udacity",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.udacity.com/course/ud015",
     },
      {
         "title": "Programming Foundations with Python",
         "school": "Udacity",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.udacity.com/course/ud036",
     },
      {
         "title": "Intro to JQuery",
         "school": "Udacity",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.udacity.com/course/ud245",
     },
     {
         "title": "Shaping up with Angular.js",
         "school": "Codeschool",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.codeschool.com/paths/javascript",
     },
     {
         "title": "Try JQuery",
         "school": "Codeschool",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.codeschool.com/paths/javascript",
     },
     {
         "title": "Intro to Html and CSS",
         "school": "Udacity",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.udacity.com/course/ud304",
     },
     {
         "title": "HTML5 Canvas",
         "school": "Udacity",
         "dates": "March - 2015",
-        "url": "https://www.udacity.com/course/ud804",
+        "url": "https://www.udacity.com/course/ud292",
     },]
    
 };
@@ -148,7 +142,7 @@ var project = {
         "title": "Resume",
         "dates": "2014",
         "desciption": "My version of the final project for Udacity's Intro to Javascript course. The entire website is populated by JSON and JQuery ",
-        "images": "images/fry.jpg",
+        "images": "images/resumeproject.jpg",
     }, ]
     
 };
@@ -160,7 +154,7 @@ project.display = function() {
             var formatted_projDates = HTMLprojectDates.replace("%data%", project.projects[prjo].dates)
             var formatted_projDescription = HTMLprojectDescription.replace("%data%", project.projects[prjo].desciption)
             var formatted_proj_img = HTMLprojectImage.replace("%data%", project.projects[prjo].images);
-            var formattedproject = formatted_projTitle + formatted_projDates + formatted_projDescription + formatted_proj_img + HTMLline;
+            var formattedproject = formatted_projTitle + formatted_projDescription + formatted_proj_img + HTMLline;
             $(".project-entry:last").append(formattedproject);
         }
     }
@@ -177,7 +171,9 @@ var formatted_email = HTMLemail.replace("%data%", bio.contacts.email);
 var formatted_github = HTMLgithub.replace("%data%", bio.contacts.github);
 var formatted_location = HTMLlocation.replace("%data%", bio.contacts.location);
 
+
 $("#topContacts").append(formatted_email).append(formatted_github).append(formatted_location);
+$("#footerContacts").append(formatted_email).append(formatted_github).append(formatted_location);
 
 //pic and welcome message
 var formatted_pic_url = HTMLbioPic.replace("%data%", bio.pic_url);
