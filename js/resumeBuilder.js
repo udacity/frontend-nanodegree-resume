@@ -17,13 +17,13 @@ var work = {
         "title": "Enrolment Officer",
         "dates": "November 2013 - April 2014",
         "location": "Wellington, New Zealand",
-        "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
+        "description": "Processed applications through propriety software in acordance to Ministry of Education policy. Answered Queries via phone or email regarding Te Kura processes or policy. Worked as a Team to meet processing quotas",
     }, {
         "employer": "Whistler Blackcomb",
         "title": "Lead Hand Lift Operator",
         "dates": "June 2012 - April 2013",
         "location": "Whistler, Brittish Columbia, Canada",
-        "description": "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tatahi ke",
+        "description": "Lead a team of Lift operators in providing world class service on one of the busiest Lifts in the world, performed the mechanical checks on Lifts safety compondents",
     } ],
 };
 
@@ -136,7 +136,7 @@ var project = {
     "projects": [{
         "title": "Portfolio WebSite",
         "dates": "2015",
-        "desciption": "A hand-coded and designed Portfolio website to showcase my projects. Website is designed to with a mobile first approach for viewing on all platforms",
+        "desciption": "A hand-coded and designed Portfolio website to showcase my projects. Website is designed with a mobile first approach for viewing on all platforms",
         "images": "images/profile.jpg",
     }, {
         "title": "Resume",

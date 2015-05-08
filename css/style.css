@@ -73,6 +73,7 @@ h2, h3, h4, h5 {
   float: left;
   margin: 10px;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .location-text {

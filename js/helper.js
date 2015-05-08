@@ -34,8 +34,8 @@ var HTMLprojectImage = '<img class="project-img" src="%data%"> </div>';
 var HTMLprojectUrl = '<a href="%data%">'; // taken from the a tag in title, concat for acutally url
 
 var HTMLschoolStart = '<div class="education-entry">';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolName = '<h3 href="#">%data%';
+var HTMLschoolDegree = ' -- %data%</h3>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div> </div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
