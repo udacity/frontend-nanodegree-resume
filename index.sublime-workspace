@@ -1,0 +1,248 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"border-t",
+				"border-style"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"a",
+				"applet	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"Install Package",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"dir",
+			"ls",
+			"dir",
+			"dis"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Migue/Dropbox/HTML and CSS/mug_project/css/main.css",
+		"/C/Users/Migue/Dropbox/HTML and CSS/mug_project/page-mock.png",
+		"/C/Users/Migue/Dropbox/HTML and CSS/mug_project/index.html",
+		"/C/Users/Migue/Dropbox/HTML and CSS/bootstrap/css/style.css",
+		"/C/Users/Migue/Dropbox/Sublime Text Build 3065/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Migue/Dropbox/HTML and CSS/bootstrap/Puppies.html",
+		"/C/Users/Migue/Dropbox/HTML and CSS/mug_project/config.json",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/framework/css/main.css",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/framework/test.html",
+		"/C/Users/Migue/Dropbox/HTML and CSS/bootstrap/bootstrap-prestructure.html",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/toplist/index.html",
+		"/C/Users/Migue/AppData/Local/Temp/Rar$DRa0.514/framework/test.html",
+		"/C/Users/Migue/AppData/Local/Temp/Rar$DRa0.758/framework/css/main.css",
+		"/C/Users/Migue/AppData/Local/Temp/Rar$DRa0.037/framework/css/main.css",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/toplist/framework/test.html",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/toplist/framework/css/main.css",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/toplist/test.html",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/toplist/styles.css",
+		"/C/Users/Migue/Dropbox/HTML and CSS/portfolio/toplist/framework/css/styles.css",
+		"/C/Users/Migue/Dropbox/HTML and CSS/Lesson 1/Lesson 1.html",
+		"/C/Users/Migue/Dropbox/djcode/templates/search_form.html",
+		"/C/Users/Migue/Dropbox/djcode/mysite/books/views.py",
+		"/C/Users/Migue/Dropbox/djcode/mysite/books/admin.py",
+		"/C/Users/Migue/Dropbox/djcode/mysite/books/models.py",
+		"/C/Users/Migue/Dropbox/djcode/mysite/books/migrations/0001_initial.py",
+		"/C/Users/Migue/Dropbox/djcode/mysite/mysite/settings.py",
+		"/C/Users/Migue/Dropbox/djcode/templates/base.html",
+		"/C/Users/Migue/Dropbox/djcode/mysite/mysite/__init__.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\">\n",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
