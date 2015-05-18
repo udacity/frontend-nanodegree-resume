@@ -1,1 +1,1 @@
-$("#main").append([Bruno Ramos]);
+$("#main").append(Bruno Ramos);
