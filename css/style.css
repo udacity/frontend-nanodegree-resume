@@ -11,10 +11,12 @@
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+
 
 h1 {
   font-size: 40px;
@@ -126,13 +128,25 @@ a {
  
 }
 
-.flex-box {
+
+  .flex-box {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+
+ @media only screen and (max-width: 750px){ #skills {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
 }
 
 .center-content {
