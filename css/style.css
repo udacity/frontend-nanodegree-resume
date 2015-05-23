@@ -2,16 +2,21 @@
   padding:0;
   margin:0;
   font-family: 'Roboto', sans-serif;
+
+
+
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+
 
 h1 {
   font-size: 40px;
@@ -33,6 +38,7 @@ h3 {
   font-size: 20px;
   color: #000000;
   line-height: 22px;
+  
 }
 
 h4 {
@@ -102,12 +108,14 @@ a {
 .white-text {
   font-weight: bold;
   color: #FFFFFF;
+
 }
 
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
   clear:both;
+ 
 }
 
 .dark-gray {
@@ -117,15 +125,28 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+ 
 }
 
-.flex-box {
+
+  .flex-box {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+
+ @media only screen and (max-width: 750px){ #skills {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
 }
 
 .center-content {
@@ -137,6 +158,7 @@ a {
 
 ul {
   list-style-type: none;
+
 }
 
 .biopic {
@@ -213,3 +235,4 @@ span {
     display: block;
   }
 }
+
