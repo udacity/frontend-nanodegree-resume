@@ -1,7 +1,7 @@
-*{
-    padding:0;
-    margin:0;
-    font-family: 'Roboto', sans-serif;
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .clearfix {
@@ -14,7 +14,6 @@
 }
 
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -22,7 +21,7 @@ h1 {
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -37,7 +36,7 @@ h3 {
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 17px;
@@ -82,9 +81,9 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   color: #F3F3F3;
-  line-height: 28px;
+  line-height: 32px;
 }
 
 #skillsH3 {
@@ -127,6 +126,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+  text-align: center;
 }
 
 .center-content {
@@ -140,7 +140,6 @@ ul {
   list-style-type: none;
 }
 
-
 .biopic {
   float: left;
   padding: 10px;
@@ -151,7 +150,6 @@ ul {
 img {
   padding: 10px;
 }
-
 
 /* Bar chart stuff */
 .chart div {
@@ -167,6 +165,7 @@ img {
 
 span {
   padding: 5px;
+  font-weight: bold;
 }
 
 #letsConnect {
