@@ -7,4 +7,6 @@ You may also wish to run git status after you have created the file. You should 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-	According to the chart, the staging area is the space where files can 	be added. It offers an intermediary space before the files added are 	committed
+	According to the chart, the staging area is the space where files can be added. It 	offers an intermediary space before the files added are committed
+	why isn’t this working?	
+why?
