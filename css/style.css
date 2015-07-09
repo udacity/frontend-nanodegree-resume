@@ -139,6 +139,10 @@ ul {
   list-style-type: none;
 }
 
+#skills {
+  flex-direction: column;
+}
+
 .biopic {
   float: left;
   padding: 10px;
@@ -212,4 +216,57 @@ span {
   .biopic {
     display: block;
   }
+}
+
+/* styles for radials*/
+
+#skillsGraph {
+    height: 230px;
+  width: 100%;
+}
+
+#div0, #div1, #div2, #div3 {
+    width: 25%;
+    min-width: 130px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.background {
+    fill: #fff;
+}
+
+.component {
+    fill: #e1e1e1;
+      cursor: auto;
+}
+
+.label {
+    font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+    text-anchor: middle;
+    fill: #333;
+    cursor: default;
+
+}
+
+.arc {
+    stroke-weight:0.1;
+    fill: #F5AE23;
+}
+
+
+.arc2 {
+    stroke-weight:0.1;
+    fill: #a5AE23;
+}
+
+
+.radial-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+svg {
+  width: 120px;
+  height: 150px;
 }
