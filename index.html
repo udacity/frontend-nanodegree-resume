@@ -39,6 +39,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
   <script src="js/jQuery.js"></script>
 
+  <!-- Load D3.js framework -->
+  <script src="js/d3.min.js"></script>
+  <script src="js/radialProgress.js"></script>
+
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
 
@@ -46,13 +50,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -73,7 +76,15 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="education" class='gray'>
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+    <div id="skillsGraph">
+      <h2>Technical Proficiency</h2>
+      <!--TODO remove these-->
+        <div id="div0"></div>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+    <div id="mapDiv" class='gray'>
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="letsConnect" class='dark-gray'>
@@ -115,25 +126,25 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+      document.getElementById('topContacts').style.backgroundColor = "black";
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementById('header').style.backgroundColor = "black";
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style.backgroundColor = "black";
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementById('projects').style.backgroundColor = "black";
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+      document.getElementById('education').style.backgroundColor = "black";
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('letsConnect').style.display = 'none';
+      document.getElementById('letsConnect').style.backgroundColor = "black";
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+      document.getElementById('mapDiv').style.backgroundColor = "black";
     }
   </script>
 </body>
