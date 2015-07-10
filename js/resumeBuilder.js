@@ -1,3 +1,4 @@
+// Define the bio object
 var bio = {
 	name: 'Toni Rib',
 	role: 'Front End Web Developer',
@@ -13,6 +14,7 @@ var bio = {
 	bioPic: 'images/cathat.jpg'
 };
 
+// Define the educatino object
 var education = {
 	schools:
 		{
@@ -39,6 +41,7 @@ var education = {
 	]
 };
 
+// Define the work object
 var work = {
 	jobs: [
 		{
@@ -69,6 +72,7 @@ var work = {
 	]
 };
 
+// Define the project object
 var project = {
 	projects: [
 		{
@@ -94,11 +98,25 @@ var project = {
 if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
 
-	var formattedSkill = "";
 	for (i = 0; i < bio.skills.length; i++) {
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 		$("#skills").append(formattedSkill);
-		console.log(formattedSkill);
 	}
+}
 
+// Loop through each job in the work object, format, and append to page
+for (job in work.jobs) {
+	$("#workExperience").append(HTMLworkStart);
+	var formattedJobEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedJobTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	$(".work-entry:last").append(formattedJobEmployer + formattedJobTitle);
+
+	var formattedDatesWorked = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	$(".work-entry:last").append(formattedDatesWorked);
+
+	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+	$(".work-entry:last").append(formattedWorkLocation);
+
+	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+	$(".work-entry:last").append(formattedWorkDescription);
 }
