@@ -4,6 +4,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: #848C8E;
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -15,7 +19,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #848C8E;
   line-height: 48px;
   display: inline;
 }
@@ -23,15 +27,19 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #3a3335;
   line-height: 29px;
   padding: 10px;
+}
+
+#projects h2, #skillsGraph h2 {
+  color: #848C8E;
 }
 
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #e8dcce;
   line-height: 22px;
 }
 
@@ -52,15 +60,19 @@ h2, h3, h4, h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #c6d8d3;
   line-height: 16px;
-  float: left;
+  display: block;
+}
+
+.project-entry .date-text {
+  color: #848c8e;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #c6d8d3;
   line-height: 16px;
   float: right;
 
@@ -68,7 +80,7 @@ h2, h3, h4, h5 {
 
 p {
   font-size: 14px;
-  color: #333333;
+  color: #3a3335;
   line-height: 21px;
 }
 
@@ -79,44 +91,72 @@ a {
   display: block;
 }
 
+.work-entry a, .education-entry a {
+  color: #e8dcce;
+}
+
+.project-entry a {
+  color: #d81e5b;
+}
+
+a.online-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3a3335;
+}
+
+a.online-url {
+  color: #c6d8d3;
+  margin: 0 0 20px;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #e8dcce;
   line-height: 28px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #848C8E;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #d81e5b;
+}
+
+#letsConnect .orange {
+  color: #e8dcce;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #848C8E;
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #c6d8d3;
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #848C8E;
   padding-bottom: 10px;
   clear:both;
 }
 
+.blue {
+  background-color: #c6d8d3;
+
+}
+
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #3a3335;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3a3335;
 }
 
 .flex-box {
@@ -168,6 +208,7 @@ img {
 
 span {
   padding: 5px;
+  color: #c6d8d3;
 }
 
 #letsConnect {
@@ -201,8 +242,8 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 #mapDiv {
@@ -233,16 +274,16 @@ span {
 }
 
 .background {
-    fill: #fff;
+    fill: #c6d8d3;
 }
 
 .component {
-    fill: #e1e1e1;
+    fill: #848C8E;
       cursor: auto;
 }
 
 .label {
-    font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+
     text-anchor: middle;
     fill: #333;
     cursor: default;
@@ -251,13 +292,13 @@ span {
 
 .arc {
     stroke-weight:0.1;
-    fill: #F5AE23;
+    fill: #d81e5b;
 }
 
 
 .arc2 {
     stroke-weight:0.1;
-    fill: #a5AE23;
+    fill: #e8dcce;
 }
 
 
