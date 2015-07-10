@@ -8,9 +8,8 @@ var bio = {
 		linkedin: 'http://linked.com/in/ToniRib',
 		location: 'Denver, CO'},
 	welcomeMessage: 'Welcome to my resume!',
-	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub', +
-	'MATLAB', 'Visual Basic', 'Perl', 'Ruby', 'Snowboarding', +
-	'Painting', 'Running Long Distances'],
+	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub','Visual Basic',
+	'Perl', 'MATLAB', 'Ruby', 'Snowboarding', 'Running Long Distances'],
 	bioPic: 'images/cathat.jpg'
 };
 
@@ -45,7 +44,7 @@ var work = {
 		{
 			title: 'Senior Systems Engineer',
 			employer: 'Raytheon',
-			dates: 'August 2014 - present'
+			dates: 'August 2014 - present',
 			location: 'Aurora, CO',
 			description: 'Manage and verify requirements for science' +
 			' mission data on the Joint Polar Satellite System' +
@@ -77,7 +76,7 @@ var project = {
 			dates: 'June 2015 - July 2015',
 			description: 'Online responsive portfolio created for' +
 			' Udacity\'s Front End Web Developer Nanodegree.',
-			images = ['images/portfolio_small.jpg',
+			images:['images/portfolio_small.jpg',
 			'images/portfolio_large.jpg']
 		},
 		{
@@ -90,3 +89,16 @@ var project = {
 	]
 };
 
+/* Check whether there are skills in the bio object and display skills
+ if there are */
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+
+	var formattedSkill = "";
+	for (i = 0; i < bio.skills.length; i++) {
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+		$("#skills").append(formattedSkill);
+		console.log(formattedSkill);
+	}
+
+}
