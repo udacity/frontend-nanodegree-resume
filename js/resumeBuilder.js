@@ -91,11 +91,27 @@ var project = {
 		}
 	]
 };
+// Add the contact info
+var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
+$('#header').prepend(formattedMobile);
+var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
+$('#header').prepend(formattedEmail);
 
+
+// Add name and role to the header of the page
 var formattedName = HTMLheaderName.replace('%data%', bio.name);
 var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
 $('#header').prepend(formattedRole);
 $('#header').prepend(formattedName);
+
+// Add biopic to the header of the page
+var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
+$('#header').prepend(formattedBioPic);
+
+// Add welcome message to the header of the page
+var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+$('#header').append(formattedMsg);
+
 
 /* Check whether there are skills in the bio object and display skills
  if there are */
@@ -167,3 +183,6 @@ project.display = function() {
 
 // call the project display method
 project.display();
+
+// Show the map
+// $('#mapDiv').append(googleMap);
