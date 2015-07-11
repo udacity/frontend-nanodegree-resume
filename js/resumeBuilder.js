@@ -123,7 +123,7 @@ var projects = {
 		{
 			"title": "Online Resume",
 			"dates" : "2015",
-			"description" : "This is a work in progress.",
+			"description" : "Wrote the JavaScript that powers this interactive resume, combining personal information stored in JSON format with provided HTML and CSS templates. This project involved building a JSON for each section of the resume, and using JavaScript and the jQuery library to iterate through each JSON, replace placeholder text with actual data, and manipulate the DOM by appending these dynamically created HTML strings to the relevant sections, building the resume the moment a user opens the site. The resume includes an interactive map that pulls location data from the resume and a D3.js visualization.",
 			"images" : ["images/p4.jpg", "images/p5.jpg"],
 			"url" : "https://github.com/hackdev/frontend-nanodegree-resume"
 		}
