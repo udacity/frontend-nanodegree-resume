@@ -11,7 +11,7 @@ var bio = {
 		},
 	"welcomeMessage" : "Family man and aspiring front-end developer. Sushi muncher. Harley fanboy. Happy camper.",
 	"skills" : ["HTML", "CSS", "JavaScript", "jQuery"],
-	"biopic" : "images/fry.jpg"
+	"biopic" : "images/dom.jpg"
 }
 
 //define bio display function
