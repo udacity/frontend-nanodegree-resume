@@ -86,14 +86,22 @@ var work = {
 
 //define work display function
 work.display = function() {
+
+	//iterate through jobs array and insert jobs
 	work.jobs.forEach(function (job) {
+
+		//add work-entry div to workExperience div
 		$("#workExperience").append(HTMLworkStart);
+
+		//replace placeholder text for each object property with JSON data
 		var formattedEmployer = HTMLworkEmployer.replace("#", job.url).replace("%data%", job.employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
 		var formattedDates = HTMLworkDates.replace("%data%", job.dates);
 		var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+
+		//insert formatted properties into the last work-entry div
 		$(".work-entry:last").append(formattedEmployerTitle)
 			.append(formattedLocation)
 			.append(formattedDates)
@@ -124,17 +132,34 @@ var projects = {
 
 //define projects display function
 projects.display = function() {
+
+	//iterate through projects array and insert projects
 	for (project in projects.projects) {
+
+		//add project-entry div to projects div
 		$("#projects").append(HTMLprojectStart);
+
+		//replace placeholder text for each object property with JSON data
 		var formattedTitle = HTMLprojectTitle.replace("#", projects.projects[project].url).replace("%data%", projects.projects[project].title);
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+
+		//insert formatted properties into the last project-entry div
 		$(".project-entry:last").append(formattedTitle)
 			.append(formattedDates)
 			.append(formattedDescription);
+
+		//insert images if available
+		//check whether images array has content
 		if (projects.projects[project].images.length>0){
-			for (image in projects.projects[project].images) {
+
+			//iterate through project images array to insert images
+			for (var image in projects.projects[project].images) {
+
+				//replace placeholder text with url from JSON data
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+
+				//insert image into the last project-entry div
 				$(".project-entry:last").append(formattedImage);
 			}
 		}
@@ -212,38 +237,79 @@ var education = {
 
 //define education display function
 education.display = function() {
+
+	//determine the number of schools in schools array
 	var length = education.schools.length;
+
+	//iterate through schools in reverse chronological order and insert school details
 	while (length--) {
+
+		//add education-entry div to education div
     	$("#education").append(HTMLschoolStart);
+
+    	//replace placeholder text for each object property with JSON data
     	var formattedSchool = HTMLschoolName.replace("%data%", education.schools[length].name).replace('#', education.schools[length].url);
     	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[length].location);
     	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[length].degree);
  		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[length].dates);
+
+ 		//insert formatted properties into the last education-entry div
 		$(".education-entry:last").append(formattedSchool);
   		$(".education-entry:last a").append(formattedDegree);
 		$(".education-entry:last").append(formattedLocation)
 				.append(formattedDates);
+
+		//insert majors if available
+		//check whether majors array has content
 		if (education.schools[length].majors.length > 0){
-			for (major in education.schools[length].majors) {
+
+			//iterate through majors array to insert majors
+			for (var major in education.schools[length].majors) {
+
+				//replace placeholder text with JSON data
 				var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[length].majors[major]);
+
+				//insert major into the last education-entry div
 				$(".education-entry:last").append(formattedMajor);
 			}
 		}
+
+		//insert minors if available
+		//check whether minors array has content
 		if (education.schools[length].minors.length > 0){
-			for (minor in education.schools[length].minors) {
+
+			//iterate through minors array to insert minors
+			for (var minor in education.schools[length].minors) {
+
+				//replace placeholder text with JSON data
 				var formattedMinor = HTMLschoolMinor.replace("%data%", education.schools[length].minors[minor]);
+
+				//insert minor into the last education-entry div
 				$(".education-entry:last").append(formattedMinor);
 			}
 		}
     }
+
+    //insert online courses if available
+	//check whether onlineCourses array has content
     if (education.onlineCourses.length > 0){
+
+    	//add Online Classes heading to education div
     	$("#education").append(HTMLonlineClasses);
+
+    	//iterate through onlineCourses array to insert courses
 		education.onlineCourses.forEach(function (course) {
+
+			//replace placeholder text with JSON data
 			var formattedTitle = HTMLonlineTitle.replace("%data%", course.title).replace("#", course.url);
 			var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
 			var formattedDate = HTMLonlineDates.replace("%data%", course.date);
 			var formattedURL = HTMLonlineURL.replace("%data%", course.url).replace("#", course.url);
+
+			//create new education-entry div
 			$("#education").append(HTMLschoolStart);
+
+			//insert course details into the last education-entry div
 			$(".education-entry:last").append(formattedTitle + formattedSchool)
 				.append(formattedDate)
 				.append(formattedURL);
@@ -255,6 +321,7 @@ education.display = function() {
 //adding a d3.js visualization
 function graph() {
 
+	//initialize proficiency object
 	var proficiency = {
 		"skills": [
 			{
@@ -279,7 +346,8 @@ function graph() {
 		]
 	}
 
-	for (skill in proficiency.skills) {
+	//iterate through skills array and create a radial for each skill
+	for (var skill in proficiency.skills) {
        var rp =  radialProgress($('#div'+skill)[0]) //[0] returns a HTML DOM Object instead of a jQuery Object, source: http://stackoverflow.com/questions/4069982/document-getelementbyid-vs-jquery
                 	.label(proficiency.skills[skill].skill)
                 	.diameter(150)
