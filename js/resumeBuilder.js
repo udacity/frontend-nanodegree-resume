@@ -16,35 +16,46 @@ var bio = {
 
 //define bio display function
 bio.display = function() {
+
+	//replace placeholder text for name and role with JSON data
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+
+	//insert name and role at the start of the header div
 	$("#header").prepend(formattedRole).prepend(formattedName);
-	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-	$("#topContacts").append(formattedMobile)
-	    .append(formattedEmail)
-	    .append(formattedGithub)
-	    .append(formattedTwitter)
-	    .append(formattedLocation);
+	//iterate through contacts object to insert contact info
+	for (var contact in bio.contacts) {
 
-	$("#footerContacts").append(formattedMobile)
-	    .append(formattedEmail)
-	    .append(formattedGithub)
-	    .append(formattedTwitter)
-	    .append(formattedLocation);
+		//replace placeholder text with contact label and value
+		var formattedContact = HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]);
 
+		//insert contact info at the topContacts and footerContacts divs
+		$("#topContacts").append(formattedContact);
+		$("#footerContacts").append(formattedContact);
+	};
+
+	//populate photo url and welcome message with JSON data
 	var formattedBiopic = HTMLbioPic.replace("%data%",bio.biopic);
 	var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+	//add photo and message to the header div
 	$("#header").append(formattedBiopic).append(formattedWelcomeMessage);
 
+	//display skills if available
+	//check whether skills array has content
 	if (bio.skills.length > 0) {
+
+		//add Skills heading and ul to header div
 		$("#header").append(HTMLskillsStart);
-		for (skill in bio.skills) {
+
+		//iterate through skills array to insert skills
+		for (var skill in bio.skills) {
+
+			//replace placeholder text with JSON data
 			var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+
+			//insert skill list item into skills ul
 			$("#skills").append(formattedSkill);
 		}
 	}
