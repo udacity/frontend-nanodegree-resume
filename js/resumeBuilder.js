@@ -124,7 +124,7 @@ var projects = {
 			"title": "Online Resume",
 			"dates" : "2015",
 			"description" : "This is a work in progress.",
-			"images" : ["images/fry.jpg", "images/fry.jpg"],
+			"images" : ["images/p4.jpg", "images/p5.jpg"],
 			"url" : "https://github.com/hackdev/frontend-nanodegree-resume"
 		}
 	]
