@@ -1,0 +1,25 @@
+What happens when you initialize a repository? Why do you need to do it?
+to start from the beginning
+
+You may also wish to run git status after you have created the file. You should see that now both files are listed as untracked files.
+
+	—something’s not quite right…
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	According to the chart, the staging area is the space where files can be added. It 	offers an intermediary space before the files added are committed
+	why isn’t this working?	
+	why?
+	why can’t I figure this out?!
+why
+
+1. How can you use the staging area to make sure you have one commit per logical change?
+	 the staging area will show you that each file is being tracked before you commit it
+
+2. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+	Branches give you places where you can make changes to your code and test and trouble shoot without worrying you will alter your master code to the point of no return
+
+
+3. How do the diagrams help you visualize the branch structure?
+
+My giving you a way to understand how the process flows.
