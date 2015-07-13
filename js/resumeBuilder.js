@@ -15,11 +15,44 @@ var bio = {
 	'Perl', 'MATLAB', 'Ruby', 'Snowboarding', 'Running Long Distances'],
 	bioPic: 'images/cathat.jpg',
 	display: function() {
-		// TODO: Add display function for the bio object here
+		// Add the contact info
+		var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
+		$('#header').prepend(formattedMobile);
+		var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
+		$('#header').prepend(formattedEmail);
+		var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
+		$('#header').prepend(formattedTwitter);
+		var formattedGitub = HTMLgithub.replace('%data%', bio.contacts.github);
+		$('#header').prepend(formattedGitub);
+
+		// Add name and role to the header of the page
+		var formattedName = HTMLheaderName.replace('%data%', bio.name);
+		var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
+		$('#header').prepend(formattedRole);
+		$('#header').prepend(formattedName);
+
+		// Add biopic to the header of the page
+		var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
+		$('#header').prepend(formattedBioPic);
+
+		// Add welcome message to the header of the page
+		var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+		$('#header').append(formattedMsg);
+
+		/* Check whether there are skills in the bio object and display skills
+		 if there are */
+		if (bio.skills.length > 0) {
+			$('#header').append(HTMLskillsStart);
+
+			for (var i = 0; i < bio.skills.length; i++) {
+				var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+				$('#skills').append(formattedSkill);
+			}
+		}
 	}
 };
 
-// Define the educatino object
+// Define the education object
 var education = {
 	schools:
 		{
@@ -127,41 +160,7 @@ var projects = {
 		}
 	}
 };
-// Add the contact info
-var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
-$('#header').prepend(formattedMobile);
-var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
-$('#header').prepend(formattedEmail);
-var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
-$('#header').prepend(formattedTwitter);
-var formattedGitub = HTMLgithub.replace('%data%', bio.contacts.github);
-$('#header').prepend(formattedGitub);
 
-// Add name and role to the header of the page
-var formattedName = HTMLheaderName.replace('%data%', bio.name);
-var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-$('#header').prepend(formattedRole);
-$('#header').prepend(formattedName);
-
-// Add biopic to the header of the page
-var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
-$('#header').prepend(formattedBioPic);
-
-// Add welcome message to the header of the page
-var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-$('#header').append(formattedMsg);
-
-
-/* Check whether there are skills in the bio object and display skills
- if there are */
-if (bio.skills.length > 0) {
-	$('#header').append(HTMLskillsStart);
-
-	for (var i = 0; i < bio.skills.length; i++) {
-		var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-		$('#skills').append(formattedSkill);
-	}
-}
 
 // Loop through each job in the work object, format, and append to page
 function displayWork() {
@@ -196,7 +195,9 @@ function locationizer(work_obj) {
 	return locationArray;
 }
 
-// call the project display method
+// Call all of the display methods for the four main objects
+// to display the content to the page
+bio.display();
 projects.display();
 
 // Show the map
