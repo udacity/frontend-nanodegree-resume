@@ -56,9 +56,9 @@ var bio = {
 var education = {
 	schools:
 		{
-			name: 'USC',
+			name: 'University of Southern California',
 			location: 'Los Angeles, CA',
-			degree: 'BS',
+			degree: 'Bachelor of Science',
 			majors: 'Astronautical Engineering',
 			dates: '2011',
 			url: 'www.usc.edu'
@@ -80,7 +80,25 @@ var education = {
 		}
 	],
 	display: function() {
-		// TODO: Add display function for the education object here
+		$('#education').append(HTMLschoolStart);
+
+		var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools.name);
+		$('.education-entry:last').append(formattedSchoolName);
+
+		var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools.degree);
+		$('.education-entry:last').append(formattedSchoolDegree);
+
+		var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools.dates);
+		$('.education-entry:last').append(formattedSchoolDates);
+
+		var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools.location);
+		$('.education-entry:last').append(formattedSchoolLocation);
+
+		var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools.majors);
+		$('.education-entry:last').append(formattedSchoolMajor);
+
+		var formattedSchoolUrl = HTMLschoolURL.replace('%data%', education.schools.url);
+		$('.education-entry:last').append(formattedSchoolUrl);
 	}
 };
 
@@ -190,6 +208,7 @@ function locationizer(work_obj) {
 // Call all of the display methods for the four main objects
 // to display the content to the page
 bio.display();
+education.display();
 work.display();
 projects.display();
 
