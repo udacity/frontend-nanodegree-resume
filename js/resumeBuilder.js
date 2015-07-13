@@ -115,7 +115,21 @@ var work = {
 		}
 	],
 	display: function() {
-		// TODO: Add display function for work object here (use below)
+		for (var job in work.jobs) {
+			$('#workExperience').append(HTMLworkStart);
+			var formattedJobEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
+			var formattedJobTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
+			$('.work-entry:last').append(formattedJobEmployer + formattedJobTitle);
+
+			var formattedDatesWorked = HTMLworkDates.replace('%data%', work.jobs[job].dates);
+			$('.work-entry:last').append(formattedDatesWorked);
+
+			var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+			$('.work-entry:last').append(formattedWorkLocation);
+
+			var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+			$('.work-entry:last').append(formattedWorkDescription);
+		}
 	}
 };
 
@@ -162,28 +176,6 @@ var projects = {
 };
 
 
-// Loop through each job in the work object, format, and append to page
-function displayWork() {
-	for (var job in work.jobs) {
-		$('#workExperience').append(HTMLworkStart);
-		var formattedJobEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-		var formattedJobTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-		$('.work-entry:last').append(formattedJobEmployer + formattedJobTitle);
-
-		var formattedDatesWorked = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-		$('.work-entry:last').append(formattedDatesWorked);
-
-		var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
-		$('.work-entry:last').append(formattedWorkLocation);
-
-		var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-		$('.work-entry:last').append(formattedWorkDescription);
-	}
-}
-
-// Call the displayWork function to add previous jobs to the page
-displayWork();
-
 // locationizer function
 function locationizer(work_obj) {
 	var locationArray = [];
@@ -198,6 +190,7 @@ function locationizer(work_obj) {
 // Call all of the display methods for the four main objects
 // to display the content to the page
 bio.display();
+work.display();
 projects.display();
 
 // Show the map
