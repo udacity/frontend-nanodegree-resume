@@ -2,7 +2,7 @@
 /* TODO: Check out template and update school & class titles to replace # with the
 		 correct URL, then see if you can delete the actual url display */
 
-// Define the bio object based on the given template
+// Define the bio object based on the provided template
 var bio = {
 	name: 'Toni Rib',
 	role: 'Front End Web Developer',
@@ -16,6 +16,8 @@ var bio = {
 	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub','Visual Basic',
 	'Perl', 'MATLAB', 'Ruby', 'Snowboarding', 'Running Long Distances'],
 	bioPic: 'images/cathat.jpg',
+
+	// Add a dipslay method for the object
 	display: function() {
 		/* This function uses jQuery to modify the index.html file using
 		data from the bio object. Main information is added to the header div,
@@ -58,7 +60,7 @@ var bio = {
 	}
 };
 
-// Define the education object based on the given template
+// Define the education object based on the provided template
 var education = {
 
 	// Add schools array to the education object
@@ -90,6 +92,8 @@ var education = {
 			url: 'https://www.coursera.org/specialization/jhudatascience/1'
 		}
 	],
+
+	// Add a display method for the object
 	display: function() {
 		/* This function uses jQuery to modify the index.html file using
 		data from the education object. Main information is added to education div
@@ -124,7 +128,6 @@ var education = {
 			$('.education-entry:last').append(formattedSchoolUrl);
 		}
 
-
 		// Add the online courses title
 		$('#education').append(HTMLonlineClasses);
 
@@ -147,8 +150,10 @@ var education = {
 	}
 };
 
-// Define the work object
+// Define the work object based on provided template
 var work = {
+	/* Add the jobs object which contains all prior jobs (in this case,
+		not incuding internships) */
 	jobs: [
 		{
 			// TODO: Add to job desriptions based on actual resume.
@@ -161,7 +166,7 @@ var work = {
 			' Common Ground System program.'
 		},
 		{
-			title: 'System & Software Safety Engineer',
+			title: 'Systems & Software Safety Engineer',
 			employer: 'Raytheon',
 			dates: 'June 2013 - August 2014',
 			location: 'Aurora, CO',
@@ -177,33 +182,47 @@ var work = {
 			' inspections and ensuring all processes are followed.'
 		}
 	],
+
+	// Add a display method to the object
 	display: function() {
+		/* This function uses jQuery to modify the index.html file using
+		data from the work object. Main information is added to workExperience div
+		as work entries. */
 		for (var job in work.jobs) {
+
+			// Create a new work-entry
 			$('#workExperience').append(HTMLworkStart);
+
+			// Add the job employer & title to the work entry
 			var formattedJobEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
 			var formattedJobTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
 			$('.work-entry:last').append(formattedJobEmployer + formattedJobTitle);
 
+			// Add the dates worked to the work entry
 			var formattedDatesWorked = HTMLworkDates.replace('%data%', work.jobs[job].dates);
 			$('.work-entry:last').append(formattedDatesWorked);
 
+			// Add the job location (city, state) to the work entry
 			var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
 			$('.work-entry:last').append(formattedWorkLocation);
 
+			// Add the job description to the work entry
 			var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
 			$('.work-entry:last').append(formattedWorkDescription);
 		}
 	}
 };
 
-// Define the project object
+// Define the project object based on the provided template
 var projects = {
+
+	// Add the projects object with an array of all projects
 	projects: [
 		{
 			title: 'Portfolio Site',
 			dates: 'June 2015 - July 2015',
 			description: 'Online responsive portfolio created for' +
-			' Udacity\'s Front End Web Developer Nanodegree.',
+			' Udacity\'s Front End Web Developer Nanodegree using JavaScipt and jQuery.',
 			images:['images/resize_portfolio_large_500.png']
 		},
 		{
@@ -214,19 +233,30 @@ var projects = {
 			images: ['images/resize_blog.png']
 		}
 	],
+
+	// Add a display method to the object
 	display: function() {
+		/* This function uses jQuery to modify the index.html file using
+		data from the projects object. Main information is added to projects div
+		as project entries. */
 		for (var entry in projects.projects) {
+
+			// Create a new project-entry
 			$('#projects').append(HTMLprojectStart);
 
+			// Add the project title to the project entry
 			var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[entry].title);
 			$('.project-entry:last').append(formattedTitle);
 
+			// Add the project dates to the project entry
 			var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[entry].dates);
 			$('.project-entry:last').append(formattedDates);
 
+			// Add the project description to the project entry
 			var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[entry].description);
 			$('.project-entry:last').append(formattedDescription);
 
+			// If project images exist, add them to the project entry
 			if (projects.projects[entry].images.length > 0) {
 				for (var image in projects.projects[entry].images) {
 					var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[entry].images[image]);
@@ -238,20 +268,8 @@ var projects = {
 	}
 };
 
-
-// locationizer function
-function locationizer(work_obj) {
-	var locationArray = [];
-
-	for (var job in work_obj.jobs) {
-		locationArray.push(work_obj.jobs[job].location);
-	}
-
-	return locationArray;
-}
-
-// Call all of the display methods for the four main objects
-// to display the content to the page
+/* Call all of the display methods for the four main objects to display
+the content to the page */
 bio.display();
 education.display();
 work.display();
