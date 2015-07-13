@@ -104,8 +104,8 @@ a {
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.blue {
+  background-color: #6699cc;
 }
 
 .orange-text {
@@ -115,6 +115,10 @@ a {
 .white-text {
   font-weight: bold;
   color: #fff;
+}
+
+.center-text{
+  color: black;
 }
 
 .gray {
@@ -164,6 +168,7 @@ img {
 
 span {
   padding: 5px;
+  color: #66cccc;
 }
 
 #lets-connect {
