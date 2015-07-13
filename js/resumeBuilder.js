@@ -80,6 +80,7 @@ var education = {
 		}
 	],
 	display: function() {
+		// Display for the school object
 		$('#education').append(HTMLschoolStart);
 
 		var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools.name);
@@ -99,6 +100,23 @@ var education = {
 
 		var formattedSchoolUrl = HTMLschoolURL.replace('%data%', education.schools.url);
 		$('.education-entry:last').append(formattedSchoolUrl);
+
+		// Display for the onlineCourses object
+		$('#education').append(HTMLonlineClasses);
+
+		for (var course in education.onlineCourses) {
+			var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title);
+			$('.education-entry:last').append(formattedOnlineTitle);
+
+			var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].school);
+			$('.education-entry:last').append(formattedOnlineSchool);
+
+			var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[course].dates);
+			$('.education-entry:last').append(formattedOnlineDates);
+
+			var formattedOnlineUrl = HTMLonlineURL.replace('%data%', education.onlineCourses[course].url);
+			$('.education-entry:last').append(formattedOnlineUrl);
+		}
 	}
 };
 
