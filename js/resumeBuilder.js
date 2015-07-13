@@ -58,9 +58,11 @@ var bio = {
 	}
 };
 
-// Define the education object
+// Define the education object based on the given template
 var education = {
-	schools:
+
+	// Add schools array to the education object
+	schools: [
 		{
 			name: 'University of Southern California',
 			location: 'Los Angeles, CA',
@@ -68,7 +70,10 @@ var education = {
 			majors: 'Astronautical Engineering',
 			dates: '2011',
 			url: 'www.usc.edu'
-		},
+		}
+	],
+
+	// Add completed online courses array to the education object
 	onlineCourses: [
 	// TODO: Update 'dates' to be date finished
 	// TODO: Update title and url to be COURSES not degrees (include all Coursera)
@@ -86,31 +91,47 @@ var education = {
 		}
 	],
 	display: function() {
-		// Display for the school object
-		$('#education').append(HTMLschoolStart);
+		/* This function uses jQuery to modify the index.html file using
+		data from the education object. Main information is added to education div
+		as education entries. */
 
-		var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools.name);
-		$('.education-entry:last').append(formattedSchoolName);
+		for (var school in education.schools) {
+			// Start a new education entry for each class
+			$('#education').append(HTMLschoolStart);
 
-		var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools.degree);
-		$('.education-entry:last').append(formattedSchoolDegree);
+			// Add the school name to the education entry
+			var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[school].name);
+			$('.education-entry:last').append(formattedSchoolName);
 
-		var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools.dates);
-		$('.education-entry:last').append(formattedSchoolDates);
+			// Add the degree completed to the education entry
+			var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
+			$('.education-entry:last').append(formattedSchoolDegree);
 
-		var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools.location);
-		$('.education-entry:last').append(formattedSchoolLocation);
+			// Add the date of graduation to the education entry
+			var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[school].dates);
+			$('.education-entry:last').append(formattedSchoolDates);
 
-		var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools.majors);
-		$('.education-entry:last').append(formattedSchoolMajor);
+			// Add the school's location (city, state) to the education entry
+			var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[school].location);
+			$('.education-entry:last').append(formattedSchoolLocation);
 
-		var formattedSchoolUrl = HTMLschoolURL.replace('%data%', education.schools.url);
-		$('.education-entry:last').append(formattedSchoolUrl);
+			// Add the major to the education entry
+			var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[school].majors);
+			$('.education-entry:last').append(formattedSchoolMajor);
 
-		// Display for the onlineCourses object
+			// Add the school's url to the education entry
+			var formattedSchoolUrl = HTMLschoolURL.replace('%data%', education.schools[school].url);
+			$('.education-entry:last').append(formattedSchoolUrl);
+		}
+
+
+		// Add the online courses title
 		$('#education').append(HTMLonlineClasses);
 
 		for (var course in education.onlineCourses) {
+			// Start a new education entry for each online class
+			$('#education').append(HTMLschoolStart);
+
 			var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title);
 			$('.education-entry:last').append(formattedOnlineTitle);
 
