@@ -1,4 +1,6 @@
 // TODO: convert the 4 objects to JSON format and run them through the JSON linter
+/* TODO: Check out template and update school & class titles to replace # with the
+		 correct URL, then see if you can delete the actual url display */
 
 // Define the bio object based on the given template
 var bio = {
@@ -16,7 +18,12 @@ var bio = {
 	bioPic: 'images/cathat.jpg',
 	display: function() {
 		/* This function uses jQuery to modify the index.html file using
-		data from the bio object. Information is added to the header div */
+		data from the bio object. Main information is added to the header div,
+		while contact information is added to topContacts and footerContacts */
+
+		// Add welcome message to the header of the page
+		var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+		$('#header').prepend(formattedMsg);
 
 		// Add the contact info to the header and footer contact sections
 		var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
@@ -38,12 +45,8 @@ var bio = {
 		var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
 		$('#header').prepend(formattedBioPic);
 
-		// Add welcome message to the header of the page
-		var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-		$('#header').append(formattedMsg);
-
-		/* Check whether there are skills in the bio object and display skills
-		 if there are */
+		/* Check whether there are skills in the bio object and display all
+		skills if there are */
 		if (bio.skills.length > 0) {
 			$('#header').append(HTMLskillsStart);
 
