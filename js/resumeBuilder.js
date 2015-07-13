@@ -1,3 +1,5 @@
+// TODO: convert the 4 objects to JSON format and run them through the JSON linter
+
 // Define the bio object
 var bio = {
 	name: 'Toni Rib',
@@ -6,12 +8,15 @@ var bio = {
 		email: 'tonimarierib@gmail.com',
 		phone: '612-670-6397',
 		github: 'tonirib',
-		linkedin: 'http://linked.com/in/ToniRib',
+		twitter: '@leelaeltigre',
 		location: 'Denver, CO'},
 	welcomeMessage: 'Welcome to my resume!',
 	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub','Visual Basic',
 	'Perl', 'MATLAB', 'Ruby', 'Snowboarding', 'Running Long Distances'],
-	bioPic: 'images/cathat.jpg'
+	bioPic: 'images/cathat.jpg',
+	display: function() {
+		// TODO: Add display function for the bio object here
+	}
 };
 
 // Define the educatino object
@@ -22,10 +27,12 @@ var education = {
 			location: 'Los Angeles, CA',
 			degree: 'BS',
 			majors: 'Astronautical Engineering',
-			dates: '2007 - 2011',
+			dates: '2011',
 			url: 'www.usc.edu'
 		},
 	onlineCourses: [
+	// TODO: Update 'dates' to be date finished
+	// TODO: Update title and url to be COURSES not degrees (include all Coursera)
 		{
 			title: 'Front End Web Development Nanodegree',
 			school: 'Udacity',
@@ -38,13 +45,17 @@ var education = {
 			dates: 'January 2015 - present',
 			url: 'https://www.coursera.org/specialization/jhudatascience/1'
 		}
-	]
+	],
+	display: function() {
+		// TODO: Add display function for the education object here
+	}
 };
 
 // Define the work object
 var work = {
 	jobs: [
 		{
+			// TODO: Add to job desriptions based on actual resume.
 			title: 'Senior Systems Engineer',
 			employer: 'Raytheon',
 			dates: 'August 2014 - present',
@@ -69,11 +80,14 @@ var work = {
 			description: 'Ensure quality of the satellite by performing' +
 			' inspections and ensuring all processes are followed.'
 		}
-	]
+	],
+	display: function() {
+		// TODO: Add display function for work object here (use below)
+	}
 };
 
 // Define the project object
-var project = {
+var projects = {
 	projects: [
 		{
 			title: 'Portfolio Site',
@@ -89,14 +103,39 @@ var project = {
 			' changing careers.',
 			images: ['images/resize_blog.png']
 		}
-	]
+	],
+	display: function() {
+		for (var entry in projects.projects) {
+			$('#projects').append(HTMLprojectStart);
+
+			var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[entry].title);
+			$('.project-entry:last').append(formattedTitle);
+
+			var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[entry].dates);
+			$('.project-entry:last').append(formattedDates);
+
+			var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[entry].description);
+			$('.project-entry:last').append(formattedDescription);
+
+			if (projects.projects[entry].images.length > 0) {
+				for (var image in projects.projects[entry].images) {
+					var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[entry].images[image]);
+					$('.project-entry:last').append(formattedImage);
+				}
+
+			}
+		}
+	}
 };
 // Add the contact info
 var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
 $('#header').prepend(formattedMobile);
 var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
 $('#header').prepend(formattedEmail);
-
+var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
+$('#header').prepend(formattedTwitter);
+var formattedGitub = HTMLgithub.replace('%data%', bio.contacts.github);
+$('#header').prepend(formattedGitub);
 
 // Add name and role to the header of the page
 var formattedName = HTMLheaderName.replace('%data%', bio.name);
@@ -157,32 +196,8 @@ function locationizer(work_obj) {
 	return locationArray;
 }
 
-// Add the project display method
-project.display = function() {
-	for (var entry in project.projects) {
-		$('#projects').append(HTMLprojectStart);
-
-		var formattedTitle = HTMLprojectTitle.replace('%data%', project.projects[entry].title);
-		$('.project-entry:last').append(formattedTitle);
-
-		var formattedDates = HTMLprojectDates.replace('%data%', project.projects[entry].dates);
-		$('.project-entry:last').append(formattedDates);
-
-		var formattedDescription = HTMLprojectDescription.replace('%data%', project.projects[entry].description);
-		$('.project-entry:last').append(formattedDescription);
-
-		if (project.projects[entry].images.length > 0) {
-			for (var image in project.projects[entry].images) {
-				var formattedImage = HTMLprojectImage.replace('%data%', project.projects[entry].images[image]);
-				$('.project-entry:last').append(formattedImage);
-			}
-
-		}
-	}
-}
-
 // call the project display method
-project.display();
+projects.display();
 
 // Show the map
 // $('#mapDiv').append(googleMap);
