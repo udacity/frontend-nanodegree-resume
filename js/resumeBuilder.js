@@ -1,6 +1,6 @@
 // TODO: convert the 4 objects to JSON format and run them through the JSON linter
 
-// Define the bio object
+// Define the bio object based on the given template
 var bio = {
 	name: 'Toni Rib',
 	role: 'Front End Web Developer',
@@ -15,15 +15,18 @@ var bio = {
 	'Perl', 'MATLAB', 'Ruby', 'Snowboarding', 'Running Long Distances'],
 	bioPic: 'images/cathat.jpg',
 	display: function() {
-		// Add the contact info
+		/* This function uses jQuery to modify the index.html file using
+		data from the bio object. Information is added to the header div */
+
+		// Add the contact info to the header and footer contact sections
 		var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
-		$('#header').prepend(formattedMobile);
+		$('ul#topContacts, ul#footerContacts').prepend(formattedMobile);
 		var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
-		$('#header').prepend(formattedEmail);
+		$('ul#topContacts, ul#footerContacts').prepend(formattedEmail);
 		var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
-		$('#header').prepend(formattedTwitter);
+		$('ul#topContacts, ul#footerContacts').prepend(formattedTwitter);
 		var formattedGitub = HTMLgithub.replace('%data%', bio.contacts.github);
-		$('#header').prepend(formattedGitub);
+		$('ul#topContacts, ul#footerContacts').prepend(formattedGitub);
 
 		// Add name and role to the header of the page
 		var formattedName = HTMLheaderName.replace('%data%', bio.name);
