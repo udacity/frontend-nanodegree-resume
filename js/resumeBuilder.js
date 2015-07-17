@@ -13,8 +13,7 @@ var bio = {
 		twitter: '@leelaeltigre',
 		location: 'Denver, CO'},
 	welcomeMessage: 'Welcome to my resume!',
-	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub','Visual Basic',
-	'Perl', 'MATLAB', 'Ruby', 'Snowboarding', 'Running Long Distances'],
+	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub', 'MATLAB'],
 	bioPic: 'images/cathat.jpg',
 
 	// Add a dipslay method for the object
@@ -23,9 +22,15 @@ var bio = {
 		data from the bio object. Main information is added to the header div,
 		while contact information is added to topContacts and footerContacts */
 
+		// Add name and role to the header of the page
+		var formattedName = HTMLheaderName.replace('%data%', bio.name);
+		var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
+		$('#header').prepend(formattedRole);
+		$('#header').prepend(formattedName);
+
 		// Add welcome message to the header of the page
 		var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-		$('#header').prepend(formattedMsg);
+		$('#header').append(formattedMsg);
 
 		// Add the contact info to the header and footer contact sections
 		var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
@@ -36,16 +41,12 @@ var bio = {
 		$('ul#topContacts, ul#footerContacts').prepend(formattedTwitter);
 		var formattedGitub = HTMLgithub.replace('%data%', bio.contacts.github);
 		$('ul#topContacts, ul#footerContacts').prepend(formattedGitub);
-
-		// Add name and role to the header of the page
-		var formattedName = HTMLheaderName.replace('%data%', bio.name);
-		var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-		$('#header').prepend(formattedRole);
-		$('#header').prepend(formattedName);
+		var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
+		$('ul#topContacts, ul#footerContacts').prepend(formattedLocation);
 
 		// Add biopic to the header of the page
 		var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
-		$('#header').prepend(formattedBioPic);
+		$('#header').append(formattedBioPic);
 
 		/* Check whether there are skills in the bio object and display all
 		skills if there are */
@@ -54,7 +55,7 @@ var bio = {
 
 			for (var i = 0; i < bio.skills.length; i++) {
 				var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-				$('#skills').append(formattedSkill);
+				$('ul#skills').append(formattedSkill);
 			}
 		}
 	}
