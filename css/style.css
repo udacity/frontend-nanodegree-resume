@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font: normal 300 1em 'Raleway', sans-serif;
 }
 
 .clear-fix {
@@ -29,12 +29,13 @@ h1 {
   color: #33cc00;
   line-height: 48px;
   display: inline;
+  font-weight: 500;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #009900;
   line-height: 29px;
   padding: 10px;
 }
@@ -95,7 +96,7 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #ffff00;
+  color: #ff3399;
   line-height: 28px;
 }
 
@@ -106,11 +107,11 @@ a {
 }
 
 .blue {
-  background-color: #6699cc;
+  background-color: #333399;
 }
 
-.orange-text {
-  color: #ff9933;
+.yellow-text {
+  color: #ffff00;
 }
 
 .white-text {
@@ -119,7 +120,7 @@ a {
 }
 
 .center-text{
-  color: black;
+  color: #33cc00;
 }
 
 .gray {
@@ -132,9 +133,8 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #333366;
 }
 
 .flex-box {

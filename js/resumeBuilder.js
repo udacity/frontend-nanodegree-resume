@@ -12,7 +12,8 @@ var bio = {
 		github: 'tonirib',
 		twitter: '@leelaeltigre',
 		location: 'Denver, CO'},
-	welcomeMessage: 'Welcome to my resume!',
+	welcomeMessage: 'Saving the world, one website at a time.',
+
 	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub', 'MATLAB'],
 	bioPic: 'images/cathat.jpg',
 
@@ -43,7 +44,8 @@ var bio = {
 
 			for (var i = 0; i < bio.skills.length; i++) {
 				var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-				$('ul#skills').append(formattedSkill);
+				$('#skills').append(formattedSkill);
+				$('#skills').toggleClass('flex-box', false);
 			}
 		}
 
