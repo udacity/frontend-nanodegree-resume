@@ -1,3 +1,6 @@
+//declare Strict Mode
+"use strict";
+
 //initialize bio object
 var bio = {
 	"name" : "Dmitriy O. Makarov",
@@ -59,7 +62,7 @@ bio.display = function() {
 			$("#skills").append(formattedSkill);
 		}
 	}
-}
+};
 
 //initialize work object
 var work = {
@@ -134,7 +137,7 @@ var projects = {
 projects.display = function() {
 
 	//iterate through projects array and insert projects
-	for (project in projects.projects) {
+	for (var project in projects.projects) {
 
 		//add project-entry div to projects div
 		$("#projects").append(HTMLprojectStart);
