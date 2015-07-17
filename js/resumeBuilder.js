@@ -28,9 +28,25 @@ var bio = {
 		$('#header').prepend(formattedRole);
 		$('#header').prepend(formattedName);
 
+		// Add biopic to the header of the page
+		var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
+		$('#header').append(formattedBioPic);
+
 		// Add welcome message to the header of the page
 		var formattedMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
 		$('#header').append(formattedMsg);
+
+		/* Check whether there are skills in the bio object and display all
+		skills if there are */
+		if (bio.skills.length > 0) {
+			$(HTMLskillsStart).insertAfter('.welcome-message');
+
+			for (var i = 0; i < bio.skills.length; i++) {
+				var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+				$('ul#skills').append(formattedSkill);
+			}
+		}
+
 
 		// Add the contact info to the header and footer contact sections
 		var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.phone);
@@ -44,20 +60,8 @@ var bio = {
 		var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 		$('ul#topContacts, ul#footerContacts').prepend(formattedLocation);
 
-		// Add biopic to the header of the page
-		var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
-		$('#header').append(formattedBioPic);
 
-		/* Check whether there are skills in the bio object and display all
-		skills if there are */
-		if (bio.skills.length > 0) {
-			$('#header').append(HTMLskillsStart);
 
-			for (var i = 0; i < bio.skills.length; i++) {
-				var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-				$('ul#skills').append(formattedSkill);
-			}
-		}
 	}
 };
 
@@ -87,7 +91,7 @@ var education = {
 			url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
 		},
 		{
-			title: 'Data Science Speclization',
+			title: 'Data Science Specialization',
 			school: 'Coursera',
 			dates: 'January 2015 - present',
 			url: 'https://www.coursera.org/specialization/jhudatascience/1'

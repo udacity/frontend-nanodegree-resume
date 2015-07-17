@@ -95,13 +95,14 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #00ccff;
+  color: #ffff00;
   line-height: 28px;
 }
 
 #skills-h3 {
   color: #00ccff;
-  display: none;
+  display: flex;
+  padding: 5px;
 }
 
 .blue {
@@ -216,6 +217,6 @@ span {
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
-    display: block;
+    display: flex;
   }
 }
