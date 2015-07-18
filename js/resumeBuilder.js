@@ -1,6 +1,6 @@
 // TODO: convert the 4 objects to JSON format and run them through the JSON linter
 
-// Define the bio object based on the provided template
+// Define the bio object based on the provided template (in JSON format)
 var bio = {
 	"name": "Toni Rib",
 	"role": "Front End Web Developer",
@@ -60,70 +60,64 @@ bio.display = function() {
 	$('ul#topContacts, ul#footerContacts').prepend(formattedLocation);
 };
 
-// Define the education object based on the provided template
+// Define the education object based on the provided template (in JSON format)
+// with both completed degrees and completed online courses
 var education = {
-
-	// Add schools array to the education object
-	schools: [
+	"schools": [
 		{
-			name: 'University of Southern California',
-			location: 'Los Angeles, CA',
-			degree: 'Bachelor of Science',
-			majors: 'Astronautical Engineering',
-			dates: '2011',
-			url: 'http://www.usc.edu'
+			"name": "University of Southern California",
+			"location": "Los Angeles, CA",
+			"degree": "Bachelor of Science",
+			"majors": "Astronautical Engineering",
+			"dates": "2011",
+			"url": "http://www.usc.edu"
 		}
 	],
-
-	// Add completed online courses array to the education object
-	onlineCourses: [
+	"onlineCourses": [
 		{
-			title: 'Front End Web Development Nanodegree',
-			school: 'Udacity',
-			dates: 'TBD',
-			url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
+			"title": "Front End Web Development Nanodegree",
+			"school": "Udacity",
+			"dates": "TBD",
+			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 		},
 		{
-			title: 'The Data Scientist\'s Toolbox',
-			school: 'Coursera',
-			dates: 'January 2015',
-			url: 'https://www.coursera.org/course/datascitoolbox'
+			"title": "The Data Scientists Toolbox",
+			"school": "Coursera",
+			"dates": "January 2015",
+			"url": "https://www.coursera.org/course/datascitoolbox"
 		},
 		{
-			title: 'R Programming',
-			school: 'Coursera',
-			dates: 'February 2015',
-			url: 'https://www.coursera.org/course/rprog'
+			"title": "R Programming",
+			"school": "Coursera",
+			"dates": "February 2015",
+			"url": "https://www.coursera.org/course/rprog"
 		},
 		{
-			title: 'Getting and Cleaning Data',
-			school: 'Coursera',
-			dates: 'March 2015',
-			url: 'https://www.coursera.org/course/getdata'
+			"title": "Getting and Cleaning Data",
+			"school": "Coursera",
+			"dates": "March 2015",
+			"url": "https://www.coursera.org/course/getdata"
 		},
-
 		{
-			title: 'Exploratory Data Analysis',
-			school: 'Coursera',
-			dates: 'April 2015',
-			url: 'https://www.coursera.org/course/exdata'
+			"title": "Exploratory Data Analysis",
+			"school": "Coursera",
+			"dates": "April 2015",
+			"url": "https://www.coursera.org/course/exdata"
 		},
-
 		{
-			title: 'Reproducible Research',
-			school: 'Coursera',
-			dates: 'May 2015',
-			url: 'https://www.coursera.org/course/repdata'
+			"title": "Reproducible Research",
+			"school": "Coursera",
+			"dates": "May 2015",
+			"url": "https://www.coursera.org/course/repdata"
 		},
-
 		{
-			title: 'Statistical Inference',
-			school: 'Coursera',
-			dates: 'June 2015',
-			url: 'https://www.coursera.org/course/statinference'
+			"title": "Statistical Inference",
+			"school": "Coursera",
+			"dates": "June 2015",
+			"url": "https://www.coursera.org/course/statinference"
 		}
 	]
-};
+}
 
 // Add a display method for the object
 education.display = function() {
