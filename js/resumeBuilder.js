@@ -228,26 +228,21 @@ work.display = function() {
 
 // Define the project object based on the provided template
 var projects = {
-
-	// Add the projects object with an array of all projects
-	projects: [
+	"projects": [
 		{
-			title: 'Portfolio Site',
-			dates: 'June 2015 - July 2015',
-			description: 'Online responsive portfolio created for' +
-			' Udacity\'s Front End Web Developer Nanodegree using JavaScipt and jQuery.',
-			images:['images/resize_portfolio_large_500.png']
+			"title": "Portfolio Site",
+			"dates": "June 2015 - July 2015",
+			"description": "Online responsive portfolio created for Udacity\"s Front End Web Developer Nanodegree using JavaScipt and jQuery.",
+			"images": ["images/resize_portfolio_large_500.png"]
 		},
-
 		{
-			title: 'Insomniacs Waking Dream Blog',
-			dates: 'July 2015 - present',
-			description: 'Personal online blog about life and' +
-			' changing careers.',
-			images: ['images/resize_blog.png']
+			"title": "Insomniacs Waking Dream Blog",
+			"dates": "July 2015 - present",
+			"description": "Personal online blog about life and changing careers.",
+			"images": ["images/resize_blog.png"]
 		}
 	]
-};
+}
 
 // Add a display method to the object
 projects.display = function() {
