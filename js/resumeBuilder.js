@@ -272,4 +272,4 @@ work.display();
 projects.display();
 
 // Show the map
-// $('#mapDiv').append(googleMap);
+$('#map-div').append(googleMap);
