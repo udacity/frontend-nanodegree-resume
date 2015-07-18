@@ -2,19 +2,18 @@
 
 // Define the bio object based on the provided template
 var bio = {
-	name: 'Toni Rib',
-	role: 'Front End Web Developer',
-	contacts: {
-		email: 'tonimarierib@gmail.com',
-		phone: '612-670-6397',
-		github: 'tonirib',
-		twitter: '@leelaeltigre',
-		location: 'Denver, CO'},
-	welcomeMessage: 'Changing the world, one website at a time.',
-
-	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub', 'MATLAB'],
-	bioPic: 'images/cathat.jpg'
-};
+	"name": "Toni Rib",
+	"role": "Front End Web Developer",
+	"contacts": {
+		"email": "tonimarierib@gmail.com",
+		"phone": "612-670-6397",
+		"github": "tonirib",
+		"twitter": "@leelaeltigre",
+		"location": "Denver, CO"},
+	"welcomeMessage": "Changing the world, one website at a time.",
+	"skills": ["HTML", "CSS", "JavaScript", "R", "Git", "GitHub", "MATLAB"],
+	"bioPic": "images/cathat.jpg"
+}
 
 // Add a dipslay method for the object
 bio.display = function() {
