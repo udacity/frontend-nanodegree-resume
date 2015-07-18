@@ -169,14 +169,10 @@ education.display = function() {
 		var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title);
 		formattedOnlineTitle = formattedOnlineTitle.replace('#', education.onlineCourses[course].url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].school);
-		// var onlineTitle = $('#education').find('h3');
-		//$(onlineTitle).insertAfter(formattedOnlineTitle + formattedOnlineSchool);
-		// $(formattedOnlineTitle + formattedOnlineSchool).insertAfter(onlineTitle);
 		$('.online-entry:last').append(formattedOnlineTitle + formattedOnlineSchool);
 
+		// Format the course date and add it to the last online class entry
 		var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[course].dates);
-		// $(onlineTitle).insertAfter(formattedOnlineDates);
-		// $(formattedOnlineDates).insertAfter(onlineTitle);
 		$('.online-entry:last').append(formattedOnlineDates);
 	}
 };
