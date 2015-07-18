@@ -1,3 +1,7 @@
+/*
+Main Page Styles
+*/
+
 body,
 div,
 ul,
@@ -14,16 +18,6 @@ h6 {
   font: normal 300 1em 'Raleway', sans-serif;
 }
 
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
 h1 {
   font-size: 40px;
   color: #33cc00;
@@ -37,7 +31,6 @@ h2 {
   font-size: 24px;
   color: #009900;
   line-height: 29px;
-  padding: 10px;
 }
 
 h3 {
@@ -62,6 +55,55 @@ h5 {
 
 }
 
+/*
+Link, Paragraph, and Image Styles
+*/
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+img {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/*
+Span & List Styles
+*/
+
+span {
+  padding: 5px;
+  color: #66cccc;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*
+Class Styles
+*/
+
+.clear-fix {
+  overflow: auto;
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+  padding: 0 5%;
+}
 
 .date-text {
   font-style: italic;
@@ -77,19 +119,6 @@ h5 {
   line-height: 16px;
   float: right;
 
-}
-
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
 }
 
 .welcome-message {
@@ -149,26 +178,11 @@ a {
   padding: 2.5% 5%;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
   display: none;
-}
-
-img {
-  padding: 10px;
-  width: 100%;
-  max-width: 500px;
-}
-
-span {
-  padding: 5px;
-  color: #66cccc;
 }
 
 #lets-connect {
@@ -183,6 +197,10 @@ span {
   font-weight: 500;
 }
 
+/*
+Map Styles
+*/
+
 #map {
   display: block;
   height: 100%;
@@ -195,7 +213,9 @@ span {
   padding-bottom: 5%;
 }
 
-/* Media queries to handle various device widths */
+/*
+Media queries to handle various device widths
+*/
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {

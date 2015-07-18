@@ -1,6 +1,4 @@
 // TODO: convert the 4 objects to JSON format and run them through the JSON linter
-/* TODO: Check out template and update school & class titles to replace # with the
-		 correct URL, then see if you can delete the actual url display */
 
 // Define the bio object based on the provided template
 var bio = {
@@ -12,7 +10,7 @@ var bio = {
 		github: 'tonirib',
 		twitter: '@leelaeltigre',
 		location: 'Denver, CO'},
-	welcomeMessage: 'Saving the world, one website at a time.',
+	welcomeMessage: 'Changing the world, one website at a time.',
 
 	skills: ['HTML', 'CSS', 'JavaScript', 'R', 'Git', 'GitHub', 'MATLAB'],
 	bioPic: 'images/cathat.jpg'
@@ -138,7 +136,7 @@ education.display = function() {
 		// Start a new education entry for each class
 		$('#education').append(HTMLschoolStart);
 
-		// Add the school name to the education entry
+		// Add the school name to the education entry and link to the url
 		var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[school].name);
 		formattedSchoolName = formattedSchoolName.replace('#', education.schools[school].url);
 		var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
@@ -254,6 +252,7 @@ var projects = {
 			' Udacity\'s Front End Web Developer Nanodegree using JavaScipt and jQuery.',
 			images:['images/resize_portfolio_large_500.png']
 		},
+
 		{
 			title: 'Insomniacs Waking Dream Blog',
 			dates: 'July 2015 - present',
@@ -305,5 +304,5 @@ education.display();
 work.display();
 projects.display();
 
-// Show the map
+// Show the Google Map
 $('#map-div').append(googleMap);
