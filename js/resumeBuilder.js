@@ -80,8 +80,6 @@ var education = {
 
 	// Add completed online courses array to the education object
 	onlineCourses: [
-	// TODO: Update 'dates' to be date finished
-	// TODO: Update title and url to be COURSES not degrees (include all Coursera)
 		{
 			title: 'Front End Web Development Nanodegree',
 			school: 'Udacity',
@@ -89,10 +87,43 @@ var education = {
 			url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
 		},
 		{
-			title: 'Data Science Specialization',
+			title: 'The Data Scientist\'s Toolbox',
 			school: 'Coursera',
-			dates: 'January 2015 - present',
-			url: 'https://www.coursera.org/specialization/jhudatascience/1'
+			dates: 'January 2015',
+			url: 'https://www.coursera.org/course/datascitoolbox'
+		},
+		{
+			title: 'R Programming',
+			school: 'Coursera',
+			dates: 'February 2015',
+			url: 'https://www.coursera.org/course/rprog'
+		},
+		{
+			title: 'Getting and Cleaning Data',
+			school: 'Coursera',
+			dates: 'March 2015',
+			url: 'https://www.coursera.org/course/getdata'
+		},
+
+		{
+			title: 'Exploratory Data Analysis',
+			school: 'Coursera',
+			dates: 'April 2015',
+			url: 'https://www.coursera.org/course/exdata'
+		},
+
+		{
+			title: 'Reproducible Research',
+			school: 'Coursera',
+			dates: 'May 2015',
+			url: 'https://www.coursera.org/course/repdata'
+		},
+
+		{
+			title: 'Statistical Inference',
+			school: 'Coursera',
+			dates: 'June 2015',
+			url: 'https://www.coursera.org/course/statinference'
 		}
 	]
 };
