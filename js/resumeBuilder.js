@@ -170,37 +170,30 @@ education.display = function() {
 
 // Define the work object based on provided template
 var work = {
-	/* Add the jobs object which contains all prior jobs (in this case,
-		not incuding internships) */
-	jobs: [
+	"jobs": [
 		{
-			// TODO: Add to job desriptions based on actual resume.
-			title: 'Senior Systems Engineer',
-			employer: 'Raytheon',
-			dates: 'August 2014 - present',
-			location: 'Aurora, CO',
-			description: 'Manage and verify requirements for science' +
-			' mission data on the Joint Polar Satellite System' +
-			' Common Ground System program.'
+			"title": "Senior Systems Engineer",
+			"employer": "Raytheon",
+			"dates": "August 2014 - present",
+			"location": "Aurora, CO",
+			"description": "Manage and verify requirements for science mission data on the Joint Polar Satellite System Common Ground System program."
 		},
 		{
-			title: 'Systems & Software Safety Engineer',
-			employer: 'Raytheon',
-			dates: 'June 2013 - August 2014',
-			location: 'Aurora, CO',
-			description: 'Ensure the safety of the system by identifying' +
-			' hazards and implementing appropriate controls.'
+			"title": "Systems & Software Safety Engineer",
+			"employer": "Raytheon",
+			"dates": "June 2013 - August 2014",
+			"location": "Aurora, CO",
+			"description": "Ensure the safety of the system by identifying hazards and implementing appropriate controls."
 		},
 		{
-			title: 'Quality Engineer',
-			employer: 'Boeing',
-			dates: 'October 2011 - June 2013',
-			location: 'El Segundo, CA',
-			description: 'Ensure quality of the satellite by performing' +
-			' inspections and ensuring all processes are followed.'
+			"title": "Quality Engineer",
+			"employer": "Boeing",
+			"dates": "October 2011 - June 2013",
+			"location": "El Segundo, CA",
+			"description": "Ensure quality of the satellite by performing inspections and ensuring all processes are followed."
 		}
 	]
-};
+}
 
 
 // Add a display method to the work object
