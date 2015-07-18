@@ -68,7 +68,6 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: left;
 }
 
 .location-text {
@@ -174,6 +173,14 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+.small-link {
+  font-size: 16px;
+}
+
+.font-heavy {
+  font-weight: 500;
 }
 
 #map {
