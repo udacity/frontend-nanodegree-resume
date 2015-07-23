@@ -182,18 +182,13 @@ var formattedWelcomeMsg=HTMLWelcomeMsg.replace("%data%",bio.welcomeMessage);
 $(function() {
 	var navPosition = $('#navBar').offset().top,
 	navBar = document.getElementById('navBar'),
-	header = document.getElementById('header');
-
-	// On window resize recalculates menu element heights
-	window.addEventListener('resize', function(){
-			navPosition = $('#navBar').offset().top;
-		  navBar = document.getElementById('navBar');
-		  header = document.getElementById('header');
-		}
-	);
+	header = document.getElementById('header'),
+	currentScroll;
 
   function navControl() {
-    var currentScroll = $(document).scrollTop();
+		var currentScroll = $(document).scrollTop();
+		console.log(navPosition);
+		console.log(currentScroll);
     if (currentScroll >= navPosition) {
       navBar.classList.add('fixed-nav');
       header.classList.add('expand-header');
@@ -207,15 +202,15 @@ $(function() {
 });
 
 $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.href);
+		var target = $(this.href);
 		var navHeight = $('#navBar').height();
 		console.log(target);
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: target.offset().top-navHeight
-        }, 3000);
-    }
+		if( target.length ) {
+				event.preventDefault();
+				$('html, body').animate({
+						scrollTop: target.offset().top
+				}, 3000);
+		}
 });
 
 $("#footerContacts").append(formattedEmail,formattedMobile,formattedGithub,formattedLocation);
