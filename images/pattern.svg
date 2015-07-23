@@ -1,0 +1,10 @@
+<svg id="pattern" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="4" fill="#333" />
+      <rect x="2" y="0" width="2" height="2" fill="#3B3B3B" />
+      <rect x="0" y="2" width="2" height="2" fill="#3B3B3B" />
+    </pattern>
+  </defs>
+  <rect fill="url(#hatch)" x="0" y="0" width="100%" height="100%" />
+</svg>

@@ -4,13 +4,83 @@
     font-family: 'Roboto', sans-serif;
 }
 
+#top-contacts {
+  display: inline-block;
+}
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-.education-entry, .work-entry, .project-entry {
+#main {
+
+}
+
+#projects {
+  background-color: white;
+}
+
+nav {
+  background-color: rgba(0,0,0, 0.8);
+  width: 100%;
+  color: white;
+  padding: 0;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.flex-item {
+  float: left;
+}
+.education-entry, .work-entry, .project-entry{
   padding-left: 5%;
   padding-right: 5%;
 }
 
+.company {
+  padding: 20px 0 10px 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.project-entry {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-projects {
+  padding: 10px 5% 0 0;
+  width: 40%;
+  min-width: 450px;
+}
+/*flex-projects has to be responsive for mobile, find the breakpoint*/
+@media screen and (max-width: 1000px) {
+  .flex-projects {
+    min-width: 450px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .flex-projects {
+    width: 95%;
+    min-width: 320px;
+  }
+}
+
+.flex-projects>a>img {
+  padding: 0;
+}
+
+#main::before {
+  background: linear-gradient(to right,#fff 0,#0085b2 33%,#ff007f 66%,#000 100%);
+}
 
 h1 {
 
@@ -23,7 +93,7 @@ h1 {
 h2 {
   font-style: bold;
   font-size: 24px;
-  color: #999999;
+  color: #6A1B9A;
   line-height: 29px;
   padding: 10px;
 }
@@ -73,7 +143,7 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #9B4DCA;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -118,9 +188,21 @@ a {
   background-color: #4A4A4A;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848;*/
+  background: #222 url(../images/pattern.svg);
+  padding-bottom: 7%;
+  /*position: fixed;
+  top: 0;
+  padding-bottom: 0;
+  z-index: -1;*/
+}
+
+/* Solution to the transition of the fixed navigations, unless this is added the first time you press
+the menu item since the menu is removed and calculations in navControl already took place before removal menu
+overlaps with some of the content.*/
+.expand-header {
+  margin-bottom: 60px;
 }
 
 .flex-box {
@@ -138,8 +220,39 @@ a {
 
 ul {
   list-style-type: none;
+  width: 100%;
 }
 
+nav.flex-box {
+  padding: 5px;
+}
+
+nav>ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav>ul>li {
+  text-align: center;
+  /*width:calc( 100%/3 );*/
+}
+
+nav>ul>li>a {
+  padding: 0 10px 0 10px;
+  margin: 0;
+  line-height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  text-align: center;
+  border-radius: 2px;
+  color: #C311AC;
+}
+
+nav>ul>li>a:hover {
+  background-color: #4A148C;
+  /*color: #9B4DCA;*/
+  color: wheat;
+}
 
 .biopic {
   float: left;
@@ -150,6 +263,8 @@ ul {
 
 img {
   padding: 10px;
+  width: 100%;
+  max-width: 450px;
 }
 
 
@@ -167,6 +282,10 @@ img {
 
 span {
   padding: 5px;
+}
+
+.purple {
+  color: #A46FA6;
 }
 
 #letsConnect {
@@ -208,6 +327,11 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  background-color: white;
+}
+
+#footerContacts {
+  background: #222 url(../images/pattern.svg);
 }
 
 @media only screen and (min-width: 750px) {
