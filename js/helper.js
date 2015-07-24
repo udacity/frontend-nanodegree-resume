@@ -109,7 +109,7 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-
+  /* Append googleMap to #map-div in resumeBuilder.js to see this in action
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
