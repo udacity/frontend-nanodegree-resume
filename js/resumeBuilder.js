@@ -72,55 +72,46 @@ $("#main").append(work["position"]);
 $("#main").append(education.school);
 */
 
-displayBio();
-displayWork();
+var formattedName = HTMLheaderName.replace("%data%", bio.me[0].Name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.me[0].role);
 
-function displayBio() {
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
 
-	var formattedName = HTMLheaderName.replace("%data%", bio.me[0].Name);
-	var formattedRole = HTMLheaderRole.replace("%data%", bio.me[0].role);
+if (bio.me[0].skills !== 0)	{
+	$("#header").append(HTMLskillsStart);
 
-	$("#header").prepend(formattedRole);
-	$("#header").prepend(formattedName);
+	var formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[0]);
+	$("#skills").append(formattedSkills);
 
-	if (bio.me[0].skills !== 0)	{
-		$("#header").append(HTMLskillsStart);
+	formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[1]);
+	$("#skills").append(formattedSkills);
 
-		var formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[0]);
-		$("#skills").append(formattedSkills);
+	formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[2]);
+	$("#skills").append(formattedSkills);
 
-		formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[1]);
-		$("#skills").append(formattedSkills);
-
-		formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[2]);
-		$("#skills").append(formattedSkills);
-
-	}
 }
-function displayWork()	{
 
-	if (work.Coop[0] !== 0)	{
-		var formattedWork;
-		var formattedTitle;
-		var formattedcombined;
-		$("#workExperience").append(HTMLworkStart);
-		for (position in work.Coop) {
+if (work.Coop[0] !== 0)	{
+	var formattedWork;
+	var formattedTitle;
+	var formattedcombined;
+	$("#workExperience").append(HTMLworkStart);
+	for (position in work.Coop) {
 
-			formattedWork = HTMLworkEmployer.replace("%data%", work.Coop[position].Name);
-			formattedTitle = HTMLworkTitle.replace("%data%", work.Coop[position].Title);
-			formattedcombined = formattedWork + formattedTitle;
-			$(".work-entry").append(formattedcombined);
+		formattedWork = HTMLworkEmployer.replace("%data%", work.Coop[position].Name);
+		formattedTitle = HTMLworkTitle.replace("%data%", work.Coop[position].Title);
+		formattedcombined = formattedWork + formattedTitle;
+		$(".work-entry").append(formattedcombined);
 
-			formattedWork = HTMLworkDates.replace("%data%", work.Coop[position].Date);
-			$(".work-entry").append(formattedWork);
+		formattedWork = HTMLworkDates.replace("%data%", work.Coop[position].Date);
+		$(".work-entry").append(formattedWork);
 
-			formattedWork = HTMLworkLocation.replace("%data%", work.Coop[position].City);
-			$(".work-entry").append(formattedWork);
+		formattedWork = HTMLworkLocation.replace("%data%", work.Coop[position].City);
+		$(".work-entry").append(formattedWork);
 
-			formattedWork = HTMLworkDescription.replace("%data%", work.Coop[position].Description);
-			$(".work-entry").append(formattedWork);
-
-		}
+		formattedWork = HTMLworkDescription.replace("%data%", work.Coop[position].Description);
+		$(".work-entry").append(formattedWork);
 	}
 }
 
