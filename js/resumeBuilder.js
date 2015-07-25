@@ -47,7 +47,7 @@ var work = {
 var bio = {
 	"me": [
 		{
-			"Name" : "Jinwook",
+			"Name" : "Jinwook Lee",
 			"role": "Electrical Engineer-in-Training",
 			"City": "Vancouver, BC",
 			"skills" : ["Engineering", "Cheesing", "Gaming"],
@@ -74,6 +74,10 @@ $("#main").append(education.school);
 
 displayBio();
 displayWork();
+$(document).click(function(loc) {
+  console.log("X: " + loc.pageX + " Y: " + loc.pageY);
+});
+//var english = true;
 
 function displayBio() {
 
@@ -82,9 +86,10 @@ function displayBio() {
 
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
+	$("#header").append(HTMLskillsStart);
 
 	if (bio.me[0].skills !== 0)	{
-		$("#header").append(HTMLskillsStart);
+		
 
 		var formattedSkills = HTMLskills.replace("%data%", bio.me[0].skills[0]);
 		$("#skills").append(formattedSkills);
@@ -123,6 +128,64 @@ function displayWork()	{
 		}
 	}
 }
+
+var work = {
+	"jobs" : [
+	{
+		"employer": "Udacity",
+	    "title": "Course Developer",
+	    "location": "Mountain View, CA",
+	    "dates": "Feb 2014 - Current"
+	},
+	{
+		"employer": "Cheese",
+	    "title": "Course Developer",
+	    "location": "SEATTLE, CA",
+	    "dates": "Feb 2014 - Current"
+	}
+	]
+}
+/* DO NOT NEED IT FOR THE FINAL PROJECT. JUST COOL FUNCTIONALITY
+function internationalized() {
+	var formattedName;
+	var capLastName;
+	var formattedNameCombined;
+	var nameArray = [];
+	if (english === true)	{
+		formattedName = HTMLheaderName.replace("%data%", bio.me[0].Name);
+		console.log(bio.me[0].Name);
+		english = false;
+	}
+	else
+	{
+		nameArray = bio.me[0].Name.split(" ");
+		capLastName = nameArray[nameArray.length-1].toUpperCase();
+		for (numname in nameArray)
+		formattedNameCombined = formattedNameCombined + nameArray[numname];
+		formattedNameCombined = formattedNameCombined + capLastName;
+		formattedName = HTMLheaderName.replace("%data%", formattedNameCombined);
+		console.log(bio.me[0].Name);
+		english = true;
+	}
+}
+*/
+
+projects.display = function()	{
+	var formattedProject;
+	$("#projects").append(HTMLprojectStart);
+
+	formattedProject = HTMLprojectTitle.replace("%data%", project.Capstone[0].Name);
+	$(".project-entry:last").append(formattedProject);
+
+	formattedProject = HTMLprojectDates.replace("%data%", project.Capstone[0].Date);
+	$(".project-entry:last").append(formattedProject);
+
+
+}
+
+projects.display();
+
+
 
 
 
