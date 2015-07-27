@@ -1,0 +1,423 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"proj",
+				"projects"
+			],
+			[
+				"forma",
+				"formattedProject"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"format",
+				"formattedProject"
+			],
+			[
+				"formattedNam",
+				"formattedNameCombined"
+			],
+			[
+				"formattedNa",
+				"formattedNameCombined"
+			],
+			[
+				"for",
+				"formattedcombined"
+			],
+			[
+				"formaa",
+				"formattedNameCombined"
+			],
+			[
+				"formatted",
+				"formattedName"
+			],
+			[
+				"form",
+				"formattedName"
+			],
+			[
+				"work",
+				"work"
+			],
+			[
+				"formatt",
+				"formattedSkillsStart"
+			],
+			[
+				"HTML",
+				"HTMLskillsStart"
+			],
+			[
+				"S",
+				"Student"
+			],
+			[
+				"Co",
+				"Co-op"
+			],
+			[
+				"Ene",
+				"Engineering"
+			],
+			[
+				"fun",
+				"funThoughts"
+			],
+			[
+				"awe",
+				"awesomeThoughts"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"mi",
+				"margin-right"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"or",
+				"orange"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"ali",
+				"vertical-align"
+			],
+			[
+				"color",
+				"color"
+			],
+			[
+				"border",
+				"border-box"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/resumeBuilder.js",
+			"settings":
+			{
+				"buffer_size": 4660,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4979,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/helper.js",
+			"settings":
+			{
+				"buffer_size": 8475,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"git ",
+				"Git: Pull"
+			],
+			[
+				"git push",
+				"Git: Push"
+			]
+		],
+		"width": 443.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jinwooklee/Desktop/Portfolio/Start 3/index.html",
+		"/Users/jinwooklee/Desktop/Portfolio/Start 3/main.css",
+		"/Users/jinwooklee/Desktop/Portfolio/Grunt example/Gruntfile.js",
+		"/Users/jinwooklee/Desktop/Portfolio/Project-Part-1-Start/package.json",
+		"/Users/jinwooklee/Desktop/Portfolio/Grunt example/package.json",
+		"/Users/jinwooklee/Desktop/Portfolio/Start 2/index.html",
+		"/Users/jinwooklee/Desktop/Portfolio/mostly fluid/pattern-mostly-fluid-quiz-blankcss.html",
+		"/Users/jinwooklee/Desktop/Portfolio/toplist/style.css",
+		"/Users/jinwooklee/Desktop/Portfolio/toplist/index.html",
+		"/Users/jinwooklee/Desktop/Portfolio/bootstrap/bootstrap-prestructure.html",
+		"/Users/jinwooklee/Desktop/Portfolio/framework/test.html",
+		"/Users/jinwooklee/Desktop/Portfolio/framework/css/main.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"inname",
+			"<li",
+			"skills",
+			"header",
+			"skill",
+			"flex-item",
+			"skill",
+			"header",
+			"skill",
+			"center",
+			"content",
+			"align",
+			"alig",
+			"aligh"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/resumeBuilder.js",
+					"settings":
+					{
+						"buffer_size": 4660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4652,
+								4652
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2185.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 4979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2451,
+								2459
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1137.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/helper.js",
+					"settings":
+					{
+						"buffer_size": 8475,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2268,
+								2284
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.575278735665,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
