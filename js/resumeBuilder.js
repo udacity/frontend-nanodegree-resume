@@ -287,6 +287,9 @@ var bio = {
             var formattedProjectDescription =
           HTMLprojectDescription.replace("%data%", projects.degreeProjects[project].description);
         $(".project-entry:last").append(formattedProjectDescription);
+
+            var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.degreeProjects[project].images);
+            $(".project-entry:last").append(formattedProjectImage);
     }
 };
             projects.display ();
