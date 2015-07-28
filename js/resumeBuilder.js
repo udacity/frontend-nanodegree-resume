@@ -12,7 +12,7 @@ var education =	{
 			"Name" : "University of British Columbia",
 			"Degree":"Applied Science",
 			"Year" : "2010-2015",
-			"City" : "Vancouver, BC",
+			"City" : "Vancouver, British Columbia",
 			"Major" : "Electrical Engineering"
 		}],
 	"online":[{
@@ -29,7 +29,7 @@ var work = {
 			"Name" : "Suncor Energy",
 			"Date" : "May 2014 - Sep 2014",
 			"Title" : "Process Safety Information Specialist Co-op Student",
-			"City" : "Calgary, AB",
+			"City" : "Calgary, Alberta",
 			"Description": ["- Validated hundreds of engineering tags from Major Projects for Asset Data Life-Cycle Project","- Supported and coordinated with document controllers for InSitu Project Closeout","- Undertook electrical maintenance projects for Suncor Co-op Presentation","- Trained co-op students working on Asset Data Life-Cycle Project and Project Closeout"]
 		},
 
@@ -37,7 +37,7 @@ var work = {
 			"Name" : "Suncor Energy",
 			"Date" : "Aug 2012 - Dec 2013",
 			"Title" : "Engineering Co-op Student",
-			"City" : "Calgary, AB",
+			"City" : "Calgary, Alberta",
 			"Description": ["- Facilitated the successful closeout of multiple turned over projects",
 			   "- Coordinated with cross-functional teams to support project closeout",
 			   "- Created a dynamic detailed closeout log to support the development of project closeout model",
@@ -58,7 +58,7 @@ var bio = {
 			"email": "jinwook.lee365@gmail.com",
 			"github": "zbef3825",
 			"role": "Electrical Engineer-in-Training",
-			"City": "Vancouver, BC",
+			"City": "Vancouver, British Columbia",
 			"skills" : ["Electrical Engineering", "Web Developer", "Project Management"],
 			"contact_info": "587-215-2332"
 		}
@@ -145,15 +145,20 @@ header.display = function()	{
 	//$("#topContacts").append(HTMLcontactGeneric);
 	var formattedContact = HTMLmobile.replace("%data%", bio.me[0].contact_info);
 	$("#topContacts").append(formattedContact);
+	$("#footerContacts").append(formattedContact);
 
 	var formattedContact = HTMLemail.replace("%data%", bio.me[0].email);
 	$("#topContacts").append(formattedContact);
+	$("#footerContacts").append(formattedContact);
 
 	var formattedContact = HTMLgithub.replace("%data%", bio.me[0].github);
 	$("#topContacts").append(formattedContact);
+	$("#footerContacts").append(formattedContact);
 
 	var formattedContact = HTMLlocation.replace("%data%", bio.me[0].City);
 	$("#topContacts").append(formattedContact);
+	$("#footerContacts").append(formattedContact);
+
 
 
 }
@@ -267,6 +272,8 @@ education.display = function()	{
 
 
 }
+
+$("#map-div").append(googleMap);
 
 
 header.display();
