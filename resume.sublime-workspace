@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"create",
+				"createMapMarker"
+			],
+			[
+				"pr",
+				"project-entry"
+			],
+			[
+				"for",
+				"formatedEdution"
+			],
+			[
+				"format",
+				"formatedEdution"
+			],
+			[
+				"work",
+				"workexp"
+			],
+			[
 				"proj",
 				"projects"
 			],
@@ -16,20 +36,12 @@
 				"display"
 			],
 			[
-				"format",
-				"formattedProject"
-			],
-			[
 				"formattedNam",
 				"formattedNameCombined"
 			],
 			[
 				"formattedNa",
 				"formattedNameCombined"
-			],
-			[
-				"for",
-				"formattedcombined"
 			],
 			[
 				"formaa",
@@ -42,10 +54,6 @@
 			[
 				"form",
 				"formattedName"
-			],
-			[
-				"work",
-				"work"
 			],
 			[
 				"formatt",
@@ -139,7 +147,7 @@
 			"file": "js/resumeBuilder.js",
 			"settings":
 			{
-				"buffer_size": 4660,
+				"buffer_size": 9394,
 				"line_ending": "Unix"
 			}
 		},
@@ -147,7 +155,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4979,
+				"buffer_size": 4970,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,7 +163,15 @@
 			"file": "js/helper.js",
 			"settings":
 			{
-				"buffer_size": 8475,
+				"buffer_size": 8641,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 2480,
 				"line_ending": "Unix"
 			}
 		}
@@ -196,6 +212,7 @@
 	},
 	"file_history":
 	[
+		"/Users/jinwooklee/Desktop/Portfolio/frontend-nanodegree-resume/job.txt",
 		"/Users/jinwooklee/Desktop/Portfolio/Start 3/index.html",
 		"/Users/jinwooklee/Desktop/Portfolio/Start 3/main.css",
 		"/Users/jinwooklee/Desktop/Portfolio/Grunt example/Gruntfile.js",
@@ -225,6 +242,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$(\"#projects\").append(HTMLprojectStart);",
 			"inname",
 			"<li",
 			"skills",
@@ -264,15 +282,15 @@
 					"file": "js/resumeBuilder.js",
 					"settings":
 					{
-						"buffer_size": 4660,
+						"buffer_size": 9394,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4652,
-								4652
+								9276,
+								9276
 							]
 						],
 						"settings":
@@ -281,7 +299,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2185.0,
+						"translation.y": 3705.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -297,15 +315,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 4979,
+						"buffer_size": 4970,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2451,
-								2459
+								2757,
+								2771
 							]
 						],
 						"settings":
@@ -315,7 +333,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1137.0,
+						"translation.y": 866.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -325,15 +343,15 @@
 					"file": "js/helper.js",
 					"settings":
 					{
-						"buffer_size": 8475,
+						"buffer_size": 8641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2268,
-								2284
+								4291,
+								4291
 							]
 						],
 						"settings":
@@ -343,7 +361,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 336.0,
+						"translation.y": 1326.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/style.css",
+					"settings":
+					{
+						"buffer_size": 2480,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								893,
+								893
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 978.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -379,7 +425,7 @@
 		"cols":
 		[
 			0.0,
-			0.575278735665,
+			0.424829344072,
 			1.0
 		],
 		"rows":
@@ -414,7 +460,7 @@
 		],
 		"width": 0.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,

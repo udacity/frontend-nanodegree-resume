@@ -105,15 +105,17 @@ Start here! initializeMap() is called when page is loaded.
 function initializeMap() {
 
   var locations;
-
+  
+  
   var mapOptions = {
     scrollwheel: false,
-    navigationControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    draggable: false,
+    navigationControl: true,
+    mapTypeControl: true,
+    scaleControl: true,
+    draggable: true,
     //mapTypeId: google.maps.MapTypeId.ROADMAP
-    disableDefaultUI: true
+    //disableDefaultUI: true
+
   };
 
 
@@ -178,7 +180,7 @@ function initializeMap() {
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
 
-      createMapMarker();
+      infoWindow;
 
     });
 

@@ -273,7 +273,8 @@ education.display = function()	{
 
 }
 
-$("#map-div").append(googleMap);
+
+
 
 
 header.display();
@@ -281,7 +282,7 @@ workExperience.display();
 projects.display();
 education.display();
 
-
+$("#google_map_html").append(googleMap);
 
 
 
