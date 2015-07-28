@@ -180,7 +180,8 @@ function initializeMap() {
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
 
-      infoWindow;
+      infoWindow.open(map,marker);
+      
 
     });
 

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"info",
+				"infoWindow"
+			],
+			[
 				"create",
 				"createMapMarker"
 			],
@@ -147,7 +151,7 @@
 			"file": "js/resumeBuilder.js",
 			"settings":
 			{
-				"buffer_size": 9394,
+				"buffer_size": 9403,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,7 +159,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4970,
+				"buffer_size": 5009,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,7 +167,7 @@
 			"file": "js/helper.js",
 			"settings":
 			{
-				"buffer_size": 8641,
+				"buffer_size": 8662,
 				"line_ending": "Unix"
 			}
 		},
@@ -242,6 +246,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"locations",
+			"locationFinder",
+			"map",
+			"mapprop",
+			"googleMap",
 			"$(\"#projects\").append(HTMLprojectStart);",
 			"inname",
 			"<li",
@@ -282,15 +291,15 @@
 					"file": "js/resumeBuilder.js",
 					"settings":
 					{
-						"buffer_size": 9394,
+						"buffer_size": 9403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9276,
-								9276
+								9375,
+								9375
 							]
 						],
 						"settings":
@@ -299,7 +308,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3705.0,
+						"translation.y": 3527.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -315,15 +324,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 4970,
+						"buffer_size": 5009,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2757,
-								2771
+								2575,
+								2590
 							]
 						],
 						"settings":
@@ -333,7 +342,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 866.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -343,15 +352,15 @@
 					"file": "js/helper.js",
 					"settings":
 					{
-						"buffer_size": 8641,
+						"buffer_size": 8662,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4291,
-								4291
+								7647,
+								7647
 							]
 						],
 						"settings":
@@ -361,7 +370,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1326.0,
+						"translation.y": 2918.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -389,7 +398,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 978.0,
+						"translation.y": 2106.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
