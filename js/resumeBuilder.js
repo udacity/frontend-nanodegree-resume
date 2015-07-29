@@ -303,11 +303,12 @@ var bio = {
             logClicks(x,y);
         });
 // internationalize function changes the first letter of the first name to Uppercase, and the entire last name to all UPPERCASE
-        function inName() {
-        name = name.trim().split(" ");
-        console.log(name);
+        function inName(name) {
+            name = name.trim().split(" ");
+            console.log(name);
             name[1] = name[1].toUpperCase();
-            name[0] = name[0].slice(0,1).toUpperCase() +        names[0].slice(1).toLowerCase();
+            name[0] = name[0].slice(0,1).toUpperCase() +        name[0].slice(1).toLowerCase();
+            console.log(name);
             return name[0] +" "+name[1];
         }
 // internationalize button
