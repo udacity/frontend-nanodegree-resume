@@ -30,7 +30,10 @@ var work = {
 			"Date" : "May 2014 - Sep 2014",
 			"Title" : "Process Safety Information Specialist Co-op Student",
 			"City" : "Calgary, Alberta",
-			"Description": ["- Validated hundreds of engineering tags from Major Projects for Asset Data Life-Cycle Project","- Supported and coordinated with document controllers for InSitu Project Closeout","- Undertook electrical maintenance projects for Suncor Co-op Presentation","- Trained co-op students working on Asset Data Life-Cycle Project and Project Closeout"]
+			"Description": ["- Validated hundreds of engineering tags from Major Projects for Asset Data Life-Cycle Project",
+			"- Supported and coordinated with document controllers for InSitu Project Closeout",
+			"- Undertook electrical maintenance projects for Suncor Co-op Presentation",
+			"- Trained co-op students working on Asset Data Life-Cycle Project and Project Closeout"]
 		},
 
 		{
