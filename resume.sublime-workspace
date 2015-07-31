@@ -151,7 +151,7 @@
 			"file": "js/resumeBuilder.js",
 			"settings":
 			{
-				"buffer_size": 9403,
+				"buffer_size": 9415,
 				"line_ending": "Unix"
 			}
 		},
@@ -291,15 +291,15 @@
 					"file": "js/resumeBuilder.js",
 					"settings":
 					{
-						"buffer_size": 9403,
+						"buffer_size": 9415,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9375,
-								9375
+								1031,
+								1031
 							]
 						],
 						"settings":
@@ -308,7 +308,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3527.0,
+						"translation.y": 1023.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -370,7 +370,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2918.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
