@@ -12,3 +12,6 @@ Answers: Forks: makes an exact copy of all files in someone else’s repository 
 
 You would use one instead of the other depending on your specific goals—collaborating on separate parts of a single project, use branches. To get all of that original project on your computer, make a clone, to get a copy of the project on github, use forks. 
   
+Question 4: What is the benefit of having a copy of the last known state of the remote stored locally?
+
+Answer: if there is a problem with the Internet (crash, data breach, or like in the example, you are flying somewhere, you have the most updated version available without being at the mercy of technology. 
