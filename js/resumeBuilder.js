@@ -9,39 +9,35 @@ var bio = {
 	},
 	"welcomeMessage": "Welcome to my site!",
 	"skills": ["awesomeness", "programming", "teaching", "JS"],
-	"bioPic": "images/fry.jpg"
-};
+	"bioPic": "images/fry.jpg",
+	display: function() {
+		var formattedName = HTMLheaderName.replace("%data%", bio.name);
+		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-function displayBio() {
-	for (index in bio){
-		// create new div for bio
-		$("#header").append(HTMLcontactGeneric);
-		var formattedName = HTMLheaderName.replace("%data%", bio[index].name);
-		var formattedRole = HTMLheaderRole.replace("%data%", bio[index].role);
-		$("#header").append(formattedName + formattedRole);
 		var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-		$("#header").append(formattedBioPic);
+
 		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-		$("#header").append(formattedWelcomeMsg);
-		for (contact in bio.contacts) {
-			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[contact].mobile);
-			$(".flex-box").append(formattedMobile);
+		$("#header").append(formattedName + formattedRole, formattedBioPic, formattedWelcomeMsg);
 
-			var formattedEmail = HTMLemail.replace("%data%", bio.contacts[contact].email);
-			$(".flex-box").append(formattedEmail);
+		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 
-			var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts[contact].github);
-			$(".flex-box").append(formattedGitHub);
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 
-			var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-			$(".flex-box").append(formattedLocation);
-		}
+		var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
+
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+		$("#topContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLocation);
+		$("#footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLocation);
 	}
+
 };
 
-displayBio();
+
+bio.display();
+
 
 // If user entered skills, append it to the HTML doc
+
 if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
 	for (var i = 0; i < bio.skills.length; i++) {
@@ -49,6 +45,7 @@ if (bio.skills.length > 0) {
 		$("#skills").append(formattedSkill);
 	}
 };
+
 
 var projects = {
 	"project": [
@@ -70,32 +67,32 @@ var projects = {
 			"description": "I built a simple calculator using JavaScript",
 			"images": ["images/img2_small.jpg"]
 		}
-	]
-};
+	],
+	display: function(){
+		for (index in projects.project){
+			$("#projects").append(HTMLprojectStart);
 
-projects.display = function() {
-	for (index in projects.project){
-		$("#projects").append(HTMLprojectStart);
+			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.project[index].title);
+			$(".project-entry:last").append(formattedProjectTitle);
 
-		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.project[index].title);
-		$(".project-entry:last").append(formattedProjectTitle);
+			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.project[index].dates);
+			$(".project-entry:last").append(formattedProjectDates);
 
-		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.project[index].dates);
-		$(".project-entry:last").append(formattedProjectDates);
+			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.project[index].description);
+			$(".project-entry:last").append(formattedProjectDescription);
 
-		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.project[index].description);
-		$(".project-entry:last").append(formattedProjectDescription);
-
-		if (projects.project[index].images.length > 0) {
-			for (image in projects.project[index].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.project[index].images[image]);
-			$(".project-entry:last").append(formattedImage);
+			if (projects.project[index].images.length > 0) {
+				for (image in projects.project[index].images) {
+					var formattedImage = HTMLprojectImage.replace("%data%", projects.project[index].images[image]);
+				$(".project-entry:last").append(formattedImage);
 			}
 		}
 	}
+}
 };
 
 projects.display();
+
 
 var work = {
 	"jobs": [
@@ -128,13 +125,11 @@ var work = {
 			"dates": "September 2009- May 2010",
 			"description": "• Identified qualified prospects, overcame objections and provided feedback to ensure continuous process optimization. <br/> • Optimized ad campaigns and built high quality long-term relationships with cilents through cold calls to drive growth. <br/ > • Collaborated with multiple teams to meet deadlines and ensure prioritization of cross-functional work. <br/> • Averaged $103,000/month and secured $300,000 in donations with a sales team of 10. <br/> • Developed and implemented new revenue streams including Scavenger Hunt, online, and niche products."
 		}
-	]
-};
-
-// Iterates over all the jobs in the work object and appends it to HTML doc
-function displayWork() {
-	for (job in work.jobs){
-		// create new div for work experience
+	],
+	display: function() {
+		// Iterates over all the jobs in the work object and appends it to HTML doc
+		for (job in work.jobs){
+			// create new div for work experience
 		$("#workExperience").append(HTMLworkStart);
 		// concat employer and title
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -149,11 +144,14 @@ function displayWork() {
 		$(".work-entry:last").append(formattedLocation);
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
-	}
 
+		}
+	}
 };
 
-displayWork();
+work.display();
+
+
 
 var education = {
 	"schools": [
@@ -173,13 +171,11 @@ var education = {
 		"dates": 2015,
 		"url": "www.udacity.com"
 		}
-	]
-};
-
-// Iterates over all the schools in the education object and appends it to HTML doc
-function displayEducation() {
-	for (index in education.schools){
-		// create new div for education experience
+	],
+	display: function(){
+		// Iterates over all the schools in the education object and appends it to HTML doc
+		for (index in education.schools){
+			// create new div for education experience
 		$("#education").append(HTMLschoolStart);
 
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[index].name);
@@ -213,11 +209,11 @@ function displayEducation() {
 		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[index].url);
 		$(".education-entry:last").append(formattedURL);
 
+		}
 	}
-
 };
 
-displayEducation();
+education.display();
 
 // Replaces < and >
 
