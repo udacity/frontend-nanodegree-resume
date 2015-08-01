@@ -15,3 +15,7 @@ You would use one instead of the other depending on your specific goals—collab
 Question 4: What is the benefit of having a copy of the last known state of the remote stored locally?
 
 Answer: if there is a problem with the Internet (crash, data breach, or like in the example, you are flying somewhere, you have the most updated version available without being at the mercy of technology. 
+
+Question 5: How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+Answer: You would have to share a draft every time you made a change to the document/project you were collaborating on. This would involve less technology (be easier), but be a lot more time consuming (be harder.).
