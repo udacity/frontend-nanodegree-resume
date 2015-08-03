@@ -4,10 +4,10 @@ var bio = {
 	'name': 'Aline Alencar',
 	'role': 'Front-End Web Developer',
 	'contacts': {
-		'mobile': '6479872220',
-		'email': 'alinenalencar@gmail.com',
+		'mobile': '5555555555',
+		'email': 'me@gmail.com',
 		'github': 'alinesobral',
-		'twitter': '@alinne_jd',
+		'twitter': '@me',
 		'location': 'Toronto, ON'
 		},
 	'bioPic': 'http://i59.tinypic.com/90sncz.jpg',
