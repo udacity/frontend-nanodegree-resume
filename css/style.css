@@ -11,7 +11,15 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oxygen", sans-serif;
+}
+
+#workExperience,
+#projects,
+#education,
+#map {
+  border-radius:20px;
+  margin:0 5% 0 5%;
 }
 
 .clear-fix {
@@ -20,13 +28,14 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.online-entry {
   padding: 0 5%;
 }
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #3366ff;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +43,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #3366ff;
   line-height: 29px;
   padding: 10px;
 }
@@ -95,26 +104,27 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #000;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #3366ff;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #3366ff;
+  color: #fff;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #3366ff;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 
 .gray {
@@ -124,12 +134,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #fff;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #fff;
 }
 
 .flex-box {
@@ -154,6 +164,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  border-radius: 50%;
 }
 
 img {
@@ -162,6 +173,7 @@ img {
 
 span {
   padding: 5px;
+  color: #000;
 }
 
 #lets-connect {
