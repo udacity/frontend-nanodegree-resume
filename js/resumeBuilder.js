@@ -230,7 +230,3 @@ work.display();
 projects.display();
 education.display();
 footer.display();
-
-
-
-
