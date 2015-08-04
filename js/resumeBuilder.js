@@ -11,36 +11,37 @@ var bio = {
 		'location': 'Toronto, ON'
 		},
 	'bioPic': 'http://i59.tinypic.com/90sncz.jpg',
-	'welcome': 'Hi! My name is Aline, I\'m 22 and I live in Toronto, ON.',
+	'welcome': 'Hi! My name is Aline, I\'m 23 and I live in Toronto, ON.',
 	'skills': ['cooking', 'petting dogs', 'time travelling', 'saving the world'],
 	'display': function() {
-	var formattedheaderRole = HTMLheaderRole.replace('%data%', this.role);
-	$('#header').prepend(formattedheaderRole);
-	var formattedHeaderName = HTMLheaderName.replace('%data%', this.name);
-	$('#header').prepend(formattedHeaderName);
-	var formattedMobile = HTMLmobile.replace('%data%', this.contacts.mobile);
-	$('#topContacts').append(formattedMobile);
-	var formattedEmail = HTMLemail.replace('%data%', this.contacts.email);
-	$('#topContacts').append(formattedEmail);
-	var formattedGithub = HTMLgithub.replace('%data%', this.contacts.github);
-	$('#topContacts').append(formattedGithub);
-	var formattedTwitter = HTMLtwitter.replace('%data%', this.contacts.twitter);
-	$('#topContacts').append(formattedTwitter);
-	var formattedLocation = HTMLlocation.replace('%data%', this.contacts.location);
-	$('#topContacts').append(formattedLocation);
-	var formattedBioPic = HTMLbioPic.replace('%data%', this.bioPic);
-	$('#header').append(formattedBioPic);
-	var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', this.welcome);
-	$('#header').append(formattedWelcomeMsg);
-	//Skills
-	if (this.skills.length > 0) {
-		$('#header').append(HTMLskillsStart);
-		for (var i=0; i<this.skills.length; i++) {
-			var formattedSkill = HTMLskills.replace('%data%', this.skills[i]);
-			$('#skills').append(formattedSkill);
-			}
-	}
-}
+		var formattedheaderRole = HTMLheaderRole.replace('%data%', this.role);
+		$('#header').prepend(formattedheaderRole);
+		var formattedHeaderName = HTMLheaderName.replace('%data%', this.name);
+		$('#header').prepend(formattedHeaderName);
+		var formattedMobile = HTMLmobile.replace('%data%', this.contacts.mobile);
+		$('#topContacts').append(formattedMobile);
+		var formattedEmail = HTMLemail.replace('%data%', this.contacts.email);
+		$('#topContacts').append(formattedEmail);
+		var formattedGithub = HTMLgithub.replace('%data%', this.contacts.github);
+		$('#topContacts').append(formattedGithub);
+		var formattedTwitter = HTMLtwitter.replace('%data%', this.contacts.twitter);
+		$('#topContacts').append(formattedTwitter);
+		var formattedLocation = HTMLlocation.replace('%data%', this.contacts.location);
+		$('#topContacts').append(formattedLocation);
+		var formattedBioPic = HTMLbioPic.replace('%data%', this.bioPic);
+		$('#header').append(formattedBioPic);
+		var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', this.welcome);
+		$('#header').append(formattedWelcomeMsg);
+		//Skills
+		if (this.skills.length > 0) {
+			$('#header').append(HTMLskillsStart);
+			for (var i=0; i<this.skills.length; i++) {
+				var formattedSkill = HTMLskills.replace('%data%', this.skills[i]);
+				$('#skills').append(formattedSkill);
+				}
+		}
+		$('#topContacts').children().clone().appendTo('#footerContacts');
+	},
 };
 
 //Work Experience
@@ -72,7 +73,7 @@ var work = {
 		}
 	],
 	'display': function() {
-		for (item in this.job) {
+		for (var item in this.job) {
 			$('#workExperience').append(HTMLworkStart);
 			var formattedEmployer = HTMLworkEmployer.replace('%data%', this.job[item].employer).replace('#', work.job[item].url);
 			var formattedTitle = HTMLworkTitle.replace('%data%', this.job[item].title);
@@ -107,7 +108,7 @@ var projects = {
 		}
 	],
 	'display': function() {
-		for (project in this.projects) {
+		for (var project in this.projects) {
 			$('#projects').append(HTMLprojectStart);
 			var formattedTitle = HTMLprojectTitle.replace('%data%', this.projects[project].title).replace('#', projects.projects[project].url);
 			$('.project-entry:last').append(formattedTitle);
@@ -164,7 +165,7 @@ var education = {
 		},
 	],
 	'display': function() {
-		for (school in this.schools) {
+		for (var school in this.schools) {
 			$('#education').append(HTMLschoolStart);
 			var formattedName = HTMLschoolName.replace('%data%', this.schools[school].name).replace('#', this.schools[school].url);
 			var formattedDegree = HTMLschoolDegree.replace('%data%', this.schools[school].degree);
@@ -178,7 +179,7 @@ var education = {
 			$('.education-entry:last').append(formattedMajor);
 		}
 		$('#education').append(HTMLonlineClasses);
-		for (course in this.onlineCourses) {
+		for (var course in this.onlineCourses) {
 			$('#education').append(HTMLonlineStart);
 			var formattedTitle = HTMLonlineTitle.replace('%data%', this.onlineCourses[course].title).replace('#', education.onlineCourses[course].url);
 			var formattedSchool = HTMLonlineSchool.replace('%data%', this.onlineCourses[course].school);
@@ -195,38 +196,8 @@ var education = {
 //Map
 $('#mapDiv').append(googleMap);
 
-//Footer
-var footer = {
-	'footerContacts': [
-		{
-			'contact_url': 'https://github.com/alinesobral',
-			'contact_icon': 'http://www.iconsdb.com/icons/download/white/github-11-64.ico'
-		},
-		{
-			'contact_url': 'https://ca.linkedin.com/in/alencaraline',
-			'contact_icon': 'https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico'
-		},
-		{
-			'contact_url': 'http://www.facebook.com',
-			'contact_icon': 'https://cdn0.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/64/facebook.png'
-		},
-		{
-			'contact_url': 'http://twitter.com/alinne_jd',
-			'contact_icon': 'http://museumweek2015.org/wp-content/uploads/2015/02/twlogoleftmw.png'
-		},
-		{
-			'contact_url': 'mailto:alinenalencar@gmail.com',
-			'contact_icon': 'http://www.iconsdb.com/icons/preview/royal-blue/email-xl.png'
-		}
-	],
-	'display': function() {
-	$('#topContacts').children().clone().appendTo('#footerContacts');
-}
-};
-
 //Calling all functions
 bio.display();
 work.display();
 projects.display();
 education.display();
-footer.display();
