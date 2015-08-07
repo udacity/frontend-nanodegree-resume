@@ -10,8 +10,8 @@ var bio = {
 		"location": "Malibu, California"
 	},
 	"welcomeMessage": '"What can Hulk do for you?"',
-	"skills": ["Smash evil doers", "Crush alien hordes", "Pummel projects"],
-	"biopic": "images/hulk.png",
+	"skills": ["&checkmark;&nbsp; Smash evil doers", "&checkmark;&nbsp; Crush alien hordes", "&checkmark;&nbsp; Pummel projects"],
+	"biopic": "https://farm1.staticflickr.com/549/20166468218_2cf1342748.jpg",
 	"display": function() {
 		var fmtName = HTMLheaderName.replace("%data%", bio.name);
 		var fmtRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -176,13 +176,13 @@ var projects = {
 			"title": "Avengers NYC Project",
 			"dates": "2012",
 			"description": "Hulk with some help of sidekicks successfully repelled invasion of New York City by demi-god Loki and some extraterrestrial aliens.",
-			"images": ["images/project-pics/avengers_01.jpg", "images/project-pics/avengers_02.jpg", "images/project-pics/avengers_03.jpg"]
+			"images": ["https://farm1.staticflickr.com/497/20166422760_c41aafe657.jpg", "https://farm1.staticflickr.com/282/20166469918_270f33f507.jpg", "https://farm1.staticflickr.com/318/20328217206_2f1cc233df.jpg"]
 		},
 		{
 			"title": "Hulk Action Series",
 			"dates": "1978-82",
 			"description": "Hulk played eponymous hero in quest of finding cure for dreaded Bruce Banner disease.",
-			"images": ["images/project-pics/hulk_tv_01.jpg", "images/project-pics/hulk_tv_02.jpg", "images/project-pics/hulk_tv_03.jpg"]
+			"images": ["https://farm1.staticflickr.com/549/20328215316_8c738aae3e.jpg", "https://farm1.staticflickr.com/278/20345981832_26fcbb76f4.jpg", "https://farm1.staticflickr.com/431/19731811484_64a1867915.jpg"]
 		}
 	],
 	"display": function() {
@@ -212,7 +212,7 @@ $("nav").animate({
 }, 1500);
 
 // Displays or hides the navigation menu
-$("nav i, nav li").click(function() {
+$("nav, nav li").click(function() {
 	if ($("nav").css("width") === "50px") {
 		$("nav").animate({
 			width: "200px"

@@ -133,8 +133,8 @@ function initializeMap() {
 	function createMapMarker(placeData) {
 
 		// The next lines save location data from the search result object to local variables
-		var lat = placeData.geometry.location.k;  // latitude from the place service
-		var lon = placeData.geometry.location.D;  // longitude from the place service
+		var lat = placeData.geometry.location.G;  // latitude from the place service
+		var lon = placeData.geometry.location.K;  // longitude from the place service
 		var name = placeData.formatted_address;   // name of the place from the place service
 		var bounds = window.mapBounds;            // current boundaries of the map window
 
@@ -222,7 +222,13 @@ Uncomment the code below when you're ready to implement a Google Map!
 // Calls the initializeMap() function when the page loads
 // setTimeout is so that page loads smoothly before map.
 window.addEventListener('load', function() {
-	window.setTimeout(initializeMap, 2000);
+	//window.setTimeout(initializeMap, 2000);
+
+	var mapScript = document.createElement('script');
+	var mapSrc = "https://maps.googleapis.com/maps/api/js?libraries=places&callback=initializeMap";
+	var mainNode = document.getElementById('main');
+	mapScript.setAttribute('src', mapSrc);
+	mainNode.appendChild(mapScript);
 });
 
 
