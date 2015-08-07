@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="author" content="Noel Noche">
+		<meta name="description" content="Project 2 of Udacity's front-end developer nanodegree program">
+		<style>
+			@font-face {
+				font-family: 'Oswald';
+				font-style: normal;
+				font-weight: 400;
+				src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v10/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2'), url(https://fonts.gstatic.com/s/oswald/v10/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+			}
+			@font-face {
+				font-family: 'Oswald';
+				font-style: normal;
+				font-weight: 700;
+				src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6ZBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(https://fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+			}
+			* {
+				margin:0;
+				padding:0;
+			}
+			body {
+				font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+			}
+			#main {
+				padding: 30px 70px 0 70px;
+				border-top: 5px solid rgb(55,160,60);
+				border-bottom: 5px solid rgb(55,160,60);
+			}
+			.clearfix {
+				overflow: auto;
+			}
+			h1 {
+				display: inline;
+				font-size: 40px;
+				line-height: 48px;
+			}
+			h2 {
+				padding: 10px;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 29px;
+			}
+			h3 {
+				font-style: italic;
+				font-size: 20px;
+				line-height: 22px;
+			}
+			h4 {
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 17px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 21px;
+			}
+			a {
+				display: block;
+				margin-top: 10px;
+				color: #1199C3;
+				text-decoration: none;
+			}
+			ul {
+				list-style-type: none;
+			}
+			img {
+				margin: 0 10px;
+			}
+			span {
+				padding: 5px;
+			}
+			.flex-box {
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				padding: 10px;
+			}
+			.location-text {
+				float: right;
+				font-style: italic;
+				font-size: 14px;
+				line-height: 16px;
+			}
+			.date-text {
+				font-style: italic;
+				font-family: serif;
+				font-size: 14px;
+				line-height: 18px;
+			}
+			.grey-text {
+				color: #797979;
+			}
+			.lt-grey-bg {
+				background-color: rgba(237,237,237,0.5);
+			}
+
+
+			/* Specific Stylings */
+			#name {
+				font-size: 70px;
+			}
+			span#role {
+				margin-left: 10px;
+				font-family: Oswald, sans-serif;
+				font-size: 40px;
+				font-style: italic;
+			}
+			#page-navigator {
+				position: fixed;
+				top: 5px;
+				right: 0px;
+				width: 250px;
+				padding-bottom: 10px;
+				text-align: center;
+				color: #1199C3;
+				background-color: #000000;
+			}
+			#page-navigator i:hover {
+				cursor: pointer;
+				color: #ffffff;
+			}
+			#page-navigator ul {
+				display: none;
+			}
+			#page-navigator ul li a:hover {
+				color: white;
+			}
+			#nav-icon {
+				font-size: 36px;
+			}
+			#header {
+				padding: 35px 10px 0 10px;
+			}
+			#topContacts {
+				margin: 5px 0 50px 0;
+				border-top: 1px solid #000000;
+				border-bottom: 1px solid #000000;
+				line-height: 25px;
+			}
+			.biopic {
+				float: left;
+				width: 200px;
+				margin: 0 50px 50px 0;
+				background-color: #ffffff;
+				box-shadow: 1px 1px 5px 1px #797979;
+			}
+			.welcome-message {
+				font-family: Oswald,"Comic Sans MS", "Trebuchet MS", Helvetica, Arial, sans-serif;
+				font-style: italic;
+				font-weight: bold;
+				font-size: 30px;
+			}
+
+			/* Avoids using display:none to assist screen readers */
+			#skillsH3 {
+				font-family: Oswald,"Comic Sans MS", "Trebuchet MS", Helvetica, Arial, sans-serif;
+				position: absolute;
+				z-index: -1;
+				color: #ffffff;
+			}
+			#skills {
+				margin: 40px 0 50px 0;
+				font-family: Oswald, "Comic Sans MS", "Trebuchet MS", Helvetica, Arial, sans-serif;
+				font-size: 26px;
+				font-style: italic;
+				font-weight: bold;
+				line-height: 40px;
+			}
+			#skills i {
+				padding: 0 5px 0 15px;
+			}
+			#workExperience, #projects, #education, #mapDiv {
+				margin: 0 10px 35px 10px;
+				padding-bottom: 1px;
+			}
+			#workExperience {
+				margin-top: 35px;
+			}
+			.work-entry, .project-entry, .education-entry {
+				margin: auto 10px 25px 10px;
+			}
+			#education h3 {
+				margin: 50px 10px 0 10px;
+			}
+			#projects img {
+				width: 197px;
+				height: 148px;
+			}
+			/* Adjusts that finicky Online Classes header */
+			.education-entry > :nth-child(3) {
+				font-size: 14px;
+				font-weight: bold;
+			}
+			#map {
+				display: block;
+				height: 100%;
+				margin-right: 20px;
+			}
+			#mapDiv {
+				width: 100%;
+				height: 400px;
+				padding-bottom: 5%;
+			}
+			#letsConnect {
+					text-align: center;
+			}
+			#footerContacts {
+				border-top: solid 1px #000000;
+				margin: 0 10px 0 10px;
+				line-height: 25px;
+			}
+
+			/* Adjustments for different screen sizes. */
+			@media only screen and (max-width: 1024px) {
+				#letsConnect {
+					margin-top: 60px;
+				}
+			}
+			@media only screen and (max-width:900px) {
+				.biopic {
+					width: 175px;
+					background-color: #ffffff;
+				}
+				.welcome-message {
+					font-size: 28px;
+				}
+			}
+			@media only screen and (max-width: 750px) {
+				#main {
+					padding: 30px 25px 0 25px;
+					border-top: 5px solid rgb(55,160,60);
+					border-bottom: 5px solid rgb(55,160,60);
+				}
+				#name {
+					font-size: 55px;
+				}
+				span#role {
+					margin-left: 10px;
+					font-size: 20px;
+				}
+				#topContacts {
+					margin: 0;
+				}
+				.biopic {
+					display: none;
+				}
+				.welcome-message {
+					display: none;
+				}
+				.skills-box {
+					max-width: 100%;
+					background-image: url("https://farm1.staticflickr.com/563/20167830479_91f1c42994.jpg");
+					background-repeat: no-repeat;
+					background-size: cover;
+					overflow: hidden;
+				}
+				#skills {
+					width: 300px;
+					margin: 5px auto 5px auto;
+					padding: 45px 0 45px 0;
+					font-size: 26px;
+					font-style: italic;
+					font-weight: bold;
+				}
+				#footerContacts {
+					margin: 0 0px 0 0px;
+					line-height: 25px;
+					border-top: solid 1px #000000;
+				}
+			}
+			@media only screen and (min-width: 750px) {
+				.biopic {
+					display: block;
+				}
+			}
+			@media only screen and (max-width: 470px) {
+				#name {
+					font-size: 40px;
+				}
+				span#role {
+					margin-left: 10px;
+					font-size: 20px;
+				}
+				#skills {
+					font-size: 20px;
+				}
+				#mapDiv {
+					width: 100%;
+					height: 300px;
+					padding-bottom: 5%;
+				}
+			}
+			@media only screen and (max-width: 399px) {
+				#letsConnect {
+					margin-top: 100px;
+				}
+			}
+		</style>
+		<title>Udacity FEND Project 2 | Mock Resume</title>
+	</head>
+	<body>
+		<div id="main">
+
+			<!-- Pop-up navigation menu -->
+			<nav id="page-navigator"><span id="nav-icon">&#x021D5;</span>
+				<ul>
+					<li><a href="#workExperience">Experience</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#mapDiv">Places</a></li>
+					<li><a href="#main">TOP</a></li>
+				</ul>
+			</nav>
+
+			<!-- Site skeleton -->
+			<div id="header" class="center-content clearfix">
+				<ul id="topContacts" class='flex-box'></ul>
+			</div>
+			<div id="workExperience" class='lt-grey-bg'>
+				<h2>Work Experience</h2>
+			</div>
+			<div id="projects">
+				<h2>Projects</h2>
+			</div>
+			<div id="education" class='lt-grey-bg'>
+				<h2>Education</h2>
+			</div>
+			<div id="mapDiv">
+				<h2>Where I've Lived and Worked</h2>
+			</div>
+			<div id="letsConnect">
+				<h2>Let's Connect</h2>
+				<ul id="footerContacts" class="flex-box"></ul>
+			</div>
+		</div>
+		<!--
+		You'll be writing code that builds the resume
+		dynamically when this website, index.html, is opened.
+		-->
+		<script>
+			function init() {
+				var appScript = document.createElement("script");
+				// var appSrc = "app-dev.js";
+				var appSrc = "app.min.js";
+				var mainNode = document.getElementById("main");
+				appScript.setAttribute("src", appSrc);
+				mainNode.appendChild(appScript);
+			}
+			document.onload = init();
+		</script>
+	</body>
+</html>
