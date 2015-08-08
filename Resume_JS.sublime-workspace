@@ -1,0 +1,425 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ap",
+				"appendEducation"
+			],
+			[
+				"da",
+				"dateAttended"
+			],
+			[
+				"sc",
+				"schools"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"pr",
+				"projects"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"fo",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"date",
+				"dateWorked"
+			],
+			[
+				"Lo",
+				"HTMLworkLocation"
+			],
+			[
+				"l",
+				"lorem	Lorem ipsum"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"t",
+				"twitter"
+			],
+			[
+				"m",
+				"mobileNumber"
+			],
+			[
+				"cont",
+				"contacts"
+			],
+			[
+				"r",
+				"role"
+			],
+			[
+				"HTMLh",
+				"HTMLheaderName"
+			],
+			[
+				"sk",
+				"skill"
+			],
+			[
+				"wo",
+				"work"
+			],
+			[
+				"let",
+				"letsConnect"
+			],
+			[
+				"Ht",
+				"HTMLskillsStart"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"cour",
+				"onlineCourse"
+			],
+			[
+				"d",
+				"dateWorked"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"form",
+				"formattedRole"
+			],
+			[
+				"f",
+				"formattedName"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5561,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/resumeBuilder.js",
+			"settings":
+			{
+				"buffer_size": 6763,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/*\n\nThis file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.\n\nDon't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.\n\nCameron Pittman\n*/\n\n\n/*\nThese are HTML strings. As part of the course, you'll be using JavaScript functions\nreplace the %data% placeholder text you see in them.\n*/\nvar HTMLheaderName = '<h1 id=\"name\">%data%</h1>';\nvar HTMLheaderRole = '<span>%data%</span><hr/>';\n\nvar HTMLcontactGeneric = '<li class=\"flex-item\"><span class=\"orange-text\">%contact%</span><span class=\"white-text\">%data%</span></li>';\nvar HTMLmobile = '<li class=\"flex-item\"><span class=\"orange-text\">mobile</span><span class=\"white-text\">%data%</span></li>';\nvar HTMLemail = '<li class=\"flex-item\"><span class=\"orange-text\">email</span><span class=\"white-text\">%data%</span></li>';\nvar HTMLtwitter = '<li class=\"flex-item\"><span class=\"orange-text\">twitter</span><span class=\"white-text\">%data%</span></li>';\nvar HTMLgithub = '<li class=\"flex-item\"><span class=\"orange-text\">github</span><span class=\"white-text\">%data%</span></li>';\nvar HTMLblog = '<li class=\"flex-item\"><span class=\"orange-text\">blog</span><span class=\"white-text\">%data%</span></li>';\nvar HTMLlocation = '<li class=\"flex-item\"><span class=\"orange-text\">location</span><span class=\"white-text\">%data%</span></li>';\n\nvar HTMLbioPic = '<img src=\"%data%\" class=\"biopic\">';\nvar HTMLwelcomeMsg = '<span class=\"welcome-message\">%data%</span>';\n\nvar HTMLskillsStart = '<h3 id=\"skillsH3\">Skills at a Glance:</h3><ul id=\"skills\" class=\"flex-box\"></ul>';\nvar HTMLskills = '<li class=\"flex-item\"><span class=\"white-text\">%data%</span></li>';\n\nvar HTMLworkStart = '<div class=\"work-entry\"></div>';\nvar HTMLworkEmployer = '<a href=\"#\">%data%';\nvar HTMLworkTitle = ' - %data%</a>';\nvar HTMLworkDates = '<div class=\"date-text\">%data%</div>';\nvar HTMLworkLocation = '<div class=\"location-text\">%data%</div>';\nvar HTMLworkDescription = '<p><br>%data%</p>';\n\n\n\nvar HTMLprojectStart = '<div class=\"project-entry\"></div>';\nvar HTMLprojectTitle = '<a href=\"#\">%data%</a>';\nvar HTMLprojectDates = '<div class=\"date-text\">%data%</div>';\nvar HTMLprojectDescription = '<p><br>%data%</p>';\nvar HTMLprojectImage = '<img src=\"%data%\">';\n\n\n\nvar HTMLschoolStart = '<div class=\"education-entry\"></div>';\nvar HTMLschoolName = '<a href=\"#\">%data%';\nvar HTMLschoolDegree = ' -- %data%</a>';\nvar HTMLschoolDates = '<div class=\"date-text\">%data%</div>';\nvar HTMLschoolLocation = '<div class=\"location-text\">%data%</div>';\nvar HTMLschoolMajor = '<em><br>Major: %data%</em>';\n\nvar HTMLonlineClasses = '<h3>Online Classes</h3>';\nvar HTMLonlineTitle = '<a href=\"#\">%data%';\nvar HTMLonlineSchool = ' - %data%</a>';\nvar HTMLonlineDates = '<div class=\"date-text\">%data%</div>';\nvar HTMLonlineURL = '<br><a href=\"#\">%data%</a>';\n\nvar internationalizeButton = '<button>Internationalize</button>';\nvar googleMap = '<div id=\"map\"></div>';\n\n\n/*\nThe International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.\n*/\n$(document).ready(function() {\n  $('button').click(function() {\n    var iName = inName() || function(){};\n    $('#name').html(iName);\n  });\n});\n\n/*\nThe next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.\n*/\nclickLocations = [];\n\nfunction logClicks(x,y) {\n  clickLocations.push(\n    {\n      x: x,\n      y: y\n    }\n  );\n  console.log('x location: ' + x + '; y location: ' + y);\n}\n\n$(document).click(function(loc) {\n  // your code goes here!\n});\n\n\n\n/*\nThis is the fun part. Here's where we generate the custom Google Map for the website.\nSee the documentation below for more details.\nhttps://developers.google.com/maps/documentation/javascript/reference\n*/\nvar map;    // declares a global map variable\n\n\n/*\nStart here! initializeMap() is called when page is loaded.\n*/\nfunction initializeMap() {\n\n  var locations;\n\n  var mapOptions = {\n    disableDefaultUI: true\n  };\n\n  // This next line makes `map` a new Google Map JavaScript Object and attaches it to\n  // <div id=\"map\">, which is appended as part of an exercise late in the course.\n  map = new google.maps.Map(document.querySelector('#map'), mapOptions);\n\n\n  /*\n  locationFinder() returns an array of every location string from the JSONs\n  written for bio, education, and work.\n  */\n  function locationFinder() {\n\n    // initializes an empty array\n    var locations = [];\n\n    // adds the single location property from bio to the locations array\n    locations.push(bio.contacts.location);\n\n    // iterates through school locations and appends each location to\n    // the locations array\n    for (var school in education.schools) {\n      locations.push(education.schools[school].location);\n    }\n\n    // iterates through work locations and appends each location to\n    // the locations array\n    for (var job in work.jobs) {\n      locations.push(work.jobs[job].location);\n    }\n\n    return locations;\n  }\n\n  /*\n  createMapMarker(placeData) reads Google Places search results to create map pins.\n  placeData is the object returned from search results containing information\n  about a single location.\n  */\n  function createMapMarker(placeData) {\n\n    // The next lines save location data from the search result object to local variables\n    var lat = placeData.geometry.location.lat();  // latitude from the place service\n    var lon = placeData.geometry.location.lng();  // longitude from the place service\n    var name = placeData.formatted_address;   // name of the place from the place service\n    var bounds = window.mapBounds;            // current boundaries of the map window\n\n    // marker is an object with additional data about the pin for a single location\n    var marker = new google.maps.Marker({\n      map: map,\n      position: placeData.geometry.location,\n      title: name\n    });\n\n    // infoWindows are the little helper windows that open when you click\n    // or hover over a pin on a map. They usually contain more information\n    // about a location.\n    var infoWindow = new google.maps.InfoWindow({\n      content: name\n    });\n\n    // hmmmm, I wonder what this is about...\n    google.maps.event.addListener(marker, 'click', function() {\n      // your code goes here!\n    });\n\n    // this is where the pin actually gets added to the map.\n    // bounds.extend() takes in a map location object\n    bounds.extend(new google.maps.LatLng(lat, lon));\n    // fit the map to the new marker\n    map.fitBounds(bounds);\n    // center the map\n    map.setCenter(bounds.getCenter());\n  }\n\n  /*\n  callback(results, status) makes sure the search returned results for a location.\n  If so, it creates a new map marker for that location.\n  */\n  function callback(results, status) {\n    if (status == google.maps.places.PlacesServiceStatus.OK) {\n      createMapMarker(results[0]);\n    }\n  }\n\n  /*\n  pinPoster(locations) takes in the array of locations created by locationFinder()\n  and fires off Google place searches for each location\n  */\n  function pinPoster(locations) {\n\n    // creates a Google place search service object. PlacesService does the work of\n    // actually searching for location data.\n    var service = new google.maps.places.PlacesService(map);\n\n    // Iterates through the array of locations, creates a search object for each location\n    for (var place in locations) {\n\n      // the search request object\n      var request = {\n        query: locations[place]\n      };\n\n      // Actually searches the Google Maps API for location data and runs the callback\n      // function with the search results after each search.\n      service.textSearch(request, callback);\n    }\n  }\n\n  // Sets the boundaries of the map based on pin locations\n  window.mapBounds = new google.maps.LatLngBounds();\n\n  // locations is an array of location strings returned from locationFinder()\n  locations = locationFinder();\n\n  // pinPoster(locations) creates pins on the map for each location in\n  // the locations array\n  pinPoster(locations);\n\n}\n\n/*\nUncomment the code below when you're ready to implement a Google Map!\n*/\n\n//Calls the initializeMap() function when the page loads\nwindow.addEventListener('load', initializeMap);\n\n// Vanilla JS way to listen for resizing of the window\n// and adjust map bounds\nwindow.addEventListener('resize', function(e) {\n  // Make sure the map bounds get updated on page resize\n  map.fitBounds(mapBounds);\n});\n",
+			"file": "js/helper.js",
+			"file_size": 8835,
+			"file_write_time": 130721212884188534,
+			"settings":
+			{
+				"buffer_size": 8631,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Junior/orange-udacity-mug/‌index.html",
+		"/C/Users/Junior/frontend-nanodegree-resume/css/style.css",
+		"/C/Users/Junior/jrbaez01.github.io/README.md",
+		"/C/Users/Junior/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/C/Users/Junior/frontend-nanodegree-resume/index.html",
+		"/C/Users/Junior/Desktop/18009893-Cartoon-character-working-on-desktop-computer-You-can-change-his-face-expression-picking-from-the-5--Stock-Vector.jpg",
+		"/C/Users/Junior/.gitconfig",
+		"/C/Program Files/Git/etc/gitconfig",
+		"/C/Program Files/Git/etc/git-prompt.sh"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"education",
+			"projects",
+			"work",
+			"bio",
+			"data",
+			"formattedJob",
+			"workExperience",
+			"mobileNumber",
+			"footerContacts",
+			"job",
+			"prepend",
+			"HTMLworkTitle",
+			"HTMLworkEmployer",
+			"//document",
+			"getElementById",
+			"location",
+			"name",
+			"school",
+			"title",
+			"/images/*.jpg",
+			"\":[\"/",
+			"images",
+			"description",
+			"dateWorked",
+			"title",
+			"project",
+			"projects",
+			"formattedRole",
+			"\"\"",
+			"\":\"\",",
+			"jobs",
+			"work",
+			"location",
+			"images",
+			"description",
+			"dates",
+			"append",
+			"main",
+			"myFormattedName"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 5561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1429,
+								1429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1412.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/resumeBuilder.js",
+					"settings":
+					{
+						"buffer_size": 6763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6673,
+								6673
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "js/helper.js",
+					"settings":
+					{
+						"buffer_size": 8631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2424,
+								2424
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true,
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 1530.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.758099030873,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true
+}
