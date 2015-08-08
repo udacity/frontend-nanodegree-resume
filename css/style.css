@@ -8,9 +8,25 @@
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 20px;
+  overflow: hidden;
+}
+.online-entry {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.section-hr {
+  margin: 20px;
+}
+
+.project-img {
+  width: 360;
+  height: 250;
 }
 
 h1 {
@@ -22,7 +38,7 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
   color: #999999;
   line-height: 29px;
   padding: 10px;
@@ -31,7 +47,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #F5A623;
   line-height: 22px;
 }
 
@@ -51,15 +67,18 @@ h2, h3, h4, h5 {
 
 .date-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 20px;
   color: #999999;
   line-height: 16px;
   float: left;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 20px;
   color: #999999;
   line-height: 16px;
   float: right;
@@ -67,15 +86,18 @@ h2, h3, h4, h5 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 20px;
   color: #333333;
   line-height: 21px;
+  padding-bottom: 5px;
+  padding: inherit;
 }
 
 a {
   color: #1199C3;
   text-decoration: none;
   margin-top: 10px;
+  margin-bottom: 10px;
   display: block;
 }
 
@@ -84,11 +106,12 @@ a {
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+  text-align: center;
 }
 
 #skillsH3 {
   color: #F5AE23;
-  display: none;
+  text-align: center;
 }
 
 .orange {
@@ -143,14 +166,18 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: block;
+
 }
 
 img {
   padding: 10px;
+  max-width: 360px;
+  max-height: 250px;
+  border-radius: 25px;
 }
 
-/* Bar chart stuff */
+/* Bar chart stuff 
 .chart div {
   font: 10px sans-serif;
   background-color: #4A4A4A;
@@ -160,7 +187,7 @@ img {
   height: 12px;
   color: white;
   display: inline-block;
-}
+}*/
 
 span {
   padding: 5px;
@@ -180,9 +207,13 @@ span {
   .biopic {
     width: 175px;
   }
+  
 }
 
 @media only screen and (max-width: 750px) {
+  .biopic {
+    display: none;
+  }
   #letsConnect {
     margin-top: 10%;
   }
@@ -192,7 +223,19 @@ span {
   .welcome-message {
     display: none;
   }
+  .project-img {
+    width: 100%;
+  }
+  .gray {
+    width: 100%;
+    overflow: hidden;
+  }
+  .project-img {
+    padding-left: 0px;
+  }
+  
 }
+
 
 #map {
   display: block;
@@ -207,9 +250,4 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skillsH3,
-  .biopic {
-    display: block;
-  }
-}
+
