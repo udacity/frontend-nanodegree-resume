@@ -81,9 +81,9 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   color: #F3F3F3;
-  line-height: 28px;
+  line-height: 32px;
 }
 
 #skillsH3 {
@@ -126,6 +126,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+  text-align: center;
 }
 
 .center-content {
@@ -164,6 +165,7 @@ img {
 
 span {
   padding: 5px;
+  font-weight: bold;
 }
 
 #letsConnect {
