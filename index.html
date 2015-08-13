@@ -17,15 +17,19 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
 
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
 
-  <!-- Load the page styles. -->
+  <link type="text/CSS" rel="stylesheet" href="css/bootstrapCSS/bootstrap.min.css">
+
+  <!-- bxSlider CSS file -->
+  <link href="js/jquery/jquery.bxslider.css" rel="stylesheet" />
+   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
-    
-  <!-- bxSlider CSS file -->  
-  <link href="js/jquery/jquery.bxslider.css" rel="stylesheet" /> 
+
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -40,7 +44,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+  <script src="js/jquery/jquery-1.11.3.js"></script>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
@@ -51,14 +55,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-  <meta name="viewport" content="width=device-width">
 
 <!--These links create the slider -->
   <!-- jQuery library (served from Google) -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- bxSlider Javascript file -->
   <script src="js/jquery/jquery.bxslider.min.js"></script>
-  
+
 </head>
 <body unresolved>
   <div id="main">
@@ -70,29 +73,26 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <div id="header" class="center-content clearfix">
-      <ul id="topContacts" class='flex-box'></ul>
+      <!--<ul id="topContacts" class= "turquoiseBackground"></ul>-->
+      <ul id= "contacts"></ul>
     </div>
     <div style='clear: both;'></div>
-    
+
   <!-- add acordion so that titles collapse and expand -->
   <div id= 'accordion'>
-      <div id="workExperience" class= 'mintGreen'>
-        <h2 class= 'accordion-toggle'>Work Experience</h2>
+      <div id="projects" class='mintGreen'>
+        <h2 class= 'accordion-toggle greyH2'>Projects</h2>
       </div>
-      <div id="projects" class='whiteBack'>
-        <h2 class= 'accordion-toggle'>Projects</h2>
+      <div id="workExperience" class= 'whiteBack'>
+        <h2 class= 'accordion-toggle greyH2'>Work Experience</h2>
       </div>
       <div id="education" class= 'mintGreen'>
-        <h2 class= 'accordion-toggle'>Education</h2>
+        <h2 class= 'accordion-toggle greyH2'>Education</h2>
       </div>
   </div><!-- end of accordion -->
-  
-      <div id="mapDiv" class='whiteBack'>
-        <h2>Where I've Lived and Worked</h2>
-      </div>
-      
-    <div class= 'mintGreen'>
-      <h2>When I'm not developing websites, I like to... </h2>
+    <div class= 'whiteBack'>
+      <h2 class= "greyH2">When I'm not developing websites, I like to... </h2>
+
     <div class= "slider">
         <ul class="bxslider">
           <li><img src="images/run.jpg" /></li>
@@ -103,11 +103,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         </ul>
     </div>
     </div>
-  
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='turquoise center-text'>Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
+    <div id="letsConnect">
+      <h2 class='turquoiseBackground center-text'>Let's Connect</h2>
+      <div class='blueBackground col-md-12'>
+        <div class= "contactIcon col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-2"><a href="https://github.com/KelseySteele" target="_blank"><img src = "images/githubIcon.png" /></a></div>
+        <div class= "contactIcon col-md-4 col-xs-2 col-xs-offset-2"><a href="https://linkedin.com/in/kelseyannesteele" target="_blank"><img src = "images/linkedinIcon.png" /></a></div>
+        <div class= "contactIcon col-md-4 col-xs-2 col-xs-offset-2"><a href="mailto:kasteele8@gmail.com"><img src = "images/emailIcon.png" /></div>
+      </div>
     </div>
   </div>
 
@@ -143,7 +145,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.backgroundColor = "black";
+      document.getElementById('contacts').style.backgroundColor = "#006666";
     }
     if(document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.backgroundColor = "black";
@@ -160,9 +162,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('flex-item').length === 0) {
        document.getElementById('letsConnect').style.backgroundColor = "black" ;
     }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.backgroundColor = "black";
-    }
   </script>
+
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

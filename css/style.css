@@ -4,70 +4,110 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.clearfix {
-  overflow: auto;
-}
-
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 10%;
 }
 
+
 h1 {
-  font-size: 40px;
+  font-size: 4em;
   color: #edfced;
-  line-height: 48px;
+  line-height: 1.2em;
   display: inline;
+  padding-bottom: 3px;
+}
+
+.name {
+  color: #edfced;
+  float: left;
+}
+
+.purpleRole{
+  color: #2E0854;
+  font-size: 1.6em;
+  margin-top: -10px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 2em;
   color: #666666;
   line-height: 29px;
-  padding: 10px;
+  padding-left: 1.5em;
+  padding-top: 1em;
+}
+
+.greyH2{
+  color: #666666;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #ffffff;
-  line-height: 22px;
+  font-size: 1.7em;
+  margin-bottom: 3px;
+  padding-left: 1em;
+  clear: left;
+  padding-top: 27px;
+  margin-top: -13px;
+}
+
+.turquoiseH3{
+  color: #006666;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+  font-size: 1.3em;
+  color: #000033;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  margin-left: -1.4em;
+  margin-top: -11px;
 }
 
-h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+h5{
+  font-size: 1em;
+}
+
+
+/*li.col-md-3.col-xs-6{
+  text-align: -webkit-match-parent;
+  box-sizing: border-box;
+  clear: left;
+} */
+
+#skills{
+  padding-left: 0em;
+}
+
+.contactInfo{
+background-color: #006666;
+margin-left: -22px;
+padding-left: 0em;
+}
+
+#topContacts{
+  background-color: #006666;
 }
 
 .date-text {
   font-style: italic;
-  font-size: 14px;
-  color: #999999;
-  line-height: 16px;
+  font-size: 16px;
+  color: #7a7a7a;
   float: left;
+  padding-left: 1.8em;
+  padding-top: 0.10em;
+  padding-bottom: 0.40em;
 }
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
-  color: #999999;
+  font-size: 16px;
+  color: #7a7a7a;
   line-height: 16px;
   float: right;
-}
-
-p {
-  font-size: 14px;
-  color: #333333;
-  line-height: 21px;
+  padding-right: 2em;
 }
 
 a {
@@ -86,13 +126,8 @@ a {
   margin: 20px auto 0 auto;
 }
 
-#skillsH3 {
+.headerHeads {
   color: #edfced;
-  display: none;
-}
-
-.turquoise {
-  background-color: #006666;
 }
 
 .blue-text {
@@ -101,6 +136,12 @@ a {
 
 .turquoise-text {
   color: #006666;
+  font-size: 3em;
+}
+
+.turquoiseBackground{
+  background-color: #006666;
+  padding: 5%;
 }
 
 .mintGreen-text {
@@ -121,37 +162,33 @@ a {
   margin: -20px;
 }
 
+.linkName {
+  color: purple;
+  margin-left: 20px;
+  font-size: 1em;
+  clear: left;
+  font-size: 1.1em;
+  padding-left: 1.4em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
 
+.linkName:hover {
+  color: #000033;
+}
 
 .dark-gray {
   background-color: #000033;
 }
 
+.iconImage{
+  width: 20px;
+  height: 20px;
+}
+
 #header {
   background-color: #006666;
-  padding: 0 5% 0 5%;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-#topContacts{
-  flex-direction: row;
-}
-
-#footerContacts-
-
-.center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
+  padding: 5%;
 }
 
 .center-text{
@@ -162,18 +199,39 @@ ul {
   list-style-type: none;
 }
 
-.biopic {
+.listElement{
   float: left;
-  padding: 10px;
-  width: 200px;
-  /*display: none; take off so that picture displays on an iphone*/
+  text-indent: -1em;
+  padding-left: 2.8em;
+  padding-bottom: 3px;
+  clear: left;
+  font-size: 1em;
 }
+
 
 img {
   padding: 10px;
   width: 50%;
 }
 
+.blueBackground{
+  background-color: #000033;
+  width: 100%;
+  height: 400px;
+  margin-top: -20px;
+  padding-bottom: 3%;
+}
+
+.blueBackground img{
+  cursor: pointer;
+}
+
+.contactIcon{
+width: 15%;
+vertical-align: bottom;
+/*float: left;*/
+padding-top: 10px;
+}
 
 /* Bar chart stuff */
 .chart div {
@@ -193,8 +251,19 @@ span {
 
 .onlineClasses {
   color: #006666;
-  margin-left: -50px;
-} 
+}
+
+.classInfo{
+  padding-left: 2.8em;
+  margin-bottom: 3px;
+  clear: left;
+}
+
+.classInfo li{
+  margin-left: 6em;
+  clear: left;
+  padding-left: 3em;
+}
 
 .bxslider {
   /*display: block*/
@@ -206,6 +275,16 @@ span {
   height: 100%;
 }
 
+img.biopic {
+  width: 150px;
+  float: right;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 10px;
+  padding-right: 1em;
+  clear: right;
+}
+
 #letsConnect {
   text-align: center;
 }
@@ -214,12 +293,28 @@ span {
   #letsConnect {
     margin-top: 5%;
   }
+  img.biopic {
+    width: 105px;
+  }
+  .purple-role{
+    margin-top: -40px;
+  }
+
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
+  img.biopic {
+    width: 150px;
+    clear: left;
   }
+  .contactIcon{
+    width: 70%;
+  }
+  .blueBackground{
+    padding-bottom: 200px;
+  }
+}
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -228,10 +323,39 @@ span {
   }
   .biopic {
     width: 50%;
+    clear: left;
   }
   .welcome-message {
     /*display: none;*/
     /*padding: 20px;*/
+  }
+  
+  .skills, .headerHeads, .contactInfo{
+    text-align: center;
+  }
+
+  .location-text{
+  font-style: italic;
+  font-size: 16px;
+  color: #7a7a7a;
+  float: left;
+  padding-left: 1.8em;
+  padding-top: 0.10em;
+  padding-bottom: 0.10em;
+  clear: both;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  }
+  
+.date-text{
+  font-style: italic;
+  font-size: 16px;
+  color: #7a7a7a;
+  float: left;
+  padding-left: 1.8em;
+  padding-top: 0.10;
+  padding-bottom: 0.40em;
+  clear: both;
   }
 }
 
