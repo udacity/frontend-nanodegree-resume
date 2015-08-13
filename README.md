@@ -1,3 +1,35 @@
+##Updates
+
+After completing this project as part of Udacity's Front-End Nanodegree program, I revised this resume to include my most recent projects. I also added Bootstrap, so that this resume would have an even better look when viewed from a phone (YAY!). 
+
+I deleted the google map portion of this resume to make the resume simpler and more effective as an actual resume. I also figured that I had used Google Map's API in my neighbrohood map app, so it wasn't necessary to include it here.  
+
+I also added graphics to the footer and used these as links to my GitHub, LinkedIn, and E-mail addresses. I think this makes the resume look a lot sleeker. 
+
+###Bootstrap
+I enjoyed using Bootstrap to make this webpage have more of a responsive design. The areas, where I used bootstrap was in the header and footer of the resume. 
+
+####Header
+The header's photo and my name are each placed in a row of 6 columns within Bootstrap's 12 column grid. I also used media queries, to make the header photo (with a class called bioPic) larger when the screen size was smaller.
+
+My role ("web developer" text) is placed within a 6 column row when the screen is at it's max width and then placed within a 3 column row, when at it's smallest width (as viewed on a phone). 
+
+My skills are placed within 3 column rows when the screen is at max width, so that they spread out evenly in stacks of two. When the screen is minimized, the skills are each placed within a 12 column row, so they stack on top of each other when viewed on a phone. 
+
+The contact information in the header works similiarly to the skills section, but since there is less contact information than skills, the contact information is placed within a 6 column row instead of a 3 column when the screen is at max width. 
+
+The contact information and skills headers are always in a 12 column row. 
+
+####Footer
+The graphics in the footer of my resume were a bit hard to center within the 12 column-grid. At Stack-Overflow, I learned about the offset feature, which centers a row/image by cushioning it with rows of the same column width. Here is the link to Stack-Overflow's page about the offset feature: http://stackoverflow.com/questions/18153234/center-a-column-using-twitter-bootstrap-3
+
+The offset feature worked wonderfully for when the webpage was at it's minimum width (viewed on a phone). I placed each image within a 2 column row and then offset these by 2 column rows on either side of the image. The images stacked on top of each other and were centered on the page. 
+
+The problems, was that I couldn't do this very easily with the maximum width, where I wanted the images to be side by side. There are three images in the footer, so I couldn't easily cusion all of them without having one float to the bottom row. I ended up offsetting one of the images with 1 column rows on either side. This centered the images appropriately. 
+
+
+
+
 ## How do I complete this project?
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
