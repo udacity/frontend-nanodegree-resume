@@ -198,7 +198,7 @@ var projects = {
                 {
                     "name": "GoodGreenVibes.org",
                     "descriptions": ["Developed and designed a content-rich website to promote powerful, complex ideas about protecting the environment.","Used Adobe Dreamweaver and Wordpress to build the site and implemented a responsive design with Bootstrap.", "Collaborated with a web designer to design layout, UI, and graphics."],
-                    "image": "http://www.goodgreenvibes.org"
+                    "link": "http://www.goodgreenvibes.org/"
                 }
           ]
         };
