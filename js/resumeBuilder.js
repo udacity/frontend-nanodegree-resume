@@ -321,7 +321,6 @@ var accHeading, accContent;
    }
 }
 
-
 education.display();
 
     $(document).click(function(loc){
@@ -329,12 +328,6 @@ education.display();
         var y = loc.pageY;
           logClicks(x,y); //code
         });
-
-//where I've lived and worked section
-  $("#mapDiv").append(googleMap);
-  initializeMap();
-
-//boxslider
 
 $(document).ready(function(){
 
@@ -348,11 +341,5 @@ $(document).ready(function(){
       $(".accordion-content").not($(this).next()).slideUp('fast');
 
     });
-
-    //code for the slideshow
-    $('.bxslider').bxSlider({
-    auto: true,
-    autoControls: true
-});
 
 });
