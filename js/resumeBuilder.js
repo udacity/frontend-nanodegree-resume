@@ -23,7 +23,7 @@ var bio = {
 		"skills": [
 			"Git", "HTML", "CSS", "JavaScript"
 		],
-		"bioPic": "images/bioPic.png"
+		"bioPic": ["images/bioPic.png"]
 	}
 	
 	
@@ -60,7 +60,7 @@ var bio = {
 	$("#footerContacts").append(formattedlocation);
 
 	var HTMLbioPic = '<img src="%data%" class="biopic">';
-	var formattedbioPic = HTMLbioPic.replace("%data%", "images/bioPic.png");
+	var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
 	$("#topContacts").append(formattedbioPic)
 	
 	
@@ -138,13 +138,13 @@ var projects = {
 			"title": "Member of Women Who Code, DC",
 			"dates": "June 2015 - present",
 			"description": "Participate in DC Chapter of national organization that provides women with programming skills to expand career opportunities",
-			"images": "images/image.png"
+			"images": ["images/projectImage.png"]
 		},
 		{
 			"title": "Code for DC",
 			"dates": "June 2015-present",
 			"description": "Participate in a non-partisan, non-political group of volunteer civic hackers working together to solve local issues and help people engage with DC.",
-			"images":"images/image2.png"
+			"images": ["images/projectImage2.png"]
 		}
 	]
 };
@@ -152,7 +152,6 @@ var projects = {
 projects.display = function () {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
-		
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
 		$(".project-entry:last").append(formattedTitle);
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
@@ -161,20 +160,21 @@ projects.display = function () {
 		$(".project-entry:last").append(formattedDescription);
 		
 		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+			for (projectImage in projects.projects[project].images){
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[projectImage]);
 				$(".project-entry:last").append(formattedImage);
 			}
 		} 
 	}
 }
-		
-			
+
+projects.display();
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" class="images/image.png">';
+var HTMLprojectImage = '<img src="%data%" width= "200">';
+
 	
 var education = {
 	"schools": [
@@ -340,7 +340,3 @@ function initializeMap() {
   pinPoster(locations);
 
 }
-
-	
-
-	
