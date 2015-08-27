@@ -110,7 +110,7 @@ var education = {
 
 				var titleAndSchool = HTMLonlineTitle.replace("%data%", eCourses[course].title)
 													.replace("%url%", eCourses[course].url);
-				titleAndSchool += HTMLonlineSchool.replace("%data%", eCourses[course].school)
+				titleAndSchool += HTMLonlineSchool.replace("%data%", eCourses[course].school);
 
 				var fmtDate = HTMLonlineDates.replace("%data%", eCourses[course].date);
 
