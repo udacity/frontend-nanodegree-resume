@@ -1,3 +1,5 @@
+var $ = require("jquery");
+
 /*
 This file contains all of the code running in the background that makes resumeBuilder.js
 possible. We call these helper functions because they support your code.
@@ -174,7 +176,7 @@ function initializeMap() {
 	*/
 	function callback(results, status) {
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
-	  		createMapMarker(results[0]);
+				createMapMarker(results[0]);
 		}
 	}
 
@@ -191,14 +193,14 @@ function initializeMap() {
 		// Iterates through the array of locations, creates a search object for each location
 		for (var place in locations) {
 
-		  // the search request object
+			// the search request object
 			var request = {
 				query: locations[place]
-		  	};
+				};
 
-		  	// Actually searches the Google Maps API for location data and runs the callback
-		  	// function with the search results after each search.
-		  	service.textSearch(request, callback);
+				// Actually searches the Google Maps API for location data and runs the callback
+				// function with the search results after each search.
+				service.textSearch(request, callback);
 		}
 	}
 
@@ -249,3 +251,4 @@ window.addEventListener('resize', function(e) {
 		}, 2000);
 	}
 });
+
