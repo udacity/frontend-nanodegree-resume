@@ -1,18 +1,21 @@
-Mock Portfolio Page
+Mock Resume
 ===
 _Last updated 2015-08-07_
 
 
 Synopsis
 ---
-This project is a requirement of the front-end web developer program offered by **[Udacity](https://www.udacity.com/)**. The task is to use build an interactive resume using JavaScript and **[jQuery](https://jquery.com/)**. To help get started, Udacity provides a helper file that loads the content of the resume, including a Google Map that displays places lived. We are to code the content as JSON objects, test it for syntax errors using **[JSLint.com](http://jsonlint.com/)** and use modular functions to append the content to a provided HTML template. The completed project should look like **[this example](http://i.imgur.com/pWU1Xbl.png)**, except with our own content and stylings.
+The goal of this **[Udacity](https://www.udacity.com/)** project is to use build an interactive resume using JavaScript and **[jQuery](https://jquery.com/)**. To help get started, Udacity provides a helper file that loads the content of the resume, including a Google Map that displays places lived. The student is to code the content as JSON objects, test it for syntax errors using **[JSLint.com](http://jsonlint.com/)** and use modular functions to append the content to a provided HTML template. The completed project should look like **[this example](http://i.imgur.com/pWU1Xbl.png)**, except with the student's original content and stylings.
 
-Click **[here](http://noel7847.github.io/udacity-project-02/)** to see the page at its current state.
+
+Link
+---
+Access the page here **[here](http://noel7847.github.io/udacity-fend-project-02/)**.
 
 
 Credits
 ---
-helper.js, resumeBuilder.js (empty), style.css and index.html files provided by Udacity.
+helper.js, resumeBuilder.js (blank file), style.css and index.html files provided by Udacity.
 
 
 License
