@@ -1,0 +1,48 @@
+this was cool--I never knew what the terminal was, and I went to http://guides.macrumors.com/Terminal to learn commands. The instructions don't explain cd but I was able to figure it out. Also saving the files in an easy space helped, Not in a folder but on the desktop
+
+2. How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+just like in the first exercise, you can run a command to find differences and errors
+
+3. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+
+pros to automatic saving: don't have to remember to save
+
+cons: could have too many versions without meaningful changes
+
+4. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+In Git the multiple files are all part of one project, in google docs they are separate projects, but if you have multiple tabs on a spreadsheet that is still saved as one workbook
+
+5. How can you use the commands git log and git diff to view the history of files?
+
+git log: shows the history of commits of one diff
+
+git diff: compares 2 files so you can see what was added or deleted across its history
+
+
+How might using version control make you more confident to make changes that could break something?
+ you have the reassurance you can checkout earlier files and retrace your steps to before the mistake occurred
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+not sure…review history of existing projects
+
+commit 003c8c197cd3b1e5b28b58f53ee14d7ebaa9bb3a
+Author: Rishabh Pugalia <rishabh.pugalia@gmail.com>
+Date:   Wed Dec 12 13:59:27 2012 +0530
+
+    speeding clones up
+
+commit 746f762e38b5bbb7d0b837464ef6ec3f8ee5bf91
+Author: Rishabh Pugalia <rishabh.pugalia@gmail.com>
+Date:   Mon Dec 10 14:28:15 2012 +0530
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+Question 1: When would you want to use a remote repository rather than keeping all your work local?
+Answer: If I was working on a project with multiple people and using multiple computers.
+
+Question 2: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+Answers: as a security to make sure you are being thorough and correct.
+
+Question 3: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+ 
+Answers: Forks: makes an exact copy of all files in someone else’s repository on github
+  Clones: makes an exact copy of all files pulled down to your computer
+  Branches: subsections of a repo
+
+You would use one instead of the other depending on your specific goals—collaborating on separate parts of a single project, use branches. To get all of that original project on your computer, make a clone, to get a copy of the project on github, use forks. 
+  
+Question 4: What is the benefit of having a copy of the last known state of the remote stored locally?
+
+Answer: if there is a problem with the Internet (crash, data breach, or like in the example, you are flying somewhere, you have the most updated version available without being at the mercy of technology. 
+
+Question 5: How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+Answer: You would have to share a draft every time you made a change to the document/project you were collaborating on. This would involve less technology (be easier), but be a lot more time consuming (be harder.).
+
+Question 6: When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+Answer: In the earlier stages in a collaborative process where different people can each make changes on a branch. Once a decision is made, they can merge their decisions to master. Advantage to this, is that people can make mistakes without it affecting the master document. The advantage to working on master is that it is more direct and faster. 
