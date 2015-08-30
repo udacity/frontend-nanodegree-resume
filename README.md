@@ -1,3 +1,5 @@
+My home page: http://web.stanford.edu/~chuiwenm/
+
 ## How to see my resume?
 1. Click 'Download ZIP'
 2. Unzip to a local folder
