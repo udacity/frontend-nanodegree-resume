@@ -112,35 +112,42 @@ var project = {
 		{
 			"title": "3D Reconstruction from Full-view Fisheye Camera",
 			"dates": "January 2015 - March 2015",
-			"description": "Proposed a full-view scene reconstruction algorithm based on Ricoh Theta fisheye camera. Developed the fisheye camera model, epipolar geometry and triangulation method. Reconstructed the 360 degree scene with only two captures. Generalized the method to multi-camera reconstruction, also proposed a dense reconstruction approach on rectified images. Developed a Matlab GUI.",
-			"images": [ "images/me.jpg"
+			"description": "Proposed a full-view scene reconstruction algorithm based on Ricoh Theta fisheye camera. Developed the fisheye camera model, epipolar geometry and triangulation method. Reconstructed the 360 &deg scene with only two captures. Generalized the method to multi-camera reconstruction, also proposed a dense reconstruction approach on rectified images. Developed a Matlab GUI.",
+			"images": ["images/projects/3dRec_1.jpg", "images/projects/3dRec_2.jpg", "images/projects/3dRec_3.jpg"
 			],
-			"report": "http://arxiv.org/pdf/1506.06273v1.pdf"
+			"url": "http://arxiv.org/pdf/1506.06273v1.pdf"
 		},
 		{
 			"title": "Pose Estimation Based on 3D Models",
 			"dates": "September 2014 - January 2015",
 			"description": "Supervised by professor Leo Guibas. Aimed to estimate the pose of an object in the image. Designed a pose estimation algorithm based on 3D shape models; refined the algorithm by iteratively learn from classification results and in turn improve classification algorithm; tested on rendered image dataset and real image dataset; achieved 96% and 89% accuracy respectively.",
-			"images": [
+			"images": ["images/projects/ShapeNet.jpg", "images/projects/render_patch.jpg", "images/projects/hog_patch.jpg", "images/projects/chair_clean.jpg", "images/projects/chair_cluttered.jpg"
 			],
-			"report": "http://arxiv.org/pdf/1506.06274v1.pdf"
+			"url": "http://arxiv.org/pdf/1506.06274v1.pdf"
 		},
 		{
 			"title": "Gender Classification Based on Face Analysis",
 			"dates": "February 2014 - June 2014",
 			"description": "Designed a local feature-based gender classification pipeline: image preprocessing – local features extraction (SIFT, SURF, FAST, etc.) – visual Bag-of-Words model – general classification (SVM & Random Forest). Programmed in Python with OpenCV & scikit-learn; improved the algorithm by applying spatial pyramid and synthesizing features; achieved a state-of-the-art classification accuracy on The Images of Groups Dataset and LFW database.",
-			"images": [
+			"images": ["images/projects/gender.jpg", "images/projects/genderRoadMap.jpg", "images/projects/genderFeats.jpg"
 			],
-			"report": ""
+			"url": ""
+		},
+		{
+			"title": "Robot Programming",
+			"dates": "August 2013",
+			"description": "Intended to design an obstacle avoidance algorithm for robot car with microcontroller ATmega328; designed the algorithm, programmed in C on Arduino platform, conducted field test.",
+			"images": ["images/projects/robot.jpg"
+			],
+			"url": ""
 		},
 		{
 			"title": "Driver Fatigue Detection Based on Face Recognition",
 			"dates": "June 2013 - December 2013",
-			"description": "Intended to detect drivers’ fatigue using web-cam. Based on face tracking, implemented feature extraction and Bayesian Network algorithm; built the Bayesian Network model for fatigue, realized training and inference algorithm in Matlab/C++; conducted simulating experiments & created the training dataset; and wrote draft thesis in latex.",
-			"images": [
+			"description": "Intended to detect drivers' fatigue using webcam. Based on face tracking, implemented feature extraction and Bayesian Network algorithm; built the Bayesian Network model for fatigue, realized training and inference algorithm in Matlab/C++; conducted simulating experiments & created the training dataset; and wrote draft thesis in latex.",
+			"images": ["images/projects/fatigueExp.jpg", "images/projects/fatigueScreenShot.jpg"
 			],
-			"report": "",
-			"website": "http://www.ee.buaa.edu.cn/xumfiles/itrack.htm"
+			"url": "http://www.ee.buaa.edu.cn/xumfiles/itrack.htm"
 		}
 	]
 };
@@ -148,7 +155,11 @@ var project = {
 project.display = function() {
 	for (proj in project.projects) {
 		$("#projects").append(HTMLprojectStart);
+
 		var formattedTitle = HTMLprojectTitle.replace("%data%", project.projects[proj].title);
+		if (project.projects[proj].url !== "") {
+			formattedTitle = formattedTitle.replace("#", project.projects[proj].url);
+		}
 		$(".project-entry:last").append(formattedTitle);
 
 		var formattedDates = HTMLprojectDates.replace("%data%", project.projects[proj].dates);

@@ -156,6 +156,11 @@ ul {
   display: none;
 }
 
+.projpic{
+  padding: 10px;
+  height: 180px;
+}
+
 img {
   padding: 10px;
 }
