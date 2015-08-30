@@ -1,16 +1,15 @@
 // Bio JSON
 var bio = {
-    "name": "",
-    "role": "",
+    "name": "Niko Caron",
+    "role": "Front-End Apprentice",
     "contacts": {
-        "mobile": "",
-        "email": "",
-        "github": "",
-        "twitter": "",
-        "location": ""
+        "mobile": "506-426-2785",
+        "email": "niko.caron90@gmail.com",
+        "github": "ncaron",
+        "location": "Grand Falls, NB"
     },
-    "welcomeMessage": "",
-    "skills": [""]
+    "welcomeMessage": "I've always liked technology a lot but it's only recenly that I started writing some code and instantly fell in love, this is a career I'd love to pursue. I'm currently taking Udacity's Front-End Web Developer Nanodegree. I'm not far into it but I've already learned so much!",
+    "skills": ["HTML", "CSS", "Javascript", "Quick Learner"]
 }
 
 // Function to display the bio JSON
@@ -24,19 +23,19 @@ bio.display();
 var education = {
     "school": [
         {
-            "name": "",
-            "location": "",
-            "degree": "",
-            "majors": [""],
-            "dates": "NUMBER",
-            "url": ""
+            "name": "University of Ottawa",
+            "location": "Ottawa, ON",
+            "degree": "Bachelor of Applied Science",
+            "majors": ["Computer Engineering"],
+            "dates": 2016,
+            "url": "http://www.uottawa.ca/en"
         }],
     "onlineCourses": [
         {
-            "title": "",
-            "school": "",
-            "date": "NUMBER",
-            "url": ""
+            "title": "Front-End Web Developer Nanodegree",
+            "school": "Udacity",
+            "date": "2015-present",
+            "url": "https://www.udacity.com/"
         }]
 }
 
@@ -51,11 +50,25 @@ education.display();
 var work = {
     "jobs": [
         {
-            "employer": "",
-            "title": "",
-            "location": "",
-            "dates": "",
-            "description": ""
+            "employer": "McCain Foods",
+            "title": "Machine Operator",
+            "location": "Saint-Andre, NB",
+            "dates": "2006-2012",
+            "description": "I started this job when I was still in high school so I was just replacing people when needed which means I had to adapt quickly to being trained at a new area on the job site. Most jobs required attention to details. My last few years I was a machine operator, operating machines such as mixers and packaging equipment."
+        },
+        {
+            "employer": "Givskud Farms",
+            "title": "General Labor",
+            "location": "Drummond, NB",
+            "dates": "2014",
+            "description": "During my time at this job, I was working with very little to no supervision. I was told what needed to be done during the day and I did it. More often than not, I was done the job before the end of the day and needed to find something else to work on, on my own. This involved a lot of learning new machinery I've never touched before."
+        },
+        {
+            "employer": "J.D. Irving",
+            "title": "General Labor",
+            "location": "Veneer, NB",
+            "dates": "2015-present",
+            "description": "Fast paced job working in a physically demanding sawmill. There's a lot of machinery to be learend and I'm willing to learn anything!"
         }]
 }
 
@@ -70,10 +83,10 @@ work.display();
 var projects = {
     "projects": [
         {
-            "title": "",
-            "dates": "",
-            "description": "",
-            "images": [""]
+            "title": "Design Mockup",
+            "dates": "August 2015",
+            "description": "This is part of my first project in Udacity's Front-End Web Developer Nanodegree. I had to replicate a design mockup. Before starting this, I had no prior formal coding experience and I've learned a lot! I've learned how to effectively use HTML, CSS, Bootstrap and make a website responsive to any screen sizes.",
+            "images": ["images/project1.jpg"]
         }]
 }
 
