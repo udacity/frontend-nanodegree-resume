@@ -8,7 +8,7 @@ var bio = {
 		"linkedin": "chuiwenma",
 		"twitter": "",
 		"blog": "",
-		"location": "Stanford, CA",
+		"location": "Stanford, CA"
 	},
 	"welcomeMessage": "Stay hungry. Stay foolish.",
 	"skills": [
@@ -17,7 +17,7 @@ var bio = {
 		"Embedded Programming", "C", "C++", "Java", "Python", "HTML", 
 		"JavaScript", "Matlab", "LaTeX", "Linux", "Bash", "Git"
 	],
-	"bioPic": "images/me_gg.jpeg"
+	"bioPic": "images/me.jpg"
 };
 
 function inName(name) {
@@ -72,21 +72,24 @@ var work = {
 			"title": "Software Engineer Internship",
 			"location": "Sunnyvale, CA, US",
 			"dates": "June 2015 - Present",
-			"description": "foo"
+			"description": "Developing an automatic inter pupillary distance (IPD) measurement project from scratch, using 3D computer vision technique.",
+			"url": "http://zspace.com/"
 		},
 		{
 			"employer": "Uber",
 			"title": "Driver",
 			"location": "South Bay Area, CA, US",
 			"dates": "July 2015 - Present",
-			"description": "foo"
+			"description": "Driving, making new friends in Silicon Valley.",
+			"url": "https://www.uber.com"
 		},
 		{
 			"employer": "Stanford University",
 			"title": "Research Assistant",
 			"location": "Stanford, CA, US",
 			"dates": "September 2014 - January 2015",
-			"description": "foo"
+			"description": "Proposed a novel approach for pose estimation. See project 'Pose Estimation Based on 3D Models' for details.",
+			"url": "http://www.stanford.edu/"
 		}
 	]
 };
@@ -96,12 +99,16 @@ work.display = function() {
 		$("#workExperience").append(HTMLworkStart);
 
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		if (work.jobs[job].url !== "") {
+			formattedEmployer = formattedEmployer.replace("#", work.jobs[job].url);
+		}
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
 
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		$(".work-entry:last").append(formattedDates);
+
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
@@ -281,7 +288,9 @@ education.display = function() {
 		$("#education").append(HTMLschoolStart);
 
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-		formattedName = formattedName.replace("#", education.schools[school].url);
+		if (education.schools[school].url !== "") {
+			formattedName = formattedName.replace("#", education.schools[school].url);		
+		}
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedNameDegree = formattedName + formattedDegree;
 		$(".education-entry:last").append(formattedNameDegree);
@@ -305,7 +314,9 @@ education.display = function() {
 		$("#education").append(HTMLschoolStart);
 
 		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-		formattedTitle = formattedTitle.replace("#", education.onlineCourses[course].url);
+		if (education.onlineCourses[course].url !== "") {
+			formattedTitle = formattedTitle.replace("#", education.onlineCourses[course].url);		
+		}
 		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 		var formattedTitleSchool = formattedTitle + formattedSchool;
 		$(".education-entry:last").append(formattedTitleSchool);

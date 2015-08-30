@@ -127,9 +127,10 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
+/* Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848;*/
+  background-image: url("../images/background.jpg");
 }
 
 .flex-box {
