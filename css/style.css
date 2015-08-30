@@ -135,9 +135,12 @@ a {
 
 .flex-box {
   display: -webkit-flex;
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  -webkit-flex-direction: row; /* Safari 6.1+ */
+  flex-direction: row;
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
   justify-content: space-around;
   padding: 10px;
 }
