@@ -40,4 +40,4 @@ projects.display = function() {
 }
 
 // Displays the projects JSON
-projecs.display();
+projects.display();
