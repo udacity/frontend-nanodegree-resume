@@ -28,14 +28,14 @@ var education = {
             "location": "",
             "degree": "",
             "majors": [""],
-            "dates": (INTEGER),
+            "dates": "NUMBER",
             "url": ""
         }],
     "onlineCourses": [
         {
             "title": "",
             "school": "",
-            "date": (INTEGER),
+            "date": "NUMBER",
             "url": ""
         }]
 }
