@@ -1,3 +1,8 @@
+## How to see my resume?
+1. Click 'Download ZIP'
+2. Unzip to a local folder
+3. Open 'index.html' with any browser
+
 ## How do I complete this project?
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
