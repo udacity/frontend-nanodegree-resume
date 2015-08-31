@@ -141,6 +141,24 @@ var work = {
 
 // Function to display the work JSON
 work.display = function() {
+    for (job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
+        
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        $(".work-entry:last").append(formattedEmployer);
+        
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        $(".work-entry:last").append(formattedTitle);
+        
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        $(".work-entry:last").append(formattedLocation);
+        
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        $(".work-entry:last").append(formattedDates);
+        
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedDescription);
+    }
 }
 
 // Displays the work JSON
