@@ -144,7 +144,7 @@ var project = {
 			"title": "Robot Programming",
 			"dates": "August 2013",
 			"description": "Intended to design an obstacle avoidance algorithm for robot car with microcontroller ATmega328; designed the algorithm, programmed in C on Arduino platform, conducted field test.",
-			"images": ["images/projects/robot.jpg"
+			"images": ["images/projects/robot.jpg", "images/projects/robot.gif"
 			],
 			"url": ""
 		},
