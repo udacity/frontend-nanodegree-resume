@@ -6,7 +6,7 @@ var bio = {
         "mobile": "506-426-2785",
         "email": "niko.caron90@gmail.com",
         "github": "ncaron",
-        "location": "Grand Falls, NB"
+        "location": "Grand Falls, New Brunswick"
     },
     "welcomeMessage": "I've always liked technology a lot but it's only recenly that I started writing some code and instantly fell in love, this is a career I'd love to pursue. I'm currently taking Udacity's Front-End Web Developer Nanodegree. I'm not far into it but I've already learned so much!",
     "skills": ["HTML", "CSS", "Javascript", "Quick Learner"],
@@ -56,7 +56,7 @@ var education = {
     "schools": [
         {
             "name": "University of Ottawa",
-            "location": "Ottawa, ON",
+            "location": "Ottawa, Ontario",
             "degree": "Bachelor of Applied Science",
             "majors": ["Computer Engineering"],
             "dates": 2016
@@ -119,14 +119,14 @@ var work = {
         {
             "employer": "McCain Foods",
             "title": "Machine Operator",
-            "location": "Saint-Andre, NB",
+            "location": "Saint Andre, NB",
             "dates": "2006-2012",
             "description": "I started this job when I was still in high school so I was just replacing people when needed which means I had to adapt quickly to being trained at a new area on the job site. Most jobs required attention to details. My last few years I was a machine operator, operating machines such as mixers and packaging equipment."
         },
         {
             "employer": "Givskud Farms",
             "title": "General Labor",
-            "location": "Drummond, NB",
+            "location": "Drummond, nb",
             "dates": "2014",
             "description": "During my time at this job, I was working with very little to no supervision. I was told what needed to be done during the day and I did it. More often than not, I was done the job before the end of the day and needed to find something else to work on, on my own. This involved a lot of learning new machinery I've never touched before."
         },
@@ -200,3 +200,6 @@ projects.display = function() {
 
 // Displays the projects JSON
 projects.display();
+
+// Displays a map on the screen
+$("#mapDiv").append(googleMap);
