@@ -37,14 +37,13 @@ bio.display();
 
 // Education JSON
 var education = {
-    "school": [
+    "schools": [
         {
             "name": "University of Ottawa",
             "location": "Ottawa, ON",
             "degree": "Bachelor of Applied Science",
             "majors": ["Computer Engineering"],
-            "dates": 2016,
-            "url": "http://www.uottawa.ca/en"
+            "dates": 2016
         }],
     "onlineCourses": [
         {
@@ -57,6 +56,42 @@ var education = {
 
 // Function to display the education JSON
 education.display = function() {
+    for (school in education.schools) {
+        $("#education").append(HTMLschoolStart);
+        
+        var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+        $(".education-entry:last").append(formattedName);
+        
+        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+        $(".education-entry:last").append(formattedLocation);
+        
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        $(".education-entry:last").append(formattedDegree);
+        
+        if (education.schools[school].majors.length > 0) {
+            var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+            $(".education-entry:last").append(formattedMajor);
+        }
+        
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        $(".education-entry:last").append(formattedDates);
+    }
+    
+    $(".education-entry:last").append(HTMLonlineClasses);
+    
+    for (onlineCourse in education.onlineCourses) {
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+        $(".education-entry:last").append(formattedOnlineTitle);
+        
+        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
+        $(".education-entry:last").append(formattedOnlineSchool);
+        
+        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
+        $(".education-entry:last").append(formattedOnlineDates);
+        
+        var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+        $(".education-entry:last").append(formattedOnlineUrl);
+    }
 }
 
 // Displays the education JSON
