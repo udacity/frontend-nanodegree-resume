@@ -9,7 +9,8 @@ var bio = {
         "location": "Grand Falls, NB"
     },
     "welcomeMessage": "I've always liked technology a lot but it's only recenly that I started writing some code and instantly fell in love, this is a career I'd love to pursue. I'm currently taking Udacity's Front-End Web Developer Nanodegree. I'm not far into it but I've already learned so much!",
-    "skills": ["HTML", "CSS", "Javascript", "Quick Learner"]
+    "skills": ["HTML", "CSS", "Javascript", "Quick Learner"],
+    "bioPic": "images/my_picture.jpeg"
 }
 
 // Function to display the bio JSON
@@ -30,6 +31,21 @@ bio.display = function() {
     
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedLocation);
+    
+    var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    $("#header").append(formattedBioPic);
+    
+    var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedWelcomeMsg);
+    
+    if (bio.skills.length > 0) {
+        $("#header").append(HTMLskillsStart);
+        
+        for (skill in bio.skills) {
+            var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill])
+            $("#skills").append(formattedSkills);
+        }
+    }
 }
 
 // Displays the bio JSON
