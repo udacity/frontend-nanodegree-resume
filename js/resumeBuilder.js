@@ -233,7 +233,7 @@ var education = {
 	],
 	"onlineCourses": [
 		{
-			"title": "JavaScript Syntax",
+			"title": "JavaScript Basics",
 			"school": "Udacity",
 			"dates": 2015,
 			"url": "https://www.udacity.com/course/javascript-basics--ud804"
