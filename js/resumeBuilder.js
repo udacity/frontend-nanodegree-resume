@@ -152,7 +152,7 @@ var project = {
 			"title": "Driver Fatigue Detection Based on Face Recognition",
 			"dates": "June 2013 - December 2013",
 			"description": "Intended to detect drivers' fatigue using webcam. Based on face tracking, implemented feature extraction and Bayesian Network algorithm; built the Bayesian Network model for fatigue, realized training and inference algorithm in Matlab/C++; conducted simulating experiments & created the training dataset; and wrote draft thesis in latex.",
-			"images": ["images/projects/fatigueExp.jpg", "images/projects/fatigueScreenShot.jpg"
+			"images": ["images/projects/fatigueExp.jpg", "images/projects/fatigue.gif"
 			],
 			"url": "http://www.ee.buaa.edu.cn/xumfiles/itrack.htm"
 		}
