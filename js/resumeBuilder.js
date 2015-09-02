@@ -233,6 +233,12 @@ var education = {
 	],
 	"onlineCourses": [
 		{
+			"title": "Android Development for Beginners",
+			"school": "Udacity/Google",
+			"dates": 2015,
+			"url": "https://www.udacity.com/course/android-development-for-beginners--ud837"
+		},
+		{
 			"title": "JavaScript Basics",
 			"school": "Udacity",
 			"dates": 2015,
