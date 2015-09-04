@@ -76,14 +76,6 @@ var work = {
 			"url": "http://zspace.com/"
 		},
 		{
-			"employer": "Uber",
-			"title": "Driver",
-			"location": "South Bay Area, CA, US",
-			"dates": "July 2015 - Present",
-			"description": "Driving, making new friends in Silicon Valley.",
-			"url": "https://www.uber.com"
-		},
-		{
 			"employer": "Stanford University",
 			"title": "Research Assistant",
 			"location": "Stanford, CA, US",
