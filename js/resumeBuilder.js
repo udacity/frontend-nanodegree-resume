@@ -19,28 +19,28 @@ bio.display = function() {
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     var formattedNameRole = formattedName + formattedRole;
     $("#header").prepend(formattedNameRole);
-    
+
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     $("#topContacts, #footerContacts").append(formattedMobile);
-    
+
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts, #footerContacts").append(formattedEmail);
-    
+
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts, #footerContacts").append(formattedGithub);
-    
+
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts, #footerContacts").append(formattedLocation);
-    
+
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
     $("#header").append(formattedBioPic);
-    
+
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMsg);
-    
+
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
-        
+
         for (var skill in bio.skills) {
             var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill])
             $("#skills").append(formattedSkills);
@@ -75,45 +75,45 @@ var education = {
 education.display = function() {
     for (var school in education.schools) {
         $("#education").append(HTMLschoolStart);
-        
+
         var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
         var formattedNameDegree = formattedName + formattedDegree;
         $(".education-entry:last").append(formattedNameDegree);
-        
+
         var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedDates);
-        
+
         var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
         $(".education-entry:last").append(formattedLocation);
-        
+
         if (education.schools[school].majors.length > 0) {
             var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
             $(".education-entry:last").append(formattedMajor);
         }
-        
+
         // Makes all clickable links in Schools open a new tab if clicked
         $("#education a").attr("target", "_blank");
         // Opens school website
         $(".education-entry:last a").attr("href", education.schools[school].url);
     }
-    
+
     $("#education").append(HTMLonlineClasses).css("margin-left", "none");
-    
+
     for (var onlineCourse in education.onlineCourses) {
         $("#education").append(HTMLschoolStart);
-        
+
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title).replace("#", education.onlineCourses[onlineCourse].url[1]);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
         var formattedTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
         $(".education-entry:last").append(formattedTitleSchool);
-        
+
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
         $(".education-entry:last").append(formattedOnlineDates);
-        
+
         var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url[0]).replace("#", education.onlineCourses[onlineCourse].url[0]);
         $(".education-entry:last").append(formattedOnlineUrl);
-        
+
         // Makes all clickable links in Online Courses open a new tab if clicked
         $("#education a").attr("target", "_blank");
     }
@@ -155,21 +155,21 @@ var work = {
 work.display = function() {
     for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
-        
+
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
         var formattedEmployerTitle = formattedEmployer + formattedTitle;
         $(".work-entry:last").append(formattedEmployerTitle);
-        
+
         var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         $(".work-entry:last").append(formattedLocation);
-        
+
         var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         $(".work-entry:last").append(formattedDates);
-        
+
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);
-        
+
         // Makes all clickable links in Work Experience open a new tab if clicked
         $("#workExperience a").attr("target", "_blank");
         // Opens employer website
@@ -196,23 +196,23 @@ var projects = {
 projects.display = function() {
     for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
-        
+
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
-        
+
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $(".project-entry:last").append(formattedDates);
-        
+
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
-        
+
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
                 var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".project-entry:last").append(formattedImages);
             }
         }
-        
+
         // Makes all clickable links in Projects open a new tab if clicked
         $("#projects a").attr("target", "_blank");
         // Opens project website
