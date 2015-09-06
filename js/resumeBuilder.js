@@ -21,16 +21,16 @@ bio.display = function() {
     $("#header").prepend(formattedNameRole);
     
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedMobile);
     
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#topContacts").append(formattedEmail);
+    $("#topContacts, #footerContacts").append(formattedEmail);
     
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#topContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedGithub);
     
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
+    $("#topContacts, #footerContacts").append(formattedLocation);
     
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
     $("#header").append(formattedBioPic);
@@ -41,7 +41,7 @@ bio.display = function() {
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
         
-        for (skill in bio.skills) {
+        for (var skill in bio.skills) {
             var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill])
             $("#skills").append(formattedSkills);
         }
@@ -59,54 +59,63 @@ var education = {
             "location": "Ottawa, Ontario",
             "degree": "Bachelor of Applied Science",
             "majors": ["Computer Engineering"],
-            "dates": 2016
+            "dates": "DNF",
+            "url": "http://www.uottawa.ca/academic/info/regist/calendars/programs/102.html"
         }],
     "onlineCourses": [
         {
             "title": "Front-End Web Developer Nanodegree",
             "school": "Udacity",
             "date": "2015-present",
-            "url": "https://www.udacity.com/"
+            "url": ["https://www.udacity.com/", "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"]
         }]
 }
 
 // Function to display the education JSON
 education.display = function() {
-    for (school in education.schools) {
+    for (var school in education.schools) {
         $("#education").append(HTMLschoolStart);
         
         var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-        $(".education-entry:last").append(formattedName);
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        var formattedNameDegree = formattedName + formattedDegree;
+        $(".education-entry:last").append(formattedNameDegree);
+        
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        $(".education-entry:last").append(formattedDates);
         
         var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
         $(".education-entry:last").append(formattedLocation);
-        
-        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-        $(".education-entry:last").append(formattedDegree);
         
         if (education.schools[school].majors.length > 0) {
             var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
             $(".education-entry:last").append(formattedMajor);
         }
         
-        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-        $(".education-entry:last").append(formattedDates);
+        // Makes all clickable links in Schools open a new tab if clicked
+        $("#education a").attr("target", "_blank");
+        // Opens school website
+        $(".education-entry:last a").attr("href", education.schools[school].url);
     }
     
-    $(".education-entry:last").append(HTMLonlineClasses);
+    $("#education").append(HTMLonlineClasses).css("margin-left", "none");
     
-    for (onlineCourse in education.onlineCourses) {
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-        $(".education-entry:last").append(formattedOnlineTitle);
+    for (var onlineCourse in education.onlineCourses) {
+        $("#education").append(HTMLschoolStart);
         
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title).replace("#", education.onlineCourses[onlineCourse].url[1]);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-        $(".education-entry:last").append(formattedOnlineSchool);
+        var formattedTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
+        $(".education-entry:last").append(formattedTitleSchool);
         
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
         $(".education-entry:last").append(formattedOnlineDates);
         
-        var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+        var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url[0]).replace("#", education.onlineCourses[onlineCourse].url[0]);
         $(".education-entry:last").append(formattedOnlineUrl);
+        
+        // Makes all clickable links in Online Courses open a new tab if clicked
+        $("#education a").attr("target", "_blank");
     }
 }
 
@@ -121,34 +130,36 @@ var work = {
             "title": "Machine Operator",
             "location": "Saint Andre, NB",
             "dates": "2006-2012",
-            "description": "I started this job when I was still in high school so I was just replacing people when needed which means I had to adapt quickly to being trained at a new area on the job site. Most jobs required attention to details. My last few years I was a machine operator, operating machines such as mixers and packaging equipment."
+            "description": "I started this job when I was still in high school so I was just replacing people when needed which means I had to adapt quickly to being trained at a new area on the job site. Most jobs required attention to details. My last few years I was a machine operator, operating machines such as mixers and packaging equipment.",
+            "url": "http://www.mccain.com/"
         },
         {
             "employer": "Givskud Farms",
             "title": "General Labor",
             "location": "Drummond, nb",
             "dates": "2014",
-            "description": "During my time at this job, I was working with very little to no supervision. I was told what needed to be done during the day and I did it. More often than not, I was done the job before the end of the day and needed to find something else to work on, on my own. This involved a lot of learning new machinery I've never touched before."
+            "description": "During my time at this job, I was working with very little to no supervision. I was told what needed to be done during the day and I did it. More often than not, I was done the job before the end of the day and needed to find something else to work on, on my own. This involved a lot of learning new machinery I've never touched before.",
+            "url": "http://www.givskudfarms.com/"
         },
         {
             "employer": "J.D. Irving",
             "title": "General Labor",
             "location": "Veneer, NB",
             "dates": "2015-present",
-            "description": "Fast paced job working in a physically demanding sawmill. There's a lot of machinery to be learend and I'm willing to learn anything!"
+            "description": "Fast paced job working in a physically demanding sawmill. There's a lot of machinery to be learend and I'm willing to learn anything!",
+            "url": "http://www.jdirvinglumber.com/"
         }]
 }
 
 // Function to display the work JSON
 work.display = function() {
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
         
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        $(".work-entry:last").append(formattedEmployer);
-        
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        $(".work-entry:last").append(formattedTitle);
+        var formattedEmployerTitle = formattedEmployer + formattedTitle;
+        $(".work-entry:last").append(formattedEmployerTitle);
         
         var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         $(".work-entry:last").append(formattedLocation);
@@ -158,6 +169,11 @@ work.display = function() {
         
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);
+        
+        // Makes all clickable links in Work Experience open a new tab if clicked
+        $("#workExperience a").attr("target", "_blank");
+        // Opens employer website
+        $(".work-entry:last a").attr("href", work.jobs[job].url);
     }
 }
 
@@ -171,13 +187,14 @@ var projects = {
             "title": "Design Mockup",
             "dates": "August 2015",
             "description": "This is part of my first project in Udacity's Front-End Web Developer Nanodegree. I had to replicate a design mockup. Before starting this, I had no prior formal coding experience and I've learned a lot! I've learned how to effectively use HTML, CSS, Bootstrap and make a website responsive to any screen sizes.",
-            "images": ["images/project1.jpg"]
+            "images": ["images/project1.jpg"],
+            "url": "project-1.html"
         }]
 }
 
 // Function to display the projects JSON
 projects.display = function() {
-    for (project in projects.projects) {
+    for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -190,11 +207,16 @@ projects.display = function() {
         $(".project-entry:last").append(formattedDescription);
         
         if (projects.projects[project].images.length > 0) {
-            for (image in projects.projects[project].images) {
+            for (var image in projects.projects[project].images) {
                 var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".project-entry:last").append(formattedImages);
             }
         }
+        
+        // Makes all clickable links in Projects open a new tab if clicked
+        $("#projects a").attr("target", "_blank");
+        // Opens project website
+        $(".project-entry:last a").attr("href", projects.projects[project].url);
     }
 }
 
@@ -203,3 +225,17 @@ projects.display();
 
 // Displays a map on the screen
 $("#mapDiv").append(googleMap);
+
+// Changes the link colors when mouse hovers
+$("a").on("mouseenter", function() {
+    $(this).css("color", "#f5a623");
+})
+.on("mouseleave", function() {
+    $(this).css("color", "#1199c3");
+});
+
+// Makes the list of contact info and skills fade in and out when mouse hovers
+$(".white-text").hover(function() {
+    $(this).fadeOut(250);
+    $(this).fadeIn(250);
+});

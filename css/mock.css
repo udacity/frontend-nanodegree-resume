@@ -1,0 +1,34 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: #747704;
+}
+
+/* Header */
+/* make sure the logo doesn't go any bigger and sets a margin */
+.title-logo {
+    margin-top: 20px;
+}
+
+.title-super {
+    font-size: 60px;
+    font-weight: 100;
+}
+
+/* thickens the horizontal line */
+hr {
+    height: 5px;
+    background-color: #bcbbbb;
+}
+
+/* content */
+h2 {
+    color: #bcbbbb;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: bold;
+}
