@@ -105,7 +105,7 @@ var CONTACT = "%contact%";
     for(contact in bio.contacts) {
 		var bioMobile = HTMLmobile.replace(DATA,bio.contacts[contact].mobile);
 		var bioEmail = HTMLemail.replace(DATA,bio.contacts[contact].email);
-		var bioGithub = HTMLgithub.replace(CONTACT,"Github").replace(DATA,bio.contacts[contact].Github);
+		var bioGithub = HTMLgithub.replace(DATA,bio.contacts[contact].Github);
 		var bioLocation =HTMLlocation.replace(DATA, bio.contacts[contact].location);
 		var bioTwitter =HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
 		$("#topContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
@@ -199,7 +199,19 @@ var work = {
             "location": "Jeddah, Saudi Arabia",
             "description": "I worked as Summer trainee . Installing various of Scripts , plugins and designs to each script, Maintaining the application by fixing bugs, Enhancing the application by adding/developing new features as required by Client."
         }
-    ]
+    ],
+    "display" : function() {
+	for(job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		
+		var workEmployer = HTMLworkEmployer.replace(DATA,work.jobs[job].employer);
+		var workTitle = HTMLworkTitle.replace(DATA,work.jobs[job].title);
+		var workDates = HTMLworkDates.replace(DATA,work.jobs[job].dates);
+		var workDescription = HTMLworkDescription.replace(DATA,work.jobs[job].description);
+        // jQuery( ":last" ) Selects the last matched element
+		$(".work-entry:last").append(workEmployer + workTitle,workDates,workDescription);
+	}
+}
 };
 
 var projects = {
@@ -228,5 +240,8 @@ var projects = {
         }
     ]
 };
+
+
+work.display();
 
 bio.display();
