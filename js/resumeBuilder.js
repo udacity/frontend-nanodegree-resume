@@ -82,7 +82,36 @@ var CONTACT = "%contact%";
         "Project Management",
         "Networking",
         "Adobe Photoshop"
-    ]
+    ], 
+    "display" : function() {
+	var bioName = HTMLheaderName.replace(DATA,bio.name);
+	var bioRole = HTMLheaderRole.replace(DATA,bio.role);
+	var bioImage = HTMLbioPic.replace(DATA,bio.biopic);
+	var bioMessage = HTMLwelcomeMsg.replace(DATA,bio.welcomeMessage);
+	$("#header").prepend(bioRole).prepend(bioName).append(bioImage,bioMessage);
+	$("#header").append(HTMLskillsStart);
+    
+/*
+	for(skill in bio.skills) {
+		var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
+		$("#skills").append(bioSkills);
+	};
+*/
+
+    // insert ','  between each skill and '.' to the end of the list
+    var bioSkills = HTMLskills.replace(DATA,bio.skills.join(" ,  ") + " .");
+    $("#skills").append(bioSkills);
+    
+    for(contact in bio.contacts) {
+		var bioMobile = HTMLmobile.replace(DATA,bio.contacts[contact].mobile);
+		var bioEmail = HTMLemail.replace(DATA,bio.contacts[contact].email);
+		var bioGithub = HTMLgithub.replace(CONTACT,"Github").replace(DATA,bio.contacts[contact].Github);
+		var bioLocation =HTMLlocation.replace(DATA, bio.contacts[contact].location);
+		var bioTwitter =HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
+		$("#topContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
+       	$("#footerContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
+	};
+}
 };
 
 
@@ -200,39 +229,4 @@ var projects = {
     ]
 };
 
-
-bio.display = function() {
-	var bioName = HTMLheaderName.replace(DATA,bio.name);
-	var bioRole = HTMLheaderRole.replace(DATA,bio.role);
-	var bioImage = HTMLbioPic.replace(DATA,bio.biopic);
-	var bioMessage = HTMLwelcomeMsg.replace(DATA,bio.welcomeMessage);
-	$("#header").prepend(bioRole).prepend(bioName).append(bioImage,bioMessage);
-	$("#header").append(HTMLskillsStart);
-    
-/*
-	for(skill in bio.skills) {
-		var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
-		$("#skills").append(bioSkills);
-	};
-*/
-
-    // insert ','  between each skill and '.' to the end of the list
-    var bioSkills = HTMLskills.replace(DATA,bio.skills.join(" ,  ") + " .");
-    $("#skills").append(bioSkills);
-};
-
 bio.display();
-
-bio.displayContacts = function(){
-	for(contact in bio.contacts) {
-		var bioMobile = HTMLmobile.replace(DATA,bio.contacts[contact].mobile);
-		var bioEmail = HTMLemail.replace(DATA,bio.contacts[contact].email);
-		var bioGithub = HTMLgithub.replace(CONTACT,"Github").replace(DATA,bio.contacts[contact].Github);
-		var bioLocation =HTMLlocation.replace(DATA, bio.contacts[contact].location);
-		var bioTwitter =HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
-		$("#topContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
-       	$("#footerContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
-	};
-};
-
-bio.displayContacts();
