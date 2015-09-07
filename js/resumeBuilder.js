@@ -2,63 +2,63 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
  
- /***
-  *  Building JSON 
-  * 
+/***
+ *  Building JSON 
+ * 
 bio:
-    name : string
-    role : string
-    contacts : an object with
-          mobile: string
-          email: string 
-          github: string
-          twitter: string 
-          location: string
-    welcomeMessage: string 
-    skills: array of strings
-    biopic: url
-    display: function
+   name : string
+   role : string
+   contacts : an object with
+         mobile: string
+         email: string 
+         github: string
+         twitter: string 
+         location: string
+   welcomeMessage: string 
+   skills: array of strings
+   biopic: url
+   display: function
 
 education
-    schools: array of objects with
-         name: string
-         location: string
-         degree: string
-         majors: array of strings
-         dates: integer (graduation date)
-         url: string
-    onlineCourses: array with
-         title: string
-         school: string
-         date: integer (date finished)
-         url: string
-    display: function
-    
+   schools: array of objects with
+        name: string
+        location: string
+        degree: string
+        majors: array of strings
+        dates: integer (graduation date)
+        url: string
+   onlineCourses: array with
+        title: string
+        school: string
+        date: integer (date finished)
+        url: string
+   display: function
+   
 work
-    jobs: array of objects with
-         employer: string 
-         title: string 
-         location: string 
-         dates: string (works with a hyphen between them)
-         description: string 
-    display: function
-    
+   jobs: array of objects with
+        employer: string 
+        title: string 
+        location: string 
+        dates: string (works with a hyphen between them)
+        description: string 
+   display: function
+   
 projects
-    projects: array of objects with
-          title: string 
-          dates: string (works with a hyphen between them)
-          description: string
-          images: array with string urls
-    display: function
-  */ 
+   projects: array of objects with
+         title: string 
+         dates: string (works with a hyphen between them)
+         description: string
+         images: array with string urls
+   display: function
+ */
 
 
-var  DATA = "%data%";
+var DATA = "%data%";
 var CONTACT = "%contact%";
 
 
 
- var bio = {
+var bio = {
     "name": "Ahmed Saleh",
     "role": "Software Engineer",
     "contacts": [
@@ -82,36 +82,36 @@ var CONTACT = "%contact%";
         "Project Management",
         "Networking",
         "Adobe Photoshop"
-    ], 
-    "display" : function() {
-	var bioName = HTMLheaderName.replace(DATA,bio.name);
-	var bioRole = HTMLheaderRole.replace(DATA,bio.role);
-	var bioImage = HTMLbioPic.replace(DATA,bio.biopic);
-	var bioMessage = HTMLwelcomeMsg.replace(DATA,bio.welcomeMessage);
-	$("#header").prepend(bioRole).prepend(bioName).append(bioImage,bioMessage);
-	$("#header").append(HTMLskillsStart);
+    ],
+    "display": function () {
+        var bioName = HTMLheaderName.replace(DATA, bio.name);
+        var bioRole = HTMLheaderRole.replace(DATA, bio.role);
+        var bioImage = HTMLbioPic.replace(DATA, bio.biopic);
+        var bioMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
+        $("#header").prepend(bioRole).prepend(bioName).append(bioImage, bioMessage);
+        $("#header").append(HTMLskillsStart);
     
-/*
-	for(skill in bio.skills) {
-		var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
-		$("#skills").append(bioSkills);
-	};
-*/
+        /*
+            for(skill in bio.skills) {
+                var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
+                $("#skills").append(bioSkills);
+            };
+        */
 
-    // insert ','  between each skill and '.' to the end of the list
-    var bioSkills = HTMLskills.replace(DATA,bio.skills.join(" ,  ") + " .");
-    $("#skills").append(bioSkills);
-    
-    for(contact in bio.contacts) {
-		var bioMobile = HTMLmobile.replace(DATA,bio.contacts[contact].mobile);
-		var bioEmail = HTMLemail.replace(DATA,bio.contacts[contact].email);
-		var bioGithub = HTMLgithub.replace(DATA,bio.contacts[contact].Github);
-		var bioLocation =HTMLlocation.replace(DATA, bio.contacts[contact].location);
-		var bioTwitter =HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
-		$("#topContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
-       	$("#footerContacts").append(bioMobile,bioEmail,bioGithub,bioTwitter,bioLocation);
-	};
-}
+        // insert ','  between each skill and '.' to the end of the list
+        var bioSkills = HTMLskills.replace(DATA, bio.skills.join(" ,  ") + " .");
+        $("#skills").append(bioSkills);
+
+        for (contact in bio.contacts) {
+            var bioMobile = HTMLmobile.replace(DATA, bio.contacts[contact].mobile);
+            var bioEmail = HTMLemail.replace(DATA, bio.contacts[contact].email);
+            var bioGithub = HTMLgithub.replace(DATA, bio.contacts[contact].Github);
+            var bioLocation = HTMLlocation.replace(DATA, bio.contacts[contact].location);
+            var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
+            $("#topContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
+            $("#footerContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
+        };
+    }
 };
 
 
@@ -200,18 +200,18 @@ var work = {
             "description": "I worked as Summer trainee . Installing various of Scripts , plugins and designs to each script, Maintaining the application by fixing bugs, Enhancing the application by adding/developing new features as required by Client."
         }
     ],
-    "display" : function() {
-	for(job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-		
-		var workEmployer = HTMLworkEmployer.replace(DATA,work.jobs[job].employer);
-		var workTitle = HTMLworkTitle.replace(DATA,work.jobs[job].title);
-		var workDates = HTMLworkDates.replace(DATA,work.jobs[job].dates);
-		var workDescription = HTMLworkDescription.replace(DATA,work.jobs[job].description);
-        // jQuery( ":last" ) Selects the last matched element
-		$(".work-entry:last").append(workEmployer + workTitle,workDates,workDescription);
-	}
-}
+    "display": function () {
+        for (job in work.jobs) {
+            $("#workExperience").append(HTMLworkStart);
+
+            var workEmployer = HTMLworkEmployer.replace(DATA, work.jobs[job].employer);
+            var workTitle = HTMLworkTitle.replace(DATA, work.jobs[job].title);
+            var workDates = HTMLworkDates.replace(DATA, work.jobs[job].dates);
+            var workDescription = HTMLworkDescription.replace(DATA, work.jobs[job].description);
+            // jQuery( ":last" ) Selects the last matched element
+            $(".work-entry:last").append(workEmployer + workTitle, workDates, workDescription);
+        }
+    }
 };
 
 var projects = {
