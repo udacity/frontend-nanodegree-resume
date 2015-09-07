@@ -47,6 +47,7 @@ work
 projects
    projects: array of objects with
          title: string 
+         url: string
          dates: string (works with a hyphen between them)
          description: string
          images: array with string urls
@@ -252,6 +253,7 @@ var projects = {
         {
             "title": "OZBAH (IN PROGRESS)",
             "dates": "July 17, 2015",
+            "url" : "https://play.google.com/store/apps/details?id=com.ahmadssb.queueozbah",
             "description": "Ozbah (العزبة) is a name of place (room, garden... etc) where a friends and family usually hangout. The application is dedicated to arrange who have the right to play on the next game (any game of 2 or 4 players) and arrange the current and waiting list players. based on the time the presence of the player. where the losing team will move to the end of the waiting list and the first players will jump to current list.",
             "images": [
                 "images/project-ozbah-1.png",
@@ -263,6 +265,7 @@ var projects = {
         {
             "title": "ONE KSA or ONE Jeddah (IN PROGRESS)",
             "dates": "October 2014",
+            "url" : "http://www.oneksa.com",
             "description": "mobile application for smartphones and tablets to connect the malls in Saudi Arabia or Jeddah in one Application with a suggested name (One KSA / One Jeddah) that provide Latest events and promotions from the selected mall and its stores, Indoor Navigation System for the mall and its Parking and Payment or Collecting points System using QR code and NFC.",
             "images": [
                 "images/project-oneksa-1.png",
@@ -271,9 +274,23 @@ var projects = {
                 "images/project-oneksa-4.png"
             ]
         }
-    ]
+    ],
+    "display": function(){
+	for(project in projects.project){
+		$("#projects").append(HTMLprojectStart);
+		var projectTitle = HTMLprojectTitle.replace(DATA,projects.project[project].title);
+		var projectDates = HTMLprojectDates.replace(DATA,projects.project[project].dates);
+		var projectDescription = HTMLprojectDescription.replace(DATA,projects.project[project].description);
+		
+		$(".project-entry:last").append(projectTitle,projectDates,projectDescription);
+        $(".project-entry:last").children("a").attr("href", projects.project[project].url);
+		for (image in projects.project[project].images) {
+			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
+			$(".project-entry:last").append(projectImage);
+		};
+	}
+}
 };
-
 
 
 
@@ -281,3 +298,5 @@ var projects = {
 bio.display();
 work.display();
 education.display();
+projects.display();
+
