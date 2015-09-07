@@ -300,3 +300,7 @@ work.display();
 education.display();
 projects.display();
 
+
+
+$("#main").append(internationalizeButton);
+$("#mapDiv").append(googleMap);
