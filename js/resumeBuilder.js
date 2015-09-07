@@ -178,6 +178,7 @@ var education = {
         var eduLocation = HTMLschoolLocation.replace(DATA, education.schools[school].location);
         var eduMajor = HTMLschoolMajor.replace(DATA, education.schools[school].majors);
         $(".education-entry:last").append(eduName + eduDegree, eduDates, eduLocation, eduMajor);
+        $('.education-entry:last').children('a').attr('href',  education.schools[school].url);
     }
 
     $("#education").append(HTMLonlineClasses);
@@ -190,6 +191,7 @@ var education = {
             HTMLonlineDates.replace(DATA, education.onlineCourses[course].dates);
         var eduURL = HTMLonlineURL.replace(DATA, education.onlineCourses[course].url);
         $(".education-entry:last").append(eduOnlineTitle + eduOnlineSchool, eduOnlineDate, eduURL);
+        $('.education-entry:last').children('a').attr('href',  education.onlineCourses[course].url);
     }
 }
 };
