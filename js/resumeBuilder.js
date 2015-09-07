@@ -166,7 +166,32 @@ var education = {
             "dates": 2014,
             "url": "https://www.udemy.com/u/ahmadsaleh2/"
         }
-    ]
+    ],
+    "display": function () {
+
+    for (school in education.schools) {
+        $("#education").append(HTMLschoolStart);
+
+        var eduName = HTMLschoolName.replace(DATA, education.schools[school].name);
+        var eduDegree = HTMLschoolDegree.replace(DATA, education.schools[school].degree);
+        var eduDates = HTMLschoolDates.replace(DATA, education.schools[school].dates);
+        var eduLocation = HTMLschoolLocation.replace(DATA, education.schools[school].location);
+        var eduMajor = HTMLschoolMajor.replace(DATA, education.schools[school].majors);
+        $(".education-entry:last").append(eduName + eduDegree, eduDates, eduLocation, eduMajor);
+    }
+
+    $("#education").append(HTMLonlineClasses);
+    for (var course in education.onlineCourses) {
+
+        $("#education").append(HTMLschoolStart);
+        var eduOnlineTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[course].title);
+        var eduOnlineSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[course].school);
+        var eduOnlineDate =
+            HTMLonlineDates.replace(DATA, education.onlineCourses[course].dates);
+        var eduURL = HTMLonlineURL.replace(DATA, education.onlineCourses[course].url);
+        $(".education-entry:last").append(eduOnlineTitle + eduOnlineSchool, eduOnlineDate, eduURL);
+    }
+}
 };
 
 var work = {
@@ -242,6 +267,9 @@ var projects = {
 };
 
 
-work.display();
+
+
 
 bio.display();
+work.display();
+education.display();
