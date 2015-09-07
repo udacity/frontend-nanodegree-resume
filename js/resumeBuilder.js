@@ -292,6 +292,13 @@ var projects = {
 }
 };
 
+//information about click locations, hint: On line 89 in helper.js
+$(document).click(function(loc) {
+  
+  var x= loc.pageX;
+  var y = loc.pageY;
+  logClicks(x,y);
+});
 
 
 
