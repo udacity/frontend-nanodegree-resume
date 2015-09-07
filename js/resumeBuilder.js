@@ -38,6 +38,7 @@ work
    jobs: array of objects with
         employer: string 
         title: string 
+        url: string
         location: string 
         dates: string (works with a hyphen between them)
         description: string 
@@ -201,6 +202,7 @@ var work = {
         {
             "employer": "GIS Technology Innovation Center (GISTIC)",
             "title": "Software Engineer ",
+            "url": "http://www.gistic.org/",
             "dates": "October 2015 - Present",
             "location": "GIS Technology Innovation Center, Second Floor Institute of Scientific Research Umm Al-Qura University, Makkah, Saudi Arabia",
             "description": "Software Engineer Development, Front-end Development."
@@ -208,6 +210,7 @@ var work = {
         {
             "employer": "TapWay",
             "title": "App Developer / Web Developer [Internship]",
+            "url": "http://www.tapway.com.my/",
             "dates": "March 2014 - May 2014",
             "location": "TapWay, No. 6-2, Jalan PJS 8/12A, Dataran Mentari, Petaling Jaya, 46150 Selangor, Malaysia",
             "description": "I have Worked on Eventgelist [Previously Tap Event] Android App using NFC Technology and its cloud-based solution."
@@ -215,6 +218,7 @@ var work = {
         {
             "employer": "ARABIAN BUILDING CHEMICALS FACTORY",
             "title": "Summer Trainee",
+            "url": "http://babader.com/",
             "dates": "2000 - 2007",
             "location": "Old Makkah Road, Kilo-14 Area ,Jeddah, Saudi Arabia",
             "description": "I worked as Summer trainee (Summer times only) in IT, Production and others."
@@ -222,6 +226,7 @@ var work = {
         {
             "employer": "TOP LINE",
             "title": "Summer Trainee",
+            "url": "www.tl4s.com.sa/",
             "dates": "2006 (3 Months)",
             "location": "Jeddah, Saudi Arabia",
             "description": "I worked as Summer trainee . Installing various of Scripts , plugins and designs to each script, Maintaining the application by fixing bugs, Enhancing the application by adding/developing new features as required by Client."
@@ -237,6 +242,7 @@ var work = {
             var workDescription = HTMLworkDescription.replace(DATA, work.jobs[job].description);
             // jQuery( ":last" ) Selects the last matched element
             $(".work-entry:last").append(workEmployer + workTitle, workDates, workDescription);
+            $(".work-entry:last").children('a').attr('href', work.jobs[job].url);
         }
     }
 };
