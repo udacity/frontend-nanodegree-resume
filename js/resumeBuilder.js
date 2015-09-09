@@ -54,6 +54,19 @@ projects
    display: function
  */
 
+/*
+  Momen:
+  It is a good practice to include the "use strict;” tag in your function definitions
+  to enable the strict mode (even if the file was provided to you). This helps to
+  write more "secure" codes by preventing things such as marking down a function with
+  bad syntax to execute or loading unused variables.
+
+  Read here :
+  http://www.w3schools.com/js/js_strict.asp
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+  p.s. If you implement the strict mode, please test your code as some functions may required minor adjustments.
+  
+*/
 
 var DATA = "%data%";
 var CONTACT = "%contact%";
@@ -63,6 +76,11 @@ var CONTACT = "%contact%";
 var bio = {
     "name": "Ahmed Saleh",
     "role": "Software Engineer",
+    /*
+      Momen:
+      Do you have to contian contacts information in
+      an array?
+    */
     "contacts": [
         {
             "mobile": "+966-(0)59-118-8897",
@@ -90,6 +108,13 @@ var bio = {
         var bioRole = HTMLheaderRole.replace(DATA, bio.role);
         var bioImage = HTMLbioPic.replace(DATA, bio.biopic);
         var bioMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
+        /*
+          Momen:
+          For consistency single-quotes (') are preferred over double-quotes (").
+          This is helpful when creating strings that include HTML.
+          https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
+          p.s. It is recommended to use double-quotes when you are writing JSON.
+        */
         $("#header").prepend(bioRole).prepend(bioName).append(bioImage, bioMessage);
         $("#header").append(HTMLskillsStart);
     
@@ -103,7 +128,21 @@ var bio = {
         // insert ','  between each skill and '.' to the end of the list
         var bioSkills = HTMLskills.replace(DATA, bio.skills.join(" ,  ") + " .");
         $("#skills").append(bioSkills);
+      
+        /*
+          Momen:
+          You should always declare a variable with the variable statement ("var")
+          When you fail to specify var, the variable is implicitly created in the
+          global context If there's no declaration, it's hard to tell in what scope
+          variable lives.
+          
+          Check:
+          https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
+          https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#var
+          https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
 
+          p.s. It is optional initializing any variable to a value.
+        */
         for (contact in bio.contacts) {
             var bioMobile = HTMLmobile.replace(DATA, bio.contacts[contact].mobile);
             var bioEmail = HTMLemail.replace(DATA, bio.contacts[contact].email);
@@ -284,6 +323,11 @@ var projects = {
 		
 		$(".project-entry:last").append(projectTitle,projectDates,projectDescription);
         $(".project-entry:last").children("a").attr("href", projects.project[project].url);
+    /*
+      Momen:
+      What if your project doesn't contain images?
+      Do you need to check first?
+    */
 		for (image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
 			$(".project-entry:last").append(projectImage);
