@@ -119,7 +119,7 @@ var bio = {
         $('#header').append(HTMLskillsStart);
     
         /*
-            for(skill in bio.skills) {
+            for (var skill in bio.skills) {
                 var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
                 $("#skills").append(bioSkills);
             };
@@ -143,7 +143,7 @@ var bio = {
 
           p.s. It is optional initializing any variable to a value.
         */
-        for (contact in bio.contacts) {
+        for (var contact in bio.contacts) {
             var bioMobile = HTMLmobile.replace(DATA, bio.contacts[contact].mobile);
             var bioEmail = HTMLemail.replace(DATA, bio.contacts[contact].email);
             var bioGithub = HTMLgithub.replace(DATA, bio.contacts[contact].Github);
@@ -210,7 +210,7 @@ var education = {
     ],
     "display": function () {
 
-    for (school in education.schools) {
+    for (var school in education.schools) {
         $('#education').append(HTMLschoolStart);
 
         var eduName = HTMLschoolName.replace(DATA, education.schools[school].name);
@@ -273,7 +273,7 @@ var work = {
         }
     ],
     "display": function () {
-        for (job in work.jobs) {
+        for (var job in work.jobs) {
             $('#workExperience').append(HTMLworkStart);
 
             var workEmployer = HTMLworkEmployer.replace(DATA, work.jobs[job].employer);
@@ -315,7 +315,7 @@ var projects = {
         }
     ],
     "display": function(){
-	for(project in projects.project){
+	for (var project in projects.project){
 		$('#projects').append(HTMLprojectStart);
 		var projectTitle = HTMLprojectTitle.replace(DATA,projects.project[project].title);
 		var projectDates = HTMLprojectDates.replace(DATA,projects.project[project].dates);
@@ -328,7 +328,7 @@ var projects = {
       What if your project doesn't contain images?
       Do you need to check first?
     */
-		for (image in projects.project[project].images) {
+		for (var image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
 			$('.project-entry:last').append(projectImage);
 		};
