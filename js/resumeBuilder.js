@@ -94,7 +94,7 @@ var bio = {
         $("#header").append(HTMLskillsStart);
     
         /*
-            for(skill in bio.skills) {
+            for (var skill in bio.skills) {
                 var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
                 $("#skills").append(bioSkills);
             };
@@ -104,7 +104,7 @@ var bio = {
         var bioSkills = HTMLskills.replace(DATA, bio.skills.join(" ,  ") + " .");
         $("#skills").append(bioSkills);
 
-        for (contact in bio.contacts) {
+        for (var contact in bio.contacts) {
             var bioMobile = HTMLmobile.replace(DATA, bio.contacts[contact].mobile);
             var bioEmail = HTMLemail.replace(DATA, bio.contacts[contact].email);
             var bioGithub = HTMLgithub.replace(DATA, bio.contacts[contact].Github);
@@ -112,7 +112,7 @@ var bio = {
             var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
             $("#topContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
             $("#footerContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
-        };
+        }
     }
 };
 
@@ -171,7 +171,7 @@ var education = {
     ],
     "display": function () {
 
-    for (school in education.schools) {
+    for (var school in education.schools) {
         $("#education").append(HTMLschoolStart);
 
         var eduName = HTMLschoolName.replace(DATA, education.schools[school].name);
@@ -234,7 +234,7 @@ var work = {
         }
     ],
     "display": function () {
-        for (job in work.jobs) {
+        for (var job in work.jobs) {
             $("#workExperience").append(HTMLworkStart);
 
             var workEmployer = HTMLworkEmployer.replace(DATA, work.jobs[job].employer);
@@ -276,7 +276,7 @@ var projects = {
         }
     ],
     "display": function(){
-	for(project in projects.project){
+	for (var project in projects.project){
 		$("#projects").append(HTMLprojectStart);
 		var projectTitle = HTMLprojectTitle.replace(DATA,projects.project[project].title);
 		var projectDates = HTMLprojectDates.replace(DATA,projects.project[project].dates);
@@ -284,10 +284,10 @@ var projects = {
 		
 		$(".project-entry:last").append(projectTitle,projectDates,projectDescription);
         $(".project-entry:last").children("a").attr("href", projects.project[project].url);
-		for (image in projects.project[project].images) {
+		for (var image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
 			$(".project-entry:last").append(projectImage);
-		};
+		}
 	}
 }
 };
