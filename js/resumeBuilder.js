@@ -225,6 +225,12 @@ var education = {
 	],
 	"onlineCourses": [
 		{
+			"title": "Intro to Relational Databases",
+			"school": "Udacity",
+			"dates": 2015,
+			"url": "https://www.udacity.com/course/intro-to-relational-databases--ud197"
+		},
+		{
 			"title": "Android Development for Beginners",
 			"school": "Udacity/Google",
 			"dates": 2015,
