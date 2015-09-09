@@ -293,7 +293,7 @@ var projects = {
             "title": "OZBAH (IN PROGRESS)",
             "dates": "July 17, 2015",
             "url" : "https://play.google.com/store/apps/details?id=com.ahmadssb.queueozbah",
-            "description": "Ozbah (Ø§Ù„Ø¹Ø²Ø¨Ø©) is a name of place (room, garden... etc) where a friends and family usually hangout. The application is dedicated to arrange who have the right to play on the next game (any game of 2 or 4 players) and arrange the current and waiting list players. based on the time the presence of the player. where the losing team will move to the end of the waiting list and the first players will jump to current list.",
+            "description": "Ozbah (عزبة) is a name of place (room, garden... etc) where a friends and family usually hangout. The application is dedicated to arrange who have the right to play on the next game (any game of 2 or 4 players) and arrange the current and waiting list players. based on the time the presence of the player. where the losing team will move to the end of the waiting list and the first players will jump to current list.",
             "images": [
                 "images/project-ozbah-1.png",
                 "images/project-ozbah-2.png",
