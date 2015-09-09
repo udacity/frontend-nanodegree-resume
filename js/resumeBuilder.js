@@ -15,7 +15,7 @@ var bio = {
 		"Software Engineering", "Computer Vision", "Machine Learning",
 		"Virtual Reality", "Image Processing", "Electronics", 
 		"Embedded Programming", "C", "C++", "Java", "Python", "HTML", 
-		"JavaScript", "Matlab", "LaTeX", "Linux", "Bash", "Git"
+		"JavaScript", "SQL", "Matlab", "LaTeX", "Linux", "Bash", "Git"
 	],
 	"bioPic": "images/me.jpg"
 };
