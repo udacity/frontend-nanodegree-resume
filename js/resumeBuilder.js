@@ -94,7 +94,7 @@ var bio = {
         $("#header").append(HTMLskillsStart);
     
         /*
-            for (var skill in bio.skills) {
+            for(skill in bio.skills) {
                 var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
                 $("#skills").append(bioSkills);
             };
@@ -104,7 +104,7 @@ var bio = {
         var bioSkills = HTMLskills.replace(DATA, bio.skills.join(" ,  ") + " .");
         $("#skills").append(bioSkills);
 
-        for (var contact in bio.contacts) {
+        for (contact in bio.contacts) {
             var bioMobile = HTMLmobile.replace(DATA, bio.contacts[contact].mobile);
             var bioEmail = HTMLemail.replace(DATA, bio.contacts[contact].email);
             var bioGithub = HTMLgithub.replace(DATA, bio.contacts[contact].Github);
@@ -112,7 +112,7 @@ var bio = {
             var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
             $("#topContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
             $("#footerContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
-        }
+        };
     }
 };
 
@@ -171,7 +171,7 @@ var education = {
     ],
     "display": function () {
 
-    for (var school in education.schools) {
+    for (school in education.schools) {
         $("#education").append(HTMLschoolStart);
 
         var eduName = HTMLschoolName.replace(DATA, education.schools[school].name);
@@ -234,7 +234,7 @@ var work = {
         }
     ],
     "display": function () {
-        for (var job in work.jobs) {
+        for (job in work.jobs) {
             $("#workExperience").append(HTMLworkStart);
 
             var workEmployer = HTMLworkEmployer.replace(DATA, work.jobs[job].employer);
@@ -254,7 +254,7 @@ var projects = {
             "title": "OZBAH (IN PROGRESS)",
             "dates": "July 17, 2015",
             "url" : "https://play.google.com/store/apps/details?id=com.ahmadssb.queueozbah",
-            "description": "Ozbah (العزبة) is a name of place (room, garden... etc) where a friends and family usually hangout. The application is dedicated to arrange who have the right to play on the next game (any game of 2 or 4 players) and arrange the current and waiting list players. based on the time the presence of the player. where the losing team will move to the end of the waiting list and the first players will jump to current list.",
+            "description": "Ozbah (Ø§Ù„Ø¹Ø²Ø¨Ø©) is a name of place (room, garden... etc) where a friends and family usually hangout. The application is dedicated to arrange who have the right to play on the next game (any game of 2 or 4 players) and arrange the current and waiting list players. based on the time the presence of the player. where the losing team will move to the end of the waiting list and the first players will jump to current list.",
             "images": [
                 "images/project-ozbah-1.png",
                 "images/project-ozbah-2.png",
@@ -276,7 +276,7 @@ var projects = {
         }
     ],
     "display": function(){
-	for (var project in projects.project){
+	for(project in projects.project){
 		$("#projects").append(HTMLprojectStart);
 		var projectTitle = HTMLprojectTitle.replace(DATA,projects.project[project].title);
 		var projectDates = HTMLprojectDates.replace(DATA,projects.project[project].dates);
@@ -284,10 +284,10 @@ var projects = {
 		
 		$(".project-entry:last").append(projectTitle,projectDates,projectDescription);
         $(".project-entry:last").children("a").attr("href", projects.project[project].url);
-		for (var image in projects.project[project].images) {
+		for (image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
 			$(".project-entry:last").append(projectImage);
-		}
+		};
 	}
 }
 };
@@ -297,6 +297,7 @@ $(document).click(function(loc) {
   
   var x= loc.pageX;
   var y = loc.pageY;
+  logClicks(x,y);
 });
 
 
