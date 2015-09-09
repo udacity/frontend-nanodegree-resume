@@ -81,7 +81,7 @@ var bio = {
       Do you have to contian contacts information in
       an array?
     */
-    "contacts": [
+    "contacts":[ 
         {
             "mobile": "+966-(0)59-118-8897",
             "email": "ahmad@ahmadssb.com",
@@ -115,8 +115,8 @@ var bio = {
           https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
           p.s. It is recommended to use double-quotes when you are writing JSON.
         */
-        $("#header").prepend(bioRole).prepend(bioName).append(bioImage, bioMessage);
-        $("#header").append(HTMLskillsStart);
+        $('#header').prepend(bioRole).prepend(bioName).append(bioImage, bioMessage);
+        $('#header').append(HTMLskillsStart);
     
         /*
             for(skill in bio.skills) {
@@ -126,8 +126,8 @@ var bio = {
         */
 
         // insert ','  between each skill and '.' to the end of the list
-        var bioSkills = HTMLskills.replace(DATA, bio.skills.join(" ,  ") + " .");
-        $("#skills").append(bioSkills);
+        var bioSkills = HTMLskills.replace(DATA, bio.skills.join(' ,  ') + ' .');
+        $('#skills').append(bioSkills);
       
         /*
           Momen:
@@ -149,8 +149,8 @@ var bio = {
             var bioGithub = HTMLgithub.replace(DATA, bio.contacts[contact].Github);
             var bioLocation = HTMLlocation.replace(DATA, bio.contacts[contact].location);
             var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
-            $("#topContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
-            $("#footerContacts").append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
+            $('#topContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
+            $('#footerContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
         };
     }
 };
@@ -211,27 +211,27 @@ var education = {
     "display": function () {
 
     for (school in education.schools) {
-        $("#education").append(HTMLschoolStart);
+        $('#education').append(HTMLschoolStart);
 
         var eduName = HTMLschoolName.replace(DATA, education.schools[school].name);
         var eduDegree = HTMLschoolDegree.replace(DATA, education.schools[school].degree);
         var eduDates = HTMLschoolDates.replace(DATA, education.schools[school].dates);
         var eduLocation = HTMLschoolLocation.replace(DATA, education.schools[school].location);
         var eduMajor = HTMLschoolMajor.replace(DATA, education.schools[school].majors);
-        $(".education-entry:last").append(eduName + eduDegree, eduDates, eduLocation, eduMajor);
+        $('.education-entry:last').append(eduName + eduDegree, eduDates, eduLocation, eduMajor);
         $('.education-entry:last').children('a').attr('href',  education.schools[school].url);
     }
 
-    $("#education").append(HTMLonlineClasses);
+    $('#education').append(HTMLonlineClasses);
     for (var course in education.onlineCourses) {
 
-        $("#education").append(HTMLschoolStart);
+        $('#education').append(HTMLschoolStart);
         var eduOnlineTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[course].title);
         var eduOnlineSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[course].school);
         var eduOnlineDate =
             HTMLonlineDates.replace(DATA, education.onlineCourses[course].dates);
         var eduURL = HTMLonlineURL.replace(DATA, education.onlineCourses[course].url);
-        $(".education-entry:last").append(eduOnlineTitle + eduOnlineSchool, eduOnlineDate, eduURL);
+        $('.education-entry:last').append(eduOnlineTitle + eduOnlineSchool, eduOnlineDate, eduURL);
         $('.education-entry:last').children('a').attr('href',  education.onlineCourses[course].url);
     }
 }
@@ -274,15 +274,15 @@ var work = {
     ],
     "display": function () {
         for (job in work.jobs) {
-            $("#workExperience").append(HTMLworkStart);
+            $('#workExperience').append(HTMLworkStart);
 
             var workEmployer = HTMLworkEmployer.replace(DATA, work.jobs[job].employer);
             var workTitle = HTMLworkTitle.replace(DATA, work.jobs[job].title);
             var workDates = HTMLworkDates.replace(DATA, work.jobs[job].dates);
             var workDescription = HTMLworkDescription.replace(DATA, work.jobs[job].description);
             // jQuery( ":last" ) Selects the last matched element
-            $(".work-entry:last").append(workEmployer + workTitle, workDates, workDescription);
-            $(".work-entry:last").children('a').attr('href', work.jobs[job].url);
+            $('.work-entry:last').append(workEmployer + workTitle, workDates, workDescription);
+            $('.work-entry:last').children('a').attr('href', work.jobs[job].url);
         }
     }
 };
@@ -316,13 +316,13 @@ var projects = {
     ],
     "display": function(){
 	for(project in projects.project){
-		$("#projects").append(HTMLprojectStart);
+		$('#projects').append(HTMLprojectStart);
 		var projectTitle = HTMLprojectTitle.replace(DATA,projects.project[project].title);
 		var projectDates = HTMLprojectDates.replace(DATA,projects.project[project].dates);
 		var projectDescription = HTMLprojectDescription.replace(DATA,projects.project[project].description);
 		
-		$(".project-entry:last").append(projectTitle,projectDates,projectDescription);
-        $(".project-entry:last").children("a").attr("href", projects.project[project].url);
+		$('.project-entry:last').append(projectTitle,projectDates,projectDescription);
+        $('.project-entry:last').children("a").attr("href", projects.project[project].url);
     /*
       Momen:
       What if your project doesn't contain images?
@@ -330,7 +330,7 @@ var projects = {
     */
 		for (image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
-			$(".project-entry:last").append(projectImage);
+			$('.project-entry:last').append(projectImage);
 		};
 	}
 }
@@ -353,5 +353,5 @@ projects.display();
 
 
 
-$("#main").append(internationalizeButton);
-$("#mapDiv").append(googleMap);
+$('#main').append(internationalizeButton);
+$('#mapDiv').append(googleMap);
