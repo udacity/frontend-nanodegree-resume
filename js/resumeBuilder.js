@@ -302,6 +302,14 @@ var projects = {
             ]
         },
         {
+            "title": "Project With No Image",
+            "dates": "2015",
+            "url" : "http://www.ahmadssb.com",
+            "description": "Project With No Image Description.",
+            "images": [
+            ]
+        },
+        {
             "title": "ONE KSA or ONE Jeddah (IN PROGRESS)",
             "dates": "October 2014",
             "url" : "http://www.oneksa.com",
@@ -328,10 +336,14 @@ var projects = {
       What if your project doesn't contain images?
       Do you need to check first?
     */
-		for (var image in projects.project[project].images) {
+    if(projects.project[project].images.length != 0){
+        for (var image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
 			$('.project-entry:last').append(projectImage);
 		};
+    }else{
+        $('.project-entry:last').append(HTMLprojectNoImage);
+    }
 	}
 }
 };
