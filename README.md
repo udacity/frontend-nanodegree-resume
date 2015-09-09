@@ -1,4 +1,4 @@
-My home page: http://web.stanford.edu/~chuiwenm/
+You are welcome to see [my home page](http://web.stanford.edu/~chuiwenm/).
 
 ## How to see my resume?
 1. Click 'Download ZIP'
