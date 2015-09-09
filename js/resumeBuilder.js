@@ -69,7 +69,6 @@ projects
 */
 
 var DATA = "%data%";
-var CONTACT = "%contact%";
 
 
 
@@ -151,7 +150,7 @@ var bio = {
             var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
             $('#topContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
             $('#footerContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
-        };
+        }
     }
 };
 
@@ -336,11 +335,11 @@ var projects = {
       What if your project doesn't contain images?
       Do you need to check first?
     */
-    if(projects.project[project].images.length != 0){
+    if(projects.project[project].images.length !== 0){
         for (var image in projects.project[project].images) {
 			var projectImage = HTMLprojectImage.replace(DATA,projects.project[project].images[image]);
 			$('.project-entry:last').append(projectImage);
-		};
+		}
     }else{
         $('.project-entry:last').append(HTMLprojectNoImage);
     }
