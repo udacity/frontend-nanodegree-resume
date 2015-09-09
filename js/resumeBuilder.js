@@ -81,7 +81,7 @@ var bio = {
       Do you have to contian contacts information in
       an array?
     */
-    "contacts":[ 
+    "contacts":
         {
             "mobile": "+966-(0)59-118-8897",
             "email": "ahmad@ahmadssb.com",
@@ -89,7 +89,7 @@ var bio = {
             "Twitter": "@ahmadssb",
             "location": "Jeddah, Saudi Arabia"
         }
-    ],
+    ,
     "welcomeMessage": "I am a software engineer with almost 4 years of software development experience in Web and Mobile Application development. Equipped with up to date technology and techniques. I want to develop great applications for creative people to add to my portfolio.",
     "biopic": "images/ahmed-babadr.jpg",
     "skills": [
@@ -117,17 +117,19 @@ var bio = {
         */
         $('#header').prepend(bioRole).prepend(bioName).append(bioImage, bioMessage);
         $('#header').append(HTMLskillsStart);
-    
-        /*
-            for(skill in bio.skills) {
-                var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
-                $("#skills").append(bioSkills);
-            };
-        */
 
         // insert ','  between each skill and '.' to the end of the list
         var bioSkills = HTMLskills.replace(DATA, bio.skills.join(' ,  ') + ' .');
         $('#skills').append(bioSkills);
+        
+        var bioMobile = HTMLmobile.replace(DATA, bio.contacts.mobile);
+        var bioEmail = HTMLemail.replace(DATA, bio.contacts.email);
+        var bioGithub = HTMLgithub.replace(DATA, bio.contacts.Github);
+        var bioLocation = HTMLlocation.replace(DATA, bio.contacts.location);
+        var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts.Twitter);
+        $('#topContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
+        $('#footerContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
+
       
         /*
           Momen:
@@ -143,15 +145,6 @@ var bio = {
 
           p.s. It is optional initializing any variable to a value.
         */
-        for (contact in bio.contacts) {
-            var bioMobile = HTMLmobile.replace(DATA, bio.contacts[contact].mobile);
-            var bioEmail = HTMLemail.replace(DATA, bio.contacts[contact].email);
-            var bioGithub = HTMLgithub.replace(DATA, bio.contacts[contact].Github);
-            var bioLocation = HTMLlocation.replace(DATA, bio.contacts[contact].location);
-            var bioTwitter = HTMLtwitter.replace(DATA, bio.contacts[contact].Twitter);
-            $('#topContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
-            $('#footerContacts').append(bioMobile, bioEmail, bioGithub, bioTwitter, bioLocation);
-        };
     }
 };
 
