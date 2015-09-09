@@ -38,7 +38,7 @@ var work = {
 var education = {
   'schools': [{
     'name': 'Lake Washington Technical College',
-    'location': 'Lake Washington',
+    'location': '11605 132nd Ave NE, Kirkland, WA 98034',
     'degree': 'BA',
     'majors': 'Electronics Technology',
     'dates': '2012-2013',
@@ -50,6 +50,25 @@ var education = {
     'dates': '2015-Present',
     'url': 'http://www.udacity.com'
   }]
+};
+
+education.display = function () {
+  $('#education').append(HTMLschoolStart);
+
+  education.schools.forEach(function (school) {
+    $('.education-entry').append(replaceData(HTMLschoolName, school.name));
+    $('.education-entry').append(replaceData(HTMLschoolDegree, school.degree));
+    $('.education-entry').append(replaceData(HTMLschoolDates, school.dates));
+    $('.education-entry').append(replaceData(HTMLschoolLocation, school.location));
+    $('.education-entry').append(replaceData(HTMLschoolMajor, school.majors));
+  });
+
+  education.onlineCourses.forEach(function (school) {
+    $('.education-entry').append(replaceData(HTMLonlineClasses, school.name));
+    $('.education-entry').append(replaceData(HTMLonlineTitle, school.school));
+    $('.education-entry').append(replaceData(HTMLonlineSchool, school.school));
+    $('.education-entry').append(replaceData(HTMLonlineDates, school.dates));
+  });
 };
 
 var projects = {
@@ -84,6 +103,8 @@ displayHeader();
 displayWork();
 
 projects.display();
+
+education.display();
 
 function replaceData(object, data) {
   return object.replace('%data%', data);
