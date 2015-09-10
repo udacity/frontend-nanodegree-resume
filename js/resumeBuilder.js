@@ -120,7 +120,7 @@ var project = {
 			"title": "Pose Estimation Based on 3D Models",
 			"dates": "September 2014 - January 2015",
 			"description": "Supervised by professor Leo Guibas. Aimed to estimate the pose of an object in the image. Designed a pose estimation algorithm based on 3D shape models; refined the algorithm by iteratively learn from classification results and in turn improve classification algorithm; tested on rendered image dataset and real image dataset; achieved 96% and 89% accuracy respectively.",
-			"images": ["images/projects/ShapeNet.jpg", "images/projects/render_patch.jpg", "images/projects/hog_patch.jpg", "images/projects/chair_clean.jpg", "images/projects/chair_cluttered.jpg"
+			"images": ["images/projects/chair_result.gif", "images/projects/ShapeNet.jpg", "images/projects/render_patch.jpg", "images/projects/hog_patch.jpg"
 			],
 			"url": "http://arxiv.org/pdf/1506.06274v1.pdf"
 		},
@@ -136,7 +136,7 @@ var project = {
 			"title": "Robot Programming",
 			"dates": "August 2013",
 			"description": "Intended to design an obstacle avoidance algorithm for robot car with microcontroller ATmega328; designed the algorithm, programmed in C on Arduino platform, conducted field test.",
-			"images": ["images/projects/robot.jpg", "images/projects/robot.gif"
+			"images": ["images/projects/robot.gif", "images/projects/robot.jpg",
 			],
 			"url": ""
 		},
@@ -144,7 +144,7 @@ var project = {
 			"title": "Driver Fatigue Detection Based on Face Recognition",
 			"dates": "June 2013 - December 2013",
 			"description": "Intended to detect drivers' fatigue using webcam. Based on face tracking, implemented feature extraction and Bayesian Network algorithm; built the Bayesian Network model for fatigue, realized training and inference algorithm in Matlab/C++; conducted simulating experiments & created the training dataset; and wrote draft thesis in latex.",
-			"images": ["images/projects/fatigueExp.jpg", "images/projects/fatigue.gif"
+			"images": ["images/projects/fatigue.gif", "images/projects/fatigueExp.jpg"
 			],
 			"url": "http://www.ee.buaa.edu.cn/xumfiles/itrack.htm"
 		}
