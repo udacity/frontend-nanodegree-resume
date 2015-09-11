@@ -334,3 +334,58 @@ bio.display();
 work.display();
 project.display();
 education.display();
+
+var travel = {
+	"countries": [
+		{
+			"name": "Canada",
+			"dates": "June 2015",
+			"cities": ["Toronto"]
+		},
+		{
+			"name": "Taiwan",
+			"dates": "July 2014",
+			"cities": ["Taipei", "Taichung City", "Chiayi City", "Kaohsiung City", "Kenting", "Hualien County"]
+		},
+		{
+			"name": "Spain",
+			"dates": "January 2014 - June 2014",
+			"cities": ["Barcelona", "Valencia", "Madrid", "Toledo", "Sevilla", "Cordoba", "Granada", "Cuenca", "Salamanca", "Segovia"]
+		},
+		{
+			"name": "Italy",
+			"dates": "April 2014",
+			"cities": ["Rome", "Venice", "Florence", "Pisa", "Milan"]
+		},
+		{
+			"name": "Vatican City",
+			"dates": "April 2014",
+			"cities": ["Vatican City"]
+		},
+		{
+			"name": "Switzerland",
+			"dates": "April 2014",
+			"cities": ["Zurich, Lucerne, Bern, Geneva"]
+		},
+		{
+			"name": "Germany",
+			"dates": "August 2013",
+			"cities": ["Munich"]
+		},
+		{
+			"name": "Austria",
+			"dates": "August 2013",
+			"cities": ["Salzburg"]
+		},
+		{
+			"name": "USA",
+			"dates": "",
+			"cities": ["San Francisco", "Los Angeles", "Las Vegas", "Boston", "New York", "Philadelphia"]
+		},
+		{
+			"name": "China",
+			"dates": "",
+			"cities": ["Urumqi", "Haikou", "Sanya", "Hong Kong", "Hangzhou", "Shanghai", "Suzhou", "Beijing", "Tianjin", "Qinhuangdao", "Shenyang", "Jinan"]
+		}
+	]
+};
