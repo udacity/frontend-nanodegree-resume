@@ -112,7 +112,7 @@ var project = {
 			"title": "3D Reconstruction from Full-view Fisheye Camera",
 			"dates": "January 2015 - March 2015",
 			"description": "Proposed a full-view scene reconstruction algorithm based on Ricoh Theta fisheye camera. Developed the fisheye camera model, epipolar geometry and triangulation method. Reconstructed the 360 &deg scene with only two captures. Generalized the method to multi-camera reconstruction, also proposed a dense reconstruction approach on rectified images. Developed a Matlab GUI.",
-			"images": ["images/projects/3dRec_1.jpg", "images/projects/3dRec_2.jpg", "images/projects/3dRec_3.jpg"
+			"images": ["images/projects/ricoh_theta.jpg", "images/projects/3dRec_1.jpg", "images/projects/3dRec_2.jpg", "images/projects/3dRec_3.jpg"
 			],
 			"url": "http://arxiv.org/pdf/1506.06273v1.pdf"
 		},
@@ -277,12 +277,6 @@ var education = {
 			"school": "Coursera",
 			"dates": 2014,
 			"url": "https://www.coursera.org/learn/machine-learning"
-		},
-		{
-			"title": "Introduction to Computer Science",
-			"school": "edX",
-			"dates": 2014,
-			"url": "https://courses.edx.org/courses/HarvardX/CS50x3/2015/info"
 		}
 	]
 };
