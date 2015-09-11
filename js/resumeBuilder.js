@@ -12,10 +12,10 @@ var bio = {
 	},
 	"welcomeMessage": "Stay hungry. Stay foolish.",
 	"skills": [
-		"Software Engineering", "Computer Vision", "Machine Learning",
-		"Virtual Reality", "Image Processing", "Electronics", 
-		"Embedded Programming", "C", "C++", "Java", "Python", "HTML", 
-		"JavaScript", "SQL", "Matlab", "LaTeX", "Linux", "Bash", "Git"
+		"Computer Vision", "Machine Learning", "Face Recognition", "Image Processing",
+		"Virtual Reality", "Electronics", "Embedded Programming", "C", "C++", "Python",
+		"Java", "HTML", "JavaScript", "Markdown", "SQL", "Matlab", "LaTeX", "Linux",
+		"Bash", "Git"
 	],
 	"bioPic": "images/me.jpg"
 };
