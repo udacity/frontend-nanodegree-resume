@@ -1,9 +1,8 @@
-You are welcome to see [my home page](http://web.stanford.edu/~chuiwenm/).
+# Interactive Resume
+## My home page
+You are welcome to see [my home page](http://web.stanford.edu/~chuiwenm/). Or scan the QR code below!
 
-## How to see my resume?
-1. Click 'Download ZIP'
-2. Unzip to a local folder
-3. Open 'index.html' with any browser
+![](https://raw.githubusercontent.com/machuiwen/interactive-resume/master/images/qrcode/Unitag_QRCode_1441955151818.png)
 
 ## How do I complete this project?
 
