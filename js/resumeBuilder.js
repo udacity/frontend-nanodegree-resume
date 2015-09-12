@@ -2,15 +2,41 @@ var bio = {
   'name': 'Daniel Burdick',
   'age': 29,
   'role': 'Web-Dev',
-  'biopic': 'images/fry.jpg',
+  'biopic': 'http://placehold.it/300x300',
   'contacts': {
     'mobile': '206-817-8312',
     'email': 'burdick.daniel@gmail.com',
-    'github': 'http://github.com/burdiick',
+    'github': '<a class="white-text" href="http://github.com/burdiick">Burdiick</a>',
     'location': 'Bothell, WA'
   },
   'skills': ['HTML', 'CSS', 'Javascript', 'Objective-C', 'Swift', 'Java', 'Clojure!!', 'C#', 'C++', 'C', 'BASIC', 'Assembly'],
   'welcomeMessage': 'Welcome to my online resume! It is built with love, in javascript.'
+};
+
+bio.display = function() {
+  $('#header').prepend(replaceData(HTMLheaderRole, bio.role));
+  $('#header').prepend(replaceData(HTMLheaderName, bio.name));
+  bio.displayContacts('#topContacts');
+  $('#header').append(replaceData(HTMLbioPic, bio.biopic));
+  $('#header').append(replaceData(HTMLwelcomeMsg, bio.welcomeMessage));
+
+  if (bio.skills.length > 0) {
+    $('#header').append(HTMLskillsStart);
+
+    for (var i = 0; i < bio.skills.length; i++) {
+      $('#skills').append(replaceData(HTMLskills, bio.skills[i]));
+    }
+  }
+};
+
+bio.displayContactsInFooter = function() {
+  bio.displayContacts('#footerContacts');
+};
+
+bio.displayContacts = function(tag) {
+  $(tag).append(replaceData(HTMLmobile, bio.contacts.mobile));
+  $(tag).append(replaceData(HTMLemail, bio.contacts.email));
+  $(tag).append(replaceData(HTMLgithub, bio.contacts.github));
 };
 
 var work = {
@@ -35,99 +61,8 @@ var work = {
   }]
 };
 
-var education = {
-  'schools': [{
-    'name': 'Lake Washington Technical College',
-    'location': '11605 132nd Ave NE, Kirkland, WA 98034',
-    'degree': 'BA',
-    'majors': 'Electronics Technology',
-    'dates': '2012-2013',
-    'url': 'http://www.lwtech.edu/'
-  }],
-  'onlineCourses': [{
-    'school': 'Udacity',
-    'title': 'Front-end Web Development',
-    'dates': '2015-Present',
-    'url': 'http://www.udacity.com'
-  }]
-};
-
-education.display = function () {
-  $('#education').append(HTMLschoolStart);
-
-  education.schools.forEach(function (school) {
-    $('.education-entry').append(replaceData(HTMLschoolName, school.name));
-    $('.education-entry').append(replaceData(HTMLschoolDegree, school.degree));
-    $('.education-entry').append(replaceData(HTMLschoolDates, school.dates));
-    $('.education-entry').append(replaceData(HTMLschoolLocation, school.location));
-    $('.education-entry').append(replaceData(HTMLschoolMajor, school.majors));
-  });
-
-  education.onlineCourses.forEach(function (school) {
-    $('.education-entry').append(replaceData(HTMLonlineClasses, school.name));
-    $('.education-entry').append(replaceData(HTMLonlineTitle, school.school));
-    $('.education-entry').append(replaceData(HTMLonlineSchool, school.school));
-    $('.education-entry').append(replaceData(HTMLonlineDates, school.dates));
-  });
-};
-
-var projects = {
-  'projects': [{
-    'title': 'Portfolio',
-    'dates': 'July, 2015',
-    'description': 'A simple portfolio project with a focus on responsive programming principles.',
-    'image': ''
-    },
-    {
-      'title': 'Resume',
-      'dates': 'July, 2015',
-      'description': 'This webpage! A javascript/jquery primer on manipulating the DOM.',
-      'image': ''
-    }]
-};
-
-projects.display = function () {
-  projects.projects.forEach(function (project) {
-    $('#projects').append(HTMLprojectStart);
-    $('.project-entry').append(replaceData(HTMLprojectTitle, project.title));
-    $('.project-entry').append(replaceData(HTMLprojectDates, project.dates));
-    $('.project-entry').append(replaceData(HTMLprojectDescription, project.description));
-    $('.project-entry').append(replaceData(HTMLprojectImage, project.image));
-  });
-};
-
-// Header content
-displayHeader();
-
-// Work experiance content
-displayWork();
-
-projects.display();
-
-education.display();
-
-function replaceData(object, data) {
-  return object.replace('%data%', data);
-}
-
-function displayHeader() {
-  $('#header').prepend(replaceData(HTMLheaderRole, bio.role));
-  $('#header').prepend(replaceData(HTMLheaderName, bio.name));
-  $('#topContacts').append(replaceData(HTMLmobile, bio.contacts.mobile));
-  $('#topContacts').append(replaceData(HTMLemail, bio.contacts.email));
-  $('#header').append(replaceData(HTMLbioPic, bio.biopic));
-  $('#header').append(replaceData(HTMLwelcomeMsg, bio.welcomeMessage));
-
-  if (bio.skills.length > 0) {
-    $('#header').append(HTMLskillsStart);
-
-    for (var i = 0; i < bio.skills.length; i++) {
-      $('#skills').append(replaceData(HTMLskills, bio.skills[i]));
-    }
-  }
-}
-
-function displayWork() {
+// Standard for loop used to iterate through jobs.
+work.display = function() {
   if (work.jobs.length > 0) {
     for (var i = 0; i < work.jobs.length; i++) {
       $('#workExperience').append(HTMLworkStart);
@@ -139,13 +74,99 @@ function displayWork() {
       $('.work-entry:last').append(replaceData(HTMLworkDescription, work.jobs[i].description));
     }
   }
+};
+
+var education = {
+  'schools': [{
+    'name': 'Lake Washington Technical College',
+    'location': '11605 132nd Ave NE, Kirkland, WA 98034',
+    'degree': 'Associates Degree',
+    'majors': 'Electronics Technology',
+    'dates': '2012-2013',
+    'url': 'http://www.lwtech.edu/'
+  }],
+  'onlineCourses': [{
+    'school': 'Udacity',
+    'title': 'Front-end Web Development',
+    'dates': '2015-Present',
+    'description': 'Learn the skills and best practices needed to build responsive modern websites.',
+    'url': 'http://www.udacity.com'
+  }]
+};
+
+/*
+ * .forEach() used to iterate trhough schools with anonymous function.
+ * Slightly slower than standard for loop( < 1ms), but way more readable.
+ */
+education.display = function () {
+  $('#education').append(HTMLschoolStart);
+
+  education.schools.forEach(function (school) {
+    $('.education-entry').append(replaceData(HTMLschoolDegree, school.degree));
+    $('.education-entry').append(replaceData(HTMLschoolName, school.name));
+    $('.education-entry').append(replaceData(HTMLschoolDates, school.dates));
+    $('.education-entry').append(replaceData(HTMLschoolLocation, school.location));
+    $('.education-entry').append(replaceData(HTMLschoolMajor, school.majors));
+  });
+
+  education.onlineCourses.forEach(function (school) {
+    //$('.education-entry').append(HTMLonlineClasses);
+    $('.education-entry').append(replaceData(HTMLonlineTitle, school.title));
+    $('.education-entry').append(replaceData(HTMLonlineSchool, school.school));
+    $('.education-entry').append(replaceData(HTMLonlineDates, school.dates));
+    $('.education-entry').append(replaceData(HTMLonlineDescription, school.description));
+  });
+};
+
+var projects = {
+  'project': [{
+    'title': 'Portfolio',
+    'dates': 'July, 2015',
+    'description': 'A simple portfolio project with a focus on responsive programming principles.',
+    'image': ''
+  }, {
+    'title': 'Resume',
+    'dates': 'July, 2015',
+    'description': 'This webpage! A javascript/jquery primer on manipulating the DOM.',
+    'image': ''
+  }]
+};
+
+// .forEach used to iterate again.
+projects.display = function () {
+  $('#projects').append(HTMLprojectStart);
+
+  projects.project.forEach(function (project) {
+    $('.project-entry').append(replaceData(HTMLprojectTitle, project.title));
+    $('.project-entry').append(replaceData(HTMLprojectDates, project.dates));
+    $('.project-entry').append(replaceData(HTMLprojectDescription, project.description));
+    $('.project-entry').append(replaceData(HTMLprojectImage, project.image));
+  });
+};
+
+// Append all content to page
+bio.display();
+work.display();
+projects.display();
+education.display();
+bio.displayContactsInFooter();
+
+// Display map
+$('#mapDiv').append(googleMap);
+
+// Helper function for repetative %data% replaces.
+function replaceData(object, data) {
+  return object.replace('%data%', data);
 }
 
-$('#main').append(internationalizeButton);
-
+/*
+ * Function called by event listener for internationalizeButton.
+ * Converts last names to all uppercase letters.
+ */
 function inName() {
   var splitName = bio.name.trim().split(' ');
   return splitName[0] + ' ' + splitName[1].toUpperCase();
 }
 
-$('#mapDiv').append(googleMap);
+// Internationalize button from js class. Still needed?
+//$('#main').append(internationalizeButton);
