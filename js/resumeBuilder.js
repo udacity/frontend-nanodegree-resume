@@ -33,6 +33,7 @@ bio.displayContactsInFooter = function() {
   bio.displayContacts('#footerContacts');
 };
 
+// Helper function for displaying contact info in multiple locations.
 bio.displayContacts = function(tag) {
   $(tag).append(replaceData(HTMLmobile, bio.contacts.mobile));
   $(tag).append(replaceData(HTMLemail, bio.contacts.email));
@@ -123,12 +124,12 @@ var projects = {
     'title': 'Portfolio',
     'dates': 'July, 2015',
     'description': 'A simple portfolio project with a focus on responsive programming principles.',
-    'image': ''
+    'images': ['images/project-one-page.png', 'images/project-one-code.png']
   }, {
     'title': 'Resume',
     'dates': 'July, 2015',
     'description': 'This webpage! A javascript/jquery primer on manipulating the DOM.',
-    'image': ''
+    'images': ['images/project-two-page.png', 'images/project-two-code.png']
   }]
 };
 
@@ -140,7 +141,10 @@ projects.display = function () {
     $('.project-entry').append(replaceData(HTMLprojectTitle, project.title));
     $('.project-entry').append(replaceData(HTMLprojectDates, project.dates));
     $('.project-entry').append(replaceData(HTMLprojectDescription, project.description));
-    $('.project-entry').append(replaceData(HTMLprojectImage, project.image));
+
+    project.images.forEach(function (image) {
+      $('.project-entry').append(replaceData(HTMLprojectImage, image));
+    });
   });
 };
 

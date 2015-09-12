@@ -15,6 +15,10 @@
   display: flex;
 }
 
+.project-img {
+  max-width: 300px;
+}
+
 .white-text {
   font-weight: lighter;
 }
@@ -22,6 +26,7 @@
 #map {
   height: 250px;
 }
+
 @media only screen and (max-width: 400px) {
   h1 {
     font-size: 30px;
