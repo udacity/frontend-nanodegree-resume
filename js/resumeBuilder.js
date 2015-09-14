@@ -1,20 +1,20 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
- 
+
 /***
- *  Building JSON 
- * 
+ *  Building JSON
+ *
 bio:
    name : string
    role : string
    contacts : an object with
          mobile: string
-         email: string 
+         email: string
          github: string
-         twitter: string 
+         twitter: string
          location: string
-   welcomeMessage: string 
+   welcomeMessage: string
    skills: array of strings
    biopic: url
    display: function
@@ -33,20 +33,20 @@ education
         date: integer (date finished)
         url: string
    display: function
-   
+
 work
    jobs: array of objects with
-        employer: string 
-        title: string 
+        employer: string
+        title: string
         url: string
-        location: string 
+        location: string
         dates: string (works with a hyphen between them)
-        description: string 
+        description: string
    display: function
-   
+
 projects
    projects: array of objects with
-         title: string 
+         title: string
          url: string
          dates: string (works with a hyphen between them)
          description: string
@@ -55,7 +55,7 @@ projects
  */
 
 /*
-  Momen:
+  Momen: √√√
   It is a good practice to include the "use strict;” tag in your function definitions
   to enable the strict mode (even if the file was provided to you). This helps to
   write more "secure" codes by preventing things such as marking down a function with
@@ -65,7 +65,7 @@ projects
   http://www.w3schools.com/js/js_strict.asp
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
   p.s. If you implement the strict mode, please test your code as some functions may required minor adjustments.
-  
+
 */
 
 var DATA = "%data%";
@@ -76,11 +76,11 @@ var bio = {
     "name": "Ahmed Saleh",
     "role": "Software Engineer",
     /*
-      Momen:
+      Momen: √√√
       Do you have to contian contacts information in
       an array?
     */
-    "contacts":[ 
+    "contacts":[
         {
             "mobile": "+966-(0)59-118-8897",
             "email": "ahmad@ahmadssb.com",
@@ -108,7 +108,7 @@ var bio = {
         var bioImage = HTMLbioPic.replace(DATA, bio.biopic);
         var bioMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
         /*
-          Momen:
+          Momen: √√√
           For consistency single-quotes (') are preferred over double-quotes (").
           This is helpful when creating strings that include HTML.
           https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
@@ -116,7 +116,7 @@ var bio = {
         */
         $('#header').prepend(bioRole).prepend(bioName).append(bioImage, bioMessage);
         $('#header').append(HTMLskillsStart);
-    
+
         /*
             for (var skill in bio.skills) {
                 var bioSkills = HTMLskills.replace(DATA,bio.skills[skill]);
@@ -127,14 +127,14 @@ var bio = {
         // insert ','  between each skill and '.' to the end of the list
         var bioSkills = HTMLskills.replace(DATA, bio.skills.join(' ,  ') + ' .');
         $('#skills').append(bioSkills);
-      
+
         /*
-          Momen:
+          Momen: √√√
           You should always declare a variable with the variable statement ("var")
           When you fail to specify var, the variable is implicitly created in the
           global context If there's no declaration, it's hard to tell in what scope
           variable lives.
-          
+
           Check:
           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
           https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#var
@@ -327,11 +327,11 @@ var projects = {
 		var projectTitle = HTMLprojectTitle.replace(DATA,projects.project[project].title);
 		var projectDates = HTMLprojectDates.replace(DATA,projects.project[project].dates);
 		var projectDescription = HTMLprojectDescription.replace(DATA,projects.project[project].description);
-		
+
 		$('.project-entry:last').append(projectTitle,projectDates,projectDescription);
         $('.project-entry:last').children("a").attr("href", projects.project[project].url);
     /*
-      Momen:
+      Momen: √√√
       What if your project doesn't contain images?
       Do you need to check first?
     */
@@ -349,7 +349,7 @@ var projects = {
 
 //information about click locations, hint: On line 89 in helper.js
 $(document).click(function(loc) {
-  
+
   var x= loc.pageX;
   var y = loc.pageY;
 });
