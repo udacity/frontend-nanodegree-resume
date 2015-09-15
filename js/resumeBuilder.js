@@ -155,6 +155,16 @@ education.display = function(){
 };
 education.display();
 
+bio.displaySkills = function(){
+	if(bio.skills.length>0){
+		for(skill in bio.skills){
+			var formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
+			$("#header").append(formattedSkills);
+		}
+	}
+};
+
+
 var formattedName=HTMLheaderName.replace("%data%",bio.name);
 var formattedRole=HTMLheaderRole.replace("%data%",bio.role);
 var formattedMobile=HTMLmobile.replace("%data%",bio.contacts.mobile);
@@ -164,7 +174,7 @@ var formattedGithub=HTMLgithub.replace("%data%",bio.contacts.github);
 var formattedLocation=HTMLlocation.replace("%data%",bio.contacts.location);
 var formattedPic=HTMLbioPic.replace("%data%",bio.picture);
 var formattedWelcome=HTMLwelcomeMsg.replace("%data%",bio.message);
-var formattedSkills=HTMLskills.replace("%data%",bio.skills);
+//var formattedSkills=HTMLskills.replace("%data%",bio.skills);
 
 $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
@@ -172,9 +182,9 @@ $("#topContacts").append(formattedTwitter);
 $("#topContacts").append(formattedGithub);
 $("#topContacts").append(formattedLocation);
 $("#header").append(formattedPic);
-$("#header").append(formattedWelcome);
 $("#header").append(HTMLskillsStart);
-$("#header").append(formattedSkills);
+//$("#header").append(formattedSkills);
+bio.displaySkills();
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
