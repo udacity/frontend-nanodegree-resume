@@ -1,5 +1,3 @@
-///helper.js///
-
 'use strict';
 
 var work={
