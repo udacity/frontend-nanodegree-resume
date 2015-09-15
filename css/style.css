@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #CC6600;
   line-height: 48px;
   display: inline;
 }
@@ -79,6 +79,10 @@ h5 {
 
 }
 
+.yellow-text {
+  color: yellow;
+}
+
 p {
   font-size: 14px;
   color: #333;
@@ -100,16 +104,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #CC6600;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #CC6600;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #CC6600;
 }
 
 .white-text {
