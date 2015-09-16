@@ -1,7 +1,7 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
 
 .clearfix {
@@ -87,7 +87,6 @@ a {
 }
 
 #skills {
-  display: flex;
   flex-direction: column;
 }
 
@@ -116,12 +115,16 @@ a {
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #404040;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #404040;
+}
+
+.flex-item {
+  line-height: 1.5em;
 }
 
 .flex-box {
@@ -173,6 +176,7 @@ span {
 
 #letsConnect {
   text-align: center;
+  background-color: #404040;
 }
 
 @media only screen and (max-width: 1024px) {

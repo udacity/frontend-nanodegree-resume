@@ -14,8 +14,8 @@ var bio = {
 }; // Valid JSON! Verfied @ jsonlint.com
 
 
-// displayBio function
-function displayBio() {
+// Display items of the bio object
+bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
@@ -37,8 +37,8 @@ function displayBio() {
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkills);
 	}
-}
-displayBio(); // Call the displayBio function
+};
+bio.display(); // Call the bio.display function
 
 
 
@@ -77,10 +77,10 @@ var education = {
 	]
 }; // Valid JSON! Verfied @ jsonlint.com
 
-// displayEducation function
-function displayEducation() {
+// Display items of the education object
+education.display = function() {
 	for (var school in education.schools) {
-		$("#education").append(HTMLschoolStart);
+		$("#education-entry").append(HTMLschoolStart);
 		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
 		var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
@@ -90,7 +90,7 @@ function displayEducation() {
 		$(".education-entry:last").append(formattedSchool);
 	}
 	if (education.onlineClases.length > 0) {
-		$("#education").append(HTMLonlineClasses);
+		$("#education-entry").append(HTMLonlineClasses);
 		for (var item in education.onlineClases) {
 			$("#education").append(HTMLschoolStart);
 			var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineClases[item].title);
@@ -102,8 +102,8 @@ function displayEducation() {
 		}
 
 	}
-}
-displayEducation(); // Call the displayEducation function
+};
+education.display(); // Call the education.display function
 
 var work = {
 	"jobs": [
@@ -131,8 +131,8 @@ var work = {
 	]
 }; // Valid JSON! Verfied @ jsonlint.com
 
-// displayWork function
-function displayWork() {
+// Display items of the work object
+work.display = function() {
 	for(var job in work.jobs) {
 	// create a new div for work experience
 	$("#workExperience").append(HTMLworkStart);
@@ -148,8 +148,8 @@ function displayWork() {
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedDescription);
 	}
-}
-displayWork(); // Call the displayWork function
+};
+work.display(); // Call the work.display function
 
 var projects = {
 	"projects": [
@@ -167,8 +167,8 @@ var projects = {
 	}]
 }; // Valid JSON! Verfied @ jsonlint.com
 
-// displayProjects function
-function displayProjects() {
+// Display items of the projects object
+projects.display = function() {
 	for (var item in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[item].title);
@@ -185,8 +185,8 @@ function displayProjects() {
 			}
 		}
 	}
-}
-displayProjects(); // Call the displayProjects function
+};
+projects.display(); // Call the projects.display function
 
 
 
@@ -205,5 +205,3 @@ $("#footerContacts").append(internationalizeButton);
 
 // Make Google maps appear!
 $("#mapDiv").append(googleMap);
-
-
