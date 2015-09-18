@@ -72,7 +72,7 @@ var work = {
 			"title": "Software Engineer Internship",
 			"location": "Sunnyvale, CA, US",
 			"dates": "June 2015 - Present",
-			"description": "Developing an automatic inter pupillary distance (IPD) measurement project from scratch, using 3D computer vision technique.",
+			"description": "Developed real-time 3D computer vision algorithms in C++ and Matlab for the zSpace virtual reality platform.",
 			"url": "http://zspace.com/"
 		},
 		{
