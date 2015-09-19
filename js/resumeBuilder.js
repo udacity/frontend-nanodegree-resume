@@ -71,7 +71,7 @@ var work = {
 			"employer": "zSpace, Inc.",
 			"title": "Software Engineer Internship",
 			"location": "Sunnyvale, CA, US",
-			"dates": "June 2015 - Present",
+			"dates": "June 2015 - September 2015",
 			"description": "Developed real-time 3D computer vision algorithms in C++ and Matlab for the zSpace virtual reality platform.",
 			"url": "http://zspace.com/"
 		},
