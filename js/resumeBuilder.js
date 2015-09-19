@@ -1,3 +1,5 @@
+
+
 var work = {
 	"jobs": [
 	{
@@ -29,17 +31,15 @@ var projects = {
 		"title": "Portfolio Site",
 		"dates": "2015",
 		"description": "Developed a responsive website that displays images, descriptions and links to each of the portfolio projects that I completed through Udacity for the Front-End Web Developer Nanodegree.",
-		"images": [
-			"url": "/images/Portfoliowebsite.jpg"
-		]
+		"images" : [{"url" : "/images/Portfoliowebsite.jpg"}]
 	},
 	{
 		"title": "Interactive Resume",
 		"dates": "2015",
 		"description": "Developed an interactive resume application that reads resume content from a JSON file and dynamically displays that content within an online resume webpage. The webpages uses objects, functions, conditionals, and control structures to compose the content that is displayed on the resume.",
-		"images": [
+		"images": [{
 			"url": ""
-		]
+		}]
 	}
 	]
 };
@@ -50,7 +50,7 @@ var bio = {
 		"email" : "ross.drury@gmail.com",
 		"mobile" : "0272660462",
 		"github" : "ross drury",
-		"twitter": ""
+		"twitter": "",
 		"location" : "Wellington, New Zealand"
 	},
 	"welcomeMessage" : "Stay awhile and listen...",
@@ -71,6 +71,7 @@ var education = {
 		"dates": "2009-2011",
 		"url": "http://www.openpolytechnic.ac.nz/"
 	},
+	],
 	"onlineCourses": [
 	{
 		"title": "Front-End Web Developer Nanodegree",
@@ -78,16 +79,39 @@ var education = {
 		"dates": "2015",
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	}
+	]
 };
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
-	$("#skills").append(formattedSkill);
+	
+	for(skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+		$("#skills").append(formattedSkill);
+	}
 }
+
+function displayWork(){
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(formattedDates);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formattedLocation);
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(formattedDescription);
+	}
+}
+
+displayWork();
+
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
+
+	logClicks(x,y);
+});
