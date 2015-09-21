@@ -128,7 +128,7 @@ var project = {
 			"title": "Gender Classification Based on Face Analysis",
 			"dates": "February 2014 - June 2014",
 			"description": "Designed a local feature-based gender classification pipeline: image preprocessing – local features extraction (SIFT, SURF, FAST, etc.) – visual Bag-of-Words model – general classification (SVM & Random Forest). Programmed in Python with OpenCV & scikit-learn; improved the algorithm by applying spatial pyramid and synthesizing features; achieved a state-of-the-art classification accuracy on The Images of Groups Dataset and LFW database.",
-			"images": ["images/projects/gender.jpg", "images/projects/genderRoadMap.jpg", "images/projects/genderFeats.jpg"
+			"images": ["images/projects/gender.gif", "images/projects/gender.jpg", "images/projects/genderFeats.jpg"
 			],
 			"url": ""
 		},
