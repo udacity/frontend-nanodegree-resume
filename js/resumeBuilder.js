@@ -1,5 +1,3 @@
-
-
 var work = {
 	"jobs": [
 	{
@@ -46,15 +44,17 @@ var bio = {
 	"role" : "Solutions Architect",
 	"contacts": {
 		"email" : "ross.drury@gmail.com",
-		"mobile" : "0272660462",
-		"github" : "ross drury",
+		"mobile" : "027 555 5555",
+		"github" : "https://github.com/rosso007/",
 		"twitter": "",
-		"location" : "Hinemoa Street, Wellington"
+		"location" : "Wellington City",
+		"blog" : ""
 	},
 	"welcomeMessage" : "Stay awhile and listen...",
 	"skills" : [
-		"Integration", "Design", "UML", "Viewpoints & Perspectives Modelling", "Infrastructure Architecture", "Component Modelling", "UI Design"
-	]
+		"Integration", "Design", "UML", "Viewpoints & Perspectives Modelling", "Enterprise Architecture", "Component Modelling", "UI Design"
+	],
+	"pic" : "images/bio.jpg"
 };
 var education = {
 	"schools": [
@@ -116,11 +116,42 @@ education.display = function () {
 }
 
 bio.display = function() {
+
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
+	var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedName);
 	$("#header").append(formattedRole);
+	$("#header").append(formattedPic);
+	$("#header").append(formattedwelcomeMessage);
 
+	if (bio.contacts.mobile.length > 0) {
+		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+		$("#header").append(formattedMobile);
+	};
+	if (bio.contacts.email.length > 0) {
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+		$("#header").append(formattedEmail);			
+	};
+	if (bio.contacts.twitter.length > 0) {
+		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);			
+		$("#header").append(formattedTwitter);			
+	};
+	if (bio.contacts.github.length > 0) {
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);	
+		$("#header").append(formattedGithub);
+	};
+	if (bio.contacts.blog.length > 0) {
+		var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);	
+		$("#header").append(formattedBlog);	
+	};
+	if (bio.contacts.location.length > 0) {
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);		
+		$("#header").append(formattedLocation);	
+	};
+
+	
 	if(bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
 		
