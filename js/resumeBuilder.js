@@ -1,6 +1,3 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
 
  var bio={
  	"name" : "Jon Park",
@@ -11,39 +8,12 @@ This is empty on purpose! Your code to build the resume will go here.
  		"github" : "wookiecookie87",
  		"location" : "Seoul",
  		"major" : "Mathematics"
- 	}
+ 	},
+ 	"welcomeMessage" : "Welcome to Wookiecookie world",
+ 	"skills" : ["Front-End developing", "Being funny", "Making friends in five-minutes"],
+ 	"bioPic" : "https://pbs.twimg.com/profile_images/1258413406/Macchu_400x400.jpg"
  }
 
- var work=[
- 	{
- 		"employer" : "Yullin Technology",
-	 	"location" : "Seoul",
-	 	"dates" : "7 months",
-	 	"title" : "Software Engineer"
- 	},
- 	{
- 		"employer" : "Breeze Studio",
- 		"location" : "Seoul",
- 		"dates" : "4 months",
- 		"title" : "Software Engineer"
- 	}
-
- ]
-
- var project=[
-	 	{
-	 		"title" : "LIMS",
-	 		"location" : "Bundang",
-	 		"description" : "Digital Pen",
-	 		"dates" : "7months"
-	 	},
-	 	{
-	 		"title" : "Beatname",
-	 		"location" : "Seoul",
-	 		"description" : "Mobile Front End",
-	 		"dates" : "3months"
-	 	}
- 	]
 
  var education ={
  	"schools":[
@@ -54,10 +24,6 @@ This is empty on purpose! Your code to build the resume will go here.
  			"major" : ["Economics", "Mathematics"],
  			"date" : "2008 - 2013",
  			"url" : "www.fordham.edu"
- 		},
- 		{
- 			"name" : "Covenant Christian High School",
- 			"city" : "Indianapolis, IN"
  		}
  	],
  	"onlineCourse":[
@@ -82,4 +48,34 @@ This is empty on purpose! Your code to build the resume will go here.
 
  	]
  }	
+ var work={
+ 	"jobs" : [
+ 		{
+	 		"employer" : "Yullin Technology",
+		 	"location" : "Seoul",
+		 	"dates" : "7 months",
+		 	"title" : "Software Engineer"
+	 	},
+	 	{
+	 		"employer" : "Breeze Studio",
+	 		"location" : "Seoul",
+	 		"dates" : "4 months",
+	 		"title" : "Software Engineer"
+	 	}
+ 	],
+	"project" : [
+	 	{
+	 		"title" : "Labratoy Information Management System",
+	 		"location" : "Bundang",
+	 		"description" : "Digital Pen",
+	 		"dates" : "7months"
+	 	},
+	 	{
+	 		"title" : "Beatname",
+	 		"location" : "Seoul",
+	 		"description" : "Mobile Front End",
+	 		"dates" : "3months"
+	 	}
+ 	]
+ }
 
