@@ -1,20 +1,37 @@
 
  var bio={
- 	"name" : "Jon Park",
+ 	"name" : "Jung-Wook Park",
  	"role" : "Software Engineer",
- 	"contents" : {
+ 	"contacts" : {
  		"mobile" : "010-7532-3961",
  		"email"  : "wookiecookie87@gmail.com",
  		"github" : "wookiecookie87",
- 		"location" : "Seoul",
- 		"major" : "Mathematics"
+ 		"location" : "Seoul"
  	},
  	"welcomeMessage" : "Welcome to Wookiecookie world",
  	"skills" : ["Front-End developing", "Being funny", "Making friends in five-minutes"],
  	"bioPic" : "https://pbs.twimg.com/profile_images/1258413406/Macchu_400x400.jpg"
  }
 
+var headerName = HTMLheaderName.replace("%data%", bio.name);
+var headerRole = HTMLheaderRole.replace("%data%", bio.role);
+var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var email = HTMLemail.replace("%data%", bio.contacts.email);
+var github = HTMLgithub.replace("%data%", bio.contacts.github);
+var loc = HTMLlocation.replace("%data%", bio.contacts.location);
+if(bio.skills.length > 0){
+	//var skill = bio.skills.join(" ");
+	$("#header").append(HTMLskillsStart);
+}
 
+
+$("#header").prepend(headerRole);
+$("#header").prepend(headerName);
+
+$("#topContacts").append(mobile);
+$("#topContacts").append(email);
+$("#topContacts").append(github);
+$("#topContacts").append(loc);
  var education ={
  	"schools":[
  		{
