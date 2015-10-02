@@ -101,6 +101,16 @@ bio.display = function(){
 	var headerName = HTMLheaderName.replace("%data%", bio.name);
 	var headerRole = HTMLheaderRole.replace("%data%", bio.role);
 	var bioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var email = HTMLemail.replace("%data%", bio.contacts.email);
+	var github = HTMLgithub.replace("%data%", bio.contacts.github);
+	var loc = HTMLlocation.replace("%data%", bio.contacts.location);
+	
+	$("#topContacts, #footerContacts").append(mobile);
+	$("#topContacts, #footerContacts").append(email);
+	$("#topContacts, #footerContacts").append(github);
+	$("#topContacts, #footerContacts").append(loc);
+
 	$("#header").prepend(headerRole);
 	$("#header").prepend(headerName);
 	$("#header").append(bioPic);
@@ -176,25 +186,12 @@ projects.display = function(){
 	 }
 }
 
-function displayContact(id){
-	var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	var email = HTMLemail.replace("%data%", bio.contacts.email);
-	var github = HTMLgithub.replace("%data%", bio.contacts.github);
-	var loc = HTMLlocation.replace("%data%", bio.contacts.location);
-	
-	$("#"+id).append(mobile);
-	$("#"+id).append(email);
-	$("#"+id).append(github);
-	$("#"+id).append(loc);
-}
-
 bio.display();	
 work.display();
 projects.display();
 education.display();
 
-displayContact("topContacts");
-displayContact("footerContacts");
+
 
 function inName(name){
 	name = name.split(" ");
