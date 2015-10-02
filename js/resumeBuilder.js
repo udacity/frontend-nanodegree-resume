@@ -1,9 +1,9 @@
 
- var bio={
+var bio={
  	"name" : "Jung-Wook Park",
  	"role" : "Software Engineer",
  	"contacts" : {
- 		"mobile" : "010-7532-3961",
+		"mobile" : "010-7532-3961",
  		"email"  : "wookiecookie87@gmail.com",
  		"github" : "wookiecookie87",
  		"location" : "Seoul"
@@ -11,91 +11,91 @@
  	"welcomeMessage" : "Welcome to Wookiecookie world",
  	"skills" : ["Front-End developing", "Being funny", "Making friends in five-minutes", "Fast biker"],
  	"bioPic" : "https://pbs.twimg.com/profile_images/1258413406/Macchu_400x400.jpg"
- }
+ };
 
 
 
- var work={
+var work={
  	"jobs" : [
  		{
-	 		"employer" : "Yullin Technology",
-		 	"location" : "Bundang, SeongNam",
-		 	"dates" : "7 months",
-		 	"title" : "Software Engineer",
-		 	"description" : "A project to install labroratory information management system for Kpetro,"+
-		 	"an institution what checks and regulates petrolume products’ quality and distribution in Korea"+
-			"Implemented an automated system that transfers handwritten data into digital data using Digital Pen, "+
-			"a device that converts handwritings into digital texts. "+
-			"Contructed a database interface to stabilize data transfer"+
-			 "and filter out data from Digital Pen to enhence the accuracy."
+ 		"employer" : "Yullin Technology",
+	 	"location" : "Bundang, SeongNam",
+	 	"dates" : "7 months",
+	 	"title" : "Software Engineer",
+	 	"description" : "A project to install labroratory information management system for Kpetro,"+
+	 	"an institution what checks and regulates petrolume products’ quality and distribution in Korea"+
+		"Implemented an automated system that transfers handwritten data into digital data using Digital Pen, "+
+		"a device that converts handwritings into digital texts. "+
+		"Contructed a database interface to stabilize data transfer"+
+		 "and filter out data from Digital Pen to enhence the accuracy."
 	 	},
 	 	{
-	 		"employer" : "Breeze Studio",
-	 		"location" : "Jongno, Seoul",
-	 		"dates" : "4 months",
-	 		"title" : "Software Engineer",
-	 		"description" : "Front end Web Developer"+                                                                   
-				"Responsible for UI/UX and other front end developing of mobile web application."+
-				"Coded front end framework to be used in the many projects that Breeze Studio delivers."+
-				"Currently developing a machine learning library to be used for the companies’ e-commerce solution."
+ 		"employer" : "Breeze Studio",
+ 		"location" : "Jongno, Seoul",
+ 		"dates" : "4 months",
+ 		"title" : "Software Engineer",
+ 		"description" : "Front end Web Developer"+                                                                   
+			"Responsible for UI/UX and other front end developing of mobile web application."+
+			"Coded front end framework to be used in the many projects that Breeze Studio delivers."+
+			"Currently developing a machine learning library to be used for the companies’ e-commerce solution."
 	 	}
  	],
- }
+ };
 
 var projects={
 	"projects" : [
 	 	{
-	 		"title" : "Laboratory Information Management System",
-	 		"location" : "Bundang, SungNam",
-	 		"description" : "Digital Pen",
-	 		"dates" : "7months"
+ 		"title" : "Laboratory Information Management System",
+ 		"location" : "Bundang, SungNam",
+ 		"description" : "Digital Pen",
+ 		"dates" : "7months"
 	 	},
 	 	{
-	 		"title" : "Beatname",
-	 		"location" : "Suwon, Korea",
-	 		"description" : "Mobile Front End",
-	 		"dates" : "3months"
+ 		"title" : "Beatname",
+ 		"location" : "Suwon, Korea",
+ 		"description" : "Mobile Front End",
+ 		"dates" : "3months"
 	 	}
  	]
-}
+};
 
 
 
 
 
 
- var education ={
+var education ={
  	"schools":[
  		{
- 			"name" : "Formham University",
- 			"location" : "Bronx, NY",
- 			"degree" : "BS",
- 			"major" : "Mathematics",
- 			"date" : "2008 - 2013",
- 			"url" : "www.fordham.edu"
+		"name" : "Formham University",
+		"location" : "Bronx, NY",
+		"degree" : "BS",
+		"major" : "Mathematics",
+		"date" : "2008 - 2013",
+		"url" : "www.fordham.edu"
  		}
  	],
  	"onlineCourse":[
  		{
- 			"title" : "Machine Learning",
- 			"school" : "Coursera",
- 			"dates" : "11 weeks",
- 			"url" : "www.ccoursera.edu"
+		"title" : "Machine Learning",
+		"school" : "Coursera",
+		"dates" : "11 weeks",
+		"url" : "www.ccoursera.edu"
  		},
  		{
- 			"title" : "Git and Github",
- 			"school" : "Udacity",
- 			"dates" : "2 weeks",
- 			"url" : "www.Udacity.edu"
+		"title" : "Git and Github",
+		"school" : "Udacity",
+		"dates" : "2 weeks",
+		"url" : "www.Udacity.edu"
  		},
  		{
- 			"title" : "Basic Javascript",
- 			"school" : "Udacity",
- 			"dates" : "2 weeks",
- 			"url" : "www.Udacity.edu"
+		"title" : "Basic Javascript",
+		"school" : "Udacity",
+		"dates" : "2 weeks",
+		"url" : "www.Udacity.edu"
  		}
  	]
- }	
+ };
 
 bio.display = function(){
 	var headerName = HTMLheaderName.replace("%data%", bio.name);
@@ -116,13 +116,14 @@ bio.display = function(){
 	$("#header").append(bioPic);
 	if(bio.skills.length > 0){
 		$("#header").append(HTMLskillsStart);
-		for(skill in bio.skills){
-			var skill = HTMLskills.replace("%data%", bio.skills[skill]);
+		for(var i = 0; i < bio.skills.length; i++){
+			var skill = HTMLskills.replace("%data%", bio.skills[i]);
 			$("#skills").append(skill);
 			
 		}
 	}
-} 
+};
+
 education.display = function(){
 	for(school in education.schools){
 		$("#education").append(HTMLschoolStart);
@@ -154,7 +155,7 @@ education.display = function(){
 		$(".education-entry:last").append(url);
 
 	}
-}
+};
 
 
 work.display = function(){
@@ -170,7 +171,7 @@ work.display = function(){
 	 	//$(".work-entry:last").append(loc);
 	 	$(".work-entry:last").append(description);
 	 }
-}
+};
 
 projects.display = function(){
 	for(project in projects.projects){
@@ -184,7 +185,7 @@ projects.display = function(){
 	 	//$(".work-entry:last").append(loc);
 	 	$(".project-entry:last").append(description);
 	 }
-}
+};
 
 bio.display();	
 work.display();
