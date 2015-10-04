@@ -1,3 +1,7 @@
+//activates the tabs for each menu
+$('.menu .item').tab();
+
+//Work JSON //
 var work = {
 	"jobs": [
 	{
@@ -20,9 +24,10 @@ var work = {
 		"location": "The Terrace, Wellington",
 		"dates": "2011-2013",
 		"description": "Promoted to a Business Analyst role where I was responsible for functional and non-functional requirements gathering and analysis, business process analysis and documentation, engaging with stakeholders and eliciting user requirements for both Transpower and The Ministry of Education. Identified and defined the user and software requirements enabling the successful implementation of the Transpower HRIS solution. Procured a software solution and developed business process and procedure manuals for the management of a debt ledger created from payroll over-payments. Identified and defined user and software requirements for an urgent payment stop system feature to prevent inaccurate payments."
-	}
-	]
+	}]
 };
+
+//projects JSON
 var projects = {
 	"projects": [
 	{
@@ -35,10 +40,11 @@ var projects = {
 		"title": "Interactive Resume",
 		"dates": "2015",
 		"description": "Developed an interactive resume application that reads resume content from a JSON file and dynamically displays that content within an online resume webpage. The webpages uses objects, functions, conditionals, and control structures to compose the content that is displayed on the resume.",
-		"images": []
-	}
-	]
+		"images": ["images/onlineresume.jpg"]
+	}]
 };
+
+//bio JSON
 var bio = {
 	"name" : "Ross Drury",
 	"role" : "Solutions Architect",
@@ -46,9 +52,9 @@ var bio = {
 		"email" : "ross.drury@gmail.com",
 		"mobile" : "027 555 5555",
 		"github" : "https://github.com/rosso007/",
-		"twitter": "",
+		"twitter": "I don't use this!?!",
 		"location" : "Wellington City",
-		"blog" : ""
+		"blog" : "Maybe one day.."
 	},
 	"welcomeMessage" : "Stay awhile and listen...",
 	"skills" : [
@@ -56,6 +62,8 @@ var bio = {
 	],
 	"pic" : "images/bio.jpg"
 };
+
+//education JSON
 var education = {
 	"schools": [
 	{
@@ -66,10 +74,8 @@ var education = {
 			"Management",
 			"Information Systems"
 			],
-		"dates": "2009-2011",
-	
-	},
-	],
+		"dates": "2009-2011",	
+	}],
 	"onlineCourses": [
 	{
 		"title": "Front-End Web Developer Nanodegree",
@@ -79,144 +85,144 @@ var education = {
 	}]
 };
 
+//encapsulated display function to populate JSON data within the correct tab.
 education.display = function () {
 	$("#education").append(HTMLschoolStart);
 
-	for (school in education.schools) {
-	var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-	var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-	$(".education-entry:last").append(formattedName);	
-	$(".education-entry:last").append(formattedLocation);	
-	$(".education-entry:last").append(formattedDegree);	
-	$(".education-entry:last").append(formattedDates);	
-
-	if (education.schools[school].majors.length > 0) {
-		for (major in education.schools[school].majors) {
-			var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
-			$(".education-entry:last").append(formattedMajors);	
+	for (var school in education.schools) {
+		if (education.schools.hasOwnProperty(school)){
+			var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+			var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+			$(".education-entry:last").append(formattedName);	
+			$(".education-entry:last").append(formattedLocation);	
+			$(".education-entry:last").append(formattedDegree);	
+			$(".education-entry:last").append(formattedDates);	
+			if (education.schools[school].majors.length > 0) {
+				for (var major in education.schools[school].majors) {
+					if (education.schools[school].majors.hasOwnProperty(major)) {
+						var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+						$(".education-entry:last").append(formattedMajors);	
+					}
+				}
+			}
 		}
-	}
 
 	}
 	$(".education-entry:last").append(HTMLonlineClasses);
-
-	for (onlineCourse in education.onlineCourses) {
-
-	var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-	var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-	var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].dates);
-	var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
-	$(".education-entry:last").append(formattedTitle);	
-	$(".education-entry:last").append(formattedSchool);	
-	$(".education-entry:last").append(formattedDates);
-	$(".education-entry:last").append(formattedURL);	
+	for (var onlineCourse in education.onlineCourses) {
+	if (education.onlineCourses.hasOwnProperty(onlineCourse)){	
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
+		var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].dates);
+		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+		$(".education-entry:last").append(formattedTitle);	
+		$(".education-entry:last").append(formattedSchool);	
+		$(".education-entry:last").append(formattedDate);
+		$(".education-entry:last").append(formattedURL);	
+		}
 	}
-}
+};
 
+//encapsulated display function to populate JSON data within the correct tab.
 bio.display = function() {
-
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 	var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-	$("#header").append(formattedName);
-	$("#header").append(formattedRole);
 	$("#header").append(formattedPic);
-	$("#header").append(formattedwelcomeMessage);
-
+	$("#header").append(HTMLbioStart);
+	$("#profile").append(formattedName);
+	$("#profile").append(formattedRole);
+	$("#profile").append(formattedwelcomeMessage);
 	if (bio.contacts.mobile.length > 0) {
 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-		$("#header").append(formattedMobile);
-	};
+		$("#letsConnect").append(formattedMobile);
+	}
 	if (bio.contacts.email.length > 0) {
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-		$("#header").append(formattedEmail);			
-	};
+		$("#letsConnect").append(formattedEmail);
+	}
 	if (bio.contacts.twitter.length > 0) {
-		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);			
-		$("#header").append(formattedTwitter);			
-	};
+		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+		$("#letsConnect").append(formattedTwitter);
+	}
 	if (bio.contacts.github.length > 0) {
-		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);	
-		$("#header").append(formattedGithub);
-	};
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		$("#letsConnect").append(formattedGithub);
+	}
 	if (bio.contacts.blog.length > 0) {
-		var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);	
-		$("#header").append(formattedBlog);	
-	};
+		var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
+		$("#letsConnect").append(formattedBlog);
+	}
 	if (bio.contacts.location.length > 0) {
-		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);		
-		$("#header").append(formattedLocation);	
-	};
-
-	
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+		$("#letsConnect").append(formattedLocation);
+	}	
 	if(bio.skills.length > 0) {
-		$("#header").append(HTMLskillsStart);
-		
-		for(skill in bio.skills) {
-			var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-			$("#skills").append(formattedSkill);
+		$("#profile").append(HTMLskillsStart);
+		for(var skill in bio.skills) {
+			if (bio.skills.hasOwnProperty(skill)) {
+				var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+				$("#skills").append(formattedSkill);
+			}
 		}
 	}
-}
 
+};
+
+//encapsulated display function to populate JSON data within the correct tab.
 work.display = function() {
-	for (job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(formattedDates);
-		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(formattedLocation);
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedDescription);
+	for (var job in work.jobs) {
+		if (work.jobs.hasOwnProperty(job)) {
+			$("#workExperience").append(HTMLworkStart);
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+			var formattedEmployerTitle = formattedEmployer + formattedTitle;
+			$(".work-entry:last").append(formattedEmployerTitle);
+			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+			$(".work-entry:last").append(formattedDates);
+			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			$(".work-entry:last").append(formattedLocation);
+			var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+			$(".work-entry:last").append(formattedDescription);
+		}
 	}
-}
+};
 
+//encapsulated display function to populate JSON data within the correct tab.
 projects.display = function() {
-
-	for (project in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);	
-		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);	
-		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);	
-		
-		$(".project-entry:last").append(formattedTitle);
-		$(".project-entry:last").append(formattedDates);
-		$(".project-entry:last").append(formattedDescription);
-		
-
-		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$(".project-entry:last").append(formattedImage);	
-			}
+	for (var project in projects.projects) {
+		if (projects.projects.hasOwnProperty(project)) {
+			$("#projects").append(HTMLprojectStart);
+			var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+			var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+			$(".project-entry:last").append(formattedTitle);
+			$(".project-entry:last").append(formattedDates);
+			$(".project-entry:last").append(formattedDescription);
+			if (projects.projects[project].images.length > 0) {
+				for (var image in projects.projects[project].images) {
+					if (projects.projects[project].images.hasOwnProperty(image)) {
+						var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+						$(".project-entry:last").append(formattedImage);
+					}
+				}
+			}	
 		}	
 	}
-}
+};
 
+//function to display the google map.
+var gmap = {};
+gmap.display = function() {
+ $("#mapDiv").append(googleMap);
+};
 
-
-function inName(name) {
-	name = name.trim();
-	name = name.split(" ");
-	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-	return name[0] + " " + name[1];
-}
-
-
-$("#main").append(internationalizeButton);
-
+//Calling all profile display functions.
 bio.display();
 work.display();
 projects.display();
 education.display();
-
-$("#mapDiv").append(googleMap);
-
+gmap.display();
