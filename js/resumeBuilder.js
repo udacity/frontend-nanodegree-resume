@@ -1,7 +1,7 @@
 var bio = {
   "name": "Charles Anim",
   "role": "Front-End Web Developer",
-  "welcomeMessage": "Building great web solutions and innovations",
+  "welcomeMsg": "Building great web solutions and innovations",
   "contacts": {
     "mobile": "<a href='tel: 860.518.0872'>860.518.0872</a>",
     "email": "<a href='mailto:charlesnapster65@gmail.com'>charlesnapster65@gmail.com</a>",
@@ -60,8 +60,8 @@ var projects = {
   "projects": [
     {
      "title": "Interactive Resume",
-     "dates": "2014-2015",
-     "description": "Nothing here... except for some kittens from placekitten.com",
+     "dates": "2015",
+     "description": "This is an online resume built by implementing javascript and jQuery",
      "images": [
        "http://placekitten.com/g/250/300",
        "http://placekitten.com/g/350/300"
@@ -81,6 +81,7 @@ bio.display = function()
 
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
+  $("#header").prepend(formattedWelcomeMsg);
 
   // Adding contacts details at the top of the resume
   bio.displayContacts(true);
@@ -225,5 +226,3 @@ function inName(name){
 
   return name[0] + " " + name[1];
 }
-
-$("#main").append(internationalizeButton);
