@@ -87,7 +87,7 @@ var work = {
 work.display = function() {
     $.each(work.jobs, function(index, currentJob) {
         $("#workExperience").append( HTMLworkStart );
-        currentEntry = $(".work-entry")[currentJob];
+        currentEntry = $(".work-entry:last");
         var formattedWorkEmployer =
             HTMLworkEmployer.replace( data, currentJob.employer );
         var formattedWorkTitlte =
