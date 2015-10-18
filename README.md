@@ -16,38 +16,38 @@ And your repository will include the following files:
 * **js/resumeBuilder.js**: This file is empty. You should write your code here.
 * **js/jQuery.js**: The jQuery library.
 * **css/style.css**: Contains all of the CSS needed to style the page.
-* **README.md**: 
+* **README.md**:
 The GitHub readme file.
 * and some images in the images directory.
 
 ## Your starting point...
 ### js/helper.js
-Within helper.js, you’ll find a large collection of strings containing snippets of HTML. Within many snippets, you’ll find placeholder data in the form of `%data%` or `%contact%`.
+Within helper.js, youâll find a large collection of strings containing snippets of HTML. Within many snippets, youâll find placeholder data in the form of `%data%` or `%contact%`.
 
 Each string has a title that describes how it should be used. For instance, `HTMLworkStart` should be the first `<div>` in the Work section of the resume. `HTMLschoolLocation` contains a `%data%` placeholder which should be replaced with the location of one of your schools.
 
 ### Your process:
-The resume has four distinct sections: work, education, projects and a header with biographical information. You’ll need to:
+The resume has four distinct sections: work, education, projects and a header with biographical information. Youâll need to:
 
 1. Build four JSONs, each one representing a different resume section. The objects that you create need to follow the names within the schema below exactly. Make sure your JSONs are formatted correctly using <a href="http://jsonlint.com/" target="_blank">JSONlint.com</a>.
 
 * `bio` contains:
-        
+
             name : string
             role : string
             contacts : an object with
                   mobile: string
-                  email: string 
+                  email: string
                   github: string
-                  twitter: string 
+                  twitter: string
                   location: string
-            welcomeMessage: string 
+            welcomeMessage: string
             skills: array of strings
             biopic: url
             display: function taking no parameters
 
 * `education` contains:
-      
+
             schools: array of objects with
                  name: string
                  location: string
@@ -63,36 +63,36 @@ The resume has four distinct sections: work, education, projects and a header wi
             display: function taking no parameters
 
 * `work` contains
-          
+
             jobs: array of objects with
-                 employer: string 
-                 title: string 
-                 location: string 
+                 employer: string
+                 title: string
+                 location: string
                  dates: string (works with a hyphen between them)
-                 description: string 
+                 description: string
             display: function taking no parameters
 
 * `projects` contains:
 
             projects: array of objects with
-                  title: string 
+                  title: string
                   dates: string (works with a hyphen between them)
                   description: string
                   images: array with string urls
             display: function taking no parameters
 
 2. Iterate through each JSON and append its information to index.html in the correct section.
- * First off, you’ll be using jQuery’s `selector.append()` and `selector.prepend()` functions to modify index.html. `selector.append()` makes an element appear at the end of a selected section. `selector.prepend()` makes an element appear at the beginning of a selected section.
-   * Pay close attention to the ids of the `<div>`s in index.html and the HTML snippets in helper.js. They’ll be very useful as jQuery selectors for `selector.append()` and `selector.prepend()`
-* You’ll also be using the JavaScript method `string.replace(old, new)` to swap out all the placeholder text (e.g. `%data%`) for data from your resume JSONs.
-* Here’s an example of some code that would add the location of one your companies to the page:
+ * First off, youâll be using jQueryâs `selector.append()` and `selector.prepend()` functions to modify index.html. `selector.append()` makes an element appear at the end of a selected section. `selector.prepend()` makes an element appear at the beginning of a selected section.
+   * Pay close attention to the ids of the `<div>`s in index.html and the HTML snippets in helper.js. Theyâll be very useful as jQuery selectors for `selector.append()` and `selector.prepend()`
+* Youâll also be using the JavaScript method `string.replace(old, new)` to swap out all the placeholder text (e.g. `%data%`) for data from your resume JSONs.
+* Hereâs an example of some code that would add the location of one your companies to the page:
    * `var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);`
    * `$(".work-entry:last").append(formattedLocation);`
  * Use the mockup at the page of this document as a guide for the order in which you should append elements to the page.
-3. The resume includes an interactive map. Do the following to add it. 
- * In resumeBuilder.js, append the googleMap string to `<div id=”mapDiv”>`.
+3. The resume includes an interactive map. Do the following to add it.
+ * In resumeBuilder.js, append the googleMap string to `<div id=âmapDivâ>`.
  * In index.html, uncomment the Google script element: `<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>`
  * In helper.js, at the bottom of the file, uncomment code to initialize map and set fitBounds.
 4. All of your code for adding elements to the resume should be within functions. And all of your functions should be encapsulated within the same objects containing your resume data. For instance, your functions for appending work experience elements to the page should be found within the same object containing data about your work experience.
-5. Your resume should also `console.log()` information about click locations. On line 90 in helper.js, you’ll find a jQuery onclick handler that you’ll need to modify to work with the `logClicks(x,y)` function above it.
-6. It’s possible to make additional information show up when you click on the pins in the map. Check out line 174 in helper.js and the Google Maps API to get started.
+5. Your resume should also `console.log()` information about click locations. On line 90 in helper.js, youâll find a jQuery onclick handler that youâll need to modify to work with the `logClicks(x,y)` function above it.
+6. Itâs possible to make additional information show up when you click on the pins in the map. Check out line 174 in helper.js and the Google Maps API to get started.

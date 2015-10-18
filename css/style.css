@@ -212,3 +212,12 @@ span {
     display: block;
   }
 }
+/*  My Style Changes */
+#skills .white-text{
+  color: #e74c3c;
+  font-weight: bold;
+  font-family: Arial;
+}
+#header:nth-child(1){
+  color: #e74c3c;
+}
