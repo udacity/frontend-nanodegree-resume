@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "beepbeep": "^1.2.0",
+    "chalk": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-css-validator": "0.0.4",
+    "gulp-image-resize": "^0.7.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-w3cjs": "^1.1.0",
+    "gulp-webserver": "^0.9.1",
+    "jshint-stylish": "^2.0.1",
+    "through2": "^2.0.0"
+  }
+}
