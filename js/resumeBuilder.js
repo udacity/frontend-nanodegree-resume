@@ -122,6 +122,31 @@ var education = {
 	]
 };
 
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedPic = HTMLbioPic.replace("%data%", bio.pictureUrl);
+var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+var formattedGithub = HTMLtwitter.replace("%data%", bio.contacts.github);
+var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedGithub);
+$("#topContacts").append(formattedTwitter);
+$("#topContacts").append(formattedLocation);
+
+$("#header").append(formattedPic);
+$("#header").append(formattedMessage);
+
 if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
 	bio.skills.forEach(function(skill) {
@@ -179,10 +204,7 @@ function inName() {
 // I had a perfectly formatted header and they're making me ditch this code
 
 
-// var formattedName = HTMLheaderName.replace("%data%", bio.name);
-// var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-// var formattedPic = HTMLbioPic.replace("%data%", bio.pictureUrl);
-// var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
 
 // // These should be replaced with a couple of for loops?
 // var formattedSkillsOne = HTMLskills.replace("%data%", bio.skills[0]);
@@ -190,25 +212,7 @@ function inName() {
 // var formattedSkillsThree = HTMLskills.replace("%data%", bio.skills[2]);
 
 
-// var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-// var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-// var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-// var formattedGithub = HTMLtwitter.replace("%data%", bio.contacts.github);
-// var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
-// var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-
-// $("#header").prepend(formattedRole);
-// $("#header").prepend(formattedName);
-
-// $("#topContacts").append(formattedMobile);
-// $("#topContacts").append(formattedEmail);
-// $("#topContacts").append(formattedGithub);
-// $("#topContacts").append(formattedTwitter);
-// $("#topContacts").append(formattedLocation);
-
-// $("#header").append(formattedPic);
-// $("#header").append(formattedMessage);
 // $("#header").append(HTMLskillsStart);
 
 // $("#skills").append(formattedSkillsOne);
