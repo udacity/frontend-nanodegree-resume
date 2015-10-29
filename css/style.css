@@ -1,3 +1,7 @@
+/****************************
+** Layout and Global Fonts **
+*****************************/
+
 body,
 ul,
 li,
@@ -19,6 +23,33 @@ p {
   font-family: "Fredoka One", sans-serif;
 }
 
+h2,
+h3,
+h4,
+h5 {
+  padding:10px 5%;
+
+}
+
+img {
+  padding: 10px;
+  /*I added max-width temporarily to cut out confusion*/
+  max-width: 45%;
+}
+
+span {
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border-radius: 30px;
+  box-shadow: 5px 5px black;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -29,9 +60,56 @@ p {
   padding: 0 5%;
 }
 
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#header {
+  background: -webkit-linear-gradient(black, #f3f3f3);
+  background: -o-linear-gradient(black, #f3f3f3);
+  background: -moz-linear-gradient(black, #f3f3f3);
+  background: linear-gradient(black, #f3f3f3);
+  font-family: "Roboto", sans-serif;
+}
+
+#lets-connect {
+  background: linear-gradient(white, black);
+  text-align: center;
+}
+
+#skills {
+  flex-direction: column;
+}
+
+
+/***************
+** Typography **
+****************/
+
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: rgba(153, 153, 153, 1);
+  text-shadow: -1px -1px white;
   line-height: 48px;
   display: inline;
 }
@@ -41,7 +119,6 @@ h2 {
   font-size: 24px;
   color: #999;
   line-height: 29px;
-  padding: 10px;
 }
 
 h3 {
@@ -58,14 +135,26 @@ h4 {
   line-height: 17px;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
 }
 
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.education-entry em {
+  font-size: 16px;
+}
+
+#education h3 {
+  text-decoration: underline;
+}
 
 .date-text {
   font-style: italic;
@@ -84,19 +173,6 @@ h5 {
 
 }
 
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
 .welcome-message {
   font-style: italic;
   font-size: 18px;
@@ -104,17 +180,12 @@ a {
   line-height: 28px;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-
 .orange {
   background-color: #f5ae23;
 }
 
-.orange-text {
-  color: #f5ae23;
+.muted-blue {
+  color: rgba(139, 113, 238, 0.86);
 }
 
 .white-text {
@@ -132,58 +203,22 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background: -webkit-linear-gradient(black, #f3f3f3);
-  background: -o-linear-gradient(black, #f3f3f3);
-  background: -moz-linear-gradient(black, #f3f3f3);
-  background: linear-gradient(black, #f3f3f3);
-  font-family: "Roboto", sans-serif;
+.shadow {
+  text-shadow: -1px -1px white;
 }
 
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
+#skills-h3 {
+  color: rgb(27, 0 ,130);
   display: none;
 }
 
-img {
-  padding: 10px;
-  /*I added max-width temporarily to cut out confusion*/
-  max-width: 45%;
+#connect h2 {
+  color: #434343;
 }
 
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-#skills {
-  flex-direction: column;
-}
-
-/* Media queries to handle various device widths */
+/*******************
+**  Media queries **
+********************/
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {

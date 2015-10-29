@@ -283,3 +283,4 @@ function inName() {
 	lastName = nameArray[1].toUpperCase();
 	return firstName + ' ' + lastName;
 }
+
