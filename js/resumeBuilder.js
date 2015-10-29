@@ -1,4 +1,7 @@
-// Where the JSON's live
+///////////////////////////
+// Where the JSON's live //
+///////////////////////////
+
 // TODO: fill the objects with real information
 // TODO: Make it pretty and add cool functionality
 var bio = {
@@ -136,7 +139,9 @@ var education = {
 	]
 };
 
-// All of the display functions
+//////////////////////////////////
+// All of the display functions //
+//////////////////////////////////
 bio.display = function() {
 	//Declare variables for shorter lines later
 	var name, role, welcomeMsg, picURL, contacts, skills;
@@ -257,13 +262,18 @@ work.display = function() {
 	});
 };
 
-// Call display function to make page
+////////////////////////////
+// Call display functions //
+////////////////////////////
 bio.display();
 projects.display();
 work.display();
 education.display();
 
-// Do I really want this stuff
+///////////////////////////////
+// Extras from the JS course //
+///////////////////////////////
+
 $('#main').append(internationalizeButton);
 $('#mapDiv').append(googleMap);
 

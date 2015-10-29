@@ -1,10 +1,7 @@
 body,
-div,
 ul,
 li,
-p,
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -12,6 +9,14 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
+}
+
+div,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+  font-family: "Fredoka One", sans-serif;
 }
 
 .clear-fix {
@@ -129,7 +134,11 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background: -webkit-linear-gradient(black, #f3f3f3);
+  background: -o-linear-gradient(black, #f3f3f3);
+  background: -moz-linear-gradient(black, #f3f3f3);
+  background: linear-gradient(black, #f3f3f3);
+  font-family: "Roboto", sans-serif;
 }
 
 .flex-box {
