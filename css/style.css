@@ -158,6 +158,8 @@ ul {
 
 img {
   padding: 10px;
+  /*I added max-width temporarily to cut out confusion*/
+  max-width: 45%;
 }
 
 span {
