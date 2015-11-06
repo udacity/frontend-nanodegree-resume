@@ -1,3 +1,9 @@
+# Interactive Resume
+## My home page
+You are welcome to see [my home page](http://web.stanford.edu/~chuiwenm/). Or scan the QR code below!
+
+![](https://raw.githubusercontent.com/machuiwen/interactive-resume/master/images/qrcode/Unitag_QRCode_1441955151818.png)
+
 ## How do I complete this project?
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."

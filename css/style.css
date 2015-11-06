@@ -127,16 +127,20 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
+/* Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848;*/
+  background-image: url("../images/background.jpg");
 }
 
 .flex-box {
   display: -webkit-flex;
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  -webkit-flex-direction: row; /* Safari 6.1+ */
+  flex-direction: row;
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
   justify-content: space-around;
   padding: 10px;
 }
@@ -154,6 +158,11 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+}
+
+.projpic{
+  padding: 10px;
+  height: 180px;
 }
 
 img {
