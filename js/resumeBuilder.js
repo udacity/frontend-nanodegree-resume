@@ -112,7 +112,31 @@ var projects = {
 		"description": "Team leader for design of mission critical applications and DB design.",
 		"images": []
 	  }
-	  ]
+	  ],
+	  "display" :
+	  	function () {
+	  	  for (project in projects.projects) {
+	  		// header
+			$("#projects").append(HTMLprojectStart);
+
+			var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+			$(".project-entry:last").append(formattedTitle);
+
+			var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+			$(".project-entry:last").append(formattedDates);
+
+			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+			$(".project-entry:last").append(formattedDescription);
+
+			if (projects.projects[project].images.length > 0) {
+    		  for (image in projects.projects[project].images) {
+        		var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImage);
+    		  }
+    		}
+    	  }
+		}
+
 }
 
 if (bio.skills.length > 0) {
@@ -165,7 +189,7 @@ function inName(oldName) {
     return finalName;
 }
 
-projects.display = function () {
+/* projects.display = function () {
 	  	for (project in projects.projects) {
 	  		// header
 			$("#projects").append(HTMLprojectStart);
@@ -186,7 +210,7 @@ projects.display = function () {
     		  }
     		}
     	}
-};
+}; */
 
 projects.display();
 
