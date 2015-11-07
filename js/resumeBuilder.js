@@ -179,7 +179,7 @@ var work = {
 		"title": "Supervisor of Hydrocarbon Planning Computer Systems",
 		"location": "Dhahran, Saudi Arabia",
 		"dates": "1988-1996",
-		"description": "Supervise software & hardware units, systems generated hydrocarbon income for Saudi Arabia ($ billions)."
+		"description": "Developed and maintained systems to plan production, coordinate sales, maintain hydrocarbon resources and generate billing for the world's largest oil and gas producing company."
 	  }
 	  ],
 	  "display" :
@@ -207,15 +207,15 @@ var projects = {
 	"projects": [
 	  {
 		"title": "Compass Applications",
-		"dates": "2015-Present",
+		"dates": "2010-Present",
 		"description": "Applications developed to support the Compass model of stock selection and risk management.",
-		"images": ["images/compass-map-small.jpg"]
+		"images": ["images/320Images/v1.jpg","images/320Images/c1.jpg"]
 	  },
 	  {
 		"title": "Curve Applications",
 		"dates": "2006-2009",
 		"description": "Applications developed to support the Curve model of portfolio management.",
-		"images": ["images/R2000.jpg"]
+		"images": ["images/320Images/ctt4.jpg","images/320Images/ctt1.jpg","images/320Images/r2000.jpg"]
 	  },
 	  {
 		"title": "Conversion of OSPAS planning and offtake systems from character-based flat files to windows-based SQL DB.",

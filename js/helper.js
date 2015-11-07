@@ -64,7 +64,8 @@ The International Name challenge in Lesson 2 where you'll create a function that
 */
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName() || function(){};
+    var oldName = $("#name").html();
+    var iName = inName(oldName) || function(){};
     $('#name').html(iName);
   });
 });
@@ -170,7 +171,7 @@ function initializeMap() {
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
+    // overlay to location markers.
     google.maps.event.addListener(marker, 'click', function() {
       infoWindow.open(map, marker);
     });
