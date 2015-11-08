@@ -76,7 +76,14 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
+}
 
+.oclass-text{
+  font-style: italic;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -10px;
+  text-decoration: underline;
 }
 
 p {
@@ -137,7 +144,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
 }
 

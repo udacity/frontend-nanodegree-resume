@@ -3,7 +3,7 @@
 
 var bio = {
 	"name" : "Gregg Strohkorb",
-	"role" : "Data Scientist and App Developer",
+	"role" : "Portfolio Manager, Data Scientist and App Developer",
 	"contacts" :
 	  {
 		"mobile" : "785-221-9437",
@@ -12,8 +12,28 @@ var bio = {
 		"twitter" : "@gstroh",
 		"location" : "Leawood, KS, USA"
 	  },
-	"welcomeMessage" : "Welcome to my interactive resume.",
-	"skills" : ["Data Analysis", "Applications Development", "Portfolio Management", "CFA"],
+	"welcomeMessage" : "Welcome to my resume which contains skills from 3 areas: Finance, Data & Computer Sciences.",
+	//"skills" : ["Data Analysis","Applications Development","Portfolio Management", "CFA"],
+	"skills" : ["Quantitative portfolio manager and analyst",
+				"CFA Charter Holder",
+				"Quantitative equity research, backtesting and modeling",
+				"Project management",
+				"Strong analytical and problem solving skills, detail oriented",
+				"Financial data scientist",
+				"Advanced Math & Computer Science (M.S.) degree",
+				"Advanced Finance (MBA) degree",
+				"Portfolio optimization, attribution and risk analysis",
+				"Works well on team and individually",
+				"Buy-side investment experience on quantamental teams",
+				"Automate data validation and processing",
+				"Collaborates well with fundamental PMs and analysts",
+				"Good written and oral communication skills",
+				"Database building, administration and management",
+				"Programming skills and application development",
+				"Experience with North American and international data sets",
+				"Programming tools: VB.net, SQL Server, Matlab, R",
+				"Finance tools: Clarifi, Compustat, Bloomberg, Northfield",
+				"Web tools: HTML, CSS, Javascript, Ruby on Rails"],
 	"biopic" : "images/gregg.jpg",
 	"display" :
 	  	function () {
@@ -108,23 +128,24 @@ var education = {
 	  ],
 	  "display" :
 	  	function () {
+	  		// header
+			$("#education").append(HTMLschoolStart);
+
 	  		for (school in education.schools) {
-	  			// header
-				$("#education").append(HTMLschoolStart);
+
 
 				var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-				$(".education-entry:last").append(formattedName);
-
 				var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-				$(".education-entry:last").append(formattedDegree);
-
 				var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-				$(".education-entry:last").append(formattedDates);
-
 				var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-				$(".education-entry:last").append(formattedLocation);
-
 				var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+
+				//$(".education-entry:last").append(formattedName);
+				//$(".education-entry:last").append(formattedDegree);
+
+				$(".education-entry:last").append(formattedName + formattedDegree);
+				$(".education-entry:last").append(formattedDates);
+				$(".education-entry:last").append(formattedLocation);
 				$(".education-entry:last").append(formattedMajor);
 
 				if (education.schools[school].majors.length > 0) {
@@ -141,17 +162,14 @@ var education = {
 				$(".education-entry:last").append(HTMLonlineClasses);
 
     	  		for (onlineCourse in education.onlineCourses) {
-
 					var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-					$(".education-entry:last").append(formattedTitle);
-
 					var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-					$(".education-entry:last").append(formattedSchool);
-
 					var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
-					$(".education-entry:last").append(formattedDate);
-
 					var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+					//$(".education-entry:last").append(formattedTitle);
+					//$(".education-entry:last").append(formattedSchool);
+					$(".education-entry:last").append(formattedTitle + formattedSchool);
+					$(".education-entry:last").append(formattedDate);
 					$(".education-entry:last").append(formattedURL);
     	  		}
     	  	}
