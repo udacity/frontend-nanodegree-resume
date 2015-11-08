@@ -133,15 +133,11 @@ var education = {
 
 	  		for (school in education.schools) {
 
-
 				var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
 				var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 				var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 				var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 				var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
-
-				//$(".education-entry:last").append(formattedName);
-				//$(".education-entry:last").append(formattedDegree);
 
 				$(".education-entry:last").append(formattedName + formattedDegree);
 				$(".education-entry:last").append(formattedDates);
@@ -183,21 +179,75 @@ var work = {
 		"title": "Portfolio Manager",
 		"location": "Overland Park, KS",
 		"dates": "2006-Present",
-		"description": "Portfolio management, quantitative research, quantitative systems development."
+		"description":  "Portfolio Manager for Compass Undervalued Top Picks Portfolio, a UIT offer by Guggenheim. " +
+						"Perform quantitative research, backtesting and modeling for fundamental U.S. value equity team. " +
+						"Develop and maintain stock research applications in VB.Net/Excel/MS SQL Server/Matlab. " +
+						"Author of Compass Model for stock selection and risk analysis. " +
+						"Utilize Northfield for portfolio optimization, attribution and risk analysis. " +
+						"Support marketing and client service with presentations of tools and explanation of quantitative techniques used to manage client funds."
+	  },
+	  {
+		"employer": "Petra Hedge Fund Advisors, LLC",
+		"title": "Portfolio Manager, President, Owner",
+		"location": "Parker, CO",
+		"dates": "2003-2006",
+		"description": 	"Portfolio Manager for Petra Long/Short Equity Fund. " +
+						"Managed professional outsource relationships for trading, accounting, audit, compliance and taxes. "
+	  },
+	  {
+		"employer": "Gaines Asset Management, Inc.",
+		"title": "Senior Quantitative Analyst, President, Owner",
+		"location": "Parker, CO",
+		"dates": "2001-2006",
+		"description": 	"Quantitative equity investment consultant for Denver Investment Advisors. " +
+						"Worked as a consultant while starting a hedge fund and real estate investment firms. "
 	  },
 	  {
 		"employer": "Denver Investment Advisors",
-		"title": "Senior Quantitative Analyst",
+		"title": "Senior Quantitative Analyst, Vice President",
 		"location": "Denver, CO",
-		"dates": "1996-2006",
-		"description": "Quantitative research, applications development, stock selection modeling."
+		"dates": "1996-2001",
+		"description": 	"Senior quantitative analyst for $1 billion small-cap value equity fund. " +
+						"Multi-factor model development. " +
+						"Systems and applications development. " +
+						"Risk analysis and portfolio optimization construction with Barra."
 	  },
 	  {
 		"employer": "Saudi Arabian Oil Company",
 		"title": "Supervisor of Hydrocarbon Planning Computer Systems",
 		"location": "Dhahran, Saudi Arabia",
 		"dates": "1988-1996",
-		"description": "Developed and maintained systems to plan production, coordinate sales, maintain hydrocarbon resources and generate billing for the world's largest oil and gas producing company."
+		"description": 	"Supervisor of hydrocarbon planning & sales system for world's largest producing country, Saudi Arabia. " +
+						"Oil Supply Planning and Scheduling (OSPAS) Department of Saudi ARAMCO, directed and planned all country production and offtake. " +
+						"Other roles included: project manager, systems engineer, software developer, database administrator. " +
+						"Work involved 24-hour a day information and real-time monitoring systems utilizing skills in computer science and finance."
+	  },
+	  {
+		"employer": "Morgan Stanley",
+		"title": "Senior Associate, International Information Systems",
+		"location": "New York, NY",
+		"dates": "1987-1988",
+		"description": 	"Member of systems development team for international investment information systems. " +
+						"Authored and supported systems for Japanese securities lending. " +
+						"Developed and maintained systems for securities lending and interest for Morgan Stanley Trust Company. " +
+						"Wrote and supported systems in Hong Kong and Tokyo for self-clearing. " +
+						"Provided 24-hour support for all international market systems processed by Morgan Stanley."
+	  },
+	  {
+		"employer": "Saudi Aramco",
+		"title": "Systems Engineer",
+		"location": "Dhahran, Saudi Arabia",
+		"dates": "1982-1986",
+		"description": 	"Systems analyst and engineer for Production and Offtake Planning (PROP) system. " +
+						"Provided 24-hour support for information systems used for Saudi Arabia’s oil and gas production and sales. "
+	  },
+	  {
+		"employer": "George Washington University, NASA-Langley Research Center",
+		"title": "Research Analyst",
+		"location": "Hampton, VA",
+		"dates": "1979-1982",
+		"description": 	"Performed research in advanced computational methods for nonlinear finite element analysis. " +
+						"Authored paper (NASA TM-84566) with my supervisor, Dr. Ahmed Noor, 'Potential of Minicomputer/Array-Processor System for Nonlinear Finite-Element Analysis.'"
 	  }
 	  ],
 	  "display" :
