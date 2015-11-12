@@ -124,6 +124,12 @@ var education = {
 		"school": "Udacity",
 		"date": 2015,
 		"url": "https://www.udacity.com/course/javascript-basics--ud804"
+	  },
+	  {
+		"title": "Intro to jQuery",
+		"school": "Udacity",
+		"date": 2015,
+		"url": "https://www.udacity.com/course/intro-to-jquery--ud245"
 	  }
 	  ],
 	  "display" :
@@ -156,14 +162,13 @@ var education = {
     	  	if (education.onlineCourses.length > 0) {
     	  		// Header
 				$(".education-entry:last").append(HTMLonlineClasses);
-
+				// Loop over online classes
     	  		for (onlineCourse in education.onlineCourses) {
 					var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
 					var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
 					var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
 					var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
-					//$(".education-entry:last").append(formattedTitle);
-					//$(".education-entry:last").append(formattedSchool);
+
 					$(".education-entry:last").append(formattedTitle + formattedSchool);
 					$(".education-entry:last").append(formattedDate);
 					$(".education-entry:last").append(formattedURL);
@@ -252,8 +257,10 @@ var work = {
 	  ],
 	  "display" :
 	  	function () {
-	  		for (job in work.jobs) {
-				$("#workExperience").append(HTMLworkStart);
+	  		// header
+			$("#workExperience").append(HTMLworkStart);
+			// loop over jobs in work experience
+			for (job in work.jobs) {
 				var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 				var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 				// Concatenate the two strings.
@@ -385,6 +392,12 @@ bio.display();
 work.display();
 projects.display();
 education.display();
+
+// Fix Online Classes header.  GS 11/11/2015
+var h3;
+h3 = $('.education-entry').find('h3');
+h3.css('padding-left','0');
+h3.css('padding-top','20px');
 
 // map
 $("#mapDiv").append(googleMap);

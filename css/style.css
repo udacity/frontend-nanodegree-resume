@@ -139,6 +139,7 @@ a {
   background-color: #484848;
 }
 
+/* Changed justify-content from space-around to allow my skills to fit better. */
 .flex-box {
   display: -webkit-flex;
   display: flex;
