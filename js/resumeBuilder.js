@@ -284,13 +284,13 @@ var projects = {
 		"title": "Compass Applications",
 		"dates": "2010-Present",
 		"description": "Applications developed to support the Compass model of stock selection and risk management.",
-		"images": ["images/320Images/v1.jpg","images/320Images/c1.jpg"]
+		"images": ["images/v1.jpg","images/c1.jpg"]
 	  },
 	  {
 		"title": "Curve Applications",
 		"dates": "2006-2009",
 		"description": "Applications developed to support the Curve model of portfolio management.",
-		"images": ["images/320Images/ctt4.jpg","images/320Images/ctt1.jpg","images/320Images/r2000.jpg"]
+		"images": ["images/ctt4.jpg","images/ctt1.jpg","images/r2000.jpg"]
 	  },
 	  {
 		"title": "Conversion of OSPAS planning and offtake systems from character-based flat files to windows-based SQL DB.",
