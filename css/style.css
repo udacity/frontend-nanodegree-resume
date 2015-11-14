@@ -19,6 +19,7 @@ h6 {
 }
 
 .education-entry,
+.skillLong-entry,
 .work-entry,
 .project-entry {
   padding: 0 5%;
@@ -76,6 +77,13 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
+}
+
+.skillsLong-text {
+  font-style: normal;
+  font-size: 14px;
+  color: #333;
+  line-height: 16px;
 }
 
 .oclass-text{
@@ -139,7 +147,7 @@ a {
   background-color: #484848;
 }
 
-/* Changed justify-content from space-around to allow my skills to fit better. */
+/* Changed justify-content from space-around to space-between to allow my skills to fit better. */
 .flex-box {
   display: -webkit-flex;
   display: flex;

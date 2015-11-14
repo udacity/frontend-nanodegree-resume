@@ -29,6 +29,9 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
+var HTMLskillsLongStart = '<div class="skillLong-entry"></div>';
+var HTMLskillLong = '<div class="skillsLong-text">- %data%</div>';
+
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
@@ -56,6 +59,8 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 //var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlineURL = '<div class="oclass-text"><br><a href="#">%data%</a>';
+
+var HTMLlineFeed  = '<br>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

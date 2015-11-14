@@ -12,9 +12,25 @@ var bio = {
 		"twitter" : "@gstroh",
 		"location" : "Leawood, KS, USA"
 	  },
-	"welcomeMessage" : "Welcome to my resume which contains skills from 3 areas: Finance, Data & Computer Sciences.",
-	//"skills" : ["Data Analysis","Applications Development","Portfolio Management", "CFA"],
-	"skills" : ["Quantitative portfolio manager and analyst",
+	"welcomeMessage" : "Welcome to my resume which contains skills from 3 areas: Investment Finance, Data & Computer Sciences.",
+	"skills" : [
+				"Portfolio Management",
+				"CFA",
+				"Quantitative Analyst",
+				"Risk Management",
+				"Investment Process Automation",
+				"Portfolio Optimization",
+				"Data Scientist",
+				"Quantitative Modeling",
+				"Data Validation",
+				"Applications Development",
+				"Project Management",
+				"Dababase Administration",
+				"Web Developer",
+				"Marketing & Client Presentations"
+
+				],
+	/*"skills" : ["Quantitative portfolio manager and analyst",
 				"CFA Charter Holder",
 				"Quantitative equity research, backtesting and modeling",
 				"Project management",
@@ -33,7 +49,7 @@ var bio = {
 				"Experience with North American and international data sets",
 				"Programming tools: VB.net, SQL Server, Matlab, R",
 				"Finance tools: Clarifi, Compustat, Bloomberg, Northfield",
-				"Web tools: HTML, CSS, Javascript, Ruby on Rails"],
+				"Web tools: HTML, CSS, Javascript, Ruby on Rails"], */
 	"biopic" : "images/gregg.jpg",
 	"display" :
 	  	function () {
@@ -76,7 +92,43 @@ var bio = {
   				}
 			}
 	    }
+}
 
+var skillsLong = {
+	"skill" : [	"Quantitative portfolio manager and analyst",
+				"CFA Charter Holder (2000)",
+				"Quantitative equity research, backtesting and modeling",
+				"Project management",
+				"Strong analytical and problem solving skills, detail oriented",
+				"Financial data scientist",
+				"Advanced Math & Computer Science (M.S.) degree",
+				"Advanced Finance (MBA) degree",
+				"Portfolio optimization, attribution and risk analysis",
+				"Works well on team and individually",
+				"Buy-side investment experience on quantamental teams",
+				"Automate data validation and processing",
+				"Collaborates well with fundamental PMs and analysts",
+				"Good written and oral communication skills",
+				"Database building, administration and management",
+				"Programming skills and application development",
+				"Experience with North American and international data sets",
+				"Programming tools: VB.net, SQL Server, Matlab, R",
+				"Finance tools: Clarifi, Compustat, Bloomberg, Northfield",
+				"Web tools: HTML, CSS, Javascript, Ruby on Rails"],
+		"display" :
+			function () {
+				// header
+				$("#skillsLong").append(HTMLskillsLongStart);
+				// skills array
+				if (skillsLong.skill.length > 0) {
+  					// skills loop
+  					for (var skill in skillsLong.skill) {
+						var formattedSkillLong = HTMLskillLong.replace("%data%", skillsLong.skill[skill]);
+  						$(".skillLong-entry:last").append(formattedSkillLong);
+  					}
+  					$(".skillLong-entry:last").append(HTMLlineFeed);
+				}
+			}
 }
 
 var education = {
@@ -173,6 +225,7 @@ var education = {
 					$(".education-entry:last").append(formattedDate);
 					$(".education-entry:last").append(formattedURL);
     	  		}
+    	  		$(".education-entry:last").append(HTMLlineFeed);
     	  	}
 	  	}
 }
@@ -321,6 +374,7 @@ var projects = {
     		  }
     		}
     	  }
+    	  $(".project-entry:last").append(HTMLlineFeed);
 		}
 
 }
@@ -389,6 +443,7 @@ function inName(oldName) {
 }; */
 
 bio.display();
+skillsLong.display();
 work.display();
 projects.display();
 education.display();
