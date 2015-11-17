@@ -22,7 +22,8 @@ h6 {
 .skillLong-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  /*padding: 0 5%;*/
+  padding: 0 5% 20px 5%;
 }
 
 h1 {
@@ -59,7 +60,6 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
 

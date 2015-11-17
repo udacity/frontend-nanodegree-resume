@@ -28,28 +28,7 @@ var bio = {
 				"Dababase Administration",
 				"Web Developer",
 				"Marketing & Client Presentations"
-
 				],
-	/*"skills" : ["Quantitative portfolio manager and analyst",
-				"CFA Charter Holder",
-				"Quantitative equity research, backtesting and modeling",
-				"Project management",
-				"Strong analytical and problem solving skills, detail oriented",
-				"Financial data scientist",
-				"Advanced Math & Computer Science (M.S.) degree",
-				"Advanced Finance (MBA) degree",
-				"Portfolio optimization, attribution and risk analysis",
-				"Works well on team and individually",
-				"Buy-side investment experience on quantamental teams",
-				"Automate data validation and processing",
-				"Collaborates well with fundamental PMs and analysts",
-				"Good written and oral communication skills",
-				"Database building, administration and management",
-				"Programming skills and application development",
-				"Experience with North American and international data sets",
-				"Programming tools: VB.net, SQL Server, Matlab, R",
-				"Finance tools: Clarifi, Compustat, Bloomberg, Northfield",
-				"Web tools: HTML, CSS, Javascript, Ruby on Rails"], */
 	"biopic" : "images/gregg.jpg",
 	"display" :
 	  	function () {
@@ -96,25 +75,27 @@ var bio = {
 
 var skillsLong = {
 	"skill" : [	"Quantitative portfolio manager and analyst",
+				"Advanced Finance degree, MBA International Finance",
 				"CFA Charter Holder (2000)",
 				"Quantitative equity research, backtesting and modeling",
-				"Project management",
-				"Strong analytical and problem solving skills, detail oriented",
-				"Financial data scientist",
-				"Advanced Math & Computer Science (M.S.) degree",
-				"Advanced Finance (MBA) degree",
 				"Portfolio optimization, attribution and risk analysis",
-				"Works well on team and individually",
+				"Strong analytical and problem solving skills, detail oriented",
 				"Buy-side investment experience on quantamental teams",
-				"Automate data validation and processing",
 				"Collaborates well with fundamental PMs and analysts",
-				"Good written and oral communication skills",
-				"Database building, administration and management",
-				"Programming skills and application development",
+				"Marketing and client presentaions",
+				"Financial data scientist",
 				"Experience with North American and international data sets",
+				"Automate data validation and processing",
+				"Finance data tools: Clarifi, Compustat, Bloomberg, Northfield",
+				"Advanced Math & Computer Science (M.S.) degree",
+				"Programming skills and application development",
+				"Database building, administration and management",
+				"Project management",
 				"Programming tools: VB.net, SQL Server, Matlab, R",
-				"Finance tools: Clarifi, Compustat, Bloomberg, Northfield",
-				"Web tools: HTML, CSS, Javascript, Ruby on Rails"],
+				"Web tools: HTML, CSS, Javascript, Ruby on Rails",
+				"Good written and oral communication skills",
+				"Works well on team and individually"
+			  ],
 		"display" :
 			function () {
 				// header
@@ -126,7 +107,6 @@ var skillsLong = {
 						var formattedSkillLong = HTMLskillLong.replace("%data%", skillsLong.skill[skill]);
   						$(".skillLong-entry:last").append(formattedSkillLong);
   					}
-  					$(".skillLong-entry:last").append(HTMLlineFeed);
 				}
 			}
 }
@@ -225,7 +205,6 @@ var education = {
 					$(".education-entry:last").append(formattedDate);
 					$(".education-entry:last").append(formattedURL);
     	  		}
-    	  		$(".education-entry:last").append(HTMLlineFeed);
     	  	}
 	  	}
 }
@@ -374,40 +353,12 @@ var projects = {
     		  }
     		}
     	  }
-    	  $(".project-entry:last").append(HTMLlineFeed);
 		}
 
 }
 
 
-
-/*function DisplayWork() {
-  for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	// Concatenate the two strings.
-	var formattedEmployerAndTitle = formattedEmployer + formattedTitle;
-	$(".work-entry:last").append(formattedEmployerAndTitle);
-
-	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-	$(".work-entry:last").append(formattedLocation);
-	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-	$(".work-entry:last").append(formattedDates);
-	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-	$(".work-entry:last").append(formattedDescription);
-//	console.log(work.jobs[job].employer);
-  }
-}
-
-DisplayWork(); */
-
-$(document).click(function(loc) {
-	//var e = jQuery.Event("click");\
-	//console.log(loc);
-	logClicks(loc.pageX, loc.pageY);
-});
-
+// Internationalize button.
 $("#main").append(internationalizeButton);
 
 function inName(oldName) {
@@ -419,29 +370,7 @@ function inName(oldName) {
     return finalName;
 }
 
-/* projects.display = function () {
-	  	for (project in projects.projects) {
-	  		// header
-			$("#projects").append(HTMLprojectStart);
-
-			var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-			$(".project-entry:last").append(formattedTitle);
-
-			var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-			$(".project-entry:last").append(formattedDates);
-
-			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-			$(".project-entry:last").append(formattedDescription);
-
-			if (projects.projects[project].images.length > 0) {
-    		  for (image in projects.projects[project].images) {
-        		var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$(".project-entry:last").append(formattedImage);
-    		  }
-    		}
-    	}
-}; */
-
+// Display the resume.
 bio.display();
 skillsLong.display();
 work.display();
