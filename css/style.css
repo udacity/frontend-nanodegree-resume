@@ -19,9 +19,11 @@ h6 {
 }
 
 .education-entry,
+.skillLong-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  /*padding: 0 5%;*/
+  padding: 0 5% 20px 5%;
 }
 
 h1 {
@@ -58,7 +60,6 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
 
@@ -76,7 +77,21 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
+}
 
+.skillsLong-text {
+  font-style: normal;
+  font-size: 14px;
+  color: #333;
+  line-height: 16px;
+}
+
+.oclass-text{
+  font-style: italic;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -10px;
+  text-decoration: underline;
 }
 
 p {
@@ -132,12 +147,13 @@ a {
   background-color: #484848;
 }
 
+/* Changed justify-content from space-around to space-between to allow my skills to fit better. */
 .flex-box {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
 }
 

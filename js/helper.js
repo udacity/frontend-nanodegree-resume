@@ -1,12 +1,12 @@
 /*
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
+This file contains all of the code running in the background that makes resumeBuilder.js possible.
+We call these helper functions because they support your code in this course.
+Don't worry, you'll learn what's going on in this file throughout the course.
+You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
 
 Cameron Pittman
 */
-
 
 /*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
@@ -28,6 +28,9 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+
+var HTMLskillsLongStart = '<div class="skillLong-entry"></div>';
+var HTMLskillLong = '<div class="skillsLong-text">- %data%</div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -53,19 +56,22 @@ var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+//var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<div class="oclass-text"><br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
 /*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
+The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run.\
+Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName() || function(){};
-    $('#name').html(iName);  
+    var oldName = $("#name").html();
+    var iName = inName(oldName) || function(){};
+    $('#name').html(iName);
   });
 });
 
@@ -85,10 +91,8 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  logClicks(loc.pageX, loc.pageY);
 });
-
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
@@ -109,17 +113,14 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  /* 
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js. 
-  */
+  // For the map to be displayed, the googleMap var must be
+  // appended to #mapDiv in resumeBuilder.js.
+
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
+//  locationFinder() returns an array of every location string from the JSONs
+//  written for bio, education, and work.
 
-  /*
-  locationFinder() returns an array of every location string from the JSONs
-  written for bio, education, and work.
-  */
   function locationFinder() {
 
     // initializes an empty array
@@ -170,9 +171,9 @@ function initializeMap() {
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
+    // overlay to location markers.
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -184,10 +185,8 @@ function initializeMap() {
     map.setCenter(bounds.getCenter());
   }
 
-  /*
-  callback(results, status) makes sure the search returned results for a location.
-  If so, it creates a new map marker for that location.
-  */
+// callback(results, status) makes sure the search returned results for a location.
+// If so, it creates a new map marker for that location.
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
@@ -223,6 +222,7 @@ function initializeMap() {
 
   // locations is an array of location strings returned from locationFinder()
   locations = locationFinder();
+  //console.log(locations);
 
   // pinPoster(locations) creates pins on the map for each location in
   // the locations array
@@ -230,16 +230,14 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
+// Uncomment the code below when you're ready to implement a Google Map!
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  map.fitBounds(mapBounds);
+});
