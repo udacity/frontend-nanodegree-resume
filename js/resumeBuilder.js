@@ -109,15 +109,7 @@ var projects = {
 			"dates": "",
 			"description": "",
 			"images":[
-				{
-					"imageURL":""
-				},
-				{
-					"imageURL":""
-				},
-				{
-					"imageURL":""
-				}
+				"https://geosynchronous/github.io"
 			]
 		},
 		{
@@ -125,15 +117,7 @@ var projects = {
 			"dates": "",
 			"description": "",
 			"images":[
-				{
-					"imageURL":""
-				},
-				{
-					"imageURL":""
-				},
-				{
-					"imageURL":""
-				}
+				"https://geosynchronous/github.io"
 			]
 		},
 		{
@@ -141,15 +125,7 @@ var projects = {
 			"dates": "",
 			"description": "",
 			"images":[
-				{
-					"imageURL":""
-				},
-				{
-					"imageURL":""
-				},
-				{
-					"imageURL":""
-				}
+				"https://geosynchronous/github.io"
 			]
 		}
 	]
