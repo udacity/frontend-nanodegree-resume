@@ -54,7 +54,8 @@ h4 {
 }
 
 h2,
-h3,
+/* I don't like this styling on h3 */
+/*h3,*/
 h4,
 h5 {
   padding:10px 5%;
@@ -67,7 +68,8 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: left;
+  /* Messed with display */
+  /*float: left;*/
 }
 
 .location-text {
@@ -89,7 +91,8 @@ a {
   color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
-  display: block;
+  /*Removed code below to assit with heading*/
+  /*display: block;*/
 }
 
 .welcome-message {
