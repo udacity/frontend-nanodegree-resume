@@ -130,15 +130,15 @@ function initializeMap() {
 
     // iterates through school locations and appends each location to
     // the locations array
-    for (var school in education.schools) {
-      locations.push(education.schools[school].location);
-    }
+    education.schools.forEach(function(school){
+      locations.push(school.location);
+    });
 
     // iterates through work locations and appends each location to
     // the locations array
-    for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
-    }
+    work.jobs.forEach(function(job){
+      locations.push(job.location);
+    });
 
     return locations;
   }
