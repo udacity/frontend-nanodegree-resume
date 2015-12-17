@@ -34,7 +34,6 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
   line-height: 29px;
   padding: 10px;
 }
@@ -97,23 +96,27 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  padding: 5px 5px 5px 0;
 }
 
 #skills-h3 {
   color: #f5ae23;
+  font-weight: normal;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  /*background-color: #f5ae23;*/
+  background-color: rgb(94, 72, 120);
 }
 
 .orange-text {
-  color: #f5ae23;
+  /*color: #f5ae23;*/
+  color: rgb(198, 161, 223);
 }
 
 .white-text {
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
 }
 
@@ -125,6 +128,10 @@ a {
 
 .dark-gray {
   background-color: #4a4a4a;
+}
+
+.light-gray {
+  color: rgb(177, 177, 177);
 }
 
 /* TODO: Replace with image later */
@@ -151,13 +158,10 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
   width: 200px;
+  margin: 0 10px 0 0;
   display: none;
-}
-
-img {
-  padding: 10px;
+  border: 2px solid black;
 }
 
 span {
@@ -166,6 +170,23 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+#description {
+  font-size: 20px;
+}
+
+.font-karla {
+  font-family: 'Karla', sans-serif;
+}
+.font-questrial {
+  font-family: 'Questrial', sans-serif;
+}
+.font-gudea {
+  font-family: 'Gudea', sans-serif;
+}
+.font-news-cycle {
+  font-family: 'News Cycle', sans-serif;
 }
 
 /* Media queries to handle various device widths */
