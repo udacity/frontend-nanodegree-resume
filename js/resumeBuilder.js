@@ -11,14 +11,20 @@ var bio = {
 			"email": "geosynchronous@mac.com",
 			"github": "https://Geosynchronous.github.io",
 			"twitter": "geo-twitter",
-			"location": "Salt Lake City"
+			"location": "Salt Lake City, Utah"
 		},
 	"skills":[
 			"Front-End Web",
 			"Courseware",
 			"Physics",
 			"Electronics",
-			"Instrumentation"
+			"Instrumentation",
+			"Programming",
+			"Graphics",
+			"3D-CAD",
+			"Instruction",
+			"Writing"
+
 	],
 	"bioPic": "images/me.jpg"
 }
@@ -43,7 +49,7 @@ var education = {
 		},
 		{
 			"name": "University of Utah",
-			"city": "Salt Lake City, UT, US",
+			"location": "Salt Lake City, UT, US",
 			"degree": "MS",
 			"majors": ["Physics"],
 			"dates": 1980,
@@ -51,7 +57,7 @@ var education = {
 		},
 		{
 			"name": "University of Utah",
-			"city": "Salt Lake City, UT, US",
+			"location": "Salt Lake City, UT, US",
 			"degree": "Education Certification",
 			"majors": ["Secondary School Instructor"],
 			"dates": 1984,
@@ -62,7 +68,7 @@ var education = {
 		{
 			"title": "Front-End Web Development",
 			"school": "Udacity",
-			"dates": 2015,
+			"dates": "Sept 2015 - Present",
 			"url": "http://www.udacity.com/courses/all"
 		}
 	]
@@ -140,7 +146,7 @@ var work = {
 		{
 			"employer": "Physics, University of Utah",
 			"title": "Electrical Engineer",
-			"location": "Salt Lake City, UT",
+			"location": "Dugway, UT",
 			"dates": "1981",
 			"description": "Finished Cosmic Ray Research work on Fly's Eye Project. A data acquisition array of 80 large UV telescopes."
 		},
@@ -192,30 +198,46 @@ var projects = {
 
 // This code added from beginning of Lesson 2 and still needs work
 
-$("#header").append(HTMLheaderName);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").append(formattedName);
+
+
+var formattedImage = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(formattedImage);
+
+
+// TODO - Role name not being displayed.
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").append(formattedRole);
+
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#topContacts").append(formattedMobile);
+
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#topContacts").append(formattedEmail);
+
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#topContacts").append(formattedGithub);
+
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#header").append(formattedLocation);
 
 if(bio.skills.length > 0) {
 
-  $("#header").append(HTMLskillsStart);
+ 	$("#header").append(HTMLskillsStart);
 
-  var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-  $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-  $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-  $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-  $("#skills").append(formattedSkill);
-  formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-  $("#skills").append(formattedSkill);
+	for (skill in bio.skills) {
+
+	  var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+	  $("#skills").append(formattedSkill);
+
+	}
 }
 
 
 // Display Work Experience Category and Attributes
 
 function displayWork() {
-
-
 
 	for (job in work.jobs) {
 
@@ -238,6 +260,8 @@ function displayWork() {
 }
 
 displayWork();
+
+// Display Project section and attributes.
 
 projects.display = function() {
 	for (project in projects.projects) {
@@ -263,6 +287,55 @@ projects.display = function() {
 }
 
 projects.display();
+
+
+// Display Education Category and Attributes.
+
+education.display = function() {
+
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+
+		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		$(".education-entry:last").append(formattedName);
+
+		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		$(".education-entry:last").append(formattedDates);
+
+		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		$(".education-entry:last").append(formattedLocation);
+
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		$(".education-entry:last").append(formattedDegree);
+
+		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+		$(".education-entry:last").append(formattedMajor);
+
+	}
+
+	$(".education-entry:last").append(HTMLonlineClasses);
+
+		for (course in education.onlineCourses) {
+
+			var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+			$(".education-entry:last").append(formattedTitle);
+
+			var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+			$(".education-entry:last").append(formattedSchool);
+
+			var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+			$(".education-entry:last").append(formattedDates);
+
+			var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+			$(".education-entry:last").append(formattedURL);
+		}
+}
+
+education.display();
+
+//Display Map
+
+$("#mapDiv").append(googleMap);
 
 
 // Logs user mouse click positions.
