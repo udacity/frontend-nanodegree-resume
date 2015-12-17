@@ -2,7 +2,7 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
- "name": "Austin Kalkins",
+ "name": "AUSTIN KALKINS",
  "role": "Programmer and Web Developer",
  "contacts": {
    "mobile": "(907)821-3771",
@@ -202,3 +202,11 @@ for (var i = 0; i < education.onlineCourses.length; i++) {
   formatHTMLonlineURL = HTMLonlineURL.replace('%data%', education.onlineCourses[i].url);
   $(".education-entry:last").append(formatHTMLonlineURL);
 }
+
+$("#footerContacts").append(formatHTMLmobile);
+$("#footerContacts").append(formatHTMLemail);
+$("#footerContacts").append(formatHTMLtwitter);
+$("#footerContacts").append(formatHTMLgithub);
+$("#footerContacts").append(formatHTMLlocation);
+
+$("#mapDiv").append(googleMap);
