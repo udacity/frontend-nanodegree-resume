@@ -117,6 +117,11 @@ a {
   color: #fff;
 }
 
+.gray-text {
+  font-weight: bold;
+  color: #c7c1c1;
+}
+
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
