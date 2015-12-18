@@ -201,7 +201,7 @@ var projects = {
 
 // This code added from beginning of Lesson 2 and still needs work
 
-	function displayBio() {
+	bio.display = function() {
 
 
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -242,7 +242,7 @@ var projects = {
 	}
 }
 
-displayBio();
+bio.display();
 
 
 //Replace this with href icons, and add more links, like linkedin etc.
@@ -256,7 +256,7 @@ $("#footerContacts").append(formattedGoogleplus);
 
 // Display Work Experience Category and Attributes
 
-function displayWork() {
+work.display = function() {
 
 	for (job in work.jobs) {
 
@@ -278,7 +278,7 @@ function displayWork() {
 	}
 }
 
-displayWork();
+work.display();
 
 // Display Project section and attributes.
 
