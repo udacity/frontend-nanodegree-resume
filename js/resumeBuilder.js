@@ -30,7 +30,7 @@ var education = {
 		{
 			"name": "University of Utah",
 			"location": "Salt Lake City, UT, US",
-			"degree": "MS",
+			"degree": "Master of Science",
 			"majors": ["Physics"],
 			"dates": 1980,
 			"url": "http://www.utah.edu/"
@@ -38,7 +38,7 @@ var education = {
 		{
 			"name": "University of Utah",
 			"location": "Salt Lake City, UT, US",
-			"degree": "BS",
+			"degree": "Bachelor of Science",
 			"majors": ["Biology"],
 			"dates": 1977,
 			"url": "http://www.utah.edu/"
@@ -68,84 +68,84 @@ var work = {
 		{
 			"employer": "City Academy Charter School",
 			"title": "Engineering Teacher",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "2013 - 2014",
 			"description": "Taught Digital Electronics Course & Engineering Design Courses with AutodDesk Inventor 3D-CAD."
 		},
 		{
 			"employer": "Home",
 			"title": "Domestic Engineer",
-			"location": "Salem, UT",
+			"location": "Salem, UT, US",
 			"dates": "1995 - 2013",
 			"description": "Did the Mr. Mom thing in a semi-rural location.  Supplemented public education with additional home schooling."
 		},
 		{
 			"employer": "Math Department, University of Utah",
 			"title": "LAN Coordinator",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1993 - 1995",
 			"description": "Assisted Network Administrator serving departmental users & maintaining netowrk infrastructure."
 		},
 		{
 			"employer": "Wasatch Educations Systems",
 			"title": "Courseware Developer",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1986 - 1993",
 			"description": "Developed interactive mastery physics and adult education courseware. Developed simulations and teacher guides."
 		},
 		{
 			"employer": "Park City High School",
 			"title": "Physics & Biology Teacher",
-			"location": "Park City, UT",
+			"location": "Park City, UT, US",
 			"dates": "1985 - 1986",
 			"description": "Taught Physics and Biology, with an emphasis on labwork."
 		},
 		{
 			"employer": "Wasatch Education Systems",
 			"title": "Programmer",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1984 - 1985",
 			"description": "Programmed biology courseware and simulations."
 		},
 		{
 			"employer": "National Solar Observatory",
 			"title": "Physics Intern",
-			"location": "Sunspot, NM",
+			"location": "Sunspot, NM, US",
 			"dates": "Summer 1984",
 			"description": "Designed and tested rugged stand-alone solar tracking data loggers for worldwide remote mountain-top surveys."
 		},
 		{
 			"employer": "Quartex",
 			"title": "Research Engineer",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1983",
 			"description": "R&D for crystal oscillator technologies, used in lab weighing scales. Eliminated reproducibility production problems."
 		},
 		{
 			"employer": "Eaton Kenway",
 			"title": "Electrical Engineer",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1982",
 			"description": "Storage-retrieval robot development and configuration."
 		},
 		{
 			"employer": "Physics, University of Utah",
 			"title": "Electrical Engineer",
-			"location": "Dugway, UT",
+			"location": "Dugway, UT, US",
 			"dates": "1981",
 			"description": "Finished Cosmic Ray Research work on Fly's Eye Project. A data acquisition array of 80 large UV telescopes."
 		},
 		{
 			"employer": "Physics, University of Utah",
 			"title": "Teaching Assistant",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1978 - 1981",
 			"description": "Taught graduate level analog & digital electronics, and computer interfacing labs."
 		},
 		{
 			"employer": "University of Utah",
 			"title": "Research Assistant",
-			"location": "Salt Lake City, UT",
+			"location": "Salt Lake City, UT, US",
 			"dates": "1974 - 1980",
 			"description": "As a student, worked in chemistry, molecular biology, biochemistry and physics labs."
 		}

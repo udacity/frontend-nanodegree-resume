@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #484848;
   line-height: 29px;
   padding: 10px;
 }
@@ -54,11 +54,15 @@ h4 {
 }
 
 h2,
-h3,
+/*h3,*/
 h4,
 h5 {
   padding:10px 5%;
 
+}
+
+em {
+  font-size:14px;
 }
 
 
@@ -88,7 +92,7 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 12px;
   display: block;
 }
 
@@ -96,12 +100,20 @@ a {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
-  line-height: 28px;
+  padding: 20px 0;
+/*  line-height: 28px;*/
 }
 
 #skills-h3 {
   color: #f5ae23;
   display: none;
+}
+
+#course-link {
+  margin: 0;
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
 }
 
 .orange {
@@ -129,19 +141,20 @@ a {
 }
 
 .light-blue {
-  background-color: #c3d3ec;
+  background-color: #c3dfec;
   padding-bottom: 10px;
   clear:both;
 }
 
 .light-green {
   background-color: #dbe8ce;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 50px;
   clear:both;
 }
 .pinksalmon {
   background-color: #f1e4e4;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   clear:both;
 }
 
@@ -160,7 +173,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 0;
 }
 
 .center-content {
@@ -188,6 +201,7 @@ span {
 
 #lets-connect {
   text-align: center;
+  margin-top: 20px;
 }
 
 /* Media queries to handle various device widths */
