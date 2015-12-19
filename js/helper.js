@@ -20,7 +20,6 @@ var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="gray-text">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="gray-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="gray-text">%data%</span></li>';
-var HTMLgoogleplus = '<li class="flex-item"><span class="orange-text">google+</span><span class="gray-text">%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="gray-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="gray-text">%data%</span></li>';
 
@@ -54,7 +53,7 @@ var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<br><a href="%url%">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -121,6 +120,8 @@ function initializeMap() {
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
+
+  //TODO - This doesn't seem to be updating new added locations???
   function locationFinder() {
 
     // initializes an empty array
@@ -167,13 +168,19 @@ function initializeMap() {
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
+
+
+    // Added this to tweak Map overlay
+    // TODO embellish for all locations
+    var HTMLtestContent = name + '<img src="images/me.jpg" class="biopic">';
+
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: HTMLtestContent
     });
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+    infoWindow.open(map, marker)
     });
 
     // this is where the pin actually gets added to the map.
