@@ -128,6 +128,23 @@ a {
   clear:both;
 }
 
+.light-blue {
+  background-color: #c3d3ec;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.light-green {
+  background-color: #dbe8ce;
+  padding-bottom: 10px;
+  clear:both;
+}
+.pinksalmon {
+  background-color: #f1e4e4;
+  padding-bottom: 10px;
+  clear:both;
+}
+
 .dark-gray {
   background-color: #4a4a4a;
 }
