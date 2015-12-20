@@ -159,15 +159,16 @@ var projects = {
 			"dates": "Oct-Nov 2015",
 			"description": "Udacity Nanodegree Front-End Web Design project to create a website portfolio.",
 			"images":[
-				"images/me.jpg"
+				"images/PortfolioMobile_small.jpg",
+				"images/PortfolioMain_small.jpg"
 			]
 		},
 		{
-			"title": "Healtcare Website",
+			"title": "Healthcare Website",
 			"dates": "Jan-March 2009",
 			"description": "Created a set of interactive webpages for Full Circle Care, and Naturopathic Clinic.",
 			"images":[
-				"images/me.jpg"
+				"images/health_small.jpg"
 			]
 		},
 		{
@@ -175,7 +176,12 @@ var projects = {
 			"dates": "1989-2000",
 			"description": "Designed and developed an interactive physics course on sound, with real-world simulations and a simulated lab with measurirng instruments.",
 			"images":[
-				"images/me.jpg"
+				"images/Sound_wave_small.jpg",
+				"images/spectrogram_small.jpg",
+				"images/Modulated_wave_small.jpg",
+				"images/Two-frequency_beats_of_a_non-dispersive_transverse_wave_(animated).gif"
+
+				// Images from WikiMedia
 			]
 		}
 	]
