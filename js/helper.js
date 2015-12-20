@@ -69,6 +69,8 @@ $(document).ready(function() {
   });
 });
 
+
+
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
@@ -86,6 +88,13 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+
+// Logs user mouse click positions.
+
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+    logClicks(x,y);
 });
 
 
@@ -170,9 +179,24 @@ function initializeMap() {
     // about a location.
 
 
-    // Added this to tweak Map overlay
-    // TODO embellish for all locations
-    var HTMLtestContent = name + '<img src="images/me.jpg" class="biopic">';
+    // Added this H-A-C-K to tweak/test Generic Map overlay
+    //
+    // TODO - Embellish details for specific locations
+    // Key on "name" for specific images and text.
+    // Create variables,loops and functions as needed.
+
+    var HTMLtestContent =
+      '<div class="orange">' +
+        '<img src="images/me.jpg" class="mapspic">' + '<br>' +
+        '<div class="maps-text" class="light-blue">' +
+          'Welcome to<br>' +
+          '<b>' + name + '</b>' + '<br>' +
+          '<br>' +
+          'Latitude' + '<br>' + lat + '<br>' +
+          'Longitude' + '<br>' + lon + '<br>' +
+          '<br>' +
+        '</div>' +
+      '</div>';
 
     var infoWindow = new google.maps.InfoWindow({
       content: HTMLtestContent

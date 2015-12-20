@@ -10,6 +10,15 @@ Cameron Pittman, Udacity Course Developer
 -->
 
 <!--
+I left many of Cameron's Comments, for instructive value.
+
+Also note that there are a mix of comment styles in this document.
+Look at bottom of document to see a different type for Javascript.
+
+George Fischer
+-->
+
+<!--
 The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
@@ -43,16 +52,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script src="js/helper.js"></script>
 
   <!--
-  Uncomment the <script> tag below when you're ready to add an interactive
-  Google Map to your resume!
+  TODO - Get an API KEY, an install to have locations work properly???
+  https://developers.google.com/maps/documentation/javascript/tutorial
   -->
+
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
   <div id="main">
- <!--    Hello world!   --> <!-- You'll be deleting this line in the course -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -112,65 +121,60 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         an opening and closing set of slash asterisks for block comments.
     */
 
+    //Code left to illustrate commenting features and jQuery "style" attributes
 
-    // if(document.getElementsByClassName('flex-item').length === 0) {
-    //   // document.getElementById('topContacts').style.display = 'none';
-    //   document.getElementById("topContacts").style.backgroundColor = "#000000";
-    // }
-    // if(document.getElementsByTagName('h1').length === 0) {
-    //   // document.getElementById('header').style.display = 'none';
-    //   document.getElementById("header").style.backgroundColor = "#000000";
-    // }
-    // if(document.getElementsByClassName('work-entry').length === 0) {
-    //   // document.getElementById('workExperience').style.display = 'none';
-    //   document.getElementById("workExperience").style.backgroundColor = "#000000";
-    // }
-    // if(document.getElementsByClassName('project-entry').length === 0) {
-    //   // document.getElementById('projects').style.display = 'none';
-    //   document.getElementById("projects").style.backgroundColor = "#000000";
-    // }
-    // if(document.getElementsByClassName('education-entry').length === 0) {
-    //   // document.getElementById('education').style.display = 'none';
-    //   document.getElementById("education").style.backgroundColor = "#000000";
-    // }
-    // if(document.getElementsByClassName('flex-item').length === 0) {
-    //   // document.getElementById('lets-connect').style.display = 'none';
-    //   document.getElementById("lets-connect").style.backgroundColor = "#000000";
-    // }
-    // if(document.getElementById('map') === null) {
-    //   // document.getElementById('mapDiv').style.display = 'none';
-    //   document.getElementById("mapDiv").style.backgroundColor = "#000000";
-    // }
+    /*
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById("topContacts").style.backgroundColor = "#000000";
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById("header").style.backgroundColor = "#000000";
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById("workExperience").style.backgroundColor = "#000000";
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById("projects").style.backgroundColor = "#000000";
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById("education").style.backgroundColor = "#000000";
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById("lets-connect").style.backgroundColor = "#000000";
+    }
+    if(document.getElementById('map') === null) {
+    document.getElementById("mapDiv").style.backgroundColor = "#000000";
+    }
+    */
 
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
-
     }
+
     if(document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.display = 'none';
-
     }
+
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
-
     }
+
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
-
     }
+
     if(document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.display = 'none';
-
     }
+
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
-
     }
+
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
-
     }
 
 

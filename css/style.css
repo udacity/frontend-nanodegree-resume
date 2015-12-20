@@ -79,7 +79,13 @@ em {
   color: #999;
   line-height: 16px;
   float: right;
+}
 
+.maps-text {
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+  line-height: 16px;
 }
 
 p {
@@ -100,7 +106,6 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   padding: 20px 0;
-/*  line-height: 28px;*/
 }
 
 #skills-h3 {
@@ -189,6 +194,12 @@ ul {
   width: 200px;
   display: none;
 }
+
+.mapspic {
+  width: 150px;
+}
+
+
 
 img {
   padding: 10px;
