@@ -33,7 +33,7 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
   color: #484848;
   line-height: 29px;
   padding: 10px;
@@ -214,6 +214,18 @@ span {
   margin-top: 20px;
 }
 
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -240,21 +252,10 @@ span {
   }
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
   }
 }
+
