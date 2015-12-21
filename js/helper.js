@@ -124,7 +124,6 @@ function initializeMap() {
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
-
   /*
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
@@ -260,17 +259,13 @@ function initializeMap() {
   // the locations array
   pinPoster(locations);
 
+  // TODO -- Make map load first time without having to resize browser.
+  // Beyond immediate scope of project
+  //
+  // google.maps.event.addListenerOnce(map, 'idle', function() {
+  //   google.maps.event.trigger(map, 'resize');
+  // });
 }
-
-// Makes map load first time without having to resize browser.
-
-function mapTrigger() {
-
-  google.maps.event.addListenerOnce(map, 'idle', function() {
-    google.maps.event.trigger(map, 'resize');
-  });
-}
-
 
 /*
 Uncomment the code below when you're ready to implement a Google Map!

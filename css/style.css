@@ -168,6 +168,12 @@ a:hover {
   clear:both;
 }
 
+.light-yellow {
+  background-color: #ece9c3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
 .light-green {
   background-color: #dbe8ce;
   padding-bottom: 20px;
@@ -254,13 +260,11 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
 }
 
 /* Media queries to handle various device widths */
