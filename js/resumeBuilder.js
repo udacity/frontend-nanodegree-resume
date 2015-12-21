@@ -21,7 +21,7 @@ var bio = {
 			"Programming",
 			"Electronics"
 	],
-	"bioPic": "images/me.jpg"
+	"bioPic": "images/me.jpg",
 }
 
 
