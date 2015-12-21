@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
   color: #000;
   line-height: 22px;
 }
@@ -64,6 +64,9 @@ em {
   font-size:14px;
 }
 
+hr {
+  margin-bottom: 5px;
+}
 
 .date-text {
   font-style: italic;
@@ -103,8 +106,8 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
+  font-size: 16px;
+  color: #ffffff;
   padding: 20px 0;
 }
 
@@ -190,7 +193,7 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px 20px 10px 10px;
+  padding: 15px 20px 0 0;
   width: 200px;
   display: none;
 }
@@ -199,19 +202,24 @@ ul {
   width: 150px;
 }
 
-
-
 img {
   padding: 10px;
 }
 
 span {
-  padding: 5px;
+  padding: 0 3px;
+}
+
+.panel-group {
+  margin: 0;
 }
 
 #lets-connect {
   text-align: center;
-  margin-top: 20px;
+}
+
+#footerContacts {
+  padding: 2px 0;
 }
 
 #map {
@@ -228,34 +236,51 @@ span {
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
+@media only screen and (min-width: 1024px) {
+
+  body {
+    width: 960px;
+    margin: 0 auto;
   }
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
 
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
+@media only screen and (max-width:960px) {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
+
+  li {
+    display: inline;
+  }
+
+  span {
+    padding: 0 5px;
+  }
+
+  #topContacts {
     display: none;
   }
 }
 
-@media only screen and (min-width: 750px) {
+/*@media only screen and (max-width: 650px) {
+
+  .biopic {
+    width: 125px;
+  }
+}
+*/
+@media only screen and (min-width: 500px) {
   #skills-h3,
   .biopic {
     display: block;
   }
+}
+
+/*@media only screen and (min-width: 500px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }*/
 }
 

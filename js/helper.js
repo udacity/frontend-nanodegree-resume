@@ -49,7 +49,7 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<hr><h3>Online Classes</h3>';
+var HTMLonlineClasses = '<hr><h4>Online Classes</h4>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
@@ -261,6 +261,16 @@ function initializeMap() {
   pinPoster(locations);
 
 }
+
+// Makes map load first time without having to resize browser.
+
+function mapTrigger() {
+
+  google.maps.event.addListenerOnce(map, 'idle', function() {
+    google.maps.event.trigger(map, 'resize');
+  });
+}
+
 
 /*
 Uncomment the code below when you're ready to implement a Google Map!

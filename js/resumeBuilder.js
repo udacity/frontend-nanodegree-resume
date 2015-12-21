@@ -5,7 +5,7 @@
 var bio = {
 	"name": "George Fischer",
 	"role": "Web Developer",
-	"welcomeMessage": "Web Developer with strong background in science, technology, engineering, education and math.",
+	"welcomeMessage": "Developer with strong background in science, technology, engineering, education and math.",
 	"contacts":
 		{
 			"mobile": "801-318-0621",
@@ -178,10 +178,8 @@ var projects = {
 			"images":[
 				"images/Sound_wave_small.jpg",
 				"images/spectrogram_small.jpg",
-				"images/Modulated_wave_small.jpg",
-				"images/Two-frequency_beats_of_a_non-dispersive_transverse_wave_(animated).gif"
-
-				// Images from WikiMedia
+				"images/Modulated_wave_small.jpg"
+			// Above Images from WikiMedia
 			]
 		}
 	]
