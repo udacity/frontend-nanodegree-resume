@@ -135,8 +135,10 @@ function initializeMap() {
     // initializes an empty array
     var locations = [];
 
+    //  TODO - there is a problem with this line of code
+    // Maps display more locations without it.
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    // locations.push(bio.contacts.location);
 
     // iterates through school locations and appends each location to
     // the locations array
@@ -166,6 +168,8 @@ function initializeMap() {
     var name = placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
 
+    // TODO - Added this too to track down locations
+    console.log(placeData);
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map,
@@ -220,6 +224,10 @@ function initializeMap() {
   If so, it creates a new map marker for that location.
   */
   function callback(results, status) {
+    // TODO = Added this to try and figure out why locations isn't functioning well.
+    // SEE:https://discussions.udacity.com/t/how-does-camerons-google-map-code-work/30935
+    console.log(results);
+
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
     }
@@ -258,6 +266,8 @@ function initializeMap() {
   // pinPoster(locations) creates pins on the map for each location in
   // the locations array
   pinPoster(locations);
+
+    console.log(locations);
 
   // TODO -- Make map load first time without having to resize browser.
   // Beyond immediate scope of project
