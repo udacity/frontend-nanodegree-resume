@@ -1,3 +1,5 @@
+/* Main CSS file for Resume Project.  */
+
 body,
 div,
 ul,
@@ -58,7 +60,6 @@ h2,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
 em {
@@ -159,38 +160,38 @@ a:hover {
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .light-blue {
   background-color: #c3dfec;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .light-yellow {
   background-color: #ece9c3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .light-green {
   background-color: #dbe8ce;
   padding-bottom: 20px;
   border-bottom: 50px;
-  clear:both;
+  clear: both;
 }
+
 .pinksalmon {
   background-color: #f1e4e4;
   padding-bottom: 20px;
-  clear:both;
+  clear: both;
 }
 
 .dark-gray {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #484848;
 }
@@ -240,6 +241,10 @@ span {
   padding: 0 5% 3% 5%;
 }
 
+/*
+This works...  But what is going on here?
+Adding a duplicate class to a class???
+*/
 .panel-group
 .panel + .panel {
   margin-top: 0;
@@ -267,6 +272,8 @@ span {
   width: 100%;
 }
 
+
+
 /* Media queries to handle various device widths */
 
 @media only screen and (min-width: 1024px) {
@@ -276,6 +283,7 @@ span {
     margin: 0 auto;
   }
 }
+
 
 
 @media only screen and (max-width:960px) {
@@ -296,6 +304,8 @@ span {
     display: none;
   }
 }
+
+
 
 @media only screen and (max-width: 530px) {
 
@@ -341,5 +351,3 @@ span {
   }
 
 }
-
-

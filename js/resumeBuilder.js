@@ -1,6 +1,10 @@
 // George Fischer's main source of javascript code for Resume Project.
 
-// Data sets for bio, education, work, and projects.
+// Data sets for bio, education, work, publications (Pending) and projects.
+// TODO - Also create informative detailed data sets for Mapl location overlays.
+//	Reminder:	Use encapsulation and functions to organize and display data.
+
+
 
 var bio = {
 	"name": "George Fischer",
@@ -23,6 +27,7 @@ var bio = {
 	],
 	"bioPic": "images/me.jpg",
 }
+
 
 
 var education = {
@@ -61,6 +66,7 @@ var education = {
 		}
 	]
 }
+
 
 
 var work = {
@@ -152,6 +158,8 @@ var work = {
 	]
 }
 
+
+
 var projects = {
 	"projects":[
 		{
@@ -179,11 +187,17 @@ var projects = {
 				"images/Sound_wave_small.jpg",
 				"images/spectrogram_small.jpg",
 				"images/Modulated_wave_small.jpg"
-			// Above Images from WikiMedia
+			// Above placeholder Images from WikiMedia
 			]
 		}
 	]
 }
+
+
+
+// TODO - Create var objects and arrays for PUBLICATIONS hese.
+
+
 
 // Display Bio and Contact Info at top of page, and duplicate Contact Info in footer.
 
@@ -213,15 +227,18 @@ var projects = {
 
 		 	$("#header").append(HTMLskillsStart);
 
-			for (skill in bio.skills) {
 
-			  var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-			  $("#header").append(formattedSkill);
-			}
+		 		// Is "forEach" better than "for in" on Arrays???
+	  			bio.skills.forEach(function(val) {
+
+				  	var formattedSkill = HTMLskills.replace("%data%", val);
+		  			$("#header").append(formattedSkill);
+		  })
 		}
 }
 
 bio.display();
+
 
 
 // Display Education Category and Attributes.
@@ -263,12 +280,11 @@ education.display = function() {
 		}
 }
 
-
 education.display();
 
 
 
-// Display Work Experience Category and Attributes
+// Display Work Experience Categories and Attributes
 
 work.display = function() {
 
@@ -293,6 +309,8 @@ work.display = function() {
 }
 
 work.display();
+
+
 
 // Display Project section and attributes.
 
@@ -320,6 +338,12 @@ projects.display = function() {
 }
 
 projects.display();
+
+
+
+// TODO - Create encapsulated PUBLICATIONS functions here.
+
+// TODO - Create Map Data for Conservation Work, Forest Service, German Studies, place of birth.
 
 
 

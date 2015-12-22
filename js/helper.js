@@ -1,10 +1,5 @@
 /*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
+Data and display code for Resume Project.
 */
 
 
@@ -59,6 +54,7 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
+
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
@@ -76,6 +72,7 @@ The next few lines about clicks are for the Collecting Click Locations quiz in L
 */
 clickLocations = [];
 
+
 function logClicks(x,y) {
   clickLocations.push(
     {
@@ -86,8 +83,8 @@ function logClicks(x,y) {
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
+
 $(document).click(function(loc) {
-  // your code goes here!
 
 // Logs user mouse click positions.
 
@@ -118,18 +115,19 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
+
   /*
   For the map to be displayed, the googleMap var must be
   appended to #mapDiv in resumeBuilder.js.
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
+
+
   /*
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
-
-  //TODO - This doesn't seem to be updating new added locations???
   function locationFinder() {
 
     // initializes an empty array
@@ -155,6 +153,8 @@ function initializeMap() {
     return locations;
   }
 
+
+
   /*
   createMapMarker(placeData) reads Google Places search results to create map pins.
   placeData is the object returned from search results containing information
@@ -169,7 +169,7 @@ function initializeMap() {
     var bounds = window.mapBounds;            // current boundaries of the map window
 
     // TODO - Added this too to track down locations
-    console.log(placeData);
+    // console.log(placeData);
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map,
@@ -177,16 +177,16 @@ function initializeMap() {
       title: name
     });
 
+
+
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
 
-
     // Added this H-A-C-K to tweak/test Generic Map overlay
-    //
     // TODO - Embellish details for specific locations
     // Key on "name" for specific images and text.
-    // Create variables,loops and functions as needed.
+    // Create variables,loops, encapsulation and functions as needed.
 
     var HTMLtestContent =
       '<div class="orange">' +
@@ -200,6 +200,7 @@ function initializeMap() {
           '<br>' +
         '</div>' +
       '</div>';
+
 
     var infoWindow = new google.maps.InfoWindow({
       content: HTMLtestContent
@@ -219,19 +220,24 @@ function initializeMap() {
     map.setCenter(bounds.getCenter());
   }
 
+
+
   /*
   callback(results, status) makes sure the search returned results for a location.
   If so, it creates a new map marker for that location.
   */
   function callback(results, status) {
+
     // TODO = Added this to try and figure out why locations isn't functioning well.
     // SEE:https://discussions.udacity.com/t/how-does-camerons-google-map-code-work/30935
-    console.log(results);
+    // console.log(results);
 
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
     }
   }
+
+
 
   /*
   pinPoster(locations) takes in the array of locations created by locationFinder()
@@ -257,6 +263,8 @@ function initializeMap() {
     }
   }
 
+
+
   // Sets the boundaries of the map based on pin locations
   window.mapBounds = new google.maps.LatLngBounds();
 
@@ -267,6 +275,7 @@ function initializeMap() {
   // the locations array
   pinPoster(locations);
 
+  //TODO - Added this to track down map locations functionality
     console.log(locations);
 
   // TODO -- Make map load first time without having to resize browser.
