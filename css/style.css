@@ -1,5 +1,26 @@
 /* Main CSS file for Resume Project.  */
 
+
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * Boxsizing for elements & Pseudo-Classes
+ * Supports many older browsers
+ */
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+
 body,
 div,
 ul,
