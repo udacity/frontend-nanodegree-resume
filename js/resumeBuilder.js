@@ -2,16 +2,16 @@ var bio = {
     "name": "Saher Almaita",
     "role": "Front-End Developer",
     "contacts": {
-        "mobile":"000-000-0000",
-		"email":"saheralmaita@gmail.com",
-        "github":"almaita2",
-        "twitter":"@saheralmaita",
-		"location" : "NJ",
+        "mobile": "000-000-0000",
+		"email": "saheralmaita@gmail.com",
+        "github": "almaita2",
+        "twitter": "@saheralmaita",
+		"location" : "NJ"
 	},
-	"welcomeMessage": "Welcome",
+	"welcomeMessage": "Using analytical skills and a unique perspective I am able to identify pain points, describe their impacts, and offer solutions based on strategic business objectives.  And with my broad range of workplace experiences I have also developed the skills to make and deliver professional presentations to key stakeholders and clients.",
     "skills": [ "Process Engineering", "Front End Dev", "Graphic Design", "Fantasy Football"],
     "bioPic": "images/selfie.jpg",
-	 display: function() {
+	 display: function () {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -44,30 +44,29 @@ var education = {
             "location": "Wayne, NJ",
             "degree": "BA Philosophy",
             "majors": "Philosophy",
-            "dates": "2009"
-			//"url":"www.wpunj.edu"  need to add to helper.js
+            "dates": "2009",
+			"url":"www.wpunj.edu"
         },
-        {
-            "employer": "Novartis",
-            "title": "Material Data Master",
-            "location": "Suffern",
-            "dates": "2013-2014",
-            "description": "Database administration"
-        },    
     ],
 	"onlineCourses":  [
         {
             "title": "Front End Devolper NanoDegree",
-            "school": "Wayne, NJ",
-            "date": "2016",
-            "url": "udacity.com",
+            "school": "Udacity",
+            "dates": "2015-2016",
+            "url": "www.udacity.com",
         },
 		{
             "title": "Intro to HTML/CSS",
-            "school": "Wayne, NJ",
-            "date": "2016",
-            "url": "codeacademy.com",
-        },    
+            "school": "Code Academy",
+            "dates": "2015",
+            "url": "www.codeacademy.com",
+        },
+        {
+            "title": "Intro to Javascript",
+            "school": "Code Academy",
+            "dates": "2015",
+            "url": "www.codeacademy.com",
+        },
     ],
 	displaySchools: function() {
 		for (school in education.schools) {
@@ -77,26 +76,30 @@ var education = {
 			var formattedschoolMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 			var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 			var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+            var formattedschoolURL = HTMLschoolURL.replace("%data%", education.schools[school].url);
 			$(".education-entry:last").append(formattedschoolName + formattedschoolDegree);
 			$(".education-entry:last").append(formattedschoolDates);
-			$(".education-entry:last").append(formattedschoolLocation);
 			$(".education-entry:last").append(formattedschoolMajors);
+            $(".education-entry:last").append(formattedschoolURL);
+            $(".education-entry:last").append(formattedschoolLocation);
+            $(".education-entry:last").append("<br><div><hr class='section-hr'></div>");
 		}
 	},
 	//fix the online class sections
 	displayOnline: function() {
+        $(".education-entry:last").append(HTMLonlineClasses);
 		for (course in education.onlineCourses) {
-			$("#education").append(HTMLonlineClasses);
 			var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-			var formattedonlineURL = HTMLonlineURL.replace("%url%", education.onlineCourses[course].url);
+			var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 			var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 			var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
 		    $(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool);
 			$(".education-entry:last").append(formattedonlineDates);
+            $(".education-entry:last").append(formattedonlineURL);
+            $(".education-entry:last").append("<br><div><hr class='section-hr'></div>");
 		}
 	},
-  };
-  
+};
  education.displaySchools();
  education.displayOnline();
 
@@ -104,17 +107,17 @@ var work = {
     "jobs":  [
         {
             "employer": "Tangoe",
-            "title": "Process Engineer",
+            "title": "Associate Process Engineer",
             "location": "NJ",
             "dates": "2014-Current",
-            "description": "Telecom"
+            "description": "Engineer Business processes and design relevant process documentation."
         },
         {
             "employer": "Novartis",
             "title": "Material Data Master",
             "location": "Suffern",
             "dates": "2013-2014",
-            "description": "Database administration"
+            "description": "Maintained materials database in SAP systems."
         },    
     ],
 	display: function() {
@@ -139,18 +142,18 @@ work.display();
 var proj = {
     "projects": [ 
 			{
-                "title" : "#",
+                "title" : "Online Portfolio",
                 "dates" : "2015",
-                "description" : "Front End Degree resume",
-                "images" : "images/197x148.gif",
-                "link" : "#"
+                "description" : "Portfolio site designed using the foundation framework, including jQuery navigation.",
+                "images" : "images/Portfolio-Capture.png",
+                "link" : ""
             },
 			{
-                "title" : "#",
+                "title" : "Resume.js",
                 "dates" : "2015",
-                "description" : "Front End Degree resume",
+                "description" : "Resume built using javascript functions",
                 "images" : "images/197x148.gif",
-                "link" : "#"
+                "link" : ""
             },
 			],
 	display: function() {
