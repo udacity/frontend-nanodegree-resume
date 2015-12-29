@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #b0a18e;
   line-height: 48px;
   display: inline;
 }
@@ -54,7 +54,6 @@ h4 {
 }
 
 h2,
-h3,
 h4,
 h5 {
   padding:10px 5%;
@@ -99,17 +98,22 @@ a {
   line-height: 28px;
 }
 
+#skills{
+    display: block;
+}
+
 #skills-h3 {
-  color: #f5ae23;
+  color: #b0a18e;
   display: none;
+  padding-top: 10px;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #262216;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #b0a18e;
 }
 
 .white-text {
@@ -129,7 +133,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #262216;
 }
 
 .flex-box {
@@ -202,7 +206,7 @@ span {
 
 #mapDiv {
   height: 400px;
-  width: 100%;
+  width: 75%;
   padding-bottom: 5%;
 }
 
