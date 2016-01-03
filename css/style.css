@@ -24,6 +24,7 @@ h6 {
   padding: 0 5%;
 }
 
+
 h1 {
   font-size: 40px;
   color: #f5a623;
@@ -75,7 +76,8 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
+  float: left;
+  padding-left: 20px;
 
 }
 
@@ -191,6 +193,9 @@ span {
   }
   .welcome-message {
     display: none;
+  }
+  img {
+    width: 100%;
   }
 }
 
