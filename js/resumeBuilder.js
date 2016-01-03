@@ -77,7 +77,6 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
 
-
 /************************************
 Append bio info to page
 ************************************/
@@ -180,6 +179,7 @@ if(bio.skills.length > 0) {
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skills]);
 		$("#skills").append([formattedSkills]);
 	}
+
 }
 
 /************************************
