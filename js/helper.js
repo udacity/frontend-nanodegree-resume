@@ -28,7 +28,7 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-var HTMLskillsBar = '<div class="col-md-4 skills"></div>';
+var HTMLBar = '<div class="col-md-6 skills"> <div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <p>Java</p> </div> </div> <div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <p>Java</p> </div> </div> <div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <p>Java</p> </div> </div> <div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <p>Java</p> </div> </div> </div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';

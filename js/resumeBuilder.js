@@ -92,6 +92,17 @@ $("#header").append([formattedPicture]);
 $("#header").append([formattedWelcomeMessage]);
 
 /************************************
+Display Skills
+************************************/
+if(bio.skills.length > 0) {
+	$("#header").append([HTMLskillsStart]);
+
+	
+	$("#header").append([HTMLBar]);
+
+}
+
+/************************************
 Functions
 ************************************/
 
@@ -169,18 +180,7 @@ projects.display = function(){
 	}
 }
 
-/************************************
-Display Skills
-************************************/
-if(bio.skills.length > 0) {
-	$("#header").append([HTMLskillsStart]);
 
-	for(skills in bio.skills){
-		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skills]);
-		$("#skills").append([formattedSkills]);
-	}
-
-}
 
 /************************************
 Display projects,work history and 
