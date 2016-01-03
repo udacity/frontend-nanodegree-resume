@@ -13,7 +13,9 @@ var bio = {
 	"location" : "San Diego"
 },
 	"welcomeMessage" : "This is a welcome message",
-	"skills" : ["java", " html", " css", " javascript", " unity"],
+	"skills" : ["Java", "HTML5", "CSS3", "JavaScript", "C#", "Git"],
+	"skillLevel" : ["60%","75%","75%","40%","60%","60%"],
+	"skillColor" : ["warning","danger","success","info","warning","danger"],
 	"bioPic" : "http://www.alimits.com/login/repository/Puzzle/03.png"
 };
 
@@ -94,14 +96,14 @@ $("#header").append([formattedWelcomeMessage]);
 /************************************
 Display Skills
 ************************************/
-if(bio.skills.length > 0) {
+
 	$("#header").append([HTMLskillsStart]);
-
 	
-	$("#header").append([HTMLBar]);
-
-}
-
+	for(var i =0; i < bio.skills.length; i++){
+		
+		var formattedBar = HTMLBar.replace("%data%", bio.skills[i]).replace("%data1%", bio.skillColor[i]).replace("%data2%", bio.skillLevel[i]);
+		$("#header").append(formattedBar);
+	}
 /************************************
 Functions
 ************************************/
