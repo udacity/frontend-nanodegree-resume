@@ -45,18 +45,33 @@
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
-
   <script type="text/javascript">
 
-    if (bio.skills.length > 0) {
+    var formattedName = HTMLheaderName.replace("%data%", bio.myname);
+    $("#header").append([formattedName]);
+   
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    $("#header").append([formattedRole]);
+   
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[mobile]);
+    $("#header").append([formattedMobile]);
 
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts[email]);
+    $("#header").append([formattedEmail]);
+
+    var formattedGit = HTMLgithub.replace("%data%", bio.contacts[github]);
+    $("#header").append([formattedGit]);
+
+    var formattedAddress = HTMLmobile.replace("%data%", bio.contacts[address]);
+    $("#header").append([formattedAddress]);
+
+    if (bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
       var formattedSkill;
       for (skill in bio.skills) {
         formattedSkill = HTMLskills.replace("%data%", skill);
-        $("#skills").append(formattedSkill);
+        $("#skills").append([formattedSkill]);
       }
-
     }
 
     for (job in work.jobs) {
