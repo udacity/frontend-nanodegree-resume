@@ -1,3 +1,13 @@
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
 // George Fischer's main source of javascript code for Resume Project.
 
 // Data sets for bio, education, work, publications (Pending) and projects.
@@ -26,7 +36,7 @@ var bio = {
 			"Electronics"
 	],
 	"bioPic": "images/me.jpg",
-}
+};
 
 
 
@@ -65,7 +75,7 @@ var education = {
 			"url": "http://www.udacity.com/courses/all"
 		}
 	]
-}
+};
 
 
 
@@ -156,7 +166,7 @@ var work = {
 			"description": "As a student, worked in chemistry, molecular biology, biochemistry and physics labs."
 		}
 	]
-}
+};
 
 
 
@@ -191,7 +201,7 @@ var projects = {
 			]
 		}
 	]
-}
+};
 
 
 
@@ -209,7 +219,7 @@ var projects = {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		$("#header").prepend(formattedName);
 
-		for (contact in bio.contacts) {
+		for (var contact in bio.contacts) {
 
 			var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]);
 			formattedContact = formattedContact.replace("%contact%", contact);
@@ -233,9 +243,9 @@ var projects = {
 
 				  	var formattedSkill = HTMLskills.replace("%data%", val);
 		  			$("#header").append(formattedSkill);
-		  })
+		  });
 		}
-}
+};
 
 bio.display();
 
@@ -245,7 +255,7 @@ bio.display();
 
 education.display = function() {
 
-	for (school in education.schools) {
+	for (var school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -265,20 +275,20 @@ education.display = function() {
 
 	$(".education-entry:last").append(HTMLonlineClasses);
 
-		for (course in education.onlineCourses) {
+		for (var course in education.onlineCourses) {
 
 			var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 			formattedTitle = formattedTitle + HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 			$(".education-entry:last").append(formattedTitle);
 
-			var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-			$(".education-entry:last").append(formattedDates);
+			var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+			$(".education-entry:last").append(formattedDate);
 
 			var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 			formattedURL = formattedURL.replace("%url%", education.onlineCourses[course].url);
 			$(".education-entry:last").append(formattedURL);
 		}
-}
+};
 
 education.display();
 
@@ -288,7 +298,7 @@ education.display();
 
 work.display = function() {
 
-	for (job in work.jobs) {
+	for (var job in work.jobs) {
 
 		$("#workExperience").append(HTMLworkStart);
 
@@ -306,7 +316,7 @@ work.display = function() {
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
-}
+};
 
 work.display();
 
@@ -315,7 +325,7 @@ work.display();
 // Display Project section and attributes.
 
 projects.display = function() {
-	for (project in projects.projects) {
+	for (var project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -328,14 +338,14 @@ projects.display = function() {
 		$(".project-entry:last").append(formattedDescription);
 
 		if (projects.projects[project].images.length>0) {
-			for (image in projects.projects[project].images) {
+			for (var image in projects.projects[project].images) {
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
 			}
 		}
 
 	}
-}
+};
 
 projects.display();
 
@@ -350,6 +360,4 @@ projects.display();
 //Display Map
 
 $("#mapDiv").append(googleMap);
-
-
 
