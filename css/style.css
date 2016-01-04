@@ -24,6 +24,7 @@ h6 {
   padding: 0 5%;
 }
 
+
 h1 {
   font-size: 40px;
   color: #f5a623;
@@ -34,7 +35,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #7eb1dc;
   line-height: 29px;
   padding: 10px;
 }
@@ -75,7 +76,8 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
+  float: left;
+  padding-left: 20px;
 
 }
 
@@ -101,11 +103,11 @@ a {
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
+  
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #7eb1dc;
 }
 
 .orange-text {
@@ -115,6 +117,10 @@ a {
 .white-text {
   font-weight: bold;
   color: #fff;
+}
+
+.bottomContact{
+  color: #8f9296;
 }
 
 .gray {
@@ -129,7 +135,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #094c83;
 }
 
 .flex-box {
@@ -153,7 +159,6 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
 }
 
 img {
@@ -192,7 +197,11 @@ span {
   .welcome-message {
     display: none;
   }
+  img {
+    width: 100%;
+  }
 }
+
 
 #map {
   display: block;
