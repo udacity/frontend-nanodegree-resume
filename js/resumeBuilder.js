@@ -4,7 +4,7 @@ $("#main").append("Maulik Dave");
 */
 
 var bio = {
-	"name"       : "Maulik Dave",
+	"myname"     : "Maulik Dave",
 	"role"       : "Application Developer",
 	"contacts"   : { "mobile"  : "716-474-2621",
 					         "email"   : "maulikdave9@gmail.com",
@@ -43,11 +43,11 @@ var education = {
 
 var work = { 
     "jobs":[
-     {	"employer"     : "University at Buffalo",
-    	"title"        : "IT Analyst",
-        "dates"        : "2013-present",
-    	"location"     : "Buffalo, NY",
-    	"description"  : "IT Analyst, Application Development"
+     { "employer"     : "University at Buffalo",
+    	 "title"        : "IT Analyst",
+       "dates"        : "2013-present",
+    	 "location"     : "Buffalo, NY",
+    	 "description"  : "IT Analyst, Application Development"
     },
     {	"employer"     : "IBM",
     	"title"        : "Technical Sales Support",
