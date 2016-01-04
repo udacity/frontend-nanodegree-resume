@@ -35,7 +35,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #7eb1dc;
   line-height: 29px;
   padding: 10px;
 }
@@ -107,7 +107,7 @@ a {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #7eb1dc;
 }
 
 .orange-text {
@@ -131,7 +131,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #094c83;
 }
 
 .flex-box {

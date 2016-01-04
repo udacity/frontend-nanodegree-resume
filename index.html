@@ -11,9 +11,10 @@
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-
+        <link rel="stylesheet" href="css/footer.css">
         <script src="js/jQuery.js"></script>
         <script src="js/helper.js"></script>
+
 </head>
 <body>
   <div class="container">
@@ -54,16 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div id="lets-connect" class="dark-gray">
-                <h2 class="orange center-text">Let's Connect</h2>
-                <ul id="footerContacts" class="flex-box">
-                </ul>
-            </div>
-        </div>
-    </div>
-  </div>
+  
 
   <script src="js/resumeBuilder.js"></script>
   <script type="text/javascript">
@@ -92,8 +84,48 @@
   </script>
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <footer class="footer-distributed">
+
+          <div class="footer-left">
+            <p class="footer-company-name"><br>Matthew Magee &copy; 2016</p>
+
+            <div class="footer-icons">
+              <a href="https://twitter.com/matthewmagee05" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/matthew-magee-706942ab" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/matthewmagee05" target="_blank"><i class="fa fa-github"></i></a>
+
+            </div>
+
+          </div>
+
+          <div class="footer-right">
+
+            <p>Let's Connect</p>'
+
+            <form  id="gform" action="https://script.google.    com/macros/s/AKfycbygM4uMVVmcRbBcREcD9qSb7_3lsM5Nl4YrP9egbNCs-C3qt09S/exec" method="post" >
+              <input type="text" name="email" placeholder="Email" />
+              <textarea name="message" placeholder="Message"></textarea>
+              <button>Send</button>
+
+            </form>
+            <div style="display:none;" id="thankyou_message">
+                <h2><em>Thanks</em> for contacting me!
+                    I will get back to you soon!</h2>
+            </div>
+
+          </div>
+          <script data-cfasync="false" type="text/javascript"
+      src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+        </footer>
+    </div>
+</div>
+</div>
 </body>
+
 
 </html>
