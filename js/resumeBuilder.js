@@ -16,7 +16,7 @@ var bio = {
 	"skills" : ["Java", "HTML5", "CSS3", "JavaScript", "C#", "Git"],
 	"skillLevel" : ["60%","75%","75%","40%","60%","60%"],
 	"skillColor" : ["warning","danger","success","info","warning","danger"],
-	"bioPic" : "http://www.alimits.com/login/repository/Puzzle/03.png"
+	"bioPic" : "images/profile.jpg"
 };
 
 var work = {
@@ -36,7 +36,7 @@ var education = {
 		{
 			"name" : "Coleman University",
 			"location" : "San Diego, CA",
-			"degree" : "Bachelors of Science",
+			"degree" : "Bachelor of Science",
 			"majors" : ["Software Development"],
 			"dates" : "2015-2018 (expected)"
 		}
@@ -55,10 +55,10 @@ var education = {
 var projects = {
 	"projects": [
 		{
-			"title" : "Sample Project 1",
-			"dates" : "2015 to present",
+			"title" : "Portfolio",
+			"dates" : "2015",
 			"description" : "description will go here",
-			"images" : "http://www.alimits.com/login/repository/Puzzle/03.png"
+			"images" : "images/portfolio.png"
 		}
 		
 	]
