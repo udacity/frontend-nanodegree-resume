@@ -4,160 +4,160 @@
 // TODO - Also create informative detailed data sets for Mapl location overlays.
 //	Reminder:	Use encapsulation and functions to organize and display data.
 var bio = {
-    "name": "George Fischer",
-    "role": "Web Developer",
-    "welcomeMessage": "Developer with strong background in science, technology, engineering, education and math.",
-    "contacts": {
-        "mobile": "801-318-0621",
-        "email": "geosynchronous@mac.com",
-        "github": "Geosynchronous",
-        "twitter": "@geosynchronous",
-        "location": "Salt Lake City"
+    'name': "George Fischer",
+    'role': "Web Developer",
+    'welcomeMessage': "Developer with strong background in science, technology, engineering, education and math.",
+    'contacts': {
+        'mobile': "801-318-0621",
+        'email': "geosynchronous@mac.com",
+        'github': "Geosynchronous",
+        'twitter': "@geosynchronous",
+        'location': "Salt Lake City"
     },
-    "skills": [
+    'skills': [
         "Front-End Web",
         "Courseware",
         "Physics",
         "Programming",
         "Electronics"
     ],
-    "bioPic": "images/me.jpg",
+    'bioPic': "images/me.jpg",
 };
 
 
 
 var education = {
-    "schools": [{
-        "name": "University of Utah",
-        "location": "Salt Lake City, UT, US",
-        "degree": "Master of Science",
-        "majors": ["Physics"],
-        "dates": 1980,
-        "url": "http://www.utah.edu/"
+    'schools': [{
+        'name': "University of Utah",
+        'location': "Salt Lake City, UT, US",
+        'degree': "Master of Science",
+        'majors': ["Physics"],
+        'dates': 1980,
+        'url': "http://www.utah.edu/"
     }, {
-        "name": "University of Utah",
-        "location": "Salt Lake City, UT, US",
-        "degree": "Bachelor of Science",
-        "majors": ["Biology"],
-        "dates": 1977,
-        "url": "http://www.utah.edu/"
+        'name': "University of Utah",
+        'location': "Salt Lake City, UT, US",
+        'degree': "Bachelor of Science",
+        'majors': ["Biology"],
+        'dates': 1977,
+        'url': "http://www.utah.edu/"
     }, {
-        "name": "University of Utah",
-        "location": "Salt Lake City, UT, US",
-        "degree": "Education Certification",
-        "majors": ["Secondary School Instructor"],
-        "dates": 1984,
-        "url": "http://www.utah.edu/"
+        'name': "University of Utah",
+        'location': "Salt Lake City, UT, US",
+        'degree': "Education Certification",
+        'majors': ["Secondary School Instructor"],
+        'dates': 1984,
+        'url': "http://www.utah.edu/"
     }],
-    "onlineCourses": [{
-        "title": "Front-End Web Development",
-        "school": "Udacity",
-        "dates": 2016,
-        "url": "http://www.udacity.com/courses/all"
+    'onlineCourses': [{
+        'title': "Front-End Web Development",
+        'school': "Udacity",
+        'dates': 2016,
+        'url': "http://www.udacity.com/courses/all"
     }]
 };
 
 
 
 var work = {
-    "jobs": [{
-        "employer": "City Academy Charter School",
-        "title": "Engineering Teacher",
-        "location": "Salt Lake City, UT, US",
-        "dates": "2013 - 2014",
+    'jobs': [{
+        'employer': "City Academy Charter School",
+        'title': "Engineering Teacher",
+        'location': "Salt Lake City, UT, US",
+        'dates': "2013 - 2014",
         "description": "Taught Digital Electronics Course & Engineering Design Courses with AutodDesk Inventor 3D-CAD."
     }, {
-        "employer": "Home",
-        "title": "Domestic Engineer",
-        "location": "Salem, UT, US",
-        "dates": "1995 - 2013",
-        "description": "Did the Mr. Mom thing in a semi-rural location.  Supplemented public education with additional home schooling."
+        'employer': "Home",
+        'title': "Domestic Engineer",
+        'location': "Salem, UT, US",
+        'dates': "1995 - 2013",
+        'description': "Did the Mr. Mom thing in a semi-rural location.  Supplemented public education with additional home schooling."
     }, {
-        "employer": "Math Department, University of Utah",
-        "title": "LAN Coordinator",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1993 - 1995",
-        "description": "Assisted Network Administrator serving departmental users & maintaining netowrk infrastructure."
+        'employer': "Math Department, University of Utah",
+        'title': "LAN Coordinator",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1993 - 1995",
+        'description': "Assisted Network Administrator serving departmental users & maintaining netowrk infrastructure."
     }, {
-        "employer": "Wasatch Educations Systems",
-        "title": "Courseware Developer",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1986 - 1993",
-        "description": "Developed interactive mastery physics and adult education courseware. Developed simulations and teacher guides."
+        'employer': "Wasatch Educations Systems",
+        'title': "Courseware Developer",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1986 - 1993",
+        'description': "Developed interactive mastery physics and adult education courseware. Developed simulations and teacher guides."
     }, {
-        "employer": "Park City High School",
-        "title": "Physics & Biology Teacher",
-        "location": "Park City, UT, US",
-        "dates": "1985 - 1986",
-        "description": "Taught Physics and Biology, with an emphasis on labwork."
+        'employer': "Park City High School",
+        'title': "Physics & Biology Teacher",
+        'location': "Park City, UT, US",
+        'dates': "1985 - 1986",
+        'description': "Taught Physics and Biology, with an emphasis on labwork."
     }, {
-        "employer": "Wasatch Education Systems",
-        "title": "Programmer",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1984 - 1985",
-        "description": "Programmed biology courseware and simulations."
+        'employer': "Wasatch Education Systems",
+        'title': "Programmer",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1984 - 1985",
+        'description': "Programmed biology courseware and simulations."
     }, {
-        "employer": "National Solar Observatory",
-        "title": "Physics Intern",
-        "location": "Sunspot, NM, US",
-        "dates": "Summer 1984",
-        "description": "Designed and tested rugged stand-alone solar tracking data loggers for worldwide remote mountain-top surveys."
+        'employer': "National Solar Observatory",
+        'title': "Physics Intern",
+        'location': "Sunspot, NM, US",
+        'dates': "Summer 1984",
+        'description': "Designed and tested rugged stand-alone solar tracking data loggers for worldwide remote mountain-top surveys."
     }, {
-        "employer": "Quartex",
-        "title": "Research Engineer",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1983",
-        "description": "R&D for crystal oscillator technologies, used in lab weighing scales. Eliminated reproducibility production problems."
+        'employer': "Quartex",
+        'title': "Research Engineer",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1983",
+        'description': "R&D for crystal oscillator technologies, used in lab weighing scales. Eliminated reproducibility production problems."
     }, {
-        "employer": "Eaton Kenway",
-        "title": "Electrical Engineer",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1982",
-        "description": "Storage-retrieval robot development and configuration."
+        'employer': "Eaton Kenway",
+        'title': "Electrical Engineer",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1982",
+        'description': "Storage-retrieval robot development and configuration."
     }, {
-        "employer": "Physics, University of Utah",
-        "title": "Electrical Engineer",
-        "location": "Seattle, WA, US",
-        "dates": "1981",
-        "description": "Finished Cosmic Ray Research work on Fly's Eye Project. A data acquisition array of 80 large UV telescopes."
+        'employer': "Physics, University of Utah",
+        'title': "Electrical Engineer",
+        'location': "Seattle, WA, US",
+        'dates': "1981",
+        'description': "Finished Cosmic Ray Research work on Fly's Eye Project. A data acquisition array of 80 large UV telescopes."
     }, {
-        "employer": "Physics, University of Utah",
-        "title": "Teaching Assistant",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1978 - 1981",
-        "description": "Taught graduate level analog & digital electronics, and computer interfacing labs."
+        'employer': "Physics, University of Utah",
+        'title': "Teaching Assistant",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1978 - 1981",
+        'description': "Taught graduate level analog & digital electronics, and computer interfacing labs."
     }, {
-        "employer": "University of Utah",
-        "title": "Research Assistant",
-        "location": "Salt Lake City, UT, US",
-        "dates": "1974 - 1980",
-        "description": "As a student, worked in chemistry, molecular biology, biochemistry and physics labs."
+        'employer': "University of Utah",
+        'title': "Research Assistant",
+        'location': "Salt Lake City, UT, US",
+        'dates': "1974 - 1980",
+        'description': "As a student, worked in chemistry, molecular biology, biochemistry and physics labs."
     }]
 };
 
 
 
 var projects = {
-    "projects": [{
-        "title": "Portfolio",
-        "dates": "Oct-Nov 2015",
-        "description": "Udacity Nanodegree Front-End Web Design project to create a website portfolio.",
-        "images": [
+    'projects': [{
+        'title': "Portfolio",
+        'dates': "Oct-Nov 2015",
+        'description': "Udacity Nanodegree Front-End Web Design project to create a website portfolio.",
+        'images': [
             "images/PortfolioMobile_small.jpg",
             "images/PortfolioMain_small.jpg"
         ]
     }, {
-        "title": "Healthcare Website",
-        "dates": "Jan-March 2009",
-        "description": "Created a set of interactive webpages for Full Circle Care, and Naturopathic Clinic.",
-        "images": [
+        'title': "Healthcare Website",
+        'dates': "Jan-March 2009",
+        'description': "Created a set of interactive webpages for Full Circle Care, and Naturopathic Clinic.",
+        'images': [
             "images/health_small.jpg"
         ]
     }, {
-        "title": "Physics Courseware",
-        "dates": "1989-2000",
-        "description": "Designed and developed an interactive physics course on sound, with real-world simulations and a simulated lab with measurirng instruments.",
-        "images": [
+        'title': "Physics Courseware",
+        'dates': "1989-2000",
+        'description': "Designed and developed an interactive physics course on sound, with real-world simulations and a simulated lab with measurirng instruments.",
+        'images': [
             "images/Sound_wave_small.jpg",
             "images/spectrogram_small.jpg",
             "images/Modulated_wave_small.jpg"
