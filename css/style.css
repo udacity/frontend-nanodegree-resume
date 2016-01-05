@@ -32,8 +32,8 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -80,11 +80,11 @@ h4 {
 h2,
 h4,
 h5 {
-  padding:10px 5%;
+  padding: 10px 5%;
 }
 
 em {
-  font-size:14px;
+  font-size: 14px;
 }
 
 hr {
@@ -110,7 +110,7 @@ hr {
 .maps-text {
   font-size: 14px;
   text-align: center;
-  color: #000000;
+  color: #000;
   line-height: 16px;
 }
 
@@ -144,7 +144,7 @@ a:hover {
 .welcome-message {
   font-style: italic;
   font-size: 16px;
-  color: #ffffff;
+  color: #fff;
   padding: 20px 0;
 }
 
@@ -307,7 +307,7 @@ Adding a duplicate class to a class???
 
 
 
-@media only screen and (max-width:960px) {
+@media only screen and (max-width: 960px) {
 
   .biopic {
     width: 150px;
