@@ -21,7 +21,7 @@ var bio = {
         "Programming",
         "Electronics"
     ],
-    'bioPic': "images/me.jpg",
+    'biopic': "images/me.jpg",
 };
 
 
@@ -191,7 +191,7 @@ bio.display = function() {
         }
     }
 
-    var formattedImage = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedImage = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedImage);
 
     var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
