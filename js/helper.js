@@ -17,7 +17,7 @@ var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="gray-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="gray-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLbioPic = '<img src="%data%" class="biopic" alt="George Fischer Photo">';
 var HTMLwelcomeMsg = '<p class="welcome-message" >%data%</p>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
@@ -34,7 +34,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img src="%data%" alt="Project Image">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -191,7 +191,7 @@ function initializeMap() {
 
         var HTMLtestContent =
             '<div class="orange">' +
-            '<img src="images/me.jpg" class="mapspic">' + '<br>' +
+            '<img src="images/me.jpg" alt="George Fischer Photo" class="mapspic">' + '<br>' +
             '<div class="maps-text" class="light-blue">' +
             'Welcome to<br>' +
             '<b>' + name + '</b>' + '<br>' +
@@ -294,9 +294,10 @@ window.addEventListener('resize', function(e) {
     map.fitBounds(mapBounds);
 });
 
-// TODO -- Make this work
+// TODO -- Make this work - ask Forums
 // Make sure the map bounds get updated on page resize on hidden collapsed map
-// $('#accordian.collapseFive').on('shown.bs.collapse', function(e) {
+
+// $("#accordian").on('shown.bs.collapse', function(e) {
 //     map.fitBounds(mapBounds);
 // });
 
