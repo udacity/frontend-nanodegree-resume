@@ -280,27 +280,24 @@ function initializeMap() {
 
     //TODO - Added this to track down map locations functionality
     console.log(locations);
-
-    // TODO -- Make map load first time without having to resize browser.
-    // Beyond immediate scope of project
-    //
-    // google.maps.event.addListenerOnce(map, 'idle', function() {
-    //   google.maps.event.trigger(map, 'resize');
-    // });
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
 
 // Calls the initializeMap() function when the page loads
 window.addEventListener('load', initializeMap);
+
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 
 window.addEventListener('resize', function(e) {
-
-    // Make sure the map bounds get updated on page resize
     map.fitBounds(mapBounds);
 });
+
+// TODO -- Make this work
+// Make sure the map bounds get updated on page resize on hidden collapsed map
+// $('#accordian.collapseFive').on('shown.bs.collapse', function(e) {
+//     map.fitBounds(mapBounds);
+// });
+
+
