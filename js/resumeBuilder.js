@@ -33,7 +33,7 @@ bio.display = function () {
     var github = HTMLgithub.replace("%data%", "yayomanosalva");
     $('#header #topContacts').append(github);
     $('#footerContacts').append(github);
-    var blog = HTMLblog.replace("%data%", "yayomanosalva.com");
+    var blog = HTMLblog.replace("%data%", "jairmanosalva.tk");
     $('#header #topContacts').append(blog);
     var location = HTMLlocation.replace("%data%", "Barranquilla");
     $('#header #topContacts').append(location);
