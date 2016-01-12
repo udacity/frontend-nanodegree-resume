@@ -156,6 +156,13 @@ ul {
   display: none;
 }
 
+.projpic {
+  float: right;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
 img {
   padding: 10px;
 }
@@ -195,6 +202,7 @@ span {
 }
 
 #map {
+  
   display: block;
   height: 100%;
   margin: 0 5%;

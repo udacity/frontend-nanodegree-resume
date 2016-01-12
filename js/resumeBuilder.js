@@ -8,18 +8,43 @@ This is empty on purpose! Your code to build the resume will go here.
  //funThoughts = awesomeThoughts.replace("awesome", "FUN");
  //console.log(awesomeThoughts);
  //$("#main").append(funThoughts);
+
  var bio = {
  	"name": "Li Wang",
  	"role": "Web Developer",
- 	"welcomeMessage":"Build An Application And Make a Difference!",
+ 	"welcomeMsg":"Build Applications And Make A Difference!",
  	"contacts": {
  		"email": "wangxbl56@gmail.com",
- 		"github": "https://github.com/llwang8",
- 		"twitter": "https://twitter.com/Lwang2015"
+ 		"github": "llwang8",
+ 		"twitter": "@Lwang2015",
+ 		"location": "Princeton, NJ"
  	},
  	"skills": ["Ruby on Rails", "JavaScript", "SQL", "jQuery", "PostgreSQL", "HTML", "CSS"]
 
  };
+
+ HTMLheaderName = HTMLheaderName.replace("%data%", bio.name);
+ HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
+ $("#header").prepend(HTMLheaderRole);
+ $("#header").prepend(HTMLheaderName);
+
+ $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+ $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+ $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+ $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+ $("#header").append(HTMLbioPic.replace("%data%", "images/selfie3.jpg"));
+ $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
+
+
+
+ if (bio.skills != []) {
+ 	$("#header").append(HTMLskillsStart);
+
+ 	for (var i = 0, len = bio.skills.length; i < len; i ++) {
+ 		$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+ 		HTMLskills = HTMLskills.replace(bio.skills[i], "%data%");
+ 	}
+ }
 
 var work = {
 	"jobs": [
@@ -28,21 +53,21 @@ var work = {
 			"title": "Voice Talent and Translator",
 			"location": "Princeton, NJ",
 			"dates": "2006-2015",
-			"description": "Record Chinese and verify scripts for clinical trial projects conducted in China. Translator for public schools to help immigrant families."
+			"description": "Record Chinese and verify scripts for clinical trial projects conducted in China. <br>Translator for public schools to help immigrant families."
 		},
 		{
 			"employer": "CherryValley Studio",
 			"title": "Founder",
 			"location": "Princeton, NJ",
 			"dates": "2002-2015",
-			"description": "Operated studio to provide comprehensive quality DVD services to businesses and families. Managed all business aspects including accounting, taxation, marketing and website."
+			"description": "Operated studio to provide comprehensive quality DVD services to businesses and families. <br>Managed all business aspects including accounting, taxation, marketing and website."
 		},
 		{
 			"employer": "C&A and Associates",
 			"title": "Associate Programmer",
 			"location": "Somerville, NJ",
 			"dates": "2000-2001",
-			"description": "Participate in the development PPM (people profile management), Built Essistme (v1) application, customized CNCv1 (news engine) for various clients using ASP, Javascript, SQL, HTML/DHTML, CSS, Visual  Interdev."
+			"description": "Using ASP, Javascript, SQL, HTML/DHTML, CSS, Visual  Interdev to participate in the development PPM (people profile management), <br>build Essistme (v1) application, customize CNCv1 (news engine) for various clients ."
 		},
 		{
 			"employer": "PILLSBURY, MADISON & SUTRO LLP",
@@ -70,8 +95,37 @@ var work = {
 
 };
 
+function displayWork() {
+	if (work.jobs.length > 1) {
+		for (job in work.jobs) {
+			$("#workExperience").append(HTMLworkStart);
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+			var formattedEmployerTitle =  formattedEmployer + " " + formattedTitle;
+			$(".work-entry:last").append(formattedEmployerTitle);
+			$(".work-entry:last").append(HTMLworkDates.replace("%data%", work.jobs[job].dates));
+			$(".work-entry:last").append(HTMLworkLocation.replace("%data%", work.jobs[job].location));
+			$(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[job].description));
+			//HTMLworkEmployer.replace(work.jobs[job].emppoyer, "%data%");
+			//HTMLworkTitle.replace(work.jobs[job].title, "%data%");
+		}
+	}
+}
+
+displayWork();
+
+function inName(name){
+	name = name.trim().split(" ");
+	name[0]= name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+	name[1]= name[1].toUpperCase();
+	HTMLheaderName = HTMLheaderName.replace(name[0] + " " + name[1]);
+}
+
+var internationalizedButton = '<input type="button" value="Internationalize Name" onClick=inName(HTMLheaderName)>';
+$("#main").append(internationalizedButton);
+
 var projects = {
-	"projects": [
+	"projs": [
 		{
 			"title": "ramp_projects",
 			"dates": "2015",
@@ -82,7 +136,7 @@ var projects = {
 			"title": "my_app",
 			"dates": "2015",
 			"description": "Rails app - The Real ResourcesXchange",
-			"images":[]	
+			"images":["images/ResourcesXchange.png"]	
 		},
 		{
 			"title": "send_app",
@@ -94,7 +148,7 @@ var projects = {
 			"title": "moviestore",
 			"dates": "2015",
 			"description": "Rails app - rails-learning-projects-sitepoint-moviestore",
-			"images":[]
+			"images":["images/MovieStore.png"]
 		},
 		{
 			"title": "blog2",
@@ -105,12 +159,33 @@ var projects = {
 
 	]
 }
+projects.display = function() {
+	$("#projects").append(HTMLprojectStart);
+	for (var proj in projects.projs) {
+		//HTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.projs[proj].title);
+		//HTMLprojectDates = HTMLprojectDates.replace("%data%", projects.projs[proj].dates);
+		//HTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects.projs[proj].description);
+		//HTMLprojectImage = HTMLprojectImage.replace("%data%", projects.projs[proj].images.join(" "));
+		$(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projs[proj].title));
+		$(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projs[proj].dates));
+		$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projs[proj].description));
+		if (projects.projs[proj].images.length > 1) {
+			for (img in projects.proj[proj].images) {
+			 $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projs[proj].images[img]));
+			}
+		}
+	}
+}
+
+projects.display();
+
+$("#mapDiv").append(googleMap);
 
 var education = {
 	"schools": [
 	{
 		"name": "Startup Institute",
-		"city": "New York, NY",
+		"location": "New York, NY",
 		"degree": "Certificate of Achievement",
 		"major": "Web Development",
 		"dates": "2015",
@@ -118,7 +193,7 @@ var education = {
 	},
 	{
 		"name": "Chubb Institute",
-		"city": "Islin, NJ",
+		"location": "Islin, NJ",
 		"degree": "Certificate of Achievement",
 		"major": "Programming and Web Development",
 		"dates": "1999",
@@ -126,7 +201,7 @@ var education = {
 	},
 	{
 		"name": "Bryant University",
-		"city": "Smithfield, RI",
+		"location": "Smithfield, RI",
 		"degree": "MBA",
 		"major": "Accounting",
 		"dates": "1992-1993",
@@ -134,7 +209,7 @@ var education = {
 	},
 	{
 		"name": "Nankai University",
-		"city": "Tianjing, P.R. China",
+		"location": "Tianjing, P.R. China",
 		"degree": "B.S.",
 		"major": "Biology",
 		"dates": "1984-1988",
