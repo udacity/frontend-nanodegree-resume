@@ -19,7 +19,7 @@ This is empty on purpose! Your code to build the resume will go here.
  		"twitter": "@Lwang2015",
  		"location": "Princeton, NJ"
  	},
- 	"skills": ["Ruby on Rails", "JavaScript", "SQL", "jQuery", "PostgreSQL", "HTML", "CSS"]
+ 	"skills": ["Ruby on Rails", "JavaScript", "jQuery", "SQL", "PostgreSQL", "HTML", "CSS"]
 
  };
 
@@ -32,7 +32,7 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
  $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
  $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
- $("#header").append(HTMLbioPic.replace("%data%", "images/selfie3.jpg"));
+ $("#header").append(HTMLbioPic.replace("%data%", "images/selfie4.jpg"));
  $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
 
 
@@ -127,33 +127,33 @@ $("#main").append(internationalizedButton);
 var projects = {
 	"projs": [
 		{
-			"title": "ramp_projects",
+			"title": "Ruby Rampup Projects",
 			"dates": "2015",
-			"description": "Ruby projects - Blackjack, game-of-life, league-point-calculator, restaurant-health-check, ...",
+			"description": "Blackjack Game, Game Of Life, League Point Calculator, NYC Restaurant Health Check.",
 			"images":[]
 		},
 		{
-			"title": "my_app",
+			"title": "ResourcesXchange",
 			"dates": "2015",
-			"description": "Rails app - The Real ResourcesXchange",
+			"description": "Rails app - Follow Michael Hartl's ruby on rails tutorial and build a Twitter clone in rails plus more add-on features.",
 			"images":["images/ResourcesXchange.png"]	
 		},
 		{
-			"title": "send_app",
+			"title": "Send Twilio Message",
 			"dates": "2015",
-			"description": "Rails app - Send twilio message to pre-certify number",
+			"description": "Rails app - Use web interface to send twilio message to pre-certify cell number.",
 			"images":[]
 		},
 		{
 			"title": "moviestore",
 			"dates": "2015",
-			"description": "Rails app - rails-learning-projects-sitepoint-moviestore",
+			"description": "Rails app - Online Movie Store using Foundation for responsive page design, Redit for shopping cart tracking, Raintree to accept payments, Ransack for advance search.",
 			"images":["images/MovieStore.png"]
 		},
 		{
-			"title": "blog2",
+			"title": "Simple Webblog",
 			"dates": "2015",
-			"description": "Rails app - Rails-learning-projects-guide.rubyonrails.org-blog",
+			"description": "Rails app - Web blog Using MVC (Model, View, Controller) and RESTful design to perform CRUD operations connectting web interface with SQL database.",
 			"images":[]
 		}
 
@@ -162,10 +162,6 @@ var projects = {
 projects.display = function() {
 	$("#projects").append(HTMLprojectStart);
 	for (var proj in projects.projs) {
-		//HTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.projs[proj].title);
-		//HTMLprojectDates = HTMLprojectDates.replace("%data%", projects.projs[proj].dates);
-		//HTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects.projs[proj].description);
-		//HTMLprojectImage = HTMLprojectImage.replace("%data%", projects.projs[proj].images.join(" "));
 		$(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projs[proj].title));
 		$(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projs[proj].dates));
 		$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projs[proj].description));
@@ -179,8 +175,6 @@ projects.display = function() {
 
 projects.display();
 
-$("#mapDiv").append(googleMap);
-
 var education = {
 	"schools": [
 	{
@@ -188,7 +182,7 @@ var education = {
 		"location": "New York, NY",
 		"degree": "Certificate of Achievement",
 		"major": "Web Development",
-		"dates": "2015",
+		"dates": "October to December 2015",
 		"url": "https://www.startupinstitute.com"
 	},
 	{
@@ -196,7 +190,7 @@ var education = {
 		"location": "Islin, NJ",
 		"degree": "Certificate of Achievement",
 		"major": "Programming and Web Development",
-		"dates": "1999",
+		"dates": "August to October 1999",
 		"url": "http://www.chubb-computer-institute.org/index.html"
 	},
 	{
@@ -217,12 +211,12 @@ var education = {
 	}
 	],
 
-	"Online Course": [
+	"onlineClasses": [
 		{
-			"title": "JavaScript",
-			"school": "W3School",
-			"dates": "December 2015",
-			"url": "http://www.w3schools.com/js/default.asp"
+			"title": "JavaScript Basics - Resume Project",
+			"school": "Udacity.com",
+			"dates": "January 2016",
+			"url": "https://www.udacity.com/course/viewer#!/c-ud804/l-1930528550/e-1935058561/m-2948908664"
 		},
 		{
 			"title": "HTML",
@@ -236,16 +230,68 @@ var education = {
 			"dates": "January 2016",
 			"url": "http://www.w3schools.com/jquery/default.asp"
 		},
+		
 		{
-			"title": "JavaScript Basics - Resume Project",
-			"school": "Udacity.com",
-			"dates": "January 2016",
-			"url": "https://www.udacity.com/course/viewer#!/c-ud804/l-1930528550/e-1935058561/m-2948908664"
+			"title": "JavaScript",
+			"school": "W3School",
+			"dates": "December 2015",
+			"url": "http://www.w3schools.com/js/default.asp"
+		},
+		{
+			"title": "AngularJS",
+			"school": "W3School",
+			"dates": "November 2015",
+			"url": "http://www.w3schools.com/angular/default.asp"
+		},
+		{
+			"title": "SQL Query",
+			"school": "Vertabelo",
+			"dates": "October 2015",
+			"url": "https://academy.vertabelo.com/course/sql-queries"
 		}
+		
 
 	]
 
 };
+
+education.display = function() {
+	$("#education").append(HTMLschoolStart);
+	for (var sch in education.schools) {
+		HTMLschoolName = HTMLschoolName.replace("%data%", education.schools[sch].name);
+		HTMLschoolName = HTMLschoolName.replace("#", education.schools[sch].url);	
+		
+		$(".education-entry:last").append(HTMLschoolName.concat(HTMLschoolDegree.replace("%data%", education.schools[sch].degree)));
+		$(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[sch].dates));
+		$(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[sch].location));
+		$(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[sch].major));
+		$(".education-entry:last").append('<br>');
+		HTMLschoolName = HTMLschoolName.replace(education.schools[sch].name, "%data%");
+		HTMLschoolName = HTMLschoolName.replace(education.schools[sch].url, "#");
+	}
+
+	$(".education-entry:last").append(HTMLonlineClasses);
+	for (var online in education.onlineClasses) {
+		HTMLonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[online].title);
+		HTMLonlineTitle = HTMLonlineTitle.replace("#", education.onlineClasses[online].url);
+		$(".education-entry:last").append(HTMLonlineTitle.concat(HTMLonlineSchool.replace("%data%", education.onlineClasses[online].school)));
+		$(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineClasses[online].dates));
+		HTMLonlineTitle = HTMLonlineTitle.replace(education.onlineClasses[online].title, "%data%");
+		HTMLonlineTitle = HTMLonlineTitle.replace(education.onlineClasses[online].url, "#");
+
+	}
+}
+
+education.display();
+
+
+$("#mapDiv").append(googleMap);
+
+
+$("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+ $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+ $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+ $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
 

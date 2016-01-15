@@ -62,6 +62,7 @@ h5 {
 }
 
 
+
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -77,6 +78,17 @@ h5 {
   line-height: 16px;
   float: right;
 
+}
+.major-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+ 
+}
+#online-h3 {
+  color: #f5ae23;
+  display: none;
 }
 
 p {
@@ -136,6 +148,14 @@ a {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+.skill-flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
