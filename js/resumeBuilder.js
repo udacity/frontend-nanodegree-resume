@@ -145,13 +145,13 @@ var projects = {
 			"images":[]
 		},
 		{
-			"title": "moviestore",
+			"title": "Movie Store",
 			"dates": "2015",
 			"description": "Rails app - Online Movie Store using Foundation for responsive page design, Redit for shopping cart tracking, Raintree to accept payments, Ransack for advance search.",
 			"images":["images/MovieStore.png"]
 		},
 		{
-			"title": "Simple Webblog",
+			"title": "Simple Web Blog",
 			"dates": "2015",
 			"description": "Rails app - Web blog Using MVC (Model, View, Controller) and RESTful design to perform CRUD operations connectting web interface with SQL database.",
 			"images":[]
@@ -220,36 +220,48 @@ var education = {
 		},
 		{
 			"title": "HTML",
-			"school": "W3School",
+			"school": "W3School.com",
 			"dates": "January 2016",
 			"url": "http://www.w3schools.com/html/default.asp"
 		},
 		{
 			"title": "JQuery",
-			"school": "W3School",
+			"school": "W3School.com",
 			"dates": "January 2016",
 			"url": "http://www.w3schools.com/jquery/default.asp"
 		},
-		
 		{
 			"title": "JavaScript",
-			"school": "W3School",
+			"school": "W3School.com",
 			"dates": "December 2015",
 			"url": "http://www.w3schools.com/js/default.asp"
 		},
 		{
+			"title": "SQL Query",
+			"school": "Vertabelo.com",
+			"dates": "October 2015",
+			"url": "https://academy.vertabelo.com/course/sql-queries"
+		},
+		{
+			"title": "Ruby",
+			"school": "RubyMonk.com",
+			"dates": "October 2015 to Present",
+			"url": "https://rubymonk.com"
+		},
+		{
 			"title": "AngularJS",
-			"school": "W3School",
+			"school": "W3School.com",
 			"dates": "November 2015",
 			"url": "http://www.w3schools.com/angular/default.asp"
 		},
 		{
-			"title": "SQL Query",
-			"school": "Vertabelo",
-			"dates": "October 2015",
-			"url": "https://academy.vertabelo.com/course/sql-queries"
+			"title": "AngularJS",
+			"school": "Codecademy.com",
+			"dates": "Novermer 2015",
+			"url": "https://rubymonk.com"
 		}
 		
+
 
 	]
 
@@ -270,12 +282,12 @@ education.display = function() {
 		HTMLschoolName = HTMLschoolName.replace(education.schools[sch].url, "#");
 	}
 
-	$(".education-entry:last").append(HTMLonlineClasses);
+	$("#online").append(HTMLonlineClasses);
 	for (var online in education.onlineClasses) {
 		HTMLonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[online].title);
 		HTMLonlineTitle = HTMLonlineTitle.replace("#", education.onlineClasses[online].url);
-		$(".education-entry:last").append(HTMLonlineTitle.concat(HTMLonlineSchool.replace("%data%", education.onlineClasses[online].school)));
-		$(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineClasses[online].dates));
+		$(".online-entry:last").append(HTMLonlineTitle.concat(HTMLonlineSchool.replace("%data%", education.onlineClasses[online].school)));
+		$(".online-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineClasses[online].dates));
 		HTMLonlineTitle = HTMLonlineTitle.replace(education.onlineClasses[online].title, "%data%");
 		HTMLonlineTitle = HTMLonlineTitle.replace(education.onlineClasses[online].url, "#");
 

@@ -20,7 +20,8 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.online-entry {
   padding: 0 5%;
 }
 
@@ -61,7 +62,13 @@ h5 {
 
 }
 
-
+.online {
+  font-weight: bold;
+  font-size: 18px;
+  color: #999;
+  line-height: 29px;
+  padding: 10px 5%;
+}
 
 .date-text {
   font-style: italic;
@@ -86,10 +93,7 @@ h5 {
   line-height: 16px;
  
 }
-#online-h3 {
-  color: #f5ae23;
-  display: none;
-}
+
 
 p {
   font-size: 14px;
