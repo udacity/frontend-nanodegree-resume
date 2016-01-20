@@ -40,17 +40,21 @@ var education = {
     "schools": [
         {
             "name": "city University",
-            "city": "London",
-            "major": "Computer Science",
-            "graduation": "2012"
+            "degree": "Computer Science",
+            "graduation": "2012",
+            "location": "London",
+            "major" : "cs"
+            
 
         },
 
         {
             "name": "Essex University",
-            "city": "Colchester",
-            "major": "Computer Science",
-            "graduation": "2013"
+             "degree": "Computer Science",
+             "graduation": "2012",
+            "location": "Colchester",
+            "major" : "cs"
+       
         }
 
 
@@ -94,6 +98,15 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
+// Eduation details
+
+var HTMLschoolStart = '<div class="education-entry"></div>';
+var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
 // Work replacement dot notation
 var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
 var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
@@ -102,7 +115,11 @@ var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.deta
 var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work.details.description);
 
 // Employment replacement
-
+var formattedEducationschoolName = HTMLworkEmployer.replace('%data%', education.schools[1].name);
+var formattedEducationschoolDegree = HTMLschoolDegree.replace('%data%', education.schools[1].degree);
+var formattedEducationschoolDates = HTMLschoolDegree.replace('%data%', education.schools[1].graduation);
+var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', education.schools[1].location);
+var formattedEducationschoolMajor = HTMLschoolDegree.replace('%data%', education.schools[1].major);
 
 
 $("#header").append(formattedName);
@@ -129,4 +146,10 @@ $('#workExperience').append(formattedWorkemployerLocation);
 $('#workExperience').append(formattedWorkemployerDescription);
 
 // Education
+$('#education').append(HTMLschoolStart);
+$('#education').append(formattedEducationschoolName);
+$('#education').append(formattedEducationschoolDegree);
+$('#education').append(formattedEducationschoolDates);
+$('#education').append(formattedEducationschoolLocation);
+$('#education').append(formattedEducationschoolMajor);
 
