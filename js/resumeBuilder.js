@@ -24,7 +24,7 @@ var bio = {
 }
 
 var work ={
-"employer" : {
+"details" : {
 "position" : "Web Developer",
 "employer" : "TUI",
 "attended" : "2014",
@@ -74,13 +74,15 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
 var formattedRole =HTMLheaderRole.replace("%data%", bio.role) ;
-var formatedMobile = HTMLmobile.replace("%data%",bio.contacts['mobile']);
-var formatedEmail= HTMLemail.replace("%data%",bio.contacts['email']);
-var formatedGithub = HTMLgithub.replace('%data%', bio.contacts['github']);
-var formattedLocation = HTMLlocation.replace('%data%', bio.contacts['location']);
+var formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+var formatedEmail= HTMLemail.replace("%data%",bio.contacts.email);
+var formatedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
+var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 var formattedBiopic = HTMLbioPic.replace('%data%', bio.picture);
-var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.contacts['welcome']);
+var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.contacts.welcome);
 var formattedSkills = HTMLskills.replace('%data%', bio.skills);
+
+
 
 // Employmet details
 
@@ -92,14 +94,15 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
+// Work replacement dot notation
+var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
+var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
+var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work.details.attended);
+var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
+var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work.details.description);
 
-var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.employer['employer']);
-var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.employer['position']);
-var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work.employer['attended']);
-var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.employer['location']);
-var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work.employer['description']);
+// Employment replacement
 
-//alert(work.employer['position']);
 
 
 $("#header").append(formattedName);
@@ -126,3 +129,4 @@ $('#workExperience').append(formattedWorkemployerLocation);
 $('#workExperience').append(formattedWorkemployerDescription);
 
 // Education
+
