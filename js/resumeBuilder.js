@@ -138,18 +138,35 @@ $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
 
 // Work Experience
+var key = 0;
+for(key in work.details) {
+
+//alert(key + " " + work.details[key]);
+$('#workExperience').append(HTMLworkStart + work.details[key]);
+
+}
+/*
 $('#workExperience').append(HTMLworkStart);
 $('#workExperience').append(formattedWorkemployer);
 $('#workExperience').append(formattedWorkemployerPosition);
 $('#workExperience').append(formattedWorkemployerDates);
 $('#workExperience').append(formattedWorkemployerLocation);
 $('#workExperience').append(formattedWorkemployerDescription);
-
+*/
 // Education
+var  key =0;
+for(key in education.schools[1]) {
+//alert(key + " " + education.schools[1][key]);
+$('#education').append(HTMLschoolStart + education.schools[1][key]);
+}
+
+
+/*
 $('#education').append(HTMLschoolStart);
 $('#education').append(formattedEducationschoolName);
 $('#education').append(formattedEducationschoolDegree);
 $('#education').append(formattedEducationschoolDates);
 $('#education').append(formattedEducationschoolLocation);
 $('#education').append(formattedEducationschoolMajor);
-
+*/
+// only run code for skills if there are skill that are on the page
