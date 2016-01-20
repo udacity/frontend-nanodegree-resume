@@ -26,9 +26,11 @@ var bio = {
 var work ={
 "employer" : {
 "position" : "Web Developer",
-"employer" : "me",
-"Years of attendance" : "2014",
-"company" : "TUI"
+"employer" : "TUI",
+"attended" : "2014",
+"location" : "Brighton",
+"description" : "Drupal based role managing the RealGap travel website."
+
 }
 
 };
@@ -68,28 +70,34 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
 var formattedRole =HTMLheaderRole.replace("%data%", bio.role) ;
-
-
-
-//var formattedHTMLcontactGeneric= HTMLcontactGeneric.replace("%data%",bio.email);
 var formatedMobile = HTMLmobile.replace("%data%",bio.contacts['mobile']);
 var formatedEmail= HTMLemail.replace("%data%",bio.contacts['email']);
 var formatedGithub = HTMLgithub.replace('%data%', bio.contacts['github']);
 var formattedLocation = HTMLlocation.replace('%data%', bio.contacts['location']);
-var formattedbioPic = HTMLlocation.replace('%data%', bio.picture);
-
-var formattedskills = HTMLskills.replace('%data%', bio.skills);
+var formattedBiopic = HTMLbioPic.replace('%data%', bio.picture);
+var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.contacts['welcome']);
+var formattedSkills = HTMLskills.replace('%data%', bio.skills);
 
 // Employmet details
-var HTMLschoolName = '<a href="#">%data%';
-var workEmploymentName = HTMLschoolName.replace('%data%', education.schools['name']);
 
 
+var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
-var formattedworkEmployer = HTMLworkEmployer.replace('%data%', work.employer['company']);
+var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkLocation = '<div class="location-text">%data%</div>';
+var HTMLworkDescription = '<p><br>%data%</p>';
+
+
+var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.employer['employer']);
+var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.employer['position']);
+var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work.employer['attended']);
+var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.employer['location']);
+var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work.employer['description']);
 
 //alert(work.employer['position']);
 
@@ -104,7 +112,17 @@ $("#topContacts").append(formatedEmail);
 $("#topContacts").append(formatedGithub);
 $("#topContacts").append(formattedLocation);
 $('#topContacts').prepend(formatedGithub);
+$('#topContacts').prepend(formattedBiopic);
+$('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
-$("#topContacts").append(formattedskills);
+$("#topContacts").append(formattedSkills);
 
+// Work Experience
+$('#workExperience').append(HTMLworkStart);
+$('#workExperience').append(formattedWorkemployer);
+$('#workExperience').append(formattedWorkemployerPosition);
+$('#workExperience').append(formattedWorkemployerDates);
+$('#workExperience').append(formattedWorkemployerLocation);
+$('#workExperience').append(formattedWorkemployerDescription);
 
+// Education
