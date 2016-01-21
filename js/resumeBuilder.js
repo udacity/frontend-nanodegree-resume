@@ -6,7 +6,7 @@ var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 
 // javascript object
 var bio = {
-"name" :  "Alexander Brown",
+"name" :  "cAmEROn PittMAN",
 "role" : "Web Developer",
 
 "contacts" : {
@@ -29,6 +29,15 @@ var work ={
 "employer" : "TUI",
 "attended" : "2014",
 "location" : "Brighton",
+"description" : "Drupal based role managing the RealGap travel website."
+
+},
+
+"details" : {
+"position" : "Web Developer",
+"employer" : "TUI",
+"attended" : "2014",
+"location" : "Chichester",
 "description" : "Drupal based role managing the RealGap travel website."
 
 }
@@ -108,7 +117,7 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 // Work replacement dot notation
-var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
+
 var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
 var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work.details.attended);
 var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
@@ -138,13 +147,51 @@ $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
 
 // Work Experience
-var key = 0;
-for(key in work.details) {
+function displayWork() {
+    var key = 0;
+    for(key in work.details) {
 
-//alert(key + " " + work.details[key]);
-$('#workExperience').append(HTMLworkStart + work.details[key]);
+    //alert(key + " " + work.details[key]);
 
+    alert(key);
+
+    //foo.hasOwnProperty('bar'); 
+
+     work.details.hasOwnProperty(key == 'position' );
+
+
+
+    if(key == 'position' ) {
+        var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
+    $('#workExperience').append(formattedWorkemployerPosition + work.details[key]);
+
+    }
+    else if(key == 'employer')  {
+        var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
+    $('#workExperience').append(formattedWorkemployer + work.details[key]).addClass( ".work-entry" );
+    }
+    else
+    {
+      $('#workExperience').append(HTMLworkStart + work.details[key]);  
+    }
+
+    }
 }
+
+displayWork();
+
+// no add the location data
+/*
+$(document).click(function(loc) {
+
+var x = event.clientX;
+var y = event.clientY;
+
+alert("x" + x + "y" + y);
+logClicks(x,y);
+});
+*/
+
 /*
 $('#workExperience').append(HTMLworkStart);
 $('#workExperience').append(formattedWorkemployer);
@@ -157,6 +204,7 @@ $('#workExperience').append(formattedWorkemployerDescription);
 var  key =0;
 for(key in education.schools[1]) {
 //alert(key + " " + education.schools[1][key]);
+
 $('#education').append(HTMLschoolStart + education.schools[1][key]);
 }
 
@@ -170,3 +218,45 @@ $('#education').append(formattedEducationschoolLocation);
 $('#education').append(formattedEducationschoolMajor);
 */
 // only run code for skills if there are skill that are on the page
+// store results in an array
+
+var locations = [];
+function locationlizer(work) {
+var key = 0;
+    for(key in work.details) {
+        if(key == "location")
+        {
+        alert(work.details[key]);
+        locations.push(work.details[key]);
+        }
+
+    }
+
+}
+
+locationlizer(work);
+var internationalizeButton = '<button>Internationalize</button>';
+
+$('#main').append(internationalizeButton);
+
+$('button').click(function() {
+
+inName(bio);
+
+});
+
+function inName(bio) {
+
+alert(bio.name);
+
+var name = bio.name.trim();
+var res = name.split(" ");
+firstname = res[0].substring(1,res[0]).toUpperCase() + res[0].substring(1).toLowerCase();
+lastname = res[1].toUpperCase();
+alert(firstname);
+var comebinedname = firstname  + " " +  lastname;
+alert (comebinedname);
+
+}
+
+
