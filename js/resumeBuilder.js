@@ -4,11 +4,11 @@ var bio = {
 	"contacts" : {
 		"mobile" : "(609)742-6772)",
 		"email" : "kepalencia@gmail.com",
-		"github" : "super-kebin", // github username
-		"twitter" : "@supakeebin", // twitter handle
+		"github" : "super-kebin",
+		"twitter" : "@supakeebin",
 		"location" : "Galloway, NJ, US"
 	},
-	"picture" : "https://s3.amazonaws.com/accredible-api-users/images/19734/original/1437188024577?1439365363", // Add to images folder later
+	"picture" : "images/biopic.jpg",
 	"welcomeMessage" : "Hello, Welcome to my resume!",
 	"skills" : ["Programming", "JS", "HTML", "CSS"]
 }
@@ -46,8 +46,7 @@ var projects = {
 		"title": "Build a Portfolio Site",
 		"dates": "2015",
 		"description": "Replicating a design mockup in HTML and CSS. Making sure the website is responsive for all devices.",
-		"images": ["", "" // Add to images folder later
-		]
+		"images": ["images/compressed/images/website_sample-small.png", "images/compressed/images/website_sample2-small.png"]
 	}]
 }
 
