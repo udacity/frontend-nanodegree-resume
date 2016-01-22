@@ -72,6 +72,22 @@ var education = {
 
 };
 
+var projectImages = []
+var project = {
+
+"projects" : {
+
+"title" : "project one",
+"completionDate" : 2016,
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+
+
+
+}
+
+
+};
+
 
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
@@ -259,4 +275,5 @@ alert (comebinedname);
 
 }
 
+// create a display function of project
 
