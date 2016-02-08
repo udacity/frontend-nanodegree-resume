@@ -16,8 +16,8 @@ This is empty on purpose! Your code to build the resume will go here.
 // var slicedString = "U".concat("audacity".slice(2));
 // console.log("sliced string ", slicedString);
  var bio = {
-	"name": "David Vauquelin",
-	"role": "Java, JavaScript, Python Developper",
+	"name": "DV",
+	"role": "Analyst Developper",
 	"contacts": {
 		"mobile": "da.vauk06@gmail.com",
 		"email": "da.vauk06@gmail.com",
@@ -28,7 +28,7 @@ This is empty on purpose! Your code to build the resume will go here.
 	},
 	"welcomeMessage": "Computer is the network",
 	"skills": [
-		"Java", "JavaEE", "Swing", "Prototype", "JavaFX", "JavaScript", "Python"
+		"Java", "Java/Swing", "JavaFX", "JavaScript", "Python", "Parallel/Distributed Algorithm", "Machine Learning Algorithm"
 	],
 	"bioPic": "images/dv.png"
  }
@@ -36,18 +36,46 @@ This is empty on purpose! Your code to build the resume will go here.
  var work = {
 	"jobs": [
 		{
-			"employer": "Orange",
-			"title": "Java/Python Developer",
-			"location": "Clamart, France",
-			"dates": "2015-Now",
-			"description": "Blablabla Orange"
-		},
-		{
-			"employer": "EDF Lab",
+			"employer": "Telecom Company",
 			"title": "Java/Python Developer",
 			"location": "Mougins, France",
-			"dates": "2014-2015",
-			"description": "Blablabla EDF Lab"
+			"dates": "August 2015-Now",
+			"description": "Work with ETL Python Frameword to inject data into Cassandra."
+		},
+		{
+			"employer": "National power supply company Lab",
+			"title": "Analyst/Developer Java",
+			"location": "Clamart, France",
+			"dates": "February 2014-June 2015",
+			"description": "Evolution on Java EE application to visualize and analyse multidimensional data sets of electrical power production/consumption.<br/>Development of robot to download electrical power consumption/production from diverse providers."
+		},
+		{
+			"employer": "TAS",
+			"title": "Analyst/Developer Java",
+			"location": "Cannes, France",
+			"dates": "September 2013 - February 2014",
+			"description": "Graph and report visualization and generation."
+		},
+		{
+			"employer": "TUS",
+			"title": "Analyst/Developer Java GUI",
+			"location": "Cannes, France",
+			"dates": "September 2013 - February 2014",
+			"description": "Design of GUI representing helicopter command panel used for training and simulation."
+		},
+		{
+			"employer": "TAS",
+			"title": "Analyst/Developer Java",
+			"location": "Cannes, France",
+			"dates": "September 2013 - February 2014",
+			"description": "Graph and report visualization and generation."
+		},
+		{
+			"employer": "TAS",
+			"title": "Analyst/Developer Java",
+			"location": "Cannes, France",
+			"dates": "September 2013 - February 2014",
+			"description": "Graph and report visualization and generation."
 		}
 	]
  };
