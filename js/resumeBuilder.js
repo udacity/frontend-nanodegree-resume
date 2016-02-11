@@ -59,7 +59,7 @@ var bio = {
 	"skills": [
 		"HTML & CSS",
 		"JavaScript",
-		"Python"]
+		"Python"],
 	"contacts": {
 		"mobile": "843-592-6095",
 		"email": "tiffany.c.stallings@gmail.com",
@@ -101,4 +101,12 @@ var education = {
 		"url": "https://www.codecademy.com/nysari"
 	}]
 
+}
+
+if (bio.skills !== false) {
+	$("#header").append(HTMLskillsStart);
+
+	for (skill in bio.skills){
+		$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
+	}
 }
