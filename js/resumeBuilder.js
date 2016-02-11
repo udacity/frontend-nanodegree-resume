@@ -2,7 +2,7 @@ var work = {
 	"jobs": [{
 		"employer": "Trader Joe's",
 		"title": "Crew Member",
-		"location": "Marietta, GA",
+		"location": "Marietta, Georgia",
 		"dates": "September 2012 - Present",
 		"description": "Responsible for creating effective signage and artwork \
 			for the store, and for ordering product in different sections. Maintained \
@@ -11,7 +11,7 @@ var work = {
 		}, {
 		"employer": "The Clubhouse at Hackers",
 		"title": "Line Cook, Cake Decorator",
-		"location": "Statesboro, GA",
+		"location": "Statesboro, Georgia",
 		"dates": "August 2011 - May 2012",
 		"description": "Baked and decorated birthday cakes for on-site parties. \
 			Cooperated with team-mates to run the line and prepare ingredients for \
@@ -119,7 +119,8 @@ function displayWork() {
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		$(".work-entry:last").append(HTMLworkEmployer.replace("%data%",
-			work.jobs[job].employer) + HTMLworkTitle.replace("%data%", work.jobs[job].title));
+			work.jobs[job].employer) + HTMLworkTitle.replace("%data%",
+			work.jobs[job].title));
 		$(".work-entry:last").append(HTMLworkDates.replace("%data%",
 			work.jobs[job].dates));
 		$(".work-entry:last").append(HTMLworkLocation.replace("%data%",
@@ -159,8 +160,8 @@ displaySkills();
 displayWork();
 projects.display();
 
+$("#mapDiv").append(googleMap);
+
 $(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
-	logClicks(x, y);
+
 });
