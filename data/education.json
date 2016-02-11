@@ -1,0 +1,19 @@
+{
+	"schools": [
+		{
+			"name": "edX",
+			"location": "worldwide",
+			"degree": "CS",
+			"majors": ["CS", "Mathematics"],
+			"dates": "2012 til death",
+			"url": "https://edx.org"
+		}
+	],
+	"onlineCourses": [{
+		"title": "CS50",
+		"school": "HarvardX on edX",
+		"dates": "2013",
+		"url": "http://cs50.net"
+		}],
+	"display": {}
+}

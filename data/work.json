@@ -1,0 +1,10 @@
+{
+	"jobs": [{
+			"employer": "John Doe",
+			"title": "Lead",
+			"location": "Mars",
+			"dates": "Dec 2050",
+			"description": "on your face"
+		}],
+	"display": {}
+}

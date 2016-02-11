@@ -1,0 +1,17 @@
+{
+	"projects": [
+		{
+			"title": "Google CodeIn 2015",
+			"dates": "Dec 7, 2015 - Jan 25, 2016",
+			"description": "The projects I did for Google CodeIn 2015. You can see the saved copy of my Google CodeIn here -> http://abdulhannanali.github.io/gci-dashboard-hannan-ali/",
+			"images": ["images/gci.jpeg"]
+		},
+		{
+			"title": "IsItSafe",
+			"dates": "Nov 2015 - Dec 2015",
+			"description": "Tell you if a site is safe to visit http://isitsafe.ml",
+			"images": ["http://i.imgur.com/6tBAIa1.jpg"]
+		}
+	],
+	"display": {}
+}
