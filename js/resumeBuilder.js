@@ -27,6 +27,21 @@ var work = {
 		}]
 }
 
+work.display = function() {
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		$(".work-entry:last").append(HTMLworkEmployer.replace("%data%",
+			work.jobs[job].employer) + HTMLworkTitle.replace("%data%",
+			work.jobs[job].title));
+		$(".work-entry:last").append(HTMLworkDates.replace("%data%",
+			work.jobs[job].dates));
+		$(".work-entry:last").append(HTMLworkLocation.replace("%data%",
+			work.jobs[job].location));
+		$(".work-entry:last").append(HTMLworkDescription.replace("%data%",
+			work.jobs[job].description));
+	}
+}
+
 var projects = {
 	"projects": [{
 		"title": "Place Holder",
@@ -72,6 +87,17 @@ var bio = {
 	}
 }
 
+skills.display = function () {
+	if (bio.skills !== false) {
+		$("#header").append(HTMLskillsStart);
+
+		for (skill in bio.skills){
+			$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
+		}
+	}
+}
+
+
 var education = {
 	"schools": [{
 		"name": "Pennsylvania Culinary Institute (Closed 2012)",
@@ -105,30 +131,6 @@ var education = {
 	}]
 
 }
-function displaySkills() {
-	if (bio.skills !== false) {
-		$("#header").append(HTMLskillsStart);
-
-		for (skill in bio.skills){
-			$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
-		}
-	}
-}
-
-function displayWork() {
-	for (job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-		$(".work-entry:last").append(HTMLworkEmployer.replace("%data%",
-			work.jobs[job].employer) + HTMLworkTitle.replace("%data%",
-			work.jobs[job].title));
-		$(".work-entry:last").append(HTMLworkDates.replace("%data%",
-			work.jobs[job].dates));
-		$(".work-entry:last").append(HTMLworkLocation.replace("%data%",
-			work.jobs[job].location));
-		$(".work-entry:last").append(HTMLworkDescription.replace("%data%",
-			work.jobs[job].description));
-	}
-}
 
 projects.display = function() {
 	for (project in projects.projects) {
@@ -147,6 +149,9 @@ projects.display = function() {
 	}
 }
 
+
+/* TODO: Plug function inName to internationalizeButton if desired.
+
 $("#main").append(internationalizeButton);
 function inName(name) {
 	var nameArray = name.trim().split(" ");
@@ -155,13 +160,10 @@ function inName(name) {
 	var newName = firstName + " " + lastName;
 	return newName;
 }
+*/
 
 displaySkills();
 displayWork();
 projects.display();
 
 $("#mapDiv").append(googleMap);
-
-$(document).click(function(loc) {
-
-});
