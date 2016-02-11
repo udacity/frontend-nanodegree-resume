@@ -56,6 +56,10 @@ var bio = {
 	"name": "Tiffany Stallings",
 	"role": "Front End Web Developer",
 	"welcomeMessage": "Lorem ipsum dolor sit amet.",
+	"skills": [
+		"HTML & CSS",
+		"JavaScript",
+		"Python"]
 	"contacts": {
 		"mobile": "843-592-6095",
 		"email": "tiffany.c.stallings@gmail.com",
