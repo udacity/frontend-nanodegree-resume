@@ -83,11 +83,16 @@ var bio = {
 		"email": "tiffany.c.stallings@gmail.com",
 		"github": "tiffanystallings",
 		"twitter": "@ZameenaRaqs",
+		"blog": "https://tiffanystallings.wordpress.com/",
 		"location": "Marietta, GA"
-	}
+	},
+	"biopic": "http://placehold.it/300x300"
 }
 
-skills.display = function () {
+bio.display = function () {
+	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+	$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+
 	if (bio.skills !== false) {
 		$("#header").append(HTMLskillsStart);
 
@@ -95,6 +100,21 @@ skills.display = function () {
 			$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
 		}
 	}
+	if (bio.contacts !== false) {
+		$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+		$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+
+		$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+		$("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+
+		$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+		$("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+
+		$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+		$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+	}
+	$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+	$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 }
 
 
@@ -162,8 +182,8 @@ function inName(name) {
 }
 */
 
-displaySkills();
-displayWork();
+bio.display();
+work.display();
 projects.display();
 
 $("#mapDiv").append(googleMap);
