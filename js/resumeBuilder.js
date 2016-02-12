@@ -186,10 +186,20 @@ education.display = function() {
 			education.schools[school].major));
 		$(".education-entry:last").append(HTMLschoolDegree.replace("%data%",
 			education.schools[school].degree));
-
 		$(".education-entry:last").append(HTMLschoolLocation.replace("%data%",
 			education.schools[school].location));
-
+	}
+	$("#education").append(HTMLonlineClasses);
+	for (course in education.onlineCourses) {
+		$("#education").append(HTMLschoolStart);
+		$(".education-entry:last").append(HTMLonlineTitle.replace("%data%",
+			education.onlineCourses[course].title))
+		$(".education-entry:last").append(HTMLonlineSchool.replace("%data%",
+			education.onlineCourses[course].school))
+		$(".education-entry:last").append(HTMLonlineDates.replace("%data%",
+			education.onlineCourses[course].dates))
+		$(".education-entry:last").append(HTMLonlineURL.replace("%data%",
+			education.onlineCourses[course].url))
 	}
 
 }
