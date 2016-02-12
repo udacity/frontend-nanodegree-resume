@@ -70,6 +70,25 @@ var projects = {
 	}]
 }
 
+projects.display = function() {
+	if (projects !== false) {
+		for (project in projects.projects) {
+			$("#projects").append(HTMLprojectStart)
+			$(".project-entry:last").append(HTMLprojectTitle.replace("%data%",
+				projects.projects[project].title));
+			$(".project-entry:last").append(HTMLprojectDates.replace("%data%",
+				projects.projects[project].dates));
+			$(".project-entry:last").append(HTMLprojectDescription.replace("%data%",
+				projects.projects[project].description));
+
+			for (image in projects.projects[project].images) {
+				$(".project-entry:last").append(HTMLprojectImage.replace("%data%",
+					projects.projects[project].images[image]));
+			}
+		}
+	}
+}
+
 var bio = {
 	"name": "Tiffany Stallings",
 	"role": "Front End Web Developer",
@@ -155,21 +174,24 @@ var education = {
 
 }
 
-projects.display = function() {
-	for (project in projects.projects) {
-		$("#projects").append(HTMLprojectStart)
-		$(".project-entry:last").append(HTMLprojectTitle.replace("%data%",
-			projects.projects[project].title));
-		$(".project-entry:last").append(HTMLprojectDates.replace("%data%",
-			projects.projects[project].dates));
-		$(".project-entry:last").append(HTMLprojectDescription.replace("%data%",
-			projects.projects[project].description));
+education.display = function() {
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+		$(".education-entry:last").append(HTMLschoolName.replace("%data%",
+			education.schools[school].name).replace("#",
+			education.schools[school].url));
+		$(".education-entry:last").append(HTMLschoolDates.replace("%data%",
+			education.schools[school].dates));
+		$(".education-entry:last").append(HTMLschoolMajor.replace("%data%",
+			education.schools[school].major));
+		$(".education-entry:last").append(HTMLschoolDegree.replace("%data%",
+			education.schools[school].degree));
 
-		for (image in projects.projects[project].images) {
-			$(".project-entry:last").append(HTMLprojectImage.replace("%data%",
-				projects.projects[project].images[image]));
-		}
+		$(".education-entry:last").append(HTMLschoolLocation.replace("%data%",
+			education.schools[school].location));
+
 	}
+
 }
 
 
@@ -188,5 +210,6 @@ function inName(name) {
 bio.display();
 work.display();
 projects.display();
+education.display();
 
 $("#mapDiv").append(googleMap);
