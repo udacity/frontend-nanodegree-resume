@@ -117,19 +117,19 @@ a {
   color: #fff;
 }
 
-.gray {
-  background-color: #f3f3f3;
+.light-yellow {
+  background-color: #eff7d1;
   padding-bottom: 10px;
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.green {
+  background-color: #499635;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background: #499635;
+  background: linear-gradient(#499635, #eff7d1);
 }
 
 .flex-box {
