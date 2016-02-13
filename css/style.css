@@ -21,7 +21,7 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 10px 5%;
 }
 
 h1 {
@@ -60,7 +60,7 @@ h4,
 h5 {
   letter-spacing: 5px;
   font-weight: 900;
-  padding:10px 5%;
+  padding: 20px 5%;
 
 }
 
