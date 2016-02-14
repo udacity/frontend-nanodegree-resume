@@ -1,10 +1,16 @@
+
+div {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
 .wrapper {
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
-	display: -webkit-flex;
-	display: flex;
-	flex-wrap: wrap;
 }
 
 .container {
@@ -13,8 +19,6 @@
 
 .row {
 	width: 100%;
-	display: flex;
-	justify-content: space-around;
 }
 
 .col-1 {
