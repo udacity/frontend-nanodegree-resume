@@ -97,6 +97,14 @@ hr {
   padding: 10px;
 }
 
+.main-right {
+  justify-content: flex-start;
+}
+
+.main-left {
+  justify-content: space-between;
+}
+
 .date-text {
   font-style: italic;
   font-size: 14px;

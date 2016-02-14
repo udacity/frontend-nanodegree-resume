@@ -29,10 +29,10 @@ var HTMLwelcomeMsg = '<div class="mid row"><div class="col-8 right"><span class=
 var HTMLskillsStart = '<div class="col-4 right"><h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul></div>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" class="bold-text">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkStart = '<div class="work-entry row"></div>';
+var HTMLworkEmployer = '<div class="col-6 main-right"><a href="#" class="bold-text">%data%';
+var HTMLworkTitle = ' - %data%</a></div>';
+var HTMLworkDates = '<div class="col-6 main-left"><div class="date-text">%data%</div></div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
