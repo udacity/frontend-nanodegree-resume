@@ -126,7 +126,7 @@ var bio = {
 		$(".mid").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
 		if (bio.skills !== false) {
-			$("#header").append(HTMLskillsStart);
+			$(".right").append(HTMLskillsStart);
 
 			for (skill in bio.skills){
 				$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
