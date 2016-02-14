@@ -1,20 +1,3 @@
-*{
-	border: 1px solid red !important;
-}
-
-*{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-@media only print and (max-width: 500px) {
-	p {
-		display: none;
-	}
-}
-
 .row{
 	width: 100%;
 	display: flex;
