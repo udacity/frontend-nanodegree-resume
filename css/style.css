@@ -31,6 +31,7 @@ h1 {
   color: #27676C;
   line-height: 48px;
   display: inline;
+  text-shadow: 3px 3px 5px #888888;
 }
 
 h2 {
@@ -44,7 +45,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #27676C;
   line-height: 22px;
 }
 
@@ -64,6 +65,11 @@ h5 {
 
 }
 
+hr {
+  color: #27676C;
+  border: 0;
+  border-bottom: 5px dotted;
+}
 
 .date-text {
   font-style: italic;
