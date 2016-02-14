@@ -31,7 +31,7 @@ h1 {
   color: #27676C;
   line-height: 48px;
   display: inline;
-  text-shadow: 3px 3px 5px #888888;
+  text-shadow: 3px 3px 5px #59888D;
 }
 
 h2 {
@@ -68,7 +68,16 @@ h5 {
 hr {
   color: #27676C;
   border: 0;
-  border-bottom: 5px dotted;
+  border-bottom: 3px solid;
+  box-shadow: 0 3px 10px #59888D;
+}
+
+.biopic,
+.project-image {
+  border: 4px solid #27676C;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #59888D;
 }
 
 .date-text {
