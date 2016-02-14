@@ -106,7 +106,7 @@ var bio = {
 	"biopic": "http://placehold.it/300x300",
 	"display": function () {
 		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-		$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+		$("#header").children(".row").prepend(HTMLheaderName.replace("%data%", bio.name));
 
 		if (bio.contacts !== false) {
 			$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
