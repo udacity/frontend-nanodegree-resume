@@ -12,6 +12,7 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Raleway", serif;
+  font-size: 14px;
 }
 
 .clear-fix {
@@ -104,10 +105,17 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #93AB3C;
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+.bold-text {
+  color: #59888D;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .welcome-message {
@@ -150,11 +158,8 @@ a {
   background: linear-gradient(#499635, #eff7d1);
 }
 
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
+.contact-box {
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
 }
