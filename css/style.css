@@ -14,11 +14,6 @@ h6 {
   font-size: 14px;
 }
 
-.wrapper {
-  border: 5px solid #27676C;
-  border-radius: 5px;
-}
-
 .education-entry,
 .work-entry,
 .project-entry {
@@ -163,8 +158,8 @@ a {
   color: #fff;
 }
 
-.light-yellow {
-  background-color: #eff7d1;
+.light-blue {
+  background-color: #ECF4F5;
   padding-bottom: 10px;
   clear:both;
 }
@@ -176,6 +171,7 @@ a {
 #header {
   background: #499635;
   background: linear-gradient(#499635, #eff7d1);
+  border-bottom: 3px solid #27676C;
 }
 
 .contact-box {
