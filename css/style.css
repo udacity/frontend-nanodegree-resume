@@ -14,14 +14,6 @@ h6 {
   font-size: 14px;
 }
 
-div {
-  position: relative;
-}
-
-.row {
-  padding-bottom: 5px;
-}
-
 .wrapper {
   border: 5px solid #27676C;
   border-radius: 5px;
@@ -75,11 +67,15 @@ h5 {
 }
 
 .first {
-  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-top: 20px;
 }
 
-.role {
-  font-size: 20px;
+.title {
+  flex-direction: column;
+  text-align: center;
 }
 
 hr {
@@ -92,7 +88,7 @@ hr {
 }
 
 .right {
-  display: block;
+  flex-direction: column;
 }
 
 .biopic,
@@ -103,6 +99,7 @@ hr {
   box-shadow: 5px 5px 5px #59888D;
   max-width: 100%;
   max-height: 100%;
+  padding: 10px;
 }
 
 .date-text {
@@ -151,7 +148,6 @@ a {
 
 #skills-h3 {
   color: #27676C;
-  display: none;
 }
 
 .blue {
@@ -183,22 +179,13 @@ a {
 }
 
 .contact-box {
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10px;
   width: 100%;
 }
 
 ul {
   list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
 }
 
 img {
@@ -216,6 +203,8 @@ span {
 
 /* Media queries to handle various device widths */
 
+@media only screen and (max-width: )
+
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
@@ -232,8 +221,17 @@ span {
   #lets-connect {
     margin-top: 10%;
   }
-  .biopic {
-    width: 150px;
+  .left {
+    display: none;
+  }
+  .title {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  #skills-h3 {
+    display: none;
   }
   .welcome-message {
     display: none;
@@ -250,11 +248,4 @@ span {
   width: 100%;
   margin-bottom: 10px;
   padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
 }

@@ -106,7 +106,7 @@ var bio = {
 	"biopic": "http://placehold.it/175x175",
 	"display": function () {
 		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-		$(".first").prepend(HTMLheaderName.replace("%data%", bio.name));
+		$(".title").prepend(HTMLheaderName.replace("%data%", bio.name));
 
 		if (bio.contacts !== false) {
 			$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
@@ -122,11 +122,11 @@ var bio = {
 			$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 		}
 
-		$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-		$(".mid").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+		$(".first").prepend(HTMLbioPic.replace("%data%", bio.biopic));
+		$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
 		if (bio.skills !== false) {
-			$(".right").append(HTMLskillsStart);
+			$(".first").append(HTMLskillsStart);
 
 			for (skill in bio.skills){
 				$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
