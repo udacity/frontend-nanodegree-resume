@@ -8,35 +8,38 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway:900,400' rel='stylesheet' type='text/css'>
 	<script src="js/jQuery.js"></script>
 	<script src="js/helper.js"></script>
+	<link href="css/framework.css" rel="stylesheet">
 	<script src="js/jquery.viewbox.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<meta name="viewport" content="width=device-width">
 </head>
 
 <body>
-	<div id="main">
-		<div id="header" class="center-content clear-fix">
+	<div id="container" class="center-content clear-fix row">
 			<ul id="topContacts" class="flex-box"></ul>
 		</div>
+
+	<div id="main" class="container">
 		<div style="clear: both;"></div>
-		<div id="workExperience" class="light-yellow">
+		<div id="workExperience" class="light-yellow row">
 			<h2>Work Experience</h2>
 		</div>
-		<div id="projects">
+		<div id="projects" class="row">
 			<h2>Projects</h2>
 		</div>
-		<div id="education" class="light-yellow">
+		<div id="education" class="light-yellow row">
 			<h2>Education</h2>
 		</div>
-		<div id="mapDiv">
+		<div id="mapDiv row">
 			<h2>Where I've Lived and Worked</h2>
 		</div>
-		<div id="lets-connect" class="green">
+	</div>
+
+	<div id="lets-connect" class="green container">
 			<h2 class="blue center-text">Let's Connect</h2>
 			<ul id="footerContacts" class="flex-box">
 			</ul>
 		</div>
-	</div>
 	<script src="js/resumeBuilder.js"></script>
 </body>
 </html>

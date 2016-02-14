@@ -1,7 +1,11 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+}
+
 .row{
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
 }
 
 .col-1{
