@@ -1,6 +1,7 @@
 .container {
 	width: 100%;
 	max-width: 1200px;
+	margin: auto;
 	display: -webkit-flex;
 	display: flex;
 	flex-wrap: wrap;
