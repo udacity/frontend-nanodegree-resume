@@ -67,9 +67,17 @@ h5 {
 
 }
 
+.first {
+  padding-top: 50px;
+}
+
+.role {
+  font-size: 20px;
+}
+
 hr {
   display: block;
-  width: 100%;
+  width: 90%;
   color: #27676C;
   border: 0;
   border-bottom: 3px solid #27676C;
