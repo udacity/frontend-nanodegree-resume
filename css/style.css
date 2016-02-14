@@ -159,9 +159,12 @@ a {
 }
 
 .contact-box {
+  display: flex;
+  flex-wrap: no-wrap;
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
+  width: 100%;
 }
 
 .center-content {
