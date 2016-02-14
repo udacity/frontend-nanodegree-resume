@@ -103,7 +103,7 @@ var bio = {
 		"blog": "https://tiffanystallings.wordpress.com/",
 		"location": "Marietta, GA"
 	},
-	"biopic": "http://placehold.it/300x300",
+	"biopic": "http://placehold.it/175x175",
 	"display": function () {
 		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 		$(".first").prepend(HTMLheaderName.replace("%data%", bio.name));
