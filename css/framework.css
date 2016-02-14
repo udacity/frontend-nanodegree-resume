@@ -14,8 +14,8 @@
 .row {
 	width: 100%;
 	display: flex;
-	flex-wrap: no-wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: flex-end;
 }
 
 .col-1 {

@@ -12,8 +12,8 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<div class="col-8"><h1 id="name">%data%</h1></div>';
-var HTMLheaderRole = '<div class="row"><div class="col-4"><span>%data%</span></div></div><hr>';
+var HTMLheaderName = '<div class="col-4"><h1 id="name">%data%</h1></div>';
+var HTMLheaderRole = '<div class="first row"><div class="col-4"><span>%data%</span></div></div><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -23,8 +23,8 @@ var HTMLgithub = '<li class="flex-item"><span class="blue-text">github</span><sp
 var HTMLblog = '<li class="flex-item"><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="blue-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div class="mid row"><div class="col-4"><img src="%data%" class="biopic"></div></div>';
+var HTMLwelcomeMsg = '<div class="col-8"><span class="welcome-message">%data%</span></div>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
