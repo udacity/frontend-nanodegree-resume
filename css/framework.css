@@ -13,6 +13,9 @@
 
 .row {
 	width: 100%;
+	display: flex;
+	flex-wrap: no-wrap;
+	justify-content: space-between;
 }
 
 .col-1 {
