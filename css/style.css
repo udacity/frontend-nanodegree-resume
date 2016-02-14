@@ -10,7 +10,7 @@ h4,
 h5,
 h6 {
   padding:0;
-  margin:0;
+  margin: auto;
   font-family: "Raleway", serif;
   font-size: 14px;
 }
@@ -68,10 +68,16 @@ h5 {
 }
 
 hr {
+  display: block;
+  width: 100%;
   color: #27676C;
   border: 0;
-  border-bottom: 3px solid;
+  border-bottom: 3px solid #27676C;
   box-shadow: 0 3px 10px #59888D;
+}
+
+.right {
+  display: block;
 }
 
 .biopic,
@@ -80,6 +86,8 @@ hr {
   border-radius: 5px;
   background-color: white;
   box-shadow: 5px 5px 5px #59888D;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .date-text {
