@@ -10,9 +10,16 @@ h4,
 h5,
 h6 {
   padding:0;
-  margin: auto;
   font-family: "Raleway", serif;
   font-size: 14px;
+}
+
+div {
+  position: relative;
+}
+
+.row {
+  padding-bottom: 5px;
 }
 
 .wrapper {
@@ -203,6 +210,7 @@ span {
 }
 
 #lets-connect {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -234,13 +242,13 @@ span {
 
 #map {
   display: block;
-  height: 100%;
+  height: 300px;
   margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
   width: 100%;
+  margin-bottom: 10px;
   padding-bottom: 5%;
 }
 
