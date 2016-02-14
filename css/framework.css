@@ -15,7 +15,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
-	align-items: flex-end;
+	margin: auto;
 }
 
 .col-1 {
