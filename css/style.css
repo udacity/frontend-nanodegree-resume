@@ -15,6 +15,11 @@ h6 {
   font-size: 14px;
 }
 
+.wrapper {
+  border: 5px solid #27676C;
+  border-radius: 5px;
+}
+
 .clear-fix {
   overflow: auto;
 }
