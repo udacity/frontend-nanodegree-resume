@@ -75,9 +75,10 @@ h5 {
 
 hr {
   display: block;
-  width: 90%;
+  width: 95%;
   color: #27676C;
   border: 0;
+  margin-top: 10px;
   border-bottom: 3px solid #27676C;
   box-shadow: 0 3px 10px #59888D;
 }
@@ -155,6 +156,8 @@ a {
 
 .blue {
   background-color: #27676C;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .blue-text {
@@ -174,6 +177,9 @@ a {
 
 .green {
   background-color: #499635;
+  background: linear-gradient(#eff7d1, #499635);
+  border-top: 3px solid #27676C;
+  justify-content: flex-center;
 }
 
 #header {
@@ -183,9 +189,8 @@ a {
 }
 
 .contact-box {
-  flex-direction: row;
   justify-content: space-around;
-  width: 100%;
+  flex-direction: row;
 }
 
 ul {
@@ -200,14 +205,7 @@ span {
   padding: 5px;
 }
 
-#lets-connect {
-  margin-top: 10px;
-  text-align: center;
-}
-
 /* Media queries to handle various device widths */
-
-@media only screen and (max-width: )
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
@@ -217,7 +215,7 @@ span {
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 175px;
+    width: 100%;
   }
 }
 
