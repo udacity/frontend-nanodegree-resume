@@ -36,6 +36,7 @@ h2 {
   color: #9BB5B7;
   line-height: 29px;
   padding: 10px;
+  text-align: center;
 }
 
 h3 {
@@ -78,9 +79,9 @@ hr {
   width: 95%;
   color: #27676C;
   border: 0;
-  margin-top: 10px;
+  padding-top: 3px;
   border-bottom: 3px solid #27676C;
-  box-shadow: 0 3px 10px #59888D;
+  box-shadow: 0 3px 5px #59888D;
 }
 
 .right {
@@ -99,11 +100,15 @@ hr {
 }
 
 .main-right {
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .main-left {
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.online-date {
+  justify-content: flex-end;
 }
 
 .date-text {
@@ -121,6 +126,10 @@ hr {
   line-height: 16px;
   float: right;
 
+}
+
+.url {
+  justify-content: flex-start;
 }
 
 p {
@@ -225,7 +234,6 @@ span {
     flex-direction: column;
     justify-content: flex-center;
   }
-
   .left {
     display: none;
   }

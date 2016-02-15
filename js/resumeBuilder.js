@@ -33,7 +33,7 @@ var work = {
 				work.jobs[job].title));
 			$(".work-entry:last").append(HTMLworkDates.replace("%data%",
 				work.jobs[job].dates));
-			$(".main-left:last").append(HTMLworkLocation.replace("%data%",
+			$(".main-right:last").append(HTMLworkLocation.replace("%data%",
 				work.jobs[job].location));
 			$(".work-entry:last").append(HTMLworkDescription.replace("%data%",
 				work.jobs[job].description));
@@ -173,13 +173,13 @@ var education = {
 			$(".education-entry:last").append(HTMLschoolName.replace("%data%",
 				education.schools[school].name).replace("#",
 				education.schools[school].url));
+			$(".main-left:last").append(HTMLschoolDegree.replace("%data%",
+				education.schools[school].degree));
 			$(".education-entry:last").append(HTMLschoolDates.replace("%data%",
 				education.schools[school].dates));
-			$(".education-entry:last").append(HTMLschoolMajor.replace("%data%",
+			$(".main-right:last").append(HTMLschoolMajor.replace("%data%",
 				education.schools[school].major));
-			$(".education-entry:last").append(HTMLschoolDegree.replace("%data%",
-				education.schools[school].degree));
-			$(".education-entry:last").append(HTMLschoolLocation.replace("%data%",
+			$(".main-right:last").append(HTMLschoolLocation.replace("%data%",
 				education.schools[school].location));
 		}
 		$("#education").append(HTMLonlineClasses);
@@ -187,7 +187,7 @@ var education = {
 			$("#education").append(HTMLschoolStart);
 			$(".education-entry:last").append(HTMLonlineTitle.replace("%data%",
 				education.onlineCourses[course].title))
-			$(".education-entry:last").append(HTMLonlineSchool.replace("%data%",
+			$(".main-left:last").append(HTMLonlineSchool.replace("%data%",
 				education.onlineCourses[course].school))
 			$(".education-entry:last").append(HTMLonlineDates.replace("%data%",
 				education.onlineCourses[course].dates))
