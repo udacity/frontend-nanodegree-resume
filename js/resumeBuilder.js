@@ -71,17 +71,16 @@ var projects = {
 		if (projects !== false) {
 			for (project in projects.projects) {
 				$("#projects").append(HTMLprojectStart)
-				$(".project-entry:last").append(HTMLprojectTitle.replace("%data%",
-					projects.projects[project].title));
-				$(".project-entry:last").append(HTMLprojectDates.replace("%data%",
-					projects.projects[project].dates));
-				$(".project-entry:last").append(HTMLprojectDescription.replace("%data%",
-					projects.projects[project].description));
-
 				for (image in projects.projects[project].images) {
-					$(".project-entry:last").append(HTMLprojectImage.replace("%data%",
+					$(".main-left:last").append(HTMLprojectImage.replace("%data%",
 						projects.projects[project].images[image]));
 				}
+				$(".main-right:last").append(HTMLprojectTitle.replace("%data%",
+					projects.projects[project].title));
+				$(".main-right:last").append(HTMLprojectDates.replace("%data%",
+					projects.projects[project].dates));
+				$(".main-right:last").append(HTMLprojectDescription.replace("%data%",
+					projects.projects[project].description));
 			}
 		}
 	}

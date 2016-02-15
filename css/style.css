@@ -109,6 +109,10 @@ hr {
   justify-content: flex-end;
 }
 
+.project-entry .main-right {
+  flex-direction: column;
+}
+
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -202,12 +206,12 @@ a {
   width: 100%;
 }
 
-ul {
-  list-style-type: none;
+.project-image ~ .project-image {
+  display: none;
 }
 
-img {
-  padding: 10px;
+ul {
+  list-style-type: none;
 }
 
 span {
