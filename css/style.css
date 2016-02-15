@@ -63,8 +63,6 @@ h5 {
 }
 
 .first {
-  display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   padding-top: 20px;
 }
@@ -201,6 +199,7 @@ a {
 .contact-box {
   justify-content: space-around;
   flex-direction: row;
+  width: 100%;
 }
 
 ul {
