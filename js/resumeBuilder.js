@@ -48,8 +48,8 @@ var projects = {
 		"description": "Lorem ipsum dolor sit amet.",
 		"images": [
 			"http://placehold.it/300x200",
-			"http://placehold.it/300x200",
-			"http://placehold.it/300x200"]
+			"./images/fry.jpg",
+			"http://placekitten.com/300/200"]
 		}, {
 		"title": "Place Holder",
 		"dates": "February 2016",
@@ -70,10 +70,10 @@ var projects = {
 	"display": function() {
 		if (projects !== false) {
 			for (project in projects.projects) {
-				$("#projects").append(HTMLprojectStart)
+				$("#projects").append(HTMLprojectStart);
 				for (image in projects.projects[project].images) {
 					$(".main-left:last").append(HTMLprojectImage.replace("%data%",
-						projects.projects[project].images[image]));
+					projects.projects[project].images[image]));
 				}
 				$(".main-right:last").append(HTMLprojectTitle.replace("%data%",
 					projects.projects[project].title));
@@ -81,6 +81,18 @@ var projects = {
 					projects.projects[project].dates));
 				$(".main-right:last").append(HTMLprojectDescription.replace("%data%",
 					projects.projects[project].description));
+				$(".project-image").click(function(){
+					if ($(this).is(":last-child")) {
+						$(this).fadeOut("slow", function() {
+							$(".project-image:first-child").fadeIn();
+						});
+					} else {
+						$(this).fadeOut("slow", function (){
+							$(this).next().fadeIn();
+						});
+					}
+
+				});
 			}
 		}
 	}
