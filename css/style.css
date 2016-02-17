@@ -21,7 +21,7 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 900;
   letter-spacing: 5px;
   color: #27676C;
@@ -111,6 +111,10 @@ hr {
 
 .project-entry .main-right {
   flex-direction: column;
+}
+
+.project-entry {
+  border-bottom: 3px solid #9BB5B7;
 }
 
 .date-text {
@@ -237,20 +241,23 @@ span {
     flex-direction: column;
     justify-content: flex-center;
   }
-  .left {
-    display: none;
-  }
-  .title {
+  .title,
+  .right,
+  #projects .main-left,
+  #projects .main-right {
     width: 100%;
   }
-  .right {
-    width: 100%;
-  }
-  #skills-h3 {
-    display: none;
-  }
+  .left,
+  #skills-h3,
   .welcome-message {
     display: none;
+  }
+  #projects {
+    flex-direction: column;
+    justify-content: flex-center;
+  }
+  .project-image {
+    margin: auto;
   }
 }
 
