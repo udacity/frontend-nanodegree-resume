@@ -15,13 +15,13 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<div class="first row"><div class="col-5 title"><span>%data%</span></div></div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="blue-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="blue-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="blue-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li><span class="blue-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li><span class="blue-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li><span class="blue-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<div class="col-3 left"><img src="%data%" class="biopic"></div>';
 var HTMLwelcomeMsg = '<div class="mid row"><div class="col-8 right"><span class="welcome-message">%data%</span></div>';
