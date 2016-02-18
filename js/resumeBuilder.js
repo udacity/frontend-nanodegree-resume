@@ -47,25 +47,25 @@ var projects = {
 		"dates": "February 2016",
 		"description": "Lorem ipsum dolor sit amet.",
 		"images": [
-			"http://placehold.it/300x200",
-			"./images/fry.jpg",
-			"http://placekitten.com/300/200"]
+			"http://lorempixel.com/300/200",
+			"http://lorempixel.com/300/200/cats",
+			"http://lorempixel.com/300/200/animals"]
 		}, {
 		"title": "Place Holder",
 		"dates": "February 2016",
 		"description": "Lorem ipsum dolor sit amet.",
 		"images": [
-			"http://placehold.it/300x200",
-			"http://placehold.it/300x200",
-			"http://placehold.it/300x200"]
+			"http://lorempixel.com/300/200/cats",
+			"http://lorempixel.com/300/200/animals",
+			"http://lorempixel.com/300/200"]
 		}, {
 		"title": "Place Holder",
 		"dates": "February 2016",
 		"description": "Lorem ipsum dolor sit amet.",
 		"images": [
-			"http://placehold.it/300x200",
-			"http://placehold.it/300x200",
-			"http://placehold.it/300x200"]
+			"http://lorempixel.com/300/200/animals",
+			"http://lorempixel.com/300/200",
+			"http://lorempixel.com/300/200/cats"]
 	}],
 	"display": function() {
 		if (projects !== false) {
