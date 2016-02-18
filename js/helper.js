@@ -21,7 +21,7 @@ var HTMLemail = '<li><span class="blue-text">email</span><span class="white-text
 var HTMLtwitter = '<li><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li><span class="blue-text">github</span><span class="white-text">%data%</span></li>';
 var HTMLblog = '<li><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li><span class="blue-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li><span class="blue-text">⭆</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<div class="col-3 left"><img src="%data%" class="biopic"></div>';
 var HTMLwelcomeMsg = '<div class="mid row"><div class="col-8 right"><span class="welcome-message">%data%</span></div>';
