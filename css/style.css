@@ -192,14 +192,14 @@ a {
 
 .green {
   background-color: #499635;
-  background: linear-gradient(#eff7d1, #499635);
+  background: linear-gradient(#9BB5B7, #499635);
   border-top: 3px solid #27676C;
   justify-content: center;
 }
 
 #header {
   background: #499635;
-  background: linear-gradient(#499635, #eff7d1);
+  background: linear-gradient(#499635, #9BB5B7);
   border-bottom: 3px solid #27676C;
 }
 
