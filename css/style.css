@@ -171,7 +171,6 @@ a {
 
 .blue {
   background-color: #27676C;
-  text-align: center;
   margin-top: 20px;
 }
 
@@ -195,7 +194,7 @@ a {
   background-color: #499635;
   background: linear-gradient(#eff7d1, #499635);
   border-top: 3px solid #27676C;
-  justify-content: flex-center;
+  justify-content: center;
 }
 
 #header {
@@ -226,38 +225,38 @@ span {
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
-    margin-top: 5%;
+	margin-top: 5%;
   }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 100%;
+	width: 100%;
   }
 }
 
 @media only screen and (max-width: 750px) {
   .contact-box {
-    flex-direction: column;
-    justify-content: flex-center;
+	flex-direction: column;
+	justify-content: center;
   }
   .title,
   .right,
   #projects .main-left,
   #projects .main-right {
-    width: 100%;
+	width: 100%;
   }
   .left,
   #skills-h3,
   .welcome-message {
-    display: none;
+	display: none;
   }
   #projects {
-    flex-direction: column;
-    justify-content: flex-center;
+	flex-direction: column;
+	justify-content: center;
   }
   .project-image {
-    margin: auto;
+	margin: auto;
   }
 }
 
@@ -271,4 +270,45 @@ span {
   width: 100%;
   margin-bottom: 10px;
   padding-bottom: 5%;
+}
+
+@media only print {
+  body {
+	font-size: 12px;
+  }
+
+  h1 {
+	font-size: 20px;
+  }
+
+  .title,
+  .right,
+  #workExperience,
+  #education {
+	width: 100%;
+	margin: 0;
+  }
+
+  .title {
+  	flex-wrap: nowrap;
+  }
+
+  #mapDiv,
+  .left,
+  #lets-connect,
+  .biopic,
+  #projects,
+  #skills-h3,
+  .welcome-message
+   {
+	display: none;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+	font-size: 14px;
+	padding: 10px;
+  }
 }
