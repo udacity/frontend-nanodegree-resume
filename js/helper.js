@@ -16,11 +16,12 @@ var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<div class="first row"><div class="col-5 title"><span>%data%</span></div></div>';
 
 var HTMLcontactGeneric = '<li><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li><span class="blue-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li><span class="blue-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li><span class="blue-text zocial-call"></span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li><span class="blue-text zocial-email"></span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li><span class="blue-text zocial-twitter"></span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li><span class="blue-text zocial-github"></span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li><span class="blue-text zocial-wordpress"></span><span class="white-text">%data%</span></li>';
+var HTMLlinkedin = '<li><span class="blue-text zocial-linkedin"></span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li><span class="blue-text">⭆</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<div class="col-3 left"><img src="%data%" class="biopic"></div>';
