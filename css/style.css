@@ -245,6 +245,18 @@ span {
   padding: 5px;
 }
 
+#map {
+  display: block;
+  height: 300px;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 5%;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -282,18 +294,9 @@ span {
   .project-image {
 	margin: auto;
   }
-}
-
-#map {
-  display: block;
-  height: 300px;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  width: 100%;
-  margin-bottom: 10px;
-  padding-bottom: 5%;
+  .first {
+  	padding-top: 100px;
+  }
 }
 
 @media only print {
