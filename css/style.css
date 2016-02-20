@@ -1,3 +1,10 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
 body,
 div,
 ul,
@@ -62,9 +69,14 @@ h5 {
 
 }
 
+.navbar h2 {
+	height: 30px;
+	padding-top: 0;
+}
+
 .first {
   align-items: flex-end;
-  padding-top: 20px;
+  padding-top: 65px;
 }
 
 .title {
