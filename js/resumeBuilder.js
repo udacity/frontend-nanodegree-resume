@@ -24,20 +24,21 @@ var work = {
 		"description": "Became an expert in preparing salads, desserts and \
 			griddle-cooked items. Defined new standards for the salad station and \
 			administered training to fellow employees on said standards."
-		}],
-	"display": function() {
-		for (job in work.jobs) {
-			$("#workExperience").append(HTMLworkStart);
-			$(".work-entry:last").append(HTMLworkEmployer.replace("%data%",
-				work.jobs[job].employer) + HTMLworkTitle.replace("%data%",
-				work.jobs[job].title));
-			$(".work-entry:last").append(HTMLworkDates.replace("%data%",
-				work.jobs[job].dates));
-			$(".main-right:last").append(HTMLworkLocation.replace("%data%",
-				work.jobs[job].location));
-			$(".work-entry:last").append(HTMLworkDescription.replace("%data%",
-				work.jobs[job].description));
-		}
+	}]
+}
+
+work.display = function() {
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		$(".work-entry:last").append(HTMLworkEmployer.replace("%data%",
+			work.jobs[job].employer) + HTMLworkTitle.replace("%data%",
+			work.jobs[job].title));
+		$(".work-entry:last").append(HTMLworkDates.replace("%data%",
+			work.jobs[job].dates));
+		$(".main-right:last").append(HTMLworkLocation.replace("%data%",
+			work.jobs[job].location));
+		$(".work-entry:last").append(HTMLworkDescription.replace("%data%",
+			work.jobs[job].description));
 	}
 }
 
@@ -115,37 +116,38 @@ var bio = {
 		"blog": "https://tiffanystallings.wordpress.com/",
 		"location": "Marietta, GA"
 	},
-	"biopic": "./images/my_picture.jpg",
-	"display": function () {
-		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-		$(".title").prepend(HTMLheaderName.replace("%data%", bio.name));
+	"biopic": "./images/my_picture.jpg"
+}
 
-		if (bio.contacts !== false) {
-			$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-			$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+bio.display = function () {
+	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+	$(".title").prepend(HTMLheaderName.replace("%data%", bio.name));
 
-			$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-			$("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+	if (bio.contacts !== false) {
+		$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+		$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 
-			$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-			$("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+		$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+		$("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 
-			$("#topContacts").append(HTMLlinkedin.replace("%data%", bio.contacts.linkedin));
-			$("#footerContacts").append(HTMLlinkedin.replace("%data%", bio.contacts.linkedin));
+		$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+		$("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
 
-			$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-			$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-		}
+		$("#topContacts").append(HTMLlinkedin.replace("%data%", bio.contacts.linkedin));
+		$("#footerContacts").append(HTMLlinkedin.replace("%data%", bio.contacts.linkedin));
 
-		$(".first").prepend(HTMLbioPic.replace("%data%", bio.biopic));
-		$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+		$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+		$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+	}
 
-		if (bio.skills !== false) {
-			$(".first").append(HTMLskillsStart);
+	$(".first").prepend(HTMLbioPic.replace("%data%", bio.biopic));
+	$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
-			for (skill in bio.skills){
-				$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
-			}
+	if (bio.skills !== false) {
+	$(".first").append(HTMLskillsStart);
+
+		for (skill in bio.skills){
+			$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
 		}
 	}
 }
@@ -181,34 +183,35 @@ var education = {
 		"school": "CodeCademy",
 		"dates": "January 2015 - April 2015",
 		"url": "https://www.codecademy.com/nysari"
-	}],
-	"display": function() {
-		for (school in education.schools) {
-			$("#education").append(HTMLschoolStart);
-			$(".education-entry:last").append(HTMLschoolName.replace("%data%",
-				education.schools[school].name).replace("#",
-				education.schools[school].url));
-			$(".main-left:last").append(HTMLschoolDegree.replace("%data%",
-				education.schools[school].degree));
-			$(".education-entry:last").append(HTMLschoolDates.replace("%data%",
-				education.schools[school].dates));
-			$(".main-right:last").append(HTMLschoolMajor.replace("%data%",
-				education.schools[school].major));
-			$(".main-right:last").append(HTMLschoolLocation.replace("%data%",
-				education.schools[school].location));
-		}
-		$("#education").append(HTMLonlineClasses);
-		for (course in education.onlineCourses) {
-			$("#education").append(HTMLschoolStart);
-			$(".education-entry:last").append(HTMLonlineTitle.replace("%data%",
-				education.onlineCourses[course].title))
-			$(".main-left:last").append(HTMLonlineSchool.replace("%data%",
-				education.onlineCourses[course].school))
-			$(".education-entry:last").append(HTMLonlineDates.replace("%data%",
-				education.onlineCourses[course].dates))
-			$(".education-entry:last").append(HTMLonlineURL.replace("%data%",
-				education.onlineCourses[course].url))
-		}
+	}]
+}
+
+education.display = function() {
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+		$(".education-entry:last").append(HTMLschoolName.replace("%data%",
+			education.schools[school].name).replace("#",
+			education.schools[school].url));
+		$(".main-left:last").append(HTMLschoolDegree.replace("%data%",
+			education.schools[school].degree));
+		$(".education-entry:last").append(HTMLschoolDates.replace("%data%",
+			education.schools[school].dates));
+		$(".main-right:last").append(HTMLschoolMajor.replace("%data%",
+			education.schools[school].major));
+		$(".main-right:last").append(HTMLschoolLocation.replace("%data%",
+			education.schools[school].location));
+	}
+	$("#education").append(HTMLonlineClasses);
+	for (course in education.onlineCourses) {
+		$("#education").append(HTMLschoolStart);
+		$(".education-entry:last").append(HTMLonlineTitle.replace("%data%",
+			education.onlineCourses[course].title))
+		$(".main-left:last").append(HTMLonlineSchool.replace("%data%",
+			education.onlineCourses[course].school))
+		$(".education-entry:last").append(HTMLonlineDates.replace("%data%",
+			education.onlineCourses[course].dates))
+		$(".education-entry:last").append(HTMLonlineURL.replace("%data%",
+			education.onlineCourses[course].url))
 	}
 }
 
