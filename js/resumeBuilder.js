@@ -111,6 +111,7 @@ var bio = {
 		"email": "tiffany.c.stallings@gmail.com",
 		"github": "tiffanystallings",
 		"twitter": "@ZameenaRaqs",
+		"linkedin": "Tiffany Stallings",
 		"blog": "https://tiffanystallings.wordpress.com/",
 		"location": "Marietta, GA"
 	},
@@ -128,6 +129,9 @@ var bio = {
 
 			$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
 			$("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+
+			$("#topContacts").append(HTMLlinkedin.replace("%data%", bio.contacts.linkedin));
+			$("#footerContacts").append(HTMLlinkedin.replace("%data%", bio.contacts.linkedin));
 
 			$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 			$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
