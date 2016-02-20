@@ -97,6 +97,11 @@ hr {
   padding: 10px;
 }
 
+.biopic {
+	max-width: 175px;
+	max-height: 175px;
+}
+
 .main-right {
   justify-content: space-between;
 }
@@ -193,14 +198,14 @@ a {
 .green {
   background-color: #499635;
   background: linear-gradient(#9BB5B7, #499635);
-  border-top: 3px solid #27676C;
+  border-top: 5px solid #27676C;
   justify-content: center;
 }
 
 #header {
   background: #499635;
   background: linear-gradient(#499635, #9BB5B7);
-  border-bottom: 3px solid #27676C;
+  border-bottom: 5px solid #27676C;
 }
 
 .contact-box {
