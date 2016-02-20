@@ -189,6 +189,11 @@ a {
 .blue {
   background-color: #27676C;
   margin-top: 20px;
+  height: 30px;
+}
+
+.blue h2 {
+	padding: 0;
 }
 
 .blue-text {
@@ -300,6 +305,15 @@ span {
 	font-size: 20px;
   }
 
+  .first {
+  	padding-top: 0;
+  }
+
+  .blue-text,
+  .white-text {
+  	font-size: 12px;
+  }
+
   .title,
   .right,
   #workExperience,
@@ -312,6 +326,7 @@ span {
   	flex-wrap: nowrap;
   }
 
+  nav,
   #mapDiv,
   .left,
   #lets-connect,
