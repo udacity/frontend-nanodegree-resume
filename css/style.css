@@ -193,11 +193,13 @@ a {
 
 .blue-text {
   color: #27676C;
+  font-size: 30px;
 }
 
 .white-text {
   font-weight: bold;
   color: #fff;
+  padding-top: 15px;
 }
 
 .light-blue {
