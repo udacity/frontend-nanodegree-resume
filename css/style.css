@@ -70,7 +70,7 @@ p {
 }
 
 a {
-	color: #93AB3C;
+	color: #93ab3c;
 	text-decoration: none;
 	margin-top: 10px;
 	display: block;
@@ -85,7 +85,7 @@ span {
 }
 
 .bold-text {
-	color: #59888D;
+	color: #59888d;
 	font-size: 15px;
 	font-weight: 900;
 	letter-spacing: 2px;
@@ -98,7 +98,7 @@ span {
 }
 
 .blue-text {
-	color: #27676C;
+	color: #27676c;
 	font-size: 30px;
 }
 
@@ -112,10 +112,10 @@ span {
 /* image styling tags */
 .biopic,
 .project-image {
-	border: 4px solid #27676C;
+	border: 4px solid #27676c;
 	border-radius: 5px;
 	background-color: white;
-	box-shadow: 5px 5px 5px #59888D;
+	box-shadow: 5px 5px 5px #59888d;
 	max-width: 100%;
 	max-height: 100%;
 	padding: 10px;
@@ -153,18 +153,18 @@ span {
 .welcome-message {
 	font-style: italic;
 	font-size: 18px;
-	color: #27676C;
+	color: #27676c;
 	line-height: 28px;
 }
 
 #skills-h3 {
-	color: #27676C;
+	color: #27676c;
 }
 
 #header {
 	background: #499635;
-	background: linear-gradient(#499635, #9BB5B7);
-	border-bottom: 5px solid #27676C;
+	background: linear-gradient(#499635, #9bb5b7);
+	border-bottom: 5px solid #27676c;
 }
 
 .contact-box {
@@ -176,11 +176,11 @@ span {
 hr {
 	display: block;
 	width: 95%;
-	color: #27676C;
+	color: #27676c;
 	border: 0;
 	padding-top: 3px;
-	border-bottom: 3px solid #27676C;
-	box-shadow: 0 3px 5px #59888D;
+	border-bottom: 3px solid #27676c;
+	box-shadow: 0 3px 5px #59888d;
 }
 
 /* main */
@@ -201,7 +201,7 @@ hr {
 }
 
 .project-entry {
-	border-bottom: 3px solid #9BB5B7;
+	border-bottom: 3px solid #9bb5b7;
 }
 
 .date-text {
@@ -225,7 +225,7 @@ hr {
 }
 
 .light-blue {
-	background-color: #ECF4F5;
+	background-color: #ecf4f5;
 	padding-bottom: 10px;
 	margin-top: 20px;
 	clear: both;
@@ -245,7 +245,7 @@ hr {
 
 /* footer */
 .blue {
-	background-color: #27676C;
+	background-color: #27676c;
 	margin-top: 20px;
 	height: 30px;
 }
@@ -256,8 +256,8 @@ hr {
 
 .green {
 	background-color: #499635;
-	background: linear-gradient(#9BB5B7, #499635);
-	border-top: 5px solid #27676C;
+	background: linear-gradient(#9bb5b7, #499635);
+	border-top: 5px solid #27676c;
 	justify-content: center;
 }
 
