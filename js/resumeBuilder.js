@@ -25,10 +25,10 @@ var work = {
 			griddle-cooked items. Defined new standards for the salad station and \
 			administered training to fellow employees on said standards."
 	}]
-}
+};
 
 work.display = function() {
-	for (job in work.jobs) {
+	for (var job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		$(".work-entry:last").append(HTMLworkEmployer.replace("%data%",
 			work.jobs[job].employer) + HTMLworkTitle.replace("%data%",
@@ -40,7 +40,7 @@ work.display = function() {
 		$(".work-entry:last").append(HTMLworkDescription.replace("%data%",
 			work.jobs[job].description));
 	}
-}
+};
 
 var projects = {
 	"projects": [{
@@ -67,37 +67,37 @@ var projects = {
 			"http://lorempixel.com/300/200/animals",
 			"http://lorempixel.com/300/200",
 			"http://lorempixel.com/300/200/cats"]
-	}],
-	"display": function() {
-		if (projects !== false) {
-			for (project in projects.projects) {
-				$("#projects").append(HTMLprojectStart);
-				for (image in projects.projects[project].images) {
-					$(".main-left:last").append(HTMLprojectImage.replace("%data%",
-					projects.projects[project].images[image]));
-				}
-				$(".main-right:last").append(HTMLprojectTitle.replace("%data%",
-					projects.projects[project].title));
-				$(".main-right:last").append(HTMLprojectDates.replace("%data%",
-					projects.projects[project].dates));
-				$(".main-right:last").append(HTMLprojectDescription.replace("%data%",
-					projects.projects[project].description));
-				$(".project-image").click(function(){
-					if ($(this).is(":last-child")) {
-						$(this).fadeOut("slow", function() {
-							$(".project-image:first-child").fadeIn();
-						});
-					} else {
-						$(this).fadeOut("slow", function (){
-							$(this).next().fadeIn();
-						});
-					}
+	}]
+};
 
-				});
+projects.display = function() {
+	if (projects !== false) {
+		for (var project in projects.projects) {
+			$("#projects").append(HTMLprojectStart);
+			for (var image in projects.projects[project].images) {
+				$(".main-left:last").append(HTMLprojectImage.replace("%data%",
+				projects.projects[project].images[image]));
 			}
+			$(".main-right:last").append(HTMLprojectTitle.replace("%data%",
+				projects.projects[project].title));
+			$(".main-right:last").append(HTMLprojectDates.replace("%data%",
+				projects.projects[project].dates));
+			$(".main-right:last").append(HTMLprojectDescription.replace("%data%",
+				projects.projects[project].description));
+			$(".project-image").click(function() {
+				if ($(this).is(":last-child")) {
+					$(this).fadeOut("slow", function() {
+						$(".project-image:first-child").fadeIn();
+					});
+				} else {
+					$(this).fadeOut("slow", function (){
+						$(this).next().fadeIn();
+					});
+				}
+			});
 		}
 	}
-}
+};
 
 var bio = {
 	"name": "Tiffany Stallings",
@@ -117,7 +117,7 @@ var bio = {
 		"location": "Marietta, GA"
 	},
 	"biopic": "./images/my_picture.jpg"
-}
+};
 
 bio.display = function () {
 	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
@@ -146,11 +146,11 @@ bio.display = function () {
 	if (bio.skills !== false) {
 	$(".first").append(HTMLskillsStart);
 
-		for (skill in bio.skills){
+		for (var skill in bio.skills){
 			$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
 		}
 	}
-}
+};
 
 
 var education = {
@@ -184,10 +184,10 @@ var education = {
 		"dates": "January 2015 - April 2015",
 		"url": "https://www.codecademy.com/nysari"
 	}]
-}
+};
 
 education.display = function() {
-	for (school in education.schools) {
+	for (var school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 		$(".education-entry:last").append(HTMLschoolName.replace("%data%",
 			education.schools[school].name).replace("#",
@@ -202,18 +202,18 @@ education.display = function() {
 			education.schools[school].location));
 	}
 	$("#education").append(HTMLonlineClasses);
-	for (course in education.onlineCourses) {
+	for (var course in education.onlineCourses) {
 		$("#education").append(HTMLschoolStart);
 		$(".education-entry:last").append(HTMLonlineTitle.replace("%data%",
-			education.onlineCourses[course].title))
+			education.onlineCourses[course].title));
 		$(".main-left:last").append(HTMLonlineSchool.replace("%data%",
-			education.onlineCourses[course].school))
+			education.onlineCourses[course].school));
 		$(".education-entry:last").append(HTMLonlineDates.replace("%data%",
-			education.onlineCourses[course].dates))
+			education.onlineCourses[course].dates));
 		$(".education-entry:last").append(HTMLonlineURL.replace("%data%",
-			education.onlineCourses[course].url))
+			education.onlineCourses[course].url));
 	}
-}
+};
 
 /* TODO: Plug function inName to internationalizeButton if desired.
 
