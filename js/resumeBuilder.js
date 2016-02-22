@@ -23,25 +23,24 @@ var bio = {
 // replacing holder for the data in bio object
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole= HTMLheaderRole.replace("%data%", bio.role);
-var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
-var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
-var formattedTwitter= HTMLtwitter.replace("%data%",bio.contact.twitter);
-var formattedGithub= HTMLgithub.replace("%data%",bio.contact.github);
-var formattedBlog= HTMLblog.replace("%data%",bio.contact.blog);
 var formattedBioPic= HTMLbioPic.replace("%data%",bio.bioPic);
-var formattedLocation= HTMLlocation.replace("%data%",bio.contact.location);
+var formattedWelcomeMessage= HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
+
+var formattedContactInfo= [];
+formattedContactInfo.push(HTMLmobile.replace("%data%",bio.contact.mobile));
+formattedContactInfo.push(HTMLemail.replace("%data%",bio.contact.email));
+formattedContactInfo.push(HTMLgithub.replace("%data%",bio.contact.github));
+formattedContactInfo.push(HTMLtwitter.replace("%data%",bio.contact.twitter));
+formattedContactInfo.push(HTMLlocation.replace("%data%",bio.contact.location));
+
+
 
 // Appending the formatted info from bio object to indexHTML
-$("#header").append(formattedName);
-$("#header").append(formattedRole);
-$("#header").append(HTMLcontactGeneric);
-$("#header").append(formattedMobile);
-$("#header").append(formattedEmail);
-$("#header").append(formattedTwitter);
-$("#header").append(formattedGithub);
-$("#header").append(formattedBlog);
-$("#header").append(formattedLocation);
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMessage);
+
 $("#header").appendHTMLkillsStart;
 
 	if(bio.skills.length >0 ){
@@ -54,6 +53,10 @@ $("#header").appendHTMLkillsStart;
 		$("#skills").append(formattedSkill);
 	};
 
+for(i in formattedContactInfo) {
+	$("#topContacts").append(formattedContactInfo[i]);
+	$("#footerContacts").append(formattedContactInfo[i]);
+}
 
 
 // education object
@@ -159,6 +162,17 @@ function displayWork(){
 		$(".work-entry:last").append(formattedLocation);
 	}
 }
+function locationizer(work_obj){
+	var locationArray=[];
+
+	for(job in work_obj.jobs){
+		var newLocation = work_obj.jobs[job].location;
+		locationArray.push(newLocation);
+	}
+	return locationArray;
+};
+
+
 displayWork();
 
 $(document).click(function(loc) {
@@ -195,7 +209,54 @@ var projects={
 	]
 
 }
+//
+//
+//
+//
+//
+//
+//
+//
+var worldTime={
+  "country":[
+  {
+    "name": "Mexicoo",
+    "hour": "20",
+  },
+  {
+    "name":"USA",
+     "hour": "21"
+ }
+ ]
+}
 
+function worldHour(_worldTime_obj){
+  var worldHourArray= [];
+  for(hour in _worldTime_obj.country){
+    var newhour=_worldTime_obj.country[hour].hour;
+    worldHourArray.push(newhour);
+  }
+  return worldHourArray;
+
+}
+console.log(worldHour(worldTime));
+//
+//
+//
+//
+//
+
+// Practice returning and array with description of everyproject
+function projectDescription(description_projects){
+	var descriptionArray =[];
+
+	for( description in description_projects.projects){
+		var newDescription = description_projects.projects[description].description;
+		descriptionArray.push(newDescription);
+	}
+	return descriptionArray;
+}
+console.log(projectDescription(projects));
 // replacing the placeholder with data in project object.
 var formattedprojectTitle= HTMLprojectTitle.replace("%data%", projects.projects[0].title);
 
@@ -205,3 +266,4 @@ $("#projects").append(formattedprojectTitle);
 
 console.log(bio);
 console.log(education);
+console.log(locationizer(work));
