@@ -53,10 +53,22 @@ $("#header").appendHTMLkillsStart;
 		$("#skills").append(formattedSkill);
 	};
 
-for(i in formattedContactInfo) {
-	$("#topContacts").append(formattedContactInfo[i]);
-	$("#footerContacts").append(formattedContactInfo[i]);
+for(info in formattedContactInfo) {
+	$("#topContacts").append(formattedContactInfo[info]);
+	$("#footerContacts").append(formattedContactInfo[info]);
 }
+
+function inName(name){
+	name=name.trim().split(" ");
+	console.log(name);
+	name[1]= name[1].toUpperCase();
+	name[0]= name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+
+	return name[0]+ " " + name[1];
+
+}
+
+$("main").append(internationalizeButton);
 
 
 // education object
@@ -189,10 +201,6 @@ var projects={
 			"dates": "Yesterday",
 			"description": "This project was really helpfull to understand the priniples behind responsive design, the use libraries and the use of Grunt",
 			"images":[
-				{
-				"projecimg1": "images/project1-1.jpg",
-				"projecimg2": "images/project1-2.jpg"
-				}
 			]
 		},
 		{
@@ -200,68 +208,49 @@ var projects={
 			"dates": "Yesterday",
 			"description": "This project was really helpfull to understand the how to use JSON, and review some principles of JavaScript",
 			"images":[
-				{
-				"projecimg1": "images/project2-1.jpg",
-				"projecimg2": "images/project2-2.jpg"
-				}
+	
 			]
 		}
 	]
 
 }
-//
-//
-//
-//
-//
-//
-//
-//
-var worldTime={
-  "country":[
-  {
-    "name": "Mexicoo",
-    "hour": "20",
-  },
-  {
-    "name":"USA",
-     "hour": "21"
- }
- ]
-}
 
-function worldHour(_worldTime_obj){
-  var worldHourArray= [];
-  for(hour in _worldTime_obj.country){
-    var newhour=_worldTime_obj.country[hour].hour;
-    worldHourArray.push(newhour);
-  }
-  return worldHourArray;
+projects.display = function(){
+	for (project in projects.projects){
+		$("#projects").append(HTMLprojectStart);
 
-}
-console.log(worldHour(worldTime));
-//
-//
-//
-//
-//
+	var formattedTitle= HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+	$(".project-entry:last").append(formattedTitle);
 
-// Practice returning and array with description of everyproject
-function projectDescription(description_projects){
-	var descriptionArray =[];
+	var formattedDates= HTMLprojectDates.replace("%data%",projects.projects[project].dates);
+	$(".project-entry:last").append(formattedDates);
 
-	for( description in description_projects.projects){
-		var newDescription = description_projects.projects[description].description;
-		descriptionArray.push(newDescription);
+	var formattedDescription= HTMLprojectDescription.replace("%data%",projects.projects[project].description);
+	$(".project-entry:last").append(formattedDescription);
+
+	if(projects.projects[project].images.length>0){
+		for(image in projects.projects[project].images){
+			var formattedImage=HTMLprojectImage.replace("%data",projects.projects[project].images[image]);
+			$(".project-entry:last").append(formattedImage);
+		}
 	}
-	return descriptionArray;
+	}
 }
-console.log(projectDescription(projects));
-// replacing the placeholder with data in project object.
-var formattedprojectTitle= HTMLprojectTitle.replace("%data%", projects.projects[0].title);
+projects.display();
 
-// appending the data to the HTML
-$("#projects").append(formattedprojectTitle);
+
+// Create an array returning the description of each project
+// function projectDescription(description_projects){
+// 	var descriptionArray =[];
+
+// 	for( description in description_projects.projects){
+// 		var newDescription = description_projects.projects[description].description;
+// 		descriptionArray.push(newDescription);
+// 	}
+// 	return descriptionArray;
+// }
+// console.log(projectDescription(projects));
+
 
 
 console.log(bio);
