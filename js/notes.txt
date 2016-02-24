@@ -1,0 +1,18 @@
+Within helper.js, you'll find the logic that controls the Google Map starting at line 70.
+
+Essentially, the function initializeMap() is called when the page loads. From there, the script iterates through all of the objects in the resume, collects the location strings and sends off those locations to the Google Place Search service. From there, the place search service results are turned into location pins on the map itself!
+
+Your Challenge
+Your goal is to add an overlay with the name of each city that will appear when a user clicks on your map.
+
+Start by checking out the createMapMarker() function in helper.js, which includes a few lines that add an event listener to the map that fires off an event when each marker gets clicked.
+
+google.maps.event.addListener(marker, 'click', function() {
+    // your code goes here
+});
+
+The code inside the event listener will run every time a user clicks on your map.
+
+createMapMarker() also creates an infoWindow object that will determines the properties of the overlay.
+
+Read through the Google Maps API for info windows and take a look at this example. Can you figure out the right function to call within the event listener to ensure that the infoWindow object opens when a user clicks on a location? Click "Continue to quiz" when you're ready to give it a shot!
