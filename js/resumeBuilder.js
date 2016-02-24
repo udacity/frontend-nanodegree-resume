@@ -236,6 +236,7 @@ projects.display = function(){
 	}
 	}
 }
+
 projects.display();
 
 
@@ -251,8 +252,4 @@ projects.display();
 // }
 // console.log(projectDescription(projects));
 
-
-
-console.log(bio);
-console.log(education);
-console.log(locationizer(work));
+$("#mapDiv").append(googleMap);
