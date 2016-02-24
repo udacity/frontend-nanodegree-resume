@@ -1,7 +1,3 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-
  // bio Object
 var bio = {
 	"name" : "David Vite",
@@ -45,12 +41,11 @@ $("#header").appendHTMLkillsStart;
 
 	if(bio.skills.length >0 ){
 		$("#header").append(HTMLskillsStart);
-		var formattedSkill=HTMLskills.replace("%data%",bio.skills[0]);
-		$("#skills").append(formattedSkill);
-		formattedSkill=HTMLskills.replace("%data%",bio.skills[1]);
-		$("#skills").append(formattedSkill);
-		formattedSkill=HTMLskills.replace("%data%",bio.skills[2]);
-		$("#skills").append(formattedSkill);
+
+		for(skill in bio.skills){
+		var formattedSkill=HTMLskills.replace("%data%",bio.skills[skill]);
+			$("#skills").append(formattedSkill);
+	}
 	};
 
 for(info in formattedContactInfo) {
@@ -87,43 +82,93 @@ var education={
 			"location": "Provo, Utah",
 			"degree": "Training",
 			"majors": ["English"],
-			"dates": 2014,
+			"dates": "2014",
+			"url": "http://www.elc.byu.edu/"
+		},
+		{
+			"name": "Brigham Young University",
+			"location": "Rexburg, Idaho",
+			"degree": "Training",
+			"majors": ["English"],
+			"dates": "2014",
 			"url": "http://www.elc.byu.edu/"
 		}
 	],
 
- 	"onlineCourses": [
+ 	"online": [
+	 	
 	 	{
+	 		"school": "Brigham Young University Idaho",
+	 		"title": "Pathway Program",
+	 		"dates": "December",
+	 		"url": "https://www.udacity.com/nanodegree"
+
+	 	},{
 	 		"school": "Udacity",
 	 		"title": "Frond End Nanodegree",
 	 		"dates": "December",
 	 		"url": "https://www.udacity.com/nanodegree"
 
+	 	},{
+	 		"school": "Udacity",
+	 		"title": "JavaScript",
+	 		"dates": "December",
+	 		"url": "https://www.udacity.com/nanodegree"
+	 	},{
+	 		"school": "Udacity",
+	 		"title": "HTML5 and CSS",
+	 		"dates": "December",
+	 		"url": "https://www.udacity.com/nanodegree"
+	 	},{
+	 		"school": "Udacity",
+	 		"title": "Version control and Git",
+	 		"dates": "December",
+	 		"url": "https://www.udacity.com/nanodegree"
 	 	}
  	]
 }
 
-// replacing holder with data in education object
-// school Universidad NAcional Autonoma de Mexico
-var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[0].name);
-var formattedschoolDegree= HTMLschoolDegree.replace("%data%", education.schools[0].degree);
-var formattedschoolDates= HTMLschoolDates.replace("%data%",education.schools[0].dates);
-var formattedschoolLocation= HTMLschoolLocation.replace("%data%",education.schools[0].location);
-var formattedschoolMajor= HTMLschoolMajor.replace("%data%",education.schools[0].majors);
-// Brigham Young University
+education.display= function(){
+	if(education.schools.length>0 || education.online.length>0){
+		for (school in education.schools){
+			$("#education").append(HTMLschoolStart);
 
+		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+			$(".education-entry:last").append(formattedschoolName);
 
+		var formattedschoolDegree= HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+			$(".education-entry:last").append(formattedschoolDegree);
 
-// Appending the formatted info from bio object to indexHTML
+		var formattedschoolDates=HTMLschoolDates.replace("%data%",education.schools[school].dates);
+			$(".education-entry:last").append(formattedschoolDates);
 
-$("#education").append(formattedschoolName);
-$("#education").append(formattedschoolDegree);
-$("#education").append(formattedschoolDates);
-$("#education").append(formattedschoolLocation);
-$("#education").append(formattedschoolMajor);
+		var formattedschoolLocation=HTMLschoolLocation.replace("%data%",education.schools[school].location);
+			$(".education-entry:last").append(formattedschoolLocation);
 
+		var formattedschoolMajor= HTMLschoolMajor.replace("%data%",education.schools[school].majors);
+			$(".education-entry:last").append(formattedschoolMajor);	
+		};
+	};
+	if(education.online.length>0){
+		$("#education").append(HTMLonlineClasses);
+			for (classes in education.online){
+			$("#education").append(HTMLschoolStart);
 
+		var formmatedonlineTitle=HTMLonlineTitle.replace("%data%", education.online[classes].title);
+			$(".education-entry:last").append(formmatedonlineTitle);
 
+		var formmatedonlineSchool=HTMLonlineSchool.replace("%data%", education.online[classes].school);
+			$(".education-entry:last").append(formmatedonlineSchool);
+
+		var formmatedonlineDates=HTMLonlineDates.replace("%data%", education.online[classes].dates);
+			$(".education-entry:last").append(formmatedonlineDates);
+
+		var formmatedonlineURL=HTMLonlineURL.replace("%data%", education.online[classes].url);
+			$(".education-entry:last").append(formmatedonlineURL);
+		}	
+	}
+
+}
 
 // work object
 var work={
@@ -238,18 +283,8 @@ projects.display = function(){
 }
 
 projects.display();
+education.display();
 
 
-// Create an array returning the description of each project
-// function projectDescription(description_projects){
-// 	var descriptionArray =[];
-
-// 	for( description in description_projects.projects){
-// 		var newDescription = description_projects.projects[description].description;
-// 		descriptionArray.push(newDescription);
-// 	}
-// 	return descriptionArray;
-// }
-// console.log(projectDescription(projects));
 
 $("#mapDiv").append(googleMap);
