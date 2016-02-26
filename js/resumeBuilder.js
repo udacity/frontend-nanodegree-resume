@@ -83,10 +83,10 @@ var projects = {
     "images": ["images/js_racer.png"]
   },
   {
-    "title": "My Second Project",
+    "title": "Quote Generator",
     "dates": "February 2016",
-    "description": "The most amazing 2nd project ever!",
-    "images": ["images/197x148.gif"]
+    "description": "A JavaScript quote-generator made with Mahuta Hoerara-Smith",
+    "images": ["images/quote-generator.png"]
   }]
 };
 
