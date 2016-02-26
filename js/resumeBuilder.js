@@ -1,8 +1,14 @@
 //$("#main").append("Daniel");
 // [string].replace([old],[new])
+//Declaring variables at the top
+var role = "Quality Engineer, Scrum Master";
+var name = "Daniel Gallegos";
+var formattedName = HTMLheaderName.replace("%data%", name);
+var formattedRole = HTMLheaderRole.replace("%data%", role);
 
-var awesomeThoughts = "I am Dan and I am AWESOME!";
+//Adding to text to 'main'
+//$("#main").append(funThoughts);
 
-var funThoughts = awesomeThoughts.replace ("AWESOME", "FUN");
-
-$("#main").append(funThoughts);
+//Adding Name & Job title to header
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
