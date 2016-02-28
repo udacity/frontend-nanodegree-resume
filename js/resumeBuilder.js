@@ -121,7 +121,7 @@ var education = {
 function displayEducation() {
 	for (school in education.schools){
 		$("#education").append(HTMLschoolStart);
-		console.log(education.schools[school].name);
+		//console.log(education.schools[school].name);
 		var formattedschoolName =
 		HTMLschoolName.replace("%data%",education.schools[school].name);
 		$(".education-entry:last").append(formattedschoolName);
@@ -145,7 +145,7 @@ function displayEducation() {
 	$("#education").append(HTMLonlineClasses);
 		for (onlineCourse in education.onlineCourses)
 		{
-			console.log("Test: " + education.onlineCourses[onlineCourse].title);
+			//console.log("Test: " + education.onlineCourses[onlineCourse].title);
 
 		    $("#education").append(HTMLschoolStart);
 		    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
@@ -196,7 +196,7 @@ var projects = {
 		"dates" : "2013",
 		"description" : "Lorem Ipsum is simply dummy text of the printing and" +
 			"typesetting industry publishing software like Aldus PageMaker including" +
-			"versions of Lorem Ipsum",
+			" versions of Lorem Ipsum",
 		"images" : [
 			{ "pic" : "images/fry.jpg", "alt": "Alt Text" }
 		],
