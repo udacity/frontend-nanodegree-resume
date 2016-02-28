@@ -1,7 +1,8 @@
 *{
     padding:0;
     margin:0;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .clearfix {
@@ -14,7 +15,7 @@
 }
 
 h1 {
-
+  font-family: 'Rock Salt', cursive, sans-serif;
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -22,8 +23,9 @@ h1 {
 }
 
 h2 {
+  font-family: 'Rock Salt', cursive, sans-serif;
   font-style: bold;
-  font-size: 24px;
+  font-size: 36px;
   color: #999999;
   line-height: 29px;
   padding: 10px;
