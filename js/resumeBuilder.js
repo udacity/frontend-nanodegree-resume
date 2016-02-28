@@ -78,33 +78,43 @@ function displayWork() {
 }
 
 displayWork();
+
+
 ////////////////////////////////
 //	education section         //
 ////////////////////////////////
 
 var education = {
 	"schools" : [
-	{
-		"name": "Udacity",
-		"attended": "2016",
-		"location": "Worcester, MA",
-		"major": "Front End Web Developer",
-		"degree": "Nanodegree"
-	},
-	{
-		"name" : "American International College, Computer Career Institute",
-		"attended" : "2008-2011",
-		"location": "Cambridge, MA",
-		"major": "Enterprise Solutions Developer/Visual Communication - Digital 3-D Design",
-		"degree" : "Master Certificate"
-	},
-	{
-		"name" : "Boston University, School of Public Communication",
-		"attended" : "1977-1981",
-		"location" : "Boston, MA",
-		"major" : "Journalism",
-		"degree" : ""
-	}
+		{
+			"name": "Udacity",
+			"attended": "2016",
+			"location": "Worcester, MA",
+			"major": "Front End Web Developer",
+			"degree": "Nanodegree"
+		},
+		{
+			"name" : "American International College, Computer Career Institute",
+			"attended" : "2008-2011",
+			"location": "Cambridge, MA",
+			"major": "Enterprise Solutions Developer/Visual Communication - Digital 3-D Design",
+			"degree" : "Master Certificate"
+		},
+		{
+			"name" : "Boston University, School of Public Communication",
+			"attended" : "1977-1981",
+			"location" : "Boston, MA",
+			"major" : "Journalism",
+			"degree" : ""
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "Front End Web Developer",
+			"school": "Udacity",
+			"dates": 2016,
+			"url": "http://www.udacity.com/course/ud804"
+		}
 	]
 };
 
@@ -116,15 +126,10 @@ function displayEducation() {
 		HTMLschoolName.replace("%data%",education.schools[school].name);
 		$(".education-entry:last").append(formattedschoolName);
 
-/*		if ( education.schools[school].degree = "") {
-			console.log("No degree!");
-		}
-		else */
-		{
 		var formattedschoolDegree =
 		HTMLschoolDegree.replace("%data%",education.schools[school].degree);
 		$(".education-entry:last").append(formattedschoolDegree);
-		}
+
 		var formattedschoolDates =
 		HTMLschoolDates.replace("%data%",education.schools[school].attended);
 		$(".education-entry:last").append(formattedschoolDates);
@@ -135,7 +140,21 @@ function displayEducation() {
 		HTMLschoolMajor.replace("%data%",education.schools[school].major);
 		$(".education-entry:last").append(formattedschoolMajor);
 
-	}
+		}
+
+	$("#education").append(HTMLonlineClasses);
+		for (onlineCourse in education.onlineCourses)
+		{
+			console.log("Test: " + education.onlineCourses[onlineCourse].title);
+
+		    $("#education").append(HTMLschoolStart);
+		    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+		    var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
+		    var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onlineCourse].dates);
+		    $(".onlineClasses-entry:last").append(formattedTitle);
+		    $(".onlineClasses-entry:last").append(formattedSchool);
+		    $(".onlineClasses-entry:last").append(formattedDates);
+		}
 }
 /*
 var HTMLonlineClasses = "<h3>Online Classes</h3>";
