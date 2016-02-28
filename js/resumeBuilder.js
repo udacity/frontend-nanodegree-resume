@@ -205,6 +205,7 @@ var projects = {
 	]
 };
 
+//var HTMLprojectTitle = "<a href='%url%'>%data%</a>";
 // encapsulated Project code
 function displayProject() {
 	for (proj in projects.projects){
@@ -212,7 +213,7 @@ function displayProject() {
 	$("#projects").append(HTMLprojectStart)
 //	console.log(projects.projects[proj].title);
 	var formattedprojectTitle =
-		HTMLprojectTitle.replace("%data%",projects.projects[proj].title);
+		HTMLprojectTitle.replace("%url%",projects.projects[proj].url).replace("%data%",projects.projects[proj].title);
 	$(".project-entry:last").append(formattedprojectTitle);
 	var formattedprojectDates =
 		HTMLprojectDates.replace("%data%",projects.projects[proj].dates);
@@ -231,7 +232,6 @@ function displayProject() {
 	}
 
 }}
-
 
 displayProject();
 
