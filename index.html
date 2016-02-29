@@ -1,31 +1,36 @@
 <!DOCTYPE html
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
-  <script src="js/jQuery.js"></script>
-  <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
   <!-- Google Maps script -->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <title>Online Resume -- Connie Hirsch</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+  <!-- Google Map script -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
 </head>
-<body unresolved>
-  <div id="main">
+<body>
+  <div id="container">
     <div id="header" class="center-content clearfix">
       <ul id="topContacts" class='flex-box'></ul>
     </div>
     <div style='clear: both;'></div>
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
-    </div>
-    <div id="education" class='gray'>
-      <h2>Education</h2>
-    </div>
+    <section>
+      <div class="row">
+        <div id="workExperience" class='gray col-md-6'>
+          <h2>Work Experience</h2>
+        </div>
+        <div id="education" class='orange col-md-6'>
+          <h2>Education</h2>
+        </div>
+      </div>
+    </section>
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
