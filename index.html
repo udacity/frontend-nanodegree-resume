@@ -18,9 +18,11 @@
 </head>
 <body>
   <div id="container">
-    <section>
-      <div id="header" class="center-content clearfix">
-        <ul id="topContacts" class='flex-box'></ul>
+    <section id="header">
+      <div class="row">
+        <div id="topTitle" class="center-content clearfix col-md-6"> </div>
+        <ul id="topContacts" class='flex-box col-md-6'></ul>
+      </div>
         <div id="bioPic"></div>
         <div id="welcome"></div>
         <ul id="madSkills"></ul>
@@ -86,7 +88,7 @@
     document.getElementById("topContacts").style.display = "none";
   }
   if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.display = "none";
+    document.getElementById("titleTop").style.display = "none";
   }
   if(document.getElementsByClassName("work-entry").length === 0) {
     document.getElementById("workExperience").style.display = "none";
