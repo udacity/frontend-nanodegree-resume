@@ -1,9 +1,9 @@
 var bio = {
 	"name": "Connie Hirsch",
 	"role": "Front End Web Developer",
-	"welcomeMessage": "Is this thing on?  TAP TAP  I sure hope it's working.  This has been, what they call, a learning experience.",
+	"welcomeMessage": "Is this thing on?  TAP TAP  I sure hope it's working.  This has been, what they call  'a learning experience.'",
 	"contacts": {
-		"mobile": "617 501-5763",
+		"mobile": "617 555-1234",
 		"email": "connie.hirsch@gmail.com",
 		"github": "ConnieHirsch",
 		"twitter" : "ConnieHirsch",
@@ -243,8 +243,8 @@ function displayBio() {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-		$("#header").prepend(formattedRole);
-		$("#header").prepend(formattedName);
+		$("#topTitle").append(formattedName);
+		$("#topTitle").append(formattedRole);
 
 		var formattedmobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 		$("#topContacts").append(formattedmobile);
@@ -259,12 +259,12 @@ function displayBio() {
 
 
 		var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic.pic).replace("%datum%", bio.bioPic.alt);
-		$("#topContacts").append(formattedbioPic);
+		$("#bioPic").append(formattedbioPic);
 
 		var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-		$("#topContacts").append(formattedWelcome);
+		$("#welcome").append(formattedWelcome);
 
-		$("#topContacts").append(HTMLskillsStart);
+		$("#madSkills").append(HTMLskillsStart);
 		//console.log(bio.skills);
 				var formattedSkills = "";
 				if (bio.skills.length > 0) {
@@ -275,7 +275,7 @@ function displayBio() {
 					}
 				};
 		$("#skills").append(formattedSkills);
-		$("#skills").append(HTMLskillsEnd);
+		//$("#skills").append(HTMLskillsEnd);
 }
 
 displayBio();

@@ -142,6 +142,15 @@ a {
   padding-bottom: 2.5%
 }
 
+.top-Header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+
+#name {
+  font-size: 60px;
+}
 ul {
   list-style-type: none;
 }
