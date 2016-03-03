@@ -33,6 +33,7 @@ h2 {
   color: #999999;
   line-height: 29px;
   padding: 10px;
+    text-shadow: 2px 2px black;
 }
 
 h3 {
@@ -74,7 +75,7 @@ h2, h3, h4, h5 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   color: #333333;
   line-height: 21px;
 }

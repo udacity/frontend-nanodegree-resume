@@ -1,7 +1,7 @@
 var bio = {
 	"name": "Connie Hirsch",
 	"role": "Front End Web Developer",
-	"welcomeMessage": "Is this thing on?  TAP TAP  I sure hope it's working.  This has been, what they call  'a learning experience.'",
+	"welcomeMessage": "Is this thing on?  TAP TAP  I sure hope it's working.  This has been, what they call  'a learning experience.' <br/>Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood! <br/>And so we say goodbye to our beloved pet, Nibbler, who’s gone to a place where I, too, hope one day to go. The toilet. Anyhoo, your net-suits will allow you to experience Fry’s worm infested bowels as if you were actually wriggling through them.",
 	"contacts": {
 		"mobile": "617 555-1234",
 		"email": "connie.hirsch@gmail.com",
