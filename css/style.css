@@ -14,6 +14,10 @@
   padding-right: 5%;
 }
 
+.project-entry {
+  background-color: aliceblue;
+}
+
 #projects, #education, #workExperience, #mapDiv
 {
   padding-top: 10px;
@@ -84,8 +88,8 @@ a {
   color: #1199C3;
   text-decoration: none;
   margin-top: 10px;
-  display: block;
-}
+/*  display: block;
+*/}
 
 .welcome-message {
   font-style: italic;

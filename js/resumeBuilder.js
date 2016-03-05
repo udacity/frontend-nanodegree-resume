@@ -212,12 +212,11 @@ function displayProject() {
 
 	$("#projects").append(HTMLprojectStart)
 //	console.log(projects.projects[proj].title);
+//var HTMLprojectTitle = "<h3><a href='%url%'>%data%</a><span class='date-text'>%data%</span></h3>";
 	var formattedprojectTitle =
-		HTMLprojectTitle.replace("%url%",projects.projects[proj].url).replace("%data%",projects.projects[proj].title);
+		HTMLprojectTitle.replace("%url%",projects.projects[proj].url).replace("%data%",projects.projects[proj].title).replace("%dates%",projects.projects[proj].dates);
 	$(".project-entry:last").append(formattedprojectTitle);
-	var formattedprojectDates =
-		HTMLprojectDates.replace("%data%",projects.projects[proj].dates);
-	$(".project-entry:last").append(formattedprojectDates);
+
 	var formattedprojectDescription =
 		HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
 	$(".project-entry:last").append(formattedprojectDescription);
