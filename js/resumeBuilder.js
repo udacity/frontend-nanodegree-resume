@@ -257,6 +257,12 @@ function displayBio() {
 		var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		$("#topContacts").append(formattedlocation);
 
+		// add it to the footer as well!
+		$("#footerContacts").append(formattedmobile);
+		$("#footerContacts").append(formattedemail);
+		$("#footerContacts").append(formattedgithub);
+		$("#footerContacts").append(formattedtwitter);
+		$("#footerContacts").append(formattedlocation);
 
 		var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic.pic).replace("%datum%", bio.bioPic.alt);
 		$("#bioPic").append(formattedbioPic);

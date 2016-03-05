@@ -96,8 +96,8 @@ a {
 
 #skillsH3 {
   color: #F5AE23;
-  display: none;
-}
+/*  display: none;
+*/}
 
 .orange {
   background-color: #F5AE23;
@@ -160,8 +160,8 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  /*width: 300px;*/
-  display: none;
+  /*width: 300px;
+  display: none;*/
 }
 
 img {
@@ -210,6 +210,12 @@ span {
   }
   .welcome-message {
     display: none;
+  }
+  #topContacts {
+    display: none;
+  }
+  #mapDiv {
+    margin-bottom: 20%;
   }
 }
 
