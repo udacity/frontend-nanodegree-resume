@@ -17,6 +17,13 @@
 .project-entry {
   background-color: aliceblue;
 }
+.project-entry p {
+  float:left;
+}
+.project-image {
+  float: right;
+  position: relative;
+}
 
 #projects, #education, #workExperience, #mapDiv
 {

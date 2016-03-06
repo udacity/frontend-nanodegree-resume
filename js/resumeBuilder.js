@@ -219,7 +219,7 @@ function displayProject() {
 
 	var formattedprojectDescription =
 		HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
-	$(".project-entry:last").append(formattedprojectDescription);
+	$(".project-entry:last").append("<p>" +formattedprojectDescription);
 
 	if (projects.projects[proj].images.length > 0) {
 		for (image in projects.projects[proj].images) {
@@ -229,6 +229,7 @@ function displayProject() {
 		}
 
 	}
+	$(".project-entry:last").append("</p><div style='clear: both;'></div>");
 
 }}
 

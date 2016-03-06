@@ -39,8 +39,8 @@ var HTMLworkDescription = "<p><br>%data%</p>";
 
 var HTMLprojectStart = "<div class='project-entry'></div>";
 var HTMLprojectTitle = "<h3><a href='%url%'>%data%</a> - <span>%dates%</span></h3>";
-var HTMLprojectDescription = "<p>%data%</p>";
-var HTMLprojectImage = "<img src='%data%' class='img-responsive' alt='%datum%'>";
+var HTMLprojectDescription = "%data%";
+var HTMLprojectImage = "<img src='%data%' class='img-responsive project-image' alt='%datum%'>";
 
 var HTMLschoolStart = "<div class='education-entry'></div>";
 var HTMLschoolName = "<a href='#'>%data%";
