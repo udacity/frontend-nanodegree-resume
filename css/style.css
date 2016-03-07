@@ -103,6 +103,7 @@ a {
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+  margin: 10px 0;
 }
 
 #skillsH3 {
@@ -159,6 +160,10 @@ a {
   flex-flow: row nowrap;
   align-items: flex-end;
 }
+.body-Header {
+  background-color: red;
+  padding: 10px 20px;
+}
 
 #name {
   font-size: 60px;
@@ -171,6 +176,7 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
+  margin-right: 20px;
   /*width: 300px;
   display: none;*/
 }
@@ -220,8 +226,10 @@ span {
     width: 150px;
   }
   .welcome-message {
-    display: none;
+  font-size: 16px;
+  line-height: 18px;
   }
+
   #topContacts {
     display: none;
   }
