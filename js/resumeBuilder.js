@@ -1,8 +1,8 @@
 var bio = {
 	"name": "Connie Hirsch",
 	"role": "Front End Web Developer",
-	"welcomeMessage": "Is this thing on?  TAP TAP  I sure hope it's working.  This has been, what they call  'a learning experience.' <br/>Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood! <br/>And so we say goodbye to our beloved pet, Nibbler, who’s gone to a place where I, too, hope one day to go. The toilet. Anyhoo, your net-suits will allow you to experience Fry’s worm infested bowels as if you were actually wriggling through them.",
-	"contacts": {
+	"welcomeMessage": "<p>Is this thing on?  TAP TAP  I sure hope it's working.</p>  <p>Look out, Itchy! He's Irish!</p><p>Uh' no, they're saying 'Boo-urns, Boo-urns.' Attempted murder? Now honestly, what is that? Do they give a Nobel Prize for attempted chemistry? But, Aquaman, you cannot marry a woman without gills. You're from two different worlds… Oh, I've wasted my life.</p><p><strong>…And the fluffy kitten played with that ball of string all through the night.</strong> <em> On a lighter note, a Kwik-E-Mart clerk was brutally murdered last night.</em> A lifetime of working with nuclear power has left me with a healthy green glow…and left me as impotent as a Nevada boxing commissioner.</p>",
+"contacts": {
 		"mobile": "617 555-1234",
 		"email": "connie.hirsch@gmail.com",
 		"github": "ConnieHirsch",

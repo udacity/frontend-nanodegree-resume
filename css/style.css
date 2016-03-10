@@ -98,7 +98,7 @@ a {
 /*  display: block;
 */}
 
-.welcome-message {
+.welcome-message, .welcome-message p {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
@@ -150,10 +150,10 @@ a {
 #skills .flex-item span {
   /*background-color: aqua;*/
   border: 2px solid orange;
-  padding: 20px 10px;
-  border-radius: 20px;
+  padding: 10px 8px;
+  border-radius: 8px;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 50px;
   margin-top: 30px
 }
 #skills .flex-item span:hover {
@@ -237,7 +237,7 @@ span {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
+  .welcome-message, .welcome-message p {
   font-size: 16px;
   line-height: 18px;
   }
