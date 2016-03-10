@@ -154,6 +154,11 @@ a {
   border-radius: 20px;
   font-size: 18px;
   line-height: 30px;
+  margin-top: 30px
+}
+#skills .flex-item span:hover {
+  background-color: orange;
+  color: black;
 }
 
 .center-content {
