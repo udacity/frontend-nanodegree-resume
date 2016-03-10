@@ -13,7 +13,7 @@ var bio = {
 	"pic" : "images/watercolorSmall.jpg",
 	"alt" : "A picture of me."
 	},
-	"skills": ["PHP", "Knitting", "Writing", "Navigation", "Demolition Derby"]
+	"skills": ["PHP", "CSS3", "Object-oriented coding", "Knitting", "Writing", "Navigation", "Demolition Derby"]
 };
 
 var work = {
@@ -219,7 +219,7 @@ function displayProject() {
 
 	var formattedprojectDescription =
 		HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
-	$(".project-entry:last").append("<p>" +formattedprojectDescription);
+	$(".project-entry:last").append("<p>" + formattedprojectDescription);
 
 	if (projects.projects[proj].images.length > 0) {
 		for (image in projects.projects[proj].images) {

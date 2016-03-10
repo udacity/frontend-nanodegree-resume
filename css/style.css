@@ -147,6 +147,14 @@ a {
   justify-content: space-around;
   padding: 10px;
 }
+#skills .flex-item span {
+  /*background-color: aqua;*/
+  border: 2px solid orange;
+  padding: 20px 10px;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 30px;
+}
 
 .center-content {
   padding-top: 2.5%;
@@ -161,7 +169,6 @@ a {
   align-items: flex-end;
 }
 .body-Header {
-  background-color: red;
   padding: 10px 20px;
 }
 
