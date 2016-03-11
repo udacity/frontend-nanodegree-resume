@@ -206,3 +206,5 @@ $(".education-entry:last").append(HTMLonlineClasses);
 displayOnlineSchools();
 
 $("#mapDiv").append(googleMap);
+
+$("#footerContacts").append(formattedmobile, formattedemail, formattedtwitter, formattedgithub, formattedlocation);
