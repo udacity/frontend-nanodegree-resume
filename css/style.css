@@ -61,7 +61,7 @@ h4 {
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
+h2 {
   padding:10px;
   padding-left: 5%;
   padding-right: 5%;
@@ -186,7 +186,7 @@ ul {
 
 
 .biopic {
-  float: left;
+  float: right;
   padding: 10px;
   margin-right: 20px;
   /*width: 300px;

@@ -178,13 +178,7 @@ var projects = {
 	{
 		"title" : "Big Foo",
 		"dates" : "2011",
-		"description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry" +
-		". Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an " +
-		"unknown printer took a galley of type and scrambled it to make a type specimen book. It " +
-		"has survived not only five centuries, but also the leap into electronic typesetting, remaining" +
-		" essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets " +
-		"containing Lorem Ipsum passages, and more recently with desktop publishing software like " +
-		"Aldus PageMaker including versions of Lorem Ipsum.",
+		"description" : "Little bunny Foo Foo Went hopping through the forest Scooping up the field mice And bopping them on the head Down came the Good Fairy, and she said 'Little bunny Foo Foo I don't want to see you Scooping up the field mice And bopping them on the head. 'I'll give you 3 chances, And if you don't behave, I will turn you into a goon!'",
 		"images" : [
 			{ "pic" : "images/fry.jpg", "alt": "Alt Text" },
 			{ "pic" : "images/fry.jpg", "alt": "Alt Text" }
@@ -194,9 +188,7 @@ var projects = {
 		{
 		"title" : "Little Bunny FooFoo",
 		"dates" : "2013",
-		"description" : "Lorem Ipsum is simply dummy text of the printing and" +
-			"typesetting industry publishing software like Aldus PageMaker including" +
-			" versions of Lorem Ipsum",
+		"description" : "Little bunny Foo Foo Went hopping through the forest Scooping up the field mice And bopping them on the head Down came the Good Fairy, and she said 'Little bunny Foo Foo I don't want to see you Scooping up the field mice And bopping them on the head. 'I'll give you 3 chances, And if you don't behave, I will turn you into a goon!'",
 		"images" : [
 			{ "pic" : "images/fry.jpg", "alt": "Alt Text" }
 		],
