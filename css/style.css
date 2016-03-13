@@ -29,6 +29,15 @@
 {
   padding-top: 10px;
 }
+
+.work-entry h4 {
+  float: left;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.work-entry p {
+  margin-left: 5%;
+}
 h1 {
   font-family: 'Rock Salt', cursive, sans-serif;
   font-size: 40px;
@@ -56,9 +65,9 @@ h3 {
 
 h4 {
   font-style: bold;
-  font-size: 14px;
+  font-size: 18px;
   color: #4A4A4A;
-  line-height: 17px;
+  line-height: 23px;
 }
 
 h2 {
@@ -70,17 +79,19 @@ h2 {
 
 .date-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 18px;
   color: #999999;
-  line-height: 16px;
-  float: left;
+  line-height: 23px;
+  float: right;
+  margin-left: 5%;
+
 }
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 18px;
   color: #999999;
-  line-height: 16px;
+  line-height: 23px;
   float: right;
 
 }

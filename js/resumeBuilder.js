@@ -69,7 +69,7 @@ function displayWork() {
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		$(".work-entry:last").append(formattedDates);
 		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(formattedLocation);
+		$(".work-entry:last").append(formattedLocation).append("<div style='clear: both;'></div>");
 		var formattedDescription =
 			HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
