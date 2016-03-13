@@ -52,9 +52,9 @@ var HTMLschoolMajor = " Major: <em>%data%</em></div>";
 
 var HTMLschoolDegreeMajor = "<p> %degree%%comma% Major: <em>%major%</em></p> </div>";
 
-var HTMLonlineClasses = "<h3>Online Classes</h3><div class='onlineClasses-entry'></div>";
+var HTMLonlineClasses = "<h2>Online Classes</h2><div class='onlineClasses-entry'></div>";
 var HTMLonlineTitle = "<h4>%data%";
-var HTMLonlineSchool = " - %data%<h4>";
+var HTMLonlineSchool = " - %data%</h4>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
 var HTMLonlineURL = "<br><a href='#'>%data%</a>";
 

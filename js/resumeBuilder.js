@@ -89,14 +89,14 @@ var education = {
 		{
 			"name": "Udacity",
 			"attended": "2016",
-			"location": "Worcester, MA",
+			"location": "Somerville, MA",
 			"major": "Front End Web Developer",
 			"degree": "Nanodegree"
 		},
 		{
 			"name" : "American International College, Computer Career Institute",
 			"attended" : "2008-2011",
-			"location": "Cambridge, MA",
+			"location": "Burlington, MA",
 			"major": "Enterprise Solutions Developer",
 			"degree" : "Master Certificate"
 		},
@@ -119,7 +119,7 @@ var education = {
 		{
 			"title": "Front End Web Developer",
 			"school": "Udacity",
-			"dates": 2016,
+			"dates": "2015-2016",
 			"url": "http://www.udacity.com/course/ud804"
 		}
 	]
@@ -188,8 +188,8 @@ var projects = {
 		"dates" : "2011",
 		"description" : "Little bunny Foo Foo Went hopping through the forest Scooping up the field mice And bopping them on the head Down came the Good Fairy, and she said 'Little bunny Foo Foo I don't want to see you Scooping up the field mice And bopping them on the head. 'I'll give you 3 chances, And if you don't behave, I will turn you into a goon!'",
 		"images" : [
-			{ "pic" : "images/fry.jpg", "alt": "Alt Text" },
-			{ "pic" : "images/fry.jpg", "alt": "Alt Text" }
+			{ "pic" : "images/leverett-320x240.jpg", "alt": "Sky over the Leverett Circle, Boston" },
+			{ "pic" : "images/rooster-320x240.jpg", "alt": "Rooster, Somerville MA" }
 		],
 		"url" : "http://www.constancehirsch.com"
 	},
@@ -198,7 +198,7 @@ var projects = {
 		"dates" : "2013",
 		"description" : "Little bunny Foo Foo Went hopping through the forest Scooping up the field mice And bopping them on the head Down came the Good Fairy, and she said 'Little bunny Foo Foo I don't want to see you Scooping up the field mice And bopping them on the head. 'I'll give you 3 chances, And if you don't behave, I will turn you into a goon!'",
 		"images" : [
-			{ "pic" : "images/fry.jpg", "alt": "Alt Text" }
+			{ "pic" : "images/wormedShell-320x240.jpg", "alt": "Worm casts in a conch shell" }
 		],
 		"url" : "http://www.constancehirsch.com"
 	}
