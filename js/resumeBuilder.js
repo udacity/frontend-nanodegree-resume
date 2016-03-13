@@ -97,7 +97,14 @@ var education = {
 			"name" : "American International College, Computer Career Institute",
 			"attended" : "2008-2011",
 			"location": "Cambridge, MA",
-			"major": "Enterprise Solutions Developer/Visual Communication - Digital 3-D Design",
+			"major": "Enterprise Solutions Developer",
+			"degree" : "Master Certificate"
+		},
+		{
+			"name" : "American International College, Computer Career Institute",
+			"attended" : "2008-2011",
+			"location": "Cambridge, MA",
+			"major": "Visual Communication - Digital 3-D Design",
 			"degree" : "Master Certificate"
 		},
 		{
@@ -126,20 +133,21 @@ function displayEducation() {
 		HTMLschoolName.replace("%data%",education.schools[school].name);
 		$(".education-entry:last").append(formattedschoolName);
 
-		var formattedschoolDegree =
-		HTMLschoolDegree.replace("%data%",education.schools[school].degree);
-		$(".education-entry:last").append(formattedschoolDegree);
-
 		var formattedschoolDates =
 		HTMLschoolDates.replace("%data%",education.schools[school].attended);
 		$(".education-entry:last").append(formattedschoolDates);
 		var formattedschoolLocation =
 		HTMLschoolLocation.replace("%data%",education.schools[school].location);
-		$(".education-entry:last").append(formattedschoolLocation);
-		var formattedschoolMajor =
-		HTMLschoolMajor.replace("%data%",education.schools[school].major);
-		$(".education-entry:last").append(formattedschoolMajor);
+		$(".education-entry:last").append(formattedschoolLocation).append("<div style='clear: both;'></div>");
 
+// formatting an absence of degree -- don't show degree + comma if no degree.
+		var formattedComma = ",";
+		if (!education.schools[school].degree) {formattedComma = "";}
+		console.log ("You got '" + formattedComma + "'");
+
+		var formattedschoolDegreeMajor =
+		HTMLschoolDegreeMajor.replace("%degree%",education.schools[school].degree).replace("%comma%", formattedComma).replace("%major%",education.schools[school].major);
+		$(".education-entry:last").append(formattedschoolDegreeMajor);
 		}
 
 	$("#education").append(HTMLonlineClasses);

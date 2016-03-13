@@ -43,15 +43,18 @@ var HTMLprojectDescription = "%data%";
 var HTMLprojectImage = "<img src='%data%' class='img-responsive project-image' alt='%datum%'>";
 
 var HTMLschoolStart = "<div class='education-entry'></div>";
-var HTMLschoolName = "<a href='#'>%data%";
-var HTMLschoolDegree = " -- %data%</a>";
+var HTMLschoolName = "<h4>%data%</h4>";
 var HTMLschoolDates = "<div class='date-text'>%data%</div>";
-var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
-var HTMLschoolMajor = "<em><br>Major: %data%</em>"
+var HTMLschoolLocation = "<div class='location-text'>%data%";
+var HTMLschoolDegree = "<p> %data% </p>";
+var HTMLschoolMajor = " Major: <em>%data%</em></div>";
 
-var HTMLonlineClasses = "<h4>Online Classes</h4><div class='onlineClasses-entry'></div>";
-var HTMLonlineTitle = "<a href='#'>%data%";
-var HTMLonlineSchool = " - %data%</a>";
+
+var HTMLschoolDegreeMajor = "<p> %degree%%comma% Major: <em>%major%</em></p> </div>";
+
+var HTMLonlineClasses = "<h3>Online Classes</h3><div class='onlineClasses-entry'></div>";
+var HTMLonlineTitle = "<h4>%data%";
+var HTMLonlineSchool = " - %data%<h4>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
 var HTMLonlineURL = "<br><a href='#'>%data%</a>";
 

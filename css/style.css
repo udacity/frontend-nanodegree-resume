@@ -30,12 +30,12 @@
   padding-top: 10px;
 }
 
-.work-entry h4 {
+.work-entry h4, .education-entry h4 {
   float: left;
   margin-bottom: 0px;
   margin-top: 0px;
 }
-.work-entry p {
+.work-entry p, .education-entry p {
   margin-left: 5%;
 }
 h1 {
