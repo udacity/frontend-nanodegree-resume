@@ -10,6 +10,7 @@
   overflow: auto;
 }
 
+/* make the work and education rows the same height!*/
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;
@@ -266,6 +267,10 @@ span {
   #mapDiv {
     margin-bottom: 20%;
   }
+      /* reset the work and education rows height!*/
+    .row-eq-height {
+      display: block;
+    }
 }
 
 #map {
