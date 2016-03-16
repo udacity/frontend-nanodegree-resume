@@ -23,8 +23,8 @@
   padding-right: 5%;
 }
 
-.project-entry {
-  background-color: aliceblue;
+.project-gray {
+  background-color: #A8A8A8;
 }
 .project-entry p {
   float:left;
@@ -33,7 +33,9 @@
   float: right;
   position: relative;
 }
-
+#projects h2 {
+  margin-top: 30px;
+}
 #projects, #education, #workExperience, #mapDiv
 {
   padding-top: 10px;
@@ -237,6 +239,21 @@ span {
   text-align: center;
 }
 
+#map {
+  display: block;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+}
+
+
 @media only screen and (max-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
@@ -246,6 +263,15 @@ span {
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #projects {
+  margin-top: 150px;
+  }
+  #map {
+    height: 200px;
   }
 }
 
@@ -265,26 +291,16 @@ span {
     display: none;
   }
   #mapDiv {
-    margin-bottom: 20%;
+    height: 200px;
+    margin-bottom: 20px;
   }
       /* reset the work and education rows height!*/
-    .row-eq-height {
-      display: block;
-    }
+  .row-eq-height {
+    display: block;
+  }
+  #projects h2 {
+  margin-top: 50px;
 }
-
-#map {
-  display: block;
-  height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-  margin-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {

@@ -194,6 +194,15 @@ var projects = {
 		"url" : "http://www.constancehirsch.com"
 	},
 		{
+		"title" : "This Project Has No Picture",
+		"dates" : "2012",
+		"description" : "Little bunny Foo Foo Went hopping through the forest Scooping up the field mice And bopping them on the head Down came the Good Fairy, and she said 'Little bunny Foo Foo I don't want to see you Scooping up the field mice And bopping them on the head. 'I'll give you 3 chances, And if you don't behave, I will turn you into a goon!'",
+		"images" : [
+			{ "pic" : "", "alt": "" }
+		],
+		"url" : "http://www.constancehirsch.com"
+	},
+		{
 		"title" : "Little Bunny FooFoo",
 		"dates" : "2013",
 		"description" : "Little bunny Foo Foo Went hopping through the forest Scooping up the field mice And bopping them on the head Down came the Good Fairy, and she said 'Little bunny Foo Foo I don't want to see you Scooping up the field mice And bopping them on the head. 'I'll give you 3 chances, And if you don't behave, I will turn you into a goon!'",
@@ -205,33 +214,37 @@ var projects = {
 	]
 };
 
-//var HTMLprojectTitle = "<a href='%url%'>%data%</a>";
 // encapsulated Project code
 function displayProject() {
+	var projCount = 0;
+		var addGray = "";
 	for (proj in projects.projects){
+		if (projCount == 0 || projCount == 2 ) { addGray = " project-gray";} else {addGray = "";}
+		console.log(addGray);
+		var formattedprojectStart = HTMLprojectStart.replace("%extraClass%", addGray);
+		$("#projects").append(formattedprojectStart);
+	//	console.log(projects.projects[proj].title);
+	//var HTMLprojectTitle = "<h3><a href='%url%'>%data%</a><span class='date-text'>%data%</span></h3>";
+		var formattedprojectTitle =
+			HTMLprojectTitle.replace("%url%",projects.projects[proj].url).replace("%data%",projects.projects[proj].title).replace("%dates%",projects.projects[proj].dates);
+		$(".project-entry:last").append(formattedprojectTitle);
 
-	$("#projects").append(HTMLprojectStart)
-//	console.log(projects.projects[proj].title);
-//var HTMLprojectTitle = "<h3><a href='%url%'>%data%</a><span class='date-text'>%data%</span></h3>";
-	var formattedprojectTitle =
-		HTMLprojectTitle.replace("%url%",projects.projects[proj].url).replace("%data%",projects.projects[proj].title).replace("%dates%",projects.projects[proj].dates);
-	$(".project-entry:last").append(formattedprojectTitle);
+		var formattedprojectDescription =
+			HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
+		$(".project-entry:last").append("<p>" + formattedprojectDescription);
 
-	var formattedprojectDescription =
-		HTMLprojectDescription.replace("%data%",projects.projects[proj].description);
-	$(".project-entry:last").append("<p>" + formattedprojectDescription);
-
-	if (projects.projects[proj].images.length > 0) {
-		for (image in projects.projects[proj].images) {
-		var formattedprojectImage =
-			HTMLprojectImage.replace("%data%",projects.projects[proj].images[image].pic).replace("%datum%",projects.projects[proj].images[image].alt);
-		$(".project-entry:last").append(formattedprojectImage);
+		if (projects.projects[proj].images.length > 0) {
+			for (image in projects.projects[proj].images) {
+			var formattedprojectImage =
+				HTMLprojectImage.replace("%data%",projects.projects[proj].images[image].pic).replace("%datum%",projects.projects[proj].images[image].alt);
+			$(".project-entry:last").append(formattedprojectImage);
+			}
 		}
-
-	}
+		console.log(projCount);
+		projCount++;
 	$(".project-entry:last").append("</p><div style='clear: both;'></div>");
-
-}}
+	}
+}
 
 displayProject();
 

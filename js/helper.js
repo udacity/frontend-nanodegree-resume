@@ -37,7 +37,7 @@ var HTMLworkDates = "<div class='date-text'>%data%</div>";
 var HTMLworkLocation = "<div class='location-text'>%data%</div>";
 var HTMLworkDescription = "<p>%data%</p>";
 
-var HTMLprojectStart = "<div class='project-entry'></div>";
+var HTMLprojectStart = "<div class='project-entry %extraClass%'></div>";
 var HTMLprojectTitle = "<h3><a href='%url%'>%data%</a> - <span>%dates%</span></h3>";
 var HTMLprojectDescription = "%data%";
 var HTMLprojectImage = "<img src='%data%' class='img-responsive project-image' alt='%datum%'>";
