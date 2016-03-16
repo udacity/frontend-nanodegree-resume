@@ -55,6 +55,7 @@ var HTMLschoolDegreeMajor = "<p> %degree%%comma% Major: <em>%major%</em></p> </d
 var HTMLonlineClasses = "<h2>Online Classes</h2><div class='onlineClasses-entry'></div>";
 var HTMLonlineTitle = "<h4>%data%";
 var HTMLonlineSchool = " - %data%</h4>";
+var HTMLonlineTitleSchool = "<h4>%title% - %school%</h4>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
 var HTMLonlineURL = "<br><a href='%url%'>%data%</a>";
 
