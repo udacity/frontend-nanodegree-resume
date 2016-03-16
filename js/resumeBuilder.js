@@ -88,38 +88,42 @@ var education = {
 	"schools" : [
 		{
 			"name": "Udacity",
-			"attended": "2016",
+			"dates": "2016",
 			"location": "Somerville, MA",
-			"major": "Front End Web Developer",
-			"degree": "Nanodegree"
+			"majors": "Front End Web Developer",
+			"degree": "Nanodegree",
+			"url" : ""
 		},
 		{
 			"name" : "American International College, Computer Career Institute",
-			"attended" : "2008-2011",
+			"dates" : "2008-2011",
 			"location": "Burlington, MA",
-			"major": "Enterprise Solutions Developer",
-			"degree" : "Master Certificate"
+			"majors": "Enterprise Solutions Developer",
+			"degree" : "Master Certificate",
+			"url" : ""
 		},
 		{
 			"name" : "American International College, Computer Career Institute",
-			"attended" : "2008-2011",
+			"dates" : "2008-2011",
 			"location": "Cambridge, MA",
-			"major": "Visual Communication - Digital 3-D Design",
-			"degree" : "Master Certificate"
+			"majors": "Visual Communication - Digital 3-D Design",
+			"degree" : "Master Certificate",
+			"url" : ""
 		},
 		{
 			"name" : "Boston University, School of Public Communication",
-			"attended" : "1977-1981",
+			"dates" : "1977-1981",
 			"location" : "Boston, MA",
-			"major" : "Journalism",
-			"degree" : ""
+			"majors" : "Journalism",
+			"degree" : "",
+			"url" : ""
 		}
 	],
 	"onlineCourses": [
 		{
 			"title": "Front End Web Developer",
 			"school": "Udacity",
-			"dates": "2015-2016",
+			"date": "2015-2016",
 			"url": "http://www.udacity.com/course/ud804"
 		}
 	]
@@ -134,7 +138,7 @@ function displayEducation() {
 		$(".education-entry:last").append(formattedschoolName);
 
 		var formattedschoolDates =
-		HTMLschoolDates.replace("%data%",education.schools[school].attended);
+		HTMLschoolDates.replace("%data%",education.schools[school].dates);
 		$(".education-entry:last").append(formattedschoolDates);
 		var formattedschoolLocation =
 		HTMLschoolLocation.replace("%data%",education.schools[school].location);
@@ -143,10 +147,10 @@ function displayEducation() {
 // formatting an absence of degree -- don't show degree + comma if no degree.
 		var formattedComma = ",";
 		if (!education.schools[school].degree) {formattedComma = "";}
-		console.log ("You got '" + formattedComma + "'");
+		//console.log ("You got '" + formattedComma + "'");
 
 		var formattedschoolDegreeMajor =
-		HTMLschoolDegreeMajor.replace("%degree%",education.schools[school].degree).replace("%comma%", formattedComma).replace("%major%",education.schools[school].major);
+		HTMLschoolDegreeMajor.replace("%degree%",education.schools[school].degree).replace("%comma%", formattedComma).replace("%major%",education.schools[school].majors);
 		$(".education-entry:last").append(formattedschoolDegreeMajor);
 		}
 
@@ -158,7 +162,7 @@ function displayEducation() {
 		    $("#education").append(HTMLschoolStart);
 		    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
 		    var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-		    var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onlineCourse].dates);
+		    var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onlineCourse].date);
 		    $(".onlineClasses-entry:last").append(formattedTitle);
 		    $(".onlineClasses-entry:last").append(formattedSchool);
 		    $(".onlineClasses-entry:last").append(formattedDates);
