@@ -18,9 +18,27 @@
   display:         flex;
 }
 
-.education-entry, .onlineClasses-entry, .work-entry, .project-entry {
+.education-entry,
+.onlineClasses-entry,
+.work-entry,
+.project-entry {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.onlineClasses-entry date-text {
+  float: right;
+  clear: both;
+}
+.onlineClasses-entry h4 {
+  float: left;
+}
+.onlineClasses-entry a {
+  clear: both;
+  float: left;
+  font-size: 18px;
+  line-height: 21px;
+  padding-bottom: 10px;
 }
 
 .project-gray {
@@ -36,17 +54,22 @@
 #projects h2 {
   margin-top: 30px;
 }
-#projects, #education, #workExperience, #mapDiv
+#projects,
+#education,
+#workExperience,
+#mapDiv
 {
   padding-top: 10px;
 }
 
-.work-entry h4, .education-entry h4 {
+.work-entry h4,
+.education-entry h4 {
   float: left;
   margin-bottom: 0px;
   margin-top: 0px;
 }
-.work-entry p, .education-entry p {
+.work-entry p,
+.education-entry p {
   margin-left: 5%;
 }
 h1 {
@@ -120,7 +143,8 @@ a {
 /*  display: block;
 */}
 
-.welcome-message, .welcome-message p {
+.welcome-message,
+.welcome-message p {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
@@ -282,7 +306,8 @@ span {
   .biopic {
     width: 150px;
   }
-  .welcome-message, .welcome-message p {
+  .welcome-message,
+  .welcome-message p {
   font-size: 16px;
   line-height: 18px;
   }
