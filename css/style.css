@@ -26,19 +26,21 @@
   padding-right: 5%;
 }
 
-.onlineClasses-entry date-text {
+.onlineClasses-entry {
+  padding-bottom: 10px;
+}
+.onlineClasses-entry .date-text {
   float: right;
-  clear: both;
+      margin-top: 10px;
+    margin-bottom: 10px;
 }
 .onlineClasses-entry h4 {
   float: left;
 }
 .onlineClasses-entry a {
-  clear: both;
-  float: left;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
-  padding-bottom: 10px;
+  padding-left: 20px;
 }
 
 .project-gray {

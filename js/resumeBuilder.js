@@ -159,7 +159,7 @@ function displayEducation() {
 	{
 		//console.log("Test: " + education.onlineCourses[onlineCourse].title);
 
-    $("#education").append(HTMLschoolStart);
+    //$("#education").append(HTMLschoolStart);
     //var HTMLonlineTitleSchool = "<h4>%title% - %school%</h4>";
     var formattedTitleSchool = HTMLonlineTitleSchool.replace("%title%", education.onlineCourses[onlineCourse].title).replace("%school%", education.onlineCourses[onlineCourse].school);
     //var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
