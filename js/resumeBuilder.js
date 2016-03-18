@@ -16,7 +16,31 @@ var bio = {
 	"skills": ["PHP", "CSS3", "Object-oriented coding", "Knitting", "Writing", "Navigation", "Demolition Derby"]
 };
 
+//////////////////
+// Work Section //
+//////////////////
 var work = {
+
+	//encapsulated display!!??
+	"display" : function(){
+		for (job in work.jobs){
+			$("#workExperience").append(HTMLworkStart);
+			//console.log(work.jobs[job].employer);
+			var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+			var formattedEmployerTitle = formattedEmployer + formattedTitle;
+
+			$(".work-entry:last").append(formattedEmployerTitle);
+
+			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+			$(".work-entry:last").append(formattedDates);
+			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			$(".work-entry:last").append(formattedLocation).append("<div style='clear: both;'></div>");
+			var formattedDescription =
+				HTMLworkDescription.replace("%data%", work.jobs[job].description);
+			$(".work-entry:last").append(formattedDescription);
+	}},
+
 	"jobs" : [
 	{
 		"title": "Rideshare Driver",
@@ -56,80 +80,58 @@ var work = {
 	]
 };
 
-function displayWork() {
-	for (job in work.jobs){
-		$("#workExperience").append(HTMLworkStart);
-		//console.log(work.jobs[job].employer);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
-		$(".work-entry:last").append(formattedEmployerTitle);
-
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(formattedDates);
-		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(formattedLocation).append("<div style='clear: both;'></div>");
-		var formattedDescription =
-			HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedDescription);
-
-	}
-}
-
-displayWork();
-
+work.display();
 
 ////////////////////////////////
 //	education section         //
 ////////////////////////////////
-
-var education = {
-	"schools" : [
-		{
-			"name": "Udacity",
-			"dates": "2016",
-			"location": "Somerville, MA",
-			"majors": "Front End Web Developer",
-			"degree": "Nanodegree",
-			"url" : ""
-		},
-		{
-			"name" : "American International College, Computer Career Institute",
-			"dates" : "2008-2011",
-			"location": "Burlington, MA",
-			"majors": "Enterprise Solutions Developer",
-			"degree" : "Master Certificate",
-			"url" : ""
-		},
-		{
-			"name" : "American International College, Computer Career Institute",
-			"dates" : "2008-2011",
-			"location": "Cambridge, MA",
-			"majors": "Visual Communication - Digital 3-D Design",
-			"degree" : "Master Certificate",
-			"url" : ""
-		},
-		{
-			"name" : "Boston University, School of Public Communication",
-			"dates" : "1977-1981",
-			"location" : "Boston, MA",
-			"majors" : "Journalism",
-			"degree" : "",
-			"url" : ""
-		}
-	],
-	"onlineCourses": [
-		{
-			"title": "Front End Web Developer",
-			"school": "Udacity",
-			"date": "2015-2016",
-			"url": "http://www.udacity.com/course/ud804"
-		}
-	]
-};
+		var education = {
+			"schools" : [
+				{
+					"name": "Udacity",
+					"dates": "2016",
+					"location": "Somerville, MA",
+					"majors": "Front End Web Developer",
+					"degree": "Nanodegree",
+					"url" : ""
+				},
+				{
+					"name" : "American International College, Computer Career Institute",
+					"dates" : "2008-2011",
+					"location": "Burlington, MA",
+					"majors": "Enterprise Solutions Developer",
+					"degree" : "Master Certificate",
+					"url" : ""
+				},
+				{
+					"name" : "American International College, Computer Career Institute",
+					"dates" : "2008-2011",
+					"location": "Cambridge, MA",
+					"majors": "Visual Communication - Digital 3-D Design",
+					"degree" : "Master Certificate",
+					"url" : ""
+				},
+				{
+					"name" : "Boston University, School of Public Communication",
+					"dates" : "1977-1981",
+					"location" : "Boston, MA",
+					"majors" : "Journalism",
+					"degree" : "",
+					"url" : ""
+				}
+			],
+			"onlineCourses": [
+				{
+					"title": "Front End Web Developer",
+					"school": "Udacity",
+					"date": "2015-2016",
+					"url": "http://www.udacity.com/course/ud804"
+				}
+			]
+		};
 
 function displayEducation() {
+
 	for (school in education.schools){
 		$("#education").append(HTMLschoolStart);
 		//console.log(education.schools[school].name);
