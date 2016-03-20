@@ -8,21 +8,21 @@ var work = {
             "employer": "ABC Software",
             "title": "Software Engineer",
             "location": "Toronto, ON, Canada",
-            "dates": "2010-current",
+            "dates": "September 2010-current",
             "description": "Design and implementing projects from a given requirements"
         },
         {
             "employer": "Super Secure Software",
             "title": "Software Engineer",
             "location": "Calgary, AL, Canada",
-            "dates": "2008-2010",
+            "dates": "January 2008 - September 2010",
             "description": "Design and implementing part of a big computer security project"
         },
         {
             "employer": "Medical Software Company",
             "title": "Software Engineer",
             "location": "Budapest, Hungary",
-            "dates": "2005-2008",
+            "dates": "January 2005 - August 2008",
             "description": "Design and implementing projects in medical equipment area"
         }
     ]
@@ -56,7 +56,8 @@ var bio = {
         "twitter": "@janedoette",
         "location": "Toronto, ON, Canada"
     },
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "biobPic": "http://example.com/jane-doette/biopic.jpeg"
 };
 
 var education = {
