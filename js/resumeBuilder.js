@@ -106,3 +106,16 @@ if(bio.skills.length > 0){
         $('#skills').append(formattedSkill);
     }
 }
+
+work.jobs.forEach(function(job){
+    $('#workExperience').append(HTMLworkStart);
+    var formattedEmployer = HTMLworkEmployer.replace('%data%', job.employer);
+    var formattedTitle = HTMLworkTitle.replace('%data%', job.title);
+    $('.work-entry:last').append(formattedEmployer + formattedTitle);
+    var formattedLocation = HTMLworkLocation.replace('%data%', job.location);
+    $('.work-entry:last').append(formattedLocation);
+    var formattedDates = HTMLworkDates.replace('%data%', job.dates);
+    $('.work-entry:last').append(formattedDates);
+    var formattedDescription = HTMLworkDescription.replace('%data%', job.description);
+    $('.work-entry:last').append(formattedDescription);
+})
