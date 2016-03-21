@@ -2,6 +2,12 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
+var formattedName = HTMLheaderName.replace('%data%', 'Jane Doette');
+var formattedRole = HTMLheaderRole.replace('%data%', 'Web Developer');
+
+$('#header').prepend(formattedRole);
+$('#header').prepend(formattedName);
+
 var work = {
     "jobs": [
         {
@@ -56,7 +62,7 @@ var bio = {
         "twitter": "@janedoette",
         "location": "Toronto, ON, Canada"
     },
-    "skills": ["HTML", "CSS", "JavaScript"],
+    "skills": ["HTML", "CSS", "JavaScript", "Awesomeness", "Teleportation"],
     "biobPic": "http://example.com/jane-doette/biopic.jpeg"
 };
 
@@ -92,3 +98,22 @@ var education = {
         }
     ]
 };
+
+if(bio.skills.length > 0) {
+    $('#header').append(HTMLskillsStart);
+
+    var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
+    $('#skills').append(formattedSkill);
+
+    formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
+    $('#skills').append(formattedSkill);
+
+    formattedSkill = HTMLskills.replace('%data%', bio.skills[2]);
+    $('#skills').append(formattedSkill);
+
+    formattedSkill = HTMLskills.replace('%data%', bio.skills[3]);
+    $('#skills').append(formattedSkill);
+
+    formattedSkill = HTMLskills.replace('%data%', bio.skills[4]);
+    $('#skills').append(formattedSkill);
+}
