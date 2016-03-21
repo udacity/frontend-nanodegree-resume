@@ -40,16 +40,35 @@ var projects = {
             "title": "P1: Build a Portfolio Site",
             "dates": 2015,
             "description": "Portfolio website is built from mockup design",
-            "images": ["http://example.com/project-p1/image-1.jpg", "http://example.com/project-p1/image-2.jpg"]
+            "images": ["http://www.featurepics.com/FI/Thumb300/20110504/Electronic-Circuit-Plate-1867067.jpg"]
         },
         {
             "title": "P2: Online Resume",
             "dates": 2016,
             "description": "Implementing online resume using JavaScript and jQuery",
-            "images": ["http://example.com/project-p2/image-1.jpg", "http://example.com/project-p2/image-2.jpg"]
+            "images": ["http://www.asiasl.com/en/images/sf26.jpg"]
         }
     ]
 };
+
+projects.display = function(){
+    projects.projects.forEach(function(project){
+        $('#projects').append(HTMLprojectStart);
+        var formattedTitle = HTMLprojectTitle.replace('%data%', project.title);
+        $('.project-entry:last').append(formattedTitle);
+
+        var formattedDates = HTMLprojectDates.replace('%data%', project.dates);
+        $('.project-entry:last').append(formattedDates);
+
+        var formattedDesc = HTMLprojectDescription.replace('%data%', project.description);
+        $('.project-entry:last').append(formattedDesc);
+
+        project.images.forEach(function(image){
+            var formattedImage = HTMLprojectImage.replace('%data%', image);
+            $('.project-entry:last').append(formattedImage);
+        });
+    });
+}
 
 var bio = {
     "name": "Jane Doette",
@@ -123,6 +142,7 @@ function displayWork(){
 }
 
 displayWork();
+projects.display();
 
 $(document).click(function(loc){
     logClicks(loc.pageX, loc.pageY);
@@ -137,7 +157,7 @@ function inName(name){
         var nameArray = $('#name').text().trim().split(" ");
     }
 
-    var first = nameArray[0][0].toUpperCase() + nameArray[0].slice(1);
+    var first = nameArray[0].slice(0, 1).toUpperCase() + nameArray[0].slice(1).toLowerCase();
     var last = nameArray[1].toUpperCase();
     var retValue = first + ' ' + last;
     if(typeof name == 'undefined'){
