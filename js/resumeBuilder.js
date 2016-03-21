@@ -1,5 +1,5 @@
 /*
-This is empty on purpose! Your code to build the resume will go here.
+ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var formattedName = HTMLheaderName.replace('%data%', 'Jane Doette');
@@ -99,21 +99,10 @@ var education = {
     ]
 };
 
-if(bio.skills.length > 0) {
+if(bio.skills.length > 0){
     $('#header').append(HTMLskillsStart);
-
-    var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
-    $('#skills').append(formattedSkill);
-
-    formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
-    $('#skills').append(formattedSkill);
-
-    formattedSkill = HTMLskills.replace('%data%', bio.skills[2]);
-    $('#skills').append(formattedSkill);
-
-    formattedSkill = HTMLskills.replace('%data%', bio.skills[3]);
-    $('#skills').append(formattedSkill);
-
-    formattedSkill = HTMLskills.replace('%data%', bio.skills[4]);
-    $('#skills').append(formattedSkill);
+    for(var i = 0; i < bio.skills.length; ++i){
+        var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+        $('#skills').append(formattedSkill);
+    }
 }
