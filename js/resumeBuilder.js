@@ -12,42 +12,52 @@ var bio = {
     "skills": ["Web Developing", "Sales", "Marketing", "Employee Training", "Management"],
     "biopic": "images/editedMe.jpg",
     "display": function() {
-        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+        var data = "%data%";
+        var formattedRole = HTMLheaderRole.replace(data, bio.role);
         $("#header").prepend(formattedRole);
 
-        var formattedName = HTMLheaderName.replace("%data%", bio.name);
+        var formattedName = HTMLheaderName.replace(data, bio.name);
         $("#header").prepend(formattedName);
 
-        var formattedpic = HTMLbioPic.replace("%data%", bio.biopic);
+        var formattedpic = HTMLbioPic.replace(data, bio.biopic);
         $("#header").append(formattedpic);
 
-        var formattedmessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        var formattedmessage = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
         $("#header").append(formattedmessage);
 
-        var formattedmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        var formattedmobile = HTMLmobile.replace(data, bio.contacts.mobile);
         $("#topContacts").append(formattedmobile);
 
-        var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
+        var formattedemail = HTMLemail.replace(data, bio.contacts.email);
         $("#topContacts").append(formattedemail);
 
-        var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        var formattedtwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
         $("#topContacts").append(formattedtwitter);
 
-        var formattedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
+        var formattedgithub = HTMLgithub.replace(data, bio.contacts.github);
         $("#topContacts").append(formattedgithub);
 
-        var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        var formattedlocation = HTMLlocation.replace(data, bio.contacts.location);
         $("#topContacts").append(formattedlocation);
 
         function displaySkills() {
             $("#header").append(HTMLskillsStart);
 
             for (var i = 0; i < bio.skills.length; i++) {
-                var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+                var formattedSkill = HTMLskills.replace(data, bio.skills[i]);
                 $("#skills").append(formattedSkill);
             }
         }
         displaySkills();
+
+        function displayFooter() {
+            var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
+            var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
+            var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
+            var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
+            $("#footerContacts").append(formattedMobile, formattedEmail, formattedTwitter, formattedGithub);
+        }
+        displayFooter();
     }
 };
 
@@ -58,49 +68,50 @@ var education = {
         "name": "Campbell University",
         "location": "Buis Creek, NC",
         "degree": "BS",
-        "major": ["Pro Golf Mngmt"],
+        "majors": ["Pro Golf Mngmt"],
         "dates": "08.15.01-01.01.02",
         "url": "http://www.campbell.edu/"
     }, {
         "name": "Western Kentucky University",
         "location": "Bowling Green, KY",
         "degree": "BS",
-        "major": ["Turf Mngmt"],
+        "majors": ["Turf Mngmt"],
         "dates": "01.02.01-12.07.05",
         "url": "https://www.wku.edu/"
     }],
     "onlineCourses": [{
         "title": "Front End Web Developer Nanodegree",
         "school": "Udacity",
-        "dates": "01.23.16-present",
+        "date": "01.23.16-present",
         "url": "https://www.udacity.com/"
     }, {
         "title": "Hack Reactor Remote Prep",
         "school": "Hack Reactor",
-        "dates": "09.01.15-10.01.15",
+        "date": "09.01.15-10.01.15",
         "url": "http://www.hackreactor.com/blog/hack-reactor-remote-prep-the-4-week-coding-course-for-novices"
     }],
     "display": function() {
+        var data = "%data%";
         education.schools.forEach(displaySchools);
         $(".education-entry:last").append(HTMLonlineClasses);
         education.onlineCourses.forEach(displayOnlineSchools);
 
         function displaySchools(school) {
             $("#education").append(HTMLschoolStart);
-            var formattedName = HTMLschoolName.replace("%data%", school.name);
-            var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
-            var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
-            var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
-            var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
-            $(".education-entry:last").append(formattedName + formattedDegree, formattedLocation, formattedDates, formattedMajor);
+            var formattedName = HTMLschoolName.replace(data, school.name);
+            var formattedLocation = HTMLschoolLocation.replace(data, school.location);
+            var formattedDegree = HTMLschoolDegree.replace(data, school.degree);
+            var formattedDates = HTMLschoolDates.replace(data, school.dates);
+            var formattedMajors = HTMLschoolMajor.replace(data, school.majors);
+            $(".education-entry:last").append(formattedName + formattedDegree, formattedLocation, formattedDates, formattedMajors);
         }
 
         function displayOnlineSchools(course) {
-            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", course.school);
-            var formattedonlineTitle = HTMLonlineTitle.replace("%data%", course.title);
-            var formattedonlineDates = HTMLschoolDates.replace("%data%", course.dates);
-            var formattedonlineURL = HTMLonlineURL.replace("%data%", course.url);
-            $(".education-entry:last").append(formattedonlineSchool, formattedonlineTitle, formattedonlineDates, formattedonlineURL);
+            var formattedonlineSchool = HTMLonlineSchool.replace(data, course.school);
+            var formattedonlineTitle = HTMLonlineTitle.replace(data, course.title);
+            var formattedonlineDate = HTMLschoolDates.replace(data, course.date);
+            var formattedonlineURL = HTMLonlineURL.replace(data, course.url);
+            $(".education-entry:last").append(formattedonlineSchool, formattedonlineTitle, formattedonlineDate, formattedonlineURL);
         }
     }
 };
@@ -128,18 +139,19 @@ var work = {
         "description": "Management of 24 person crew over daily maintenance of 36 hole facility"
     }],
     "display": function() {
+        var data = "%data%";
         work.jobs.forEach(displayJobs);
 
         function displayJobs(job) {
             $("#workExperience").append(HTMLworkStart);
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-            var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+            var formattedEmployer = HTMLworkEmployer.replace(data, job.employer);
+            var formattedTitle = HTMLworkTitle.replace(data, job.title);
             var formattedEmployerTitle = formattedEmployer + " " + formattedTitle;
             $(".work-entry:last").append(formattedEmployerTitle);
 
-            var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
-            var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-            var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+            var formattedLocation = HTMLworkLocation.replace(data, job.location);
+            var formattedDates = HTMLworkDates.replace(data, job.dates);
+            var formattedDescription = HTMLworkDescription.replace(data, job.description);
             $(".work-entry:last").append(formattedLocation, formattedDates, formattedDescription);
         }
     }
@@ -148,29 +160,30 @@ var work = {
 work.display();
 
 var projects = {
-    "project": [{
+    "projects": [{
         "title": "Portfolio Page",
         "dates": "Feb 2016",
         "description": "Create a personal porfolio home page for myself",
-        "images": "images/portfolio.jpg"
+        "images": ["images/portfolio.jpg"]
     }, {
         "title": "Choose a Charity",
         "dates": "Sept 2015",
         "description": "Create a portfolio page highlighting multiple charities",
-        "images": "images/charity.jpg"
+        "images": ["images/charity.jpg"]
     }],
     "display": function() {
-        projects.project.forEach(displayProjects);
+        var data = "%data%";
+        projects.projects.forEach(displayProjects);
 
         function displayProjects(project) {
             $("#projects").append(HTMLprojectStart);
 
-            var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+            var formattedTitle = HTMLprojectTitle.replace(data, project.title);
             $(".project-entry:last").append(formattedTitle);
 
-            var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
-            var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
-            var formattedImage = HTMLprojectImage.replace("%data%", project.images);
+            var formattedDates = HTMLprojectDates.replace(data, project.dates);
+            var formattedDescription = HTMLprojectDescription.replace(data, project.description);
+            var formattedImage = HTMLprojectImage.replace(data, project.images);
             $(".project-entry:last").append(formattedDates, formattedDescription, formattedImage);
         }
     }
@@ -196,12 +209,3 @@ function inName(string) {
 $("#main").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
-
-function displayFooter() {
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#footerContacts").append(formattedMobile, formattedEmail, formattedTwitter, formattedGithub);
-}
-displayFooter();
