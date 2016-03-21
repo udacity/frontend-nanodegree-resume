@@ -138,7 +138,7 @@ function initializeMap() {
       locations.push(work.jobs[job].location);
     }
     //let's see where we got.
-    console.log(locations);
+    //console.log(locations);
 
     return locations;
   }
