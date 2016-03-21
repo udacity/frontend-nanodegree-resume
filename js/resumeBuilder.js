@@ -132,9 +132,9 @@ $('#main').append('<input type="button" value="internationalize" onclick="inName
 
 function inName(name){
     if(typeof name != 'undefined'){
-        var nameArray = name.split(" ");
+        var nameArray = name.trim().split(" ");
     } else {
-        var nameArray = $('#name').text().split(" ");
+        var nameArray = $('#name').text().trim().split(" ");
     }
 
     var first = nameArray[0][0].toUpperCase() + nameArray[0].slice(1);
