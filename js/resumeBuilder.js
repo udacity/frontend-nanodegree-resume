@@ -14,21 +14,21 @@ var work = {
             "employer": "ABC Software",
             "title": "Software Engineer",
             "location": "Toronto, ON, Canada",
-            "dates": "September 2010-current",
+            "dates": "Sep 2010-current",
             "description": "Design and implementing projects from a given requirements"
         },
         {
             "employer": "Super Secure Software",
             "title": "Software Engineer",
             "location": "Calgary, AL, Canada",
-            "dates": "January 2008 - September 2010",
+            "dates": "Jan 2008 - Sep 2010",
             "description": "Design and implementing part of a big computer security project"
         },
         {
             "employer": "Medical Software Company",
             "title": "Software Engineer",
             "location": "Budapest, Hungary",
-            "dates": "January 2005 - August 2008",
+            "dates": "Jan 2005 - Aug 2008",
             "description": "Design and implementing projects in medical equipment area"
         }
     ]
