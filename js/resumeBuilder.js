@@ -2,12 +2,6 @@
  This is empty on purpose! Your code to build the resume will go here.
  */
 
-var formattedName = HTMLheaderName.replace('%data%', 'Jane Doette');
-var formattedRole = HTMLheaderRole.replace('%data%', 'Web Developer');
-
-$('#header').prepend(formattedRole);
-$('#header').prepend(formattedName);
-
 var work = {
     "jobs": [
         {
@@ -73,17 +67,27 @@ projects.display = function(){
 var bio = {
     "name": "Jane Doette",
     "role": "Web Developer",
-    "welcomeMessage": "Hello World!",
+    "welcomeMessage": "Hello World! Lorem ipsum dolor sit amet",
     "contacts": {
         "mobile": "+1 (289) 000-0000",
         "email": "jane.doette@gmail.com",
         "github": "janedoette",
         "twitter": "@janedoette",
+        "blog": "janedoette.blogspot.ca",
         "location": "Toronto, ON, Canada"
     },
     "skills": ["HTML", "CSS", "JavaScript", "Awesomeness", "Teleportation"],
-    "biobPic": "http://example.com/jane-doette/biopic.jpeg"
+    "bioPic": "images/fry.jpg"
 };
+
+bio.displayContacts = function(){
+    $('#topContacts').append(HTMLmobile.replace('%data%', bio.contacts.mobile));
+    $('#topContacts').append(HTMLemail.replace('%data%', bio.contacts.email));
+    $('#topContacts').append(HTMLtwitter.replace('%data%', bio.contacts.twitter));
+    $('#topContacts').append(HTMLgithub.replace('%data%', bio.contacts.github));
+    $('#topContacts').append(HTMLblog.replace('%data%', bio.contacts.blog));
+    $('#topContacts').append(HTMLlocation.replace('%data%', bio.contacts.location));
+}
 
 var education = {
     "schools": [
@@ -118,13 +122,6 @@ var education = {
     ]
 };
 
-if(bio.skills.length > 0){
-    $('#header').append(HTMLskillsStart);
-    for(var i = 0; i < bio.skills.length; ++i){
-        var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-        $('#skills').append(formattedSkill);
-    }
-}
 
 function displayWork(){
     work.jobs.forEach(function(job){
@@ -139,6 +136,25 @@ function displayWork(){
         var formattedDescription = HTMLworkDescription.replace('%data%', job.description);
         $('.work-entry:last').append(formattedDescription);
     });
+}
+
+var formattedName = HTMLheaderName.replace('%data%', 'Jane Doette');
+var formattedRole = HTMLheaderRole.replace('%data%', 'Web Developer');
+
+$('#header').prepend(formattedRole);
+$('#header').prepend(formattedName);
+$('#header').append(HTMLbioPic.replace('%data%', bio.bioPic));
+
+bio.displayContacts();
+
+$('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
+
+if(bio.skills.length > 0){
+    $('#header').append(HTMLskillsStart);
+    for(var i = 0; i < bio.skills.length; ++i){
+        var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+        $('#skills').append(formattedSkill);
+    }
 }
 
 displayWork();
