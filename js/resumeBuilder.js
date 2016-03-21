@@ -148,7 +148,7 @@ $(document).click(function(loc){
     logClicks(loc.pageX, loc.pageY);
 });
 
-$('#main').append('<input type="button" value="internationalize" onclick="inName()">');
+$('#main').append(internationalizeButton);
 
 function inName(name){
     if(typeof name != 'undefined'){
@@ -165,3 +165,4 @@ function inName(name){
     }
     return retValue;
 }
+
