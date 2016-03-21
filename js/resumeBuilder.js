@@ -130,9 +130,18 @@ $(document).click(function(loc){
 
 $('#main').append('<input type="button" value="internationalize" onclick="inName()">');
 
-function inName(){
-    var nameArray = $('#name').text().split(" ");
+function inName(name){
+    if(typeof name != 'undefined'){
+        var nameArray = name.split(" ");
+    } else {
+        var nameArray = $('#name').text().split(" ");
+    }
+
     var first = nameArray[0][0].toUpperCase() + nameArray[0].slice(1);
     var last = nameArray[1].toUpperCase();
-    $('#name').text(first + ' ' + last);
+    var retValue = first + ' ' + last;
+    if(typeof name == 'undefined'){
+        $('#name').text(first + ' ' + last);
+    }
+    return retValue;
 }
