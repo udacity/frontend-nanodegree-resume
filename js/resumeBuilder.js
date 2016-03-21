@@ -127,3 +127,12 @@ displayWork();
 $(document).click(function(loc){
     logClicks(loc.pageX, loc.pageY);
 });
+
+$('#main').append('<input type="button" value="internationalize" onclick="inName()">');
+
+function inName(){
+    var nameArray = $('#name').text().split(" ");
+    var first = nameArray[0][0].toUpperCase() + nameArray[0].slice(1);
+    var last = nameArray[1].toUpperCase();
+    $('#name').text(first + ' ' + last);
+}
