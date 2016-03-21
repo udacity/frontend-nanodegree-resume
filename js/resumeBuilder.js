@@ -27,7 +27,7 @@ var work = {
         {
             "employer": "Medical Software Company",
             "title": "Software Engineer",
-            "location": "Budapest, Hungary",
+            "location": "Nuuk, Greenland",
             "dates": "Jan 2005 - Aug 2008",
             "description": "Design and implementing projects in medical equipment area"
         }
@@ -46,7 +46,7 @@ var projects = {
             "title": "P2: Online Resume",
             "dates": 2016,
             "description": "Implementing online resume using JavaScript and jQuery",
-            "images": ["http://www.asiasl.com/en/images/sf26.jpg"]
+            "images": ["https://cldn0.fiverrcdn.com/fiverr/t_main1/gigs3/2316015/original/miscellaneous-electronic-circuit-wallpaper-hd-1.jpg"]
         }
     ]
 };
@@ -143,12 +143,9 @@ function displayWork(){
 
 displayWork();
 projects.display();
-
-$(document).click(function(loc){
-    logClicks(loc.pageX, loc.pageY);
-});
-
+$('#mapDiv').append(googleMap);
 $('#main').append(internationalizeButton);
+
 
 function inName(name){
     if(typeof name != 'undefined'){
