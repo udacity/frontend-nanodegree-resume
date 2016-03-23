@@ -141,6 +141,14 @@ a {
   padding: 10px;
 }
 
+ul#skills.flex-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0px;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
