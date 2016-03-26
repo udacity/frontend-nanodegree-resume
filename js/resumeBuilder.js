@@ -104,7 +104,7 @@ bio.display = function(){
     topContacts.append(HTMLemail.replace('%data%', bio.contacts.email));
     topContacts.append(HTMLtwitter.replace('%data%', bio.contacts.twitter));
     topContacts.append(HTMLgithub.replace('%data%', bio.contacts.github));
-    topContacts.append(HTMLblog.replace('%data%', bio.contacts.blog));
+    //topContacts.append(HTMLblog.replace('%data%', bio.contacts.blog));
     topContacts.append(HTMLlocation.replace('%data%', bio.contacts.location));
 
     if(bio.skills.length > 0){
