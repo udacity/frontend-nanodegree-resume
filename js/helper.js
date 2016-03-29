@@ -6,7 +6,7 @@ Don't worry, you'll learn what's going on in this file throughout the course. Yo
 
 Cameron Pittman
 */
-
+// TEST COMMIT
 
 /*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
