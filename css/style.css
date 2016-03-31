@@ -20,7 +20,8 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.online-entry {
   padding: 0 5%;
 }
 
@@ -151,9 +152,29 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
-  width: 200px;
+  padding:3px;
+  width: 175px;
   display: none;
+  border: 2px solid white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.nostyle {
+  text-decoration: none;
+  color: inherit;
+  display: inherit;
+}
+
+.nostyle-biopic {
+  text-decoration: none;
+  display: inline;
+}
+
+.nostyle-image {
+  text-decoration: none;
+  display: inline-block;
 }
 
 img {
