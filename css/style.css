@@ -212,3 +212,7 @@ span {
     display: block;
   }
 }
+
+.flex-box {
+  flex-direction: column;
+}
