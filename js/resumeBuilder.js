@@ -6,7 +6,7 @@ var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 
 // javascript object
 var bio = {
-"name" :  "cAmEROn PittMAN",
+"name" :  "Alexander Brown",
 "role" : "Web Developer",
 
 "contacts" : {
@@ -20,7 +20,7 @@ var bio = {
 
 } ,
 "skills" : skills,
-"picture" : "images/fry.jpg",
+"picture" : "images/alex.jpg",
 }
 
 var work ={
@@ -80,9 +80,6 @@ var project = {
 "title" : "project one",
 "completionDate" : 2016,
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-
-
-
 }
 
 
@@ -274,6 +271,13 @@ var comebinedname = firstname  + " " +  lastname;
 alert (comebinedname);
 
 }
-
+//alert(project.projects.title);
 // create a display function of project
+
+project.display = function(project) {
+
+return (project.projects.title);
+
+}
+
 
