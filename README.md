@@ -39,7 +39,7 @@ The resume has four distinct sections: work, education, projects and a header wi
                   mobile: string
                   email: string 
                   github: string
-                  twitter: string (optional)
+                  twitter: string 
                   location: string
             welcomeMessage: string 
             skills: array of strings
@@ -53,12 +53,12 @@ The resume has four distinct sections: work, education, projects and a header wi
                  location: string
                  degree: string
                  majors: array of strings
-                 dates: string (works with a hyphen between them)
+                 dates: integer (graduation date)
                  url: string
-            onlineCourses: array of objects with
+            onlineCourses: array with
                  title: string
                  school: string
-                 date: string (works with a hyphen between them)
+                 date: integer (date finished)
                  url: string
             display: function taking no parameters
 
@@ -68,7 +68,7 @@ The resume has four distinct sections: work, education, projects and a header wi
                  employer: string 
                  title: string 
                  location: string 
-                 dates: string (Can be 'in progress')
+                 dates: string (works with a hyphen between them)
                  description: string 
             display: function taking no parameters
 
