@@ -144,8 +144,8 @@ var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', educat
 var formattedEducationschoolMajor = HTMLschoolDegree.replace('%data%', education.schools[1].major);
 
 
-$("#header").append(formattedName);
-$("#header").append(formattedRole);
+$("#header").prepend(formattedName);
+$("#header").prepend(formattedRole);
 
 
 // Bio info
@@ -153,7 +153,7 @@ $("#topContacts").append(formatedMobile);
 $("#topContacts").append(formatedEmail);
 $("#topContacts").append(formatedGithub);
 $("#topContacts").append(formattedLocation);
-$('#topContacts').prepend(formatedGithub);
+$('#topContacts').append(formatedGithub);
 $('#topContacts').prepend(formattedBiopic);
 $('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
