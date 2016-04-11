@@ -251,6 +251,11 @@ locationlizer(work);
 var internationalizeButton = '<button>Internationalize</button>';
 
 $('#main').append(internationalizeButton);
+$('#footerContacts').append(formatedMobile);
+$('#footerContacts').append(formatedEmail);
+$('#footerContacts').append(formatedGithub);
+$("#footerContacts").append(formattedLocation);
+$('#footerContacts').append(formatedMobile);
 
 $('button').click(function() {
 
