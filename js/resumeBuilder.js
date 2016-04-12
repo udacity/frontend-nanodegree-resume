@@ -6,21 +6,21 @@ var work = {
             "title": "Software Engineer",
             "location": "Toronto, ON, Canada",
             "dates": "Sep 2010-current",
-            "description": "Design and implementing projects from a given requirements"
+            "description": "Design and implementation of software projects to satisfy given requirements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum faucibus feugiat. Praesent malesuada a dolor ut iaculis. Proin sollicitudin, nisi eget fringilla feugiat, est tortor tincidunt orci, vel tristique orci neque at justo. Ut commodo feugiat augue at cursus. Pellentesque augue tellus, bibendum at convallis eget, molestie id enim. Cras tristique tortor id quam pulvinar vestibulum. Integer lectus justo, porttitor sit amet mollis eu, eleifend quis dui. Nam ut tellus luctus, vestibulum odio vel, sollicitudin mauris. Vestibulum tempus metus ac fringilla ornare. Nulla laoreet ante enim, non elementum sem bibendum id. Phasellus id interdum magna. Pellentesque at suscipit magna, et tincidunt urna. Aliquam faucibus semper augue, nec dapibus odio rhoncus vel. Sed semper diam mi, ac elementum lectus malesuada ut."
         },
         {
-            "employer": "Super Secure Software",
+            "employer": "Mobile Payments Solution",
             "title": "Software Engineer",
             "location": "Calgary, AL, Canada",
             "dates": "Jan 2008 - Sep 2010",
-            "description": "Design and implementing part of a big computer security project"
+            "description": "Design and development software projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum faucibus feugiat. Praesent malesuada a dolor ut iaculis. Proin sollicitudin, nisi eget fringilla feugiat, est tortor tincidunt orci, vel tristique orci neque at justo. Ut commodo feugiat augue at cursus. Pellentesque augue tellus, bibendum at convallis eget, molestie id enim. Cras tristique tortor id quam pulvinar vestibulum. Integer lectus justo, porttitor sit amet mollis eu, eleifend quis dui. Nam ut tellus luctus, vestibulum odio vel, sollicitudin mauris. Vestibulum tempus metus ac fringilla ornare. Nulla laoreet ante enim, non elementum sem bibendum id. Phasellus id interdum magna. Pellentesque at suscipit magna, et tincidunt urna. Aliquam faucibus semper augue, nec dapibus odio rhoncus vel. Sed semper diam mi, ac elementum lectus malesuada ut."
         },
         {
-            "employer": "Medical Software Company",
+            "employer": "Healthcare Equipment Software",
             "title": "Software Engineer",
-            "location": "Nuuk, Greenland",
+            "location": "Montreal, QC, Canada",
             "dates": "Jan 2005 - Aug 2008",
-            "description": "Design and implementing projects in medical equipment area"
+            "description": "Design and development highly-reliable software to be used in medical equipment. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum faucibus feugiat. Praesent malesuada a dolor ut iaculis. Proin sollicitudin, nisi eget fringilla feugiat, est tortor tincidunt orci, vel tristique orci neque at justo. Ut commodo feugiat augue at cursus. Pellentesque augue tellus, bibendum at convallis eget, molestie id enim. Cras tristique tortor id quam pulvinar vestibulum. Integer lectus justo, porttitor sit amet mollis eu, eleifend quis dui. Nam ut tellus luctus, vestibulum odio vel, sollicitudin mauris. Vestibulum tempus metus ac fringilla ornare. Nulla laoreet ante enim, non elementum sem bibendum id. Phasellus id interdum magna. Pellentesque at suscipit magna, et tincidunt urna. Aliquam faucibus semper augue, nec dapibus odio rhoncus vel. Sed semper diam mi, ac elementum lectus malesuada ut."
         }
     ]
 };
@@ -47,13 +47,24 @@ var projects = {
             "title": "P1: Build a Portfolio Site",
             "dates": 2015,
             "description": "Portfolio website is built from mockup design",
-            "images": ["http://www.featurepics.com/FI/Thumb300/20110504/Electronic-Circuit-Plate-1867067.jpg"]
+            "images": ["images/p1-portfolio-sample-1.jpg"]
+                       // "images/p1-portfolio-sample-2.jpg",
+                       // "images/p1-portfolio-sample-3.jpg",
+                       // "images/p1-portfolio-sample-4.jpg"]
         },
         {
             "title": "P2: Online Resume",
             "dates": 2016,
             "description": "Implementing online resume using JavaScript and jQuery",
-            "images": ["https://cldn0.fiverrcdn.com/fiverr/t_main1/gigs3/2316015/original/miscellaneous-electronic-circuit-wallpaper-hd-1.jpg"]
+            "images": ["images/p2-portfolio-sample-1.jpg",
+                       "images/p2-portfolio-sample-2.jpg"]
+        },
+        {
+            "title": "P3: ",
+            "dates": 2016,
+            "description": "Implementing online resume using JavaScript and jQuery",
+            "images": ["images/p3-portfolio-sample-1.png",
+                       "images/p3-portfolio-sample-2.jpg"]
         }
     ]
 };
