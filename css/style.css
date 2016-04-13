@@ -24,6 +24,24 @@ h6 {
   padding: 0 5%;
 }
 
+/* always have a scroll on the page */
+html {
+  height: 100%;
+  margin-bottom: 0.01em;
+}
+
+/* center web page */
+#main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.project-entry img {
+  /*border: 1px blue dashed;*/
+  width: 30%;
+  /*height: auto;*/
+}
+
 h1 {
   font-size: 40px;
   color: #f5a623;
