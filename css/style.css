@@ -135,6 +135,11 @@ a {
   color: #fff;
 }
 
+.light-gray {
+  background-color: #fff8f8;
+  margin: 2px 0 2px;
+}
+
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
