@@ -105,8 +105,8 @@ var bio = {
 // Add display function to the bio object
 bio.display = function(){
     var header = $('#header');
-    header.prepend(HTMLheaderRole.replace('%data%', 'Web Developer'));
-    header.prepend(HTMLheaderName.replace('%data%', 'Jane Doette'));
+    header.prepend(HTMLheaderRole.replace('%data%', bio.role));
+    header.prepend(HTMLheaderName.replace('%data%', bio.name));
     header.append(HTMLbioPic.replace('%data%', bio.bioPic));
     header.append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
 
