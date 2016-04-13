@@ -65,7 +65,7 @@ var projects = {
             "description": "Implementing online resume using JavaScript and jQuery",
             "images": ["images/p3-portfolio-sample-1-scaled.jpg",
                        "images/p3-portfolio-sample-2-scaled.jpg",
-                       "images/p3-portfolio-sample-3-scaled.png",]
+                       "images/p3-portfolio-sample-3-scaled.jpg",]
         }
     ]
 };
