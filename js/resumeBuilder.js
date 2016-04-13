@@ -47,24 +47,25 @@ var projects = {
             "title": "P1: Build a Portfolio Site",
             "dates": 2015,
             "description": "Portfolio website is built from mockup design",
-            "images": ["images/p1-portfolio-sample-1.jpg"]
-                       // "images/p1-portfolio-sample-2.jpg",
-                       // "images/p1-portfolio-sample-3.jpg",
-                       // "images/p1-portfolio-sample-4.jpg"]
+            "images": ["images/p1-portfolio-sample-1-scaled.png",
+                       "images/p1-portfolio-sample-2-scaled.jpg",
+                       "images/p1-portfolio-sample-3-scaled.jpg"]
         },
         {
             "title": "P2: Online Resume",
             "dates": 2016,
             "description": "Implementing online resume using JavaScript and jQuery",
-            "images": ["images/p2-portfolio-sample-1.jpg",
-                       "images/p2-portfolio-sample-2.jpg"]
+            "images": ["images/p2-portfolio-sample-1-scaled.jpg",
+                       "images/p2-portfolio-sample-2-scaled.jpg",
+                       "images/p2-portfolio-sample-3-scaled.jpg"]
         },
         {
             "title": "P3: ",
             "dates": 2016,
             "description": "Implementing online resume using JavaScript and jQuery",
-            "images": ["images/p3-portfolio-sample-1.png",
-                       "images/p3-portfolio-sample-2.jpg"]
+            "images": ["images/p3-portfolio-sample-1-scaled.jpg",
+                       "images/p3-portfolio-sample-2-scaled.jpg",
+                       "images/p3-portfolio-sample-3-scaled.png",]
         }
     ]
 };
