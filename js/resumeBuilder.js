@@ -5,7 +5,7 @@ var work = {
             "employer": "ABC Software",
             "title": "Software Engineer",
             "location": "Toronto, ON, Canada",
-            "dates": "Sep 2010-current",
+            "dates": "Sep 2010 - current",
             "description": "Design and implementation of software projects to satisfy given requirements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum faucibus feugiat. Praesent malesuada a dolor ut iaculis. Proin sollicitudin, nisi eget fringilla feugiat, est tortor tincidunt orci, vel tristique orci neque at justo. Ut commodo feugiat augue at cursus. Pellentesque augue tellus, bibendum at convallis eget, molestie id enim. Cras tristique tortor id quam pulvinar vestibulum. Integer lectus justo, porttitor sit amet mollis eu, eleifend quis dui. Nam ut tellus luctus, vestibulum odio vel, sollicitudin mauris. Vestibulum tempus metus ac fringilla ornare. Nulla laoreet ante enim, non elementum sem bibendum id. Phasellus id interdum magna. Pellentesque at suscipit magna, et tincidunt urna. Aliquam faucibus semper augue, nec dapibus odio rhoncus vel. Sed semper diam mi, ac elementum lectus malesuada ut."
         },
         {
@@ -60,9 +60,9 @@ var projects = {
                        "images/p2-portfolio-sample-3-scaled.jpg"]
         },
         {
-            "title": "P3: ",
+            "title": "P3: Next project using advanced JavaScript",
             "dates": 2016,
-            "description": "Implementing online resume using JavaScript and jQuery",
+            "description": "Implementing online on-line game using JavaScript and jQuery",
             "images": ["images/p3-portfolio-sample-1-scaled.jpg",
                        "images/p3-portfolio-sample-2-scaled.jpg",
                        "images/p3-portfolio-sample-3-scaled.jpg",]
