@@ -285,4 +285,6 @@ return (project.projects.title);
 
 }
 
+$("#mapDiv").append(googleMap);
+
 
