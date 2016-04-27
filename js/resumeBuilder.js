@@ -48,7 +48,7 @@ var work ={
 var education = {
     "schools": [
         {
-            "name": "city University",
+            "name": "City University",
             "degree": "Computer Science",
             "graduation": "2012",
             "location": "London",
@@ -65,6 +65,22 @@ var education = {
             "major" : "cs"
        
         }
+
+
+
+    ],
+
+
+    "onlineCourses": [
+     {
+
+      "title" : " Front-End Web Developer Nanodegree",
+      "school" : "Udacity",
+      "date" : 2017,
+      "url": "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
+
+
+     }
 
 
     ]
@@ -120,6 +136,14 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
+// Online course details
+var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
+
 // Eduation details
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -136,12 +160,30 @@ var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work.details.at
 var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
 var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work.details.description);
 
-// Employment replacement
+// Education replacement
 var formattedEducationschoolName = HTMLworkEmployer.replace('%data%', education.schools[1].name);
 var formattedEducationschoolDegree = HTMLschoolDegree.replace('%data%', education.schools[1].degree);
 var formattedEducationschoolDates = HTMLschoolDegree.replace('%data%', education.schools[1].graduation);
 var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', education.schools[1].location);
 var formattedEducationschoolMajor = HTMLschoolDegree.replace('%data%', education.schools[1].major);
+
+// Education online degree
+var formattedEducationschoolName = HTMLworkEmployer.replace('%data%', education.onlineCourses[2].title);
+var formattedEducationschoolDegree = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].school);
+var formattedEducationschoolDates = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].date);
+var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].url);
+
+
+
+
+// Project
+
+var HTMLprojectStart = '<div class="project-entry"></div>';
+var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectImage = '<img src="%data%">';
+
 
 
 $("#header").prepend(formattedName);
@@ -164,9 +206,8 @@ function displayWork() {
     var key = 0;
     for(key in work.details) {
 
-    //alert(key + " " + work.details[key]);
+    alert(key + " " + work.details[key]);
 
-    alert(key);
 
     //foo.hasOwnProperty('bar'); 
 
@@ -213,13 +254,47 @@ $('#workExperience').append(formattedWorkemployerDates);
 $('#workExperience').append(formattedWorkemployerLocation);
 $('#workExperience').append(formattedWorkemployerDescription);
 */
+
+// project
+ var key = 0;
+    for(key in project.projects) {
+     alert(key + " " + project.projects[key]);
+     $('#projects').append(HTMLprojectStart + project.projects[key]);
+    }
+
+
 // Education
+
+var  key =0;
+var counter = 0;
+for(key in education.schools[0]) {
+//alert(key + " " + education.schools[1][key]);
+$('#education').append(HTMLschoolStart + education.schools[0][key]);
+
+}
+
 var  key =0;
 for(key in education.schools[1]) {
 //alert(key + " " + education.schools[1][key]);
-
 $('#education').append(HTMLschoolStart + education.schools[1][key]);
+
 }
+
+
+$('#education').append(HTMLonlineClasses)
+
+var  key =0;
+for(key in education.onlineCourses[0]) {
+//alert(key + " " + education.schools[1][key]);
+$('#education').append(HTMLschoolStart + education.onlineCourses[0][key]);
+
+}
+
+
+
+
+
+
 
 
 /*
@@ -239,7 +314,7 @@ var key = 0;
     for(key in work.details) {
         if(key == "location")
         {
-        alert(work.details[key]);
+       // alert(work.details[key]);
         locations.push(work.details[key]);
         }
 
