@@ -168,10 +168,10 @@ var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', educat
 var formattedEducationschoolMajor = HTMLschoolDegree.replace('%data%', education.schools[1].major);
 
 // Education online degree
-var formattedEducationschoolName = HTMLworkEmployer.replace('%data%', education.onlineCourses[2].title);
-var formattedEducationschoolDegree = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].school);
-var formattedEducationschoolDates = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].date);
-var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].url);
+//var formattedEducationschoolName = HTMLworkEmployer.replace('%data%', education.onlineCourses[2].title);
+//var formattedEducationschoolDegree = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].school);
+//var formattedEducationschoolDates = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].date);
+//var formattedEducationschoolLocation = HTMLschoolDegree.replace('%data%', education.onlineCourses[2].url);
 
 
 
