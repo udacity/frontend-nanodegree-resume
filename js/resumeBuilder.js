@@ -95,7 +95,8 @@ var project = {
 
 "title" : "project one",
 "completionDate" : 2016,
-"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+"projectImage" : "images/alex.jpg"
 }
 
 
@@ -211,19 +212,46 @@ function displayWork() {
 
     //foo.hasOwnProperty('bar'); 
 
-     work.details.hasOwnProperty(key == 'position' );
+     //work.details.hasOwnProperty(key == 'position' );
 
 
 
     if(key == 'position' ) {
         var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
-    $('#workExperience').append(formattedWorkemployerPosition + work.details[key]);
+    $('#workExperience').append(formattedWorkemployerPosition);
 
     }
     else if(key == 'employer')  {
         var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
-    $('#workExperience').append(formattedWorkemployer + work.details[key]).addClass( ".work-entry" );
+    $('#workExperience').append(formattedWorkemployer);
     }
+
+    else if(key == 'attended')  {
+        var formattedWorkDated = HTMLworkDates.replace('%data%', work.details.attended);
+    $('#workExperience').append(formattedWorkDated).addClass( ".work-entry" );
+    }
+    else if(key == 'location') {
+       var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
+       $('#workExperience').append(formattedWorkemployerLocation);
+    }
+
+       else if(key == 'description') {
+       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.details.description);
+       $('#workExperience').append(formattedWorkemployerDescription);
+    }
+
+           else if(key == 'description') {
+       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.details.description);
+       $('#workExperience').append(formattedWorkemployerDescription);
+    }
+
+            else if(key == 'projectImage') {
+       var formattedWorkImage = HTMLprojectImage.replace('%data%', work.details.projectImage);
+       $('#workExperience').append(formattedWorkImage);
+    }
+
+
+
     else
     {
       $('#workExperience').append(HTMLworkStart + work.details[key]);  
@@ -254,7 +282,7 @@ $('#workExperience').append(formattedWorkemployerDates);
 $('#workExperience').append(formattedWorkemployerLocation);
 $('#workExperience').append(formattedWorkemployerDescription);
 */
-
+function displayProject() {
 // project
  var key = 0;
     for(key in project.projects) {
@@ -262,8 +290,13 @@ $('#workExperience').append(formattedWorkemployerDescription);
      $('#projects').append(HTMLprojectStart + project.projects[key]);
     }
 
+}
+
 
 // Education
+
+function displayEducation()
+{
 
 var  key =0;
 var counter = 0;
@@ -289,10 +322,10 @@ for(key in education.onlineCourses[0]) {
 $('#education').append(HTMLschoolStart + education.onlineCourses[0][key]);
 
 }
+}
 
 
-
-
+displayProject();
 
 
 
