@@ -214,16 +214,16 @@ function displayWork() {
 
      //work.details.hasOwnProperty(key == 'position' );
 
-
+ $('#workExperience').append(HTMLworkStart)
 
     if(key == 'position' ) {
         var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
-    $('#workExperience').append(formattedWorkemployerPosition);
+    $('#workExperience').append(formattedWorkemployerPosition).addClass( ".work-entry" );;
 
     }
     else if(key == 'employer')  {
         var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
-    $('#workExperience').append(formattedWorkemployer);
+    $('#workExperience').append(formattedWorkemployer).addClass( ".work-entry" );;
     }
 
     else if(key == 'attended')  {
@@ -232,29 +232,29 @@ function displayWork() {
     }
     else if(key == 'location') {
        var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
-       $('#workExperience').append(formattedWorkemployerLocation);
+       $('#workExperience').append(formattedWorkemployerLocation).addClass( ".work-entry" );
     }
 
        else if(key == 'description') {
        var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.details.description);
-       $('#workExperience').append(formattedWorkemployerDescription);
+       $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
     }
 
            else if(key == 'description') {
        var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.details.description);
-       $('#workExperience').append(formattedWorkemployerDescription);
+       $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
     }
 
             else if(key == 'projectImage') {
        var formattedWorkImage = HTMLprojectImage.replace('%data%', work.details.projectImage);
-       $('#workExperience').append(formattedWorkImage);
+       $('#workExperience').append(formattedWorkImage).addClass( ".work-entry" );
     }
 
 
 
     else
     {
-      $('#workExperience').append(HTMLworkStart + work.details[key]);  
+      $('#workExperience').append(HTMLworkStart + work.details[key]).addClass( ".work-entry" );
     }
 
     }
