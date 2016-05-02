@@ -23,8 +23,10 @@ var bio = {
 "picture" : "images/alex.jpg",
 }
 
-var work = [
-     {
+var work = {
+  "jobs" : [
+  {
+    
        "position" : "Web Developer",
        "employer" : "Healthwareweb",
        "attended" : "2014",
@@ -38,7 +40,8 @@ var work = [
        "location" : "Chichester",
        "description" : "Drupal based role managing the RealGap travel website."
     }
-  ];
+    ]
+  };
 
 
 
@@ -89,13 +92,14 @@ var education = {
 var projectImages = []
 var project = {
 
-"projects" : {
-
+projects : [
+{
 "title" : "project one",
-"completionDate" : 2016,
+"dates" : 2016,
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-"projectImage" : "images/alex.jpg"
+"image" : "images/alex.jpg"
 }
+]
 
 
 };
@@ -201,15 +205,15 @@ $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
 
 
-alert(work[0].position);
+alert(work.jobs[0].position);
 // Work Experience
 function displayWork() {
     var key = 0
-    for(key in work) {
+    for(key in work.jobs) {
 //alert(key + "  " + work[key].position);
 
 
-    alert(key + " " + work[key].position);
+    alert(key + " " + work.jobs[key].position);
 
 
     //foo.hasOwnProperty('bar'); 
@@ -219,28 +223,28 @@ function displayWork() {
  $('#workExperience').append(HTMLworkStart);
 
     //if(key == work[key].position ) {
-        var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work[key].position);
+        var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.jobs[key].position);
         //alert("what value" +  formattedWorkemployerPosition);
     $('#workExperience').append(formattedWorkemployerPosition).addClass( ".work-entry" );
     alert("info data");
 
     //}
 
-        var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work[key].employer);
+        var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
     $('#workExperience').append(formattedWorkemployer).addClass( ".work-entry" );
 
 
     
-        var formattedWorkDated = HTMLworkDates.replace('%data%', work[key].attended);
+        var formattedWorkDated = HTMLworkDates.replace('%data%', work.jobs[key].attended);
     $('#workExperience').append(formattedWorkDated).addClass( ".work-entry" );
 
   
-       var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work[key].location);
+       var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.jobs[key].location);
        $('#workExperience').append(formattedWorkemployerLocation).addClass( ".work-entry" );
 
 
    
-       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work[key].description);
+       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.jobs[key].description);
        $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
    
 
@@ -281,8 +285,38 @@ function displayProject() {
 // project
  var key = 0;
     for(key in project.projects) {
-     alert(key + " " + project.projects[key]);
-     $('#projects').append(HTMLprojectStart + project.projects[key]);
+     alert(key + " " + project.projects[key].title);
+     $('#projects').append(HTMLprojectStart);
+
+ /*    
+ var HTMLprojectStart = '<div class="project-entry"></div>';
+var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectImage = '<img src="%data%">';
+*/
+
+
+           var formattedProjectTitle = HTMLprojectTitle.replace('%data%', project.projects[key].title);
+
+
+    $('#projects').append(formattedProjectTitle).addClass(".project-entry");
+      
+      var formattedProjectDates = HTMLprojectDates.replace('%data%', project.projects[key].dates);
+
+
+    $('#projects').append(formattedProjectDates).addClass(".project-entry");
+
+           var formattedProjectDescription = HTMLprojectDescription.replace('%data%', project.projects[key].description);
+
+    $('#projects').append(formattedProjectDescription).addClass(".project-entry");
+
+           var formattedProjectImage = HTMLprojectImage.replace('%data%', project.projects[key].image);
+
+    $('#projects').append(formattedProjectImage).addClass(".project-entry");
+
+
+
     }
 
 }
