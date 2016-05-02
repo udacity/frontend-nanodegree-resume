@@ -23,26 +23,24 @@ var bio = {
 "picture" : "images/alex.jpg",
 }
 
-var work ={
-"details" : {
-"position" : "Web Developer",
-"employer" : "TUI",
-"attended" : "2014",
-"location" : "Brighton",
-"description" : "Drupal based role managing the RealGap travel website."
+var work = [
+     {
+       "position" : "Web Developer",
+       "employer" : "Healthwareweb",
+       "attended" : "2014",
+       "location" : "Brighton",
+       "description" : "Drupal based role managing the RealGap travel website."
+    },
+    {
+       "position" : "Digital exec",
+       "employer" : "TUI",
+       "attended" : "2014",
+       "location" : "Chichester",
+       "description" : "Drupal based role managing the RealGap travel website."
+    }
+  ];
 
-},
 
-"details" : {
-"position" : "Web Developer",
-"employer" : "TUI",
-"attended" : "2014",
-"location" : "Chichester",
-"description" : "Drupal based role managing the RealGap travel website."
-
-}
-
-};
 
 
 var education = {
@@ -155,12 +153,12 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 // Work replacement dot notation
-
-var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
-var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work.details.attended);
-var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
-var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work.details.description);
-
+/*
+var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work[0].position);
+var formattedWorkemployerDates = HTMLworkDates.replace('%data%', work[0].attended);
+var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work[0].location);
+var formattedWorkemployerDescription = HTMLworkDescription.replace('%data%', work[0].description);
+*/
 // Education replacement
 var formattedEducationschoolName = HTMLworkEmployer.replace('%data%', education.schools[1].name);
 var formattedEducationschoolDegree = HTMLschoolDegree.replace('%data%', education.schools[1].degree);
@@ -202,62 +200,59 @@ $('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
 
+
+alert(work[0].position);
 // Work Experience
 function displayWork() {
-    var key = 0;
-    for(key in work.details) {
+    var key = 0
+    for(key in work) {
+//alert(key + "  " + work[key].position);
 
-    alert(key + " " + work.details[key]);
+
+    alert(key + " " + work[key].position);
 
 
     //foo.hasOwnProperty('bar'); 
 
      //work.details.hasOwnProperty(key == 'position' );
 
- $('#workExperience').append(HTMLworkStart)
+ $('#workExperience').append(HTMLworkStart);
 
-    if(key == 'position' ) {
-        var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.details.position);
-    $('#workExperience').append(formattedWorkemployerPosition).addClass( ".work-entry" );;
+    //if(key == work[key].position ) {
+        var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work[key].position);
+        //alert("what value" +  formattedWorkemployerPosition);
+    $('#workExperience').append(formattedWorkemployerPosition).addClass( ".work-entry" );
+    alert("info data");
 
-    }
-    else if(key == 'employer')  {
-        var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.details.employer);
-    $('#workExperience').append(formattedWorkemployer).addClass( ".work-entry" );;
-    }
+    //}
 
-    else if(key == 'attended')  {
-        var formattedWorkDated = HTMLworkDates.replace('%data%', work.details.attended);
+        var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work[key].employer);
+    $('#workExperience').append(formattedWorkemployer).addClass( ".work-entry" );
+
+
+    
+        var formattedWorkDated = HTMLworkDates.replace('%data%', work[key].attended);
     $('#workExperience').append(formattedWorkDated).addClass( ".work-entry" );
-    }
-    else if(key == 'location') {
-       var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.details.location);
+
+  
+       var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work[key].location);
        $('#workExperience').append(formattedWorkemployerLocation).addClass( ".work-entry" );
-    }
 
-       else if(key == 'description') {
-       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.details.description);
+
+   
+       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work[key].description);
        $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
+   
+
+
+
+
+  //    $('#workExperience').append(HTMLworkStart + work[key]).addClass( ".work-entry" );
+
+
     }
 
-           else if(key == 'description') {
-       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.details.description);
-       $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
-    }
 
-            else if(key == 'projectImage') {
-       var formattedWorkImage = HTMLprojectImage.replace('%data%', work.details.projectImage);
-       $('#workExperience').append(formattedWorkImage).addClass( ".work-entry" );
-    }
-
-
-
-    else
-    {
-      $('#workExperience').append(HTMLworkStart + work.details[key]).addClass( ".work-entry" );
-    }
-
-    }
 }
 
 displayWork();
