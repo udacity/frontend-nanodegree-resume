@@ -1,5 +1,4 @@
-$("#main").append(["Madison Hug"])
+$("#main").append(["Madison Hug"]);
 
-var = awesomeThoughts;
-awesomeThoughts = "I am Madison and I am awesome!";
-console.log(awesomeThoughts)
+var awesomeThoughts = "I am Madison and I am awesome!";
+console.log(awesomeThoughts);
