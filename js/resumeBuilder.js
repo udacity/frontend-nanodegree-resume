@@ -102,7 +102,7 @@ projects : [
 "title" : "project one",
 "dates" : 2016,
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-"image" : "images/alex.jpg"
+"image" : "images/project.jpg"
 }
 ]
 
@@ -172,15 +172,17 @@ $("#header").prepend(formattedRole);
 
 
 // Bio info
+
 $("#topContacts").append(formatedMobile);
 $("#topContacts").append(formatedEmail);
 $("#topContacts").append(formatedGithub);
 $("#topContacts").append(formattedLocation);
-$('#topContacts').append(formatedGithub);
+$('#topContacts').prepend(formatedGithub);
 $('#topContacts').prepend(formattedBiopic);
-$('#topContacts').append(HTMLformattedWelcomeMsg);
+$('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
+
 
 
 alert(work.jobs[0].position);
@@ -188,50 +190,20 @@ alert(work.jobs[0].position);
 function displayWork() {
     var key = 0
     for(key in work.jobs) {
-//alert(key + "  " + work[key].position);
 
 
-    alert(key + " " + work.jobs[key].position);
-
-
-    //foo.hasOwnProperty('bar'); 
-
-     //work.details.hasOwnProperty(key == 'position' );
-
- $('#workExperience').append(HTMLworkStart);
-
-    //if(key == work[key].position ) {
+    $('#workExperience').append(HTMLworkStart);
         var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.jobs[key].position);
         //alert("what value" +  formattedWorkemployerPosition);
     $('#workExperience').append(formattedWorkemployerPosition).addClass( ".work-entry" );
-    alert("info data");
-
-    //}
-
         var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
     $('#workExperience').append(formattedWorkemployer).addClass( ".work-entry" );
-
-
-    
         var formattedWorkDated = HTMLworkDates.replace('%data%', work.jobs[key].attended);
     $('#workExperience').append(formattedWorkDated).addClass( ".work-entry" );
-
-  
-       var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.jobs[key].location);
-       $('#workExperience').append(formattedWorkemployerLocation).addClass( ".work-entry" );
-
-
-   
-       var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.jobs[key].description);
-       $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
-   
-
-
-
-
-  //    $('#workExperience').append(HTMLworkStart + work[key]).addClass( ".work-entry" );
-
-
+        var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.jobs[key].location);
+    $('#workExperience').append(formattedWorkemployerLocation).addClass( ".work-entry" );
+    var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.jobs[key].description);
+    $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
     }
 
 
@@ -239,41 +211,13 @@ function displayWork() {
 
 displayWork();
 
-// no add the location data
-/*
-$(document).click(function(loc) {
 
-var x = event.clientX;
-var y = event.clientY;
-
-alert("x" + x + "y" + y);
-logClicks(x,y);
-});
-*/
-
-/*
-$('#workExperience').append(HTMLworkStart);
-$('#workExperience').append(formattedWorkemployer);
-$('#workExperience').append(formattedWorkemployerPosition);
-$('#workExperience').append(formattedWorkemployerDates);
-$('#workExperience').append(formattedWorkemployerLocation);
-$('#workExperience').append(formattedWorkemployerDescription);
-*/
 function displayProject() {
 // project
  var key = 0;
     for(key in project.projects) {
      alert(key + " " + project.projects[key].title);
      $('#projects').append(HTMLprojectStart);
-
- /*    
- var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
-*/
-
 
            var formattedProjectTitle = HTMLprojectTitle.replace('%data%', project.projects[key].title);
 
@@ -323,14 +267,41 @@ $('#education').append(HTMLschoolStart);
       var formattedEducationDegree= HTMLschoolDegree.replace('%data%', education.schools[key].degree);
       $('#education').append(formattedEducationDegree).addClass(".education-entry");
 
-      var formattedEducationMajor= HTMLschoolMajor.replace('%data%', education.schools[key].majors);
+      var formattedEducationMajor= HTMLschoolMajor.replace('%data%', education.schools[key].major);
       $('#education').append(formattedEducationMajor).addClass(".education-entry");
 
-      var formattedEducationDate= HTMLschoolDates.replace('%data%', education.schools[key].dates);
-      $('#education').append(formattedEducationDate).addClass(".education-entry");
 
       var formattedEducationUrl= HTMLschoolName.replace('%data%', education.schools[key].url);
       $('#education').append(formattedEducationUrl).addClass(".education-entry");
+
+          var formattedEducationDate= HTMLschoolDates.replace('%data%', education.schools[key].dates);
+      $('#education').append(formattedEducationDate);
+
+
+
+}
+
+for(key in education.onlineCourses) {
+alert(key + " " + education.onlineCourses[key].name);
+
+
+
+$('#education').append(HTMLonlineClasses);
+
+      var formattedEducationOnlineName= HTMLonlineTitle.replace('%data%', education.onlineCourses[key].title);
+      $('#education').append(formattedEducationOnlineName).addClass('education-entry');
+
+      var formattedEducationOnlineSchool= HTMLonlineSchool.replace('%data%', education.onlineCourses[key].school);
+      $('#education').append(formattedEducationOnlineSchool).addClass('education-entry');
+
+      var formattedEducationOnlineDate= HTMLonlineDates.replace('%data%', education.onlineCourses[key].date);
+      $('#education').append(formattedEducationOnlineDate).addClass('education-entry');
+
+      var formattedEducationOnlineUrl= HTMLonlineURL.replace('%data%', education.onlineCourses[key].url);
+      $('#education').append(formattedEducationOnlineUrl).addClass('education-entry');
+
+
+ 
 
 
 
@@ -345,14 +316,7 @@ displayEducation();
 
 
 
-/*
-$('#education').append(HTMLschoolStart);
-$('#education').append(formattedEducationschoolName);
-$('#education').append(formattedEducationschoolDegree);
-$('#education').append(formattedEducationschoolDates);
-$('#education').append(formattedEducationschoolLocation);
-$('#education').append(formattedEducationschoolMajor);
-*/
+
 // only run code for skills if there are skill that are on the page
 // store results in an array
 
@@ -399,7 +363,7 @@ var comebinedname = firstname  + " " +  lastname;
 alert (comebinedname);
 
 }
-//alert(project.projects.title);
+
 // create a display function of project
 
 project.display = function(project) {
