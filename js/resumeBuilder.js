@@ -289,16 +289,16 @@ alert(key + " " + education.onlineCourses[key].name);
 $('#education').append(HTMLonlineClasses);
 
       var formattedEducationOnlineName= HTMLonlineTitle.replace('%data%', education.onlineCourses[key].title);
-      $('#education').append(formattedEducationOnlineName).addClass('education-entry');
+      $('#education').append(formattedEducationOnlineName);
 
       var formattedEducationOnlineSchool= HTMLonlineSchool.replace('%data%', education.onlineCourses[key].school);
-      $('#education').append(formattedEducationOnlineSchool).addClass('education-entry');
+      $('#education').append(formattedEducationOnlineSchool);
 
       var formattedEducationOnlineDate= HTMLonlineDates.replace('%data%', education.onlineCourses[key].date);
-      $('#education').append(formattedEducationOnlineDate).addClass('education-entry');
+      $('#education').append(formattedEducationOnlineDate);
 
       var formattedEducationOnlineUrl= HTMLonlineURL.replace('%data%', education.onlineCourses[key].url);
-      $('#education').append(formattedEducationOnlineUrl).addClass('education-entry');
+      $('#education').append(formattedEducationOnlineUrl);
 
 
  
