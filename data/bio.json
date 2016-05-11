@@ -1,0 +1,15 @@
+{
+  "name": "Hannan Ali",
+  "role": "Sweg Developer 😎😎😎😎😎",
+  "contacts": {
+    "mobile": "923012548888",
+    "email": "abdulhannanali@outlook.com",
+    "github": "https://github.com/abdulhannanali",
+    "twitter": "https://twitter.com/computistic",
+    "location": "Okara, Pakistan"
+  },
+  "welcomeMessage": "Yo! Nuff Said! let's see the resume now",
+  "skills": ["ReactJS", "Node.js", "MongoDB", "jQuery"],
+  "biopic": "images/jannat.gif",
+  "display": {}
+}
