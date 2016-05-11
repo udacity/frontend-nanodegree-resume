@@ -265,14 +265,14 @@ $('#education').append(HTMLschoolStart);
       $('#education').append(formattedEducationLocation).addClass(".education-entry");
 
       var formattedEducationDegree= HTMLschoolDegree.replace('%data%', education.schools[key].degree);
-      $('#education').append(formattedEducationDegree).addClass(".education-entry");
+      $('#education').append(formattedEducationDegree);
 
       var formattedEducationMajor= HTMLschoolMajor.replace('%data%', education.schools[key].major);
-      $('#education').append(formattedEducationMajor).addClass(".education-entry");
+      $('#education').append(formattedEducationMajor);
 
 
       var formattedEducationUrl= HTMLschoolName.replace('%data%', education.schools[key].url);
-      $('#education').append(formattedEducationUrl).addClass(".education-entry");
+      $('#education').append(formattedEducationUrl);
 
           var formattedEducationDate= HTMLschoolDates.replace('%data%', education.schools[key].dates);
       $('#education').append(formattedEducationDate);
