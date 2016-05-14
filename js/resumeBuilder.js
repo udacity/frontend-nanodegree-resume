@@ -222,20 +222,20 @@ function displayProject() {
            var formattedProjectTitle = HTMLprojectTitle.replace('%data%', project.projects[key].title);
 
 
-    $('#projects').append(formattedProjectTitle).addClass(".project-entry");
+    $('.project-entry').append(formattedProjectTitle)
       
       var formattedProjectDates = HTMLprojectDates.replace('%data%', project.projects[key].dates);
 
 
-    $('#projects').append(formattedProjectDates).addClass(".project-entry");
+    $('.project-entry').append(formattedProjectDates)
 
            var formattedProjectDescription = HTMLprojectDescription.replace('%data%', project.projects[key].description);
 
-    $('#projects').append(formattedProjectDescription).addClass(".project-entry");
+    $('.project-entry').append(formattedProjectDescription)
 
            var formattedProjectImage = HTMLprojectImage.replace('%data%', project.projects[key].image);
 
-    $('#projects').append(formattedProjectImage).addClass(".project-entry");
+    $('.project-entry').append(formattedProjectImage)
 
 
 
