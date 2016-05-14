@@ -1,0 +1,12 @@
+#donut {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+  height:200px;
+}
+
+text {
+  font: 40px sans-serif;
+}
+

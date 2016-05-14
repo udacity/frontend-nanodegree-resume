@@ -122,6 +122,7 @@ var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</sp
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
+
 var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
 var formattedRole =HTMLheaderRole.replace("%data%", bio.role) ;
 var formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
@@ -160,6 +161,7 @@ var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 // Project
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
+var piechart = '<div id="donut">fgh</div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
@@ -211,6 +213,57 @@ function displayWork() {
 
 displayWork();
 
+function completionpie() {
+
+  var value = 80;
+var remainder = 100 - value;
+
+var dataset = {things: [value, remainder],};
+
+var width = 460,
+    height = 300,
+    radius = Math.min(width, height) / 2;
+
+var color = d3.scale.category20();
+
+var pie = d3.layout.pie()
+    .sort(null);
+
+var arc = d3.svg.arc()
+    .innerRadius(radius - 100)
+    .outerRadius(radius - 50);
+
+var svg = d3.select("#donut").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var path = svg.selectAll("path")
+    .data(pie(dataset.things))
+  .enter().append("path")
+    .attr("fill", function(d, i) { return color(i); })
+    .attr("d", arc);
+    
+    
+    function getColors (i) {
+  var colorArray = ['#E5E5E5','#5CB85C'];
+  return colorArray[i];
+}
+    svg.append("svg:text")
+    .attr("dy", ".35em")
+    .attr("text-anchor", "middle")
+    .attr("style","font-family:Arial")
+    .attr("font-size","120")
+    .attr("fill","#5CB85C")
+    .text(value+"%");
+
+    alert ("test this");
+
+}
+
+
+
 
 function displayProject() {
 // project
@@ -219,23 +272,25 @@ function displayProject() {
      alert(key + " " + project.projects[key].title);
      $('#projects').append(HTMLprojectStart);
 
+completionpie();
+
            var formattedProjectTitle = HTMLprojectTitle.replace('%data%', project.projects[key].title);
 
-
-    $('.project-entry').append(formattedProjectTitle)
+    $('.project-entry:last').append(piechart)
+    $('.project-entry:last').append(formattedProjectTitle)
       
       var formattedProjectDates = HTMLprojectDates.replace('%data%', project.projects[key].dates);
 
 
-    $('.project-entry').append(formattedProjectDates)
+    $('.project-entry:last').append(formattedProjectDates)
 
            var formattedProjectDescription = HTMLprojectDescription.replace('%data%', project.projects[key].description);
 
-    $('.project-entry').append(formattedProjectDescription)
+    $('.project-entry:last').append(formattedProjectDescription)
 
            var formattedProjectImage = HTMLprojectImage.replace('%data%', project.projects[key].image);
 
-    $('.project-entry').append(formattedProjectImage)
+    $('.project-entry:last').append(formattedProjectImage)
 
 
 
