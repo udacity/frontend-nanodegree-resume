@@ -211,22 +211,17 @@ span {
   .biopic {
     display: block;
   }
-}
-#workExperience {
 
-margin-left:200px;
+  #projects {
 
-}
-
-#projects {
-
-margin-left:200px;
+margin-left:0px;
 
 }
-
-#education {
-  margin-left:200px;
 }
+
+
+
+
 
 
 
