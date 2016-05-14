@@ -194,16 +194,16 @@ function displayWork() {
 
     $('#workExperience').append(HTMLworkStart);
         var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.jobs[key].position);
+             var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
         //alert("what value" +  formattedWorkemployerPosition);
-    $('#workExperience').append(formattedWorkemployerPosition).addClass( ".work-entry" );
-        var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
-    $('#workExperience').append(formattedWorkemployer).addClass( ".work-entry" );
+    $('.work-entry:last').append(formattedWorkemployer + formattedWorkemployerPosition)
+   
         var formattedWorkDated = HTMLworkDates.replace('%data%', work.jobs[key].attended);
-    $('#workExperience').append(formattedWorkDated).addClass( ".work-entry" );
+    $('.work-entry:last').append(formattedWorkDated)
         var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.jobs[key].location);
-    $('#workExperience').append(formattedWorkemployerLocation).addClass( ".work-entry" );
+    $('.work-entry:last').append(formattedWorkemployerLocation)
     var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.jobs[key].description);
-    $('#workExperience').append(formattedWorkemployerDescription).addClass( ".work-entry" );
+    $('.work-entry:last').append(formattedWorkemployerDescription)
     }
 
 
