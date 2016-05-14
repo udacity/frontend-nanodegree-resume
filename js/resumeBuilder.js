@@ -213,6 +213,10 @@ function displayWork() {
 
 displayWork();
 
+/*
+Donut piechart based on code reference. 
+http://www.bscalable.com/blog-galapagos/2015/6/27/web-charts-with-d3js
+*/
 function completionpie() {
 
   var value = 80;
