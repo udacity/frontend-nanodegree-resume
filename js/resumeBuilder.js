@@ -5,6 +5,9 @@ This is empty on purpose! Your code to build the resume will go here.
 var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 
 // javascript object
+var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
+
+// javascript object
 var bio = {
 "name" :  "Alexander Brown",
 "role" : "Web Developer",
@@ -16,12 +19,11 @@ var bio = {
 "location": "Brighton",
 
 "welcome" : "Hello how are you",
-"location" : "Hove"
 
 } ,
 "skills" : skills,
 "picture" : "images/alex.jpg",
-}
+};
 
 var work = {
   "jobs" : [
