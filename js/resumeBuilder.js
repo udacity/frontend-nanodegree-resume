@@ -111,6 +111,9 @@ projects : [
 
 };
 
+
+bio.display = function() {
+
 var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
 var formattedRole =HTMLheaderRole.replace("%data%", bio.role) ;
 var formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
@@ -137,9 +140,12 @@ $('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
 
+}
+
+bio.display();
 
 // Work Experience
-function displayWork() {
+work.display = function() {
     var key = 0
     for (key in work.jobs) {
 
@@ -160,7 +166,7 @@ function displayWork() {
 
 }
 
-displayWork();
+work.display();
 
 /*
 Donut piechart based on code reference. 
@@ -220,7 +226,11 @@ function completionpie() {
 }
 
 
-function displayProject() {
+project.display = function() {
+
+   
+
+
     // project
     var key = 0;
     for (key in project.projects) {
@@ -243,7 +253,7 @@ function displayProject() {
 
 // Education
 
-function displayEducation() {
+education.display = function() {
 
     var key = 0;
     var counter = 0;
@@ -274,10 +284,8 @@ function displayEducation() {
 
 }
 
-
-displayProject();
-displayEducation();
-
+education.display(); 
+project.display();
 
 
 
@@ -330,10 +338,6 @@ function inName(bio) {
 
 // create a display function of project
 
-project.display = function(project) {
 
-    return (project.projects.title);
-
-}
 
 $("#mapDiv").append(googleMap);
