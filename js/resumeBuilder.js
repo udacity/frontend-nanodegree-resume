@@ -134,7 +134,6 @@ $("#topContacts").append(formatedMobile);
 $("#topContacts").append(formatedEmail);
 $("#topContacts").append(formatedGithub);
 $("#topContacts").append(formattedLocation);
-$('#topContacts').prepend(formatedGithub);
 $('#topContacts').prepend(formattedBiopic);
 $('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
@@ -310,7 +309,6 @@ locationlizer(work);
 var internationalizeButton = '<button>Internationalize</button>';
 
 $('#main').append(internationalizeButton);
-$('#footerContacts').append(formatedMobile);
 $('#footerContacts').append(formatedEmail);
 $('#footerContacts').append(formatedGithub);
 $("#footerContacts").append(formattedLocation);
