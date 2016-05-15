@@ -96,7 +96,7 @@ var education = {
 
 };
 
-var projectImages = []
+var projectImages = [];
 var project = {
 
 projects : [
