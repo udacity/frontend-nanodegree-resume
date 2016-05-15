@@ -4,9 +4,10 @@
   position: relative;
   width: 960px;
   height:200px;
+  float:left;
 }
 
 text {
-  font: 40px sans-serif;
+  font: 30px sans-serif;
 }
 
