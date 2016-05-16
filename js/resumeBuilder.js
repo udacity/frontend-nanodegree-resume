@@ -19,8 +19,8 @@ var bio = {
 
 
 } ,
-"welcome" : "Hello how are you",
-"biopic" : ["images/alex.jpg"],
+"welcomeMessage" : "Hello how are you",
+"biopic" : "images/alex.jpg",
 "skills" : skills,
 };
 
@@ -52,8 +52,8 @@ var education = {
             "name": "City University",
             "location": "London",
             "degree": "Computer Science",
-             "major" : ["cs"],
-            "dates": 2012,
+             "majors" : ["cs"],
+            "date": "2012",
             "url" : "test"
             
            
@@ -65,8 +65,8 @@ var education = {
             "name": "Essex University",
             "location": "Colchester",
              "degree": "Computer Science",
-               "major" : ["cs"],
-             "dates":  2007,
+               "majors" : ["cs"],
+             "date":  "2007",
             
             "url" : "test"
        
@@ -102,7 +102,7 @@ projects : [
 "title" : "project one",
 "dates" : "2016",
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-"images" : "images/project.jpg"
+"images" : ["images/project.jpg"]
 }
 ]
 
@@ -124,7 +124,7 @@ var formatedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
 var formatedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
 var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 var formattedBiopic = HTMLbioPic.replace('%data%', bio.biopic);
-var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.welcome);
+var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
 var formattedSkills = HTMLskills.replace('%data%', bio.skills);
 
 // Bio info
@@ -271,7 +271,7 @@ education.display = function() {
         $('.education-entry:last').append(formattedEducationDate);
         var formattedEducationLocation = HTMLschoolLocation.replace('%data%', education.schools[key].location);
         $('.education-entry:last').append(formattedEducationLocation);
-        var formattedEducationMajor = HTMLschoolMajor.replace('%data%', education.schools[key].major);
+        var formattedEducationMajor = HTMLschoolMajor.replace('%data%', education.schools[key].majors);
         $('.education-entry:last').append(formattedEducationMajor);
 
     }
