@@ -48,7 +48,7 @@ var education = {
             "location": "London",
             "degree": "Computer Science",
             "majors": ["cs"],
-            "date": "2012",
+            "dates": "2012",
             "url": "test"
 
 
@@ -61,7 +61,7 @@ var education = {
             "location": "Colchester",
             "degree": "Computer Science",
             "majors": ["cs"],
-            "date": "2007",
+            "dates": "2007",
 
             "url": "test"
 
@@ -158,7 +158,7 @@ work.display = function() {
         var formattedWorkemployerEmployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
         var formattedWorktitle = HTMLworkTitle.replace('%data%', work.jobs[key].title);
         $('.work-entry:last').append(formattedWorkemployerEmployer + formattedWorktitle);
-        var formattedWorkDated = HTMLworkDates.replace('%data%', work.jobs[key].attended);
+        var formattedWorkDated = HTMLworkDates.replace('%data%', work.jobs[key].dates);
         $('.work-entry:last').append(formattedWorkDated);
         var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.jobs[key].location);
         $('.work-entry:last').append(formattedWorkemployerLocation);
@@ -278,7 +278,7 @@ education.display = function() {
         var formattedEducationOnlineName = HTMLonlineTitle.replace('%data%', education.onlineCourses[key].title);
         var formattedEducationOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[key].school);
         $('.education-entry:last').append(formattedEducationOnlineName + formattedEducationOnlineSchool);
-        var formattedEducationOnlineDate = HTMLonlineDates.replace('%data%', education.onlineCourses[key].dates);
+        var formattedEducationOnlineDate = HTMLonlineDates.replace('%data%', education.onlineCourses[key].date);
         $('.education-entry:last').append(formattedEducationOnlineDate);
         var formattedEducationOnlineUrl = HTMLonlineURL.replace('%data%', education.onlineCourses[key].url);
         $('.education-entry:last').append(formattedEducationOnlineUrl);
