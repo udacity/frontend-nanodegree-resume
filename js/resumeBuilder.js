@@ -147,17 +147,16 @@ $('#footerContacts').append(formatedGithub);
 $('#footerContacts').append(formatedTwitter);
 $("#footerContacts").append(formattedLocation);
 
-}
+};
 
 bio.display();
 
 
 // Work Experience
 work.display = function() {
-    var key = 0
+    var key = 0;
     for (key in work.jobs) {
 
-HTMLworkTitle
         $('#workExperience').append(HTMLworkStart);
         var formattedWorkemployerEmployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
         var formattedWorktitle = HTMLworkTitle.replace('%data%', work.jobs[key].title);
@@ -171,7 +170,7 @@ HTMLworkTitle
     }
 
 
-}
+};
 
 work.display();
 
@@ -228,8 +227,6 @@ function completionpie() {
         .attr("fill", "#5CB85C")
         .text(value + "%");
 
-    alert("test this");
-
 }
 
 
@@ -255,7 +252,7 @@ projects.display = function() {
 
     }
 
-}
+};
 education.display = function() {
 // Education
 
@@ -291,7 +288,7 @@ education.display = function() {
         $('.education-entry:last').append(formattedEducationOnlineUrl);
     }
 
-}
+};
 
 education.display(); 
 projects.display();
