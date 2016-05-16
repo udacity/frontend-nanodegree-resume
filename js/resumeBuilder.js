@@ -130,9 +130,14 @@ $("#topContacts").append(formattedLocation);
 $('#header').prepend(formattedBiopic);
 $('#header').prepend(HTMLformattedWelcomeMsg);
 
-
+if(bio.skills.length>0) {
 $("#header").append(HTMLskillsStart);
-$("#header").append(formattedSkills);
+}
+
+for (var i = 0; i < bio.skills.length; i ++) {   
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+        $("#skills").append(formattedSkill);
+    }
 
 $('#footerContacts').append(formatedMobile);
 $('#footerContacts').append(formatedEmail);
