@@ -146,7 +146,6 @@ $("#topContacts").append(formattedSkills);
 
 bio.display();
 
-//bio.display();
 
 // Work Experience
 work.display = function() {
@@ -256,14 +255,15 @@ project.display = function() {
 }
 
 // Education
+$('#education').append(HTMLschoolStart);
 
-education.display = function() {
 
     var key = 0;
     var counter = 0;
+
     for (key in education.schools) {
 
-        $('#education').append(HTMLschoolStart);
+  
         var formattedEducationDegree = HTMLschoolDegree.replace('%data%', education.schools[key].degree);
         var formattedEducationName = HTMLschoolName.replace('%data%', education.schools[key].name);
         $('.education-entry:last').append(formattedEducationName + formattedEducationDegree);
@@ -275,8 +275,10 @@ education.display = function() {
         $('.education-entry:last').append(formattedEducationMajor);
 
     }
-
+     $('.education-entry:last').append(HTMLonlineClasses);
     for (key in education.onlineCourses) {
+
+        
         var formattedEducationOnlineName = HTMLonlineTitle.replace('%data%', education.onlineCourses[key].title);
         var formattedEducationOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[key].school);
         $('.education-entry:last').append(formattedEducationOnlineName + formattedEducationOnlineSchool);
@@ -286,9 +288,9 @@ education.display = function() {
         $('.education-entry:last').append(formattedEducationOnlineUrl);
     }
 
-}
 
-education.display(); 
+
+//education.display(); 
 project.display();
 
 
