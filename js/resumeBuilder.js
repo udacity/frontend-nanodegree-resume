@@ -16,6 +16,7 @@ var bio = {
 "mobile" : "07793749873",
 "email" : "test@test.com",
 "github" :   "datadev23",
+"twitter" : "datadev23", 
 "location": "Brighton",
 
 "welcome" : "Hello how are you",
@@ -112,19 +113,20 @@ projects : [
 };
 
 
-bio.display = function() {
+
 
 var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
 var formattedRole =HTMLheaderRole.replace("%data%", bio.role) ;
 var formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 var formatedEmail= HTMLemail.replace("%data%",bio.contacts.email);
 var formatedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
+var formatedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
 var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 var formattedBiopic = HTMLbioPic.replace('%data%', bio.picture);
 var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.contacts.welcome);
 var formattedSkills = HTMLskills.replace('%data%', bio.skills);
 
-
+bio.display = function() {
 
 // Bio info
 $("#header").prepend(formattedName);
@@ -133,6 +135,7 @@ $("#header").prepend(formattedRole);
 $("#topContacts").append(formatedMobile);
 $("#topContacts").append(formatedEmail);
 $("#topContacts").append(formatedGithub);
+$("#topContacts").append(formatedTwitter);
 $("#topContacts").append(formattedLocation);
 $('#topContacts').prepend(formattedBiopic);
 $('#topContacts').prepend(HTMLformattedWelcomeMsg);
@@ -142,6 +145,8 @@ $("#topContacts").append(formattedSkills);
 }
 
 bio.display();
+
+//bio.display();
 
 // Work Experience
 work.display = function() {
@@ -309,30 +314,12 @@ locationlizer(work);
 var internationalizeButton = '<button>Internationalize</button>';
 
 $('#main').append(internationalizeButton);
+$('#footerContacts').append(formatedMobile);
 $('#footerContacts').append(formatedEmail);
 $('#footerContacts').append(formatedGithub);
+$('#footerContacts').append(formatedTwitter);
 $("#footerContacts").append(formattedLocation);
-$('#footerContacts').append(formatedMobile);
 
-$('button').click(function() {
-
-    inName(bio);
-
-});
-
-function inName(bio) {
-
-    alert(bio.name);
-
-    var name = bio.name.trim();
-    var res = name.split(" ");
-    firstname = res[0].substring(1, res[0]).toUpperCase() + res[0].substring(1).toLowerCase();
-    lastname = res[1].toUpperCase();
-    alert(firstname);
-    var comebinedname = firstname + " " + lastname;
-    alert(comebinedname);
-
-}
 
 // create a display function of project
 
