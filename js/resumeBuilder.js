@@ -2,8 +2,8 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-// javascript object
-var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
+
+
 
 // javascript object
 var bio = {
@@ -21,7 +21,7 @@ var bio = {
     },
     "welcomeMessage": "Hello how are you",
     "biopic": "images/alex.jpg",
-    "skills": skills,
+    "skills": ["javascript", "css", "HTML", "PHP", "drupal"],
 };
 
 var work = {
@@ -76,7 +76,7 @@ var education = {
 
             "title": " Front-End Web Developer Nanodegree",
             "school": "Udacity",
-            "dates": "2017",
+            "date": "2017",
             "url": "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
 
 
@@ -127,10 +127,12 @@ $("#topContacts").append(formatedEmail);
 $("#topContacts").append(formatedGithub);
 $("#topContacts").append(formatedTwitter);
 $("#topContacts").append(formattedLocation);
-$('#topContacts').prepend(formattedBiopic);
-$('#topContacts').prepend(HTMLformattedWelcomeMsg);
-$("#topContacts").append(HTMLskillsStart);
-$("#topContacts").append(formattedSkills);
+$('#header').prepend(formattedBiopic);
+$('#header').prepend(HTMLformattedWelcomeMsg);
+
+
+$("#header").append(HTMLskillsStart);
+$("#header").append(formattedSkills);
 
 $('#footerContacts').append(formatedMobile);
 $('#footerContacts').append(formatedEmail);
