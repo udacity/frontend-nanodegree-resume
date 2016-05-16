@@ -2,8 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
-
 // javascript object
 var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 
@@ -11,6 +9,8 @@ var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 var bio = {
 "name" :  "Alexander Brown",
 "role" : "Web Developer",
+"biopic" : "images/alex.jpg",
+"welcome" : "Hello how are you"
 
 "contacts" : {
 "mobile" : "07793749873",
@@ -19,11 +19,10 @@ var bio = {
 "twitter" : "datadev23", 
 "location": "Brighton",
 
-"welcome" : "Hello how are you",
+
 
 } ,
 "skills" : skills,
-"picture" : "images/alex.jpg",
 };
 
 var work = {
@@ -31,15 +30,15 @@ var work = {
   {
     
        "position" : "Web Developer",
-       "employer" : "Healthwareweb",
-       "attended" : "2014",
+       "title" : "Healthwareweb",
+       "dates" : "2014",
        "location" : "Brighton",
        "description" : "Drupal based role managing the RealGap travel website."
     },
     {
        "position" : "Digital exec",
-       "employer" : "TUI",
-       "attended" : "2014",
+       "title" : "TUI",
+       "dates" : "2014",
        "location" : "Chichester",
        "description" : "Drupal based role managing the RealGap travel website."
     }
@@ -55,9 +54,9 @@ var education = {
             "name": "City University",
             "location": "London",
             "degree": "Computer Science",
-             "major" : "cs",
+             "major" : ["cs"],
             "dates": "2012",
-            "url" : "info"
+            "url" : "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
             
            
             
@@ -68,10 +67,10 @@ var education = {
             "name": "Essex University",
             "location": "Colchester",
              "degree": "Computer Science",
-               "major" : "cs",
+               "major" : ["cs"],
              "dates": "2012",
             
-            "url" : "info"
+            "url" : "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
        
         }
 
@@ -85,7 +84,7 @@ var education = {
 
       "title" : " Front-End Web Developer Nanodegree",
       "school" : "Udacity",
-      "date" : 2017,
+      "date" : "2017",
       "url": "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
 
 
@@ -98,14 +97,14 @@ var education = {
 };
 
 var projectImages = [];
-var project = {
+var projects = {
 
 projects : [
 {
 "title" : "project one",
-"dates" : 2016,
+"dates" : "2016",
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-"image" : "images/project.jpg"
+"image" : ["images/project.jpg"]
 }
 ]
 
@@ -115,7 +114,11 @@ projects : [
 
 
 
-var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
+
+
+bio.display = function() {
+
+    var formattedName =HTMLheaderName.replace("%data%", bio.name) ;
 var formattedRole =HTMLheaderRole.replace("%data%", bio.role) ;
 var formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 var formatedEmail= HTMLemail.replace("%data%",bio.contacts.email);
@@ -125,8 +128,6 @@ var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 var formattedBiopic = HTMLbioPic.replace('%data%', bio.picture);
 var HTMLformattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.contacts.welcome);
 var formattedSkills = HTMLskills.replace('%data%', bio.skills);
-
-bio.display = function() {
 
 // Bio info
 $("#header").prepend(formattedName);
@@ -142,6 +143,13 @@ $('#topContacts').prepend(HTMLformattedWelcomeMsg);
 $("#topContacts").append(HTMLskillsStart);
 $("#topContacts").append(formattedSkills);
 
+$('#main').append(internationalizeButton);
+$('#footerContacts').append(formatedMobile);
+$('#footerContacts').append(formatedEmail);
+$('#footerContacts').append(formatedGithub);
+$('#footerContacts').append(formatedTwitter);
+$("#footerContacts").append(formattedLocation);
+
 }
 
 bio.display();
@@ -156,14 +164,13 @@ work.display = function() {
         $('#workExperience').append(HTMLworkStart);
         var formattedWorkemployerPosition = HTMLworkTitle.replace('%data%', work.jobs[key].position);
         var formattedWorkemployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
-        //alert("what value" +  formattedWorkemployerPosition);
-        $('.work-entry:last').append(formattedWorkemployer + formattedWorkemployerPosition)
+        $('.work-entry:last').append(formattedWorkemployer + formattedWorkemployerPosition);
         var formattedWorkDated = HTMLworkDates.replace('%data%', work.jobs[key].attended);
-        $('.work-entry:last').append(formattedWorkDated)
+        $('.work-entry:last').append(formattedWorkDated);
         var formattedWorkemployerLocation = HTMLworkLocation.replace('%data%', work.jobs[key].location);
-        $('.work-entry:last').append(formattedWorkemployerLocation)
+        $('.work-entry:last').append(formattedWorkemployerLocation);
         var formattedWorkemployerDescription = HTMLprojectDescription.replace('%data%', work.jobs[key].description);
-        $('.work-entry:last').append(formattedWorkemployerDescription)
+        $('.work-entry:last').append(formattedWorkemployerDescription);
     }
 
 
@@ -240,15 +247,15 @@ project.display = function() {
         alert(key + " " + project.projects[key].title);
         $('#projects').append(HTMLprojectStart);
         var formattedProjectTitle = HTMLprojectTitle.replace('%data%', project.projects[key].title);
-        $('.project-entry:last').append(piechart)
+        $('.project-entry:last').append(piechart);
         completionpie();
-        $('.project-entry:last').append(formattedProjectTitle)
+        $('.project-entry:last').append(formattedProjectTitle);
         var formattedProjectDates = HTMLprojectDates.replace('%data%', project.projects[key].dates);
-        $('.project-entry:last').append(formattedProjectDates)
+        $('.project-entry:last').append(formattedProjectDates);
         var formattedProjectDescription = HTMLprojectDescription.replace('%data%', project.projects[key].description);
-        $('.project-entry:last').append(formattedProjectDescription)
+        $('.project-entry:last').append(formattedProjectDescription);
         var formattedProjectImage = HTMLprojectImage.replace('%data%', project.projects[key].image);
-        $('.project-entry:last').append(formattedProjectImage)
+        $('.project-entry:last').append(formattedProjectImage);
 
     }
 
@@ -270,7 +277,7 @@ $('#education').append(HTMLschoolStart);
         var formattedEducationDate = HTMLschoolDates.replace('%data%', education.schools[key].dates);
         $('.education-entry:last').append(formattedEducationDate);
         var formattedEducationLocation = HTMLschoolLocation.replace('%data%', education.schools[key].location);
-        $('.education-entry:last').append(formattedEducationLocation)
+        $('.education-entry:last').append(formattedEducationLocation);
         var formattedEducationMajor = HTMLschoolMajor.replace('%data%', education.schools[key].major);
         $('.education-entry:last').append(formattedEducationMajor);
 
@@ -315,12 +322,7 @@ function locationlizer(work) {
 locationlizer(work);
 var internationalizeButton = '<button>Internationalize</button>';
 
-$('#main').append(internationalizeButton);
-$('#footerContacts').append(formatedMobile);
-$('#footerContacts').append(formatedEmail);
-$('#footerContacts').append(formatedGithub);
-$('#footerContacts').append(formatedTwitter);
-$("#footerContacts").append(formattedLocation);
+
 
 
 // create a display function of project
