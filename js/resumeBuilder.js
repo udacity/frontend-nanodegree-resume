@@ -152,8 +152,7 @@ bio.display();
 
 // Work Experience
 work.display = function() {
-    var key = 0;
-    for (key in work.jobs) {
+    for (var key =0; key < work.jobs.length; key++) {
 
         $('#workExperience').append(HTMLworkStart);
         var formattedWorkemployerEmployer = HTMLworkEmployer.replace('%data%', work.jobs[key].employer);
@@ -234,8 +233,8 @@ projects.display = function() {
 
 
     // project
-    var key = 0;
-    for (key in projects.projects) {
+    
+    for (var key =0; key < projects.projects.length; key++) {
         $('#projects').append(HTMLprojectStart);
         var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects.projects[key].title);
         $('.project-entry:last').append(piechart);
@@ -256,10 +255,9 @@ education.display = function() {
 
 
 
-    var key = 0;
-    var counter = 0;
+ 
 
-    for (key in education.schools) {
+    for (var key=0; key < education.schools.length; key++) {
 
         $('#education').append(HTMLschoolStart);
         var formattedEducationDegree = HTMLschoolDegree.replace('%data%', education.schools[key].degree);
@@ -274,7 +272,7 @@ education.display = function() {
 
     }
      $('.education-entry:last').append(HTMLonlineClasses);
-    for (key in education.onlineCourses) {
+    for (var key =0; key < education.onlineCourses.length; key++) {
        
         
         var formattedEducationOnlineName = HTMLonlineTitle.replace('%data%', education.onlineCourses[key].title);
