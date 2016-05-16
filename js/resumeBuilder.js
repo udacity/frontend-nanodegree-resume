@@ -253,7 +253,7 @@ project.display = function() {
     }
 
 }
-
+education.display = function() {
 // Education
 $('#education').append(HTMLschoolStart);
 
@@ -288,9 +288,9 @@ $('#education').append(HTMLschoolStart);
         $('.education-entry:last').append(formattedEducationOnlineUrl);
     }
 
+}
 
-
-//education.display(); 
+education.display(); 
 project.display();
 
 
