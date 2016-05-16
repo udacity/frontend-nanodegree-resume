@@ -91,7 +91,7 @@ var projectImages = [];
 var projects = {
 
 projects: [{
-    "title": "project one",
+    "title": "Project one",
     "dates": "2016",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "images": ["images/project.jpg"]
