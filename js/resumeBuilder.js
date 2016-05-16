@@ -9,9 +9,6 @@ var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 var bio = {
 "name" :  "Alexander Brown",
 "role" : "Web Developer",
-"biopic" : ["images/alex.jpg"],
-"welcome" : "Hello how are you",
-
 "contacts" : {
 "mobile" : "07793749873",
 "email" : "test@test.com",
@@ -22,6 +19,8 @@ var bio = {
 
 
 } ,
+"welcome" : "Hello how are you",
+"biopic" : ["images/alex.jpg"],
 "skills" : skills,
 };
 
@@ -30,15 +29,15 @@ var work = {
   {
        "employer" : "Healthwareweb",
        "title" : "Web Developer",
-       "dates" : "2014",
        "location" : "Brighton",
+       "dates" : "2014",     
        "description" : "Drupal based role managing the RealGap travel website."
     },
     {
        "employer" : "TUI",
        "title" : "Digital Exec",
-       "dates" : "2014",
        "location" : "Chichester",
+       "dates" : "2014",
        "description" : "Drupal based role managing the RealGap travel website."
     }
     ]
@@ -103,7 +102,7 @@ projects : [
 "title" : "project one",
 "dates" : "2016",
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-"image" : "images/project.jpg"
+"images" : "images/project.jpg"
 }
 ]
 
@@ -251,7 +250,7 @@ projects.display = function() {
         $('.project-entry:last').append(formattedProjectDates);
         var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects.projects[key].description);
         $('.project-entry:last').append(formattedProjectDescription);
-        var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[key].image);
+        var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[key].images);
         $('.project-entry:last').append(formattedProjectImage);
 
     }
