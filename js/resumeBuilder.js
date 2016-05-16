@@ -7,69 +7,64 @@ var skills = ["javascript", "css", "HTML", "PHP", "drupal"];
 
 // javascript object
 var bio = {
-"name" :  "Alexander Brown",
-"role" : "Web Developer",
-"contacts" : {
-"mobile" : "07793749873",
-"email" : "test@test.com",
-"github" :   "datadev23",
-"twitter" : "datadev23", 
-"location": "Brighton",
+    "name": "Alexander Brown",
+    "role": "Web Developer",
+    "contacts": {
+        "mobile": "07793749873",
+        "email": "test@test.com",
+        "github": "datadev23",
+        "twitter": "datadev23",
+        "location": "Brighton",
 
 
 
-} ,
-"welcomeMessage" : "Hello how are you",
-"biopic" : "images/alex.jpg",
-"skills" : skills,
+    },
+    "welcomeMessage": "Hello how are you",
+    "biopic": "images/alex.jpg",
+    "skills": skills,
 };
 
 var work = {
-  "jobs" : [
-  {
-       "employer" : "Healthwareweb",
-       "title" : "Web Developer",
-       "location" : "Brighton",
-       "dates" : "2014",     
-       "description" : "Drupal based role managing the RealGap travel website."
-    },
-    {
-       "employer" : "TUI",
-       "title" : "Digital Exec",
-       "location" : "Chichester",
-       "dates" : "2014",
-       "description" : "Drupal based role managing the RealGap travel website."
-    }
-    ]
-  };
-
+    "jobs": [{
+        "employer": "Healthwareweb",
+        "title": "Web Developer",
+        "location": "Brighton",
+        "dates": "2014",
+        "description": "Drupal based role managing the RealGap travel website."
+    }, {
+        "employer": "TUI",
+        "title": "Digital Exec",
+        "location": "Chichester",
+        "dates": "2014",
+        "description": "Drupal based role managing the RealGap travel website."
+    }]
+};
 
 
 
 var education = {
-    "schools": [
-        {
+    "schools": [{
             "name": "City University",
             "location": "London",
             "degree": "Computer Science",
-             "majors" : ["cs"],
+            "majors": ["cs"],
             "date": "2012",
-            "url" : "test"
-            
-           
-            
+            "url": "test"
+
+
+
 
         },
 
         {
             "name": "Essex University",
             "location": "Colchester",
-             "degree": "Computer Science",
-               "majors" : ["cs"],
-             "date":  "2007",
-            
-            "url" : "test"
-       
+            "degree": "Computer Science",
+            "majors": ["cs"],
+            "date": "2007",
+
+            "url": "test"
+
         }
 
 
@@ -77,34 +72,30 @@ var education = {
     ],
 
 
-    "onlineCourses": [
-     {
+    "onlineCourses": [{
 
-      "title" : " Front-End Web Developer Nanodegree",
-      "school" : "Udacity",
-      "dates" : "2017",
-      "url": "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
+            "title": " Front-End Web Developer Nanodegree",
+            "school": "Udacity",
+            "dates": "2017",
+            "url": "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
 
 
-     }
+        }
 
 
     ]
 
 
 };
-
 var projectImages = [];
 var projects = {
 
-projects : [
-{
-"title" : "project one",
-"dates" : "2016",
-"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-"images" : ["images/project.jpg"]
-}
-]
+projects: [{
+    "title": "project one",
+    "dates": "2016",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "images": ["images/project.jpg"]
+}]
 
 
 };
