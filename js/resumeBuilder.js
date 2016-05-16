@@ -275,9 +275,9 @@ education.display = function() {
         $('.education-entry:last').append(formattedEducationMajor);
 
     }
-     
+     $('.education-entry:last').append(HTMLonlineClasses);
     for (key in education.onlineCourses) {
-       $('.education-entry:last').append(HTMLonlineClasses);
+       
         
         var formattedEducationOnlineName = HTMLonlineTitle.replace('%data%', education.onlineCourses[key].title);
         var formattedEducationOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[key].school);
