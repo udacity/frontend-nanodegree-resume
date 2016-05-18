@@ -15,14 +15,14 @@ work ={
 	"title":"Engineer",
 	"location":"GZ",
 	"dates":"2007-2009"
-}
+};
 
 projects ={
 
 	"title": "ML",
 	"dates":"2016",
 	"description":"This is a nano degree project i've pay a lot of work."
-}
+};
 
 bio ={
 
@@ -30,9 +30,9 @@ bio ={
 	"role": "male",
 
 	"welcomeMessage":"hi",
-	"contacts": {"tel":"123112313" , "email":"asdfdsa@ads.com" ,"location":"GZ"
+	"contacts": {"tel":"123112313" , "email":"asdfdsa@ads.com" ,"location":"GZ"}
 
-}
+};
 
 education ={
 
@@ -40,12 +40,12 @@ education ={
           "name":"gdut",
           "location":"gz",
           "degree": "BS",
-          "majors": "Machine"
+          "majors": "Machine",
 
-          "schoolURL":"www.gdut.edu.cn",
-          ""
+          "schoolURL":"www.gdut.edu.cn"
+         
 
-	}]
+	}],
 
 	"onlineCourses":[{
 
@@ -56,4 +56,4 @@ education ={
 
 	}]
 
-}
+};
