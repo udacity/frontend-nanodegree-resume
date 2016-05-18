@@ -2,4 +2,4 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-$("#header").append("Welcome back!");
+//$("#header").append("Welcome back!");
