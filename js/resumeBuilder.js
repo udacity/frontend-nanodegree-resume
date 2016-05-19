@@ -54,19 +54,15 @@ var education ={
 
 };
 
-// var bio ={
-//   "name": "Fish Wang",
-//   "role": "Web Developer",
-//   "welcomeMessage":"Hi there, how are you doing today?",
-//   "contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"Guangzhou,Guangdong"}
-//   "skills":["Excel","SolidWorks","Javascript","Python","Machine Learning","Front End Development"]
-//   "biopic": "url"
 
-// };
 
-// var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-// var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+// bio 
 if (bio.length !== 0){
 
     var formattedName = HTMLheaderName.replace("%data%", bio["name"]);
@@ -79,10 +75,14 @@ if (bio.length !== 0){
     
     bio["skills"].forEach(function(skill){
 
-       formattedSkills += HTMLskills.replace("%data%",skill);
-    });
+           formattedSkills = formattedSkills.concat(HTMLskills.replace("%data%",skill)) ;
+
+        });
 
     formattedSkills = HTMLskillsStart + formattedSkills;
+    console.log(formattedSkills);
+
+    $("#header").append(formattedSkills);
 
   //work on contacts
 
