@@ -7,7 +7,7 @@ var work = [
       "title":"Engineer",
       "location":"Guangzhou, Guangdong Province, CHINA",
       "dates":"2007-2009",
-      "description":"This is an awesome experience as an engineer there. I worked on desinging the assembly process and SMT."
+      "description":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
       }
     ];
 
@@ -16,9 +16,12 @@ var projects =[{
 
   "title": "Machine Learning Nano Degree",
   "dates":"2015.06- Present",
-  "description":"This is a nano degree project i've engaged work."
-
+  "picture":"images/project.jpg",
+  "description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+  
      }]
+
+     //var HTMLprojectImage = '<img src="%data%">';
 
 
 
@@ -48,7 +51,7 @@ var education ={
 		"title":"Machine Learning",
 		"school":"Georgia Institute of Technology",
 		"dates":"2015 - 2016",
-		"courseURL":"www.udacity.com"
+		"courseURL":"http://www.udacity.com"
 
 	}]
 
@@ -144,14 +147,6 @@ if (work.length !== 0){
 
 
 
-// var projects =[{
-
-//   "title": "Machine Learning Nano Degree",
-//   "dates":"2015.06- Present",
-//   "description":"This is a nano degree project i've engaged work."
-
-//      }]
-
 // project
 
 if (projects.length !==0){
@@ -161,18 +156,38 @@ if (projects.length !==0){
         var formattedProject =""
 
         for (key in project) {
+
             if (key ==="title"){
 
                  var formattedTitle = HTMLprojectTitle.replace("%data%",project.title);
+                 continue;
+
+
             }else if(key ==="dates") {
+
                  var formattedDates = HTMLprojectDates.replace("%data%",project.dates);
+                 continue;
+
+
             }else if(key === "description") {
+
                  var formattedDescription = HTMLprojectDescription.replace("%data%",project.description);
+                 continue;
+
+
+            }else if (key === "picture"){
+
+              var formattedProjectPic = HTMLprojectImage.replace("%data%",project.picture);
+              continue;
+
+
+
             }
+            //var HTMLprojectImage = '<img src="%data%">';
 
         }// end for loop
 
-       formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription;
+       formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription+formattedProjectPic;
 
        $("#projects").children().append(formattedProject);
 
