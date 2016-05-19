@@ -2,14 +2,7 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-//$("#header").append("Welcome back!");
-
-var work ={};
-var projects = {};
-var bio = {};
-var education = {};
-
-work ={
+var work ={
 
 	"employer":"Jabil",
 	"title":"Engineer",
@@ -17,24 +10,23 @@ work ={
 	"dates":"2007-2009"
 };
 
-projects ={
+var projects ={
 
 	"title": "ML",
 	"dates":"2016",
 	"description":"This is a nano degree project i've pay a lot of work."
 };
 
-bio ={
+var bio ={
 
 	"name": "Fish Wang",
-	"role": "male",
-
+	"role": "Web Developer",
 	"welcomeMessage":"hi",
-	"contacts": {"tel":"123112313" , "email":"asdfdsa@ads.com" ,"location":"GZ"}
+	"contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"GZ"}
 
 };
 
-education ={
+var education ={
 
 	"schools": [{
           "name":"gdut",
@@ -43,8 +35,6 @@ education ={
           "majors": "Machine",
 
           "schoolURL":"www.gdut.edu.cn"
-         
-
 	}],
 
 	"onlineCourses":[{
@@ -57,3 +47,40 @@ education ={
 	}]
 
 };
+
+if (bio.length != 0){
+
+  var formattedName = HTMLheaderName.replace("%data%", bio["name"]);
+  $("#header").append(formattedName);
+
+  var formattedRole = HTMLheaderRole.replace("%data%", bio["role"]);
+  $("#header").append(formattedRole);
+
+  contacts = bio["contacts"];
+  for (var key in contacts){
+
+    if (contacts.hasOwnProperty(key)){
+
+      var formattedContact = HTMLcontactGeneric.replace("%contact%",key);
+      formattedContact = formattedContact.replace("%data%", contacts[key]);
+      $("#topContacts").append(formattedContact);
+    }
+  }// contacts loop
+ 
+}// if bio statement
+
+// if (work.length !=0){
+//   var formattedWork ="";
+
+//   var formatttedEmployer = HTMLworkEmployer.replace("%data%",work["employer"]);
+//   var formattedTitle = HTMLworkTitle.replace("%data%",work["title"]);
+//   var formattedDates = HTMLworkDates.replace("%data%",work["dates"]);
+//   var formatedLocation = HTMLworkLocation.replace("%data%",work["location"]);
+
+//   formattedWork = HTMLworkStart+formatttedEmployer+formattedTitle+formattedDates+formatedLocation;
+
+//   $("#workExperience").append(formattedWork);
+
+ 
+// }
+
