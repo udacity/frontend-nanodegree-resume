@@ -1,29 +1,34 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+var work = [
+      { 
+      "employer":"Jabil",
+      "title":"Engineer",
+      "location":"Guangzhou, Guangdong Province, CHINA",
+      "dates":"2007-2009",
+      "description":"This is an awesome experience as an engineer there. I worked on desinging the assembly process and SMT."
+      }
+    ];
 
-var work ={
 
-	"employer":"Jabil",
-	"title":"Engineer",
-	"location":"Guangzhou, Guangdong Province, CHINA",
-	"dates":"2007-2009",
-  "description":"This is an awesome experience as an engineer there. I worked on desinging the assembly process and SMT."
-};
+var projects =[{
 
-var projects ={
+  "title": "Machine Learning Nano Degree",
+  "dates":"2015.06- Present",
+  "description":"This is a nano degree project i've engaged work."
 
-	"title": "Machine Learning Nano Degree",
-	"dates":"2015.06- Present",
-	"description":"This is a nano degree project i've engaged work."
-};
+     }]
+
+
 
 var bio ={
-
 	"name": "Fish Wang",
 	"role": "Web Developer",
-	"welcomeMessage":"hi",
-	"contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"Guangzhou,Guangdong"}
+	"welcomeMessage":"Hi there, how are you doing today?",
+	"contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"Guangzhou,Guangdong"},
+  "skills":["Excel","SolidWorks","Javascript","Python","Machine Learning","Front End Development"],
+  "biopic": "url"
 
 };
 
@@ -49,56 +54,97 @@ var education ={
 
 };
 
+// var bio ={
+//   "name": "Fish Wang",
+//   "role": "Web Developer",
+//   "welcomeMessage":"Hi there, how are you doing today?",
+//   "contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"Guangzhou,Guangdong"}
+//   "skills":["Excel","SolidWorks","Javascript","Python","Machine Learning","Front End Development"]
+//   "biopic": "url"
+
+// };
+
+// var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+// var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+
 if (bio.length !== 0){
 
-  var formattedName = HTMLheaderName.replace("%data%", bio["name"]);
-  $("#header").append(formattedName);
+    var formattedName = HTMLheaderName.replace("%data%", bio["name"]);
+    $("#header").append(formattedName);
 
-  var formattedRole = HTMLheaderRole.replace("%data%", bio["role"]);
-  $("#header").append(formattedRole);
+    var formattedRole = HTMLheaderRole.replace("%data%", bio["role"]);
+    $("#header").append(formattedRole);
 
-//work on contacts
+    var formattedSkills ="";
+    
+    bio["skills"].forEach(function(skill){
 
-  contacts = bio["contacts"];
-  for (var key in contacts){
+       formattedSkills += HTMLskills.replace("%data%",skill);
+    });
 
-    if (contacts.hasOwnProperty(key)){
+    formattedSkills = HTMLskillsStart + formattedSkills;
 
-      var formattedContact = HTMLcontactGeneric.replace("%contact%",key);
-      formattedContact = formattedContact.replace("%data%", contacts[key]);
-      $("#topContacts").append(formattedContact);
-      $("#footerContacts").append(formattedContact);
-    }
-  }// contacts loop
+  //work on contacts
+
+    contacts = bio["contacts"];
+    for (var key in contacts){
+
+      if (contacts.hasOwnProperty(key)){
+
+        var formattedContact = HTMLcontactGeneric.replace("%contact%",key);
+        formattedContact = formattedContact.replace("%data%", contacts[key]);
+        $("#topContacts").append(formattedContact);
+        $("#footerContacts").append(formattedContact);
+      }
+    }// contacts loop
  
 }// if bio statement
 
 if (work.length !== 0){
-  var formattedWork ="";
 
-  var formatttedEmployer = HTMLworkEmployer.replace("%data%",work["employer"]);
-  var formattedTitle = HTMLworkTitle.replace("%data%",work["title"]);
-  var formattedDates = HTMLworkDates.replace("%data%",work["dates"]);
-  var formatedLocation = HTMLworkLocation.replace("%data%",work["location"]);
-  var formattedDescription = HTMLworkDescription.replace("%data%", work.description)
+    work.forEach(function(val){
 
-  formattedWork = HTMLworkStart+formatttedEmployer+formattedTitle+formattedDates+formatedLocation +formattedDescription;
+       for (key in val){
+            var formattedWork ="";
 
-  $("#workExperience").children().append(formattedWork);
- 
+            if (key == "employer"){
+                var formatttedEmployer = HTMLworkEmployer.replace("%data%",val["employer"]);
+                continue;
+            }else if (key === "title"){
+               var formattedTitle = HTMLworkTitle.replace("%data%",val["title"]);
+                continue;
+            }else if (key==="dates"){
+            var formattedDates = HTMLworkDates.replace("%data%",val["dates"]);
+             continue;
+            }else if (key =="location") {
+              var formatedLocation = HTMLworkLocation.replace("%data%",val["location"]);
+               continue;
+            }else if(key =="description") {
+            var formattedDescription = HTMLworkDescription.replace("%data%", val.description);
+             continue;
+            }
+
+       }// for loop   
+    
+    formattedWork = HTMLworkStart+formatttedEmployer+formattedTitle+formattedDates+formatedLocation +formattedDescription;
+
+    $("#workExperience").children().append(formattedWork);
+
+    })// forEach loop
+
 }// end of work
 
 
 if (projects.length !==0){
 
-  var formattedProject =""
-  var formattedTitle = HTMLprojectTitle.replace("%data%",projects.title);
-  var formattedDates = HTMLprojectDates.replace("%data%",projects.dates);
-  var formattedDescription = HTMLprojectDescription.replace("%data%",projects.description);
+    var formattedProject =""
+    var formattedTitle = HTMLprojectTitle.replace("%data%",projects.title);
+    var formattedDates = HTMLprojectDates.replace("%data%",projects.dates);
+    var formattedDescription = HTMLprojectDescription.replace("%data%",projects.description);
 
-  formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription;
+    formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription;
 
-  $("#projects").children().append(formattedProject);
+    $("#projects").children().append(formattedProject);
 
 };
 
