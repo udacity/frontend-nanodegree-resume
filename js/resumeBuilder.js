@@ -99,5 +99,69 @@ if (projects.length !==0){
 
   $("#projects").children().append(formattedProject);
 
-}
+};
 
+
+if (education !== 0){
+
+  var schools = education.schools;
+
+  schools.forEach(function(val){
+      var formattedSchool = "";
+      for (key in val){
+          console.log(val[key]);
+
+          if (key === "name"){ 
+            var formattedSchoolName = HTMLschoolName.replace("%data%",val.name);
+            continue;
+          } else if (key === "degree"){ 
+            var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",val.degree);
+            continue;
+          } else if (key === "dates"){ 
+            var formattedSchoolDates = HTMLschoolDates.replace("%data%",val.dates);
+            continue;
+          } else if (key === "location"){
+           var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",val.location);
+           continue;
+         }
+      };
+    formattedSchool = HTMLschoolStart + formattedSchoolName+formattedSchoolDegree+formattedSchoolDates+ formattedSchoolLocation;
+    $("#education").children().append(formattedSchool);
+  
+  });
+
+};
+
+//  var education ={
+
+//   "schools": [{
+//           "name":"gdut",
+//           "location":"gz",
+//           "degree": "BS",
+//           "majors": "Machine",
+//           "schoolURL":"www.gdut.edu.cn"
+//   }],
+
+//   "onlineCourses":[{
+
+//     "title":"ML",
+//     "school":"GT",
+//     "dates":"2015",
+//     "courseURL":"www.udacity.com"
+
+//   }]
+
+// };
+
+// var HTMLschoolStart = '<div class="education-entry"></div>';
+// var HTMLschoolName = '<a href="#">%data%';
+// var HTMLschoolDegree = ' -- %data%</a>';
+// var HTMLschoolDates = '<div class="date-text">%data%</div>';
+// var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+// var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
+// var HTMLonlineClasses = '<h3>Online Classes</h3>';
+// var HTMLonlineTitle = '<a href="#">%data%';
+// var HTMLonlineSchool = ' - %data%</a>';
+// var HTMLonlineDates = '<div class="date-text">%data%</div>';
+// var HTMLonlineURL = '<br><a href="#">%data%</a>';
