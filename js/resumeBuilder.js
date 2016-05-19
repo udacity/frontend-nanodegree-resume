@@ -135,19 +135,45 @@ if (work.length !== 0){
 }// end of work
 
 
+
+// var projects =[{
+
+//   "title": "Machine Learning Nano Degree",
+//   "dates":"2015.06- Present",
+//   "description":"This is a nano degree project i've engaged work."
+
+//      }]
+
+// project
+
 if (projects.length !==0){
 
-    var formattedProject =""
-    var formattedTitle = HTMLprojectTitle.replace("%data%",projects.title);
-    var formattedDates = HTMLprojectDates.replace("%data%",projects.dates);
-    var formattedDescription = HTMLprojectDescription.replace("%data%",projects.description);
+    projects.forEach(function(project){
 
-    formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription;
+        var formattedProject =""
 
-    $("#projects").children().append(formattedProject);
+        for (key in project) {
+            if (key ==="title"){
+
+                 var formattedTitle = HTMLprojectTitle.replace("%data%",project.title);
+            }else if(key ==="dates") {
+                 var formattedDates = HTMLprojectDates.replace("%data%",project.dates);
+            }else if(key === "description") {
+                 var formattedDescription = HTMLprojectDescription.replace("%data%",project.description);
+            }
+
+        }// end for loop
+
+       formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription;
+
+       $("#projects").children().append(formattedProject);
+
+    }) // end forEach
 
 };
 
+
+// education
 
 if (education !== 0){
 
