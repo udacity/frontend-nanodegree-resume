@@ -33,8 +33,8 @@ var education ={
           "name":"gdut",
           "location":"gz",
           "degree": "BS",
-          "majors": "Machine",
-
+          "major": "Machine Learning ",
+          "dates":"2003 -2007",
           "schoolURL":"www.gdut.edu.cn"
 	}],
 
@@ -104,43 +104,71 @@ if (projects.length !==0){
 
 if (education !== 0){
 
-  var schools = education.schools;
+    var schools = education.schools;
 
-  schools.forEach(function(val){
-      var formattedSchool = "";
-      for (key in val){
-          console.log(val[key]);
+    if (schools.length !==0){
+        schools.forEach(function(val){
+            var formattedSchool = "";
+            for (key in val){
+                if (key === "name"){ 
+                  var formattedSchoolName = HTMLschoolName.replace("%data%",val.name);
+                  continue;
+                } else if (key === "degree"){ 
+                  var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",val.degree);
+                  continue;
+                } else if (key === "dates"){ 
+                  var formattedSchoolDates = HTMLschoolDates.replace("%data%",val.dates);
+                  continue;
+                } else if (key === "location"){
+                 var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",val[key]);
+                 continue;
+                } else if (key === "major") {
+                 var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",val[key]);
+                }
+             };// end for loop
+         formattedSchool = HTMLschoolStart + formattedSchoolName+
+                        formattedSchoolDegree+formattedSchoolDates+
+                        formattedSchoolLocation +formattedSchoolMajor;
 
-          if (key === "name"){ 
-            var formattedSchoolName = HTMLschoolName.replace("%data%",val.name);
-            continue;
-          } else if (key === "degree"){ 
-            var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",val.degree);
-            continue;
-          } else if (key === "dates"){ 
-            var formattedSchoolDates = HTMLschoolDates.replace("%data%",val.dates);
-            continue;
-          } else if (key === "location"){
-           var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",val.location);
-           continue;
-         }
-      };
-    formattedSchool = HTMLschoolStart + formattedSchoolName+formattedSchoolDegree+formattedSchoolDates+ formattedSchoolLocation;
-    $("#education").children().append(formattedSchool);
-  
-  });
+         $("#education").children().append(formattedSchool);
+    
+       }); //end forEach
+    } // end of schools
 
-};
+    
+    
+    onlineCourses = education.onlineCourses;
+    if (onlineCourses.length !== 0){
 
-//  var education ={
+      onlineCourses.forEach(function(val){
+            var formattedOnline = "";
+            for (key in val){
+                if (key === "title"){ 
+                  var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",val[key]);
+                  continue;
+                } else if (key === "school"){ 
+                  var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",val[key]);
+                  continue;
+                } else if (key === "dates"){ 
+                  var formattedOnlineDates = HTMLonlineDates.replace("%data%",val[key]);
+                  continue;
+                } else if (key === "courseURL"){
+                 var formattedOnlineURL = HTMLonlineURL.replace("%data%",val[key]);
+                 continue;
+                } 
+             };// end for loop
+         formattedOnline = HTMLonlineClasses + formattedOnlineTitle+
+                        formattedOnlineSchool+formattedOnlineDates+
+                        formattedOnlineURL;
 
-//   "schools": [{
-//           "name":"gdut",
-//           "location":"gz",
-//           "degree": "BS",
-//           "majors": "Machine",
-//           "schoolURL":"www.gdut.edu.cn"
-//   }],
+         $("#education").children().append(formattedOnline);
+    
+       }); //end forEach
+    } // end of schools
+
+
+
+    } // if education.length !===0
 
 //   "onlineCourses":[{
 
@@ -153,12 +181,7 @@ if (education !== 0){
 
 // };
 
-// var HTMLschoolStart = '<div class="education-entry"></div>';
-// var HTMLschoolName = '<a href="#">%data%';
-// var HTMLschoolDegree = ' -- %data%</a>';
-// var HTMLschoolDates = '<div class="date-text">%data%</div>';
-// var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-// var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
 
 // var HTMLonlineClasses = '<h3>Online Classes</h3>';
 // var HTMLonlineTitle = '<a href="#">%data%';
