@@ -15,7 +15,7 @@ var projects ={
 
 	"title": "ML",
 	"dates":"2016",
-	"description":"This is a nano degree project i've pay a lot of work."
+	"description":"This is a nano degree project i've engaged work."
 };
 
 var bio ={
@@ -72,7 +72,7 @@ if (bio.length !== 0){
  
 }// if bio statement
 
-if (work.length !=0){
+if (work.length !== 0){
   var formattedWork ="";
 
   var formatttedEmployer = HTMLworkEmployer.replace("%data%",work["employer"]);
@@ -83,15 +83,21 @@ if (work.length !=0){
 
   formattedWork = HTMLworkStart+formatttedEmployer+formattedTitle+formattedDates+formatedLocation +formattedDescription;
 
-  $("#workExperience").append(formattedWork);
-
+  $("#workExperience").children().append(formattedWork);
  
+}// end of work
+
+
+if (projects.length !==0){
+
+  var formattedProject =""
+  var formattedTitle = HTMLprojectTitle.replace("%data%",projects.title);
+  var formattedDates = HTMLprojectDates.replace("%data%",projects.dates);
+  var formattedDescription = HTMLprojectDescription.replace("%data%",projects.description);
+
+  formattedProject = HTMLprojectStart + formattedTitle +formattedDates + formattedDescription;
+
+  $("#projects").children().append(formattedProject);
+
 }
 
-
-// var HTMLworkStart = '<div class="work-entry"></div>';
-// var HTMLworkEmployer = '<a href="#">%data%';
-// var HTMLworkTitle = ' - %data%</a>';
-// var HTMLworkDates = '<div class="date-text">%data%</div>';
-// var HTMLworkLocation = '<div class="location-text">%data%</div>';
-// var HTMLworkDescription = '<p><br>%data%</p>';
