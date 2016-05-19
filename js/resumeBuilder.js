@@ -6,15 +6,15 @@ var work ={
 
 	"employer":"Jabil",
 	"title":"Engineer",
-	"location":"GZ",
+	"location":"Guangzhou, Guangdong Province, CHINA",
 	"dates":"2007-2009",
   "description":"This is an awesome experience as an engineer there. I worked on desinging the assembly process and SMT."
 };
 
 var projects ={
 
-	"title": "ML",
-	"dates":"2016",
+	"title": "Machine Learning Nano Degree",
+	"dates":"2015.06- Present",
 	"description":"This is a nano degree project i've engaged work."
 };
 
@@ -23,26 +23,26 @@ var bio ={
 	"name": "Fish Wang",
 	"role": "Web Developer",
 	"welcomeMessage":"hi",
-	"contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"GZ"}
+	"contacts": {"Tel":"123112313" , "Email":"asdfdsa@ads.com" ,"Location":"Guangzhou,Guangdong"}
 
 };
 
 var education ={
 
 	"schools": [{
-          "name":"gdut",
-          "location":"gz",
-          "degree": "BS",
-          "major": "Machine Learning ",
-          "dates":"2003 -2007",
+          "name":"Guangdong University of Technology",
+          "location":"Guangzhou, Guangdong Province, CHINA",
+          "degree": "Bachelor",
+          "major": "Mechanical Engineering",
+          "dates":"2003.09 - 2007.07",
           "schoolURL":"www.gdut.edu.cn"
 	}],
 
 	"onlineCourses":[{
 
-		"title":"ML",
-		"school":"GT",
-		"dates":"2015",
+		"title":"Machine Learning",
+		"school":"Georgia Institute of Technology",
+		"dates":"2015 - 2016",
 		"courseURL":"www.udacity.com"
 
 	}]
@@ -67,6 +67,7 @@ if (bio.length !== 0){
       var formattedContact = HTMLcontactGeneric.replace("%contact%",key);
       formattedContact = formattedContact.replace("%data%", contacts[key]);
       $("#topContacts").append(formattedContact);
+      $("#footerContacts").append(formattedContact);
     }
   }// contacts loop
  
@@ -169,22 +170,3 @@ if (education !== 0){
 
 
     } // if education.length !===0
-
-//   "onlineCourses":[{
-
-//     "title":"ML",
-//     "school":"GT",
-//     "dates":"2015",
-//     "courseURL":"www.udacity.com"
-
-//   }]
-
-// };
-
-
-
-// var HTMLonlineClasses = '<h3>Online Classes</h3>';
-// var HTMLonlineTitle = '<a href="#">%data%';
-// var HTMLonlineSchool = ' - %data%</a>';
-// var HTMLonlineDates = '<div class="date-text">%data%</div>';
-// var HTMLonlineURL = '<br><a href="#">%data%</a>';
