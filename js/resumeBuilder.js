@@ -55,55 +55,56 @@ var education ={
 };
 
 
-
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 // bio
 if (bio.length !== 0){
 
     var formattedName = HTMLheaderName.replace("%data%", bio["name"]);
-    $("#header").append(formattedName);
 
     var formattedRole = HTMLheaderRole.replace("%data%", bio["role"]);
 
-    $("#header").append(formattedRole);
-   // var HTMLbioPic = '<img src="%data%" class="biopic">';
-
     var formattedPic= HTMLbioPic.replace("%data%",bio.biopic);
-    $("#header").append(formattedPic);
-     console.log(formattedPic);
+
+    var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
 
     var formattedSkills ="";
-
 
     bio["skills"].forEach(function(skill){
 
            formattedSkills = formattedSkills.concat(HTMLskills.replace("%data%",skill)) ;
 
+
         });
 
-    formattedSkills = HTMLskillsStart + formattedSkills;
+    formattedSkills =  formattedSkills;
     console.log(formattedSkills);
 
-    $("#header").append(formattedSkills);
+    //$("#header").append(formattedSkills);
+
+     var formattedBio = formattedName + formattedRole + formattedPic +
+              formattedWelcomeMsg ;
+
+    $("#header").append(formattedBio);
+    $("#header").append(HTMLskillsStart);
+    $("#skills").append(formattedSkills);
+
 
   //work on contacts
 
     contacts = bio["contacts"];
+
     for (var key in contacts){
 
       if (contacts.hasOwnProperty(key)){
 
         var formattedContact = HTMLcontactGeneric.replace("%contact%",key);
         formattedContact = formattedContact.replace("%data%", contacts[key]);
+
         $("#topContacts").append(formattedContact);
         $("#footerContacts").append(formattedContact);
       }
     }// contacts loop
+
+
 
 }// if bio statement
 
