@@ -1,4 +1,17 @@
-## How do I complete this project?
+
+This is project is to show my resume. 
+
+# Install
+```
+git clone https://github.com/datadev23/frontend-nanodegree-resume.git
+```
+
+
+
+
+
+
+## Notes from Udacity On How i built the project?
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
 2. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
@@ -96,3 +109,30 @@ The resume has four distinct sections: work, education, projects and a header wi
 4. All of your code for adding elements to the resume should be contained within functions. 
 5. As described in the javaScript object schema, each 'display' function should be encapsulated within the javaScript object it displays in the resume. For instance, your 'display' function for appending 'work' experience data to the resume should be encapsulated within the 'work' javaScript object. The 'display' function can be encapsulated within the 'work' javaScript object definition in the same way other properties are defined there, or it can be encapsulated later in the file using dot notation. For example: `work.display =`
 6. It’s possible to make additional information show up when you click on the pins in the map. Check out line 174 in helper.js and the Google Maps API to get started.
+
+# api
+
+'''
+var bio = {
+    "name": "Alexander Brown",
+    "role": "Web Developer",
+    "contacts": {
+        "mobile": "07793749873",
+        "email": "test@test.com",
+        "github": "datadev23",
+        "twitter": "datadev23",
+        "location": "Brighton",
+
+
+
+    },
+    "welcomeMessage": "Hello how are you",
+    "biopic": "images/alex.jpg",
+    "skills": ["javascript", "css", "HTML", "PHP", "drupal"],
+};
+'''
+
+
+# License
+
+The content of this repository is licensed under a Creative Commons Attribution License
