@@ -1,0 +1,79 @@
+{
+  "name": "liftoff",
+  "description": "Launch your command line tool with ease.",
+  "version": "2.2.1",
+  "homepage": "https://github.com/js-cli/js-liftoff",
+  "author": {
+    "name": "Tyler Kellen",
+    "url": "http://goingslowly.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/js-cli/js-liftoff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/js-cli/js-liftoff/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "scripts": {
+    "test": "jshint lib index.js && jscs lib index.js && mocha -t 5000 -b -R spec test/index"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "coffee-script": "^1.9.2",
+    "istanbul": "^0.3.14",
+    "jscs": "^1.13.1",
+    "jshint": "^2.7.0",
+    "mocha": "^2.1.0",
+    "sinon": "~1.12.2"
+  },
+  "keywords": [
+    "command line"
+  ],
+  "dependencies": {
+    "extend": "^2.0.1",
+    "findup-sync": "^0.3.0",
+    "flagged-respawn": "^0.3.2",
+    "rechoir": "^0.6.0",
+    "resolve": "^1.1.6"
+  },
+  "gitHead": "82a6911aff57aee0b1bf121015fcc492d1129238",
+  "_id": "liftoff@2.2.1",
+  "_shasum": "8dfef848d3f441921c4a311fc3203ae9c34c41a7",
+  "_from": "liftoff@>=2.1.0 <3.0.0",
+  "_npmVersion": "3.7.3",
+  "_nodeVersion": "5.9.0",
+  "_npmUser": {
+    "name": "tusbar",
+    "email": "b@pk.am"
+  },
+  "maintainers": [
+    {
+      "name": "phated",
+      "email": "blaine.bublitz@gmail.com"
+    },
+    {
+      "name": "tkellen",
+      "email": "tyler@sleekcode.net"
+    },
+    {
+      "name": "tusbar",
+      "email": "b@pk.am"
+    }
+  ],
+  "dist": {
+    "shasum": "8dfef848d3f441921c4a311fc3203ae9c34c41a7",
+    "tarball": "https://registry.npmjs.org/liftoff/-/liftoff-2.2.1.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/liftoff-2.2.1.tgz_1458739983596_0.09431072394363582"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/liftoff/-/liftoff-2.2.1.tgz",
+  "readme": "ERROR: No README data found!"
+}
