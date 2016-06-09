@@ -1,0 +1,26 @@
+{
+    "bio": {
+        "name": "Ronen Elster",
+        "role": "Senior Front End Developer",
+        "contacts": {
+            "mobile": "050505050",
+            "email": "ronen@spot.im",
+            "github": "ronen-e",
+            "twitter": "https://twitter.com",
+            "location": "Israel"
+        },
+        "welcomeMsg": "Welcome",
+        "skills": ["Javascript", "HTML", "CSS", "PHP", "Ruby", "Python", "Java", "C#", "ASP.NET", "MySQL", "NodeJS", "Express", "Email Templates", "Wordpress", "Angular", "Backbone", "KnockoutJS", "React", "Fluxible", "Gulp", "Grunt", "Webpack", "ES2015", "OOP", "Design Patterns", "CoffeeScript", "SVG", "XML", "JSON", "Third Party Javascript", "CORS", "AJAX", "HTML5", "CSS3"],
+        "biopic": "./images/profile_photo_ruby.jpg"
+    },
+    "education": [
+        {
+            "name": "Hebrew University",
+            "location": "Israel",
+            "degree": "B.Sc Nutrition Sciences",
+            "majors": ["Dietetics", "Exercise Nutrition"],
+            "dates": "2004-2006",
+            "url": "https://huji.ac.il"
+        }
+    ]
+}
