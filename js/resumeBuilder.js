@@ -9,5 +9,5 @@ This is empty on purpose! Your code to build the resume will go here.
  console.log(fun);
  console.log("I don't think a desktop version of github is necessary.");
  $("#main").append(fun);
- var formattedName = HTMLheaderName.replace("%data%",firstname);
+ var formattedName = HTMLheaderName.replace("%data%",firstName);
  $("#header").append(formattedName);
