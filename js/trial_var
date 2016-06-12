@@ -1,3 +1,0 @@
-var firstName = "Wolf"
-var age = 25; 
-console.log(firstName);
