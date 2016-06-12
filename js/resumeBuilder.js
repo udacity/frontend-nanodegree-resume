@@ -8,3 +8,4 @@ This is empty on purpose! Your code to build the resume will go here.
  var fun = awesomeThoughts.replace("awesome", "fun");
  console.log(fun);
  console.log("I don't think a desktop version of github is necessary.");
+ $(#main).append(fun);
