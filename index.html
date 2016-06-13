@@ -33,6 +33,26 @@
           </div>
       <% } %>
     </script>
+    <script type="text/html" id="education_schools_template">
+      <% for ( var i = 0; i < 1; i++ ) { %>
+          <div class="education-entry">
+              <a href="#"><%= schools[i].name %> -- <%= schools[i].degree %></a>
+              <div class="date-text"><%= schools[i].dates %></div>
+              <div class="location-text"><%= schools[i].location %></div>
+              <em><br>Major: <%= schools[i].majors.join(', ') %></em>
+          </div>
+      <% } %>
+    </script>
+    <script type="text/html" id="education_onlineCourses_template">
+        <h3>Online Classes</h3>
+        <% for ( var i = 0; i < onlineCourses.length; i++ ) { %>
+          <div class="education-entry">
+              <a href="<%= onlineCourses[i].url %>"><%= onlineCourses[i].title %> -- <%= onlineCourses[i].school %></a>
+              <div class="date-text"><%= onlineCourses[i].date %></div>
+              <br><a href="<%= onlineCourses[i].url %>"><%= onlineCourses[i].url %></a>
+          </div>
+        <% } %>
+    </script>
 
   <div id="main">
     <div id="header" class="center-content clear-fix">
