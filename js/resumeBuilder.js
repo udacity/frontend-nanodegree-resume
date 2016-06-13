@@ -1,9 +1,6 @@
 var model, octopus, view;
 function main() {
-     $.getJSON('./cv.json')
-     .done(initialize)
-     .fail(function() { console.log('fail', arguments); })
-     .always(function() { console.log('always', arguments); });
+     $.getJSON('./data.json').done(initialize);
  }
 
  function initialize(data) {

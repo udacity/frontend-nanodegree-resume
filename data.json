@@ -1,0 +1,65 @@
+{
+    "bio": {
+        "name": "Ronen Elster",
+        "role": "Front End Developer",
+        "contacts": {
+            "mobile": "050505050",
+            "email": "ronen@spot.im",
+            "github": "ronen-e",
+            "twitter": "@ronen-spotim",
+            "location": "Israel, Tel Aviv"
+        },
+        "welcomeMessage": "Welcome to my CV page",
+        "skills": ["Javascript", "HTML", "CSS", "PHP", "Ruby", "Python", "Java", "C#", "ASP.NET", "MySQL", "NodeJS", "Express", "Email Templates", "Wordpress", "Angular", "Backbone", "KnockoutJS", "React", "Fluxible", "Gulp", "Grunt", "Webpack", "ES2015", "OOP", "Design Patterns", "CoffeeScript", "SVG", "XML", "JSON", "Third Party Javascript", "CORS", "AJAX", "HTML5", "CSS3"],
+        "biopic": "./images/profile_photo_ruby.png"
+    },
+    "education": {
+        "schools": [
+            {
+                "name": "Hebrew University",
+                "location": "Rehovot, Israel",
+                "degree": "B.Sc Nutrition Sciences",
+                "majors": ["Dietetics", "Exercise Nutrition"],
+                "dates": 1157058000000,
+                "url": "https://huji.ac.il"
+            },
+            {
+                "name": "HackerU",
+                "location": "Tel Aviv, Israel",
+                "degree": "Certificate",
+                "majors": ["ASP.NET", "JAVA"],
+                "dates": 1320098400000,
+                "url": "http://hackeru.co.il"
+            }
+        ],
+        "onlineCourses": [
+            {
+                "title": "Javascript Best Practices",
+                "school": "Codeschool",
+                "date": 1420063200000,
+                "url": "https://www.codeschool.com/courses/javascript-best-practices"
+            }
+        ]
+    },
+    "work": {
+        "jobs": [
+            {
+                "employer": "Spot.IM",
+                "title": "Senior Front End Developer",
+                "location": "Tel Aviv, Israel",
+                "dates": "2015-Present",
+                "description": "Connecting people across the web"
+            }
+        ]
+    },
+    "projects": {
+        "projects": [
+            {
+                "title": "Lorum ipsum",
+                "dates": "2015-2016",
+                "description": "some description",
+                "images": ["./images/fry.jpg", "./images/profile_photo_ruby.png"]
+            }
+        ]
+    }
+}
