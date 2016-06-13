@@ -1,3 +1,14 @@
+/*
+*  TODO
+*  namespace
+*  bundle - Webpack
+*  ES2015
+*  translations
+*  React
+*  Redux
+*  express - heroku deploy
+*/
+
 var model = null, octopus = null;
 
 var educationView = {
@@ -47,11 +58,9 @@ var octopus = {
 };
 
 function main() {
-     $.getJSON('./data.json').done(initialize);
- }
-
-function initialize(data) {
-     octopus.init(data);
- }
+     $.getJSON('./data.json').done(function initialize(appData) {
+         octopus.init(appData);
+     });
+}
 
 main();
