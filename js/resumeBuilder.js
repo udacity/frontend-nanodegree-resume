@@ -3,11 +3,14 @@ var model = null, octopus = null;
 view = {
     bio: bioView,
     work: workView,
+    projects: projectsView,
     init: function() {
         this.bio.init();
         this.work.init();
+        this.projects.init();
     }
 };
+
 var octopus = {
     init: function(appData) {
         model = appData;
@@ -18,8 +21,12 @@ var octopus = {
     },
     getWork: function() {
         return model.work;
+    },
+    getProjects: function() {
+        return model.projects;
     }
 };
+
 function main() {
      $.getJSON('./data.json').done(initialize);
  }

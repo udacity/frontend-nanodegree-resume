@@ -21,6 +21,19 @@
           </div>
       <% } %>
     </script>
+    <script type="text/html" id="projects_template">
+      <% for ( var i = 0; i < 1; i++ ) { %>
+          <div class="project-entry">
+              <a href="#"><%= projects[i].title %></a>
+              <div class="date-text"><%= projects[i].dates %></div>
+              <p><br><%= projects[i].description %></p>
+              <% for ( var j = 0; j < projects[i].images.length; j++ ) { %>
+                  <img src="<%= projects[i].images[j] %>" />
+              <% } %>
+          </div>
+      <% } %>
+    </script>
+
   <div id="main">
     <div id="header" class="center-content clear-fix">
         <h1 id="name"></h1>
@@ -59,6 +72,8 @@
   <script src="js/views/skills.js"></script>
   <script src="js/views/bio.js"></script>
   <script src="js/views/work.js"></script>
+  <script src="js/views/projects.js"></script>
+
   <script src="js/resumeBuilder.js"></script>
   <script type="text/javascript">
     var sections = [
