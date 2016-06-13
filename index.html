@@ -8,15 +8,18 @@
     <meta http-equiv="pragma" content="no-cache" />
     <title>Resume</title>
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script>
-    <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
   <div id="main">
     <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+        <h1 id="name"></h1>
+        <span id="role"></span><hr>
+        <ul id="topContacts" class="flex-box"></ul>
+        <img id="profileImage" class="biopic">
+        <span id="welcomeMessage" class="welcome-message"></span>
+        <h3 id="skills-h3">Skills at a Glance:</h3>
+        <ul id="skills" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
@@ -37,6 +40,14 @@
       </ul>
     </div>
   </div>
+  <script src="js/vendor/jQuery.js"></script>
+  <script src="js/vendor/tmpl.js"></script>
+  <script src="js/helper.js"></script>
+  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+
+  <script src="js/views/contacts.js"></script>
+  <script src="js/views/skills.js"></script>
+  <script src="js/views/bio.js"></script>
   <script src="js/resumeBuilder.js"></script>
   <script type="text/javascript">
     var sections = [

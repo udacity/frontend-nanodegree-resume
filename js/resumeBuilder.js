@@ -1,25 +1,26 @@
-var model, octopus, view;
+var model = null, octopus = null;
+
+view = {
+    bio: bioView
+    init: function() {
+        this.bio.init();
+    }
+};
+var octopus = {
+    init: function(appData) {
+        model = appData;
+        view.init();
+    },
+    getBio: function() {
+        return model.bio;
+    }
+};
 function main() {
      $.getJSON('./data.json').done(initialize);
  }
 
- function initialize(data) {
-     console.log('data', data);
-     model = data;
-     var bio = model.bio;
-     var $div = $('<div>');
-     $div.append(
-         [
-         'name: ' + bio.name,
-         'role: ' + bio.role,
-         'email: ' + bio.contacts.email,
-         'skills: ' + bio.skills,
-         'Welcome' + bio.welcomeMsg,
-         'Github: ' + bio.contacts.github].join('<br>')
-     );
-     $div.append('<img src="' + bio.biopic + '"  />');
-     $('body').append($div);
-    //  octopus.init();
+function initialize(data) {
+     octopus.init(data);
  }
 
 main();
