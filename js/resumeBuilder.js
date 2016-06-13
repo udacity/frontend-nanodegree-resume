@@ -1,9 +1,11 @@
 var model = null, octopus = null;
 
 view = {
-    bio: bioView
+    bio: bioView,
+    work: workView,
     init: function() {
         this.bio.init();
+        this.work.init();
     }
 };
 var octopus = {
@@ -13,6 +15,9 @@ var octopus = {
     },
     getBio: function() {
         return model.bio;
+    },
+    getWork: function() {
+        return model.work;
     }
 };
 function main() {

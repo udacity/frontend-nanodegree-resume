@@ -11,6 +11,16 @@
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
+    <script type="text/html" id="work_template">
+      <% for ( var i = 0; i < jobs.length; i++ ) { %>
+          <div class="work-entry">
+              <a href="#"><%= jobs[i].employer %> - <%= jobs[i].title %></a>
+              <div class="date-text"><%= jobs[i].dates %></div>
+              <div class="location-text"><%= jobs[i].location %></div>
+              <p><br><%= jobs[i].description %></p>
+          </div>
+      <% } %>
+    </script>
   <div id="main">
     <div id="header" class="center-content clear-fix">
         <h1 id="name"></h1>
@@ -48,6 +58,7 @@
   <script src="js/views/contacts.js"></script>
   <script src="js/views/skills.js"></script>
   <script src="js/views/bio.js"></script>
+  <script src="js/views/work.js"></script>
   <script src="js/resumeBuilder.js"></script>
   <script type="text/javascript">
     var sections = [
