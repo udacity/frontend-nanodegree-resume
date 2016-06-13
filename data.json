@@ -19,8 +19,8 @@
                 "name": "Hebrew University",
                 "location": "Rehovot, Israel",
                 "degree": "B.Sc Nutrition Sciences",
-                "majors": ["Dietetics", "Exercise Nutrition"],
-                "dates": 1157058000000,
+                "majors": ["Nutrition"],
+                "dates": "2004-2006",
                 "url": "https://huji.ac.il"
             },
             {
@@ -28,7 +28,7 @@
                 "location": "Tel Aviv, Israel",
                 "degree": "Certificate",
                 "majors": ["ASP.NET", "JAVA"],
-                "dates": 1320098400000,
+                "dates": "2010",
                 "url": "http://hackeru.co.il"
             }
         ],
@@ -36,7 +36,7 @@
             {
                 "title": "Javascript Best Practices",
                 "school": "Codeschool",
-                "date": 1420063200000,
+                "date": "2014",
                 "url": "https://www.codeschool.com/courses/javascript-best-practices"
             }
         ]
