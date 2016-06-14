@@ -233,3 +233,22 @@ Uncomment the code below when you're ready to implement a Google Map!
   //Make sure the map bounds get updated on page resize
 //  map.fitBounds(mapBounds);
 //});
+
+function hideEmptySections() {
+    var $section, $item, shouldShow;
+    var sections = [
+        ['.flex-item', '#topContacts, #lets-connect'],
+        ['h1', '#header'],
+        ['.work-entry', '#workExperience'],
+        ['.project-entry', '#projects'],
+        ['.education-entry', '#education'],
+        ['#map', '#mapDiv']
+    ];
+
+    sections.forEach(function(section) {
+        $section = $(section[0]);
+        $item = $(section[1]);
+        shouldShow = $section.length > 0;
+        $item.toggle(shouldShow);
+    });
+}

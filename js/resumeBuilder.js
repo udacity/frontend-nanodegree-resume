@@ -11,21 +11,7 @@
 
 var model = null, octopus = null;
 
-var educationView = {
-    init: function() {
-        this.$element = $('#education');
-        this.schoolsTemplate = tmpl('education_schools_template');
-        this.onlineCoursesTemplate = tmpl('education_onlineCourses_template');
-        this.render();
-    },
-    render: function() {
-        var education = octopus.getEducation();
-        this.$element.append(this.schoolsTemplate(education));
-        this.$element.append(this.onlineCoursesTemplate(education));
-    }
-};
-
-view = {
+var view = {
     bio: bioView,
     work: workView,
     projects: projectsView,
@@ -60,6 +46,7 @@ var octopus = {
 function main() {
      $.getJSON('./data.json').done(function initialize(appData) {
          octopus.init(appData);
+          hideEmptySections();
      });
 }
 
