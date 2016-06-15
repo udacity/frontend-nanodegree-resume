@@ -246,9 +246,9 @@ function hideEmptySections() {
     ];
 
     sections.forEach(function(section) {
-        $section = $(section[0]);
-        $item = $(section[1]);
-        shouldShow = $section.length > 0;
-        $item.toggle(shouldShow);
+        $item = $(section[0]);
+        $section = $(section[1]);
+        shouldShow = $item.length > 0;
+        $section.toggle(shouldShow);
     });
 }

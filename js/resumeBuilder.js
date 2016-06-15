@@ -46,7 +46,7 @@ var octopus = {
 function main() {
      $.getJSON('./data.json').done(function initialize(appData) {
          octopus.init(appData);
-          hideEmptySections();
+         hideEmptySections();
      });
 }
 
