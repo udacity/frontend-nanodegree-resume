@@ -2,11 +2,14 @@
 *  TODO
 *  namespace
 *  bundle - Webpack
+*  minify
 *  ES2015
-*  translations
+*  translations support
 *  React
 *  Redux
 *  express - heroku deploy
+*  DB - mongodb / redis
+*  replace jQuery with a lighter library e.g zepto, dom
 */
 
 var model = null, octopus = null;
