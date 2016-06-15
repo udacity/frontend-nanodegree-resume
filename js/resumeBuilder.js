@@ -12,18 +12,30 @@
 *  replace jQuery with a lighter library e.g zepto, dom
 */
 
-var model = null, octopus = null;
+var model = null;
+
+var mapView = {
+    init: function() {
+        this.$element = $('#mapDiv');
+        this.render();
+    },
+    render: function() {
+        this.$element.append('<div id="map"></div>');
+    }
+};
 
 var view = {
     bio: bioView,
     work: workView,
     projects: projectsView,
     education: educationView,
+    map: mapView,
     init: function() {
         this.bio.init();
         this.work.init();
         this.projects.init();
         this.education.init();
+        this.map.init();
     }
 };
 

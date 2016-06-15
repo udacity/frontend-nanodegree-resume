@@ -225,17 +225,19 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+  // Make sure the map bounds get updated on page resize
+ map.fitBounds(mapBounds);
+});
 
 function hideEmptySections() {
     var $section, $item, shouldShow;
+
+    // follows [itemSelector, containerSelector]
     var sections = [
         ['.flex-item', '#topContacts, #lets-connect'],
         ['h1', '#header'],
