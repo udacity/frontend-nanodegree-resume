@@ -45,6 +45,13 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
+function inName(name) {
+    if (!name) {
+        return '';
+    }
+    var newName = name.replace(/\s+(.+)/g, function(match, p1) { return ' ' + p1.toUpperCase(); });
+    return newName;
+}
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */

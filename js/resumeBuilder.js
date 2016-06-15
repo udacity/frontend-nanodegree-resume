@@ -23,6 +23,23 @@ var mapView = {
         this.$element.append('<div id="map"></div>');
     }
 };
+var internationalizeButtonView = {
+    init: function() {
+        this.$element = $('#InButton');
+        this.render();
+    },
+    onClick: function() {
+        var $name = $('#name');
+        var text = $name.text();
+        var iName = inName(text);
+        $name.html(iName);
+    },
+    render: function() {
+        var $el = this.$element;
+        this.$element.html('<button>Internationalize</button>');
+        $el.click(this.onClick);
+    }
+};
 
 var view = {
     bio: bioView,
@@ -36,6 +53,7 @@ var view = {
         this.projects.init();
         this.education.init();
         this.map.init();
+        internationalizeButtonView.init();
     }
 };
 
