@@ -108,29 +108,28 @@ function initializeMap() {
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
-  function locationFinder() {
+  function locationFinder(data) {
 
     // initializes an empty array
     var locations = [];
+    function findLocations(data) {
+        // go over data
+        var item;
+        for (var k in data) {
+            if (data.hasOwnProperty(k)) {
+                // if found location - add it
+                item = data[k];
+                if (typeof item === 'string' && k === 'location') {
+                    locations.push(item);
+                }
+                if (typeof item === 'object' && item) {
+                    findLocations(item);
+                }
+            }
+        }
+    }
 
-    // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
-
-    // iterates through school locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide: 
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
-      locations.push(school.location);
-    });
-
-    // iterates through work locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide: 
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    work.jobs.forEach(function(job){
-      locations.push(job.location);
-    });
+    findLocations(data);
 
     return locations;
   }
@@ -213,7 +212,7 @@ function initializeMap() {
   window.mapBounds = new google.maps.LatLngBounds();
 
   // locations is an array of location strings returned from locationFinder()
-  locations = locationFinder();
+  locations = locationFinder(model);
 
   // pinPoster(locations) creates pins on the map for each location in
   // the locations array
