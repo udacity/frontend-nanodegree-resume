@@ -36,8 +36,8 @@ var internationalizeButtonView = {
     },
     render: function() {
         var $el = this.$element;
-        this.$element.html('<button>Internationalize</button>');
-        $el.click(this.onClick);
+        $el.html('<button>Internationalize</button>');
+        $el.find('button').click(this.onClick);
     }
 };
 
