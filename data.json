@@ -1,0 +1,131 @@
+{
+    "bio": {
+        "name": "Ronen Elster",
+        "role": "Front End Developer",
+        "contacts": {
+            "mobile": "050505050",
+            "email": "ronen@spot.im",
+            "github": "ronen-e",
+            "twitter": "@ronen-spotim",
+            "location": "Israel, Tel Aviv"
+        },
+        "welcomeMessage": "Welcome to my CV page",
+        "skills": ["Javascript", "HTML", "CSS", "PHP", "Ruby", "Python", "Java", "C#", "ASP.NET", "MySQL", "NodeJS", "Express", "Email Templates", "Wordpress", "Angular", "Backbone", "KnockoutJS", "React", "Fluxible", "Gulp", "Grunt", "Webpack", "ES2015", "OOP", "Design Patterns", "CoffeeScript", "SVG", "XML", "JSON", "Third Party Javascript", "CORS", "AJAX", "HTML5", "CSS3"],
+        "biopic": "./images/profile_photo_web.jpg"
+    },
+    "education": {
+        "schools": [
+            {
+                "name": "Hebrew University",
+                "location": "Rehovot, Israel",
+                "degree": "B.Sc Nutrition Sciences",
+                "majors": ["Nutrition"],
+                "dates": "2004-2006",
+                "url": "https://huji.ac.il"
+            },
+            {
+                "name": "HackerU",
+                "location": "Tel Aviv, Israel",
+                "degree": "Certificate",
+                "majors": ["ASP.NET", "JAVA"],
+                "dates": "2010",
+                "url": "http://hackeru.co.il"
+            }
+        ],
+        "onlineCourses": [
+            {
+                "title": "JavaScript Road Trip Part 1",
+                "school": "Codeschool",
+                "date": "2014",
+                "url": "https://www.codeschool.com/courses/javascript-road-trip-part-1"
+            },
+            {
+                "title": "JavaScript Road Trip Part 2",
+                "school": "Codeschool",
+                "date": "2014",
+                "url": "https://www.codeschool.com/courses/javascript-road-trip-part-2"
+            },
+            {
+                "title": "JavaScript Road Trip Part 3",
+                "school": "Codeschool",
+                "date": "2014",
+                "url": "https://www.codeschool.com/courses/javascript-road-trip-part-3"
+            },
+            {
+                "title": "Javascript Best Practices",
+                "school": "Codeschool",
+                "date": "2015",
+                "url": "https://www.codeschool.com/courses/javascript-best-practices"
+            },
+            {
+                "title": "Advanced JavaScript by Kyle Simpson",
+                "school": "Pluralsight",
+                "date": "2016",
+                "url": "https://www.pluralsight.com/courses/advanced-javascript"
+            },
+            {
+                "title": "ES2015: The Shape of JavaScript to Come",
+                "school": "Codeschool",
+                "date": "2016",
+                "url": "https://www.codeschool.com/courses/es2015-the-shape-of-javascript-to-come"
+            },
+            {
+                "title": "JavaScript Fundamentals for ES6",
+                "school": "Pluralsight",
+                "date": "2015",
+                "url": "https://www.pluralsight.com/courses/javascript-fundamentals-es6"
+            },
+            {
+                "title": "React Fundamentals",
+                "school": "Pluralsight",
+                "date": "2015",
+                "url": "https://www.pluralsight.com/courses/react-fundamentals"
+            },
+            {
+                "title": "React Fundamentals",
+                "school": "egghead.io",
+                "date": "2015",
+                "url": "https://egghead.io/series/react-fundamentals"
+            },
+            {
+                "title": "Build Your First React.js App",
+                "school": "egghead.io",
+                "date": "2015",
+                "url": "https://egghead.io/series/build-your-first-react-js-application"
+            },
+            {
+                "title": "React: Flux Architecture (ES5)",
+                "school": "egghead.io",
+                "date": "2015",
+                "url": "https://egghead.io/series/react-flux-architecture"
+            },
+            {
+                "title": "Powering Up With React",
+                "school": "codeschool",
+                "date": "2016",
+                "url": "https://www.codeschool.com/courses/powering-up-with-react"
+            }
+        ]
+    },
+    "work": {
+        "jobs": [
+            {
+                "employer": "Spot.IM",
+                "title": "Senior Front End Developer",
+                "location": "Tel Aviv, Israel",
+                "dates": "2015-Present",
+                "description": "Connecting people across the web"
+            }
+        ]
+    },
+    "projects": {
+        "projects": [
+            {
+                "title": "Lorum ipsum",
+                "dates": "2015-2016",
+                "description": "some description",
+                "images": ["./images/fry.jpg", "./images/profile_photo_ruby.png"]
+            }
+        ]
+    }
+}

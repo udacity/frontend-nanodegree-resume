@@ -104,6 +104,10 @@ a {
   display: none;
 }
 
+#skills.flex-box {
+    justify-content: flex-start;
+}
+
 .orange {
   background-color: #f5ae23;
 }
