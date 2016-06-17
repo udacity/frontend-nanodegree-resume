@@ -14,46 +14,20 @@
 
 var model = null;
 
-var mapView = {
-    init: function() {
-        this.$element = $('#mapDiv');
-        this.render();
-    },
-    render: function() {
-        this.$element.append('<div id="map"></div>');
-    }
-};
-var internationalizeButtonView = {
-    init: function() {
-        this.$element = $('#InButton');
-        this.render();
-    },
-    onClick: function() {
-        var $name = $('#name');
-        var text = $name.text();
-        var iName = inName(text);
-        $name.html(iName);
-    },
-    render: function() {
-        var $el = this.$element;
-        $el.html('<button>Internationalize</button>');
-        $el.find('button').click(this.onClick);
-    }
-};
-
 var view = {
     bio: bioView,
     work: workView,
     projects: projectsView,
     education: educationView,
     map: mapView,
+    internationalizeButtonView: internationalizeButtonView,
     init: function() {
         this.bio.init();
         this.work.init();
         this.projects.init();
         this.education.init();
         this.map.init();
-        internationalizeButtonView.init();
+        this.internationalizeButtonView.init();
     }
 };
 
