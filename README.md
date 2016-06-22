@@ -1,9 +1,14 @@
+# Project Details
 ## How do I complete this project?
-
-1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
-2. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
-3. Review your work against the Project Rubric (on the next page).
-4. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
+1. In this project you will store your resume data in four javaScript objects according to the schema given below. As is often the case when leveraging an API, the objects must follow the schema exactly. All properties must be present and and have real or fake values. Tthe names must match those in the schema (note that object and property names are case-sensitive). All property values should be of the data-type given for the property in the schema. For example if the data-type is given as an array, it is not acceptable to use a string as a value for that property.
+2. Once you've created your javaScript objects, you will write the code needed to display all of the  resume data contained within these objects in your resume.
+3. All of the HTML code needed to build the resume is stored in `js/helper.js` variables. The variable names indicate their function. You will replace substrings in these variable string values such as `%data%` and `#` with the data in your javaScript objects, and append or prepend the formatted result to your resume in the appropriate location. 
+4. If you need a refresher on JavaScript syntax, go to the [Javascript Basics course](https://classroom.udacity.com/courses/ud804); if you would like to understand how this project is manipulating and traversing the DOM, check out [Intro to jQuery](https://www.udacity.com/course/ud245-nd).
+5. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
+6unsure of anything please check with your cohort or private message your cohorts coaches.
+7. Fork the project repo from **[Github](https://github.com/udacity/frontend-nanodegree-resume)** and begin building you resume. 
+8. Review your work against the Project Rubric (on the next page).
+9. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
 
 ### By the end:
 Your resume will look something like this
