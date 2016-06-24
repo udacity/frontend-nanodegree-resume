@@ -10,7 +10,7 @@ Review the Online Resume [Project Rubric](https://review.udacity.com/?_ga=1.1892
 6. Fork the project repo from [Github](https://github.com/udacity/frontend-nanodegree-resume) and begin building you resume.
 7. Get your [Google Maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key), and include it as the value of the `key` parameter when loading the Google Maps API in **index.html**: ```
 <script  src="http://maps.googleapis.com/maps/api/js?libraries=places&key=[YOUR_API_KEY]"></script> ```
-8. Check your work against the Project Rubric.
+8. Check your work against the [Project Rubric](https://review.udacity.com/?_ga=1.189245867.12280332.1465333852#!/projects/2962818615/rubric).
 9. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
 
 ### By the end:
