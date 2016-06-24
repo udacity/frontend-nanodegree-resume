@@ -8,10 +8,8 @@ Review the Online Resume [Project Rubric](https://review.udacity.com/?_ga=1.1892
 4. If you need a refresher on JavaScript syntax, go to the [Javascript Basics](https://classroom.udacity.com/nanodegrees/nd001/parts/0011345406/modules/296281861575460/lessons/1946788554/concepts/25505685350923) course; if you would like to understand how this project is manipulating and traversing the DOM, check out [Intro to jQuery](https://classroom.udacity.com/nanodegrees/nd001/parts/0011345406/modules/296281861575461/lessons/3314378535/concepts/33166386820923).
 5. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume. 6unsure of anything please check with your cohort or private message your cohorts coaches.
 6. Fork the project repo from [Github](https://github.com/udacity/frontend-nanodegree-resume) and begin building you resume.
-7. Get your [Google Maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key), and include it as the value of the `key` parameter when loading the Google Maps API in **js/helper.js**:
-```
-<script  src="http://maps.googleapis.com/maps/api/js?libraries=places&key=[YOUR_API_KEY]"></script>
-```
+7. Get your [Google Maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key), and include it as the value of the `key` parameter when loading the Google Maps API in **js/helper.js**: ```
+<script  src="http://maps.googleapis.com/maps/api/js?libraries=places&key=[YOUR_API_KEY]"></script> ```
 8. Check your work against the Project Rubric.
 9. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
 
