@@ -1,3 +1,4 @@
+*,
 body,
 div,
 ul,
@@ -12,6 +13,7 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
+  list-style: none;
 }
 
 .clear-fix {
@@ -149,6 +151,10 @@ ul {
   list-style-type: none;
 }
 
+#skills {
+  display: inline !important;
+}
+
 .biopic {
   float: left;
   padding: 10px;
@@ -204,8 +210,12 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  margin-bottom: 10%;
 }
 
+#mapDiv button {
+  margin-left: 80px;
+}
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
