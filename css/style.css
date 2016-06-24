@@ -14,19 +14,21 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+
 .clear-fix {
   overflow: auto;
 }
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.online-entry {
   padding: 0 5%;
 }
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #FADA05;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +36,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #B5B4AE  ;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +44,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #B5B4AE;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #FADA05;
   line-height: 17px;
 }
 
@@ -86,7 +88,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: brown;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -100,16 +102,12 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #FADA05;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
-}
-
 .orange-text {
-  color: #f5ae23;
+  color: #FADA05;
 }
 
 .white-text {
@@ -117,19 +115,29 @@ a {
   color: #fff;
 }
 
-.gray {
-  background-color: #f3f3f3;
+.pattern {
+  background: url('images/pattern.png') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   padding-bottom: 10px;
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.light {
+  background: url('images/light.png');
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+
+  padding-bottom: 10px;
+  clear:both;
 }
 
 .flex-box {
@@ -142,6 +150,11 @@ a {
 }
 
 .center-content {
+  background: url('images/light.png');
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   padding: 2.5% 5%;
 }
 
@@ -161,6 +174,7 @@ img {
 }
 
 span {
+  text-align: center;
   padding: 5px;
 }
 
@@ -211,4 +225,8 @@ span {
   .biopic {
     display: block;
   }
+}
+
+#skills {
+  flex-direction:;
 }
