@@ -66,7 +66,7 @@ The resume has four distinct sections: work, education, projects and a header wi
             onlineCourses: array of objects with
                  title: string
                  school: string
-                 date: string (works with a hyphen between them)
+                 dates: string (works with a hyphen between them)
                  url: string
             display: function taking no parameters
 
