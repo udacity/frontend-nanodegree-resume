@@ -45,22 +45,29 @@ var bio = {
         "twitter" : "@JonColl09129892",
         "location" : "Brussels"
     },
-    "welcomeMessage" : "Welcome to my online resume",
-    "skills" : skills,
+    "welcomeMessage" : "Using my strong skillset, tenacity and determination in the role of Front End Web Developer to delivery the best Possible Digital experiences for customers (both internal and external) in line with and exceeding their expectations",
+    "skills" : ["HTML5", "CSS3", "JS", "BootStrap", "Agile", "Prince II"],
     "bioPic" : "images/jon.jpg"
 }
 
 var formattedName = HTMLheaderName.replace("%data%", bio["name"]);
 var formattedRole = HTMLheaderRole.replace("%data%", bio["role"]);
-var formattedContacts = HTMLcontactGeneric.replace("%contact%", bio.contacts["mobile", "github"]);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts["mobile"]);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts["email"]);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts["github"]);
+var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts["twitter"]);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts["location"]);
+var formattedBiopic = HTMLbioPic.replace("%data%", bio["bioPic"]);
+var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio["welcomeMessage"]);
+var formattedskills = HTMLskills.replace("%data%", bio.skills[0,1,2,3]);
+// var formattedContacts = HTMLcontactGeneric.replace("%contact%", bio.contacts["mobile" "email" "github" "twitter" "location"]);
 // the below prepends and appends the newly replaced data to the header and results in a formatted name and title.
 
-var skills = ["HTML5", "CSS3", "JS", "BootStrap", "Agile", "Prince II"];
-console.log(skills.length);
 
-
-$("#header").prepend(formattedName);
-$("#header").append(formattedRole);
-$("#header").append(formattedContacts);
+$("#header").prepend(formattedName, formattedRole);
+$("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
+$("#header").append(formattedBiopic);
+$("#header").append(formattedwelcomeMsg);
+$("#header").append(formattedskills);
 
 
