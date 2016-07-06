@@ -51,7 +51,7 @@ The resume has four distinct sections: work, education, projects and a header wi
                   location: string
             welcomeMessage: string 
             skills: array of strings
-            biopic: url
+            biopic: string url
             display: function taking no parameters
 
 * `education` contains:
