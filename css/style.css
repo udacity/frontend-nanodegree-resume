@@ -141,6 +141,13 @@ a {
   padding: 10px;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
