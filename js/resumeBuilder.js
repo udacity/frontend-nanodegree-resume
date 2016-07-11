@@ -45,7 +45,7 @@ var bio = {
         "twitter" : "@JonColl09129892",
         "location" : "Brussels"
     },
-    "welcomeMessage" : "Using my strong skillset, tenacity and determination in the role of Front End Web Developer to delivery the best Possible Digital experiences for customers (both internal and external) in line with and exceeding their expectations",
+    "welcomeMessage" : "Using my strong skillset, tenacity and determination in the role of Front End Web Developer to delivery the best Possible Digital experiences for customers in line with, (and exceeding) their expectations",
     "bioPic" : "images/jon.jpg"
 }
 
@@ -60,21 +60,26 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts["location"])
 var formattedBiopic = HTMLbioPic.replace("%data%", bio["bioPic"]);
 var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio["welcomeMessage"]);
 
-var skills = ['HTML5', 'CSS3', 'JS', 'BootStrap', 'GitHub', 'Agile', 'Prince II'];
-var numSkills = skills.length;
+var skillSet = ['HTML5', 'CSS3', 'JS', 'BootStrap', 'GitHub', 'Agile', 'Prince II'];
+var numSkills = skillSet.length;
 var x=0;
-for (var x = 0; x <= numSkills; x++) {
-    console.log(skills[x]);
+for (var x = 0; x < numSkills; ++x) {
+    var formattedSkills = HTMLskills.replace("%data%",skillSet[x]);
+    $("#skills").append(formattedSkills); // Not working, skills do not show where expected although are being reported to consol
+    $("#header").append(formattedSkills); // Was just a test but here the skills loop is working
+    $("#topContacts").append(formattedSkills);
+    console.log(skillSet[x]);
 }
 
-var formattedskills = HTMLskills.replace("%data%",skills[x])
+
 
 $("#header").prepend(formattedName, formattedRole);
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
 $("#header").append(formattedBiopic);
 $("#header").append(formattedwelcomeMsg);
 $("#header").append(HTMLskillsStart);
-$("#header").append(formattedskills);
+
+
 
 
 
