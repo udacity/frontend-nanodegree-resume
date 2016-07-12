@@ -83,53 +83,53 @@ var work = {
         "employer" : "ING Belgium",
         "dates" : "2011-2016",
         "location" : "Brussels",
-        "description" : "responsible for the effective delivery of strategic, Legal and commercial projects in line with the goals of ING",
+        "description" : "responsible for the effective delivery of strategic, Legal and commercial projects in line with the goals of ING"
     },{
         "title": "Project Manager e-business",
         "employer" : "Avnet Technology Solutions",
         "dates" : "2004-2011",
         "location" : "Brussels",
-        "description" : "responsible for the maintenance, monitoring and growth of the Avnet European e-business offering",
+        "description" : "responsible for the maintenance, monitoring and growth of the Avnet European e-business offering"
     },{
         "title": "Business Process Manager",
         "employer" : "Avnet Technology Solutions",
         "dates" : "2002-2004",
         "location" : "Brussels",
-        "description" : "Business Process Manager",
+        "description" : "Business Process Manager"
     },{
         "title": "Sales Support Manager",
         "employer" : "Avnet Technology Solutions",
         "dates" : "2000-2002",
         "location" : "Brussels",
-        "description" : "Sales Support Manager",
+        "description" : "Sales Support Manager"
     },{
         "title": "Purchaser",
         "employer" : "Bytech Systems",
         "dates" : "1996-2000",
         "location" : "Bracknell, UK",
-        "description" : "Purchaser, IBM and Intel Server products",
+        "description" : "Purchaser, IBM and Intel Server products"
     },{
         "title": "Engineering Draughtsman",
         "employer" : "Dynamic Logic",
         "dates" : "1991-1996",
         "location" : "Bracknell, UK",
-        "description" : "Engineering Draughtsman",
+        "description" : "Engineering Draughtsman"
     },{
         "title": "Estate Agent",
         "employer" : "Romans",
         "dates" : "1989-1991",
         "location" : "Crowthorne, UK",
-        "description" : "Estage Agent",
+        "description" : "Estage Agent"
     }]
 }
 // Json Lint Validated
 
 
-// education object (using bracket [] notation)
-var education = {}
-    education["name"] = "Bracknell and Wokingham College";
-    education["years"] = "Sept 91 - May 93";
-    education["city"] = "Bracknell";
+// // education object (using bracket [] notation)
+// var education = {}
+//     education["name"] = "Bracknell and Wokingham College";
+//     education["years"] = "Sept 91 - May 93";
+//     education["city"] = "Bracknell";
 
 // var formattedPosition = HTMLworkTitle.replace("%data%", work["position"]);
 // var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
@@ -137,24 +137,40 @@ var education = {}
 $("#workExperience").append(work.position);
 $("#education").append(education.name);
 
+// education history created for Quiz all resume sections. JSON lint validated
 var education = {
     "schools": [{
         "name": "Udacity",
         "city": "Mountain View, CA, US",
         "degree": "NanoDegree",
         "subject": "Front End Web Development",
-        "date": 2016,
+        "date": 2016
     }, {
         "name": "QRP International",
         "city": "Brussels, BE",
         "degree": "Certification",
         "subject": "Prince II Practioner",
-        "date": 2014,
+        "date": 2014
     }, {
         "name": "Bracknell and Wokingham College",
         "city": "Bracknell, Berks, UK",
         "degree": "BTEC 1st",
         "subject": "Electro-Mechanical Engineering",
-        "date": 1993,
+        "date": 1993
+    }]
+}
+
+// projects history created for Quiz all resume sections. JSON lint validated
+var projects = {
+    "projects": [{
+        "title": "Portfolio",
+        "dates": "2016",
+        "description": "Fully responsive online Portfolio",
+        "images": "http://jcwd.github.io/build_portfolio_site/"
+    }, {
+        "title": "Hometown News",
+        "dates": "2016",
+        "description": "Responsive news blog",
+        "images": "http://jcwd.github.io/The_hometown_app/"
     }]
 }
