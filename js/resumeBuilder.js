@@ -60,26 +60,40 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts["location"])
 var formattedBiopic = HTMLbioPic.replace("%data%", bio["bioPic"]);
 var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio["welcomeMessage"]);
 
-var skillSet = ['HTML5', 'CSS3', 'JS', 'BootStrap', 'GitHub', 'Agile', 'Prince II'];
-var numSkills = skillSet.length;
-var x=0;
-for (var x = 0; x < numSkills; ++x) {
-    var formattedSkills = HTMLskills.replace("%data%",skillSet[x]);
-    $("#skills").append(formattedSkills); // Not working, skills do not show where expected although are being reported to consol
-    $("#header").append(formattedSkills); // Was just a test but here the skills loop is working
-    $("#topContacts").append(formattedSkills);
-    console.log(skillSet[x]);
-}
-
-
-
 $("#header").prepend(formattedName, formattedRole);
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
 $("#header").append(formattedBiopic);
 $("#header").append(formattedwelcomeMsg);
 $("#header").append(HTMLskillsStart);
 
+var skillSet = ['HTML5', 'CSS3', 'JS', 'BootStrap', 'GitHub', 'Agile', 'Prince II'];
+var numSkills = skillSet.length;
+var x=0;
+for (var x = 0; x < numSkills; ++x) {
+    var formattedSkills = HTMLskills.replace("%data%",skillSet[x]);
+    $("#skills-h3").append(formattedSkills);
+    console.log(skillSet[x]);
+}
 
 
+// work object for current job (using .(dot) notation)
+var work = {}
+    work.position = "Project Manager";
+    work.employer = "ING Belgium";
+    work.years = 5;
+    work.location = "Brussels";
+
+
+// education object (using bracket [] notation)
+var education = {}
+    education["name"] = "Bracknell and Wokingham College";
+    education["years"] = "Sept 91 - May 93";
+    education["city"] = "Bracknell";
+
+// var formattedPosition = HTMLworkTitle.replace("%data%", work["position"]);
+// var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
+
+$("#workExperience").append(work.position);
+$("#education").append(education.name);
 
 
