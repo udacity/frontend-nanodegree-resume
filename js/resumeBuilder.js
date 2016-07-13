@@ -26,7 +26,7 @@
 // var formattedName;
 // var formattedRole;
 // var bio;
-// var skills;
+
 
 // the below creates a bio object called "bio" within the object we see the
 
