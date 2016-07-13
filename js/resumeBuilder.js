@@ -1,8 +1,7 @@
 
 
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+
+
  // $("#header").append();
  // $("#main").append("Jon Collins");
 
@@ -27,7 +26,7 @@ This is empty on purpose! Your code to build the resume will go here.
 // var formattedName;
 // var formattedRole;
 // var bio;
-// var skills;
+
 
 // the below creates a bio object called "bio" within the object we see the
 
@@ -64,17 +63,24 @@ $("#header").prepend(formattedName, formattedRole);
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
 $("#header").append(formattedBiopic);
 $("#header").append(formattedwelcomeMsg);
-$("#header").append(HTMLskillsStart);
+
 
 var skillSet = ['HTML5', 'CSS3', 'JS', 'BootStrap', 'GitHub', 'Agile', 'Prince II'];
 var numSkills = skillSet.length;
 var x=0;
-for (var x = 0; x < numSkills; ++x) {
-    var formattedSkills = HTMLskills.replace("%data%",skillSet[x]);
-    $("#skills-h3").append(formattedSkills);
-    console.log(skillSet[x]);
-}
 
+// if statements created to call populateSkills function if there are skills in the skills array
+if (numSkills >= 0) {populateSkills()};
+
+// function populating skills firstly appending the skillStart to header, then running a loop to append the individual skills
+function populateSkills() {
+    $("#header").append(HTMLskillsStart);
+    for (var x = 0; x < numSkills; ++x) {
+        var formattedSkills = HTMLskills.replace("%data%",skillSet[x]);
+        $("#skills").append(formattedSkills);
+        console.log(skillSet[x]);
+        }
+}
 
 // work history created for Quiz all resume sections. JSON lint validated
 var work = {
