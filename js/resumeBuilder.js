@@ -135,13 +135,13 @@ console.log (work.jobs[0].employer);
 
 var numWork = work.jobs.length;
 x = 0;
-console.log (numWork);
-console.log (x);
+// console.log (numWork);
+// console.log (x);
 
 
 var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
 
-console.log(formattedEmployer);
+// console.log(formattedEmployer);
 
 if (numWork >= 0) {addWorkStart()};
 
@@ -155,14 +155,29 @@ function addWorkStart() {
         var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[x].description);
         $("#workExperience").append(HTMLworkStart);
         $("#workExperience").append(together);
+        $("#workExperience").append(formattedLocation);
         $("#workExperience").append(formattedDates);
-        $("#workExperience").append(location);
         $("#workExperience").append(formattedDescription);
-        console.log(formattedEmployer);
-        console.log(formattedLocation);
-
+        // console.log(formattedEmployer);
+        // console.log(formattedLocation);
 }
 
+// locationizer();
+
+// function locationizer() {
+
+//     var locations = [];
+//     for (var x = 0; x < numWork; ++x) {
+//     var foundlocation = work.jobs[x].location;
+//     locations.push(foundlocation);
+//     console.log(locations);
+//  }
+
+// }
+
+
+    bio.name.toUpperCase(10);
+    console.log(bio.name);
 
 
 
@@ -175,7 +190,7 @@ function addWorkStart() {
 // var formattedPosition = HTMLworkTitle.replace("%data%", work["position"]);
 // var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
 
-$("#workExperience").append(work.position);
+// $("#workExperience").append(work.position);
 // $("#education").append(education.name);
 
 // education history created for Quiz all resume sections. JSON lint validated
@@ -214,4 +229,6 @@ var projects = {
         "description": "Responsive news blog",
         "images": "http://jcwd.github.io/The_hometown_app/"
     }]
-}}
+}
+}
+
