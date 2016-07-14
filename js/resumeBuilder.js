@@ -150,9 +150,17 @@ function addWorkStart() {
         var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[x].title);
         var together = formattedEmployer.concat(formattedTitle);
+        var formattedDates = HTMLworkDates.replace("%data%",work.jobs[x].dates);
+        var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[x].location);
+        var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[x].description);
         $("#workExperience").append(HTMLworkStart);
         $("#workExperience").append(together);
+        $("#workExperience").append(formattedDates);
+        $("#workExperience").append(location);
+        $("#workExperience").append(formattedDescription);
         console.log(formattedEmployer);
+        console.log(formattedLocation);
+
 }
 
 
