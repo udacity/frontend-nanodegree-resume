@@ -130,6 +130,33 @@ var work = {
 }
 // Json Lint Validated
 
+console.log (work);
+console.log (work.jobs[0].employer);
+
+var numWork = work.jobs.length;
+x = 0;
+console.log (numWork);
+console.log (x);
+
+
+var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
+
+console.log(formattedEmployer);
+
+if (numWork >= 0) {addWorkStart()};
+
+function addWorkStart() {
+    for (var x = 0; x < numWork; ++x) {
+        var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[x].title);
+        var together = formattedEmployer.concat(formattedTitle);
+        $("#workExperience").append(HTMLworkStart);
+        $("#workExperience").append(together);
+        console.log(formattedEmployer);
+}
+
+
+
 
 // // education object (using bracket [] notation)
 // var education = {}
@@ -141,7 +168,7 @@ var work = {
 // var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
 
 $("#workExperience").append(work.position);
-$("#education").append(education.name);
+// $("#education").append(education.name);
 
 // education history created for Quiz all resume sections. JSON lint validated
 var education = {
@@ -179,4 +206,4 @@ var projects = {
         "description": "Responsive news blog",
         "images": "http://jcwd.github.io/The_hometown_app/"
     }]
-}
+}}
