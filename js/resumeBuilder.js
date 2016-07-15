@@ -172,12 +172,17 @@ function addWorkStart() {
 //     locations.push(foundlocation);
 //     console.log(locations);
 //  }
-
+inName();
 // }
+function inName(){
+    bio.name = bio.name.split(" ");
+    var firstname = bio.name[0];
+    var secondName = bio.name[1];
+    secondName = secondName.toUpperCase();
+    var newName = firstname.concat(" ",secondName);
+    var internationalisedName = HTMLheaderName.replace("name", newName);
+    }
 
-
-    bio.name.toUpperCase(10);
-    console.log(bio.name);
 
 
 
