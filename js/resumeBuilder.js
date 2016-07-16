@@ -172,19 +172,25 @@ function addWorkStart() {
 //     locations.push(foundlocation);
 //     console.log(locations);
 //  }
-inName();
-// }
-function inName(){
-    bio.name = bio.name.split(" ");
-    var firstname = bio.name[0];
-    var secondName = bio.name[1];
-    secondName = secondName.toUpperCase();
-    var newName = firstname.concat(" ",secondName);
-    var internationalisedName = HTMLheaderName.replace("name", newName);
-    }
+// inName();
+// // }
+// function inName(){
+//     bio.name = bio.name.split(" ");
+//     var firstname = bio.name[0];
+//     var secondName = bio.name[1];
+//     secondName = secondName.toUpperCase();
+//     var newName = firstname.concat(" ",secondName);
+//     var internationalisedName = HTMLheaderName.replace("name", newName);
+//     }
 
 
-
+function inName(name){
+    name = name.trim().split(" ");
+    console.log(name);
+    name[1] = name[1].toUpperCase();
+    return name [0] +" "+name[1];
+}
+$("#main").append(internationalizeButton);
 
 // // education object (using bracket [] notation)
 // var education = {}
