@@ -82,6 +82,14 @@ function populateSkills() {
         }
 }
 
+function inName(name){
+    name = name.trim().split(" ");
+    console.log(name);
+    name[1] = name[1].toUpperCase();
+    return name [0] +" "+name[1];
+}
+$("#main").append(internationalizeButton);
+
 // work history created for Quiz all resume sections. JSON lint validated
 var work = {
     "jobs": [{
@@ -184,13 +192,13 @@ function addWorkStart() {
 //     }
 
 
-function inName(name){
-    name = name.trim().split(" ");
-    console.log(name);
-    name[1] = name[1].toUpperCase();
-    return name [0] +" "+name[1];
-}
-$("#main").append(internationalizeButton);
+// function inName(name){
+//     name = name.trim().split(" ");
+//     console.log(name);
+//     name[1] = name[1].toUpperCase();
+//     return name [0] +" "+name[1];
+// }
+// $("#main").append(internationalizeButton);
 
 // // education object (using bracket [] notation)
 // var education = {}
