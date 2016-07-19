@@ -41,7 +41,7 @@ This is empty on purpose! Your code to build the resume will go here.
    "name": "aaa",
    "role": "Developer",
    "welcomeMessage": "Hello Hey Hi",
-   "biopic": "Nulla eleifend odio sollicitudin iaculis dictum. Vestibulum sed magna magna. ",
+   "biopic": "images/fry.jpg",
    "contacts":
      {
        "mobile": "402-8372-8374",
@@ -50,7 +50,7 @@ This is empty on purpose! Your code to build the resume will go here.
        "twitter": "@girlisnoone",
        "location": "Seven Kingdom"
      },
-   "skills": ["Eat", "Code", "Sleep", "Draw", "Coffee"]
+   "skills": ["Eat", "Code", "Sleep", "Coffee"]
  }
 
  var education = {
@@ -86,4 +86,26 @@ This is empty on purpose! Your code to build the resume will go here.
        "url": ""
      }
    ]
+ }
+
+ var formattedName = HTMLheaderName.replace("%data%", bio.name);
+ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+ var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
+ var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+ $("#header").append(formattedName);
+ $("#header").append(formattedRole);
+ $("#header").append(formattedbioPic);
+ $("#header").append(formattedwelcomeMsg);
+
+ if(bio.skills.length > 0) {
+   $("#header").append(HTMLskillsStart);
+
+   var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+   $("#skills").append(formattedSkill);
+   formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+   $("#skills").append(formattedSkill);
+   formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+   $("#skills").append(formattedSkill);
+   formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+   $("#skills").append(formattedSkill);
  }
