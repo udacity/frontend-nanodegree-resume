@@ -109,3 +109,11 @@ This is empty on purpose! Your code to build the resume will go here.
    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
    $("#skills").append(formattedSkill);
  }
+
+ work.jobs.forEach(function(job) {
+   $("#workExperience").append(HTMLworkStart);
+   var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+   var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+   var formattedEmployerTitle = formattedEmployer + formattedTitle;
+   $(".work-entry:last").append(formattedEmployerTitle);
+ })
