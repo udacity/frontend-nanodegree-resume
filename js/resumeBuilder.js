@@ -112,8 +112,18 @@ This is empty on purpose! Your code to build the resume will go here.
 
  work.jobs.forEach(function(job) {
    $("#workExperience").append(HTMLworkStart);
+
    var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
    var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
    var formattedEmployerTitle = formattedEmployer + formattedTitle;
    $(".work-entry:last").append(formattedEmployerTitle);
+
+   var formattedworkDates = HTMLworkDates.replace("%data%", job.dates);
+   $(".work-entry:last").append(formattedworkDates);
+
+   var formattedworkLocation = HTMLworkLocation.replace("%data%", job.location);
+   $(".work-entry:last").append(formattedworkLocation);
+
+   var formattedworkDescription = HTMLworkDescription.replace("%data%", job.description);
+   $(".work-entry:last").append(formattedworkDescription);
  })
