@@ -207,8 +207,11 @@ span {
   margin: 0 5%;
 }
 
-#mapDiv {
+#map-container {
   height: 400px;
+}
+
+#mapDiv {
   width: 100%;
   padding-bottom: 5%;
 }
