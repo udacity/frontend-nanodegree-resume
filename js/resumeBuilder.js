@@ -147,7 +147,7 @@ x = 0;
 // console.log (x);
 
 
-var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
+// var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
 
 // console.log(formattedEmployer);
 
@@ -250,11 +250,11 @@ var projects = {
     }]
 }
 projects.display = function() {
-    for (project in projects.projects) {
-        $("#projects").append(HTMLprojectstart);
+    for (projects in projects) {
+        $("#projects").append(HTMLprojectStart);
 
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-        $(".project-entry:last").append(formattedTitle);
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
+        $(".project-entry:last").append(formattedTitle);project
 
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projjects[project].dates);
         $("project-emtry:last").append(formattedDates);
@@ -271,7 +271,27 @@ projects.display = function() {
     }
 }
 }
+// mycode below. needs tweeking
+var numProj = projects.projects.length;
 
+if (numProj >= 0) {addProjects()};
 
+function addProjects() {
+    for (var i = 0; i < numProj; ++i) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
+        $(".project-entry:last").append(formattedTitle);project
+
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projjects[project].dates);
+        $("project-emtry:last").append(formattedDates);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $("project-entry:last").append(formattedDescription);
+    }
+}
+
+        // console.log(formattedEmployer);
+        // console.log(formattedLocation);
 
 // this is a github test changed location and pc
