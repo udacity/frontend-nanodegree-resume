@@ -251,7 +251,7 @@ var projects = {
 }
 projects.display = function() {
     for (projects in projects) {
-        $("#projects").append(HTMLprojectStart);
+        $("#main").append(HTMLprojectStart);
 
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
         $(".project-entry:last").append(formattedTitle);project
@@ -271,25 +271,27 @@ projects.display = function() {
     }
 }
 }
-// mycode below. needs tweeking
-var numProj = projects.projects.length;
+// // mycode below. needs tweeking
+// var numProj = projects.projects.length;
 
-if (numProj >= 0) {addProjects()};
+// console.log (numProj);
 
-function addProjects() {
-    for (var i = 0; i < numProj; ++i) {
-        $("#projects").append(HTMLprojectStart);
+// if (numProj >= 0) {addProjects()};
 
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
-        $(".project-entry:last").append(formattedTitle);project
+// function addProjects() {
+//     for (var i = 0; i < numProj; ++i) {
+//         $("#projects").append(HTMLprojectStart);
 
-        var formattedDates = HTMLprojectDates.replace("%data%", projects.projjects[project].dates);
-        $("project-emtry:last").append(formattedDates);
+//         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
+//         $(".project-entry:last").append(formattedTitle);project
 
-        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-        $("project-entry:last").append(formattedDescription);
-    }
-}
+//         var formattedDates = HTMLprojectDates.replace("%data%", projects.projjects[project].dates);
+//         $("project-emtry:last").append(formattedDates);
+
+//         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+//         $("project-entry:last").append(formattedDescription);
+//     }
+// }
 
         // console.log(formattedEmployer);
         // console.log(formattedLocation);
