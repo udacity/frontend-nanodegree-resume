@@ -254,9 +254,11 @@ projects.display = function() {
         $("#main").append(HTMLprojectStart);
 
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
-        $(".project-entry:last").append(formattedTitle);project
+        $(".project-entry:last").append(formattedTitle);
 
-        var formattedDates = HTMLprojectDates.replace("%data%", projects.projjects[project].dates);
+        console.log (projects.projects["title"]);
+
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $("project-emtry:last").append(formattedDates);
 
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
@@ -271,29 +273,7 @@ projects.display = function() {
     }
 }
 }
-// // mycode below. needs tweeking
-// var numProj = projects.projects.length;
 
-// console.log (numProj);
-
-// if (numProj >= 0) {addProjects()};
-
-// function addProjects() {
-//     for (var i = 0; i < numProj; ++i) {
-//         $("#projects").append(HTMLprojectStart);
-
-//         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
-//         $(".project-entry:last").append(formattedTitle);project
-
-//         var formattedDates = HTMLprojectDates.replace("%data%", projects.projjects[project].dates);
-//         $("project-emtry:last").append(formattedDates);
-
-//         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-//         $("project-entry:last").append(formattedDescription);
-//     }
-// }
-
-        // console.log(formattedEmployer);
-        // console.log(formattedLocation);
+console.log (projects.projects.title);
 
 // this is a github test changed location and pc
