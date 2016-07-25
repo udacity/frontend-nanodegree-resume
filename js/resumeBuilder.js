@@ -256,6 +256,9 @@ projects.display = function() {
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
 
+console.log (projects.projects[project].title);
+console.log (projects.projects[project].dates);
+
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $("project-emtry:last").append(formattedDates);
 
