@@ -241,12 +241,12 @@ var projects = {
         "title": "Portfolio",
         "dates": "2016",
         "description": "Fully responsive online Portfolio",
-        "images": "http://jcwd.github.io/build_portfolio_site/"
+        "images": ["images/relax.jpg"]
     }, {
         "title": "Hometown News",
         "dates": "2016",
         "description": "Responsive news blog",
-        "images": "http://jcwd.github.io/The_hometown_app/"
+        "images": ["images/dog.jpg"]
     }]
 }
 projects.display = function() {
@@ -260,15 +260,15 @@ console.log (projects.projects[project].title);
 console.log (projects.projects[project].dates);
 
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-        $("project-emtry:last").append(formattedDates);
+        $(".project-emtry:last").append(formattedDates);
 
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-        $("project-entry:last").append(formattedDescription);
+        $(".project-entry:last").append(formattedDescription);
 
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
-                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-                $("project-entry:last").append(formattedImage);
+                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+                $(".project-entry:last").append(formattedImage);
             }
         }
     }
@@ -278,4 +278,9 @@ console.log (projects.projects[project].dates);
 projects.display();
 
 };
+
+$("#mapDiv").append(googleMap);
+
+
+
 // this is a github test changed location and pc
