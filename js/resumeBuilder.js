@@ -250,13 +250,11 @@ var projects = {
     }]
 }
 projects.display = function() {
-    for (projects in projects) {
-        $("#main").append(HTMLprojectStart);
+    for (var project in projects.projects) { //Lorenzo helped me see that the var needed to bedeclared in scopwe and not globally (adding the var) and that second projects needed to be added
+        $("#projects").append(HTMLprojectStart);
 
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects["title"]);
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
-
-        console.log (projects.projects["title"]);
 
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $("project-emtry:last").append(formattedDates);
@@ -265,15 +263,16 @@ projects.display = function() {
         $("project-entry:last").append(formattedDescription);
 
         if (projects.projects[project].images.length > 0) {
-            for (image in projects.projects[project].images) {
+            for (var image in projects.projects[project].images) {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $("project-entry:last").append(formattedImage);
             }
         }
     }
-}
-}
 
-console.log (projects.projects.title);
+};
 
+projects.display();
+
+};
 // this is a github test changed location and pc
