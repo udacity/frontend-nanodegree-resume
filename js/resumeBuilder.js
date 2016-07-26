@@ -170,6 +170,10 @@ function addWorkStart() {
         // console.log(formattedLocation);
 }
 
+
+$("#mapDiv").append(googleMap);
+
+
 // locationizer();
 
 // function locationizer() {
@@ -279,7 +283,7 @@ projects.display();
 
 };
 
-$("#mapDiv").append(googleMap);
+
 
 
 
