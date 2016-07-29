@@ -93,7 +93,8 @@ var education = {
     "display": function() {
         var data = "%data%";
         education.schools.forEach(displaySchools);
-        $(".education-entry:last").append(HTMLonlineClasses);
+        $("#education").append(HTMLonlineClasses);
+        $("#education").append(HTMLschoolStart);
         education.onlineCourses.forEach(displayOnlineSchools);
 
         function displaySchools(school) {
