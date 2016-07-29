@@ -222,9 +222,9 @@ var education = {
                     var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
                     var formattedHTMLschoolDates = HTMLschoolDates.replace("%data%", school.date);
                     var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", school.location);
-                    $(".education-entry:last").append(formattedHTMLschoolName + formattedHTMLschoolDegree);
-                    $(".education-entry:last").append(formattedHTMLschoolDates);
-                    $(".education-entry:last").append(formattedHTMLschoolLocation);
+                    $(".education-entry:last").prepend(formattedHTMLschoolName + formattedHTMLschoolDegree);
+                    $(".education-entry:last").prepend(formattedHTMLschoolLocation);
+                    $(".education-entry:last").append(formattedHTMLschoolDates + '<br />');
 
                 });
             }
@@ -238,7 +238,7 @@ var education = {
                     var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", onlinecourse.url);
                     $(".education-entry:last").append(formattedHTMLonlineTitle + formattedHTMLonlineSchool);
                     $(".education-entry:last").append(formattedHTMLonlineDates);
-                    $(".education-entry:length").append(formattedHTMLonlineURL);
+                    $(".education-entry:last").append(formattedHTMLonlineURL  + '<br />');
                 });
             }
         }
