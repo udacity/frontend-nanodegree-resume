@@ -2,31 +2,6 @@
 
 
 
- // $("#header").append();
- // $("#main").append("Jon Collins");
-
-// variables the below should set a var called awesomethoughts and sets it to the value below
-// adding console.log prints out the value of it straight away in the console on refresh.
- // var awesomeThoughts = "I am Jon and I am AWESOME!";
- // console.log(awesomeThoughts);
-
-// to replace something in a pattern
-// [string].replace([old],[new])
-
-// var funthoughts = awesomeThoughts.replace("AWESOME", "FUN");
-
-// this checks in the console the old value is replaced by the new value
-// console.log(awesomeThoughts);
-// console.log(funthoughts);
-
-// I can then append this to somewher in the page
-// $("#main").append(funthoughts);
-
-// the below replaces placeholders in the helper.js that have already been called by index.html with actual data
-// var formattedName;
-// var formattedRole;
-// var bio;
-
 
 // the below creates a bio object called "bio" within the object we see the
 
@@ -216,25 +191,58 @@ function addWorkStart() {
 var education = {
     "schools": [{
         "name": "Udacity",
-        "city": "Mountain View, CA, US",
+        "location": "Mountain View, CA, US",
         "degree": "NanoDegree",
         "subject": "Front End Web Development",
-        "date": 2016
+        "date": "4/2016 - Present"
     }, {
         "name": "QRP International",
-        "city": "Brussels, BE",
+        "location": "Brussels, BE",
         "degree": "Certification",
         "subject": "Prince II Practioner",
-        "date": 2014
+        "date": "2014"
     }, {
         "name": "Bracknell and Wokingham College",
-        "city": "Bracknell, Berks, UK",
+        "location": "Bracknell, Berks, UK",
         "degree": "BTEC 1st",
         "subject": "Electro-Mechanical Engineering",
-        "date": 1993
-    }]
-}
+        "date": "1993"
+    }],
+    "onlineCourses": [{
+        "title": "Front-End Web Development",
+        "school": "Udacity",
+        "dates": "4/2016 - Present",
+        "url": "https://udacity.com"
+    }],
+        "display": function() {
+            if(education.schools.length > 0) {
+                education.schools.forEach(function(school) {
+                    $("#education").append(HTMLschoolStart);
+                    var formattedHTMLschoolName = HTMLschoolName.replace("%data%", school.name);
+                    var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+                    var formattedHTMLschoolDates = HTMLschoolDates.replace("%data%", school.date);
+                    var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+                    $(".education-entry:last").append(formattedHTMLschoolName + formattedHTMLschoolDegree);
+                    $(".education-entry:last").append(formattedHTMLschoolDates);
+                    $(".education-entry:last").append(formattedHTMLschoolLocation);
 
+                });
+            }
+            if(education.onlineCourses.length > 0) {
+                $("#education").append(HTMLonlineClasses);
+                education.onlineCourses.forEach(function(onlinecourse) {
+                    $("#education").append(HTMLschoolStart);
+                    var formattedHTMLonlineTitle = HTMLonlineTitle.replace("%data%", onlinecourse.title);
+                    var formattedHTMLonlineSchool = HTMLonlineSchool.replace("%data%", onlinecourse.school);
+                    var formattedHTMLonlineDates = HTMLonlineDates.replace("%data%", onlinecourse.dates);
+                    var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", onlinecourse.url);
+                    $(".education-entry:last").append(formattedHTMLonlineTitle + formattedHTMLonlineSchool);
+                    $(".education-entry:last").append(formattedHTMLonlineDates);
+                    $(".education-entry:length").append(formattedHTMLonlineURL);
+                });
+            }
+        }
+};
 // projects history created for Quiz all resume sections. JSON lint validated
 var projects = {
     "projects": [{
@@ -276,6 +284,7 @@ console.log (projects.projects[project].dates);
 };
 
 projects.display();
+education.display();
 
 };
 
