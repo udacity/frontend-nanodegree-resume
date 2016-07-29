@@ -43,7 +43,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script src="js/helper.js"></script>
 
 
-  <script src="js/resumeBuilder.js"></script>
+ 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
@@ -90,7 +90,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
-<!--   <script src="js/resumeBuilder.js"></script> -->
+  <script src="js/resumeBuilder.js"></script>
 
 
   <!--
@@ -134,9 +134,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
+    // if(document.getElementById('map') === null) {
+    //   document.getElementById('mapDiv').style.display = 'none';
+    // }
   </script>
 </body>
 </html>
