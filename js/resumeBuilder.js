@@ -53,77 +53,80 @@ function inName(name){
 }
 $("#main").append(internationalizeButton);
 
+var work = {
+    "jobs": [
+    {
+        "title": "Project Manager",
+        "employer": "ING Belgium",
+        "dates": "2011-2016",
+        "location": "Brussels,BE",
+        "description": "responsible for the effective delivery of strategic, Legal and commercial projects in line with the goals of ING"
+    },
+    {
+        "title": "Project Manager e-business",
+        "employer": "Avnet Technology Solutions",
+        "dates": "2004-2011",
+        "location": "Brussels,BE",
+        "description": "responsible for the maintenance, monitoring and growth of the Avnet European e-business offering"
+    },
+    {
+        "title": "Business Process Manager",
+        "employer": "Avnet Technology Solutions",
+        "dates": "2002-2004",
+        "location": "Brussels,BE",
+        "description": "Business Process Manager"
+    },
+    {
+        "title": "Sales Support Manager",
+        "employer": "Avnet Technology Solutions",
+        "dates": "2000-2002",
+        "location": "Brussels,BE",
+        "description": "Sales Support Manager"
+    },
+    {
+        "title": "Purchaser",
+        "employer": "Bytech Systems",
+        "dates": "1996-2000",
+        "location": "Bracknell, UK",
+        "description": "Purchaser, IBM and Intel Server products"
+    },
+    {
+        "title": "Engineering Draughtsman",
+        "employer": "Dynamic Logic",
+        "dates": "1991-1996",
+        "location": "Bracknell, UK",
+        "description": "Engineering Draughtsman"
+    },
+    {
+        "title": "Estate Agent",
+        "employer": "Romans",
+        "dates": "1989-1991",
+        "location": "Crowthorne, UK",
+        "description": "Estage Agent"
+    }]
+}
+
+var numWork = work.jobs.length; 
+x = 0;
+
+work.display = function() {
+    console.log (numWork);
+    for (x = 0; x < numWork; x++) {
+        var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer); 
+        var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[x].title);
+        var together = formattedEmployer.concat(formattedTitle);
+        var formattedDates = HTMLworkDates.replace("%data%",work.jobs[x].dates);
+        var formattedWorkLocation = HTMLworkLocation.replace("%data%",work.jobs[x].location);
+        var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[x].description);
+        $("#workExperience").append(HTMLworkStart);
+        $("#workExperience").append(together);
+        $("#workExperience").append(formattedWorkLocation);
+        $("#workExperience").append(formattedDates);
+        $("#workExperience").append(formattedDescription);
+}
+};
+
 // Do not touch, everything up to here working fine.
-
-// var work = {
-//     "jobs": [{
-//         "title": "Project Manager",
-//         "employer": "ING Belgium",
-//         "dates" : "2011-2016",
-//         "location" : "Brussels",
-//         "description" : "responsible for the effective delivery of strategic, Legal and commercial projects in line with the goals of ING"
-//     },{
-//         "title": "Project Manager e-business",
-//         "employer" : "Avnet Technology Solutions",
-//         "dates" : "2004-2011",
-//         "location" : "Brussels",
-//         "description" : "responsible for the maintenance, monitoring and growth of the Avnet European e-business offering"
-//     },{
-//         "title": "Business Process Manager",
-//         "employer" : "Avnet Technology Solutions",
-//         "dates" : "2002-2004",
-//         "location" : "Brussels",
-//         "description" : "Business Process Manager"
-//     },{
-//         "title": "Sales Support Manager",
-//         "employer" : "Avnet Technology Solutions",
-//         "dates" : "2000-2002",
-//         "location" : "Brussels",
-//         "description" : "Sales Support Manager"
-//     },{
-//         "title": "Purchaser",
-//         "employer" : "Bytech Systems",
-//         "dates" : "1996-2000",
-//         "location" : "Bracknell, UK",
-//         "description" : "Purchaser, IBM and Intel Server products"
-//     },{
-//         "title": "Engineering Draughtsman",
-//         "employer" : "Dynamic Logic",
-//         "dates" : "1991-1996",
-//         "location" : "Bracknell, UK",
-//         "description" : "Engineering Draughtsman"
-//     },{
-//         "title": "Estate Agent",
-//         "employer" : "Romans",
-//         "dates" : "1989-1991",
-//         "location" : "Crowthorne, UK",
-//         "description" : "Estage Agent"
-//     }]
-// };
-
-
-// console.log (work);
-// console.log (work.jobs[0].employer);
-
-// var numWork = work.jobs.length;
-// x = 0;
-
-// if (numWork >= 0) {addWorkStart();
-
-// function addWorkStart() {
-//         var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
-//         var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[x].title);
-//         var together = formattedEmployer.concat(formattedTitle);
-//         var formattedDates = HTMLworkDates.replace("%data%",work.jobs[x].dates);
-//         var formattedWorkLocation = HTMLworkLocation.replace("%data%",work.jobs[x].location);
-//         var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[x].description);
-//     while ( x < numWork ++) {
-//         $("#workExperience").append(HTMLworkStart);
-//         $("#workExperience").append(together);
-//         $("#workExperience").append(formattedWorkLocation);
-//         $("#workExperience").append(formattedDates);
-//         $("#workExperience").append(formattedDescription);
-// }
 
 // var education = {
 //     "schools": [{
@@ -218,6 +221,7 @@ $("#main").append(internationalizeButton);
 
 bio.display();
 populateSkills();
+work.display();
 // projects.display();
 // education.display();
 
