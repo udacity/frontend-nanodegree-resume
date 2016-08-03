@@ -126,66 +126,72 @@ work.display = function() {
 }
 };
 
+var education = {
+    "schools": [
+    {
+        "name": "Udacity",
+        "location": "Mountain View",
+        "degree": "NanoDegree",
+        "majors": "Front End Web Development",
+        "dates": "4/2016 - Present",
+        "url": "blabla"
+    }, 
+    {
+        "name": "QRP International",
+        "location": "Brussels",
+        "degree": "Certification",
+        "majors": "Prince II Practioner",
+        "dates": "2014",
+        "url": "blabla"
+    },
+    {
+        "name": "Bracknell and Wokingham College",
+        "location": "Bracknell",
+        "degree": "BTEC 1st",
+        "majors": "Electro-Mechanical Engineering",
+        "dates": "1993",
+        "url": "blabla"
+    }
+    ],
+
+    "onlineCourses": [
+    {
+        "title": "Front-End Web Development",
+        "school": "Udacity",
+        "dates": "4/2016 - Present",
+        "url": "https://udacity.com"
+    }
+    ]}
+
+education.display = function() {
+    if(education.schools.length > 0) {
+        education.schools.forEach(function(school) {
+        $("#education").append(HTMLschoolStart);
+        var formattedHTMLschoolName = HTMLschoolName.replace("%data%", school.name);
+        var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+        var formattedHTMLschoolDates = HTMLschoolDates.replace("%data%", school.dates);
+        var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+        $(".education-entry:last").prepend(formattedHTMLschoolName + formattedHTMLschoolDegree);
+        $(".education-entry:last").prepend(formattedHTMLschoolLocation);
+        $(".education-entry:last").append(formattedHTMLschoolDates + "<br />");
+        });
+    }
+    if(education.onlineCourses.length > 0) {
+        $("#education").append(HTMLonlineClasses);
+        education.onlineCourses.forEach(function(onlinecourse) {
+        $("#education").append(HTMLschoolStart);
+        var formattedHTMLonlineTitle = HTMLonlineTitle.replace("%data%", onlinecourse.title);
+        var formattedHTMLonlineSchool = HTMLonlineSchool.replace("%data%", onlinecourse.school);
+        var formattedHTMLonlineDates = HTMLonlineDates.replace("%data%", onlinecourse.dates);
+        var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", onlinecourse.url);
+        $(".education-entry:last").append(formattedHTMLonlineTitle + formattedHTMLonlineSchool);
+        $(".education-entry:last").append(formattedHTMLonlineDates);
+        $(".education-entry:last").append(formattedHTMLonlineURL  + "<br />");
+        });
+    }
+};
+
 // Do not touch, everything up to here working fine.
-
-// var education = {
-//     "schools": [{
-//         "name": "Udacity",
-//         "location": "Mountain View",
-//         "degree": "NanoDegree",
-//         "majors": "Front End Web Development",
-//         "dates": "4/2016 - Present",
-//         "url": "blabla"
-//     }, {
-//         "name": "QRP International",
-//         "location": "Brussels",
-//         "degree": "Certification",
-//         "majors": "Prince II Practioner",
-//         "dates": "2014",
-//         "url": "blabla"
-//     }, {
-//         "name": "Bracknell and Wokingham College",
-//         "location": "Bracknell",
-//         "degree": "BTEC 1st",
-//         "majors": "Electro-Mechanical Engineering",
-//         "dates": "1993",
-//         "url": "blabla"
-//     }],
-//     "onlineCourses": [{
-//         "title": "Front-End Web Development",
-//         "school": "Udacity",
-//         "dates": "4/2016 - Present",
-//         "url": "https://udacity.com"
-//     }],
-//         "display": function() {
-//             if(education.schools.length > 0) {
-//                 education.schools.forEach(function(school) {
-//                     $("#education").append(HTMLschoolStart);
-//                     var formattedHTMLschoolName = HTMLschoolName.replace("%data%", school.name);
-//                     var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
-//                     var formattedHTMLschoolDates = HTMLschoolDates.replace("%data%", school.dates);
-//                     var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", school.location);
-//                     $(".education-entry:last").prepend(formattedHTMLschoolName + formattedHTMLschoolDegree);
-//                     $(".education-entry:last").prepend(formattedHTMLschoolLocation);
-//                     $(".education-entry:last").append(formattedHTMLschoolDates + "<br />");
-
-//                 });
-//             }
-//             if(education.onlineCourses.length > 0) {
-//                 $("#education").append(HTMLonlineClasses);
-//                 education.onlineCourses.forEach(function(onlinecourse) {
-//                     $("#education").append(HTMLschoolStart);
-//                     var formattedHTMLonlineTitle = HTMLonlineTitle.replace("%data%", onlinecourse.title);
-//                     var formattedHTMLonlineSchool = HTMLonlineSchool.replace("%data%", onlinecourse.school);
-//                     var formattedHTMLonlineDates = HTMLonlineDates.replace("%data%", onlinecourse.dates);
-//                     var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", onlinecourse.url);
-//                     $(".education-entry:last").append(formattedHTMLonlineTitle + formattedHTMLonlineSchool);
-//                     $(".education-entry:last").append(formattedHTMLonlineDates);
-//                     $(".education-entry:last").append(formattedHTMLonlineURL  + "<br />");
-//                 });
-//             }
-//         }
-// };
 
 // var projects = {
 //     "projects": [{
@@ -222,6 +228,7 @@ work.display = function() {
 bio.display();
 populateSkills();
 work.display();
+education.display();
 // projects.display();
 // education.display();
 
