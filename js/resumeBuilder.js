@@ -131,7 +131,7 @@ var education = {
     "schools": [
     {
         "name": "Udacity",
-        "location": "Mountain View",
+        "location": "Brussels",
         "degree": "NanoDegree",
         "majors": "Front End Web Development",
         "dates": "4/2016 - Present",
@@ -192,8 +192,6 @@ education.display = function() {
     }
 };
 
-// Do not touch, everything up to here working fine.
-
 var projects = {
     "projects": [
     {
@@ -235,8 +233,8 @@ populateSkills();
 work.display();
 education.display();
 projects.display();
-// education.display();
+// DO NOT TOUCH everything up to here working correctly and displaying correctly
 
 // }
 
-// $("#mapDiv").append(googleMap);}
+$("#mapDiv").append(googleMap);
