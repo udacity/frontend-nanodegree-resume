@@ -96,8 +96,6 @@ var work = {
     }]
 };
 
-
-
 work.display = function() {
     var data = "%data%";
     var numWork = work.jobs.length;
@@ -185,7 +183,7 @@ var projects = {
         "title": "Portfolio",
         "dates": "2016",
         "description": "Fully responsive online Portfolio",
-        "images": ["images/relax.jpg"]
+        "images": ["images/relax.jpg", "images/dog.jpg"]
     }, {
         "title": "Hometown News",
         "dates": "2016",
@@ -198,6 +196,7 @@ projects.display = function() {
     var numProj = projects.projects.length;
     var data = "%data%";
     x = 0;
+    i = 0;
     console.log(numProj);
     for (x = 0; x < numProj; x++) { //Lorenzo helped me see that the var needed to bedeclared in scopwe and not globally (adding the var) and that second projects needed to be added
         $("#projects").append(HTMLprojectStart);
@@ -207,10 +206,12 @@ projects.display = function() {
         $(".project-emtry:last").append(formattedDates);
         var formattedDescription = HTMLprojectDescription.replace(data, projects.projects[x].description);
         $(".project-entry:last").append(formattedDescription);
-        var formattedImage = HTMLprojectImage.replace(data, projects.projects[x].images);
+        var numImg = projects.projects[x].images.length;
+        for (i =0; i < numImg; i++) {
+        var formattedImage = HTMLprojectImage.replace(data, projects.projects[x].images[i]);
         $(".project-entry:last").append(formattedImage);
     }
-
+    }
 };
 
 bio.display();
