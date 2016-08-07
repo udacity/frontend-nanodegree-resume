@@ -13,21 +13,22 @@ var bio = {
     "biopic": "images/jon.jpg"
 };
 
-var data = "%data%";
-var formattedName = HTMLheaderName.replace(data, bio.name);
-var formattedRole = HTMLheaderRole.replace(data, bio.role);
-var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
-var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
-var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
-var formattedLocation = HTMLlocation.replace(data, bio.contacts.location);
-var formattedbiopic = HTMLbiopic.replace(data, bio.biopic);
-var formattedwelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
+
 
 bio.display = function() {
     var numSkills = bio.skills.length;
     console.log(bio.skills.length);
     var x = 0;
+    var data = "%data%";
+    var formattedName = HTMLheaderName.replace(data, bio.name);
+    var formattedRole = HTMLheaderRole.replace(data, bio.role);
+    var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
+    var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
+    var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
+    var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
+    var formattedLocation = HTMLlocation.replace(data, bio.contacts.location);
+    var formattedbiopic = HTMLbiopic.replace(data, bio.biopic);
+    var formattedwelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
     $("#header").prepend(formattedName, formattedRole);
     $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
     $("#header").append(formattedbiopic);
@@ -95,10 +96,12 @@ var work = {
     }]
 };
 
-var numWork = work.jobs.length;
-x = 0;
+
 
 work.display = function() {
+    var data = "%data%";
+    var numWork = work.jobs.length;
+    x = 0;
     console.log(numWork);
     for (x = 0; x < numWork; x++) {
         var formattedEmployer = HTMLworkEmployer.replace(data, work.jobs[x].employer);
@@ -108,10 +111,10 @@ work.display = function() {
         var formattedWorkLocation = HTMLworkLocation.replace(data, work.jobs[x].location);
         var formattedDescription = HTMLworkDescription.replace(data, work.jobs[x].description);
         $("#workExperience").append(HTMLworkStart);
-        $("#workExperience").append(together);
-        $("#workExperience").append(formattedWorkLocation);
-        $("#workExperience").append(formattedDates);
-        $("#workExperience").append(formattedDescription);
+        $("#workExperience:last").append(together);
+        $("#workExperience:last").append(formattedWorkLocation);
+        $("#workExperience:last").append(formattedDates);
+        $("#workExperience:last").append(formattedDescription);
     }
 };
 
@@ -151,6 +154,7 @@ education.display = function() {
     if (education.schools.length > 0) {
         education.schools.forEach(function(school) {
             $("#education").append(HTMLschoolStart);
+            var data = "%data%";
             var formattedHTMLschoolName = HTMLschoolName.replace(data, school.name);
             var formattedHTMLschoolDegree = HTMLschoolDegree.replace(data, school.degree);
             var formattedHTMLschoolDates = HTMLschoolDates.replace(data, school.dates);
@@ -164,6 +168,7 @@ education.display = function() {
         $("#education").append(HTMLonlineClasses);
         education.onlineCourses.forEach(function(onlinecourse) {
             $("#education").append(HTMLschoolStart);
+            var data = "%data%";
             var formattedHTMLonlineTitle = HTMLonlineTitle.replace(data, onlinecourse.title);
             var formattedHTMLonlineSchool = HTMLonlineSchool.replace(data, onlinecourse.school);
             var formattedHTMLonlineDates = HTMLonlineDates.replace(data, onlinecourse.dates);
@@ -190,20 +195,20 @@ var projects = {
 };
 
 projects.display = function() {
-    for (var project in projects.projects) { //Lorenzo helped me see that the var needed to bedeclared in scopwe and not globally (adding the var) and that second projects needed to be added
+    var numProj = projects.projects.length;
+    var data = "%data%";
+    x = 0;
+    console.log(numProj);
+    for (x = 0; x < numProj; x++) { //Lorenzo helped me see that the var needed to bedeclared in scopwe and not globally (adding the var) and that second projects needed to be added
         $("#projects").append(HTMLprojectStart);
-        var formattedTitle = HTMLprojectTitle.replace(data, projects.projects[project].title);
+        var formattedTitle = HTMLprojectTitle.replace(data, projects.projects[x].title);
         $(".project-entry:last").append(formattedTitle);
-        var formattedDates = HTMLprojectDates.replace(data, projects.projects[project].dates);
+        var formattedDates = HTMLprojectDates.replace(data, projects.projects[x].dates);
         $(".project-emtry:last").append(formattedDates);
-        var formattedDescription = HTMLprojectDescription.replace(data, projects.projects[project].description);
+        var formattedDescription = HTMLprojectDescription.replace(data, projects.projects[x].description);
         $(".project-entry:last").append(formattedDescription);
-        if (projects.projects[project].images.length > 0) {
-            for (var image in projects.projects[project].images) {
-                var formattedImage = HTMLprojectImage.replace(data, projects.projects[project].images);
-                $(".project-entry:last").append(formattedImage);
-            }
-        }
+        var formattedImage = HTMLprojectImage.replace(data, projects.projects[x].images);
+        $(".project-entry:last").append(formattedImage);
     }
 
 };
