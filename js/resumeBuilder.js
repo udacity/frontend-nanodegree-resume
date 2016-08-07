@@ -60,19 +60,19 @@ var work = {
         "title": "Project Manager e-business",
         "employer": "Avnet Technology Solutions",
         "dates": "2004-2011",
-        "location": "Brussels,BE",
+        "location": "Diegem,BE",
         "description": "responsible for the maintenance, monitoring and growth of the Avnet European e-business offering"
     }, {
         "title": "Business Process Manager",
         "employer": "Avnet Technology Solutions",
         "dates": "2002-2004",
-        "location": "Brussels,BE",
+        "location": "Diegem,BE",
         "description": "Business Process Manager"
     }, {
         "title": "Sales Support Manager",
         "employer": "Avnet Technology Solutions",
         "dates": "2000-2002",
-        "location": "Brussels,BE",
+        "location": "Waterloo,BE",
         "description": "Sales Support Manager"
     }, {
         "title": "Purchaser",
@@ -118,14 +118,14 @@ work.display = function() {
 var education = {
     "schools": [{
         "name": "Udacity",
-        "location": "Brussels",
+        "location": "Riga",
         "degree": "NanoDegree",
         "majors": ["Front End Web Development", "HTML5", "CSS", "JavaScript"],
         "dates": "4/2016 - Present",
         "url": "blabla"
     }, {
         "name": "QRP International",
-        "location": "riga",
+        "location": "Brussels",
         "degree": "Certification",
         "majors": ["Prince II Foundation", "Prince II Practitioner"],
         "dates": "2014",
@@ -213,7 +213,6 @@ work.display();
 education.display();
 projects.display();
 // DO NOT TOUCH everything up to here working correctly and displaying correctly
-
-// }
+$("#main").css("color", "#000");
 
 $("#mapDiv").append(googleMap);
