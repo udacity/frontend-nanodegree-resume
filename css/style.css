@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto",  "微软雅黑",  "Microsoft Yahei", "黑体", SimHei, sans-serif;
 }
 
 .clear-fix {
@@ -61,6 +61,11 @@ h5 {
 
 }
 
+h3 {
+  color: #999;
+  font-style: normal;
+  padding: 20px 0 0 0;
+}
 
 .date-text {
   font-style: italic;
@@ -165,6 +170,10 @@ ul {
 
 img {
   padding: 10px;
+}
+
+.project-pic{
+  max-width: 100%;
 }
 
 span {
