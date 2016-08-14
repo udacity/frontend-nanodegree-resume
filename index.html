@@ -35,7 +35,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div id="main">
+  <main id="main">
       <!-- You'll be deleting this line in the course -->
 
     <!--
@@ -44,28 +44,34 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
+    <header id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
-    </div>
+    </header>
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
+
+    <section id="workExperience" class="gray">
       <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
+    </section>
+
+    <section id="projects">
       <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
+    </section>
+
+    <section id="education" class="gray">
       <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
+    </section>
+
+    <section id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
+    </section>
+
+    <section id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
-    </div>
-  </div>
+    </section>
+    
+  </main>
 
   <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
   https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
