@@ -1,33 +1,42 @@
-// Create skills list and append an element to the #main div.
-
-var skills = ["red hair", "rapier-like wit", "humbleness"];
-
 // Create bio object to contain biographical info.
 var bio = {
-	name : "Josef Mirante",
-	role : "Web Developer",
-	mobile : "(360) 540-0952",
-	email : "josef.mirante@gmail.com",
-	github : "josef.mirante",
-	twitter : "",
-	location : "Philadelphia",
-	pictureURL : "images/fry.jpg",
-	welcomeMsg : "Great news everybody!",
-	skills : skills
+	"name" : "Josef Mirante",
+	"role" : "Web Developer",
+	"mobile" : "(360) 540-0952",
+	"email" : "josef.mirante@gmail.com",
+	"github" : "josef.mirante",
+	"twitter" : "",
+	"location" : "Philadelphia",
+	"pictureURL" : "images/fry.jpg",
+	"welcomeMsg" : "Great news everybody!",
+	"skills" : ["red hair", "rapier-like wit", "humbleness"]
 };
 
 // Create work object to hold work history.
-var work = {};
-work.title = "Implementation Services Team Leader";
-work.employer = "Mercer";
-work.dates = "2014 - 2016";
-work.location = "Philadelphia, PA";
+var work = {
+	"title" : "Implementation Services Team Leader",
+	"employer" : "Mercer Consulting",
+	"dates" : "2014 - 2016",
+	"workLocation" : "Philadelphia, PA"
+};
 
 // Create education object.
-var education = {};
-education["name"] = "University of Washington";
-education["dates"] = "2006 - 2008";
-education["location"] = "Seattle, WA";
+var education = {
+	"schools" : [
+	{
+		"name" : "University of Washington",
+		"city" : "Seattle, WA",
+		"degree" : "BS",
+		"major" : ["Mathematics"]
+	},
+	{
+		"name" : "University of Washington",
+		"city" : "Seattle, WA",
+		"degree" : "BS",
+		"major" : ["Mathematics"]
+	}
+	]
+};
 
 // Append name and roll information to header.
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -79,10 +88,8 @@ $(".work-entry").append(formattedWorkDates);
 $(".work-entry").append(formattedWorkLocation);
 
 // Append education history
-var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
-var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.dates);
-var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.location);
+var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name);
+var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[0].city);
 $("#education").append(HTMLschoolStart);
 $(".education-entry").append(formattedSchoolName);
-$(".education-entry").append(formattedSchoolDates);
 $(".education-entry").append(formattedSchoolLocation);
