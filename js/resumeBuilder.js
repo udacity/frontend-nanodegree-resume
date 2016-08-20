@@ -120,3 +120,23 @@ function displayWork() {
 
 // run display functions
 displayWork();
+
+// Internationalize name
+$("#main").append(internationalizeButton);
+function inName() {
+	namesArray = bio.name.split(" ");
+
+	// format first name
+	firstName = namesArray[0];
+	var firstLetter = firstName.slice(0,1).toUpperCase();
+	var remainingLetters = firstName.slice(1).toLowerCase();
+	firstName = firstLetter + remainingLetters;
+	namesArray[0] = firstName;
+
+	// format last name
+	lastName = namesArray[1];
+	namesArray[1] = lastName.toUpperCase();
+	internationalName = namesArray.join(" ");
+
+	return internationalName;
+}
