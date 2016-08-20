@@ -22,17 +22,49 @@ var projects = {
 		"dates": "dates 1",
 		"description": "description 1",
 		"images": [
-			"image url 1", "image url 2"
+			"images/fry.jpg", "images/fry.jpg"
 		]
 	}, {
 		"title": "title 2",
 		"dates": "dates 2",
 		"description": "description 2",
 		"images": [
-			"image url 3", "image url 4"
+			"images/fry.jpg", "images/fry.jpg"
 		]
 	}]
 };
+
+projects.dislpay = function () {
+	for (project in projects.projects) {
+		if (projects.projects.hasOwnProperty(project)) {
+			$("#projects").append(HTMLprojectStart);
+
+			var formattedTitle = HTMLprojectTitle.replace("%data%",
+				projects.projects[project].title);
+			$(".project-entry:last").append(formattedTitle);
+
+			var formattedDates = HTMLprojectDates.replace("%data%",
+				projects.projects[project].dates);
+			$(".project-entry:last").append(formattedDates);
+
+			var formattedDescription = HTMLprojectDescription.replace("%data%",
+				projects.projects[project].description);
+			$(".project-entry:last").append(formattedDescription);
+
+			// loop through image array, if images present
+			if (projects.projects[project].images.length > 0) {
+				projects.projects[project].images.forEach(function(entry) {
+					console.log(entry);
+					var formattedImage = HTMLprojectImage.replace("%data%", entry);
+					$(".project-entry:last").append(formattedImage);
+				})
+			}
+		}
+	}
+}
+
+projects.dislpay();
+
 
 // Create bio object to contain biographical info.
 var bio = {
