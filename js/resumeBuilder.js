@@ -16,9 +16,22 @@ var bio = {
 	skills : skills
 };
 
+// Create work object to hold work history.
+var work = {};
+work.title = "Implementation Services Team Leader";
+work.employer = "Mercer";
+work.dates = "2014 - 2016";
+work.location = "Philadelphia, PA";
+
+// Create education object.
+var education = {};
+education["name"] = "University of Washington";
+education["dates"] = "2006 - 2008";
+education["location"] = "Seattle, WA";
+
 // Append name and roll information to header.
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.skills[0]);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
@@ -53,3 +66,23 @@ var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
 $("#skills").append(formattedSkill);
 var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 $("#skills").append(formattedSkill);
+
+// Append work history
+var formattedEmployer = HTMLworkEmployer.replace("%data%", work.employer);
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.title);
+var formattedWorkDates = HTMLworkDates.replace("%data%", work.dates);
+var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.location);
+$("#workExperience").append(HTMLworkStart);
+$(".work-entry").append(formattedEmployer);
+$(".work-entry").append(formattedWorkTitle);
+$(".work-entry").append(formattedWorkDates);
+$(".work-entry").append(formattedWorkLocation);
+
+// Append education history
+var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
+var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.dates);
+var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.location);
+$("#education").append(HTMLschoolStart);
+$(".education-entry").append(formattedSchoolName);
+$(".education-entry").append(formattedSchoolDates);
+$(".education-entry").append(formattedSchoolLocation);
