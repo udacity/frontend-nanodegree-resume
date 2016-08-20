@@ -12,6 +12,7 @@ var bio = {
 	twitter : "",
 	location : "Philadelphia",
 	pictureURL : "images/fry.jpg",
+	welcomeMsg : "Great news everybody!",
 	skills : skills
 };
 
@@ -32,3 +33,24 @@ $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#topContacts").append(formattedGithub);
 $("#topContacts").append(formattedLocation);
+
+// Append bio image.
+var formattedPictureURL = HTMLbioPic.replace("%data%", bio.pictureURL);
+
+$("#header").append(formattedPictureURL);
+
+// Append welcome message.
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+
+$("#header").append(formattedWelcomeMsg);
+
+// Append skills title.
+$("#header").append(HTMLskillsStart);
+
+// Append skills.
+var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+$("#skills").append(formattedSkill);
+var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+$("#skills").append(formattedSkill);
+var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+$("#skills").append(formattedSkill);
