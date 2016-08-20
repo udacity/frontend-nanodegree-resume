@@ -16,7 +16,6 @@ var bio = {
 	skills : skills
 };
 
-
 // Append name and roll information to header.
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.skills[0]);
