@@ -50,8 +50,6 @@ var bio = {
 	"skills": ["red hair", "rapier-like wit", "humbleness"]
 };
 
-
-
 // Create education object.
 var education = {
 	"schools": [{
@@ -68,3 +66,20 @@ var education = {
 		"majors": ["Math and Science Emphasis"]
 	}]
 };
+
+// Append data to html
+var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").append(formattedHeaderName);
+
+if (bio.skills.length > 0) {
+
+	$("#header").append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+
+}
