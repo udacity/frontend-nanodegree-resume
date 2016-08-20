@@ -27,13 +27,15 @@ var education = {
 		"name" : "University of Washington",
 		"city" : "Seattle, WA",
 		"degree" : "BS",
-		"major" : ["Mathematics"]
+		"major" : ["Mathematics"],
+		"graduationYear" : "2008"
 	},
 	{
-		"name" : "University of Washington",
-		"city" : "Seattle, WA",
-		"degree" : "BS",
-		"major" : ["Mathematics"]
+		"name" : "Everett Community College",
+		"city" : "Everett, WA",
+		"degree" : "AA",
+		"major" : ["General Studies"],
+		"graduationYear" : "2006"
 	}
 	]
 };
