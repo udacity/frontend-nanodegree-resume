@@ -68,6 +68,7 @@ var education = {
 };
 
 // Append data to html
+// Append skills
 var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedHeaderName);
 
@@ -81,5 +82,15 @@ if (bio.skills.length > 0) {
 	$("#skills").append(formattedSkill);
 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 	$("#skills").append(formattedSkill);
+
+}
+
+// Append work
+for (job in work.jobs) {
+
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	$(".work-entry:last").append(formattedEmployer + formattedTitle);
 
 }
