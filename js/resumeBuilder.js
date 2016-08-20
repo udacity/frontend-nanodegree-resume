@@ -74,14 +74,15 @@ $("#header").append(formattedHeaderName);
 
 if (bio.skills.length > 0) {
 
+	// Add skills element
 	$("#header").append(HTMLskillsStart);
 
+	// Format and append skills
 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
 	$("#skills").append(formattedSkill);
 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
 	$("#skills").append(formattedSkill);
 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-
 	$("#skills").append(formattedSkill);
 
 }
@@ -90,32 +91,28 @@ if (bio.skills.length > 0) {
 for (job in work.jobs) {
 	if (work.jobs.hasOwnProperty(job)) {
 
+		// add new div for work info
 		$("#workExperience").append(HTMLworkStart);
 
+		// Format and append various work info items
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",
 			work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%",
 			work.jobs[job].title);
+		// employer and title are part of same element, concatenate
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
 		$(".work-entry:last").append(formattedEmployerTitle);
-
 
 		var formattedLocation = HTMLworkLocation.replace("%data%",
 			work.jobs[job].location)
-
 		$(".work-entry:last").append(formattedLocation);
-
 
 		var formattedDates = HTMLworkDates.replace("%data%",
 			work.jobs[job].dates)
-
 		$(".work-entry:last").append(formattedDates);
-
 
 		var formattedDescription = HTMLworkDescription.replace("%data%",
 			work.jobs[job].description)
-
 		$(".work-entry:last").append(formattedDescription);
 
 	}
