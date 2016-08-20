@@ -91,6 +91,7 @@ for (job in work.jobs) {
 	if (work.jobs.hasOwnProperty(job)) {
 
 		$("#workExperience").append(HTMLworkStart);
+
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",
 			work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%",
@@ -98,5 +99,24 @@ for (job in work.jobs) {
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
 		$(".work-entry:last").append(formattedEmployerTitle);
+
+
+		var formattedLocation = HTMLworkLocation.replace("%data%",
+			work.jobs[job].location)
+
+		$(".work-entry:last").append(formattedLocation);
+
+
+		var formattedDates = HTMLworkDates.replace("%data%",
+			work.jobs[job].dates)
+
+		$(".work-entry:last").append(formattedDates);
+
+
+		var formattedDescription = HTMLworkDescription.replace("%data%",
+			work.jobs[job].description)
+
+		$(".work-entry:last").append(formattedDescription);
+
 	}
 }
