@@ -152,3 +152,6 @@ function displayWork() {
 
 // run display functions
 displayWork();
+
+// add a map to page
+$("#mapDiv").append(googleMap);
