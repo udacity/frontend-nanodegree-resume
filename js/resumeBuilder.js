@@ -93,7 +93,9 @@ projects.dislpay = function() {
 	}
 }
 
-projects.dislpay();
+projects.dislpay = function() {
+
+}
 
 
 // Create bio object to contain biographical info.
@@ -170,11 +172,11 @@ if (bio.skills.length > 0) {
 
 }
 
-// Define display functions
-
-
 // run display functions
-displayWork();
+bio.dislpay();
+work.display();
+projects.display();
+education.display();
 
 // add a map to page
 $("#mapDiv").append(googleMap);
