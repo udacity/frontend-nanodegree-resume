@@ -4,7 +4,7 @@ var work = {
 		"employer": "Mercer Consulting",
 		"title": "Implementation Services Team Leader",
 		"location": "Philadelphia, PA",
-		"dates": "2014 - 2016",
+		"dates": "2014 - Present",
 		"description": "team lead for pension software implementation"
 	}, {
 		"employer": "Towers Watson",
@@ -15,18 +15,48 @@ var work = {
 	}]
 };
 
+work.display = function() {
+	for (job in work.jobs) {
+		if (work.jobs.hasOwnProperty(job)) {
+			// add new div for work info
+			$("#workExperience").append(HTMLworkStart);
+
+			// Format and append various work info items
+			var formattedEmployer = HTMLworkEmployer.replace("%data%",
+				work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace("%data%",
+				work.jobs[job].title);
+			// employer and title are part of same element, concatenate
+			var formattedEmployerTitle = formattedEmployer + formattedTitle;
+			$(".work-entry:last").append(formattedEmployerTitle);
+
+			var formattedLocation = HTMLworkLocation.replace("%data%",
+				work.jobs[job].location)
+			$(".work-entry:last").append(formattedLocation);
+
+			var formattedDates = HTMLworkDates.replace("%data%",
+				work.jobs[job].dates)
+			$(".work-entry:last").append(formattedDates);
+
+			var formattedDescription = HTMLworkDescription.replace("%data%",
+				work.jobs[job].description)
+			$(".work-entry:last").append(formattedDescription);
+		}
+	}
+}
+
 // projects data object
 var projects = {
 	"projects": [{
 		"title": "title 1",
-		"dates": "dates 1",
+		"dates": "2016 - 2016",
 		"description": "description 1",
 		"images": [
 			"images/fry.jpg", "images/fry.jpg"
 		]
 	}, {
 		"title": "title 2",
-		"dates": "dates 2",
+		"dates": "2016 - 2016",
 		"description": "description 2",
 		"images": [
 			"images/fry.jpg", "images/fry.jpg"
@@ -34,7 +64,7 @@ var projects = {
 	}]
 };
 
-projects.dislpay = function () {
+projects.dislpay = function() {
 	for (project in projects.projects) {
 		if (projects.projects.hasOwnProperty(project)) {
 			$("#projects").append(HTMLprojectStart);
@@ -70,8 +100,6 @@ projects.dislpay();
 var bio = {
 	"name": "Josef Mirante",
 	"role": "Web Developer",
-	"welcomeMessage": "Great news everybody!",
-	"bioPic": "images/fry.jpg",
 	"contacts": {
 		"mobile": "(360) 540 0952",
 		"email": "josef.mirante@gmail.com",
@@ -79,8 +107,14 @@ var bio = {
 		"twitter": "nobody",
 		"location": "Philadelphia"
 	},
-	"skills": ["red hair", "rapier-like wit", "humbleness"]
+	"welcomeMessage": "Great news everybody!",
+	"skills": ["red hair", "rapier-like wit", "humbleness"],
+	"biopic": "images/fry.jpg"
 };
+
+bio.display = function() {
+
+}
 
 // Create education object.
 var education = {
@@ -88,16 +122,33 @@ var education = {
 		"name": "University of Washington",
 		"location": "Seattle, WA",
 		"degree": "BS",
+		"majors": ["Mathematics"],
 		"dates": "2006 - 2008",
-		"majors": ["Mathematics"]
+		"url": "www.washington.edu"
 	}, {
 		"name": "Everett Community College",
 		"location": "Everett, WA",
 		"degree": "AA",
+		"majors": ["Math and Science Emphasis"],
 		"dates": "2004 - 2006",
-		"majors": ["Math and Science Emphasis"]
+		"url": "http://www.everettcc.edu/"
+	}],
+	"onlineCourses": [{
+		"title": "Intro to Programming Nanodegree",
+		"school": "Udacity",
+		"dates": "April 2016 - June 2016",
+		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+	}, {
+		"title": "Front-End Web Developer Nanodegree",
+		"school": "Udacity",
+		"dates": "July 2016 - Present",
+		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	}]
 };
+
+education.display = function() {
+
+}
 
 // Append data to html
 // Append skills
@@ -120,35 +171,7 @@ if (bio.skills.length > 0) {
 }
 
 // Define display functions
-function displayWork() {
-	for (job in work.jobs) {
-		if (work.jobs.hasOwnProperty(job)) {
-			// add new div for work info
-			$("#workExperience").append(HTMLworkStart);
 
-			// Format and append various work info items
-			var formattedEmployer = HTMLworkEmployer.replace("%data%",
-				work.jobs[job].employer);
-			var formattedTitle = HTMLworkTitle.replace("%data%",
-				work.jobs[job].title);
-			// employer and title are part of same element, concatenate
-			var formattedEmployerTitle = formattedEmployer + formattedTitle;
-			$(".work-entry:last").append(formattedEmployerTitle);
-
-			var formattedLocation = HTMLworkLocation.replace("%data%",
-				work.jobs[job].location)
-			$(".work-entry:last").append(formattedLocation);
-
-			var formattedDates = HTMLworkDates.replace("%data%",
-				work.jobs[job].dates)
-			$(".work-entry:last").append(formattedDates);
-
-			var formattedDescription = HTMLworkDescription.replace("%data%",
-				work.jobs[job].description)
-			$(".work-entry:last").append(formattedDescription);
-		}
-	}
-}
 
 // run display functions
 displayWork();
