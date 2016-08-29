@@ -16,33 +16,32 @@ var work = {
 };
 
 work.display = function() {
-	for (job in work.jobs) {
-		if (work.jobs.hasOwnProperty(job)) {
-			// add new div for work info
-			$("#workExperience").append(HTMLworkStart);
+	work.jobs.forEach( function(job) {
+		// Append work entry
+		$("#workExperience").append(HTMLworkStart);
 
-			// Format and append various work info items
-			var formattedEmployer = HTMLworkEmployer.replace("%data%",
-				work.jobs[job].employer);
-			var formattedTitle = HTMLworkTitle.replace("%data%",
-				work.jobs[job].title);
-			// employer and title are part of same element, concatenate
-			var formattedEmployerTitle = formattedEmployer + formattedTitle;
-			$(".work-entry:last").append(formattedEmployerTitle);
+		// Append employer and title
+		var formattedEmployer = HTMLworkEmployer.replace("%data%",
+			job.employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%",
+			job.title);
+		// Employer and title are part of same element, concatenate
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
 
-			var formattedLocation = HTMLworkLocation.replace("%data%",
-				work.jobs[job].location)
-			$(".work-entry:last").append(formattedLocation);
+		// Append location, formatted dates, job description
+		var formattedLocation = HTMLworkLocation.replace("%data%",
+			job.location)
+		$(".work-entry:last").append(formattedLocation);
 
-			var formattedDates = HTMLworkDates.replace("%data%",
-				work.jobs[job].dates)
-			$(".work-entry:last").append(formattedDates);
+		var formattedDates = HTMLworkDates.replace("%data%",
+			job.dates)
+		$(".work-entry:last").append(formattedDates);
 
-			var formattedDescription = HTMLworkDescription.replace("%data%",
-				work.jobs[job].description)
-			$(".work-entry:last").append(formattedDescription);
-		}
-	}
+		var formattedDescription = HTMLworkDescription.replace("%data%",
+			job.description)
+		$(".work-entry:last").append(formattedDescription);
+	})
 }
 
 // projects data object
@@ -65,7 +64,6 @@ var projects = {
 };
 
 projects.display = function() {
-	console.log("initial project display");
 	for (project in projects.projects) {
 		if (projects.projects.hasOwnProperty(project)) {
 			$("#projects").append(HTMLprojectStart);
