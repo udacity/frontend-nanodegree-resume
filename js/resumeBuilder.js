@@ -64,32 +64,30 @@ var projects = {
 };
 
 projects.display = function() {
-	for (project in projects.projects) {
-		if (projects.projects.hasOwnProperty(project)) {
-			$("#projects").append(HTMLprojectStart);
+	projects.projects.forEach( function(project){
 
-			var formattedTitle = HTMLprojectTitle.replace("%data%",
-				projects.projects[project].title);
-			$(".project-entry:last").append(formattedTitle);
+		$("#projects").append(HTMLprojectStart);
 
-			var formattedDates = HTMLprojectDates.replace("%data%",
-				projects.projects[project].dates);
-			$(".project-entry:last").append(formattedDates);
+		var formattedTitle = HTMLprojectTitle.replace("%data%",
+			project.title);
+		$(".project-entry:last").append(formattedTitle);
 
-			var formattedDescription = HTMLprojectDescription.replace("%data%",
-				projects.projects[project].description);
-			$(".project-entry:last").append(formattedDescription);
+		var formattedDates = HTMLprojectDates.replace("%data%",
+			project.dates);
+		$(".project-entry:last").append(formattedDates);
 
-			// loop through image array, if images present
-			if (projects.projects[project].images.length > 0) {
-				projects.projects[project].images.forEach(function(entry) {
-					console.log(entry);
-					var formattedImage = HTMLprojectImage.replace("%data%", entry);
-					$(".project-entry:last").append(formattedImage);
-				})
-			}
+		var formattedDescription = HTMLprojectDescription.replace("%data%",
+			project.description);
+		$(".project-entry:last").append(formattedDescription);
+
+		// loop through image array, if images present
+		if (project.images.length > 0) {
+			project.images.forEach(function(entry) {
+				var formattedImage = HTMLprojectImage.replace("%data%", entry);
+				$(".project-entry:last").append(formattedImage);
+			})
 		}
-	}
+	})
 }
 
 // Create bio object to contain biographical info.
@@ -150,14 +148,14 @@ var education = {
 		"degree": "BS",
 		"majors": ["Mathematics"],
 		"dates": "2006 - 2008",
-		"url": "www.washington.edu"
+		"url": "https://www.washington.edu"
 	}, {
 		"name": "Everett Community College",
 		"location": "Everett, WA",
 		"degree": "AA",
 		"majors": ["Math and Science Emphasis"],
 		"dates": "2004 - 2006",
-		"url": "http://www.everettcc.edu/"
+		"url": "https://www.everettcc.edu/"
 	}],
 	"onlineCourses": [{
 		"title": "Intro to Programming Nanodegree",
@@ -173,8 +171,44 @@ var education = {
 };
 
 education.display = function() {
+	education.schools.forEach( function(school) {
+		$("#education").append(HTMLschoolStart);
+		var formattedName = HTMLschoolName.replace("%data%", school.name);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+		var formattedNameDegree = formattedName + formattedDegree;
+		var formattedNameDegree = formattedNameDegree.replace("#", school.url);
+		$(".education-entry:last").append(formattedNameDegree);
 
+		formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+		$(".education-entry:last").append(formattedDates);
+
+		formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
+		$(".education-entry:last").append(formattedLocation);
+
+		school.majors.forEach( function(major) {
+			var formattedMajor = HTMLschoolMajor.replace("%data%", major);
+			$(".education-entry:last").append(formattedMajor);
+		})
+	})
+
+	$("#education").append(HTMLonlineClasses);
+	education.onlineCourses.forEach( function(course) {
+		$("#education").append(HTMLschoolStart);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
+		var formattedTitleSchool = formattedTitle + formattedSchool;
+		var formattedTitleSchool = formattedTitleSchool.replace("#", course.url);
+		$(".education-entry:last").append(formattedTitleSchool);
+
+		formattedDates = HTMLonlineDates.replace("%data%", course.dates);
+		$(".education-entry:last").append(formattedDates);
+
+		formattedURL = HTMLonlineURL.replace("%data%", course.url);
+		$(".education-entry:last").append(formattedURL);
+	})
 }
+
+
 
 // run display functions
 bio.display();
