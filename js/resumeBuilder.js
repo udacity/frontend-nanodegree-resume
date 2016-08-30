@@ -108,34 +108,34 @@ var bio = {
 
 bio.display = function() {
 	// Prepend name and role
-	formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	$("#header").prepend(formattedRole);
-	formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
 
 	// Append contact info
-	formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	$("#topContacts").append(formattedMobile);
-	formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	$("#topContacts").append(formattedEmail);
-	formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	$("#topContacts").append(formattedTwitter);
-	formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	$("#topContacts").append(formattedGithub);
-	formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedLocation);
 
 	// Append pic and welcome message
-	formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+	var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 	$("#header").append(formattedPic);
-	formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedMessage);
 
 	// Append skills title and skills
 	$("#header").append(HTMLskillsStart);
 
 	bio.skills.forEach( function(skill) {
-    	formattedSkill = HTMLskills.replace("%data%", skill);
+    	var formattedSkill = HTMLskills.replace("%data%", skill);
     	$("#skills").append(formattedSkill);
 	});
 }
@@ -179,10 +179,10 @@ education.display = function() {
 		var formattedNameDegree = formattedNameDegree.replace("#", school.url);
 		$(".education-entry:last").append(formattedNameDegree);
 
-		formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+		var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
 		$(".education-entry:last").append(formattedDates);
 
-		formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
 		$(".education-entry:last").append(formattedLocation);
 
 		school.majors.forEach( function(major) {
@@ -200,10 +200,10 @@ education.display = function() {
 		var formattedTitleSchool = formattedTitleSchool.replace("#", course.url);
 		$(".education-entry:last").append(formattedTitleSchool);
 
-		formattedDates = HTMLonlineDates.replace("%data%", course.dates);
+		var formattedDates = HTMLonlineDates.replace("%data%", course.dates);
 		$(".education-entry:last").append(formattedDates);
 
-		formattedURL = HTMLonlineURL.replace("%data%", course.url);
+		var formattedURL = HTMLonlineURL.replace("%data%", course.url);
 		$(".education-entry:last").append(formattedURL);
 	})
 }
