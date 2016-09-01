@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #e64559;
   line-height: 48px;
   display: inline;
 }
@@ -34,9 +34,14 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #ccc4c4;
   line-height: 29px;
   padding: 10px;
+  text-align: center;
+  background-color: #524d4d;
+  border: white;
+  border-top-style: groove;
+  border-bottom-style: groove;
 }
 
 h3 {
@@ -100,16 +105,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #e64559;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #865858;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #e64559;
 }
 
 .white-text {
@@ -129,7 +134,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3e3a3a;
 }
 
 .flex-box {
@@ -138,13 +143,6 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
   padding: 10px;
 }
 
@@ -157,6 +155,7 @@ ul {
 }
 
 .biopic {
+  border-radius: 50%;
   float: left;
   padding: 10px;
   width: 200px;
@@ -169,6 +168,7 @@ img {
 
 span {
   padding: 5px;
+  color: #d4c9c9;
 }
 
 #lets-connect {
@@ -214,7 +214,7 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+  #skills-h3, #skills,
   .biopic {
     display: block;
   }
