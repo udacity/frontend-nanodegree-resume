@@ -94,37 +94,40 @@ This is empty on purpose! Your code to build the resume will go here.
   for(skill in bio.skill){
     $("#skills").append(HTMLskills.replace("%data%", bio.skill[skill]));
   }
-
+  workdisplay();
+  schoolDisplay();
   //work
+  function workdisplay() {
+    for(workid in work){
+      $("#workExperience").append(HTMLworkStart);
+      var foremployer = HTMLworkEmployer.replace("%data%", work[workid].employer);
+      var fortitle = HTMLworkTitle.replace("%data%", work[workid].title);
+      var fordates = HTMLworkDates.replace("%data%" , work[workid].workdates);
+      var forloc = HTMLworkLocation.replace("%data%", work[workid].location);
+      var fordisc = HTMLworkDescription.replace("%data%", work[workid].discription);
 
-  for(workid in work){
-    $("#workExperience").append(HTMLworkStart);
-    var foremployer = HTMLworkEmployer.replace("%data%", work[workid].employer);
-    var fortitle = HTMLworkTitle.replace("%data%", work[workid].title);
-    var fordates = HTMLworkDates.replace("%data%" , work[workid].workdates);
-    var forloc = HTMLworkLocation.replace("%data%", work[workid].location);
-    var fordisc = HTMLworkDescription.replace("%data%", work[workid].discription);
-
-    $(".work-entry:last").append(foremployer);
-    $(".work-entry:last").append(fortitle);
-    $(".work-entry:last").append(fordates);
-    $(".work-entry:last").append(forloc);
-    $(".work-entry:last").append(fordisc);
+      $(".work-entry:last").append(foremployer);
+      $(".work-entry:last").append(fortitle);
+      $(".work-entry:last").append(fordates);
+      $(".work-entry:last").append(forloc);
+      $(".work-entry:last").append(fordisc);
+    }
   }
+  function schoolDisplay() {
+    for(schoolid in education.schools){
+      $("#education").append(HTMLschoolStart);
+      var forschoolname = HTMLschoolName.replace("%data%",education.schools[schoolid].name);
+      var forschooldegree = HTMLschoolDegree.replace("%data%",education.schools[schoolid].degree);
+      var forschooldates = HTMLschoolDates.replace("%data%",education.schools[schoolid].dates);
+      var forschoollocation = HTMLschoolLocation.replace("%data%",education.schools[schoolid].location);
+      var forschoolmajor = HTMLschoolMajor.replace("%data%",education.schools[schoolid].majors);
 
-  for(schoolid in education.schools){
-    $("#education").append(HTMLschoolStart);
-    var forschoolname = HTMLschoolName.replace("%data%",education.schools[schoolid].name);
-    var forschooldegree = HTMLschoolDegree.replace("%data%",education.schools[schoolid].degree);
-    var forschooldates = HTMLschoolDates.replace("%data%",education.schools[schoolid].dates);
-    var forschoollocation = HTMLschoolLocation.replace("%data%",education.schools[schoolid].location);
-    var forschoolmajor = HTMLschoolMajor.replace("%data%",education.schools[schoolid].majors);
-
-    $(".education-entry").append(forschoolname);
-    $(".education-entry").append(forschooldegree);
-    $(".education-entry").append(forschooldates);
-    $(".education-entry").append(forschoollocation);
-    $(".education-entry").append(forschoolmajor);
+      $(".education-entry").append(forschoolname);
+      $(".education-entry").append(forschooldegree);
+      $(".education-entry").append(forschooldates);
+      $(".education-entry").append(forschoollocation);
+      $(".education-entry").append(forschoolmajor);
+    }
   }
 
 
