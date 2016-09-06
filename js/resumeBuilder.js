@@ -2,16 +2,30 @@
 var work = {
     "jobs": [{
         "employer": "Mercer Consulting",
-        "title": "Implementation Services Team Leader",
+        "title": "Implementation Services - Project Manager",
         "location": "Philadelphia, PA",
-        "dates": "2014 - Present",
-        "description": "team lead for pension software implementation"
+        "dates": "August 2016 - Present",
+        "description": "Project management of implementation and bug-fix work queue for pension administration software"
+    },
+    {
+        "employer": "Mercer Consulting",
+        "title": "Implementation Services - Team Leader",
+        "location": "Philadelphia, PA",
+        "dates": "September 2014 - July 2016",
+        "description": "Pension administration software programmer"
     }, {
         "employer": "Towers Watson",
-        "title": "Calculation Developer",
+        "title": "Calculation Programmer",
         "location": "Philadelphia, PA",
-        "dates": "2011 - 2014",
-        "description": "Implemented pension software code"
+        "dates": "2013 - September 2014",
+        "description": "Pension administration software programmer"
+    },
+    {
+        "employer": "Towers Watson",
+        "title": "Defined Benefits Analyst",
+        "location": "Southfield, MI",
+        "dates": "2011 - 2013",
+        "description": "Defined benefits pension administration"
     }]
 };
 
@@ -47,16 +61,16 @@ work.display = function() {
 // projects data object
 var projects = {
     "projects": [{
-        "title": "title 1",
-        "dates": "2016 - 2016",
-        "description": "description 1",
+        "title": "Title 1",
+        "dates": "2016",
+        "description": "Description 1",
         "images": [
             "images/fry.jpg", "images/fry.jpg"
         ]
     }, {
-        "title": "title 2",
-        "dates": "2016 - 2016",
-        "description": "description 2",
+        "title": "Title 2",
+        "dates": "2016",
+        "description": "Description 2",
         "images": [
             "images/fry.jpg", "images/fry.jpg"
         ]
@@ -97,12 +111,12 @@ var bio = {
     "contacts": {
         "mobile": "(360) 540 0952",
         "email": "josef.mirante@gmail.com",
-        "github": "josef.mirante",
-        "twitter": "nobody",
-        "location": "Philadelphia"
+        "github": "josef-mirante",
+        "twitter": "",
+        "location": "Philadelphia, PA"
     },
-    "welcomeMessage": "Great news everybody!",
-    "skills": ["red hair", "rapier-like wit", "humbleness"],
+    "welcomeMessage": "Let's work together",
+    "skills": ["Communication", "Organization", "Collaboration"],
     "biopic": "images/fry.jpg"
 };
 
@@ -118,8 +132,10 @@ bio.display = function() {
     $("#topContacts").append(formattedMobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts").append(formattedEmail);
-    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    $("#topContacts").append(formattedTwitter);
+    if(bio.contacts.twitter.length > 0) {
+        var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        $("#topContacts").append(formattedTwitter);
+    }
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedGithub);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
@@ -145,14 +161,14 @@ var education = {
     "schools": [{
         "name": "University of Washington",
         "location": "Seattle, WA",
-        "degree": "BS",
+        "degree": "Bachelor of Science",
         "majors": ["Mathematics"],
         "dates": "2006 - 2008",
         "url": "https://www.washington.edu"
     }, {
         "name": "Everett Community College",
         "location": "Everett, WA",
-        "degree": "AA",
+        "degree": "Associate of Science",
         "majors": ["Math and Science Emphasis"],
         "dates": "2004 - 2006",
         "url": "https://www.everettcc.edu/"
@@ -160,12 +176,12 @@ var education = {
     "onlineCourses": [{
         "title": "Intro to Programming Nanodegree",
         "school": "Udacity",
-        "dates": "April 2016 - June 2016",
+        "dates": "2016",
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }, {
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
-        "dates": "July 2016 - Present",
+        "dates": "2016",
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }]
 };
