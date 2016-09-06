@@ -29,6 +29,7 @@ var work = {
     }]
 };
 
+// Method to display work data
 work.display = function() {
     work.jobs.forEach(function(job) {
         // Append work entry
@@ -58,7 +59,7 @@ work.display = function() {
     });
 };
 
-// projects data object
+// Projects data object
 var projects = {
     "projects": [{
         "title": "Title 1",
@@ -77,6 +78,7 @@ var projects = {
     }]
 };
 
+// Method to display projects data
 projects.display = function() {
     projects.projects.forEach(function(project) {
 
@@ -104,7 +106,7 @@ projects.display = function() {
     });
 };
 
-// Create bio object to contain biographical info.
+// Biographical data object
 var bio = {
     "name": "Josef Mirante",
     "role": "Web Developer",
@@ -120,6 +122,7 @@ var bio = {
     "biopic": "images/fry.jpg"
 };
 
+// Method to display biographical data
 bio.display = function() {
     // Prepend name and role
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -156,7 +159,7 @@ bio.display = function() {
     });
 };
 
-// Create education object.
+// Education data object
 var education = {
     "schools": [{
         "name": "University of Washington",
@@ -186,6 +189,7 @@ var education = {
     }]
 };
 
+// Method to display education data
 education.display = function() {
     education.schools.forEach(function(school) {
         $("#education").append(HTMLschoolStart);
@@ -224,13 +228,11 @@ education.display = function() {
     });
 };
 
-
-
-// run display functions
+// Call all display methods
 bio.display();
 work.display();
 projects.display();
 education.display();
 
-// add a map to page
+// Append map to html
 $("#mapDiv").append(googleMap);
