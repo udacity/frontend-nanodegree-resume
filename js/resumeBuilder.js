@@ -2,14 +2,14 @@
 var work = {
     "jobs": [{
         "employer": "Mercer Consulting",
-        "title": "Implementation Services Project Manager",
+        "title": "Implementation Services - Project Manager",
         "location": "Philadelphia, PA",
         "dates": "August 2016 - Present",
         "description": "Project management of implementation and bug-fix work queue for pension administration software"
     },
     {
         "employer": "Mercer Consulting",
-        "title": "Implementation Services Team Leader",
+        "title": "Implementation Services - Team Leader",
         "location": "Philadelphia, PA",
         "dates": "September 2014 - July 2016",
         "description": "Pension administration software programmer"
@@ -61,16 +61,16 @@ work.display = function() {
 // projects data object
 var projects = {
     "projects": [{
-        "title": "title 1",
+        "title": "Title 1",
         "dates": "2016",
-        "description": "description 1",
+        "description": "Description 1",
         "images": [
             "images/fry.jpg", "images/fry.jpg"
         ]
     }, {
-        "title": "title 2",
+        "title": "Title 2",
         "dates": "2016",
-        "description": "description 2",
+        "description": "Description 2",
         "images": [
             "images/fry.jpg", "images/fry.jpg"
         ]
@@ -115,8 +115,8 @@ var bio = {
         "twitter": "",
         "location": "Philadelphia, PA"
     },
-    "welcomeMessage": "Great news everybody!",
-    "skills": ["communication", "organization", "collaboration"],
+    "welcomeMessage": "Let's work together",
+    "skills": ["Communication", "Organization", "Collaboration"],
     "biopic": "images/fry.jpg"
 };
 
