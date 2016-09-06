@@ -1,3 +1,56 @@
+// Biographical data object
+var bio = {
+    "name": "Josef Mirante",
+    "role": "Web Developer",
+    "contacts": {
+        "mobile": "(360) 540 0952",
+        "email": "josef.mirante@gmail.com",
+        "github": "josef-mirante",
+        "twitter": "",
+        "location": "Philadelphia, PA"
+    },
+    "welcomeMessage": "Let's work together",
+    "skills": ["Communication", "Organization", "Collaboration"],
+    "biopic": "images/fry.jpg"
+};
+
+// Method to display biographical data
+bio.display = function() {
+    // Prepend name and role
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    $("#header").prepend(formattedRole);
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    $("#header").prepend(formattedName);
+
+    // Append contact info
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    $("#topContacts").append(formattedMobile);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    $("#topContacts").append(formattedEmail);
+    if(bio.contacts.twitter.length > 0) {
+        var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        $("#topContacts").append(formattedTwitter);
+    }
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    $("#topContacts").append(formattedGithub);
+    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    $("#topContacts").append(formattedLocation);
+
+    // Append pic and welcome message
+    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+    $("#header").append(formattedPic);
+    var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedMessage);
+
+    // Append skills title and skills
+    $("#header").append(HTMLskillsStart);
+
+    bio.skills.forEach(function(skill) {
+        var formattedSkill = HTMLskills.replace("%data%", skill);
+        $("#skills").append(formattedSkill);
+    });
+};
+
 // work data object
 var work = {
     "jobs": [{
@@ -106,58 +159,7 @@ projects.display = function() {
     });
 };
 
-// Biographical data object
-var bio = {
-    "name": "Josef Mirante",
-    "role": "Web Developer",
-    "contacts": {
-        "mobile": "(360) 540 0952",
-        "email": "josef.mirante@gmail.com",
-        "github": "josef-mirante",
-        "twitter": "",
-        "location": "Philadelphia, PA"
-    },
-    "welcomeMessage": "Let's work together",
-    "skills": ["Communication", "Organization", "Collaboration"],
-    "biopic": "images/fry.jpg"
-};
 
-// Method to display biographical data
-bio.display = function() {
-    // Prepend name and role
-    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").prepend(formattedRole);
-    var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").prepend(formattedName);
-
-    // Append contact info
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
-    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#topContacts").append(formattedEmail);
-    if(bio.contacts.twitter.length > 0) {
-        var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-        $("#topContacts").append(formattedTwitter);
-    }
-    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#topContacts").append(formattedGithub);
-    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
-
-    // Append pic and welcome message
-    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-    $("#header").append(formattedPic);
-    var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedMessage);
-
-    // Append skills title and skills
-    $("#header").append(HTMLskillsStart);
-
-    bio.skills.forEach(function(skill) {
-        var formattedSkill = HTMLskills.replace("%data%", skill);
-        $("#skills").append(formattedSkill);
-    });
-};
 
 // Education data object
 var education = {
