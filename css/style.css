@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #f5ae23;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: dark;
   line-height: 29px;
   padding: 10px;
 }
@@ -124,12 +124,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #3A7AF2;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3A7AF2
 }
 
 .flex-box {
@@ -211,6 +211,16 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+}
+.project-img{
+  width:30%;
+  min-width:350px;
+}
+#small-link{
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 0px;
+  font-size:12px;
 }
 
 @media only screen and (min-width: 750px) {

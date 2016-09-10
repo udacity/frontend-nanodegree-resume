@@ -34,11 +34,11 @@ This is empty on purpose! Your code to build the resume will go here.
   };
 
 
-  var work = [
+  var work =[
     {
     "employer" : "Industrial Refrigeration Consortium (IRC)",
     "title" : "Web Developer",
-    "workdates": "June 2015 ­ May, 2016",
+    "workdates": "June, 2015 ­- May, 2016",
     "location" : "Madison, WI",
     "discription" : "Developed and maintained IRC's website, Apache Server and SQL database. "+
     "The IRC website provides refrigeration related educational resource to multinational "+
@@ -46,10 +46,34 @@ This is empty on purpose! Your code to build the resume will go here.
     "to create online tests and auto print out the test result, Developed the charge management "+
     "application of equipments in a refrigeration system, implemented a search engine using" +
     "Google API and other specific search functions for content display"
-    }
+    }];
+
+  var project = [
+  {
+      "title" : "Web page mock (JS/CSS/HTML/JQuery/Bootsrap)",
+      "date" : "August, 2016",
+      "discription" : "Web page mock is front end project about gennerating a web page based on a given prototype. This web pasge is designed to be reponsive for landscape, portrait and desktop viewport. This web has several poping out screens controled by JS functions. I also implied to use open library Bootstrap and Jquery to support some auto-filling functions on filters. If you want more information about this project you can download through the link below. <a id = \"small-link\" href = \"https://mosqidiot.github.io/Tagrem_Frontend_Dev_Test/\">Download the project</a>",
+      "image" : "images/whole-page.png"
+  },
+
+  {
+      "title" : "Nannon AI (Java/Bayesian network/Object Oriented)",
+      "date" : "Janaury, 2014 - March, 2014",
+      "discription" : "I implemented bayesian network algorithm, built the AI model for multiplayer chess game Nannon, and used a stochastic learning process to train and tune the AI model. Finally, I reached 60.74% winning rate over a random player for 1000k runes.",
+      "image" : "images/Nannon.png"
+  }
+  // {
+  //     "title" : "test",
+  //     "date" : "August, 2016",
+  //     "discription" : "Web page mock is front end project about gennerating <a href = \"https://mosqidiot.github.io/Tagrem_Frontend_Dev_Test/\">Download the project</a>",
+  //     "image" : ""
+  // }
+
+
   ];
 
-    var education = {
+
+  var education = {
     "schools": [
     {
         "name" : "University of Wisconsin, Madison",
@@ -62,6 +86,7 @@ This is empty on purpose! Your code to build the resume will go here.
     ],
     "OnlineCourses":{
         "title": "Front-end web developer",
+
 
     }
   };
@@ -78,7 +103,6 @@ This is empty on purpose! Your code to build the resume will go here.
   //skill
   var formatedSkillHeader = HTMLskillsStart;
   //work
-  var formmatedEmploy
   //overview
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
@@ -94,8 +118,7 @@ This is empty on purpose! Your code to build the resume will go here.
   for(skill in bio.skill){
     $("#skills").append(HTMLskills.replace("%data%", bio.skill[skill]));
   }
-  workdisplay();
-  schoolDisplay();
+
   //work
   function workdisplay() {
     for(workid in work){
@@ -106,13 +129,13 @@ This is empty on purpose! Your code to build the resume will go here.
       var forloc = HTMLworkLocation.replace("%data%", work[workid].location);
       var fordisc = HTMLworkDescription.replace("%data%", work[workid].discription);
 
-      $(".work-entry:last").append(foremployer);
-      $(".work-entry:last").append(fortitle);
-      $(".work-entry:last").append(fordates);
-      $(".work-entry:last").append(forloc);
-      $(".work-entry:last").append(fordisc);
+      $(".work-entry:last-of-type").append(foremployer);
+      $(".work-entry:last-of-type").append(fortitle);
+      $(".work-entry:last-of-type").append(fordates);
+      $(".work-entry:last-of-type").append(forloc);
+      $(".work-entry:last-of-type").append(fordisc);
     }
-  }
+  };
   function schoolDisplay() {
     for(schoolid in education.schools){
       $("#education").append(HTMLschoolStart);
@@ -122,13 +145,34 @@ This is empty on purpose! Your code to build the resume will go here.
       var forschoollocation = HTMLschoolLocation.replace("%data%",education.schools[schoolid].location);
       var forschoolmajor = HTMLschoolMajor.replace("%data%",education.schools[schoolid].majors);
 
-      $(".education-entry").append(forschoolname);
-      $(".education-entry").append(forschooldegree);
-      $(".education-entry").append(forschooldates);
-      $(".education-entry").append(forschoollocation);
-      $(".education-entry").append(forschoolmajor);
+      $(".education-entry:last-of-type").append(forschoolname);
+      $(".education-entry:last-of-type").append(forschooldegree);
+      $(".education-entry:last-of-type").append(forschooldates);
+      $(".education-entry:last-of-type").append(forschoollocation);
+      $(".education-entry:last-of-type").append(forschoolmajor);
     }
-  }
+  };
+  function projectDisplay(){
+    for(var pid = 0; pid < project.length; pid++){
+      if (project.hasOwnProperty(pid)){
+        $("#projects").append(HTMLprojectStart);
+        var forprojecttitle = HTMLprojectTitle.replace("%data%",project[pid].title);
+        var forprojectDates = HTMLprojectDates.replace("%data%",project[pid].date);
+        var forprojectDiscript = HTMLprojectDescription.replace("%data%",project[pid].discription);
+        var forprojectImage= HTMLprojectImage.replace("%data%",project[pid].image);
+
+
+        $(".project-entry:last-of-type").append(forprojecttitle);
+        $(".project-entry:last-of-type").append(forprojectDates);
+        $(".project-entry:last-of-type").append(forprojectDiscript);
+        $(".project-entry:last-of-type").append(forprojectImage);
+      }
+    }
+  };
+    workdisplay();
+    projectDisplay();
+    schoolDisplay();
+    $("#mapDiv").append(googleMap);
 
 
 
