@@ -20,6 +20,20 @@ var bio = {
   'skills': skills
 };
 
+bio.display = function() {
+  $('#header').append(HTMLheaderName.replace("%data%", bio.name));
+  if (bio.skills.length > 0) {
+    $('#header').append(HTMLskillsStart);
+    for (var i = 0; i < bio.skills.length; i++) {
+        var skillToAppend = HTMLskills.replace("%data%", bio.skills[i]);
+        $('#skills').append(skillToAppend);
+    }
+  }
+
+};
+
+bio.display();
+
 var work = {
   "jobs": [
     {
@@ -72,6 +86,7 @@ projects.display = function() {
   var projectsArray = projectObject.projects;
   for (var project in projectsArray) {
     if (projectsArray.hasOwnProperty(project)) {
+      $('#projects').append(HTMLprojectStart);
       var formattedTitle = HTMLprojectTitle.replace("%data%", projectsArray[project].title);
       var formattedDates = HTMLprojectDates.replace("%data%",projectsArray[project].dates);
       var formattedDescription = HTMLprojectDescription.replace("%data%",projectsArray[project].description);
@@ -92,17 +107,6 @@ var inName = function(name) {
 };
 
 $('#main').append(internationalizeButton);
-
-$('#header').append(HTMLheaderName.replace("%data%", bio.name));
-
-if (bio.skills.length > 0) {
-  console.log('works');
-  $('#header').append(HTMLskillsStart);
-  for (var i = 0; i < bio.skills.length; i++) {
-      var skillToAppend = HTMLskills.replace("%data%", bio.skills[i]);
-      $('#skills').append(skillToAppend);
-  }
-}
 
 var displayWork = function() {
   var workArray = work.jobs;
@@ -129,6 +133,8 @@ $(document).click(function(loc) {
   /* Act on the event */
   logClicks(loc.pageX, loc.pageY);
 });
+
+$('#mapDiv').append(googleMap);
 
 
 // $('#main').append(bio.role);

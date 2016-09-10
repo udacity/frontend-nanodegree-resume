@@ -1,0 +1,108 @@
+/*
+	Reflex by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+/* Icons */
+
+	ul.icons li .icon:before {
+		border: 0;
+	}
+
+	ul.icons.major li {
+		padding: 0.75em;
+	}
+
+		ul.icons.major li .icon:before {
+			font-size: 4em;
+			width: 1.5em;
+			height: 1.5em;
+			line-height: 1.5em;
+		}
+
+/* Wrapper */
+
+	.wrapper.featured > .inner > .image {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+		.wrapper.featured > .inner > .image img {
+			position: relative;
+			-ms-behavior: url("assets/js/ie/PIE.htc");
+		}
+
+/* Header */
+
+	#header ul li a[href="#menu"] {
+		background-color: #565656;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+		text-indent: 0;
+		color: #ffffff;
+		text-align: center;
+		padding-left: 0 !important;
+		width: 9.6875em;
+		border-radius: 4.6875em;
+	}
+
+		#header ul li a[href="#menu"]:before {
+			display: none;
+		}
+
+/* Footer */
+
+	#footer .copyright:before {
+		display: none;
+	}
+
+/* Menu */
+
+	#menu {
+		background-color: #565656;
+		color: #ffffff;
+	}
+
+		#menu:before {
+			display: none;
+		}
+
+		#menu > .close {
+			width: auto;
+			text-indent: 0;
+		}
+
+			#menu > .close:before {
+				display: none;
+			}
+
+		#menu input[type="submit"],
+		#menu input[type="reset"],
+		#menu input[type="button"],
+		#menu button,
+		#menu .button {
+			color: inherit !important;
+			border-color: inherit !important;
+			background-color: transparent !important;
+		}
+
+			#menu input[type="submit"].special,
+			#menu input[type="reset"].special,
+			#menu input[type="button"].special,
+			#menu button.special,
+			#menu .button.special {
+				color: inherit !important;
+				border-color: inherit !important;
+				background-color: transparent !important;
+			}
