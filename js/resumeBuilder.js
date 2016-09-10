@@ -7,7 +7,7 @@ var skills = ['ruby', 'javascript', 'swift',
 ];
 
 var bio = {
-  'name': 'Christian Acuña',
+  'name': 'Christian Miguel Acuña',
   'role': 'Web Developer',
   'contacts': {
     'mobile': '(909) 529-1451',
@@ -21,13 +21,13 @@ var bio = {
 };
 
 bio.display = function() {
-  $('#header').append(HTMLheaderName.replace("%data%", bio.name));
+  $('#header-main').append(HTMLheaderName.replace("%data%", bio.name));
   if (bio.skills.length > 0) {
-    $('#header').append(HTMLskillsStart);
-    for (var i = 0; i < bio.skills.length; i++) {
-        var skillToAppend = HTMLskills.replace("%data%", bio.skills[i]);
-        $('#skills').append(skillToAppend);
-    }
+    $('#skills').append(HTMLskillsStart);
+    // for (var i = 0; i < bio.skills.length; i++) {
+    //     var skillToAppend = HTMLskills.replace("%data%", bio.skills[i]);
+    //     $('#skills').append(skillToAppend);
+    // }
   }
 
 };
@@ -81,7 +81,7 @@ var projectObject = {
   ]
 };
 
-projects.display = function() {
+projectObject.display = function() {
   $('#projects').append(HTMLprojectStart);
   var projectsArray = projectObject.projects;
   for (var project in projectsArray) {
@@ -97,7 +97,7 @@ projects.display = function() {
   }
 };
 
-projects.display();
+projectObject.display();
 
 var inName = function(name) {
   name = name.trim().split(' ');
