@@ -1,0 +1,64 @@
+/*
+	Reflex by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Spotlight */
+
+	.spotlight:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.spotlight .image {
+		float: left;
+		width: 45%;
+		margin: 0 2em 0 0;
+	}
+
+	.spotlight .content {
+		float: left;
+		width: 45%;
+		margin: 0 0 0 2em;
+	}
+
+/* Wrapper */
+
+	.wrapper.style3 {
+		background-image: url("../../images/pic05.jpg");
+		background-attachment: scroll;
+	}
+
+	.wrapper.featured > .inner {
+		display: inline-block;
+	}
+
+		.wrapper.featured > .inner:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.wrapper.featured > .inner > * {
+			float: left;
+		}
+
+	.wrapper.split > .inner:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.wrapper.split > .inner > * {
+		float: left;
+		width: 50%;
+		margin: 0 !important;
+	}
+
+/* Menu */
+
+	#menu > .inner {
+		display: inline-block;
+	}
