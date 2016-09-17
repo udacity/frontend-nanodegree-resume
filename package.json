@@ -15,5 +15,23 @@
   "bugs": {
     "url": "https://github.com/christian-acuna/frontend-nanodegree-resume/issues"
   },
-  "homepage": "https://github.com/christian-acuna/frontend-nanodegree-resume#readme"
+  "homepage": "https://github.com/christian-acuna/frontend-nanodegree-resume#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "browser-sync": "^2.16.0",
+    "csslint-stylish": "0.0.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-csslint": "^1.0.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^2.6.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "sharp": "^0.16.0"
+  }
 }
