@@ -8,7 +8,7 @@ var skills = ['ruby', 'javascript', 'swift',
 
 var bio = {
   'name': 'Christian Miguel Acuña',
-  'role': 'Web Developer',
+  'role': 'iOS & Frontend Developer',
   'contacts': {
     'mobile': '(909) 529-1451',
     'email': 'cacuna0828@gmail.com',
@@ -22,6 +22,7 @@ var bio = {
 
 bio.display = function() {
   $('#header-main').append(HTMLheaderName.replace("%data%", bio.name));
+  $('#header-main').append(HTMLheaderRole.replace("%data%", bio.role));
   if (bio.skills.length > 0) {
     $('#skills').append(HTMLskillsStart);
     // for (var i = 0; i < bio.skills.length; i++) {
