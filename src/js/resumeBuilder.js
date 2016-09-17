@@ -1,5 +1,5 @@
 /*
-This is empty on purpose! Your code to build the resume will go here.
+
  */
 
 var skills = ['ruby', 'javascript', 'swift',
@@ -8,21 +8,24 @@ var skills = ['ruby', 'javascript', 'swift',
 
 var bio = {
   'name': 'Christian Miguel Acuña',
-  'role': 'iOS & Frontend Developer',
+  'role': 'iOS and Front-end Web Developer',
   'contacts': {
     'mobile': '(909) 529-1451',
-    'email': 'cacuna0828@gmail.com',
+    'email': 'mailto:cacuna0828@gmail.com',
     'github': 'https://github.com/christian-acuna/',
-    'location': 'Nanjing, China'
+    'location': 'Nanjing, China',
   },
-  'bioPic': 'images/me.jpg',
-  'welcome-message': 'Hello!',
+  'welcomeMessage': 'Welcome to my site!',
+  'biopic': 'images/pic01.jpg',
   'skills': skills
 };
 
 bio.display = function() {
   $('#header-main').append(HTMLheaderName.replace("%data%", bio.name));
   $('#header-main').append(HTMLheaderRole.replace("%data%", bio.role));
+  $('#footerContacts').append(HTMLgithub.replace("%data%", bio.contacts.github));
+  $('#footerContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
+  $('#bioPic').prepend(HTMLbioPic.replace('%data%', bio.biopic));
   if (bio.skills.length > 0) {
     $('#skills').append(HTMLskillsStart);
     // for (var i = 0; i < bio.skills.length; i++) {
@@ -30,7 +33,6 @@ bio.display = function() {
     //     $('#skills').append(skillToAppend);
     // }
   }
-
 };
 
 bio.display();

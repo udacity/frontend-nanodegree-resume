@@ -10,6 +10,7 @@ var del = require('del');
 csslint.addFormatter('csslint-stylish');
 
 var bs = require('browser-sync').create();
+var $ = require('gulp-load-plugins')();
 
 gulp.task('scripts', function() {
   gulp.src('src/js/*.js')
@@ -45,7 +46,7 @@ gulp.task('serve', ['minify-css'], function() {
     }
   });
 
-  gulp.watch('src/js/*.js', ['scripts']);
+  gulp.watch('src/js/*.js', ['scripts']).on('change', bs.reload);
   gulp.watch('src/css/*.css', ['minify-css']);
   gulp.watch('./*.html').on('change', bs.reload);
 });

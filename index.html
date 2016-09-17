@@ -9,10 +9,8 @@
 		<title>Untitled</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="public/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="public/css/main.css" />
 	</head>
 	<body>
 
@@ -46,8 +44,7 @@
 
 				<!-- Intro -->
 					<section id="intro" class="wrapper featured style1">
-						<div class="inner">
-							<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+						<div class="inner" id="bioPic">
 							<div class="content">
 								<header id="header-main">
 								</header>
@@ -160,8 +157,7 @@
 									<h3>Magna lorem ipsum</h3>
 								</header>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis egestas amet non lorem amet.</p>
-								<ul class="icons">
-									<li><a href="https://github.com/christian-acuna/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								<ul class="icons" id="footerContacts">
 									<li><a href="#" class="icon fa-weixin"><span class="label">WeChat</span></a></li>
 								</ul>
 							</section>
@@ -184,14 +180,12 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/skel.min.js"></script>
-			<script src="js/util.js"></script>
+			<script src="public/js/jquery.min.js"></script>
+			<script src="public/js/skel.min.js"></script>
+			<script src="public/js/util.js"></script>
 			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
-			<script src="js/main.js"></script>
-			<script src="js/helper.js"></script>
-			<script src="js/resumeBuilder.js"></script>
-
-			<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+			<script src="public/js/main.js"></script>
+			<script src="src/js/helper.js"></script>
+			<script src="src/js/resumeBuilder.js"></script>
 	</body>
 </html>
