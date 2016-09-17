@@ -7,7 +7,7 @@ var bio = {
   'role': 'iOS and Front-end Web Developer',
   'contacts': {
     'mobile': '(909) 529-1451',
-    'email': 'mailto:cacuna0828@gmail.com',
+    'email': 'cacuna0828@gmail.com',
     'github': 'https://github.com/christian-acuna/',
     'location': 'Nanjing, China',
   },
@@ -22,8 +22,11 @@ bio.display = function() {
   $('#header-main').append(HTMLheaderName.replace("%data%", bio.name));
   $('#header-main').append(HTMLheaderRole.replace("%data%", bio.role));
   $('#footerContacts').append(HTMLgithub.replace("%data%", bio.contacts.github));
-  $('#footerContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
   $('#bioPic').prepend(HTMLbioPic.replace('%data%', bio.biopic));
+  $('#contact-list').after(HTMLcontactlist);
+  $('#contacts').append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+  $('#contacts').append(HTMLemail.replace("%data%", bio.contacts.email));
+  $('#contacts').append(HTMLlocation.replace("%data%", bio.contacts.location));
   if (bio.skills.length > 0) {
     $('#skills-header').append(HTMLskillsHeader);
     $('#skills-header').after(HTMLskillsStart);

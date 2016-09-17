@@ -15,12 +15,12 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h3>%data%</h3>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li><a href="%data%" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>';
+var HTMLcontactlist = '<ul id="contacts" class="alt"></ul>';
+var HTMLmobile = '<li><span class="icon fa-phone"></span> %data%</li>';
+var HTMLemail = '<li><span class="icon fa-envelope"></span> %data%</li>';
 var HTMLgithub = '<li><a href="%data%" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li>%data%</li>';
+var HTMLlocation = '<li><span class="icon fa-map-marker"></span> %data%</li>';
 
 var HTMLbioPic = '<span class="image"><img src="%data%" alt="" /></span>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
