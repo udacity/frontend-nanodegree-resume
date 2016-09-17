@@ -1,9 +1,6 @@
 /*
   Bio Object
  */
-var skills = ['ruby', 'javascript', 'swift',
-  'ruby on rails', 'jQuery'
-];
 
 var bio = {
   'name': 'Christian Miguel Acuña',
@@ -16,7 +13,9 @@ var bio = {
   },
   'welcomeMessage': 'Welcome to my site!',
   'biopic': 'images/pic01.jpg',
-  'skills': skills
+  'skills': ['Coding', 'HTML5', 'CSS3',
+    'Ruby', 'iOS'],
+  'fontAwesome': ['fa-code', 'fa-html5', 'fa-css3', 'fa-diamond', 'fa-mobile']
 };
 
 bio.display = function() {
@@ -26,11 +25,13 @@ bio.display = function() {
   $('#footerContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
   $('#bioPic').prepend(HTMLbioPic.replace('%data%', bio.biopic));
   if (bio.skills.length > 0) {
-    $('#skills').append(HTMLskillsStart);
-    // for (var i = 0; i < bio.skills.length; i++) {
-    //     var skillToAppend = HTMLskills.replace("%data%", bio.skills[i]);
-    //     $('#skills').append(skillToAppend);
-    // }
+    $('#skills-header').append(HTMLskillsHeader);
+    $('#skills-header').after(HTMLskillsStart);
+    for (var i = 0; i < bio.skills.length; i++) {
+      var skillToAppend = HTMLskills.replace("%data%", bio.skills[i]);
+      skillToAppend = skillToAppend.replace('%icon%', bio.fontAwesome[i]);
+      $('#skills').append(skillToAppend);
+    }
   }
 };
 
@@ -148,7 +149,7 @@ $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
 
-// $('#mapDiv').append(googleMap);
+$('#mapDiv').append(googleMap);
 
 
 // $('#main').append(bio.role);
