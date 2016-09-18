@@ -22,6 +22,8 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  font-size: 1em;
+  line-height: 1.14em;
 }
 
 h1 {
