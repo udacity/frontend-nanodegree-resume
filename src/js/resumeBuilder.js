@@ -154,7 +154,22 @@ var project = {
     {
       "title": "Lens of China",
       "dates": "March 2016",
-      "description": "iOS app using Swift and submitted it to Apple’s WWDC Student Scholarship",
+      "description": "iOS app using Swift and submitted it to Apple’s WWDC Student Scholarship. As a 2015-16 China Fulbright Student Fellow, my current research project combines my interests in art, technology, and Chinese culture. This iOS app is part of a larger research project that will combine the open cultural data of museums from around the world related to Chinese art into a new type of digital museum experience.",
+      images: ['images/pic02.jpg'] // TODO: add images
+    }, {
+      "title": "Portfolio Site",
+      "dates": "September 2016",
+      "description": "Replicate website from PDF design mockup in HTML and CSS. Develop a responsive website that displays optimived images, descriptions and links to portfolio projects.",
+      images: ['images/pic02.jpg'] // TODO: add images
+    }, {
+      "title": "Animal Trading Card",
+      "dates": "September 2016",
+      "description": "Re-create a webpage from a design prototype",
+      images: ['images/pic02.jpg'] // TODO: add images
+    }, {
+      "title": "Mockup to Article",
+      "dates": "September 2016",
+      "description": "Convert a mockup of a blog article into a real website",
       images: ['images/pic02.jpg'] // TODO: add images
     }
   ]
