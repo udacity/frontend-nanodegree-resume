@@ -155,28 +155,30 @@ var project = {
       "title": "Lens of China",
       "dates": "March 2016",
       "description": "iOS app using Swift and submitted it to Apple’s WWDC Student Scholarship",
-      images: ['N/A'] // TODO: add images
+      images: ['images/pic02.jpg'] // TODO: add images
     }
   ]
 };
 
 project.display = function() {
-  $('#projects').append(HTMLprojectStart);
-  var projectsArray = projectObject.projects;
+  var projectsArray = this.projects;
   for (var project in projectsArray) {
     if (projectsArray.hasOwnProperty(project)) {
-      $('#projects').append(HTMLprojectStart);
       var formattedTitle = HTMLprojectTitle.replace("%data%", projectsArray[project].title);
-      var formattedDates = HTMLprojectDates.replace("%data%",projectsArray[project].dates);
+      // var formattedDates = HTMLprojectDates.replace("%data%",projectsArray[project].dates);
       var formattedDescription = HTMLprojectDescription.replace("%data%",projectsArray[project].description);
-      $('.project-entry:last').append(formattedTitle);
-      $('.project-entry:last').append(formattedDates);
-      $('.project-entry:last').append(formattedDescription);
+      var formattedImage = HTMLprojectImage.replace("%data%", projectsArray[project].images[0]);
+      $('#projects').append(HTMLprojectStart);
+      $('.spotlight:last').append(formattedImage);
+      $('.spotlight:last').append(HTMLprojectContent);
+      $('.content:last').append(formattedTitle);
+      // $('.project-entry:last').append(formattedDates);
+      $('.content:last').append(formattedDescription);
     }
   }
 };
 
-// project.display();
+project.display();
 
 var inName = function(name) {
   name = name.trim().split(' ');
