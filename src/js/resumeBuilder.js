@@ -7,7 +7,7 @@ var bio = {
   'role': 'iOS and Front-end Web Developer',
   'contacts': {
     'mobile': '(909) 529-1451',
-    'email': 'mailto:cacuna0828@gmail.com',
+    'email': 'cacuna0828@gmail.com',
     'github': 'https://github.com/christian-acuna/',
     'location': 'Nanjing, China',
   },
@@ -22,8 +22,11 @@ bio.display = function() {
   $('#header-main').append(HTMLheaderName.replace("%data%", bio.name));
   $('#header-main').append(HTMLheaderRole.replace("%data%", bio.role));
   $('#footerContacts').append(HTMLgithub.replace("%data%", bio.contacts.github));
-  $('#footerContacts').append(HTMLemail.replace("%data%", bio.contacts.email));
   $('#bioPic').prepend(HTMLbioPic.replace('%data%', bio.biopic));
+  $('#contact-list').after(HTMLcontactlist);
+  $('#contacts').append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+  $('#contacts').append(HTMLemail.replace("%data%", bio.contacts.email));
+  $('#contacts').append(HTMLlocation.replace("%data%", bio.contacts.location));
   if (bio.skills.length > 0) {
     $('#skills-header').append(HTMLskillsHeader);
     $('#skills-header').after(HTMLskillsStart);
@@ -49,7 +52,42 @@ bio.display();
      "majors": "N/A",
      "dates": "2015-2016",
      "url": "http://www.nju.edu.cn/english/"
-  }],
+  }, {
+    "name": "Tsinghua University (Inter-University Program for Chinese Language Studies, UC Berkeley)",
+    "location": "Beijing, China",
+    "degree": "N/A",
+    "majors": "Chinese",
+    "dates": "Fall 2015",
+    "url": "http://ieas.berkeley.edu/iup/"
+ }, {
+   "name": "Reed College",
+   "location": "Portland, Oregon",
+   "degree": "B.A.",
+   "majors": "History",
+   "dates": "2008-2014",
+   "url": "www.reed.edu"
+}, {
+  "name": "Yonsei University",
+  "location": "Wonju, Korea",
+  "degree": "Critical Language Scholarship (CLS)",
+  "majors": "Beginning Korean",
+  "dates": "Summer 2013",
+  "url": "http://www.clscholarship.org/languages/korean"
+}, {
+  "name": "Reed College",
+  "location": "Portland, Oregon",
+  "degree": "B.A.",
+  "majors": "History",
+  "dates": "2008-2014",
+  "url": "www.reed.edu"
+}, {
+  "name": "National Taiwan University",
+  "location": "Taipei, Taiwan",
+  "degree": "Advanced Chinese",
+  "majors": "Chinese",
+  "dates": "2012-2013",
+  "url": "http://iclp.ntu.edu.tw/"
+}],
    "onlineCourses": [
      {
        "title": "JavaScript Syntax",
@@ -80,6 +118,13 @@ var work = {
       "dates": "2015",
       "location": "Pasadena, California",
       "description": "Collaborated remotely with product manager to design the web user interface for an AngularJS app"
+    },
+    {
+      "title": "JET Program Assistant Language Teacher",
+      "employer": "Iwade Board of Education",
+      "dates": "2014-2015",
+      "location": "Iwade City, Japan",
+      "description": "Served as a cultural ambassador by creating engaging presentations on American and Chinese culture"
     }
   ]
 };
@@ -109,29 +154,46 @@ var project = {
     {
       "title": "Lens of China",
       "dates": "March 2016",
-      "description": "iOS app using Swift and submitted it to Apple’s WWDC Student Scholarship",
-      images: ['N/A'] // TODO: add images
+      "description": "iOS app using Swift and submitted it to Apple’s WWDC Student Scholarship. As a 2015-16 China Fulbright Student Fellow, my current research project combines my interests in art, technology, and Chinese culture. This iOS app is part of a larger research project that will combine the open cultural data of museums from around the world related to Chinese art into a new type of digital museum experience.",
+      images: ['images/pic02.jpg'] // TODO: add images
+    }, {
+      "title": "Portfolio Site",
+      "dates": "September 2016",
+      "description": "Replicate website from PDF design mockup in HTML and CSS. Develop a responsive website that displays optimived images, descriptions and links to portfolio projects.",
+      images: ['images/pic02.jpg'] // TODO: add images
+    }, {
+      "title": "Animal Trading Card",
+      "dates": "September 2016",
+      "description": "Re-create a webpage from a design prototype",
+      images: ['images/pic02.jpg'] // TODO: add images
+    }, {
+      "title": "Mockup to Article",
+      "dates": "September 2016",
+      "description": "Convert a mockup of a blog article into a real website",
+      images: ['images/pic02.jpg'] // TODO: add images
     }
   ]
 };
 
 project.display = function() {
-  $('#projects').append(HTMLprojectStart);
-  var projectsArray = projectObject.projects;
+  var projectsArray = this.projects;
   for (var project in projectsArray) {
     if (projectsArray.hasOwnProperty(project)) {
-      $('#projects').append(HTMLprojectStart);
       var formattedTitle = HTMLprojectTitle.replace("%data%", projectsArray[project].title);
-      var formattedDates = HTMLprojectDates.replace("%data%",projectsArray[project].dates);
+      // var formattedDates = HTMLprojectDates.replace("%data%",projectsArray[project].dates);
       var formattedDescription = HTMLprojectDescription.replace("%data%",projectsArray[project].description);
-      $('.project-entry:last').append(formattedTitle);
-      $('.project-entry:last').append(formattedDates);
-      $('.project-entry:last').append(formattedDescription);
+      var formattedImage = HTMLprojectImage.replace("%data%", projectsArray[project].images[0]);
+      $('#projects').append(HTMLprojectStart);
+      $('.spotlight:last').append(formattedImage);
+      $('.spotlight:last').append(HTMLprojectContent);
+      $('.content:last').append(formattedTitle);
+      // $('.project-entry:last').append(formattedDates);
+      $('.content:last').append(formattedDescription);
     }
   }
 };
 
-// project.display();
+project.display();
 
 var inName = function(name) {
   name = name.trim().split(' ');

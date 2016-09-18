@@ -15,12 +15,12 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h3>%data%</h3>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li><a href="%data%" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>';
+var HTMLcontactlist = '<ul id="contacts" class="alt"></ul>';
+var HTMLmobile = '<li><span class="icon fa-phone"></span> %data%</li>';
+var HTMLemail = '<li><span class="icon fa-envelope"></span> %data%</li>';
 var HTMLgithub = '<li><a href="%data%" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li>%data%</li>';
+var HTMLlocation = '<li><span class="icon fa-map-marker"></span> %data%</li>';
 
 var HTMLbioPic = '<span class="image"><img src="%data%" alt="" /></span>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -36,11 +36,12 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectStart = '<section class="spotlight"></section>';
+var HTMLprojectTitle = '<header><h3>%data%</h3></header>';
+var HTMLprojectContent = '<div class="content"></div>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectDescription = '<p>%data%</p>';
+var HTMLprojectImage = '<span class="image"><img src="%data%" alt=""></span>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
