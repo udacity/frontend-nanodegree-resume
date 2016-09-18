@@ -52,7 +52,42 @@ bio.display();
      "majors": "N/A",
      "dates": "2015-2016",
      "url": "http://www.nju.edu.cn/english/"
-  }],
+  }, {
+    "name": "Tsinghua University (Inter-University Program for Chinese Language Studies, UC Berkeley)",
+    "location": "Beijing, China",
+    "degree": "N/A",
+    "majors": "Chinese",
+    "dates": "Fall 2015",
+    "url": "http://ieas.berkeley.edu/iup/"
+ }, {
+   "name": "Reed College",
+   "location": "Portland, Oregon",
+   "degree": "B.A.",
+   "majors": "History",
+   "dates": "2008-2014",
+   "url": "www.reed.edu"
+}, {
+  "name": "Yonsei University",
+  "location": "Wonju, Korea",
+  "degree": "Critical Language Scholarship (CLS)",
+  "majors": "Beginning Korean",
+  "dates": "Summer 2013",
+  "url": "http://www.clscholarship.org/languages/korean"
+}, {
+  "name": "Reed College",
+  "location": "Portland, Oregon",
+  "degree": "B.A.",
+  "majors": "History",
+  "dates": "2008-2014",
+  "url": "www.reed.edu"
+}, {
+  "name": "National Taiwan University",
+  "location": "Taipei, Taiwan",
+  "degree": "Advanced Chinese",
+  "majors": "Chinese",
+  "dates": "2012-2013",
+  "url": "http://iclp.ntu.edu.tw/"
+}],
    "onlineCourses": [
      {
        "title": "JavaScript Syntax",
@@ -83,6 +118,13 @@ var work = {
       "dates": "2015",
       "location": "Pasadena, California",
       "description": "Collaborated remotely with product manager to design the web user interface for an AngularJS app"
+    },
+    {
+      "title": "JET Program Assistant Language Teacher",
+      "employer": "Iwade Board of Education",
+      "dates": "2014-2015",
+      "location": "Iwade City, Japan",
+      "description": "Served as a cultural ambassador by creating engaging presentations on American and Chinese culture"
     }
   ]
 };
