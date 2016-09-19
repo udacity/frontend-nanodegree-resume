@@ -155,22 +155,50 @@ var project = {
       "title": "Lens of China",
       "dates": "March 2016",
       "description": "iOS app using Swift and submitted it to Apple’s WWDC Student Scholarship. As a 2015-16 China Fulbright Student Fellow, my current research project combines my interests in art, technology, and Chinese culture. This iOS app is part of a larger research project that will combine the open cultural data of museums from around the world related to Chinese art into a new type of digital museum experience.",
-      images: ['images/pic02.jpg'] // TODO: add images
+      images: ['images/pic02.jpg'],
+      link: 'https://christian-acuna.github.io/fend-design-mockup-portfolio/'
     }, {
       "title": "Portfolio Site",
       "dates": "September 2016",
       "description": "Replicate website from PDF design mockup in HTML and CSS. Develop a responsive website that displays optimived images, descriptions and links to portfolio projects.",
-      images: ['images/pic02.jpg'] // TODO: add images
+      images: ['images/pic02.jpg'],
+      link: 'https://christian-acuna.github.io/fend-design-mockup-portfolio/'
     }, {
       "title": "Animal Trading Card",
       "dates": "September 2016",
       "description": "Re-create a webpage from a design prototype",
-      images: ['images/pic02.jpg'] // TODO: add images
+      images: ['images/pic02.jpg'],
+      link: 'https://github.com/christian-acuna/fend-animal-trading-cards'
     }, {
       "title": "Mockup to Article",
       "dates": "September 2016",
       "description": "Convert a mockup of a blog article into a real website",
-      images: ['images/pic02.jpg'] // TODO: add images
+      images: ['images/pic02.jpg'],
+      link: 'https://github.com/christian-acuna/frontend-mockup-to-article'
+    }, {
+      "title": "Classic Arcade Game Clone",
+      "dates": "September 2016",
+      "description": "Use JavaScript object-oriented programming features to implement a classic arcade game.",
+      images: ['images/pic02.jpg'],
+      link: '#'
+    }, {
+      "title": "Website Optimization",
+      "dates": "September 2016",
+      "description": "Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.",
+      images: ['images/pic02.jpg'],
+      link: '#'
+    }, {
+      "title": "Neighborhood Map",
+      "dates": "September 2016",
+      "description": "Develop a single-page application featuring a map of a neighborhood you would like to visit. Add additional functionality to this application, including: map markers to identify popular locations, a search function to easily discover these locations, and a listview to support simple browsing of all locations. Research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).",
+      images: ['images/pic02.jpg'],
+      link: '#'
+    }, {
+      "title": "Feed Reader Testing",
+      "dates": "September 2016",
+      "description": "In this project, you will be learning about testing with Javascript. Testing is an important part of the development process and many organizations practice a standard known as 'test-driven development' or TDD. This is when developers write tests first, before they ever start developing their application.",
+      images: ['images/pic02.jpg'],
+      link: '#'
     }
   ]
 };
@@ -183,12 +211,14 @@ project.display = function() {
       // var formattedDates = HTMLprojectDates.replace("%data%",projectsArray[project].dates);
       var formattedDescription = HTMLprojectDescription.replace("%data%",projectsArray[project].description);
       var formattedImage = HTMLprojectImage.replace("%data%", projectsArray[project].images[0]);
+      var formattedLink = HTMLprojectLink.replace("%data%", projectsArray[project].link);
       $('#projects').append(HTMLprojectStart);
       $('.spotlight:last').append(formattedImage);
       $('.spotlight:last').append(HTMLprojectContent);
       $('.content:last').append(formattedTitle);
       // $('.project-entry:last').append(formattedDates);
       $('.content:last').append(formattedDescription);
+      $('.content:last').append(formattedLink);
     }
   }
 };
