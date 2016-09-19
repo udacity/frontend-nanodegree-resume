@@ -1,148 +1,121 @@
-<!DOCTYPE html>
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
--->
+<!DOCTYPE HTML>
 <html>
-<head>
-  <!-- This tells the browser how to read the document. -->
-  <meta charset="utf-8">
+	<head>
+		<title>Untitled</title>
+		<meta charset="utf-8">
+		<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCIvHABMXOl06kztwsq6dytp9T8gfWG3Gk"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<!--[if lte IE 8]><script src="public/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="public/css/main.css">
+		<link rel="stylesheet" href="src/css/styles.css">
+	</head>
+	<body>
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+		<!-- Header -->
+			<header id="header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</header>
 
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
+		<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Ipsum veroeros</a></li>
+					<li><a href="generic.html">Tempus etiam</a></li>
+					<li><a href="generic.html">Consequat dolor</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit special">Get Started</a></li>
+					<li><a href="#" class="button fit">Log In</a></li>
+				</ul>
+			</nav>
 
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Intro -->
+					<section id="intro" class="wrapper featured style1">
+						<div class="inner" id="bioPic">
+							<div class="content">
+								<header id="header-main">
+								</header>
+							</div>
+						</div>
+					</section>
 
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
-  -->
-<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+				<!-- One -->
+					<section class="wrapper style2 special">
+						<div class="inner">
+							<header id="skills-header">
+							</header>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos malesuada fames ac turpis egestas. In non lorem amet. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique eu nibh.</p> -->
+							<!-- <footer>
+								<ul class="actions">
+									<li><a href="#" class="button">Details</a></li>
+								</ul>
+							</footer> -->
+						</div>
+					</section>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
-  <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
+				<!-- Two -->
+					<section class="wrapper style1 special" >
+						<div class="inner" id="projects">
+							<header>
+								<h2>Projects</h2>
+							</header>
+						</div>
+					</section>
 
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
+				<!-- Three -->
+					<section class="wrapper style3 special">
+						<div class="inner" id="mapDiv">
+							<header>
+								<h2>Where I've Lived and Worked</h2>
+							</header>
+						</div>
+					</section>
 
-  <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
-  https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
+				<!-- Footer -->
+					<section id="footer" class="wrapper split style2">
+						<div class="inner">
+							<section>
+								<header id="contact-list">
+									<h3>Contact Me</h3>
+								</header>
+								<ul class="icons" id="footerContacts">
+								</ul>
+							</section>
+							<section>
+								<form method="post" action="#">
+									<div class="field half first"><input type="text" name="name" id="name" placeholder="Name" /></div>
+									<div class="field half"><input type="email" name="email" id="email" placeholder="Email" /></div>
+									<div class="field"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
+								</form>
+							</section>
+						</div>
+						<div class="copyright">
+							<p>&copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet nullam.!!</p>
+						</div>
+					</section>
 
-   <!-- "Javascript assets, by default, tend to block any other parallel downloads from occurring. So, you can imagine if you have plenty of <script> tags in the head, calling on multiple external scripts will block the HTML from loading, thus greeting the user with a blank white screen, because no other content on your page will load until the JS files have completely loaded."
-    http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
+			</div>
 
-    <!--
-  jQuery is a common JavaScript library for reading and making changes to the
-  Document Object Model (DOM). The DOM is a tree that contains information
-  about what is actually visible on a website.
-
-  While HTML is a static document, the browser converts HTML to the
-  DOM and the DOM can change. In fact, JavaScript's power comes from
-  its ability to manipulate the DOM, which is essentially a JavaScript
-  object. When JavaScript makes something interesting happen on a
-  website, it's likely the action happened because JavaScript changed
-  the DOM. jQuery is fast and easy to use, but it doesn't do anything
-  you can't accomplish with vanilla (regular) JavaScript.
-  -->
-  <script src="js/jQuery.js"></script>
-
-  <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
-
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
-  <script src="js/resumeBuilder.js"></script>
-
-
-  <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-
-  <script>
-    // Notice how all of a sudden there's JavaScript inside this HTML
-    // document? You can write JavaScript between <script> tags. At the end of your
-    // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-    //   two slashes for all following characters on a single line, or
-
-    /*
-        an opening and closing set of slash asterisks for block comments.
-    */
-
-
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
-</body>
+		<!-- Scripts -->
+			<script src="public/js/jquery.min.js"></script>
+			<script src="public/js/skel.min.js"></script>
+			<script src="public/js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="public/js/main.js"></script>
+			<script src="src/js/helper.js"></script>
+			<script src="src/js/resumeBuilder.js"></script>
+	</body>
 </html>
