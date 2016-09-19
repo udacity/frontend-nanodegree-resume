@@ -29,7 +29,7 @@ var bio ={
 
 	"welcomeMessage" : "Are you looking for an awesome person who can customize your webiste and do some analysis for your business.",
 	
-	"skills": ["Design", "Teaching", "Programming", "Web Development",  "Business Intelligence"]
+	"skills": ["Design", "Teaching", "Data Analysis", "Programming", "Web Development",  "Business Intelligence"]
 };
 
 bio.display = function(){
@@ -180,67 +180,49 @@ work.display = function(){
 var project = {
 	"projects":[
 	{
-		"startDate": "Some Date",
-		"title" : "Some Title",
+		"startDate": "Feb 3, 2015",
+		"title" : "Panoramic Postcard Mailer",
 		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
+		"description" : "Layout and designed my first self-promotional marketing piece. This piece is to help identify me and my services to potential clients. This design can also be used as a template for future projects. It will include both sides of the card.",
+		"imageSource" : "images/project1.0.jpg",
+		"topic": "design"
+
+	},
+	{
+		"startDate": "Apr 14, 2015",
+		"title" : "Typhographical Poster",
+		"url" : "Some URL",
+		"description" : "At a design studio I work for, I have been given a project to work on. I am suppose to design a poster based on a client’s subject matter. The tool of choice is Adobe Illustrator. This project has only one small caveat. I can only use type glyphs for graphical representation, layout and design.",
+		"imageSource" : "images/glbl-recs.jpg",
+		"topic": "design"
+
+
+	},
+	{
+		"startDate": "Feb 23, 2015",
+		"title" : "Scalleywags!",
+		"url" : "project-folder/scallywags/index.html",
+		"description" : "Goal : Re-create the Photoshop Mock-up as closely as possible!",
+		"imageSource" : "images/assignment3-Cut.jpg",
+		"topic": "Web"
+
+	},
+	{
+		"startDate": "Mar 10, 2015",
+		"title" : "jquery Demo",
+		"url" : "project-folder/jquerryDemo/index.html",
+		"description" : "Install and customize up to three jQuery plugins into a single “demo”. You get points based on successful installation and customization or using different images and/or css.",
+		"imageSource" : "http://vignette3.wikia.nocookie.net/howtoprogram/images/9/93/JQuery.png/revision/latest?cb=20130423012006",
+		"topic": "web"
 
 	},
 	{
 		"startDate": "Some Date",
-		"title" : "Some Title",
+		"title" : "Infographic Poster",
 		"url" : "Some URL",
 		"description" : "some descripton",
-		"imageSource" : "someimagesource"
-
-	},
-	{
-		"startDate": "Some Date",
-		"title" : "Some Title",
-		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
-
-	},
-	{
-		"startDate": "Some Date",
-		"title" : "Some Title",
-		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
-
-	},
-	{
-		"startDate": "Some Date",
-		"title" : "Some Title",
-		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
-
-	},
-	{
-		"startDate": "Some Date",
-		"title" : "Some Title",
-		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
-
-	},
-	{
-		"startDate": "Some Date",
-		"title" : "Some Title",
-		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
-
-	},
-	{
-		"startDate": "12 December 2016",
-		"title" : "Some Title",
-		"url" : "Some URL",
-		"description" : "some descripton",
-		"imageSource" : "someimagesource"
+		"imageSource" : "images/infoGraphicPoster.jpg",
+		"topic": "web"
 
 	}
 	]
@@ -248,16 +230,24 @@ var project = {
 
 project.display = function(){
 
+	
+	
 	for (var i = 0; i < project.projects.length; i++) {
-		$("#projects").append(HTMLprojectStart);
 
-		var date = HTMLprojectStart.replace("%data%", project.projects[i].startDate);
-		 var name = HTMLprojectTitle.replace("%data%", project.projects[i].title);
+		$("#projects").append(HTMLprojectStart);
+		
+		var topic = project.projects[i].topic.charAt(0).toUpperCase() + project.projects[i].topic.slice(1);
+		
+		topic = HTMLprojectType.replace('%data%', topic);
+		
+		var date = HTMLprojectDates.replace("%data%", project.projects[i].startDate);
+		var name = HTMLprojectTitle.replace("%data%", project.projects[i].title).replace("#", project.projects[i].url); 
 		var desc = HTMLprojectDescription.replace("%data%", project.projects[i].description);
 		var img = HTMLprojectImage.replace("%data%", project.projects[i].imageSource);
-
-		$(".project-entry:last").append(date);
+		
 		$(".project-entry:last").append(name);
+		$(".project-entry:last").append(date);
+		$(".project-entry:last").append(topic);	
 		$(".project-entry:last").append(desc);
 		$(".project-entry:last").append(img);
 
