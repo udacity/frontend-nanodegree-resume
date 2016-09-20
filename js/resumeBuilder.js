@@ -23,13 +23,14 @@ var bio ={
 		"twitter": "@hmntkmr",
 		"github": "hmntkmr",
 		"location": "Ottawa ON",
-		"linkedin" : "goo.gl/4TPnJS"
-	},
+		"linkedin" : "goo.gl/4TPnJS",
+		"facebook": "hmntkmr"
+		},
 	"pictureURL" : "https://scontent-lga3-1.xx.fbcdn.net/t31.0-8/11048630_10203222638121233_23658384074188916_o.jpg",
 
 	"welcomeMessage" : "Are you looking for an awesome person who can customize your webiste and do some analysis for your business.",
 	
-	"skills": ["Design", "Teaching", "Data Analysis", "Programming", "Web Development",  "Business Intelligence"]
+	"skills": ["Design", "Teaching", "Data Analysis", "Programming", "Visual Analysis", "Web Development",  "Business Intelligence"]
 };
 
 bio.display = function(){
@@ -48,10 +49,21 @@ bio.display = function(){
 	$("#header").append(HTMLskillsStart);
 
 		for (var i = 0; i < bio.skills.length; i++) {
-	      
 	      var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 	      $("#skills").append(formattedSkill);
 	    }	
+
+	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-github-alt fa-3x'></i>");
+	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-linkedin fa-3x'></i>");
+
+	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-facebook fa-3x'></i>");
+	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-twitter fa-3x'></i>");
+
+	
+	
+	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-envelope fa-3x'></i>");
+	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-instagram fa-3x'></i>");
+
 };
 
 
@@ -59,7 +71,7 @@ var education = {
  
  "schools": [{
 		"name": "Algonquin College",
-		"location": "Ottaw, ON",
+		"location": "Ottawa, ON",
 		"degree": "Interactive Media Management",
 		"majors" : "Web Design and Development",
 		"dates": "2015",
@@ -67,7 +79,7 @@ var education = {
     },
     {
     	"name": "Algonquin College",
-		"location": "Ottaw, ON",
+		"location": "Ottawa, ON",
 		"degree": "Business Intelligence System Infrastructure",
 		"majors" : "Business and Data Analysis",
 		"dates": "2016",
@@ -109,17 +121,9 @@ education.display = function(){
 
 }
 
-// variable for work
-
-// var HTMLworkStart = '<div class="work-entry"></div>';
-// var HTMLworkEmployer = '<a href="#">%data%';
-// var HTMLworkTitle = ' - %data%</a>';
-// var HTMLworkDates = '<div class="date-text">%data%</div>';
-// var HTMLworkLocation = '<div class="location-text">%data%</div>';
-// var HTMLworkDescription = '<p><br>%data%</p>';
 
 var work = {
-	"exp":
+	"jobs":
 	[
 		{
 			"employer": "Self Employed",
@@ -152,14 +156,14 @@ var work = {
 
 work.display = function(){
 
-	for (var i = 0; i < work.exp.length; i++) {
+	for (var i = 0; i < work.jobs.length; i++) {
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.exp[i].employer);
-		var formattedworkTitle = HTMLworkTitle.replace("%data%", work.exp[i].title);
-		var formattedworkLocation = HTMLworkLocation.replace("%data%", work.exp[i].location);
-		var formattedworkDates = HTMLworkDates.replace("%data%", work.exp[i].dates);
-		var formatterworkDescription = HTMLworkDescription.replace("%data%", work.exp[i].description);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+		var formattedworkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
+		var formattedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+		var formattedworkDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+		var formatterworkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 
 		$(".work-entry:last").append(formattedEmployer + formattedworkTitle);
 		$(".work-entry:last").append(formattedworkLocation);
@@ -185,7 +189,8 @@ var project = {
 		"url" : "Some URL",
 		"description" : "Layout and designed my first self-promotional marketing piece. This piece is to help identify me and my services to potential clients. This design can also be used as a template for future projects. It will include both sides of the card.",
 		"imageSource" : "images/project1.0.jpg",
-		"topic": "design"
+		"topic": "design",
+		"includes": "Adobe Photoshop"
 
 	},
 	{
@@ -194,7 +199,8 @@ var project = {
 		"url" : "Some URL",
 		"description" : "At a design studio I work for, I have been given a project to work on. I am suppose to design a poster based on a client’s subject matter. The tool of choice is Adobe Illustrator. This project has only one small caveat. I can only use type glyphs for graphical representation, layout and design.",
 		"imageSource" : "images/glbl-recs.jpg",
-		"topic": "design"
+		"topic": "design",
+		"includes": "Adobe Illustrator"
 
 
 	},
@@ -204,7 +210,8 @@ var project = {
 		"url" : "project-folder/scallywags/index.html",
 		"description" : "Goal : Re-create the Photoshop Mock-up as closely as possible!",
 		"imageSource" : "images/assignment3-Cut.jpg",
-		"topic": "Web"
+		"topic": "Web",
+		"includes": "Adobe Illustrator"
 
 	},
 	{
@@ -213,16 +220,29 @@ var project = {
 		"url" : "project-folder/jquerryDemo/index.html",
 		"description" : "Install and customize up to three jQuery plugins into a single “demo”. You get points based on successful installation and customization or using different images and/or css.",
 		"imageSource" : "http://vignette3.wikia.nocookie.net/howtoprogram/images/9/93/JQuery.png/revision/latest?cb=20130423012006",
-		"topic": "web"
+		"topic": "web",
+		"includes": "HTML, CSS, JavaScript, jQuery"
 
 	},
 	{
-		"startDate": "Some Date",
+		"startDate": "May 25, 2015",
 		"title" : "Infographic Poster",
-		"url" : "Some URL",
-		"description" : "some descripton",
+		"url" : "project-folder/infoGraphic/infoGraphicPoster.pdf",
+		"description" : "Used Adobe Illustrator for creating vector poster on Large Hydron Collider",
 		"imageSource" : "images/infoGraphicPoster.jpg",
-		"topic": "web"
+		"topic": "web",
+		"includes": "Adobe Illustrator"
+
+
+	},
+	{
+		"startDate": "Apr 20, 2015",
+		"title" : "Magazine Layout and Design",
+		"url" : "project-folder/mag/Breakfast.pdf",
+		"description" : "Used Adobe Indesign for creating layout and mock up of a magazine",
+		"imageSource" : "images/mag.png",
+		"topic": "Design",
+		"includes": "Adobe Indesign"
 
 	}
 	]
@@ -244,12 +264,16 @@ project.display = function(){
 		var name = HTMLprojectTitle.replace("%data%", project.projects[i].title).replace("#", project.projects[i].url); 
 		var desc = HTMLprojectDescription.replace("%data%", project.projects[i].description);
 		var img = HTMLprojectImage.replace("%data%", project.projects[i].imageSource);
+		var skill = HTMLprojectSkills.replace("%data%", project.projects[i].includes);
+		
 		
 		$(".project-entry:last").append(name);
 		$(".project-entry:last").append(date);
 		$(".project-entry:last").append(topic);	
 		$(".project-entry:last").append(desc);
+		$(".project-entry:last").append(skill);
 		$(".project-entry:last").append(img);
+
 
 	}
 }
