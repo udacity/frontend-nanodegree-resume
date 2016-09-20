@@ -42,6 +42,7 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectType = '<br><strong class="orange-text">%data%</strong>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectSkills = "<table><th>Skill Used<th/><td>%data%</td></table>";
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -123,6 +124,7 @@ function initializeMap() {
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
+
   function locationFinder() {
 
     // initializes an empty array
@@ -143,9 +145,9 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    // work.jobs.forEach(function(job){
-      // locations.push(job.location);
-    // });
+    work.jobs.forEach(function(job){
+      locations.push(job.location);
+    });
 
     return locations;
   }
@@ -155,8 +157,8 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
+  
   function createMapMarker(placeData) {
-
     // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat();  // latitude from the place service
     var lon = placeData.geometry.location.lng();  // longitude from the place service
@@ -180,6 +182,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infowindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
