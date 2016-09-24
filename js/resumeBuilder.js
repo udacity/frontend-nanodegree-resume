@@ -1,18 +1,6 @@
 // All the html maupulaitons goes here in the resumeBuilder.js
 
 
-// var name = "Hemant Kumar";
-// var role = "Full Stack Developer | Business Analyst";
-
-// var skills = ["Programming", "Business Analysis" ,"Business Intelligence", "Photoshop", "Web Development", "Teaching" ];
-// var formattedName = HTMLheaderName.replace("%data%", name);
-
-// var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-// $('#header').prepend(formattedRole);
-// $("#header").prepend(formattedName);
-
-// $("#main").append(skills);
 
 
 var bio ={
@@ -35,6 +23,15 @@ var bio ={
 
 bio.display = function(){
 	
+	var urls = {
+		"facebook" :"http://www.facebook.com/hmntkmr",
+		"twitter" :"http://www.twitter.com/hmntkmr",
+		"instagram" :"http://www.instagram.com/hmntkmr",
+		"github": "http://www.github.com/hmntkmr",
+		"mail": "mailto:hemantkumar@me.com?Subject=Hello%20Hemant",
+		"linkedin": "https://www.linkedin.com/in/hmntkmr"
+	};
+
 	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 	$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 
@@ -53,16 +50,17 @@ bio.display = function(){
 	      $("#skills").append(formattedSkill);
 	    }	
 
-	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-github-alt fa-3x'></i>");
-	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-linkedin fa-3x'></i>");
+	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.github+"'><i class='fa fa-github-alt fa-3x'></i></a>");
+	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.linkedin+"'><i class='fa fa-linkedin fa-3x'></i></a>");
 
-	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-facebook fa-3x'></i>");
-	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-twitter fa-3x'></i>");
+	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.facebook+"'> <i class='fa fa-facebook fa-3x'></i></a>");
+	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.twitter+"'><i class='fa fa-twitter fa-3x'></i></a>");
+	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.mail+"'><i class='fa fa-envelope fa-3x'></i></a>");
+	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.instagram+"'><i class='fa fa-instagram fa-3x'></i></a>");
 
-	
-	
-	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-envelope fa-3x'></i>");
-	$("#footerContacts:last").addClass("white-text").append("<i class='fa fa-instagram fa-3x'></i>");
+	$("img").addClass('img-thumbnail').addClass('img-responsive');
+	$("#header").addClass('orange-text');
+	$("a").css('color', 'white');
 
 };
 
@@ -94,7 +92,56 @@ var education = {
       	"url": "http://www.puchd.ac.in"	
     }
 
-  ]
+  ],
+  "titles" :
+		[{
+			"title" : "Programming for Everybody (Python)",
+			"school": "Coursera",
+			"dates" : "August, 2014",
+			"url"	: "http://goo.gl/5oDSAI" 
+		},
+		{
+			"title" : "Introduction to Computer Programming, Part I",
+			"school": "edX",
+			"dates" : "September, 2014",
+			"url"	: "http://goo.gl/6WbNHe" 
+		},
+		{
+			"title" : "Introduction to Linux",
+			"school": "edX",
+			"dates" : "August, 2015",
+			"url"	: "http://goo.gl/dVpsvT" 
+		},
+		{
+			"title" : "Introduction to Bootstrap",
+			"school": "edX",
+			"dates" : "August 2015",
+			"url"	: "http://goo.gl/UgQcoQ" 
+		},
+		{
+			"title" : "Foundation of Programming: Fundamentals",
+			"school": "Lynda.com",
+			"dates" : "May 2016",
+			"url"	: "http://goo.gl/0QcgEp" 
+		},
+		{
+			"title" : "JavaScript Essential Training",
+			"school": "Lynda.com",
+			"dates" : "November 2016",
+			"url"	: "http://goo.gl/IWcvt7" 	
+		},
+		{
+			"title" : "JavaScript and JSON",
+			"school": "Lynda.com",
+			"dates" : "May 2015",
+			"url"	: "http://goo.gl/vE7Xx3" 	
+		},
+		{
+			"title" : "Intro to HTML and CSS",
+			"school": "Udacity",
+			"dates" : "May 2016",
+			"url"	: "https://goo.gl/gt62Fb" 	
+		}]
 };
 
 
@@ -118,8 +165,35 @@ education.display = function(){
       var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
       $(".education-entry:last").append(formattedMajors);
     }   
+    
+	// onlineEducation starts
+    
+    $('.education-entry:last').append(HTMLonlineClasses);
+
+    for (var i = 0; i < education.titles.length; i++) {
+    	
+    	var onlinetitle = HTMLonlineTitle.replace('%data%',education.titles[i].title);
+    	onlinetitle.replace('#',education.titles[i].url);
+    	
+    	var onlineSchool = HTMLonlineSchool.replace('%data%', education.titles[i].school);
+    	$('.education-entry:last').append(onlinetitle + onlineSchool);
+
+    	var onlineDates = HTMLonlineDates.replace('%data%',education.titles[i].dates);
+    	$('.education-entry:last').append(onlineDates);
+
+    	var onlineURL = HTMLonlineURL.replace('%data%', education.titles[i].url).replace('#', education.titles[i].url);
+    	$('.education-entry:last').append(onlineURL);
+
+    }
 
 }
+
+
+// var HTMLonlineClasses = '<h3>Online Classes</h3>';
+// var HTMLonlineTitle = '<a href="#">%data%';
+// var HTMLonlineSchool = ' - %data%</a>';
+// var HTMLonlineDates = '<div class="date-text">%data%</div>';
+// var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 
 var work = {
@@ -172,14 +246,6 @@ work.display = function(){
 
 	}
 }
-
-
-// var HTMLprojectStart = '<div class="project-entry"></div>';
-// var HTMLprojectTitle = '<a href="#">%data%</a>';
-// var HTMLprojectDates = '<div class="date-text">%data%</div>';
-// var HTMLprojectDescription = '<p><br>%data%</p>';
-// var HTMLprojectImage = '<img src="%data%">';
-
 
 var project = {
 	"projects":[
@@ -256,9 +322,27 @@ project.display = function(){
 
 		$("#projects").append(HTMLprojectStart);
 		
+		// var topic = project.projects[i].topic.charAt(0).toUpperCase() + project.projects[i].topic.slice(1);
+		
+		// topic = HTMLprojectType.replace('%data%', topic);
+		
+		// var date = HTMLprojectDates.replace("%data%", project.projects[i].startDate);
+		// var name = HTMLprojectTitle.replace("%data%", project.projects[i].title).replace("#", project.projects[i].url); 
+		// var desc = HTMLprojectDescription.replace("%data%", project.projects[i].description);
+		// var img = HTMLprojectImage.replace("%data%", project.projects[i].imageSource);
+		// var skill = HTMLprojectSkills.replace("%data%", project.projects[i].includes);
+		
+		
+		// $(".project-entry:last").append(name);
+		// $(".project-entry:last").append(date);
+		// $(".project-entry:last").append(topic);	
+		// $(".project-entry:last").append(desc);
+		// $(".project-entry:last").append(skill);
+		// $(".project-entry:last").append(img);
+
 		var topic = project.projects[i].topic.charAt(0).toUpperCase() + project.projects[i].topic.slice(1);
 		
-		topic = HTMLprojectType.replace('%data%', topic);
+		var top = HTMLprojectType.replace('%data%', topic);
 		
 		var date = HTMLprojectDates.replace("%data%", project.projects[i].startDate);
 		var name = HTMLprojectTitle.replace("%data%", project.projects[i].title).replace("#", project.projects[i].url); 
@@ -266,18 +350,22 @@ project.display = function(){
 		var img = HTMLprojectImage.replace("%data%", project.projects[i].imageSource);
 		var skill = HTMLprojectSkills.replace("%data%", project.projects[i].includes);
 		
-		
-		$(".project-entry:last").append(name);
-		$(".project-entry:last").append(date);
-		$(".project-entry:last").append(topic);	
-		$(".project-entry:last").append(desc);
-		$(".project-entry:last").append(skill);
-		$(".project-entry:last").append(img);
+		var container = $("#projects").addClass('container').addClass('row');
+		container.append(HTMLprojectStart);
+		// $("#projects").addClass('container');
+		$(".project-entry").addClass('col-md-4 col-xs-12');
 
-
+		if(topic == 'Design'){
+			$(".project-entry:last").append(name);
+			$(".project-entry:last").append(date);
+			$(".project-entry:last").append(top);	
+			$(".project-entry:last").append(desc);
+			$(".project-entry:last").append(skill);
+			$(".project-entry:last").append(img);
+		}
 	}
 }
-
+	
 // adding map here
 $("#mapDiv").append(googleMap);
 

@@ -157,6 +157,7 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
+
   
   function createMapMarker(placeData) {
     // The next lines save location data from the search result object to local variables
