@@ -58,7 +58,7 @@ bio.display = function(){
 	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.mail+"'><i class='fa fa-envelope fa-3x'></i></a>");
 	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.instagram+"'><i class='fa fa-instagram fa-3x'></i></a>");
 
-	$("img").addClass('img-thumbnail').addClass('img-responsive');
+	$("img").addClass('img-circle').addClass('img-responsive');
 	$("#header").addClass('orange-text');
 	$("a").css('color', 'white');
 
@@ -177,15 +177,14 @@ education.display = function(){
     	
     	var onlineSchool = HTMLonlineSchool.replace('%data%', education.titles[i].school);
     	$('.education-entry:last').append(onlinetitle + onlineSchool);
-
+    	
     	var onlineDates = HTMLonlineDates.replace('%data%',education.titles[i].dates);
     	$('.education-entry:last').append(onlineDates);
-
+    	
     	var onlineURL = HTMLonlineURL.replace('%data%', education.titles[i].url).replace('#', education.titles[i].url);
     	$('.education-entry:last').append(onlineURL);
 
     }
-
 }
 
 
@@ -355,14 +354,14 @@ project.display = function(){
 		// $("#projects").addClass('container');
 		$(".project-entry").addClass('col-md-4 col-xs-12');
 
-		if(topic == 'Design'){
+		// if(topic == 'Design'){
 			$(".project-entry:last").append(name);
 			$(".project-entry:last").append(date);
 			$(".project-entry:last").append(top);	
 			$(".project-entry:last").append(desc);
 			$(".project-entry:last").append(skill);
 			$(".project-entry:last").append(img);
-		}
+		// }
 	}
 }
 	
