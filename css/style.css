@@ -46,6 +46,12 @@ h3 {
   line-height: 22px;
 }
 
+.flex-item {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
 h4 {
   font-weight: bold;
   font-size: 14px;
@@ -97,6 +103,7 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  display: block;
 }
 
 #skills-h3 {
