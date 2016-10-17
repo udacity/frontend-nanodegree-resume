@@ -25,18 +25,21 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
 
+  <script src="js/jQuery.js"></script>
 
+  <!-- More on helper.js in the class -->
+  <script src="js/helper.js"></script>
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
-<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
   <div id="main">
-   
+
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -143,6 +146,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
     }
+
+
+
   </script>
+
 </body>
 </html>
