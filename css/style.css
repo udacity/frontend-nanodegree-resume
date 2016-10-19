@@ -1,40 +1,31 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+
 }
 
-.clear-fix {
+.clearfix {
   overflow: auto;
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
+.education-entry, .work-entry, .project-entry {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 h1 {
+
   font-size: 40px;
-  color: #f5a623;
+  color: #d7cec7;
   line-height: 48px;
   display: inline;
 }
 
 h2 {
-  font-weight: bold;
+  font-style: bold;
   font-size: 24px;
-  color: #999;
+  color: #999999;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,30 +33,28 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  /*color: #76323f;*/
   line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
+  font-style: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #4A4A4A;
   line-height: 17px;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
+h2, h3, h4, h5 {
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #999999;
   line-height: 16px;
   float: left;
 }
@@ -73,7 +62,7 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #999999;
   line-height: 16px;
   float: right;
 
@@ -81,12 +70,12 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #333333;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  color: #1199C3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -95,41 +84,33 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #F3F3F3;
   line-height: 28px;
 }
 
-#skills-h3 {
-  color: #f5ae23;
+#skillsH3 {
+  color: #F5AE23;
   display: none;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
+  background-color: #F3F3F3;
+  padding-bottom: 25px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #565656;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #535353;
 }
 
 .flex-box {
@@ -141,20 +122,17 @@ a {
   padding: 10px;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
-}
-
 .center-content {
-  padding: 2.5% 5%;
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2.5%
 }
 
 ul {
   list-style-type: none;
 }
+
 
 .biopic {
   float: left;
@@ -167,18 +145,29 @@ img {
   padding: 10px;
 }
 
+
+/* Bar chart stuff */
+.chart div {
+  font: 10px sans-serif;
+  background-color: #4A4A4A;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  height: 12px;
+  color: white;
+  display: inline-block;
+}
+
 span {
   padding: 5px;
 }
 
-#lets-connect {
+#letsConnect {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
-
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
+  #letsConnect {
     margin-top: 5%;
   }
 }
@@ -190,7 +179,7 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
+  #letsConnect {
     margin-top: 10%;
   }
   .biopic {
@@ -204,7 +193,8 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #mapDiv {
@@ -214,7 +204,7 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+  #skillsH3,
   .biopic {
     display: block;
   }
