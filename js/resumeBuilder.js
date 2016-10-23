@@ -19,15 +19,14 @@ var bio = {
 
 /* displaying bio */
 bio.display = function() {
-
     var formattedRole = HTMLheaderRole.replace(data, bio.role);
-    $("#header").prepend(formattedRole);
+    // $("#header").prepend(formattedRole);
 
-    var formattedName = HTMLheaderName.replace(data, bio.name);
+    var formattedName = HTMLheaderName.replace(data, bio.name) + formattedRole;
     $("#header").prepend(formattedName);
 
-    var formattedbioPic = HTMLbioPic.replace(data, bio.biopic);
-    $("#header").append(formattedbioPic);
+    // var formattedbioPic = HTMLbioPic.replace(data, bio.biopic);
+    // $("#header").append(formattedbioPic);
 
     var formattedWelcomeMessage = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
     $("#header").append(formattedWelcomeMessage);
@@ -47,13 +46,13 @@ bio.display = function() {
     var formattedLocation = HTMLlocation.replace(data, bio.contacts.location);
     $("#topContacts, #footerContacts").append(formattedLocation);
 
-    if (bio.skills.length > 0) {
-        $("#header").append(HTMLskillsStart);
-        for (var i = 0; i < bio.skills.length; i++) {
-            var formattedSkills = HTMLskills.replace(data, bio.skills[i]);
-            $("#skills").append(formattedSkills);
-        }
-    }
+    // if (bio.skills.length > 0) {
+    //     $("#header").append(HTMLskillsStart);
+    //     for (var i = 0; i < bio.skills.length; i++) {
+    //         var formattedSkills = HTMLskills.replace(data, bio.skills[i]);
+    //         $("#skills").append(formattedSkills);
+    //     }
+    // }
 };
 
 bio.display();
@@ -71,7 +70,7 @@ var work = {
             "dates": "06/2011 - 07/2011",
             "title": "Summer Trainee",
             "location": "Nagpur, India",
-            "description": "Worked on “Comparative Analysis of different Competitors as an Online Buying Associate. Gained insight about the functioning of e-commerce."
+            "description": "Worked on “Comparative Analysis of different Competitors as an Online Buying Associate. Gained insight about the functioning of e-commerce applications."
         }
 
     ]
@@ -101,15 +100,15 @@ work.display();
 /* defining education */
 var education = {
     "schools": [{
-        "name": "Harrisburg University",
+        "name": "Harrisburg University of Science and Technology",
         "degree": "Masters",
-        "majors": ["Computer Technology"],
+        "majors": ["Information Systems Engineering and Management"],
         "location": "Harrisburg, USA",
         "dates": "03/2016 - Future"
     }, {
         "name": "The Pennsylvania State University",
         "degree": "Masters",
-        "majors": ["Computer Technology"],
+        "majors": ["Computer Science"],
         "location": "Harrisburg, USA",
         "dates": "01/2014 - Transfered to Harrisburg University"
     }, {
@@ -136,14 +135,19 @@ var education = {
 /*defining projects */
 var projects = {
     "projects": [{
-        "title": "Attack to Win",
-        "dates": "01/2014-05/2014",
-        "description": "Multi user game based on Indian traditional game Dahdi. Implemented using client server architecture.",
+        "title": "Feed Reader Testing",
+        "dates": "08/2016-08/2016",
+        "description": "This project is part of the Udacity Front-End Web Developer Nanodegree program. In this project I have written comprehensive unit-tests to validate RSS Feed Reader Application using Jasmine Framework and the red-green-refactor workflow. Further, the application makes use of Google's RSS API.",
         "images": []
     }, {
-        "title": "Movies Trailer",
-        "dates": "07/2016-07/20146",
-        "description": "A website displaying trailer of the movies watched so far",
+        "title": "Movie Trailer",
+        "dates": "07/2016-07/2016",
+        "description": "This project is part of the Udacity Full Stack Web Developer Nanodegree Program. The project was about building a website that displays list of my favorite movies. I wrote a server-side code in Python that stores the list of movies, including the box art imagery, movie name, release date of the movie, directors of the movie and trailer of the movie. When the user accesses the website they are able to see the information about the movie and play its trailer.",
+        "images": []
+    }, {
+        "title": "Portfolio",
+        "dates": "10/2016-10/2016",
+        "description": "This project is part of the Udacity  Front-End Web Developer Nanodegree Program. The project is about developing and building a personalized portfolio site. In this project I have developed the webpage using HTML5, CSS and Bootstrap framework. The design of the website is responsive and displays the images, description and links to the projects I have completed so far.",
         "images": []
     }]
 };
