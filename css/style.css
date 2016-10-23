@@ -24,6 +24,10 @@ h6 {
   padding: 0 5%;
 }
 
+#main {
+  text-align: justify;
+}
+
 h1 {
   font-size: 40px;
   color: #e64559;
@@ -34,14 +38,9 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #ccc4c4;
+  color: #d65e5e;
   line-height: 29px;
-  padding: 10px;
   text-align: center;
-  background-color: #524d4d;
-  border: white;
-  border-top-style: groove;
-  border-bottom-style: groove;
 }
 
 h3 {
@@ -65,7 +64,6 @@ h5 {
   padding:10px 5%;
 
 }
-
 
 .date-text {
   font-style: italic;
@@ -98,9 +96,8 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #e64559;
   line-height: 28px;
 }
 
@@ -110,7 +107,7 @@ a {
 }
 
 .orange {
-  background-color: #865858;
+  background-color: #d4bdbd;
 }
 
 .orange-text {
@@ -119,7 +116,7 @@ a {
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #a27272;
 }
 
 .gray {
@@ -129,12 +126,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #f1eded;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #3e3a3a;
+  text-align: center;
 }
 
 .flex-box {
@@ -168,7 +165,7 @@ img {
 
 span {
   padding: 5px;
-  color: #d4c9c9;
+  color: #bd1717;
 }
 
 #lets-connect {
