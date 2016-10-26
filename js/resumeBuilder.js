@@ -41,21 +41,21 @@ var work = {
         "dates": "10/2004 – 06/2008",
         "description": "Journalist, marketing competence, automotive market analysis with editorial responsibility for the car magazine and the television show named TopSpeed (incl. Personnel responsibility)"
     }]
-}
+};
 var projects = {
     "projects": [{
         "title": "TimeGate (PHP, JS, HTML5, Jquery, AJAX)",
-        "dates_worked": "Summer 2013",
+        "dates": "Summer 2013",
         "description": "Endproject @SAE school, time traveling agency, selfmade CMS, fullstack",
         "images": ["images/timegate.jpg"]
     }, {
         "title": "crkva.at (PHP, JS, HTML5, Wordpress)",
-        "dates_worked": "2014 -2016",
+        "dates": "2014 -2016",
         "description": "produkt management, front-end development, Wordpress",
         "images": ["images/crkva.jpg"]
     }, {
         "title": "NUCE Webdesign (PHP, JS, HTML5, Bootstrap)",
-        "dates_worked": "2016 to now",
+        "dates": "2016 to now",
         "description": "produkt management, front-end development",
         "images": ["images/nuce.jpg"]
     }]
@@ -67,58 +67,58 @@ var education = {
         "location": "Vienna, Austria",
         "degree": "Diploma",
         "majors": ["Webdesign & Development"],
-        "dates_attended": "10/2011 – 11/2013",
+        "dates": "10/2011 – 11/2013",
         "url": "http://www.sae.edu/"
     }, {
         "name": "Vienna University of Technology",
         "location": "Vienna, Austria",
         "degree": "No degree",
         "majors": ["Mechanical engineering studies"],
-        "dates_attended": "10/2009 – 11/2011",
+        "dates": "10/2009 – 11/2011",
         "url": "http://www.tuwien.edu/"
     }, {
         "name": "University of Belgrade",
         "location": "Belgrade, Serbia",
         "degree": "No degree",
         "majors": ["Mechanical engineering studies"],
-        "dates_attended": "07/1997 – 06/2003",
+        "dates": "07/1997 – 06/2003",
         "url": "http://www.masfak.edu/"
     }],
 
     "onlineCourses": [{
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
-        "dates_attended": "June 2016 - present",
+        "dates": "June 2016 - present",
         "url": "https://www.udacity.com/course/nd001"
     }, {
         "title": "M101JS: MongoDB for Node.js Developers",
         "school": "MongoDB University",
-        "dates_attended": "Dec 09, 2014",
+        "dates": "Dec 09, 2014",
         "url": "https://university.mongodb.com/courses/10gen/M101JS/2014_October/syllabus"
     }, {
         "title": "Learn ReactJS by Building a Game",
         "school": "Udemy",
-        "dates_attended": "Oct 10, 2015",
+        "dates": "Oct 10, 2015",
         "url": "https://www.udemy.com/draft/602592/learn/v4/"
     }, {
         "title": "Learning Node.js LiveLessons",
         "school": "Udemy",
-        "dates_attended": "Mar 03, 2015",
+        "dates": "Mar 03, 2015",
         "url": "https://www.udemy.com/draft/245036/learn/v4/"
     }, {
-        "title": "JavaScript: Understanding the Weird Parts",
+        "title": "JavaScript, Understanding the Weird Parts",
         "school": "Udemy",
-        "dates_attended": "Oct 28, 2015",
+        "dates": "Oct 28, 2015",
         "url": "https://www.udemy.com/draft/602592/learn/v4/"
     }, {
         "title": "Learn and Understand AngularJS",
         "school": "Udemy",
-        "dates_attended": "Nov 12, 2015",
+        "dates": "Nov 12, 2015",
         "url": "https://www.udemy.com/learn-angularjs/learn/v4/overview"
     }, {
         "title": "Introduction to Computer Science and Programming Using Python",
         "school": "MITx",
-        "dates_attended": "Feb 19, 2014",
+        "dates": "Feb 19, 2014",
         "url": "https://courses.edx.org/courses/MITx/6.00.1-x/1T2014/info"
     }]
 };
@@ -126,19 +126,20 @@ var education = {
 
 
 work.display = function() {
-    for (job in work.jobs) {
-        $('#workExperience').append(HTMLworkStart);
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        var formattedEmployerTitle = formattedEmployer + formattedTitle;
-        $(".work-entry:last").append(formattedEmployerTitle);
-
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        $(".work-entry:last").append(formattedDates);
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-        $(".work-entry:last").append(formattedDescription);
-    }
-}
+    work.jobs.forEach(function(job) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedworkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+        var formattedworkTitle = HTMLworkTitle.replace("%data%", job.title);
+        var formattedworkDates = HTMLworkDates.replace("%data%", job.dates);
+        var formattedworkLocation = HTMLworkLocation.replace("%data%", job.location);
+        var formattedworkDescription = HTMLworkDescription.replace("%data%", job.description);
+        var formattedworkEmployerTitle = formattedworkEmployer + formattedworkTitle;
+        $(".work-entry:last").append(formattedworkEmployerTitle);
+        $(".work-entry:last").append(formattedworkLocation);
+        $(".work-entry:last").append(formattedworkDates);
+        $(".work-entry:last").append(formattedworkDescription);
+    });
+};
 
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -177,7 +178,7 @@ projects.display = function() {
     projects.projects.forEach(function(project) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
-        var formattedDates = HTMLprojectDates.replace("%data%", project.dates_worked);
+        var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
         var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
         $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDates);
@@ -188,7 +189,7 @@ projects.display = function() {
                 $(".project-entry:last").append(formattedImage);
             });
         }
-    })
+    });
 
 };
 
@@ -196,7 +197,7 @@ education.display = function() {
     education.schools.forEach(function(school) {
         $("#education").append(HTMLschoolStart);
         var formattedSchoolName = HTMLschoolName.replace("%data%", school.name).replace('#', school.url);
-        var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates_attended);
+        var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
         var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
         var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
         $(".education-entry:last").append(formattedSchoolName);
@@ -218,7 +219,7 @@ education.display = function() {
         education.onlineCourses.forEach(function(course) {
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title).replace('#', course.url);
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%", course.dates_attended);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", course.dates);
 
             $(".education-entry:last")
                 .append(formattedOnlineTitle + formattedOnlineSchool)
@@ -300,7 +301,7 @@ education.display = function(){
     education.schools.forEach(function(school) {
         $("#education").append(HTMLschoolStart);
         var formattedSchoolName = HTMLschoolName.replace("%data%", school.name).replace('#', school.url);
-        var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates_attended);
+        var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
         var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
         var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
         $(".education-entry:last").append(formattedSchoolName);
@@ -318,7 +319,7 @@ education.display = function(){
         education.onlineCourses.forEach(function (course) {
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title).replace('#', course.url);;
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%", course.dates_attended);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", course.dates);
 
             $(".education-entry:last")
                 .append(formattedOnlineTitle + formattedOnlineSchool)
