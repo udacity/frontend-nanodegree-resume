@@ -280,7 +280,7 @@ var project = {
 		"startDate": "Mar 10, 2015",
 		"title" : "jquery Demo",
 		"url" : "project-folder/jquerryDemo/index.html",
-		"description" : "Install and customize up to three jQuery plugins into a single “demo”. You get points based on successful installation and customization or using different images and/or css.",
+		"description" : "Install and customize up to three jQuery plugins into a single “demo”.",
 		"imageSource" : "http://vignette3.wikia.nocookie.net/howtoprogram/images/9/93/JQuery.png/revision/latest?cb=20130423012006",
 		"topic": "web",
 		"includes": "HTML, CSS, JavaScript, jQuery"
