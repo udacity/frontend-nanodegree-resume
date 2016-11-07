@@ -317,24 +317,6 @@ project.display = function(){
 	for (var i = 0; i < project.projects.length; i++) {
 
 		$("#projects").append(HTMLprojectStart);
-		
-		// var topic = project.projects[i].topic.charAt(0).toUpperCase() + project.projects[i].topic.slice(1);
-		
-		// topic = HTMLprojectType.replace('%data%', topic);
-		
-		// var date = HTMLprojectDates.replace("%data%", project.projects[i].startDate);
-		// var name = HTMLprojectTitle.replace("%data%", project.projects[i].title).replace("#", project.projects[i].url); 
-		// var desc = HTMLprojectDescription.replace("%data%", project.projects[i].description);
-		// var img = HTMLprojectImage.replace("%data%", project.projects[i].imageSource);
-		// var skill = HTMLprojectSkills.replace("%data%", project.projects[i].includes);
-		
-		
-		// $(".project-entry:last").append(name);
-		// $(".project-entry:last").append(date);
-		// $(".project-entry:last").append(topic);	
-		// $(".project-entry:last").append(desc);
-		// $(".project-entry:last").append(skill);
-		// $(".project-entry:last").append(img);
 
 		var topic = project.projects[i].topic.charAt(0).toUpperCase() + project.projects[i].topic.slice(1);
 		
@@ -351,14 +333,11 @@ project.display = function(){
 		$("#projects").addClass('container');
 		$(".project-entry").addClass('col-md-4 col-xs-12');
 
-		// if(topic == 'Design'){
 			$(".project-entry:last").append(name);
 			$(".project-entry:last").append(date);
 			$(".project-entry:last").append(top);	
 			$(".project-entry:last").append(desc);
 			$(".project-entry:last").append(skill);
-			// $(".project-entry:last").append(img);
-		// }
 	}
 }
 	
