@@ -45,10 +45,10 @@ bio.display = function(){
 	$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage))
 	$("#header").append(HTMLskillsStart);
 
-		for (var i = 0; i < bio.skills.length; i++) {
-	      var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-	      $("#skills").append(formattedSkill);
-	    }	
+	for (var i = 0; i < bio.skills.length; i++) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+		$("#skills").append(formattedSkill);
+	}	
 
 	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.github+"'><i class='fa fa-github-alt fa-3x'></i></a>");
 	$("#footerContacts:last").addClass("white-text").append("<a href='"+urls.linkedin+"'><i class='fa fa-linkedin fa-3x'></i></a>");
@@ -146,24 +146,21 @@ var education = {
 
 
 education.display = function(){
+	$("#education").append(HTMLschoolStart);
+	
 	for(var i = 0; i < education.schools.length; i++){
-	 $("#education").append(HTMLschoolStart);
-      
- 
-      var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
-      formattedName.replace("#", education.schools[i].url);
-      
-      var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-      $(".education-entry:last").append(formattedName + formattedDegree);
-
-	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-      $(".education-entry:last").append(formattedLocation);
-      
-      var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
-      $(".education-entry:last").append(formattedSchoolDates);
-
-      var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
-      $(".education-entry:last").append(formattedMajors);
+		var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
+		var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
+		
+		formattedName.replace("#", education.schools[i].url);
+		
+		$(".education-entry:last").append(formattedName + formattedDegree);
+		$(".education-entry:last").append(formattedLocation);
+		$(".education-entry:last").append(formattedSchoolDates);
+		$(".education-entry:last").append(formattedMajors);
     }   
     
 	// onlineEducation starts
@@ -351,7 +348,7 @@ project.display = function(){
 		
 		var container = $("#projects").addClass('container').addClass('row');
 		container.append(HTMLprojectStart);
-		// $("#projects").addClass('container');
+		$("#projects").addClass('container');
 		$(".project-entry").addClass('col-md-4 col-xs-12');
 
 		// if(topic == 'Design'){
@@ -360,7 +357,7 @@ project.display = function(){
 			$(".project-entry:last").append(top);	
 			$(".project-entry:last").append(desc);
 			$(".project-entry:last").append(skill);
-			$(".project-entry:last").append(img);
+			// $(".project-entry:last").append(img);
 		// }
 	}
 }
@@ -370,6 +367,6 @@ $("#mapDiv").append(googleMap);
 
 
 bio.display();
+work.display();
 project.display();
 education.display();
-work.display();
