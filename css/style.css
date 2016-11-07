@@ -60,10 +60,9 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
 }
-
 
 .date-text {
   font-style: italic;

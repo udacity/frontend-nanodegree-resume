@@ -165,10 +165,10 @@ education.display = function(){
     
 	// onlineEducation starts
     
-    $('.education-entry:last').append(HTMLonlineClasses);
+    $('.education-entry:last').append(HTMLonlineClasses).css("style:none");
 
     for (var i = 0; i < education.titles.length; i++) {
-    	
+		
     	var onlinetitle = HTMLonlineTitle.replace('%data%',education.titles[i].title);
     	onlinetitle.replace('#',education.titles[i].url);
     	
