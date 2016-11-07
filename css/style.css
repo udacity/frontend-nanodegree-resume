@@ -20,8 +20,11 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.map-entry {
   padding: 0 5%;
+  font-size: 1em;
+  line-height: 1.14em;
 }
 
 h1 {
@@ -44,6 +47,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  padding: 1em 0em 1em 0em;
 }
 
 h4 {
@@ -54,13 +58,10 @@ h4 {
 }
 
 h2,
-h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+ padding: 10px 5%;
 }
-
 
 .date-text {
   font-style: italic;

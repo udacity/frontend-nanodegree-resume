@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Demo</title>
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+
+		<link rel="stylesheet" href="css/superfish.css" media="screen">
+
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css">
+  		<link rel="stylesheet" type="text/css" href="css/liquid-slider.css">
+		
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla%7CMontserrat">
+
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+		
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/hoverIntent.js"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+		<script type="text/javascript" src="js/lightbox.js"></script>
+
+		<script>
+
+		(function($){ //create closure so we can safely use $ as alias for jQuery
+
+			$(document).ready(function(){
+
+				// initialise plugin
+				var example = $('#example').superfish({
+					//add options here if required
+				});
+
+				// buttons to demonstrate Superfish's public methods
+				$('.destroy').on('click', function(){
+					example.superfish('destroy');
+				});
+
+				$('.init').on('click', function(){
+					example.superfish();
+				});
+
+				$('.open').on('click', function(){
+					example.children('li:first').superfish('show');
+				});
+
+				$('.close').on('click', function(){
+					example.children('li:first').superfish('hide');
+				});
+			});
+
+		})(jQuery);
+
+		</script>
+
+	</head>
+
+	<body class="wrapper">
+		<ul class="sf-menu" id="example">
+			<li class="current">
+				<a href="followed.html">menu item 1</a>
+				<ul>
+					<li>
+						<a href="followed.html">menu item</a>
+					</li>
+					<li class="current">
+						<a href="followed.html">long menu item sets sub width</a>
+						<ul>
+							<li class="current"><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="followed.html">menu item 2</a>
+			</li>
+			<li>
+				<a href="followed.html">menu item 3</a>
+				<ul>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">short</a></li>
+							<li><a href="followed.html">short</a></li>
+							<li><a href="followed.html">short</a></li>
+							<li><a href="followed.html">short</a></li>
+							<li><a href="followed.html">short</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="followed.html">menu item</a>
+						<ul>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+							<li><a href="followed.html">menu item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="followed.html">menu item 4</a>
+			</li>	
+		</ul>
+		<p style="clear:both;">Morbi pulvinar ornare mauris. Vivamus ut ipsum. Fusce vitae pede. Etiam sodales, libero vitae ultricies vestibulum, elit eros aliquam pede, auctor lobortis enim ligula non nibh. Quisque molestie, nibh ac malesuada ultricies, metus urna adipiscing dui, tincidunt fermentum lectus velit ac ipsum. Curabitur ultrices ipsum et tortor. Nullam non felis ornare sem laoreet viverra.</p>
+		<p>Nunc turpis ligula, auctor ut, iaculis porta, consequat vel, turpis. Suspendisse sed diam. In scelerisque condimentum tellus. Vivamus et velit a ante consectetuer tempor. Nunc vitae mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Suspendisse lacinia, lacus a posuere molestie, tellus diam ullamcorper est, in mattis elit nisi nec odio. Aliquam a sem sit amet dolor viverra ornare. Curabitur elit velit, tempus vel, tempus at, ultricies non, arcu. Duis viverra tempus tellus. Duis dignissim convallis tortor. Phasellus nisl.</p>
+		<button class="open">Open first submenu</button>
+		<button class="close">Close first submenu</button>
+		<button class="destroy">Destroy Superfish</button>
+		<button class="init">Restore Superfish</button>
+
+		<div id="main-slider" class="liquid-slider">
+    <div>
+      <h2 class="title">Image 1</h2>
+      <img src="images/demopage/image-1.jpg" alt="Smiley face" height="420" width="420" align="center">
+    </div>
+    <div>
+      <h2 class="title">Image 2</h2>
+      <img src="images/demopage/image-2.jpg" alt="Smiley face" height="620" width="420" align="center">
+    </div>          
+    <div>
+      <h2 class="title">Slide 3</h2>
+      <img src="images/demopage/image-3.jpg" alt="Smiley face" height="720" width="420" align="center">
+    </div>
+    <div>
+      <h2 class="title">Slide 4</h2>
+      <img src="images/demopage/image-4.jpg" alt="Smiley face" height="820" width="420" align="center">
+    </div>
+  </div>
+
+
+
+	<section id="examples" class="examples-section">
+		<div class="container">
+
+			<h3>Two individual images</h3>
+			<div class="image-row">
+				<a class="example-image-link" href="images/demopage/image-1.jpg" data-lightbox="example-1"><img class="example-image" src="images/demopage/image-1.jpg" alt="image-1"
+				height="420" width="420" /></a>
+				<a class="example-image-link" href="images/demopage/image-2.jpg" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="images/demopage/image-2.jpg" alt="image-1" height="420" width="420" /></a>
+			</div>
+
+			<hr/>
+
+			<h3 style="clear: both;">Four image set</h3>
+
+			<div class="image-row">
+				<div class="image-set">
+					<a class="example-image-link" href="images/demopage/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/demopage/thumb-3.jpg" alt=""/></a>
+					<a class="example-image-link" href="images/demopage/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="images/demopage/thumb-4.jpg" alt="" /></a>
+					<a class="example-image-link" href="images/demopage/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="images/demopage/thumb-5.jpg" alt="" /></a>
+					<a class="example-image-link" href="images/demopage/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/demopage/thumb-6.jpg" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</body>
+
+	<footer>
+
+  
+ 	<!-- script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.js"></script> -->
+
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.touchSwipe.js"></script>
+	<script src="js/jquery.liquid-slider.js"></script>  
+
+  <script>
+ 
+     $('#main-slider').liquidSlider();
+
+  </script>
+
+  </footer>
+</html>

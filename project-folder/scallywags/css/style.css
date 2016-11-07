@@ -1,0 +1,128 @@
+
+body{
+
+	background-image: url(../images/bg.png); 
+}
+
+.wrapper{
+
+	width: 980px;
+	margin: 0 auto;
+	background: white;
+}
+
+
+.logo{ 
+	position: absolute; 
+	top: 0; 
+	right: -140px; 
+}
+
+section h1{
+	font-family: lobster;
+	font-size: 40px;
+}
+
+section h3{
+	font-family: lobster;
+	font-size: 24px;
+	line-height: 2;
+}
+
+header h1 h2 p{
+	font-family: lobster;
+}
+
+header{
+	position: relative;
+	height:  240px;
+	background-image: url(../images/header-bg.png);
+	background-repeat: no-repeat;
+}
+
+header h1{
+
+	margin-top: 40px;
+	margin-bottom: 0;
+	margin-left: 40px;
+	color: #800a00;
+	font-size: 96px;
+	line-height: 1;
+	font-family: Lobster;
+
+}
+
+header h2{
+
+	font-size: 32px;
+	margin-left: 40px;
+	line-height: 2;
+	font-family: lobster;
+
+
+}
+
+nav{
+
+	background-color: #660000;
+}
+
+nav ul{
+
+}
+
+nav ul li a{
+    display:block;
+    float: left;
+    width: 25%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background-color: #660000;
+    font-size: 32px;
+    font-family: lobster, impact;
+    text-decoration: none;
+}
+
+
+section{
+
+	background-color: pink;
+	padding: 40px 100px;
+	background-image: url(../images/section-bg.png);
+	clear: both;
+	
+}
+
+p {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 18px;
+	line-height: 1.4;
+	margin-bottom: 1em;
+}
+
+
+footer{
+	background-image: url(../images/footer-bg.png);
+	background-repeat: repeat-x;
+	height: 50px;
+	overflow: hidden;
+}
+
+footer ul li{
+	display: inline;
+}
+
+footer ul li a{
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+	margin-left: 30px;
+	margin-right: 33px;
+	text-decoration: none;
+	font-family: "Lobster";
+
+}

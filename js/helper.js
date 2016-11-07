@@ -1,19 +1,6 @@
-/*
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderRole = '<span class="white-text">%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -39,8 +26,11 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLprojectType = '<br><strong>%data%</strong>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectSkills = "<table><th>Skill Used<th/><td>%data%</td></table>";
+
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -121,41 +111,23 @@ function initializeMap() {
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
+
   function locationFinder() {
 
-    // initializes an empty array
     var locations = [];
-
-    // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
-
-    // iterates through school locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     education.schools.forEach(function(school){
       locations.push(school.location);
     });
-
-    // iterates through work locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     work.jobs.forEach(function(job){
       locations.push(job.location);
     });
-
     return locations;
   }
 
-  /*
-  createMapMarker(placeData) reads Google Places search results to create map pins.
-  placeData is the object returned from search results containing information
-  about a single location.
-  */
+  
   function createMapMarker(placeData) {
 
-    // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat();  // latitude from the place service
     var lon = placeData.geometry.location.lng();  // longitude from the place service
     var name = placeData.formatted_address;   // name of the place from the place service
@@ -178,6 +150,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infowindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -239,11 +212,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+ map.fitBounds(mapBounds);
+});

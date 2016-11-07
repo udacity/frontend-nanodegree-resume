@@ -1,0 +1,13 @@
+
+
+.wrapper{
+	width: 50em;
+	margin: 0 auto;
+	background: white;
+    font-family: lobster;
+    vertical-align: center;
+}
+
+p{
+    font-family: "Helvetica";
+}
