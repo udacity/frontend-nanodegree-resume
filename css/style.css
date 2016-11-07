@@ -47,6 +47,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  padding: 1em 0em 1em 0em;
 }
 
 h4 {
@@ -57,11 +58,9 @@ h4 {
 }
 
 h2,
-h3,
 h4,
 h5 {
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+ padding: 10px 5%;
 }
 
 .date-text {

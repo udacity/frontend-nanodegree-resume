@@ -165,7 +165,7 @@ education.display = function(){
     
 	// onlineEducation starts
     
-    $('.education-entry:last').append(HTMLonlineClasses).css("style:none");
+   $('.education-entry:last').append(HTMLonlineClasses).addClass("education-entry");;
 
     for (var i = 0; i < education.titles.length; i++) {
 		
