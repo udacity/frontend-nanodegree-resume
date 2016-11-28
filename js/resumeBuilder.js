@@ -33,7 +33,7 @@ var education = {
             "url": "http://langara.ca/index.html"
         }
     ]
-}
+};
 
 // object 'work'
 var work = {
@@ -46,7 +46,7 @@ var work = {
             "location": "Seoul, Korea"
         }
     ]
-}
+};
 
 // object 'projects'
 
@@ -74,7 +74,7 @@ var projects = {
             "url": "https://doehoonlee.github.io/RED-Academy-project-1/"
         }
     ]
-}
+};
 
 // object 'certificates'
 
@@ -116,10 +116,10 @@ var certificates = {
             "url": "https://www.redacademy.com/"
         }
     ]
-}
+};
 
 // display function 'bio'
-displayBio = function() {
+bio.display = function() {
     $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
     $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
     $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
@@ -132,18 +132,18 @@ displayBio = function() {
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 
         $("#skills").append(formattedSkill);
-    };
+    }
     }
     
     for (msg = 1; msg < bio.welcomeMessage.legth; msg++) {
         var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage[msg]);
         
         $(".welcome-message").append(formattedWelcomeMessage);
-    };
+    }
 };
 
 // display 'bio'
-displayBio();
+bio.display();
 
 // display function 'education'
 education.display = function() {
@@ -164,7 +164,7 @@ education.display = function() {
         
         $(".education-entry:last a").attr("href", education.schools[school].url);
     }
-}
+};
 
 // display 'education'
 education.display();
@@ -184,7 +184,7 @@ displayWork = function() {
         
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);  
-    };
+    }
 };
 
 //display 'work'
@@ -216,7 +216,7 @@ projects.display = function() {
         $(".project-entry:last a").attr("href", projects.projects[project].url);
     }
     $("#project_img").addClass("img_border");
-}
+};
 
 // display 'projects'
 projects.display();
@@ -240,7 +240,7 @@ certificates.display = function () {
         
         $(".certificates-entry:last a").attr("href", certificates.certificates[certificate].url);
     }
-}
+};
 
 // display 'certificates'
 certificates.display();
@@ -257,7 +257,7 @@ $(document).click(function(loc) {
 function locationizer(work_obj) {
     var locationArray = [];
     
-    for (var job in work_obj.jobs) {
+    for (job = 0; job < work_obj.jobs.length; job++) {
         var newLocation = work_obj.jobs[job].location;
         locationArray.push(newLocation);
     }
@@ -265,7 +265,7 @@ function locationizer(work_obj) {
     return locationArray;
 }
 
-console.log(locationizer(work))
+console.log(locationizer(work));
 
 // name internationalization
 function inName(name) {
@@ -279,7 +279,7 @@ function inName(name) {
     name[2] = name[2].toUpperCase();
     
     return name[0] +" "+ name[1] +" "+ name[2];
-};
+}
 
 $("#main").append(internationalizeButton);
 
