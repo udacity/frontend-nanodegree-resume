@@ -11,3 +11,4 @@ var funThoughts =
 console.log(awesomeThoughts);
 console.log(funThoughts);
 
+$("#main").append(funThoughts);
