@@ -11,7 +11,12 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Slabo 27px', serif;
+}
+
+body {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .clear-fix {
@@ -20,13 +25,13 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry, .certificates-entry {
   padding: 0 5%;
 }
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #f5ae23;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +39,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+    color: #666666;
   line-height: 29px;
   padding: 10px;
 }
@@ -68,6 +73,7 @@ h5 {
   color: #999;
   line-height: 16px;
   float: left;
+    margin-right: 10px
 }
 
 .location-text {
@@ -75,14 +81,13 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
-
 }
 
 p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+    font-style: italic;
 }
 
 a {
@@ -100,7 +105,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #f7c155;
   display: none;
 }
 
@@ -109,7 +114,7 @@ a {
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #f7c155;
 }
 
 .white-text {
@@ -118,7 +123,7 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  /*background-color: #f3f3f3;*/
   padding-bottom: 10px;
   clear:both;
 }
@@ -129,7 +134,14 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #595959;
+}
+
+#workExperience, #projects, #education, #certificates, #mapDiv, #lets-connect {
+    background-color: #f3f3f3;
+    border: 2px solid #a6a6a6;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .flex-box {
@@ -143,7 +155,7 @@ a {
 
 .flex-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   padding: 10px;
 }
@@ -199,6 +211,9 @@ span {
   .welcome-message {
     display: none;
   }
+    .flex-column {
+        display: block;
+    }
 }
 
 #map {
@@ -218,4 +233,24 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.project_img {
+    border-radius: 5px;
+    border: 2px solid #808080;
+    background-color: #b3b3b3;
+}
+
+.issued_by {
+    color: #363636;
+}
+
+#header_role {
+    font-size: 20px;
+    color: black;
+    font-style: normal;
+}
+
+#skills-h3 li {
+    display: inline;
 }
