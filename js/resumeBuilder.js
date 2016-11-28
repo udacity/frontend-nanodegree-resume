@@ -1,14 +1,13 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-$("#main").append("lars feste");
+var name = "Lars Feste";
+var role = "Consultant";
 
-var awesomeThoughts = "I am Lars and I am AWESOME!";
-console.log(awesomeThoughts);
+var formattedName = HTMLheaderName.replace("%data%", name);
 
-var funThoughts =
-    awesomeThoughts.replace("AWESOME", "FUN");
-console.log(awesomeThoughts);
-console.log(funThoughts);
+$("#header").append(formattedName);
 
-$("#main").append(funThoughts);
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+
+$("#header").prepend(formattedRole);
