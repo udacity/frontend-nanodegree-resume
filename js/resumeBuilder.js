@@ -107,13 +107,13 @@ var certificates = {
 bio.display = function() {
     // prepend header role
     $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-    
+
     // prepend header name
     $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-    
+
     // append bio picture
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-    
+
     // append welcome message
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
@@ -147,13 +147,13 @@ education.display = function() {
 
         var formattedTitleMajor = formattedTitle + formattedMajor;
         $(".education-entry:last").append(formattedTitleMajor);
-        
+
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
         $(".education-entry:last").append(formattedDegree);
 
         var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedDates);
-        
+
         var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
         $(".education-entry:last").append(formattedLocation);
 
