@@ -2,30 +2,32 @@
 var bio = {
     "name": "Doe Hoon Lee",
     "role": "Front-End Developer",
-    "contacts": [{
+    "contacts": {
         "mobile": "604 - 000 - 0000",
         "email": "genesisparadox@gmail.com",
         "github": "https://github.com/DOEHOONLEE",
         "location": "Vancouver, Canada"
-    }],
-    "welcomeMessage": ["Hello. This is my online resume. Here, you can find out..", "<br>&#183; what I like to do", "<br>&#183; what skills I have", "<br>&#183; what projects I have worked on", "<br>&#183; education background", "<br>&#183; contact information"],
+    },
+    "welcomeMessage": "Hello. This is my online resume. Here, you can find out.. <br>&#183; what I like to do <br>&#183; what skills I have <br>&#183; what projects I have worked on <br>&#183; education background <br>&#183; contact information",
     "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; Python", "&#183; Japanese", "&#183; English", "&#183; Korean"],
-    "bioPic": "images/my_photo.jpg"
+    "biopic": "images/my_photo.jpg"
 };
 
 // object 'education'
 var education = {
     "schools": [{
         "name": "Simon Fraser University",
-        "major": "Cognitive Science",
+        "location": "Burnaby, CANADA",
+        "degree": "B.A.",
+        "majors": "Cognitive Science",
         "dates": "2015 - current",
-        "city": "Burnaby, CANADA",
         "url": "http://www.sfu.ca/"
     }, {
         "name": "Langara College",
-        "major": "University Transfer",
+        "location": "Vancouver, CANADA",
+        "degree": "University Transfer Program",
+        "majors": "General Science",
         "dates": "2014",
-        "city": "Vancouver, CANADA",
         "url": "http://langara.ca/index.html"
     }]
 };
@@ -35,7 +37,7 @@ var work = {
     "jobs": [{
         "employer": "HJangNara",
         "title": "Office assistant",
-        "dates": ['2010'],
+        "dates": "2010",
         "description": "description line",
         "location": "Seoul, Korea"
     }]
@@ -103,9 +105,16 @@ var certificates = {
 
 // display function 'bio'
 bio.display = function() {
+    // prepend header role
     $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+    
+    // prepend header name
     $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-    $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
+    
+    // append bio picture
+    $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+    
+    // append welcome message
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
     if (bio.skills.length > 0) {
@@ -118,11 +127,11 @@ bio.display = function() {
         }
     }
 
-    for (msg = 1; msg < bio.welcomeMessage.legth; msg++) {
-        var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage[msg]);
-
-        $(".welcome-message").append(formattedWelcomeMessage);
-    }
+    // append contacts to the header/ footer
+    $("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+    $("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+    $("#topContacts, #footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+    $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 };
 
 // display 'bio'
@@ -134,16 +143,19 @@ education.display = function() {
         $("#education").append(HTMLschoolStart);
 
         var formattedTitle = HTMLschoolName.replace("%data%", education.schools[school].name);
-        var formattedMajor = HTMLschoolDegree.replace("%data%", education.schools[school].major);
+        var formattedMajor = HTMLschoolDegree.replace("%data%", education.schools[school].majors);
 
         var formattedTitleMajor = formattedTitle + formattedMajor;
         $(".education-entry:last").append(formattedTitleMajor);
+        
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        $(".education-entry:last").append(formattedDegree);
 
         var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedDates);
-
-        var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].city);
-        $(".education-entry:last").append(formattedCity);
+        
+        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+        $(".education-entry:last").append(formattedLocation);
 
         $(".education-entry:last a").attr("href", education.schools[school].url);
     }
@@ -153,7 +165,7 @@ education.display = function() {
 education.display();
 
 // display function 'work'
-displayWork = function() {
+work.display = function() {
     for (job = 0; job < work.jobs.length; job++) {
         $("#workExperience").append(HTMLworkStart);
 
@@ -171,7 +183,7 @@ displayWork = function() {
 };
 
 //display 'work'
-displayWork();
+work.display();
 
 // display function 'project'
 
