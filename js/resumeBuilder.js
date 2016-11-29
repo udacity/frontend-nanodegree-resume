@@ -19,16 +19,22 @@ var education = {
         "name": "Simon Fraser University",
         "location": "Burnaby, CANADA",
         "degree": "B.A.",
-        "majors": "Cognitive Science",
+        "majors": ["Cognitive Science"],
         "dates": "2015 - current",
         "url": "http://www.sfu.ca/"
     }, {
         "name": "Langara College",
         "location": "Vancouver, CANADA",
         "degree": "University Transfer Program",
-        "majors": "General Science",
+        "majors": ["General Science"],
         "dates": "2014",
         "url": "http://langara.ca/index.html"
+    }],
+    "onlineCourses": [{
+        "title": "Front-End Nanodegree",
+        "school": "Udacity",
+        "dates": "ongoing - expected end date : 2017  Spring",
+        "url": "https://www.udacity.com/"
     }]
 };
 
@@ -77,17 +83,11 @@ var certificates = {
         "description": "American Sign Language",
         "url": "https://www.startasl.com/learn-asl-online"
     }, {
-        "title": "Front-End Nanodegree",
-        "issuedBy": "Udacity",
-        "date": "ongoing - expected end date : 2017  Spring",
-        "description": "Front-end web development course",
-        "url": "https://www.coursera.org/"
-    }, {
         "title": "Medical Neuroscience",
         "issuedBy": "Duke University",
         "date": "ongoing - expected end date : 2017  Spring",
         "description": "Online course about medical neuroscience",
-        "url": "https://www.udacity.com/"
+        "url": "https://www.coursera.org/learn/medical-neuroscience/home"
     }, {
         "title": "CPR/AED-HCP",
         "issuedBy": "CANADIAN RED CROSS",
@@ -158,6 +158,21 @@ education.display = function() {
         $(".education-entry:last").append(formattedLocation);
 
         $(".education-entry:last a").attr("href", education.schools[school].url);
+    }
+
+    for (online = 0; online < education.onlineCourses.length; online++) {
+        $(".education-entry:last").append(HTMLonlineClasses);
+
+        var formattedcourseTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
+        $(".education-entry:last").append(formattedcourseTitle);
+
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
+        $(".education-entry:last").append(formattedSchool);
+
+        var formattedcourseDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].dates);
+        $(".education-entry:last").append(formattedcourseDates);
+
+        $(".education-entry:last a").attr("href", education.onlineCourses[online].url);
     }
 };
 
