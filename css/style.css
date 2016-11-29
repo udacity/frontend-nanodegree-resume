@@ -254,3 +254,7 @@ span {
 #skills-h3 li {
     display: inline;
 }
+
+#footerContacts span {
+    color: #666666;
+}
