@@ -258,3 +258,14 @@ span {
 #footerContacts span {
     color: #666666;
 }
+
+.language {
+    position: absolute;
+    top: 65px;
+    right: 25px;
+}
+
+.language a {
+    display: inline;
+    font-size: 12px;
+}
