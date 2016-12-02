@@ -27,6 +27,8 @@ var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
+var HTMLskillsKorStart = '<h3 id="skills-h3">기술들:</h3><ul id="skills" class="flex-column"></ul>';
+var HTMLskillsJapnStart = '<h3 id="skills-h3">Skills:</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
