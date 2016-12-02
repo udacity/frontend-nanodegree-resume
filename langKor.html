@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Resume</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCQdRp-sMML2ABNkpXlQJdtP1AlV2zGVSQ"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <div id="main">
+            <div id="header" class="center-content clear-fix">
+                <div class="language">
+                    <a href="index.html">LANG: English</a>
+                    <a href="langJapn.html">日本語</a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div id="workExperience" class="gray">
+                <h2>경력 사항</h2>
+            </div>
+            <div id="education" class="gray">
+                <h2>학력</h2>
+            </div>
+            <div id="projects">
+                <h2>프로젝트</h2>
+            </div>
+            <div id="certificates" class="gray">
+                <h2>자격증</h2>
+            </div>
+            <div id="mapDiv">
+                <h2>살았던 도시들</h2>
+            </div>
+            <div id="lets-connect" class="dark-gray">
+                <h2 class="orange center-text">Let's Connect</h2>
+                <ul id="footerContacts" class="flex-box"></ul>
+            </div>
+        </div>
+        <script src="js/jQuery.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/resumeBuilder_kor.js"></script>
+        <script>
+            if (document.getElementsByClassName('flex-item').length === 0) {
+                document.getElementById('topContacts').style.display = 'none';
+            }
+            if (document.getElementsByTagName('h1').length === 0) {
+                document.getElementById('header').style.display = 'none';
+            }
+            if (document.getElementsByClassName('work-entry').length === 0) {
+                document.getElementById('workExperience').style.display = 'none';
+            }
+            if (document.getElementsByClassName('project-entry').length === 0) {
+                document.getElementById('projects').style.display = 'none';
+            }
+            if (document.getElementsByClassName('education-entry').length === 0) {
+                document.getElementById('education').style.display = 'none';
+            }
+            if (document.getElementsByClassName('flex-item').length === 0) {
+                document.getElementById('lets-connect').style.display = 'none';
+            }
+            if (document.getElementById('map') === null) {
+                document.getElementById('mapDiv').style.display = 'none';
+            }
+        </script>
+    </body>
+</html>
