@@ -12,14 +12,14 @@ var bio = {
   "role": "Web Developer",
   "contacts": {
     "mobile": "647-533-4349",
-    "email": "piyush@gmail.com",
+    "email": "piyushpatel2005@gmail.com",
     "github": "piyushpatel2005",
     "twitter": "@piyushpatel.ee",
     "location": "Uttarsanda, Gujarat, India"
   },
-  "welcomeMessage": "Hi everyone, Checkout my resume",
-  "skills": ["HTML", "CSS", "JavaScript"],
-  "bioPic": "images/fry.jpg"
+  "welcomeMessage": "Hi everyone, Checkout my resume. I've experience with HTML5 semantic tags, CSS3, JavaScript, Bootstrap, Foundation 5, Git of course, Grunt and much more. If you find this interesting and would like to hire me, please contact me.",
+  "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Foundation 5", "jQuery", "Git", "Grunt"],
+  "bioPic": "images/portfolio.jpg"
 }
 
 var work = {
@@ -98,22 +98,18 @@ $("#header").append(HTMLtwitter);
 HTMLlocation = HTMLlocation.replace("%data%",bio.contacts.location);
 $("#header").append(HTMLlocation);
 
-HTMLbioPic = HTMLbioPic.replace("%data%", "images/fry.jpg");
+HTMLbioPic = HTMLbioPic.replace("%data%", "images/portfolio.jpg");
 $("#header").append(HTMLbioPic);
 
 HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(HTMLwelcomeMsg);
 
-if(bio.skills.length > 0) {
-  $(document).ready(function() {
+
     $("#header").append(HTMLskillsStart);
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    for (var i = 0; i < bio.skills.length; i++) {
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
     $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-  });
+
 }
 
 
