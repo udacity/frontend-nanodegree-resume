@@ -1,15 +1,15 @@
 // object 'bio'
 var bio = {
-    "name": "Doe Hoon Lee",
+    "name": "DOE HOON LEE",
     "role": "Front-End Developer",
     "contacts": {
-        "mobile": "604 - 000 - 0000",
+        "mobile": "010 - 000 - 0000",
         "email": "genesisparadox@gmail.com",
         "github": "https://github.com/DOEHOONLEE",
-        "location": "Vancouver, Canada"
+        "location": "Seoul, Korea"
     },
-    "welcomeMessage": "Hello. This is my online resume. Here, you can find out.. <br>&#183; what I like to do <br>&#183; what skills I have <br>&#183; what projects I have worked on <br>&#183; education background <br>&#183; contact information",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; Python", "&#183; Japanese", "&#183; English", "&#183; Korean"],
+    "welcomeMessage": "私の履歴書 <br>&#183; 好きなこと <br>&#183; できること <br>&#183; プロジェクト <br>&#183; 学校 <br>&#183; 連絡先",
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; Python", "&#183; 日本語", "&#183; 英語", "&#183; 韓国語"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -17,23 +17,23 @@ var bio = {
 var education = {
     "schools": [{
         "name": "Simon Fraser University",
-        "location": "Burnaby, CANADA",
-        "degree": "B.A.",
-        "majors": ["Cognitive Science"],
-        "dates": "2015 - current",
+        "location": "Burnaby, Canada",
+        "degree": "学士",
+        "majors": ["認知科学"],
+        "dates": "2015 - ",
         "url": "http://www.sfu.ca/"
     }, {
         "name": "Langara College",
-        "location": "Vancouver, CANADA",
-        "degree": "University Transfer Program",
-        "majors": ["General Science"],
+        "location": "Vancouver, Canada",
+        "degree": "編入",
+        "majors": ["科学"],
         "dates": "2014",
         "url": "http://langara.ca/index.html"
     }],
     "onlineCourses": [{
         "title": "Front-End Nanodegree",
         "school": "Udacity",
-        "dates": "ongoing - expected end date : 2017  Spring",
+        "dates": "進行中 - 卒業予定日: 2017 春",
         "url": "https://www.udacity.com/"
     }]
 };
@@ -42,10 +42,10 @@ var education = {
 var work = {
     "jobs": [{
         "employer": "HJangNara",
-        "title": "Office assistant",
+        "title": "オフィスワーク",
         "dates": "2010",
         "description": "description line",
-        "location": "Seoul, Korea"
+        "location": "Seoul"
     }]
 };
 
@@ -53,21 +53,21 @@ var work = {
 
 var projects = {
     "projects": [{
-        "title": "Portfolio",
-        "dates": "2016 - November",
-        "description": "This is my portfolio website.",
+        "title": "ポートフォリオウェブサイト",
+        "dates": "2016 - 11月",
+        "description": "私のプロジェクトを紹介するウェブサイト",
         "images": ["images/portfolio.png"],
         "url": "https://doehoonlee.github.io/portfolio/"
     }, {
-        "title": "Animal Chess",
-        "dates": "2016 - September",
-        "description": "Play animal chess!",
+        "title": "動物チェス",
+        "dates": "2016 - 9月",
+        "description": "ライオンとトラの決闘！",
         "images": ["images/animal_chess.png"],
         "url": "https://doehoonlee.github.io/Animal_Chess/play.html"
     }, {
-        "title": "Volunteer Abroad",
+        "title": "海外ボランティア",
         "dates": "2016 - August",
-        "description": "If you would like to do some volunteer work in other countries, check this out! Find out the price, destinations, and positions here",
+        "description": "ボランティアの機会を紹介するページ",
         "images": ["images/volunteer_abroad.png"],
         "url": "https://doehoonlee.github.io/RED-Academy-project-1/"
     }]
@@ -77,28 +77,28 @@ var projects = {
 
 var certificates = {
     "certificates": [{
-        "title": "ASL",
+        "title": "ASL - アメリカの手話",
         "issuedBy": "start ASL",
-        "date": "ongoing - expected end date : 2017  Spring",
-        "description": "American Sign Language",
+        "date": "進行中 - 卒業予定日: 2017 春",
+        "description": "American Sign Language - アメリカの手話",
         "url": "https://www.startasl.com/learn-asl-online"
     }, {
-        "title": "Medical Neuroscience",
+        "title": "医療神経科学",
         "issuedBy": "Duke University",
-        "date": "ongoing - expected end date : 2017  Spring",
-        "description": "Online course about medical neuroscience",
+        "date": "進行中 - 卒業予定日: 2017 春",
+        "description": "神経科学オンラインクラス",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
     }, {
-        "title": "CPR/AED-HCP",
-        "issuedBy": "CANADIAN RED CROSS",
+        "title": "CPR/AED-HCP : 人工呼吸/ 自動体外式除細動器",
+        "issuedBy": "CANADIAN RED CROSS - カナダ赤十字",
         "date": "2016 - November",
-        "description": "CPR-Health Care Provider & AED Courses",
+        "description": "体外式除細動器使用, 人工呼吸などの 応急処置",
         "url": "https://vancouverfirstaid.ca/"
     }, {
-        "title": "Web Developer Foundation",
+        "title": "Web Dev Foundation - ウェブ開発 基礎コース",
         "issuedBy": "RED Academy",
         "date": "2016 - Sept",
-        "description": "Web Development Foundation course. HTML5, CSS3, Responsive Web Design, Git and GitHub, UX&Wireframing, JavaScript, jQuery, LESS",
+        "description": "HTML5, CSS3, RWD, Git and GitHub, UX&Wireframing, JavaScript, jQuery, LESS",
         "url": "https://www.redacademy.com/"
     }]
 };
@@ -118,7 +118,7 @@ bio.display = function() {
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
     if (bio.skills.length > 0) {
-        $("#header").append(HTMLskillsStart);
+        $("#header").append(HTMLskillsJapnStart);
 
         for (skill = 0; skill < bio.skills.length; skill++) {
             var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
