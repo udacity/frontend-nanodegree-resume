@@ -62,8 +62,10 @@ var googleMap = '<div id="map"></div>';
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
-$(document).ready(function() {
-  $('button').click(function() {
+$(document).ready(function()
+{
+  $('button').click(function()
+  {
     var $name = $('#name');
     var iName = inName($name.text()) || function(){};
     $name.html(iName);
@@ -75,8 +77,10 @@ The next few lines about clicks are for the Collecting Click Locations quiz in t
 */
 var clickLocations = [];
 
-function logClicks(x,y) {
-  clickLocations.push(
+function logClicks(x,y)
+{
+  clickLocations.push
+  (
     {
       x: x,
       y: y
@@ -85,7 +89,8 @@ function logClicks(x,y) {
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
-$(document).click(function(loc) {
+$(document).click(function(loc)
+{
   // your code goes here!
 });
 
@@ -102,11 +107,13 @@ var map;    // declares a global map variable
 /*
 Start here! initializeMap() is called when page is loaded.
 */
-function initializeMap() {
+function initializeMap()
+{
 
   var locations;
 
-  var mapOptions = {
+  var mapOptions =
+  {
     disableDefaultUI: true
   };
 
@@ -121,7 +128,8 @@ function initializeMap() {
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
-  function locationFinder() {
+  function locationFinder()
+  {
 
     // initializes an empty array
     var locations = [];
@@ -133,7 +141,8 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
+    education.schools.forEach(function(school)
+    {
       locations.push(school.location);
     });
 
@@ -141,7 +150,8 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    work.jobs.forEach(function(job){
+    work.jobs.forEach(function(job)
+    {
       locations.push(job.location);
     });
 
@@ -153,7 +163,8 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
-  function createMapMarker(placeData) {
+  function createMapMarker(placeData)
+  {
 
     // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat();  // latitude from the place service
@@ -162,7 +173,8 @@ function initializeMap() {
     var bounds = window.mapBounds;            // current boundaries of the map window
 
     // marker is an object with additional data about the pin for a single location
-    var marker = new google.maps.Marker({
+    var marker = new google.maps.Marker(
+    {
       map: map,
       position: placeData.geometry.location,
       title: name
@@ -171,12 +183,14 @@ function initializeMap() {
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
-    var infoWindow = new google.maps.InfoWindow({
+    var infoWindow = new google.maps.InfoWindow
+    ({
       content: name
     });
 
     // hmmmm, I wonder what this is about...
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'click', function()
+    {
       // your code goes here!
     });
 
@@ -193,8 +207,10 @@ function initializeMap() {
   callback(results, status) makes sure the search returned results for a location.
   If so, it creates a new map marker for that location.
   */
-  function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+  function callback(results, status)
+  {
+    if (status == google.maps.places.PlacesServiceStatus.OK)
+    {
       createMapMarker(results[0]);
     }
   }
@@ -203,14 +219,16 @@ function initializeMap() {
   pinPoster(locations) takes in the array of locations created by locationFinder()
   and fires off Google place searches for each location
   */
-  function pinPoster(locations) {
+  function pinPoster(locations)
+  {
 
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
     var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
-      locations.forEach(function(place){
+      locations.forEach(function(place)
+      {
       // the search request object
       var request = {
         query: place

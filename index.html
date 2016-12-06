@@ -36,8 +36,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 </head>
 <body>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
-
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
@@ -122,25 +120,32 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     */
 
 
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if (document.getElementsByClassName('flex-item').length === 0)
+    {
       document.getElementById('topContacts').style.display = 'none';
     }
-    if(document.getElementsByTagName('h1').length === 0) {
+    if (document.getElementsByTagName('h1').length === 0)
+    {
       document.getElementById('header').style.display = 'none';
     }
-    if(document.getElementsByClassName('work-entry').length === 0) {
+    if (document.getElementsByClassName('work-entry').length === 0)
+    {
       document.getElementById('workExperience').style.display = 'none';
     }
-    if(document.getElementsByClassName('project-entry').length === 0) {
+    if (document.getElementsByClassName('project-entry').length === 0)
+    {
       document.getElementById('projects').style.display = 'none';
     }
-    if(document.getElementsByClassName('education-entry').length === 0) {
+    if (document.getElementsByClassName('education-entry').length === 0)
+    {
       document.getElementById('education').style.display = 'none';
     }
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if (document.getElementsByClassName('flex-item').length === 0)
+    {
       document.getElementById('lets-connect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
+    if (document.getElementById('map') === null)
+    {
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
