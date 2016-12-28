@@ -11,11 +11,11 @@ var bio = {
   "name": "Piyush",
   "role": "Web Developer",
   "contacts": {
-    "mobile": "647-533-4349",
-    "email": "piyushpatel2005@gmail.com",
+    "mobile": "xxx-xxx-xxxx",
+    "email": "piyushpatel@gmail.com",
     "github": "piyushpatel2005",
     "twitter": "@piyushpatel.ee",
-    "location": "Uttarsanda, Gujarat, India"
+    "location": "Toronto, Canada"
   },
   "welcomeMessage": "Hi everyone, Checkout my resume. I've experience with HTML5 semantic tags, CSS3, JavaScript, Bootstrap, Foundation 5, Git of course, Grunt and much more. If you find this interesting and would like to hire me, please contact me.",
   "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Foundation 5", "jQuery", "Git", "Grunt"],
