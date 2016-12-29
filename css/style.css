@@ -20,8 +20,11 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.map-entry {
   padding: 0 5%;
+  font-size: 1em;
+  line-height: 1.14em;
 }
 
 h1 {
