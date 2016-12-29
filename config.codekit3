@@ -9,6 +9,16 @@
 	],
 "creatorBuild": "25479",
 "files": {
+	"\/css\/style-min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/style-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/css\/style.css": {
 		"aP": 0,
 		"bl": 0,
@@ -32,6 +42,14 @@
 		"iS": 11676,
 		"oA": 0,
 		"oAP": "\/images\/fry.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/markersman.png": {
+		"ft": 32768,
+		"iS": 14803,
+		"oA": 0,
+		"oAP": "\/images\/markersman.png",
 		"oF": 0,
 		"opt": 0
 		},
