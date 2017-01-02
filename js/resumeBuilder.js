@@ -44,7 +44,7 @@ bio.display = function()
 {
     $("#header").append(populateDefaultTag(HTMLbioPic, bio.biopic));
 
-    displayIfPopulated("#topContacts", HTMLmobile, bio.contacts.location);
+    displayIfPopulated("#topContacts", HTMLmobile, bio.contacts.mobile);
     displayIfPopulated("#topContacts", HTMLemail, bio.contacts.email);
     displayIfPopulated("#topContacts", HTMLgithub, bio.contacts.github);
     displayIfPopulated("#topContacts", HTMLtwitter, bio.contacts.twitter);
@@ -56,7 +56,7 @@ bio.display = function()
 
         for (var skill = 0; skill < bio.skills.length; skill++)
         {
-            displayIfPopulated("#skills-h3", HTMLskills, bio.skills[skill]);
+            displayIfPopulated("#skills", HTMLskills, bio.skills[skill]);
         }
     }
 }
