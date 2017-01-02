@@ -86,7 +86,6 @@ h5
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p
@@ -216,6 +215,21 @@ span
   list-style-type: disc;
 }
 
+#map
+{
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv
+{
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px)
@@ -228,6 +242,10 @@ span
 
 @media only screen and (max-width:900px)
 {
+  h3
+  {
+    font-size: 18px;
+  }
   .biopic
   {
     width: 175px;
@@ -236,6 +254,10 @@ span
 
 @media only screen and (max-width: 750px)
 {
+  h3
+  {
+    font-size: 14px;
+  }
   #lets-connect
   {
     margin-top: 10%;
@@ -263,22 +285,12 @@ span
   }
 }
 
-#map
-{
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv
-{
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
 @media only screen and (max-width: 350px)
 {
+  h3
+  {
+    font-size: 12px;
+  }
   .biopic, .projectpic
   {
     width: 120px;
