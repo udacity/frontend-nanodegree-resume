@@ -30,7 +30,7 @@ h6
 h1
 {
   font-size: 40px;
-  color: #f5a623;
+  color: #f5a734;
   line-height: 48px;
   display: inline;
 }
@@ -39,7 +39,7 @@ h2
 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #000;
   line-height: 29px;
   padding: 10px;
 }
@@ -48,7 +48,7 @@ h3
 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #111;
   line-height: 22px;
 }
 
@@ -74,7 +74,7 @@ h5
 {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #bbb;
   line-height: 16px;
   float: left;
 }
@@ -83,7 +83,7 @@ h5
 {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #bbb;
   line-height: 16px;
   float: right;
 }
@@ -134,7 +134,7 @@ a
 
 .gray
 {
-  background-color: #f3f3f3;
+  background-color: #e3e3e3;
   padding-bottom: 10px;
   clear:both;
 }
@@ -147,7 +147,7 @@ a
 /* TODO: Replace with image later */
 #header
 {
-  background-color: #484848;
+  background-color: #848484;
 }
 
 .flex-box
