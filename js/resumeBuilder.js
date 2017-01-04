@@ -2,24 +2,17 @@
 var defaultPlaceholder = "%data%";
 var urlPlaceholder = "#";
 
-var name = "Steven Miles";
+var subject = "Steven Miles";
 var role = "Front-End Web Developer";
-
-var formattedName = populateDefaultTag(HTMLheaderName, name);
-var formattedRole = populateDefaultTag(HTMLheaderRole, " " + role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
-$("#main").append(internationalizeButton);
-
-$("#mapDiv").append(googleMap);
 
 /*
     Bio
 */
 
 var skills = ["programming (java, HTML, javascript, css, php, sql)", "web design", "software testing"];
+
+var formattedName = populateDefaultTag(HTMLheaderName, subject);
+var formattedRole = populateDefaultTag(HTMLheaderRole, " " + role);
 
 var contact =
 {
@@ -28,20 +21,25 @@ var contact =
     "github" : "howardjmn",
     "twitter" : "",
     "location" : "Minneapolis"
-}
+};
 
 var bio =
 {
-    "name" : name,
+    "name" : subject,
     "role" : role,
     "contacts" : contact,
     "biopic" : "images/cover.jpeg",
     "welcomeMessage" : "Hello World!",
     "skills" : skills
-}
+};
 
 bio.display = function()
 {
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
+
+    $("#mapDiv").append(googleMap);
+
     $("#header").append(populateDefaultTag(HTMLbioPic, bio.biopic));
 
     displayIfPopulated("#topContacts", HTMLmobile, bio.contacts.mobile);
@@ -49,6 +47,12 @@ bio.display = function()
     displayIfPopulated("#topContacts", HTMLgithub, bio.contacts.github);
     displayIfPopulated("#topContacts", HTMLtwitter, bio.contacts.twitter);
     displayIfPopulated("#topContacts", HTMLlocation, bio.contacts.location);
+
+    displayIfPopulated("#footerContacts", HTMLmobile, bio.contacts.mobile);
+    displayIfPopulated("#footerContacts", HTMLemail, bio.contacts.email);
+    displayIfPopulated("#footerContacts", HTMLgithub, bio.contacts.github);
+    displayIfPopulated("#footerContacts", HTMLtwitter, bio.contacts.twitter);
+    displayIfPopulated("#footerContacts", HTMLlocation, bio.contacts.location);
 
     if (bio.skills.length > 0)
     {
@@ -59,9 +63,8 @@ bio.display = function()
             displayIfPopulated("#skills", HTMLskills, bio.skills[skill]);
         }
     }
-}
+};
 
-bio.display();
 
 /*
     Work
@@ -74,6 +77,7 @@ var work =
         {
             "title" : "Software Tester",
             "employer" : "Thomson Reuters",
+            "url" : "http://thomsonreuters.com/en.html",
             "dates" : "2006 - 2014",
             "location" : "Eagan, MN",
             "description" : "developed automated test suites for Westlaw Next backend applications"
@@ -81,6 +85,7 @@ var work =
         {
             "title" : "Software Developer",
             "employer" : "Target Corp.",
+            "url" : "https://corporate.target.com/careers/career-areas/human-resources",
             "dates" : "1998 - 2006",
             "location" : "Minneapolis, MN",
             "description" : "developed web sites to allow internal users to track EDI documents, and external web sites to allow Target trading partners to set up EDI protocols."
@@ -88,12 +93,13 @@ var work =
         {
             "title" : "Software Developer",
             "employer" : "3M Corp.",
+            "url" : "http://www.3m.com/3M/en_US/company-us/",
             "dates" : "1991 - 1998",
             "location" : "St. Paul, MN",
             "description" : "Wrote code to translate EDI documents (such as Purchase Orders and Invoices) from formats sent by trading partners to formats used by 3M internal systems."
         }
     ]
-}
+};
 
 work.display = function()
 {
@@ -101,15 +107,13 @@ work.display = function()
     {
         $("#workExperience").append(HTMLworkStart);
         $(".work-entry:last").append
-            (populateDefaultTag(HTMLworkEmployer, work.jobs[job].employer) +
+            (populateDefaultTag(replaceUrl(HTMLworkEmployer, work.jobs[job].url), work.jobs[job].employer) +
              populateDefaultTag(HTMLworkTitle, work.jobs[job].title) +
              populateDefaultTag(HTMLworkDates, work.jobs[job].dates) +
              populateDefaultTag(HTMLworkLocation, work.jobs[job].location) +
              populateDefaultTag(HTMLworkDescription, work.jobs[job].description));
     }
-}
-
-work.display();
+};
 
 
 /*
@@ -128,8 +132,7 @@ var education =
             "dates" : "1975 - 1979",
             "url" : "https://www.depaul.edu/Pages/default.aspx"
         }
-    ]
-    ,"onlineCourses":
+    ],"onlineCourses":
     [
         {
             "title" : "Front-End Web Developer",
@@ -138,7 +141,7 @@ var education =
             "url" : "https://classroom.udacity.com/nanodegrees/nd001/syllabus"
         }
     ]
-}
+};
 
 
 education.display = function()
@@ -188,9 +191,7 @@ education.display = function()
             displayIfPopulated(".education-entry:last", HTMLonlineDates, formattedOnlineDates);
         }
     }
-}
-
-education.display();
+};
 
 var projects =
 {
@@ -211,7 +212,7 @@ var projects =
             "images" : ["images/sunflower.png", "images/appify.png", "images/bokeh.png"]
         }
     ]
-}
+};
 
 projects.display = function()
 {
@@ -251,14 +252,24 @@ projects.display = function()
             }
         }
     }
-}
+};
 
+
+bio.display();
+work.display();
+education.display();
 projects.display();
+
 
 /**
     Functions
 */
 
+
+/**
+    Update the tag/value pair at the specified page locations.  Do not display
+    the tag/value pair if no value is passed.
+*/
 function displayIfPopulated(pageLoc, tag, value)
 {
     if (value.length > 0)
@@ -267,34 +278,18 @@ function displayIfPopulated(pageLoc, tag, value)
     }
 }
 
+/**
+    Replace the helper.js default data placeholder with the passed value.
+*/
 function populateDefaultTag(tag, value)
 {
-    return replaceValue(tag, defaultPlaceholder, value);
+    return tag.replace(defaultPlaceholder, value);
 }
 
+/**
+    Replace the helper/js default URL placeholder with the passed URL.
+*/
 function replaceUrl(originalValue, newUrl)
 {
-    return replaceValue(originalValue, urlPlaceholder, newUrl);
+    return originalValue.replace(urlPlaceholder, newUrl);
 }
-
-function replaceValue(originalValue, searchString, replaceString)
-{
-    return originalValue.replace(searchString, replaceString);
-}
-
-function inName()
-{
-    var names = bio.name.split(" ");
-
-    if (names.length > 1)
-    {
-        return names[0] + " " + names[1].toUpperCase();
-    }
-
-    return "Name not found";
-}
-
-$(document).click(function(loc)
-{
-    logClicks(loc.pageX, loc.pageY);
-})
