@@ -9,8 +9,8 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -57,7 +57,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
+  padding: 10px 5%;
 
 }
 
@@ -120,7 +120,7 @@ a {
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .dark-gray {
@@ -138,6 +138,13 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   padding: 10px;
 }
 
@@ -200,7 +207,7 @@ span {
   margin: 0 5%;
 }
 
-#map-div {
+#mapDiv {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
