@@ -64,10 +64,32 @@ var projects = {
 			"title": "Sample Project One",
 			"dates": 1999,
 			"description": "So far I've only made small explosives",
-			"images": ["https://image1.com",
-						"https://image2.com"]
+			"images": ["https://image1.com", "https://image2.com"]
 		}
 	]
+}
+
+projects.display = function(){
+	console.log("Projects len ");
+	for(project in projects.projects){
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedTitle);
+
+		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedDates);
+
+		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedDescription);
+
+		if(projects.projects[project].images.length > 0){
+			for(image in projects.projects[project].images){
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImage);
+			}	
+		}
+	}
 }
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -89,4 +111,4 @@ $("#topContacts").append(formattedGitHub);
 $("#topContacts").append(formattedEmail);
 $("#topContacts").append(formattedLocation);
 
-console.log (name);
+projects.display();
