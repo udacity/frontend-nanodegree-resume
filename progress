@@ -1,0 +1,32 @@
+var formattedName = HTMLheaderName.replace("%data%", "Jose C. Sanchez");
+var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Developer");
+ $("#header").prepend(formattedRole);
+ $("#header").prepend(formattedName);
+
+var skills = ["creative ", "bilingual " , "experienced "];
+
+var bio = {
+  "name": "Jose ",
+  "role": "Front-End ",
+  "contact" : {
+    "email": "sanchez@gmail.com ",
+    "mobile": 0750432321,
+    "landline" : 0209001200
+  },
+
+  "message" : "Hello and welcome to my website ",
+  "skills" : skills
+};
+
+bio.city = "London";
+bio["languages"] = "English and Spanish";
+bio.image  = "images/me.jpg";
+
+
+$("#header").append(bio.name);
+$("#header").append(bio.image);
+$("#header").append(bio.contact.email);
+$("#header").prepend(bio.message);
+$("#header").append(bio.skills[0]);
+$("#header").prepend(bio.city);
+$("#header").append(bio.languages);
