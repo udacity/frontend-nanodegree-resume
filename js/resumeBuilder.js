@@ -6,14 +6,14 @@ var skills = [
 // Biographic Info Object
 
 var bio = {
-  "name": "Mike ",
+  "name": "Jose ",
   "role": "Front-End ",
   "contact" : {
-    "email": "myemailmate@gmail.com ",
+    "email": "sanchez@gmail.com ",
     "mobile": 0750432321,
     "git" : "https://github.com/0750kosse"
   },
-  "message" : "Hello and welcome to my website Hello and welcome to my website balbla",
+  "message" : "Hello and welcome to my website!! Thank you for your interest & Why dont we get in touch to discuss projects?",
   "skills" : skills
 };
 bio.city = "London";
@@ -69,23 +69,18 @@ $("#topContacts").append(formattedGit);
 $("#topContacts").append(formattedCity);
 $("#topContacts").append(formattedMessage);
 
-$("#workExperience").prepend(HTMLskillsStart);
-$("#workExperience").prepend(formattedSkills);
-$("#workExperience").prepend(formattedSkills);
-$("#workExperience").prepend(formattedSkills);
+$("#header").append(HTMLskillsStart);
+$("#header").append(formattedSkills);
+$("#header").append(formattedSkills);
+$("#header").append(formattedSkills);
 
 $("#workExperience").append(HTMLworkStart);
-//$("#workExperience").append(Employer);
 $("#workExperience").append(currentRole);
-//$("#workExperience").append(workLocation);
-//PREVIOUS JOB
-//$("#workExperience").prepend(HTMLworkStart);
-//$("#workExperience").append(Employer2);
-//$("#workExperience").append(previousRole);
-//$("#workExperience").append(workLocation2);
 
 $("#education").append(HTMLschoolStart);
 $("#education").append(education["Last School"]);
+
+
 
 
 
