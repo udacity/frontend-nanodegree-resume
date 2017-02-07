@@ -1,32 +1,75 @@
-var formattedName = HTMLheaderName.replace("%data%", "Jose C. Sanchez");
-var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Developer");
- $("#header").prepend(formattedRole);
- $("#header").prepend(formattedName);
-
 var skills = ["creative ", "bilingual " , "experienced "];
 
 var bio = {
-  "name": "Jose ",
-  "role": "Front-End ",
-  "contact" : {
-    "email": "sanchez@gmail.com ",
-    "mobile": 0750432321,
-    "landline" : 0209001200
-  },
+  "name": "Jose C. Sanchez ",
+  "role": "Front-End Developer",
+  "message" : "Hello and welcome to my website!!",
+  "biopic" : "images/fry.jpg",
+  "skills" : "skills"
+  };
+bio.contacts = ["0750432321",
+                "sanchez@gmail.com",
+                "https://github.com/0750kosse",
+                "London"];
 
-  "message" : "Hello and welcome to my website ",
-  "skills" : skills
+var workInfo = {};
+workInfo.JobPosition = ["Retail Manager", "Shop Assistant", "Can Filler"];
+workInfo.Employer = ["Selfridges", "Coca-Cola", "Kronenbourg"];
+workInfo.Years = ["2010 to present", "2007 - 2010", "2000-2007"];
+workInfo.City = ["London", "Ontario", "Amsterdam"];
+
+var projects = {};
+projects.title = ["Selfridges UAE Expansion" , "Shop Refurbishing", "Alcoholic drinks per can"];
+projects.dates = ["Jan 2014 to present", "2008-2010" , "2003"];
+projects.description = ["Exporting Selfrides brand to UAE", "Mens shop floor refurbishing", "Alcohol filler"];
+projects.images = ["", "", ""];
+
+var education = {
+  "schools": [
+      {
+      "name":"Autonoma",
+      "city":"Marbella",
+      "degree":"Perrito Piloto",
+      "years":"2005 to 2010"
+      },
+      {
+      "name":"MIT",
+      "city":"Massachusets",
+      "degree":"Self Driving Car",
+      "years":"2010 to 2017"
+      }
+    ]
 };
 
-bio.city = "London";
-bio["languages"] = "English and Spanish";
-bio.image  = "images/me.jpg";
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+
+var HTMLcontactGeneric;
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[0]);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts[1]);
+var formattedGit = HTMLgithub.replace("%data%", bio.contacts[2]);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts[3]);
 
 
-$("#header").append(bio.name);
-$("#header").append(bio.image);
-$("#header").append(bio.contact.email);
-$("#header").prepend(bio.message);
-$("#header").append(bio.skills[0]);
-$("#header").prepend(bio.city);
-$("#header").append(bio.languages);
+var formattedImage = HTMLbioPic.replace("%data%",bio.biopic);
+var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.message);
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedGit);
+$("#topContacts").append(formattedLocation);
+
+
+$("#header").append(formattedMessage);
+$("#header").append(formattedImage);
+
+
+
+
+
+
+
