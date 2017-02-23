@@ -1,4 +1,4 @@
-var bio { 
+var bio {
     "name": "Lisa Bronwyn",
     "role": "Web Developer",
     "contacts": {
@@ -9,7 +9,7 @@ var bio {
         "location": "San Francisco",
     },
 
-    "welcomeMessage": "I'm worth a million in prizes.",
+    "welcomeMessage": "I'm worth a million in prizes!",
     "skills": [
         "awesomeness, ninja assassin, glamour and espionage.",
     ],
@@ -39,3 +39,6 @@ var education {
         "title": "Data Structures"
     }
   ]
+
+  //why is this not uploading to github?
+  
