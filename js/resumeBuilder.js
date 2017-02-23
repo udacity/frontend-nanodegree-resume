@@ -6,7 +6,7 @@ var bio = {
     "email": "hopeseebok@gmail.com",
     "github": "hopeseebok",
     "twitter": "@hopeseebok",
-    "location": "Shen Zhen"
+    "location": "Shenzhen"
   },
   "welcomeMessage": "CBOK's welcome message",
   "skills": [
@@ -20,14 +20,14 @@ var work = {
     {
       "employer": "OM Cloud",
       "title": "Android developer",
-      "location": "Shen Zhen",
+      "location": "Shenzhen",
       "dates": "Mar.2016 - Now",
       "description": "Who developing Android applications.Designing and developing advanced applications for the Android platform.Unit-testing code for robustness, including edge cases, usability, and general reliability.Bug fixing and improving application performance"
     },
     {
       "employer": "Wayto Tech",
       "title": "Android developer",
-      "location": "Shang Hai",
+      "location": "Shanghai",
       "dates": "July.2015 - Feb.2016",
       "description": "Who developing Android applications.Designing and developing advanced applications for the Android platform.Unit-testing code for robustness, including edge cases, usability, and general reliability.Bug fixing and improving application performance"
     }
@@ -60,7 +60,7 @@ var education = {
     },
     {
       "name": "Central South University",
-      "city": "Chang Sha",
+      "city": "Changsha",
       "degree": "BA",
       "majors": ["CE"],
       "dates": 2011,
@@ -179,3 +179,5 @@ education.display = function() {
   }
 };
 education.display();
+
+$("#mapDiv").append(googleMap);
