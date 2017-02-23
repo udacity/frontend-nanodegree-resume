@@ -52,7 +52,7 @@ var education = {
   "schools": [
     {
       "name": "Hong Kong University",
-      "city": "Hong Kong",
+      "location": "Hong Kong",
       "degree": "Master",
       "majors": ["CE"],
       "dates": 2015,
@@ -60,7 +60,7 @@ var education = {
     },
     {
       "name": "Central South University",
-      "city": "Changsha",
+      "location": "Changsha",
       "degree": "BA",
       "majors": ["CE"],
       "dates": 2011,
@@ -157,7 +157,7 @@ education.display = function() {
     var formattedSchoolName = HTMLschoolName.replace("%data%",school.name);
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",school.degree);
     var formattedSchoolDates = HTMLschoolDates.replace("%data%",school.dates);
-    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",school.city);
+    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",school.location);
     var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",school.majors);
     $(".education-entry:last").append(formattedSchoolName+formattedSchoolDegree);
     $(".education-entry:last").append(formattedSchoolDates);
