@@ -49,18 +49,18 @@ var projects = {
 };
 
 var education = {
-  "school": [
+  "schools": [
     {
-      "name": "Central South University",
-      "city": "Chang Sha",
-      "degree": "Masters",
+      "name": "Hong Kong University",
+      "city": "Hong Kong",
+      "degree": "Master",
       "majors": ["CE"],
       "dates": 2015,
       "url": "http://github.com/hopeseebok"
     },
     {
       "name": "Central South University",
-      "city": "Yi Yang",
+      "city": "Chang Sha",
       "degree": "BA",
       "majors": ["CE"],
       "dates": 2011,
@@ -72,7 +72,7 @@ var education = {
       "title": "Front-End",
       "school": "Udacity",
       "dates": 2017,
-      "url": "https://classroom.udacity.com/me"
+      "url": "https://www.udacity.com"
     }
   ]
 };
@@ -92,6 +92,11 @@ bio.display = function() {
   $("#topContacts").append(fomattedGithub);
   $("#topContacts").append(fomattedTwitter);
   $("#topContacts").append(fomattedLocation);
+  $("#footerContacts").append(formattedMobile);
+  $("#footerContacts").append(fomattedEmail);
+  $("#footerContacts").append(fomattedGithub);
+  $("#footerContacts").append(fomattedTwitter);
+  $("#footerContacts").append(fomattedLocation);
   var formattedBioPic = HTMLbioPic.replace("%data%",bio.bioPic);
   var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
   $("#header").append(formattedBioPic);
@@ -145,3 +150,32 @@ projects.display = function() {
   });
 };
 projects.display();
+
+education.display = function() {
+  education.schools.forEach(function(school){
+    $("#education").append(HTMLschoolStart);
+    var formattedSchoolName = HTMLschoolName.replace("%data%",school.name);
+    var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",school.degree);
+    var formattedSchoolDates = HTMLschoolDates.replace("%data%",school.dates);
+    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",school.city);
+    var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",school.majors);
+    $(".education-entry:last").append(formattedSchoolName+formattedSchoolDegree);
+    $(".education-entry:last").append(formattedSchoolDates);
+    $(".education-entry:last").append(formattedSchoolLocation);
+    $(".education-entry:last").append(formattedSchoolMajor);
+  });
+  if (education.onlineCourses.length > 0) {
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append('<div class="online-entry education-entry"></div>');
+    education.onlineCourses.forEach(function(onlineCourse){
+      var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",onlineCourse.title);
+      var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",onlineCourse.school);
+      var formattedOnlineDates = HTMLonlineDates.replace("%data%",onlineCourse.dates);
+      var formattedOnlineURL = HTMLonlineURL.replace("%data%",onlineCourse.url);
+      $(".online-entry:last").append(formattedOnlineTitle+formattedOnlineSchool);
+      $(".online-entry:last").append(formattedOnlineDates);
+      $(".online-entry:last").append(formattedOnlineURL);
+    });
+  }
+};
+education.display();
