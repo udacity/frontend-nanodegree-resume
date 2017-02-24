@@ -46,10 +46,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAZJ_c0s1kDcRQwz_B4VfasD5iffgIN_dk&libraries=places"></script>
+<!-- api key is: AIzaSyAZJ_c0s1kDcRQwz_B4VfasD5iffgIN_dk -->
 
   <meta name="viewport" content="width=device-width">
-  <script src="js/resumeBuilder.js"></script>
+
 </head>
 <body unresolved>
   <div id="main">
@@ -74,6 +75,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="education" class='gray'>
       <h2>Education</h2>
     </div>
+    <!-- <div id="skills" class='gray'>
+      <h2>Skills</h2>
+    </div> -->
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
@@ -89,7 +93,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
-  <script src="js/resumeBuilder.js"></script>
+<script src="js/resumeBuilder.js"></script>
 
 
   <!--
@@ -101,6 +105,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
 
   <script type="text/javascript">
+
+
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
     // JavaScript, don't forget the closing script tag with the slash (/).
@@ -113,7 +119,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     /*
         an opening and closing set of slash asterisks for block comments.
     */
-
 
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
@@ -133,9 +138,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('letsConnect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
+    if(document.getElementById('map').length === 0) {
       document.getElementById('mapDiv').style.display = 'none';
     }
-  </script>
+
+
 </body>
 </html>
