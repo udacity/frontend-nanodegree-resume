@@ -1,14 +1,4 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -26,7 +16,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #000000;
   line-height: 48px;
   display: inline;
 }
@@ -34,9 +24,10 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #000000;
   line-height: 29px;
   padding: 10px;
+  text-align: center;
 }
 
 h3 {
@@ -105,7 +96,7 @@ a {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #2F4F4F;
 }
 
 .orange-text {
@@ -124,12 +115,11 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #2F4F4F;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #2F4F4F;
 }
 
 .flex-box {
