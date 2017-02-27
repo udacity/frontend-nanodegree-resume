@@ -75,6 +75,9 @@ var education = {
         ]
 };
 
+var locations = {};
+locations.url = ["https://goo.gl/maps/JkvzVz5hYG92"];
+
 
 //PERSONAL INFO SECTION
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -162,8 +165,7 @@ var formattedOnlineCourses4 = HTMLonlineTitle.replace("%data%", education.school
 var OnlineCoursesDates4 = HTMLonlineDates.replace("%data%", education.schools[4].years);
 var OnlineCoursesURL4 = HTMLonlineURL.replace("%data%", education.schools[4].url);
 
-
-
+var mylocations = googleMap.replace("%data%",locations.url[0]);
 
 
 
@@ -243,40 +245,16 @@ $("#projects").append(formattedProjectImage);
     $("#education").append(OnlineCoursesDates3);
     $("#education").append(OnlineCoursesURL3);
 
-
     $("#education").append(formattedOnlineCourses4);
     $("#education").append(OnlineCoursesDates4);
     $("#education").append(OnlineCoursesURL4);
 
+$("#mapDiv").append(mylocations);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
+$("#footerContacts").append(formattedGit);
+$("#footerContacts").append(formattedLocation);
 
 
 /*
