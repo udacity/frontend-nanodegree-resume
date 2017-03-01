@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Helvetica", sans-serif;
 }
 
 .clearfix {
@@ -9,8 +9,7 @@
 }
 
 .project-entry {
-    display: inline-block;
-    width: 20%;
+    display: block;
 }
 
 .education-entry, .work-entry, .project-entry {
@@ -20,7 +19,7 @@
 
 h1 {
     font-size: 40px;
-    color: #F5A623;
+    color: #d89000;
     line-height: 48px;
     display: inline;
 }
@@ -90,16 +89,16 @@ a {
 }
 
 #skillsH3 {
-    color: #F5AE23;
+    color: #d89000;
     display: none;
 }
 
 .orange {
-    background-color: #F5AE23;
+    background-color: #d89000;
 }
 
 .orange-text {
-    color: #F5AE23;
+    color: #d89000;
 }
 
 .white-text {
@@ -119,7 +118,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-    background-color: #484848;
+    background-color: #680000;/*484848*/
 }
 
 .flex-box {

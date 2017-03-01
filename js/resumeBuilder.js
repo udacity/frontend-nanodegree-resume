@@ -142,18 +142,6 @@ bio.display = function(item){
 
 bio.display();
 
-// Skills
-// bio.skills.display = function() {
-//     $("#header").append(HTMLskillsStart);
-//     bio.skills.forEach(function(item) {
-
-//         var formattedSkill = HTMLskills.replace(data, item);
-//         $("#skills").append(formattedSkill);
-//     });
-// }
-
-// bio.skills.display();
-
 //Work
 work.display = function() {
     work.jobs.forEach(function(item) {
@@ -187,17 +175,16 @@ projects.display =function() {
         var formattedTitle = HTMLprojectTitle.replace(data, item.title);
         var formattedDates = HTMLprojectDates.replace(data, item.dates);
         var formattedDescription = HTMLprojectDescription.replace(data, item.description);
-        var formattedImage = HTMLprojectImage.replace(data, item.images);
+
+        item.images.forEach(function(image){
+            var formattedImage = HTMLprojectImage.replace(data, item.images);
+            $(".project-entry:last").append(formattedImage);
+        })
 
         $(".project-entry:last").append(formattedTitle);
         $(".project-entry:last").append(formattedDates);
         $(".project-entry:last").append(formattedDescription);
 
-        for(var i =0; formattedImage.length>3; i++){
-            // console.log(formattedImage)
-            $(".project-entry:last").append(formattedImage);
-            formattedImage = 3;
-         }
 
     });
 };
