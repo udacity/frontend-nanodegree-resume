@@ -1,7 +1,7 @@
 * {
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 .clear-fix {
@@ -16,7 +16,7 @@
 
 h1 {
   font-size: 40px;
-  color: #000000;
+  color: #FFFFFF;
   line-height: 48px;
   display: inline;
 }
@@ -49,9 +49,7 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
 }
-
 
 .date-text {
   font-style: italic;
