@@ -10,7 +10,7 @@ var bio = {
   },
   welcomeMessage : "Welcome to my Resume!",
   skills : ["Awesomeness", "Android", "iOS", "Front End Web"],
-  bioPic : "images/fry.jpg",
+  biopic : "images/fry.jpg",
   display: function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -20,17 +20,24 @@ var bio = {
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 
-    $("#header").prepend(formattedPic);
-    $("#header").prepend(formattedWelcomeMsg);
-    $("#header").prepend(formattedLocation);
-    $("#header").prepend(formattedTwitter);
-    $("#header").prepend(formattedGitHub);
-    $("#header").prepend(formattedEmail);
-    $("#header").prepend(formattedMobile);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
+    $("#header").append(formattedPic);
+    $("#header").append(formattedWelcomeMsg);
+
+    $("#topContacts").append(formattedMobile);
+    $("#topContacts").append(formattedEmail);
+    $("#topContacts").append(formattedGitHub);
+    $("#topContacts").append(formattedTwitter);
+    $("#topContacts").append(formattedLocation);
+
+    $("#footerContacts").append(formattedMobile);
+    $("#footerContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedGitHub);
+    $("#footerContacts").append(formattedTwitter);
+    $("#footerContacts").append(formattedLocation);
 
     if (bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
@@ -47,7 +54,7 @@ var education = {
       name: "Freedom High School",
       location: "South Riding",
       degree: "Advanced Diploma",
-      majors: "Computer Science",
+      majors: ["Computer Science"],
       dates: "September 2011 - June 2015",
       url: "https://www.lcps.org/fhs"
    }
@@ -67,17 +74,19 @@ var education = {
       var formattedName = HTMLschoolName.replace("%data%", element.name);
       $(".education-entry:last").append(formattedName);
 
+      var formattedDegree = HTMLschoolDegree.replace("%data%", element.degree);
+      $(".education-entry:last").append(formattedDegree);
+
       var formattedDates = HTMLschoolDates.replace("%data%", element.dates);
       $(".education-entry:last").append(formattedDates);
 
       var formattedLocation = HTMLschoolLocation.replace("%data%", element.location);
       $(".education-entry:last").append(formattedLocation);
 
-      var formattedMajor = HTMLschoolMajor.replace("%data%", element.majors);
-      $(".education-entry:last").append(formattedMajor);
-
-      // var formattedDegree = HTMLschoolDegree.replace("%data%", element.degree);
-      // $(".education-entry:last").append(formattedDegree);
+      element.majors.forEach(function(major) {
+        var formattedMajor = HTMLschoolMajor.replace("%data%", major);
+        $(".education-entry:last").append(formattedMajor);
+      });
     });
 
     $(".education-entry:last").append(HTMLonlineClasses);
@@ -96,7 +105,7 @@ var education = {
       $(".education-entry:last").append(formattedSchool);
     });
   }
-}
+};
 
 var work = {
   jobs: [
@@ -139,6 +148,9 @@ var work = {
 
       $(".work-entry:last").append(formattedEmployerTitle);
 
+      var formattedLocation = HTMLworkLocation.replace("%data%", element.location);
+      $(".work-entry:last").append(formattedLocation);
+
       var formattedDates = HTMLworkDates.replace("%data%", element.dates);
       $(".work-entry:last").append(formattedDates);
 
@@ -174,7 +186,7 @@ var projects = {
         element.images.forEach(function(innerElement) {
           var formattedImage = HTMLprojectImage.replace("%data%", innerElement);
           $(".project-entry:last").append(formattedImage);
-        })
+        });
       }
     });
   }
