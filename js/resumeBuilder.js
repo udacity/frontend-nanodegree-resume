@@ -16,7 +16,7 @@ var bio = {
     "skills": [
         "HTML", "CSS", "Javascript", "jQuery"
     ],
-    "biopic": "images/me",
+    "biopic": "images/fry.jpg",
     display: function () {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -90,8 +90,8 @@ var projects = {
             "dates": "xxxx-xxxx",
             "description": "in progress",
             "images": [
-                "https://www.example.com/p1-1",
-                "https://www.example.com/p1-2"
+                "images/fry.jpg",
+                "images/197x148.gif"
             ]
         }
     ],
@@ -110,12 +110,12 @@ var projects = {
 
             if (project.images.length > 0){
                 project.images.forEach(function (image) {
-                    var formattedImage = HTMLprojectImage.replace("%data%", project.image);
-                    $(".project-entry:last").append(formattedImage);
+                    var formattedProjectImage = HTMLprojectImage.replace("%data%", project.image);
+                    $(".project-entry:last").append(formattedProjectImage);
                 });
-            }
-        });
-    }
+                }
+            });
+        }
 };
 
 bio.display();
