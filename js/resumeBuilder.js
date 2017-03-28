@@ -26,4 +26,64 @@ var bio = {
     }
 };
 
+
+
+var education = {
+    "schools": [
+        {
+            "name": "ph",
+            "location": "ph",
+            "degree": "ph",
+            "majors": "ph",
+            "dates": "xxxx-xxxx",
+            "url": "http://www.example.com"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "ph",
+            "school": "ph",
+            "dates": "xxxx-xxxx",
+            "url": "http://www.example.com"
+        }
+    ],
+    display: function () {
+
+    }
+
+
+};
+
+var work = {
+    "jobs": [
+        {
+            "employer": "placeholder",
+            "title": "placeholder",
+            "location": "placeholder",
+            "dates": "xxxx-xxxx",
+            "description": "placeholder"
+        }
+    ],
+    display: function () {
+        
+    }
+};
+
+var projects = {
+    "projects": [
+        {
+            "title": "Sample Project 1",
+            "dates": "xxxx-xxxx",
+            "description": "in progress",
+            "images": [
+                "https://www.example.com/p1-1",
+                "https://www.example.com/p1-2"
+            ]
+        }
+    ],
+    display: function () {
+        
+    }
+};
+
 bio.display();
