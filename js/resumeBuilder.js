@@ -20,8 +20,22 @@ var bio = {
     display: function () {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        $("#header").prepend(formattedRole);
-        $("#header").prepend(formattedName);
+        $("#header").prepend(formattedRole, formattedName);
+
+        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+        var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+        var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        var formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedTwitter + formattedLocation;
+        $("#header").append(formattedContacts);
+        $("#topContacts, #footerContacts").append(HTMLcontactGeneric);
+
+        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        $("#header").append(formattedWelcomeMsg);
+
+        var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+        $("#header").append(formattedBioPic);
     }
 };
 
