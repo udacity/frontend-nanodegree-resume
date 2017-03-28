@@ -19,10 +19,9 @@ var bio = {
     "biopic": "images/me",
     display: function () {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
-        $("#header").append(formattedName);
-
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        $("#header").append(formattedRole);
+        $("#header").prepend(formattedRole);
+        $("#header").prepend(formattedName);
 
     }
 };
