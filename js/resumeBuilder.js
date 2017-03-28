@@ -26,8 +26,6 @@ var bio = {
     }
 };
 
-
-
 var education = {
     "schools": [
         {
@@ -67,6 +65,7 @@ var work = {
     display: function () {
         work.jobs.forEach(function (job) {
             $("#workExperience").append(HTMLworkStart);
+
             var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
             var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
             var formattedEmployerTitle = formattedEmployer + formattedTitle;
@@ -97,9 +96,28 @@ var projects = {
         }
     ],
     display: function () {
-        
+        projects.projects.forEach(function (project) {
+            $("#projects").append(HTMLprojectStart);
+
+            var formattedProjectTitle = HTMLprojectTitle.replace("%data%", project.title);
+            $(".project-entry:last").append(formattedProjectTitle);
+
+            var formattedProjectDates = HTMLprojectDates.replace("%data%", project.dates);
+            $(".project-entry:last").append(formattedProjectDates);
+
+            var formattedProjectDescription = HTMLprojectDescription.replace("%data%", project.description);
+            $(".project-entry:last").append(formattedProjectDescription);
+
+            if (project.images.length > 0){
+                project.images.forEach(function (image) {
+                    var formattedImage = HTMLprojectImage.replace("%data%", project.image);
+                    $(".project-entry:last").append(formattedImage);
+                });
+            }
+        });
     }
 };
 
 bio.display();
 work.display();
+projects.display();
