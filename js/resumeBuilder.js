@@ -22,7 +22,7 @@ var bio = {
         $("#header").append(formattedName);
 
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        $(".header:last").append(formattedRole);
+        $("#header").append(formattedRole);
 
     }
 };
