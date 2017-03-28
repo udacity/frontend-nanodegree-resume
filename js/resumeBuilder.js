@@ -110,7 +110,7 @@ var projects = {
 
             if (project.images.length > 0){
                 project.images.forEach(function (image) {
-                    var formattedProjectImage = HTMLprojectImage.replace("%data%", project.image);
+                    var formattedProjectImage = HTMLprojectImage.replace("%data%", project.images);
                     $(".project-entry:last").append(formattedProjectImage);
                 });
                 }
