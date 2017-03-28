@@ -65,7 +65,22 @@ var work = {
         }
     ],
     display: function () {
-        
+        work.jobs.forEach(function (job) {
+            $("#workExperience").append(HTMLworkStart);
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+            var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+            var formattedEmployerTitle = formattedEmployer + formattedTitle;
+            $(".work-entry:last").append(formattedEmployerTitle);
+
+            var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
+            $(".work-entry:last").append(formattedLocation);
+
+            var formattedWorkDates = HTMLworkDates.replace("%data%", job.dates);
+            $(".work-entry:last").append(formattedWorkDates);
+
+            var formattedWorkDescription = HTMLworkDescription.replace("%data%", job.description);
+            $(".work-entry:last").append(formattedWorkDescription);
+        });
     }
 };
 
@@ -87,3 +102,4 @@ var projects = {
 };
 
 bio.display();
+work.display();
