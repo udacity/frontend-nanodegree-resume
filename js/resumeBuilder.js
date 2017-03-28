@@ -20,7 +20,8 @@ var bio = {
     display: function () {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        $("#header").prepend(formattedRole, formattedName);
+        $("#header").prepend(formattedRole);
+        $("#header").prepend(formattedName);
 
         var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
         var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -28,7 +29,7 @@ var bio = {
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         var formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedTwitter + formattedLocation;
-        $("#header").append(formattedContacts);
+        $("#topContacts").append(formattedContacts);
         $("#topContacts, #footerContacts").append(HTMLcontactGeneric);
 
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -36,6 +37,14 @@ var bio = {
 
         var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
         $("#header").append(formattedBioPic);
+
+        if (bio.skills.length > 0){
+            $("#header").append(HTMLskillsStart);
+            bio.skills.forEach(function (skill) {
+               var formattedSkills = HTMLskills.replace("%data%", skill);
+               $("#header").append(formattedSkills);
+            });
+        }
     }
 };
 
