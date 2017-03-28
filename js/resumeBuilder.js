@@ -41,7 +41,7 @@ var bio = {
             $("#header").append(HTMLskillsStart);
             bio.skills.forEach(function (skill) {
                var formattedSkills = HTMLskills.replace("%data%", skill);
-               $("#header").append(formattedSkills);
+               $("#skills").append(formattedSkills);
             });
         }
     }
