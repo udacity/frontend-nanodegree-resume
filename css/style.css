@@ -130,6 +130,11 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+  padding-top: 0;
+}
+
+#topContacts {
+  padding-top: 0;
 }
 
 .flex-box {
@@ -173,6 +178,20 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+button {
+  margin: 0 auto;
+}
+
+.button {
+  background: #ffffff;
+  border: 0;
+  padding: 3px, 6px;
+  font-weight: bold;
+  color: #f5ae23;
+  width: 10%;
+  margin-left: 45%;
 }
 
 /* Media queries to handle various device widths */
