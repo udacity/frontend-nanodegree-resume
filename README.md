@@ -26,7 +26,7 @@ And your repository will include the following files:
 * **js/resumeBuilder.js**: This file is empty. You should write your code here.
 * **js/jQuery.js**: The jQuery library.
 * **css/style.css**: Contains all of the CSS needed to style the page.
-* **README.md**:
+-* **README.md**:
 The GitHub readme file.
 * and some images in the images directory.
 
