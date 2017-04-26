@@ -2,7 +2,7 @@ var bio = {
     "name" : "Damian Galeano",
     "role": "Web Developer",
     "contacts": {
-        "mobile": "650-555-5555",
+        "mobile": "300-363-8990",
         "email": "dj.damian.b@hotmail.com",
         "github": "DamianGaleano9",
         "twitter": "@Damian9",
@@ -14,6 +14,46 @@ var bio = {
     ],
     "bioPic": "images/fry.jpg"
 };
+
+var work = {
+    "jobs": [ 
+         {
+		"employer": "Programer",
+		"title": "Database Developer",
+		"location": "Medellin",
+		"datesWorked": 2011,
+		"description": "text"
+	     },
+    ]
+}
+
+var education = {
+"schools": [
+    {
+        "name": "University of Medellin",
+        "location": "Antioquia",
+        "degree": "Engeneer",
+        "major": "civil sengineering",
+        "dates": "2007 - 2015",
+        "url": "http://www.udem.edu.co/"
+    },
+],
+
+"onlineClasses":[
+	{
+		"title": "Intro to HTML and CSS",
+		"school": "Udacity",
+		"dates": "2016",
+		"url": "https://www.udacity.com/"
+	},
+	{
+		"title": "github courses",
+		"school": "Udacity",
+		"dates": "2016",
+		"url": "https://www.udacity.com/"
+	}
+]
+}
 
 var name = bio.name;
 var formattedName = HTMLheaderName.replace("%data%", name);
