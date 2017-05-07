@@ -6,7 +6,7 @@ This is empty on purpose! Your code to build the resume will go here.
  var role = "Web Developer"
  var formattedRole = HTMLheaderRole.replace("%data%", role);
  var work = {
- 	"position":"Web Developer &nbsp;",
+ 	"title":"Web Developer &nbsp;",
  	"employer":"MLMIC &nbsp;",
  	"years":"14 &nbsp;",
  	"city" :"Latham &nbsp;"
@@ -22,6 +22,9 @@ This is empty on purpose! Your code to build the resume will go here.
 	"yearsAttended":"2 &nbsp;",
  	"city":"Marlboro &nbsp;"
  }
+ var bio = {
+ 	"skills":["coding","sleeping","yoga","writing"]
+ }
 
  $("#header").prepend([formattedRole]);
  $("#header").prepend([formattedName]);
@@ -35,3 +38,23 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#main").append([education.school]);
  $("#main").append([education.yearsAttended]);
  $("#main").append([education.city]);
+
+ if (bio.skills > 0) {
+ 	$("#header").prepend([HTMLskillsStart]);
+ 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+ 	$("#skills").append(formattedSkill);
+ 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+ 	$("#skills").append(formattedSkill);
+ 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+ 	$("#skills").append(formattedSkill);
+ 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+ 	$("#skills").append(formattedSkill);
+ }
+
+ for(job in work.jobs) {
+ 	$("#workExperience").append(HTMLworkStart);
+ 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+ 	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+ 	var formattedEmployerTitle = formattedEmployer + " HERE " + formattedTitle;
+ 	$(".work-entry:last").append(formattedEmployerTitle);
+ }
