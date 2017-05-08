@@ -1,5 +1,5 @@
 var bio = {
-    "name" : "Damian Galeano",
+    "name": "Damian Galeano",
     "role": "Web Developer",
     "contacts": {
         "mobile": "300-363-8990",
@@ -10,49 +10,49 @@ var bio = {
     },
     "welcomeMessage": "lorem ipsum dolor sit amet etc etc etc.",
     "skills": [
-        "HTML", "CSS", "DJ"
+        "HTML", "CSS", "DJ", "PROGRAMER"
     ],
     "bioPic": "images/fry.jpg"
 };
 
 var work = {
-    "jobs": [ 
-         {
-		"employer": "Programer",
-		"title": "Database Developer",
-		"location": "Medellin",
-		"datesWorked": 2011,
-		"description": "text"
-	     },
+    "jobs": [
+        {
+            "employer": "Programer",
+            "title": "Database Developer",
+            "location": "Medellin",
+            "datesWorked": 2011,
+            "description": "text"
+        },
     ]
 }
 
 var education = {
-"schools": [
-    {
-        "name": "University of Medellin",
-        "location": "Antioquia",
-        "degree": "Engeneer",
-        "major": "civil sengineering",
-        "dates": "2007 - 2015",
-        "url": "http://www.udem.edu.co/"
-    },
-],
+    "schools": [
+        {
+            "name": "University of Medellin",
+            "location": "Antioquia",
+            "degree": "Engeneer",
+            "major": "civil sengineering",
+            "dates": "2007 - 2015",
+            "url": "http://www.udem.edu.co/"
+        },
+    ],
 
-"onlineClasses":[
-	{
-		"title": "Intro to HTML and CSS",
-		"school": "Udacity",
-		"dates": "2016",
-		"url": "https://www.udacity.com/"
-	},
-	{
-		"title": "github courses",
-		"school": "Udacity",
-		"dates": "2016",
-		"url": "https://www.udacity.com/"
-	}
-]
+    "onlineClasses": [
+        {
+            "title": "Intro to HTML and CSS",
+            "school": "Udacity",
+            "dates": "2016",
+            "url": "https://www.udacity.com/"
+        },
+        {
+            "title": "github courses",
+            "school": "Udacity",
+            "dates": "2016",
+            "url": "https://www.udacity.com/"
+        }
+    ]
 }
 
 var name = bio.name;
