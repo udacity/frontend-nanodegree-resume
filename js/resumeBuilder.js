@@ -55,6 +55,19 @@ var education = {
     ]
 }
 
+ if(bio.skills.length > 0) {
+     $("#header").append(HTMLskillsStart);
+
+     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+     $("#skills").append(formattedSkill);
+}
+
 var name = bio.name;
 var formattedName = HTMLheaderName.replace("%data%", name);
 
@@ -88,7 +101,7 @@ $("#header").append(formattedBioPic);
 var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", welcomeMessage);
 $("#header").append(formattedWelcomeMessage); */
 
-var skills = bio.skills;
-var formattedSkills = HTMLskills.replace("%data%", skills);
-$("#header").append(HTMLskillsStart);
-$("#skills").append(formattedSkills);
+// var skills = bio.skills;
+// var formattedSkills = HTMLskills.replace("%data%", skills);
+// $("#header").append(HTMLskillsStart);
+// $("#skills").append(formattedSkills);
