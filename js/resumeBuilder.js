@@ -1,3 +1,5 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+$("#main").append(["Madison Hug"]);
+
+var = awesomeThoughts;
+awesomeThoughts = "I am Madison and I am awesome!";
+console.log(awesomeThoughts);
