@@ -8,7 +8,7 @@ var bio = {
         "twitter": "@Damian9",
         "location": "Medellin"
     },
-    "welcomeMessage": "lorem ipsum dolor sit amet etc etc etc.",
+    "welcomeMessage": "Welcome to my bio",
     "skills": [
         "HTML", "CSS", "DJ", "PROGRAMER"
     ],
@@ -21,9 +21,16 @@ var work = {
             "employer": "Programer",
             "title": "Database Developer",
             "location": "Medellin",
-            "datesWorked": 2011,
-            "description": "text"
+            "dates": 2011,
+            "description": "Beginning with programming in about 2015, I based my learning on courses offered online thanks to this my skills grow every day"
         },
+        {
+            "employer": "DJ",
+            "title": "Produccer",
+            "location": "Medellin",
+            "dates": 2005,
+            "description": "This job changed my life and I opened many doors to meet people places feel the music"
+        }
     ]
 }
 
@@ -56,16 +63,28 @@ var education = {
 }
 
  if(bio.skills.length > 0) {
-     $("#header").append(HTMLskillsStart);
-
-     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    $("#header").append(HTMLskillsStart);
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
     $("#skills").append(formattedSkill);
     formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
     $("#skills").append(formattedSkill);
     formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
     $("#skills").append(formattedSkill);
     formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-     $("#skills").append(formattedSkill);
+    $("#skills").append(formattedSkill);
+}
+
+for(job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
+    $(".work-entry:last").append(formattedEmployerTitle);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    $(".work-entry:last").append(formattedDates);
+    var formatedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formatedDescription);
+
 }
 
 var name = bio.name;
