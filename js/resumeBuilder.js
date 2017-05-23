@@ -37,10 +37,10 @@ var work = {
 var projectData= {
     "projects": [
         {
-            "title": "Her and Blossom",
-            "dates": "November 2015",
-            "description": "Composed music for two short films by Li Xiaofeng. Both were featured in a high-profile online event hosted by Sina",
-            "images":["images/fry.jpg"]
+            "title": "Super Rentals",
+            "dates": "November 2016",
+            "description": "Create an application to control the flow of available rooms and hotels",
+            "images":"images/fry.jpg"
         }
     ]
 }
@@ -112,12 +112,12 @@ projectData.display = function() {
         var formattedDescription = HTMLprojectDescription.replace("%data%", projectData.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
 
-        if(projects.projects[project].image.length > 0) {
-            for (image in projectData.projects[project].images) {
-                var formattedImage = HTMLprojectImage.replace("%data%", projectData.projects.image[image]);
-                $(".project-entry:last").append(formattedImage);
-            }
-        } 
+        // if(projectData.projects[project].image.lenght > 0) {
+        //     for (image in projectData.projects[project].images) {
+        //         var formattedImage = HTMLprojectImage.replace("%data%", projectData.projects.image[image]);
+        //         $(".project-entry:last").append(formattedImage);
+        //     }
+        // } 
     }
 }
 
