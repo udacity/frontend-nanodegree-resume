@@ -34,13 +34,13 @@ var work = {
     ]
 }
 
-var project= {
+var projectData= {
     "projects": [
         {
             "title": "Her and Blossom",
             "dates": "November 2015",
             "description": "Composed music for two short films by Li Xiaofeng. Both were featured in a high-profile online event hosted by Sina",
-            "images": "images/fry.jpg"
+            "images":["images/fry.jpg"]
         }
     ]
 }
@@ -99,27 +99,29 @@ function displayWork() {
 }
 displayWork();  
 
-projects.display = function() {
-    for (project in projects.projects) {
+projectData.display = function() {
+    for (project in projectData.projects) {
         $("#projects").append(HTMLprojectStart);
 
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projectData.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
 
-        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        var formattedDates = HTMLprojectDates.replace("%data%", projectData.projects[project].dates);
         $(".project-entry:last").append(formattedDates);
 
-        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projectData.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
 
         if(projects.projects[project].image.length > 0) {
-            for (image in projects.projects[project].images) {
-                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects.image[image]);
+            for (image in projectData.projects[project].images) {
+                var formattedImage = HTMLprojectImage.replace("%data%", projectData.projects.image[image]);
                 $(".project-entry:last").append(formattedImage);
             }
         } 
     }
 }
+
+projectData.display();
 
 
 
@@ -152,9 +154,9 @@ var bioPic = bio.bioPic;
 var formattedBioPic = HTMLbioPic.replace("%data%", bioPic);
 $("#header").append(formattedBioPic);
 
- var welcomeMessage = bio.welcomeMessage;
-var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", welcomeMessage);
-$("#header").append(formattedWelcomeMessage);
+//  var welcomeMessage = bio.welcomeMessage;
+// var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", welcomeMessage);
+// $("#header").append(formattedWelcomeMessage);
 
  var skills = bio.skills;
  var formattedSkills = HTMLskills.replace("%data%", skills);
