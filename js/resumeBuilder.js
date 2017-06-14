@@ -1,27 +1,32 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-/*
-var awesomeThoughts = "I am Anthony and I am AWESOME!";
-console.log(awesomeThoughts);
-
-var funThoughts = awesomeThoughts.replace("AWESOME","FUN");
-console.log(funThoughts);
-
-$("#main").append(funThoughts);
-*/
-var name = "Anthony Chen";
-var role = "Javascript-resume-learning";
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-$("#header").prepend(role);
-$("#header").prepend(formattedName);
-var skills = ["awesomeness", "programming", "teaching", "JS"];
-
 var bio = {
-    "name" : "Anthony",
-    "age" : 29,
-    "skills" : skills
+    "name": "Anthony Chen",
+    "contact": "chen.anthony.1109@gmail.com"
+    "skills" :["programming", "html", "css"]
 };
 
-$("#main").append(bio.name);
+var work = {
+    "name": "Shine Electronics",
+    "position": "IT/MIS Administrator",
+    "year": "February 2016 to present"
+};
+
+var projects = {
+    "projects": "JavaScript Resume Project"
+};
+
+var education = {
+    "schools": [
+    {
+        "name": "Baruch College",
+        "city": "New York, NY 10010",
+        "degree": "BA"
+        "major": "Economics"
+    },
+    {
+        "name": "Queens College",
+        "city": "Flushing, NY 11367",
+        "degree": "BA",
+        "major": "CompSci"
+    }
+    ]
+};
