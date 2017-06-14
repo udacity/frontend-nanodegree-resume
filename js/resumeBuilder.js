@@ -26,7 +26,7 @@ var education = {
         "name": "Queens College",
         "city": "Flushing, NY 11367",
         "degree": "BA",
-        "major": "CompSci"
+        "major": "Computer Science"
     }
     ]
 };
