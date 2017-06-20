@@ -1,5 +1,5 @@
 /*
-
+NO TENGO IDEA QUE ESTOY HACIENDO
 This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
 
 Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
