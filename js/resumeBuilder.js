@@ -6,9 +6,9 @@ This is empty on purpose! Your code to build the resume will go here.
 var formattedName = HTMLheaderName.replace("%data%","Satoe Yokoyama");
 var formattedRole = HTMLheaderRole.replace("%data%","Aspiring Data Scientist");
 
-$("#header").append(formattedName);
-$("#header").append(formattedRole);
-var  skills = ["Laugh","Arts","Programming","Tango"];
+$("#myInfo").append(formattedName);
+$("#myInfo").append(formattedRole);
+var  skills = ["JavaScript","HTML","R","Python"];
 var bio = {
   "name": "Satoe Yokoyama",
   "age" : 21,
@@ -28,6 +28,13 @@ var bio = {
 
 var work = {
   "jobs": [
+    {
+      "position": "Coding Instructor",
+      "employer" : "Samurai Engineer Juku",
+      "duration" : "May 2017 ~ ",
+      "city" :"Online Tutoring",
+      "description" : "One-on-one online coding lessons for Japanese with personalized materials depending on their goals.",
+    },
     {
       "position": "Student Outreach Team Lead",
       "employer" : "Data Science Education Program @ UC Berkeley",
@@ -52,7 +59,7 @@ var projects = {
     {
       "title":"The All Women Hackathon San Francisco",
       "date" : "Mar 18 2017",
-      "description" : "We provided a solution to reduce the stigma on STEM education among middle schoolers by creating a website to explore the field related to their interests.",
+      "description" : "Provided a solution to reduce the stigma on STEM education among middle schoolers by creating a website to explore the field related to their interests.",
       "images":{}
     },
      {
@@ -60,7 +67,13 @@ var projects = {
        "date" : "Mar 2017 ~ May 2017",
        "description" : "A survey was conducted to know the impact of social media use on individual's mental health. This project was started in PSYCH 101 at UC Berkeley as an individual project for the class.",
        "images":{}
-      }
+     },
+      {
+        "title":"Data Science for India Curricurum Design Team",
+        "date" : "May 2017 ~ ",
+        "description" : "Student-lead project started from University of California Berkeley to make data science education accessible to highschool and college students.",
+        "images":{}
+       }
   ]
 };
 var education = {
@@ -104,7 +117,7 @@ $("#main").append(work["position"]);
 $("#education").append(education["name"]);
 
 if (bio.skills.length >0) {
-  $("#header").append(HTMLskillsStart);
+  $("#myInfo").append(HTMLskillsStart);
   var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
   $("#skills").append(formattedSkill);
   formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
@@ -131,11 +144,22 @@ function displayWork(){
     $(".work-entry:last").append(formattedDates);
     var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
     $ (".work-entry:last").append(formattedDescription);
-
-
   }}
 
 displayWork();
+
+for (school in education.schools){
+  $("#education").append(HTMLschoolStart);
+  var formattedschoolName = HTMLschoolName.replace("%data%",education.schools[school].name);
+  var formattedschoolDegree = HTMLschoolDegree.replace("%data%",education.schools[school].degree);
+  $(".education-entry:last").append(formattedschoolName);
+  var formattedschoolDates = HTMLschoolDates.replace("%data%",education.schools[school].Year);
+  $(".education-entry:last").append(formattedschoolDates);
+  var formattedschoolLocation = HTMLschoolLocation.replace("%data%",education.schools[school].city);
+  $(".education-entry:last").append(formattedschoolLocation);
+  var formattedschoolMajor = HTMLschoolMajor.replace("%data%",education.schools[school].major);
+  $(".education-entry:last").append(formattedschoolMajor);
+};
 
 $(document).click(function(loc){
   var x = loc.pageX;

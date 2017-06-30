@@ -11,7 +11,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poiret One", cursive;
 }
 
 .clear-fix {
@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #ffffff;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #ffffff;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +42,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #ffffff;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #ffffff;
   line-height: 17px;
 }
 
@@ -81,56 +81,113 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #6B7A8F;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  color: #fff;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 20%;
+
   display: block;
 }
 
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #ffffff;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #ffffff;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+/*colors used for the website*/
+.feather{
+  background-color: #77C9D4;
 }
 
-.orange-text {
-  color: #f5ae23;
+.marine{
+  background-color: #578C90;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
+.forest{
+  background-color: #015249;
 }
 
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear: both;
+.sleekgrey{
+  background-color: #A5A5AF;
 }
-
-.dark-gray {
-  background-color: #4a4a4a;
+.gold{
+  color: #C5B358;
 }
 
 /* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+#header{
+  height:8%;
+  width:100%;
+  display: -webkit-flex;
+  display: flex;
+  position:fixed;
+  background-color:#fff;
+  margin-bottom:10px;
+  box-shadow: 0 2px 5px #D0D0D0;
 }
+#headerTitle{
+  font-size:20px;
+  padding-left: 40%;
+  display: -webkit-flex;
+  display: flex;
+  padding-top:20px;
+}
+#myInfo {
+  /*background-color: #F0FFFF;*/
+  background: url(../images/cat.png);
+  background-repeat: no-repeat;
+  margin-top:40px;
+  height: 400px;
+  float: left;
+  width: 60%;
+
+}
+
+.navElem{
+  height: 25%;
+}
+.navElem:hover{
+
+  background-image:url(../images/earth.jpg);
+  background-color:#ddd;
+  opacity: 0.6;
+
+
+}
+
+#navbarVert{
+  text-align: center;
+  height: 400px;
+  width:20%;
+  float: right;
+
+  margin-top:50px;
+  margin-right:0;
+  margin-right:30px;
+  vertical-align: middle;
+}
+.navElem{
+  padding-top:5%;
+  padding-bottom: 5%;
+}
+#workExpNav{
+
+}
+#topContacts{
+  width:70%;
+}
+
 
 .flex-box {
   display: -webkit-flex;
@@ -152,7 +209,8 @@ a {
   padding: 2.5% 5%;
 }
 
-ul {
+ul,
+li{
   list-style-type: none;
 }
 
