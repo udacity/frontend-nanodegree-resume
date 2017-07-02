@@ -6,26 +6,52 @@ This is empty on purpose! Your code to build the resume will go here.
 // formattedName & formattedRole are generic variables from the helper.js file that are ours to manipulate
 
 var bio = {
-	"name": "SJ Rim",
+	"name": "Seung-Joon Rim (Sunny)",
 	"role": "Web Developer",
-	"contactInfo": {
-		"phone": "267-401-9777",
-		"email": "rim.seungjoon@gmail.com"
+	"contacts": {
+		"mobile": "267-401-9777",
+		"email": "rim.seungjoon@gmail.com",
+		"github": "https://github.com/seungjoonrim",
+		"location": "Philadelphia, PA"
 		},
-	"biopic": "../images/profile.jpg",
-	"welcomeMessage": "YOOOOOOOO",
+	"biopic": "images/profile.jpg",
+	"welcomeMessage": "Thanks for visiting my page! I Hope you like it!",
 	"skills": [
 		"HTML",
 		"CSS",
-		"JavaScript"
-		],
-	"contacts": {
-		"mobile": 2674019777,
-		"email": "rim.seungjoon@gmail.com",
-		"github": "github.com/seungjoonrim",
-		"location": "Philadelphia, PA"
+		"JavaScript",
+		"Bootstrap",
+		"JQuery"
+		]
+};
+
+bio.display = function() {
+	$("#header").prepend(HTMLbioPic.replace("%data%", bio.biopic));
+	$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+	$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+
+	formattedContactInfo = [];
+	formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
+	formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
+	formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
+	formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+
+	if (bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+		for (var i in bio.skills) {
+			$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+		}
+	}
+
+	for (i in formattedContactInfo) {
+		$("#topContacts").append(formattedContactInfo[i]);
+		$("#footerContacts").append(formattedContactInfo[i]);
 	}
 };
+
+bio.display()
+// ----------------------------------------------------------------------
 
 var work = {
 	"jobs": [
@@ -81,7 +107,4 @@ var projects = {
 			"description": "Second web-page, second version of my online resume."
 		}
 	]
-}
-
-// $("#main").append(bio.name);
-// $("#main").append(bio.role);
+};
