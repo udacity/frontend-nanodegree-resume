@@ -5,6 +5,7 @@ This is empty on purpose! Your code to build the resume will go here.
 // here we are creating new variables, and replacing '%data%' with our actual info
 // formattedName & formattedRole are generic variables from the helper.js file that are ours to manipulate
 
+// BIO ----------------------------------------
 var bio = {
 	"name": "Seung-Joon Rim (Sunny)",
 	"role": "Web Developer",
@@ -14,7 +15,7 @@ var bio = {
 		"github": "https://github.com/seungjoonrim",
 		"location": "Philadelphia, PA"
 		},
-	"biopic": "images/profile.jpg",
+	"biopic": "images/linkedIn.PNG",
 	"welcomeMessage": "Thanks for visiting my page! I Hope you like it!",
 	"skills": [
 		"HTML",
@@ -26,10 +27,9 @@ var bio = {
 };
 
 bio.display = function() {
-	$("#header").prepend(HTMLbioPic.replace("%data%", bio.biopic));
-	$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+	$("#header").prepend(HTMLheaderName.replace("%data%", bio.name), HTMLheaderRole.replace("%data%", bio.role));
 	$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+	$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
 	formattedContactInfo = [];
 	formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
@@ -50,8 +50,9 @@ bio.display = function() {
 	}
 };
 
-bio.display()
-// ----------------------------------------------------------------------
+bio.display();
+
+// WORK ----------------------------------------------------------------------
 
 var work = {
 	"jobs": [
@@ -71,6 +72,18 @@ var work = {
 		}
 	]
 };
+
+work.display = function() {
+	$("#workExperience").append(HTMLworkStart);
+	for (var job in work.jobs) {
+		$(".work-entry").append(HTMLworkEmployer.replace("%data%", work.jobs[job].employer), HTMLworkTitle.replace("%data%", work.jobs[job].title));
+		$(".work-entry").append(HTMLworkDates.replace("%data%", work.jobs[job].dates));
+		$(".work-entry").append(HTMLworkLocation.replace("%data%", work.jobs[job].location));
+		$(".work-entry").append(HTMLworkDescription.replace("%data%", work.jobs[job].description));
+	}
+}
+
+work.display();
 
 var education = {
 	"schools": [
