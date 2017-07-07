@@ -38,8 +38,16 @@ var education =
 function displayBio(){
   var formattedName = HTMLheaderName.replace("%data%",bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%",bio.job);
+  var formattedContacts = HTMLcontactGeneric.replace("%data%",bio.contacts.email);
+  var formattedContacts = formattedContacts.replace("%contact%","email");
+  var formattedbioPic =  HTMLbioPic.replace("%data%",bio.bioPic);
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
+  $("#header").append(formattedContacts);
+  $("#header").append(formattedbioPic);
+  
 };
+
+//function display
 
 displayBio();
