@@ -50,24 +50,23 @@ function displayBio(){
   displayBio();
 
 function displayWork(){
-  var formattedJob = HTMLworkStart.replace("%data%",work.job);
   var formattedCityOfJob = HTMLworkEmployer.replace("%data%",work.job);
   var formattedTitle = HTMLworkStart.replace("%data%",work.title);
-    var formattedCityOfJob = HTMLworkDates.replace("%data%",work.yearsAtJob);
+  var formattedCityOfJob = HTMLworkDates.replace("%data%",work.yearsAtJob);
   var formattedTitle = HTMLworkDescription.replace("%data%",work.discription);
   $("#workExperience").append(formattedJob);
   $("#workExperience").append(formattedCityOfJob);
   $("#workExperience").append(formattedTitle);
- $("#workExperience").append(formattedYearsAtjob);
+  $("#workExperience").append(formattedYearsAtjob);
   $("#workExperience").append(formattedDiscripton);
   
 };
 
-displayWork();
+displayEducation();
 function displayEducation(){
   var formattedSchool = HTMLSchoolStart.replace("%data%",education.school);
   
-  $("#workExperience").append(formattedSchool);
+  $("#education").append(formattedSchool);
 };
 
 displayEducation();
