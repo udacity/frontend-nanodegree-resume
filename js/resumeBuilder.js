@@ -36,7 +36,7 @@ var education =
 };
 
 function displayBio(){
-  var formattedName = HTMLheaderName.replace("%data%",work.job);
+  var formattedName = HTMLheaderName.replace("%data%",bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%",bio.job);
   var formattedContacts = HTMLcontactGeneric.replace("%data%",bio.contacts.email);
   var formattedContacts = formattedContacts.replace("%contact%","email");
@@ -51,10 +51,10 @@ function displayBio(){
 
 function displayWork(){
   var formattedCityOfJob = HTMLworkEmployer.replace("%data%",work.job);
-  var formattedTitle = HTMLworkStart.replace("%data%",work.title);
-  var formattedCityOfJob = HTMLworkDates.replace("%data%",work.yearsAtJob);
-  var formattedTitle = HTMLworkDescription.replace("%data%",work.discription);
-  $("#workExperience").append(formattedJob);
+  var formattedTitle = HTMLworkTitle.replace("%data%",work.title);
+  var formattedYearsAtjob = HTMLworkDates.replace("%data%",work.yearsAtJob);
+  var formattedDiscripton = HTMLworkDescription.replace("%data%",work.discription);
+  $("#workExperience").prepend(HTMLworkStart);
   $("#workExperience").append(formattedCityOfJob);
   $("#workExperience").append(formattedTitle);
   $("#workExperience").append(formattedYearsAtjob);
@@ -62,10 +62,11 @@ function displayWork(){
   
 };
 
-displayEducation();
+displayWork();
+
 function displayEducation(){
   var formattedSchool = HTMLSchoolStart.replace("%data%",education.school);
-  
+  $("#education").prepend(HTMLschoolStart);
   $("#education").append(formattedSchool);
 };
 
