@@ -73,12 +73,17 @@ function displayWork(){
 displayWork();
 
 function displayEducation(){
+<<<<<<< HEAD
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[0].school);
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
 
   $("#education").prepend(HTMLschoolStart);
+=======
+  var formattedSchool = HTMLschoolName.replace("%data%", education.schools[0].school);
+  $("#education").append(HTMLschoolStart);
+>>>>>>> 2dfaaf78b32fea42e204f7aa64a326a79aeccf8f
   $("#education").append(formattedSchool);
     $("#education").prepend(HTMLschoolStart);
   $("#education").append(formattedSchool);
