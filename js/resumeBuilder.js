@@ -6,7 +6,9 @@ var bio  = {
     "mobile":"022 019 8895",
     "email":"jondoe.com"   
   },
-  "bioPic":"images/fry.jpg"
+  "bioPic":"images/fry.jpg",
+  // skills added here
+  "skills":["awesomeness", "css", "js", "html5"]
 }; 
 
 var work = 
@@ -16,7 +18,6 @@ var work =
   "title":"locking clip dispecer",
   "yearsAtJob":"2011 - 2017",
   "discription":"dispencing locking clips into packets to be taped and snaped"
-
 };
 
 
@@ -36,12 +37,6 @@ var education =
   }
   ]
 };
-function display displayBio(){
-  $("#header").append(HTMLskillstart);
-for(var i=0; i<bio.skills.length; i++){
-  var formattedSkills=HTMLskills.replace("%data%",bio.skills[1]);
-  $"(#skills)".append(formattedSkills);
-}
 
 function displayBio(){
   var formattedName = HTMLheaderName.replace("%data%",bio.name);
@@ -49,13 +44,22 @@ function displayBio(){
   var formattedContacts = HTMLcontactGeneric.replace("%data%",bio.contacts.email);
   var formattedContacts = formattedContacts.replace("%contact%","email");
   var formattedbioPic =  HTMLbioPic.replace("%data%",bio.bioPic);
+  
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
   $("#header").append(formattedContacts);
   $("#header").append(formattedbioPic);
+  $("#header").append(HTMLskillsStart);  // add skills start here
 
+  // here's the for loop in the displayBio function
+  for(var i=0; i<bio.skills.length; i++){
+    var formattedSkills=HTMLskills.replace("%data%", bio.skills[i]);
+    $("#skills").append(formattedSkills);
+    console.log("skill: " + formattedSkills);
+  }
 };  
-  displayBio();
+
+displayBio();
 
 function displayWork(){
   var formattedCityOfJob = HTMLworkEmployer.replace("%data%",work.job);
@@ -73,19 +77,14 @@ function displayWork(){
 displayWork();
 
 function displayEducation(){
-<<<<<<< HEAD
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[0].school);
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
   var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
 
   $("#education").prepend(HTMLschoolStart);
-=======
-  var formattedSchool = HTMLschoolName.replace("%data%", education.schools[0].school);
-  $("#education").append(HTMLschoolStart);
->>>>>>> 2dfaaf78b32fea42e204f7aa64a326a79aeccf8f
   $("#education").append(formattedSchool);
-    $("#education").prepend(HTMLschoolStart);
+  $("#education").prepend(HTMLschoolStart);
   $("#education").append(formattedSchool);
 };
 
