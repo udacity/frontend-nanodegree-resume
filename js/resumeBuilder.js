@@ -19,6 +19,8 @@ var work =
 
 };
 
+
+
 var education =
 {"schools": [
  {
@@ -34,6 +36,12 @@ var education =
   }
   ]
 };
+function display displayBio(){
+  $("#header").append(HTMLskillstart);
+for(var i=0; i<bio.skills.length; i++){
+  var formattedSkills=HTMLskills.replace("%data%",bio.skills[1]);
+  $"(#skills)".append(formattedSkills);
+}
 
 function displayBio(){
   var formattedName = HTMLheaderName.replace("%data%",bio.name);
@@ -65,9 +73,17 @@ function displayWork(){
 displayWork();
 
 function displayEducation(){
-  var formattedSchool = HTMLSchoolStart.replace("%data%",education.school);
+  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[0].school);
+  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
+  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
+  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
+
   $("#education").prepend(HTMLschoolStart);
+  $("#education").append(formattedSchool);
+    $("#education").prepend(HTMLschoolStart);
   $("#education").append(formattedSchool);
 };
 
 displayEducation();
+
+var map; 
