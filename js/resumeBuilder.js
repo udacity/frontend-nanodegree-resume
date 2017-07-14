@@ -12,15 +12,23 @@ var bio  = {
 }; 
 
 var work = 
-{
-  "job": "exatus",
-  "cityOfJob":"wellington",
-  "title":"locking clip dispecer",
-  "yearsAtJob":"2011 - 2017",
-  "discription":"dispencing locking clips into packets to be taped and snaped"
+{ "jobs":[
+  {
+    "job": "exatus",
+    "cityOfJob":"wellington",
+    "title":"locking clip dispecer",
+    "yearsAtJob":"2011 - 2017",
+    "description":"dispencing locking clips into packets to be taped and snaped"
+  },
+  {
+    "job": "Te Omonga Hospice",
+    "cityOfJob": "Wellington",
+    "title": "Kitchen worker",
+    "yearsAtJob":"2015 - 2017",
+    "description": "volunterr work in Hospices ktichen"
+  }
+]
 };
-
-
 
 var education =
 {"schools": [
@@ -62,16 +70,20 @@ function displayBio(){
 displayBio();
 
 function displayWork(){
-  var formattedCityOfJob = HTMLworkEmployer.replace("%data%",work.job);
-  var formattedTitle = HTMLworkTitle.replace("%data%",work.title);
-  var formattedYearsAtjob = HTMLworkDates.replace("%data%",work.yearsAtJob);
-  var formattedDiscripton = HTMLworkDescription.replace("%data%",work.discription);
+  // create new div section for work experience
   $("#workExperience").prepend(HTMLworkStart);
-  $("#workExperience").append(formattedCityOfJob);
-  $("#workExperience").append(formattedTitle);
-  $("#workExperience").append(formattedYearsAtjob);
-  $("#workExperience").append(formattedDiscripton);
   
+  for (j in work.jobs) {
+    var formattedCityOfJob = HTMLworkEmployer.replace("%data%",work.jobs.job[j]);
+    var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs.title[j]);
+    var formattedYearsAtjob = HTMLworkDates.replace("%data%",work.jobs.yearsAtJob[j]);
+    var formattedDescripton = HTMLworkDescription.replace("%data%",work.jobs.description[j]);
+
+    $("#workExperience").append(formattedCityOfJob);
+    $("#workExperience").append(formattedTitle);
+    $("#workExperience").append(formattedYearsAtjob);
+    $("#workExperience").append(formattedDescripton);
+  }
 };
 
 displayWork();
