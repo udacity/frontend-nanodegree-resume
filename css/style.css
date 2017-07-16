@@ -24,6 +24,10 @@ h6 {
   padding: 0 5%;
 }
 
+.project-entry {
+  max-width: 800px;
+}
+
 h1 {
   font-size: 40px;
   color: #f5a623;
@@ -58,9 +62,16 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
 }
 
+.header-role {
+  font-weight: bold;
+  color: grey;
+}
+
+#topContacts {
+  justify-content: space-between;
+}
 
 .date-text {
   font-style: italic;
@@ -76,7 +87,14 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
+}
 
+.online-classes {
+  padding: 20px 0px 0px 0px;
+}
+
+.education-entry:last-of-type {
+  border-bottom: 0;
 }
 
 p {
@@ -97,11 +115,19 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  display: flex;
+  padding: 5px;
 }
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
+  display: flex;
+  padding: 5px;
+}
+
+#skills {
+  display: flex;
+  padding: 5px;
 }
 
 .orange {
@@ -148,6 +174,10 @@ a {
   padding: 10px;
 }
 
+.flex-item {
+  list-style: none;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
@@ -157,10 +187,10 @@ ul {
 }
 
 .biopic {
-  float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: block;
+  float: left;
 }
 
 img {
@@ -189,7 +219,7 @@ span {
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 775px) {
   #lets-connect {
     margin-top: 10%;
   }
@@ -197,6 +227,15 @@ span {
     width: 150px;
   }
   .welcome-message {
+    display: none;
+  }
+  .project-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .project-img,.biopic {
     display: none;
   }
 }
@@ -216,6 +255,12 @@ span {
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
-    display: block;
+    display: flex;
+  }
+  .project-entry {
+    max-width: 800px;
+  }
+  .project-img {
+    max-width: 100%;
   }
 }
