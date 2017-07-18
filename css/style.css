@@ -20,7 +20,8 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.online-entry {
   padding: 0 5%;
 }
 
