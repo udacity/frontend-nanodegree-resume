@@ -1,4 +1,4 @@
-var bio  = {
+ var bio  = {
   "name":"Anton Jewiss",
   "job":"Front end web Devloper",
   "contacts":
@@ -9,8 +9,7 @@ var bio  = {
   "bioPic":"images/fry.jpg",
   // skills added here
   "skills":["awesomeness", "css", "js", "html5"]
-}; 
-
+}; //this section will load first before other sections on page 
 var work = 
 { "jobs":[
   {
@@ -103,4 +102,7 @@ function displayEducation(){
 
 displayEducation();
 
-var map; 
+
+inName("Anton Jewiss")
+inName.append;
+// this will be used later var map; 
