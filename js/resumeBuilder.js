@@ -100,6 +100,7 @@ function displayEducation(){
   $("#education").append(formattedSchool);
 };
 
+
 displayEducation();
 
 var map; 
