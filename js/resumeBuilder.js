@@ -10,21 +10,22 @@
   // skills added here
   "skills":["awesomeness", "css", "js", "html5"]
 }; //this section will load first before other sections on page 
+
 var work = 
 { "jobs":[
   {
-    "job": "exatus",
-    "cityOfJob":"wellington",
-    "title":"locking clip dispecer",
+    "employer": "Exactus",
+    "cityOfJob":"Wellington",
+    "title":"locking clip dispencer",
     "yearsAtJob":"2011 - 2017",
     "description":"dispencing locking clips into packets to be taped and snaped"
   },
   {
-    "job": "Te Omonga Hospice",
+    "employer": "Te Omonga Hospice",
     "cityOfJob": "Wellington",
     "title": "Kitchen worker",
     "yearsAtJob":"2015 - 2017",
-    "description": "volunterr work in Hospices ktichen"
+    "description": "volunteer work in Hospices kitchen"
   }
 ]
 };
@@ -70,39 +71,41 @@ displayBio();
 
 function displayWork(){
   // create new div section for work experience
-  $("#workExperience").prepend(HTMLworkStart);
-  
-  for (j in work.jobs) {
-    var formattedCityOfJob = HTMLworkEmployer.replace("%data%",work.jobs.job[j]);
-    var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs.title[j]);
-    var formattedYearsAtjob = HTMLworkDates.replace("%data%",work.jobs.yearsAtJob[j]);
-    var formattedDescripton = HTMLworkDescription.replace("%data%",work.jobs.description[j]);
+  $("#workExperience").append(HTMLworkStart);
 
-    $("#workExperience").append(formattedCityOfJob);
-    $("#workExperience").append(formattedTitle);
-    $("#workExperience").append(formattedYearsAtjob);
-    $("#workExperience").append(formattedDescripton);
+  for (key in work.jobs) {
+    if (work.jobs.hasOwnProperty(key)){
+      var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[key].employer);
+      var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[key].title);
+      var formattedEmployerTitle = formattedEmployer + formattedTitle;
+      var formattedDates = HTMLworkDates.replace("%data%",work.jobs[key].yearsAtJob);
+      var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[key].description);
+
+      $(".work-entry:last").append(formattedEmployerTitle);
+      $(".work-entry:last").append(formattedDates);
+      $(".work-entry:last").append(formattedDescription);
+    }
   }
 };
 
 displayWork();
 
 function displayEducation(){
-  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[0].school);
-  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
-  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
-  var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
+  // var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[0].school);
+  // var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
+  // var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
+  // var formattedSchool = HTMLSchoolName.replace("%data%",education.schools[1].school);
 
-  $("#education").prepend(HTMLschoolStart);
-  $("#education").append(formattedSchool);
-  $("#education").prepend(HTMLschoolStart);
-  $("#education").append(formattedSchool);
+  // $("#education").prepend(HTMLschoolStart);
+  // $("#education").append(formattedSchool);
+  // $("#education").prepend(HTMLschoolStart);
+  // $("#education").append(formattedSchool);
 };
 
 
-displayEducation();
+//displayEducation();
 
 
-inName("Anton Jewiss")
-inName.append;
+// inName("Anton Jewiss")
+// inName.append;
 // this will be used later var map; 
