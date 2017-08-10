@@ -232,3 +232,17 @@ function inName(name) {
 $('#main').append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
+
+function formatFooterContacts() {
+  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.Mobile);
+  $("#footerContacts").prepend(formattedMobile);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.address);
+  $("#footerContacts").prepend(formattedLocation);
+  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.Email);
+  $("#footerContacts").append(formattedEmail);
+  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.Github);
+  $("#footerContacts").append(formattedGithub);
+  //console.log(bio.contact.Mobile);
+};
+
+formatFooterContacts();
