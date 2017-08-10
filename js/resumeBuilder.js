@@ -1,7 +1,7 @@
 var apps = ["JavaScript", "Python", "IDE's"];
 var bio = {
   "name":"Omari Blockton",
-  "role":"web developer",
+  "role":"Powered By: Bay Area Native Ver 2.9",
   "welcomeMessage": "Experienced web developer, focused on innovation and efficiency",
   "biopic" :"Lorem Ipsum",
   "contacts": {"Mobile": "510-421-1379",
@@ -106,13 +106,25 @@ var projects = {
       "dates" : "Current",
       "description":"Build library of common functions for personal reference",
       "images" : "images/fry.jpg"
+    },
+    {
+      "title" : "Build Personal Libraries",
+      "dates" : "Current",
+      "description":"Build library of common functions for personal reference",
+      "images" : "images/fry.jpg"
+    },
+    {
+      "title" : "Build Personal Libraries",
+      "dates" : "Current",
+      "description":"Build library of common functions for personal reference",
+      "images" : "images/fry.jpg"
     }
   ]
 }
 
 projects.display = function() {
   for (project in projects.projectList){
-    $("#projects").append(HTMLprojectStart)
+    $("#projectsRow").append(HTMLprojectStart)
     var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projectList[project].title)
     var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projectList[project].dates)
     var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projectList[project].description)
@@ -130,14 +142,16 @@ var education = {
       "location": "6100 Broadway, Oakland, CA 94618",
       "degreeDates": "Class of 2006",
       "degree" : "High School Diploma",
-      "majors" : ["General Education"]
+      "majors" : ["General Education"],
+      "link" : "https://www.college-prep.org/page"
     },
     {
       "name": "The University of California Davis",
       "location": "Davis, Ca",
       "degreeDates": "Class of 2010",
       "degree" : " ",
-      "majors" : ["Managerial Economics", "Computer Science"]
+      "majors" : ["Managerial Economics", "Computer Science"],
+      "link" : "https://www.ucdavis.edu/"
     }
   ],
   "onlineCourses" : [
@@ -166,11 +180,12 @@ function buildEducation() {
   for (let i=0; i < education.Schools.length; i++) {
     $("#education").append(HTMLschoolStart)
     var formattedSchoolName = HTMLschoolName.replace("%data%", education.Schools[i].name)
+    var linkedSchoolName = formattedSchoolName.replace("#", education.Schools[i].link)
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.Schools[i].location)
     var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.Schools[i].degreeDates)
     var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.Schools[i].majors)
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.Schools[i].degree)
-    $(".education-entry:last").append(formattedSchoolName)
+    $(".education-entry:last").append(linkedSchoolName)
     if (education.Schools[i].degree.length > 0) {
       $(".education-entry:last").append(formattedSchoolDegree)
       $(".education-entry:last").append(formattedSchoolDates)

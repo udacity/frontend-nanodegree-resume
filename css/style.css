@@ -1,3 +1,14 @@
+/** {
+  outline: 1px solid red !important;
+}
+*/
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body,
 div,
 ul,
@@ -24,6 +35,7 @@ h6 {
 .online-entry {
   padding: 0 5%;
 }
+
 
 h1 {
   font-size: 40px;
@@ -149,6 +161,25 @@ a {
   padding: 10px;
 }
 
+@media only screen and (max-width: 770px) {
+  #projectsRow {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .project-entry {
+    padding: 2.5% 5%;
+  }
+  img {
+    max-width: 325px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  h1 {
+    display: block;
+  }
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
@@ -166,10 +197,13 @@ ul {
 
 img {
   padding: 10px;
+  width: 100%
 }
 
 span {
-  padding: 5px;
+  padding: 10px;
+  color: white;
+  text-align: right;
 }
 
 #lets-connect {
@@ -204,7 +238,7 @@ span {
 
 #map {
   display: block;
-  height: 100%;
+  height: 90%;
   margin: 0 5%;
 }
 
@@ -219,4 +253,65 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+    max-width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
 }
