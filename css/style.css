@@ -141,7 +141,7 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
+
 #header {
   background-color: #484848;
 }
@@ -162,24 +162,6 @@ a {
   padding: 10px;
 }
 
-@media only screen and (max-width: 770px) {
-  #projectsRow {
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .project-entry {
-    padding: 2.5% 5%;
-  }
-  img {
-    max-width: 325px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  h1 {
-    display: block;
-  }
-}
 
 .center-content {
   padding: 2.5% 5%;
@@ -213,6 +195,25 @@ span {
 
 /* Media queries to handle various device widths */
 
+@media only screen and (max-width: 770px) {
+  #projectsRow {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .project-entry {
+    padding: 2.5% 5%;
+  }
+  img {
+    max-width: 325px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  h1 {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
@@ -237,10 +238,26 @@ span {
   }
 }
 
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  #skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+
 #map {
   display: block;
   height: 90%;
-  margin: 0 5%;
+  margin: 0 10%;
 }
 
 #mapDiv {
@@ -249,12 +266,7 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
+
 
 .grid {
     margin: 0 auto;

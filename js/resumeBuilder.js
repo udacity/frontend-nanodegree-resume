@@ -1,4 +1,4 @@
-var apps = ["JavaScript", "Python", "IDE's"];
+var apps = ["JavaScript", "Python", "HTML5", "CSS3", "Ruby", "Rails",];
 var bio = {
   "name":"Omari Blockton",
   "role":"Powered By: Bay Area Native Ver 2.9",
