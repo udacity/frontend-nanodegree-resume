@@ -58,9 +58,11 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
 }
 
+#education h3 {
+  padding: 10px 0%;
+}
 
 .date-text {
   font-style: italic;
@@ -76,7 +78,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -94,7 +95,7 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 17px;
   color: #f3f3f3;
   line-height: 28px;
 }
@@ -161,10 +162,12 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  border-style: none;
 }
 
 img {
   padding: 10px;
+  border-style: ridge;
 }
 
 span {
@@ -180,31 +183,34 @@ span {
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
-  }
+  };
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
-  }
+  };
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
   }
+
   .biopic {
     width: 150px;
   }
+
   .welcome-message {
     display: none;
-  }
+  };
 }
 
 #map {
   display: block;
   height: 100%;
   margin: 0 5%;
+  border-style: ridge;
 }
 
 #mapDiv {
@@ -217,5 +223,5 @@ span {
   #skills-h3,
   .biopic {
     display: block;
-  }
+  };
 }
