@@ -7,7 +7,7 @@ This is empty on purpose! Your code to build the resume will go here.
 var bio = {
 	"name": "Ziyi Wang",
 	"role": "Student",
-	"contactInfo": {
+	"contacts": {
 		"mobile": "18618106397",
 		"email": "wonziyi@126.com",
 		"github": "comusr",
@@ -23,10 +23,10 @@ var bio = {
 		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
 		$("#header").prepend(formattedName, formattedRole, formattedBiopic, formattedWelcomeMsg);
 
-		var formattedMobile = HTMLmobile.replace("%data%",bio.contactInfo.mobile);
-		var formattedEmail = HTMLemail.replace("%data%",bio.contactInfo.email);
-		var formattedGithub = HTMLgithub.replace("%data%", bio.contactInfo.github);
-		var formattedLocation = HTMLlocation.replace("%data%",bio.contactInfo.location);
+		var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+		var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 		$("#topContacts, #footerContacts").prepend(formattedMobile,formattedEmail,formattedGithub,formattedLocation);
 
 		if (bio.skills.length > 0){
@@ -80,17 +80,19 @@ var education = {
 	"schools": [
 	{
 		"name": "USTB",
-		"city": "Peking, CN",
+		"location": "Peking, CN",
 		"degree": "Bechalor",
 		"dates": "2015.8-2019.6",
-		"major": ["Mathmetic","Pilot Class of Science"]
+		"majors": ["Mathmetic","Pilot Class of Science"],
+		"url": "http://www.ustb.edu.cn/"
 	},
 	{
 		"name": "UCSD",
-		"city": "San Diego, CA, US",
+		"location": "San Diego, CA, US",
 		"degree": "Exchange",
 		"dates": "2017.9-2018.6",
-		"major": ["Mathmetic"]
+		"majors": ["Mathmetic"],
+		"url": "https://www.ucsd.edu/"
 	}
 	],
 	"onlineCourses": [
@@ -112,15 +114,16 @@ var education = {
 			$("#education").append(HTMLschoolStart);
 
 			var formattedName = HTMLschoolName.replace("%data%", school.name);
+				formattedName = formattedName.replace("#", school.url);
 			var formattedDegree =  HTMLschoolDegree.replace("%data%",school.degree);
 			var formattedNameDegree = formattedName + formattedDegree;
 			var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
-			var formattedLocation = HTMLschoolLocation.replace("%data%",school.city);
+			var formattedLocation = HTMLschoolLocation.replace("%data%",school.location);
 
 			$(".education-entry:last").append(formattedNameDegree,formattedDates,formattedLocation);
 
-			if (school.major.length > 0){
-				school.major.forEach(function (major){
+			if (school.majors.length > 0){
+				school.majors.forEach(function (major){
 					var formattedMajor = HTMLschoolMajor.replace("%data%", major);
 
 					$(".education-entry:last").append(formattedMajor);				});
