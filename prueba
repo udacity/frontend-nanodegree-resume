@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<form id="registration-form" role="form">
+
+        <input type="hidden" name="promo" id="promo" class="nombre2 form-control text-center" value="La Mansión" placeholder="La Mansion" required>
+        <input type="email" name="email" id="email" class="nombre2 form-control text-center" value="" placeholder="Correo Electrónico" required>
+
+
+        <input type="text" name="name" id="name" class="nombre2 form-control text-center " value="" placeholder="Nombre del papá" required>
+
+
+        <input id="childrengame" name="children[game]" type="hidden" value="yogome.com/lamansion">
+        <input id="childrenname" class="nombre2 form-control text-center" name="children[name]" type="text" value="" placeholder="Escribe el nombre de tu hijo" required>
+        <select id="childrenage" class="nombre2 form-control text-center" name="children[age]" value="" placeholder="Selecciona la edad de tu hijo" required>
+            <option value="">Selecciona la edad de tu hijo</option>
+            <option value="3">3 años</option>
+            <option value="4">4 años</option>
+            <option value="5">5 años</option>
+            <option value="6">6 años</option>
+            <option value="7">7 años</option>
+            <option value="8">8 años</option>
+            <option value="9">9 años</option>
+            <option value="10">10 años</option>
+            <option value="10">11 años</option>
+            <option value="10">12 años</option>
+          </select>
+          <button name="enviar"  type="submit" class="green-btn">
+            Enviar
+          </button>
+</form>
+</body>
+</html>
