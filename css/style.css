@@ -55,9 +55,11 @@ nav {
 }
 
 .flex-projects {
-  padding: 10px 5% 0 0;
+  margin:10px;
+  // padding: 10px 5% 0 0;
   width: 40%;
   min-width: 450px;
+  border-style:outset;
 }
 /*flex-projects has to be responsive for mobile, find the breakpoint*/
 @media screen and (max-width: 1000px) {
@@ -340,4 +342,10 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.github-icon {
+  max-width: 10px;
+  padding:0;
+  margin-left:5px;
 }

@@ -1,0 +1,158 @@
+{
+    "bio":
+    {	"name":"Emil Martinov",
+        "role":"Front-end Developer Marketing Ninja",
+        "picture":"images/fry.jpg",
+        "welcomeMessage":"Cliche as it is bridge building is what I do, between science of physics, consumer behavior and online behavior. I surf the web and create pieces of it.",
+	    "contacts":
+        [
+			{"mobile":"+31634636711"},
+			{"email":"martinov.emil@gmail.com"},
+			{"github":"frank3stein"},
+			{"twitter":"emilmartinov"},
+			{"location":"Rotterdam, Netherlands"}
+		],
+        "skills":[
+            "HTML",
+            " CSS",
+            " JavaScript",
+            " JQuery",
+            " Knockout.js",
+            " Bootstrap",
+            " Gulp/Grunt",
+            " Github",
+            " Photoshop CS",
+            " Google Adwords",
+            " SEO"
+        ]
+    },
+	"jobs":[
+		{
+			"employer":"Tomtom Taxi",
+			"title":"Online Content Intern",
+			"location":"Amsterdam, Netherlands",
+			"dates":"2012-2013",
+			"description":"Tomtom taxi was a mobile app startup, which allowed consumers to book a taxi with a click of a button. The product was launched for IOS and Android. I was mainly part of the online team where we launched and managed the website in Dutch and English."
+		},
+		{
+			"employer":"Fatale Entertainment",
+			"title":"Co-founder",
+			"location":"Rotterdam, Netherlands",
+			"dates":"2012-2013",
+			"description":"Fatale Entertainment is an organizer of international events for university students. It has partnership with one of the largest international student organization, ESN, and have organized events for up to 500 people. As a cofounder, I was responsible from Fatale brand by managing a coherent identity in online and offline mediums. I was also responsible for sponsors and venues."
+		},
+		{
+			"employer":"Cross Capto",
+			"title":"Online Marketing Intern",
+			"location":"Rotterdam, Netherlands",
+			"dates":"2011-2012",
+			"description":"Cross Capto is an online marketing company which provides clients with web design, SEO, SEM and marketing solutions."
+		}
+	],
+	"projects":[
+		{
+			"title":"Udacity Portfolio Page",
+			"dates":"2014",
+			"description":"Portfolio Project",
+			"image":"images/project1-full.jpg",
+			"url":"http://frank3stein.github.io/index.html",
+			"repo":"https://github.com/frank3stein/frank3stein.github.io"
+		},
+		{
+			"title":"Udacity Interactive Resume",
+			"dates":"2014",
+			"description":"Here i created an online resume using Javascript to manipulate the DOM and to read data from JSON. By editing JSON the page automatically updates itself.",
+			"image":"images/project2-full.jpg",
+			"url":"http://frank3stein.github.io/frontend-nanodegree-resume/",
+			"repo":"https://github.com/frank3stein/frontend-nanodegree-resume"
+		},
+		{
+			"title":"Classic Arcade Clone",
+			"dates":"2014",
+			"description":"This is a simple frogger game. The player can start by playing the game immediately by using either arrow keys on the keyboard or WASD keys. Avoid the enemy bugs and try to reach the water. Once you reach the water you win the game.",
+			"image":"images/Frogger.jpg",
+			"url":"http://frank3stein.github.io/frontend-nanodegree-arcade-game/",
+			"repo":"https://github.com/frank3stein/frontend-nanodegree-arcade-game"
+		},
+		{
+			"title":"Website Optimization",
+			"dates":"2015",
+			"description":"The project was about using best practices for performance on websites. This included fonts optimisation through @font face, inlining css, minimising images and server request prioritisation. Also in the pizza web page, animations were improved through optimising the code (loop contents), using translate 3d hack and request animations in order to reach 60 fps quality measure.",
+			"image":"images/Udacity_Performance.jpg",
+			"url":"http://frank3stein.github.io/frontend-nanodegree-mobile-portfolio/",
+			"repo":"https://github.com/frank3stein/frontend-nanodegree-mobile-portfolio"
+		},
+		{
+			"title":"Neighborhood Project",
+			"dates":"2015",
+			"description":"In this project I used Yelp API, Google Maps API, Google StreetView API and Wikipedia API in order to create a map of Sydney where users can look at the first 20 Sushi Restaurants around the city.",
+			"image":"images/Udacity_Neighbourhood_Map.jpg",
+			"url":"http://frank3stein.github.io/fnd-project5/build/",
+			"repo":"https://github.com/frank3stein/fnd-project5"
+		},
+		{
+			"title":"Feedreader Testing",
+			"dates":"2015",
+			"description":"In this project I used Yelp API, Google Maps API, Google StreetView API and Wikipedia API in order to create a map of Sydney where users can look at the first 20 Sushi Restaurants around the city.",
+			"image":"images/UdacityFeeds_Jasmine.jpg",
+			"url":"http://frank3stein.github.io/frontend-nanodegree-feedreader/",
+			"repo":"https://github.com/frank3stein/frontend-nanodegree-feedreader"
+		}
+    ],
+	"schools":[
+		{
+			"name":"Udacity",
+			"location":"Rotterdam, Netherlands",
+			"degree":"Nano Degree",
+			"majors":"Front End Development",
+			"dates":"2014-2015",
+			"url":"https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		},
+		{
+			"name":"Rotterdam School of Management",
+			"location":"Rotterdam, Netherlands",
+			"degree":"Masters",
+			"majors":"Marketing Management",
+			"dates":"2009-2014",
+			"url":"http://www.rsm.nl/master/"
+		},
+		{
+			"name":"Rotterdam School of Management",
+			"location":"Rotterdam, Netherlands",
+			"degree":"Masters",
+			"majors":"General Management",
+			"dates":"2008-2009",
+			"url":"http://www.rsm.nl/master/"
+		},
+		{
+			"name":"Rotterdam School of Management",
+			"location":"Rotterdam, Netherlands",
+			"degree":"Masters",
+			"majors":"Management of Innovation",
+			"dates":"2010-",
+			"url":"http://www.rsm.nl/master/"
+		},
+		{
+			"name":"Koc University",
+			"location":"İstanbul, Turkey",
+			"degree":"Bachelor",
+			"majors":"Physics",
+			"dates":"2003-2008",
+			"url":"https://www.ku.edu.tr/en"
+		}
+	],
+	"onlinecourses":[
+		{
+			"title":"Front-end Nano Degree",
+			"school":"Udacity",
+			"dates":"2015",
+			"url":"https://drive.google.com/open?id=0B0f3ojMNRdFpQ3dQM0NpQUpnbU0"
+        },
+        {
+			"title":"Digital Marketing Nano Degree",
+			"school":"Udacity",
+			"dates":"2017",
+			"url":"https://drive.google.com/open?id=0B0f3ojMNRdFpODJNZEthVHpiNTg"
+        }
+	]
+}

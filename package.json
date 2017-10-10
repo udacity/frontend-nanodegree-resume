@@ -1,0 +1,43 @@
+{
+  "name": "frontend-nanodegree-resume",
+  "version": "1.0.0",
+  "description": "udresume ========",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frank3stein/frontend-nanodegree-resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frank3stein/frontend-nanodegree-resume/issues"
+  },
+  "homepage": "https://github.com/frank3stein/frontend-nanodegree-resume#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-image-set-polyfill": "^0.4.4",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files 'css/*.css, js/*.js, index.html'",
+    "prebuild": "rm -rf dist",
+    "//": "When npm runs a script build, it first checks if there is a script prebuild. If there is, first it runs that.",
+    "build": "webpack -p --env.prod",
+    "dev": "webpack-dev-server --env.dev",
+    "build:dev": "webpack --env.dev"
+  }
+}
