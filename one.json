@@ -104,7 +104,7 @@
 			"name":"Udacity",
 			"location":"Rotterdam, Netherlands",
 			"degree":"Nano Degree",
-			"majors":"Front End Development",
+			"major":"Front End Development",
 			"dates":"2014-2015",
 			"url":"https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 		},
@@ -112,31 +112,31 @@
 			"name":"Rotterdam School of Management",
 			"location":"Rotterdam, Netherlands",
 			"degree":"Masters",
-			"majors":"Marketing Management",
+			"major":"Marketing Management",
 			"dates":"2009-2014",
-			"url":"http://www.rsm.nl/master/"
+			"url":"https://www.rsm.nl/master/msc-programmes/msc-marketing-management/overview/"
 		},
 		{
 			"name":"Rotterdam School of Management",
 			"location":"Rotterdam, Netherlands",
 			"degree":"Masters",
-			"majors":"General Management",
+			"major":"General Management",
 			"dates":"2008-2009",
-			"url":"http://www.rsm.nl/master/"
+			"url":"https://www.rsm.nl/master/msc-programmes/mscba-master-in-management/overview/"
 		},
 		{
 			"name":"Rotterdam School of Management",
 			"location":"Rotterdam, Netherlands",
 			"degree":"Masters",
-			"majors":"Management of Innovation",
+			"major":"Management of Innovation",
 			"dates":"2010-",
-			"url":"http://www.rsm.nl/master/"
+			"url":"https://www.rsm.nl/master/msc-programmes/msc-management-of-innovation/overview/"
 		},
 		{
 			"name":"Koc University",
 			"location":"İstanbul, Turkey",
 			"degree":"Bachelor",
-			"majors":"Physics",
+			"major":"Physics",
 			"dates":"2003-2008",
 			"url":"https://www.ku.edu.tr/en"
 		}
