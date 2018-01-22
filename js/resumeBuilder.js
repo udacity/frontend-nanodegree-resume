@@ -6,7 +6,7 @@ This is empty on purpose! Your code to build the resume will go here.
   "name" : "Pedro Souza",
   "role" : "Full Stack Web Developer",
   "contacts" : {
-    "mobile" : 917 794 3994,
+    "mobile" : "917 794 3994",
     "email" : "posouza@gmail.com",
     "github" : "github.com/posouza",
     "location" : "Astoria, NY"
