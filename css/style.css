@@ -22,11 +22,12 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  color: gray;
 }
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #ffeb96;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +35,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #ffeb96;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +43,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #fff;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #345286;
   line-height: 17px;
 }
 
@@ -81,7 +82,7 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #888;
   line-height: 21px;
 }
 
@@ -100,16 +101,15 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+  color: #ffeb96;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #345286;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #ffeb96;
 }
 
 .white-text {
@@ -118,20 +118,24 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #343a3f;
   padding-bottom: 10px;
   clear: both;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #343a3f;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-image: url(http://www.zeldadungeon.net/images/uploads/19003/majoras-mask-3d-official-artwork-2__banner-auto-cropping.jpg);
+  background-position:center;
 }
 
+#education{
+  text-align: left;
+}
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -160,7 +164,6 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
 }
 
 img {
@@ -169,6 +172,7 @@ img {
 
 span {
   padding: 5px;
+  color: #fff;
 }
 
 #lets-connect {
@@ -179,43 +183,46 @@ span {
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
-    margin-top: 5%;
+    margin-top: 0;
   }
+  
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
+
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
-    margin-top: 10%;
+    margin-top: 0%;
   }
   .biopic {
     width: 150px;
   }
   .welcome-message {
-    display: none;
+    display: block;
   }
 }
-
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
+  margin: 0% 5%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
+
 
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
   }
+ 
 }

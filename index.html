@@ -18,6 +18,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
 
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
@@ -30,13 +32,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
-<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJE6EbDgCmRFRmpDsx0kDUVn1xCps-B9o"></script>
 </head>
 <body>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -51,13 +50,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div id="projects" class="gray">
       <h2>Projects</h2>
     </div>
     <div id="education" class="gray">
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+    <div id="mapDiv" class="gray">
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
@@ -122,7 +121,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     */
 
 
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    /* if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
@@ -142,7 +141,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
-    }
+    } */
   </script>
 </body>
 </html>
