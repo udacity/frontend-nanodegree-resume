@@ -1,0 +1,91 @@
+/* Basic reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Better text styling */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #79A0A7;
+}
+
+.container {
+    max-width: 400px;
+    max-height: 800px;
+    margin: 100px auto;
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.49);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.49);
+}
+
+.container-header {
+    width: 400px;
+    background-color: #465659;
+    position: relative;
+    padding: 30px 10px;
+    text-align: right;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+
+.screen_numbers {
+    color: #fff;
+    font-weight: bold;
+}
+
+.screen_numbers span {
+    font-size: 32px;
+}
+
+.screen_numbers {}
+
+.keys {
+    height: 400px;
+}
+
+div.keys>div {
+    float: left;
+    width: 25%;
+    height: 25%;
+}
+
+.box {
+    position: relative;
+}
+
+.box:nth-child(4n) {
+    border-right: 0;
+}
+
+.box span {
+    font-size: 25px;
+}
+
+.box>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    background-color: #86B5BB;
+}
+
+.sign {
+    background-color: #7ECCD8;
+}
+
+img {
+    width: 30px;
+}
