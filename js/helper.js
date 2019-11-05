@@ -233,6 +233,7 @@ function initializeMap() {
   pinPoster(locations);
 
 }
+/*Adding a comment for test */
 
 /*
 Uncomment the code below when you're ready to implement a Google Map!
