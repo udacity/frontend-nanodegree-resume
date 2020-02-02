@@ -1,21 +1,32 @@
-* {
-  padding:0;
-  margin:0;
-  font-family: 'Roboto', sans-serif;
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-.clearfix {
+.clear-fix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
-  padding-right: 5%;
+.education-entry,
+.work-entry,
+.project-entry {
+  padding: 0 5%;
 }
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #f5a623;
   line-height: 48px;
   display: inline;
 }
@@ -23,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #999;
   line-height: 29px;
   padding: 10px;
 }
@@ -31,28 +42,30 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #000;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #4a4a4a;
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+h2,
+h3,
+h4,
+h5 {
+  padding: 10px 5%;
+
 }
 
 
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #999;
   line-height: 16px;
   float: left;
 }
@@ -60,7 +73,7 @@ h2, h3, h4, h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #999;
   line-height: 16px;
   float: right;
 
@@ -68,12 +81,12 @@ h2, h3, h4, h5 {
 
 p {
   font-size: 14px;
-  color: #333333;
+  color: #333;
   line-height: 21px;
 }
 
 a {
-  color: #1199C3;
+  color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -82,36 +95,36 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #f3f3f3;
   line-height: 28px;
 }
 
-#skillsH3 {
-  color: #F5AE23;
+#skills-h3 {
+  color: #f5ae23;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #f5ae23;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #f5ae23;
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #4a4a4a;
 }
 
 /* TODO: Replace with image later */
@@ -128,11 +141,15 @@ a {
   padding: 10px;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
 .center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
+  padding: 2.5% 5%;
 }
 
 ul {
@@ -150,28 +167,18 @@ img {
   padding: 10px;
 }
 
-/* Bar chart stuff */
-.chart div {
-  font: 10px sans-serif;
-  background-color: #4A4A4A;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline-block;
-}
-
 span {
   padding: 5px;
 }
 
-#letsConnect {
+#lets-connect {
   text-align: center;
 }
 
+/* Media queries to handle various device widths */
+
 @media only screen and (max-width: 1024px) {
-  #letsConnect {
+  #lets-connect {
     margin-top: 5%;
   }
 }
@@ -183,7 +190,7 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #letsConnect {
+  #lets-connect {
     margin-top: 10%;
   }
   .biopic {
@@ -197,8 +204,7 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0 5%;
 }
 
 #mapDiv {
@@ -208,7 +214,7 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skillsH3,
+  #skills-h3,
   .biopic {
     display: block;
   }
