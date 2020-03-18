@@ -82,12 +82,12 @@
      				},
 
                 	{ 
-                		"name": "College Bois de Boulogne",
-     					"location": "Montreal",
-     					"degree": "Certificate",
+                		"name": "Algonquin College",
+     					"location": "Ottawa",
+     					"degree": "Diploma",
      					"majors": ["CS"],
      					"dates": 2000,
-     					"url": "http://bdeb.qc.ca/",
+     					"url": "http://www.algonquincollege.com/",
      					  				
      		 		}
      			],
