@@ -13,7 +13,9 @@ h6 {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-
+body {
+  background-color: #1199c3;
+}
 .clear-fix {
   overflow: auto;
 }
@@ -58,9 +60,7 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
 }
-
 
 .date-text {
   font-style: italic;
@@ -76,7 +76,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -183,7 +182,7 @@ span {
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .biopic {
     width: 175px;
   }
